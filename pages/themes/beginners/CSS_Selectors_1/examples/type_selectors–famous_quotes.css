@@ -1,0 +1,24 @@
+/*EXAMPLE LAYOUT CSS*/
+*{
+    box-sizing: border-box;
+    margin: 0;  padding: 0;
+}
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+section{
+    display: inline-block;
+    margin: 0;
+}
+section.left{
+    width: 50%;
+    height: 100%;
+    background: red;
+}
+section.right{
+    width: 50%;
+    height: 100%;
+    margin-left: -4px;
+    background: green;
+}

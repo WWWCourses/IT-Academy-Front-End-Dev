@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Форми в HTML</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <!-- <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
+    <!-- LIGHT:tomorrow/ -->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- custom -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="/IT-Academy/Front-End-Dev/outfit/css/lessons/code_preview.css">
+    <link rel="stylesheet" type="text/css" href="/IT-Academy/Front-End-Dev/outfit/css/custom_hljs.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#HTML5_input_forms" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>HTML форми</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h3>Елемент form</h3>
+    <p>Контейнер, в който се разполагат елементите на
+формата</p>
+<pre><code class="html">
+    <form action="registration.py" method="POST">
+        <div>Име: <input type="text" name="uname"></div>
+        <div>Парола: <input type="password" name="pass"></div>
+        <button type="submit">Submit</button>
+    </form>
+</code></pre>
+</section>
+
+<section><h3>Допустими елементи във <code><b>form</b></code></h3>
+<pre>
+
+    <a href="http://www.w3schools.com/tags/tag_input.asp">&lt;input&gt;</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">&lt;textarea&gt;</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">&lt;button&gt;</a>
+
+    <a href="http://www.w3schools.com/tags/tag_option.asp">&lt;option&gt;</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">&lt;optgroup&gt;</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">&lt;select&gt;</a>
+
+    <a href="http://www.w3schools.com/tags/tag_label.asp">&lt;label&gt;</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">&lt;fieldset&gt;</a>
+</pre>
+</section>
+
+<section>
+    <section>
+        <h3>Елемент <code><b><a href="http://www.w3schools.com/tags/tag_input.asp">input</a></b></code></h3>
+        <p>Създава поле за въвеждане на данни от потребителя</p>
+        <p>Елемента е празен. Типът му се регулира от атрибута <a href="http://www.w3schools.com/tags/att_input_type.asp">type</a>.</p>
+        <div class="left half">
+            <pre><code style="line-height: 2em">
+    Text type: <input type="text">
+    Pass type: <input type="password">
+    Checkbox: <input type="checkbox">
+    Radio: <input type="radio">
+    File: <input type="file">
+    Color: <input type="color">
+    Submit button: <input type="submit">
+    Reset button: <input type="reset">
+            </code></pre>
+        </div>
+        <div class="right half small_font">
+            Text type: <input type="text"><br>
+            Pass type: <input type="password"><br>
+            Checkbox: <input type="checkbox"><br>
+            Radio: <input type="radio"><br>
+            File: <input type="file"><br>
+            Color: <input type="color"><br>
+            Submit button: <input type="submit"><br>
+            Reset button: <input type="reset"><br>
+        </div>
+    </section>
+    <section><h4>Нови типове input в HTML5</h4>
+            <a href="http://www.w3schools.com/tags/tag_input.asp">http://www.w3schools.com/tags/tag_input.asp</a>
+    </section>
+</section>
+
+<section><h3>Елемент <code class="html">label</code></h3>
+<a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a>
+</section>
+
+<section><h3>Елемент <code>textarea</code></h3>
+    <a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a>
+</section>
+
+<section><h3>Елемент <code>select</code></h3>
+    <a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a>
+</section>
+
+<section><h3>Елементи <code>option и optgroup</code></h3>
+    <a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a>
+    <a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a>
+    <p>
+        <select name="town" class="fontsize1">
+            <option value="">Населено място</option>
+            <option value="София">София</option>
+            <optgroup label="А">
+                <option value="Айдемир">Айдемир</option>
+                <option value="Айрово">Айрово</option>
+                <option value="...">...</option>
+            </optgroup>
+            <optgroup label="Б">
+                <option value="Багренци">Багренци</option>
+                <option value="Балабанско">Балабанско</option>
+                <option value="...">...</option>
+            </optgroup>
+            <option value="towncustom_option">Друго</option>
+        </select>
+    </p>
+</section>
+
+<section><h3>Елемени <code>fieldset & legend</code></h3>
+    <a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
+    <a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
+</section>
+
+<section><h3>Елемент <code>button</code></h3>
+    <a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a>
+</section>
+
+<section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

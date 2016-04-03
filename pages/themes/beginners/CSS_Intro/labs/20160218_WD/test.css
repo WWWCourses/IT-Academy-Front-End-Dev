@@ -1,0 +1,24 @@
+span{
+    font-size: 200%;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.italic{
+    font-style: italic;
+}
+a:link{
+    color: pink;
+    text-decoration: none;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,16 @@
+/* Селектира всички HTML елементи, които са дефинирали class="c1" */
+.c1{
+    color: purple;
+}
+/* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
+h1.c1{
+    font-style: italic;
+}
+/* Селектор по id */
+#vip{
+    color: #aa3333;
+    font-size: 2em;
+    text-shadow:
+        2px 2px #a000a0,
+        2px 2px #c000c0;
+}

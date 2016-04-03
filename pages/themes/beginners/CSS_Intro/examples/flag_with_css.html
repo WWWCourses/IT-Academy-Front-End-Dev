@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>flag_with_css</title>
+    <style type="text/css">
+        .flag{
+            display: inline-block;
+            line-height: 2em;
+            width: 20em;
+            border: .2em solid #333;
+        }
+        .flag>span{
+            display: block;
+        }
+        .bg>span:nth-child(1){
+            background: white;
+            color: #CCC;
+        }
+        .bg>span:nth-child(2){
+            background: green;
+            color: #CCC;
+        }
+        .bg>span:nth-child(3){
+            background: red;
+            color: #CCC;
+        }
+    </style>
+</head>
+<body>
+    <div class="flag bg">
+        <span>Бяло</span><span>Зелено</span><span>Червено</span>
+    </div>
+</body>
+</html>

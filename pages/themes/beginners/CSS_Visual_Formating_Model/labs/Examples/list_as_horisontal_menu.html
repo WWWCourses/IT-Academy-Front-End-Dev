@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Horisontal menu</title>
+    <!-- Пример за падащо меню, демонстриращ повече аспекти за форматиране на отделните елементи. Примера е зададен в контекста на цялостна Уеб страница.     -->
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body{
+        height: 100%;
+    }
+    #page{
+        width: 80%;
+        height: 100%;
+        margin: 0 0 0 3em;
+        border: 1px dotted #555;
+        border-top: none;
+    }
+    #content{
+        position: absolute;
+        top:3em;
+        width: 75%;
+        padding: 1em 0 1em 1em;
+    }
+    /*главно меню*/
+    nav>ul{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin: 0 auto;
+        list-style-type: none;
+        font-family: sans-serif;
+    }
+    /*елемент от главното меню = етикет + блок с подменю*/
+    nav>ul>li{
+        float: left;
+        width: 33.3%;
+    }
+    /*етикет на главното меню*/
+    nav>ul>li>strong{
+        display: block;
+        padding: 1em 0 1em .5em;
+        background-color: #333;
+        color: #DEDEDE;
+    }
+    /*етикет на главното меню, когато е посочен */
+    nav>ul>li:hover>strong{
+        font-size: 1.2em;
+        padding: .75em 0 .75em .5em;
+        border-left: .34em solid #888; /*за да бъде равно на 4em при font-size: 1em; (виж "елемент на подменюто" )*/
+        border-right: .1em solid #888;
+        background-color: #666;
+        color: #FFF;
+    }
+
+    /*блок с подменю*/
+    nav>ul>li>ul{
+        display: none;
+        position: relative;
+        list-style-type: none;
+        background-color: #999;
+    }
+    /*подменюто, когато мишката е над елемента в главното меню*/
+    nav>ul>li:hover>ul{
+        display: block;
+    }
+    /*елемент на подменюто*/
+    nav>ul>li>ul>li{
+        padding: .5em 0 .5em .5em;
+        border-bottom: 1px dotted #DEDEDE;
+        border-left:.4em solid #555;
+        border-right: .1em solid #555;
+    }
+    /*първи елемент от подменю*/
+    nav>ul>li>ul>li:first-child{
+        padding-top: 1em;
+    }
+    /*последен елемент от подменю*/
+    nav>ul>li>ul>li:last-child{
+        border-bottom: .3em solid #555;
+    }
+    /*елементите в подменюто, когато са посочени*/
+    nav>ul>li>ul>li:hover{
+        border-left:.4em solid #79E4F6;
+        border-right: 1px solid #79E4F6;
+        background-color: #EFEFEF;
+        color: #07ADC9;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+<div id="page">
+    <nav>
+        <ul>
+            <li><strong>Супи</strong>
+                <ul>
+                    <li>Таратор</li>
+                    <li>Френска супа по селски</li>
+                </ul>
+            </li>
+            <li><strong>Основни</strong>
+                <ul>
+                    <li>Мусака</li>
+                    <li>Пълнени чушки</li>
+                    <li>Пиле с броколи и сметана</li>
+                </ul>
+            </li>
+            <li><strong>Десерти</strong>
+                <ul>
+                    <li>Палачинки</li>
+                    <li>Крем карамел</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+</body>
+</html>

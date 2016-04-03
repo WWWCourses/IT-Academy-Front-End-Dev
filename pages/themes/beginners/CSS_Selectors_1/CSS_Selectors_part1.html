@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Селектори 1</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <!-- <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
+    <!-- LIGHT:tomorrow/ -->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- custom -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css">
+    <base target="_blank">
+    <style type="text/css">
+        .html_block{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .html_block div{
+            width: 80%;
+            padding: 1em;
+            border: 5px solid lime;
+            overflow: none;
+        }
+        .html_block p{
+            color: #000;
+            text-align: left;
+        }
+        .html_block .parent{
+            background: #cc3030; /*red*/
+            border: 5px solid #333;
+        }
+        .html_block .child{
+            background: #3030aa; /*green*/
+        }
+        #purple{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#CSS_Selectors_part1" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS Селектори</h1><h1>Част 1</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>Какво са CSS селекторите?</h2>
+    <section>
+        <dl class="fa">
+            <dt>Шаблони, които определят над кои HTML елементи ще се приложи зададеният стил в декларациите.</dt>
+            <dt>Mогат да бъдат съвсем прости, като '<code>*</code>' или '<code>p</code>' или доста по-сложни като:
+            <pre><code>a[href^="https://"]:hover</code></pre></dt>
+        </dl>
+        <p class="advanced text_left">Списък със всички дефинирани в стандарта (CSS1 – CSS3) селектори: <a href="http://www.w3schools.com/cssref/css_selectors.asp">css_selectors</a></p>
+        <p>В момента (2016) се разработва спецификацията<br><a href="https://drafts.csswg.org/selectors-4/#subject">CSS Selectors Level 4</a></p>
+    </section>
+</section>
+
+<section><h2>Селектори за елементи</h2>
+    <section class="text_left"><h3>Element (type) selectors</h3>
+        <pre><code>
+            /* Всички параграфи в документа ще бъдат с червен шрифт */
+            p {
+                color: red;
+            }
+        </code></pre>
+        <p><u>Действие</u>: селектира всички HTML елементи от дадения тип.</p>
+        <p><a href="examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
+    </section>
+    <section class="text_left"><h3>Универсален селектор (Universal selector)</h3>
+        <pre><code>
+            * {
+                marging: 0;
+                padding: 0
+            }
+        </code></pre>
+        <p><u>Действие</u>: селектира всички HTML елементи в документа.</p>
+    </section>
+</section>
+
+<section><h2>Селектори за class и id</h2>
+    <section><h3>Селектор за class</h3>
+        <p>Записва се с точка ("<b>.</b>") последвана от стойност на class.</p>
+         <pre><code>
+            /* Селектира всички HTML елементи, които са дефинирали class="blue" */
+            .blue{
+                color: blue;
+            }
+        </code></pre>
+        <p>Може да бъде специфициран допълнително, като пред него непосдредствено се запише тип на елемент, </p>
+        <pre><code>
+            /* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
+            p.red{
+                color: red;
+            }
+        </code></pre>
+    </section>
+    <section><h3>Селектор за id</h3>
+        <p>Записва се с диез (хаш таг) - "<b>#</b>", последван от стойност на атрибута <b>id</b>.</p>
+        <p>Тъй като с дадено <b>id</b> можем да обозначим само един единствен елемент от  цялто HTML дърво, то е безсмислен записът с тип на елемент отрпед.</p>
+        <p> Например: <code>p#vip{...}</code> няма смисъл и не се препоръчва да се използва.</p>
+    </section>
+    <section><h3>Пример</h3>
+        <pre><code>
+        /* Селектира всички HTML елементи, които са дефинирали class="c1" */
+        .c1{
+            color: purple;
+        }
+        /* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
+        h1.c1{
+            font-style: italic;
+        }
+
+        /* Селектор по id */
+        #vip{
+            color: #aa3333;
+            font-size: 2em;
+            text-shadow:
+                2px 2px #a000a0,
+                2px 2px #c000c0;
+        }
+        </code></pre>
+        <pre><code>
+        <h1 class="c1">Заглавие</h1>
+        <p class="c1">Параграф 1</p>
+        <h2 class="c1">Под заглавие</h2>
+        <p class="c1">Параграф 2</p>
+        <p id="vip">Съществува само един елемент с id="vip"</p>
+        </code></pre>
+        <a href="examples/class_selectors.html">резултат</a>
+    </section>
+</section>
+
+<section><h2>CSS Комбинатори (CSS Combinators)</h2>
+    <section>
+        <p>Това са селектори отчитащи позицията (контекста) на елементите в HTML дървото.</p>
+    </section>
+    <section><h3>Видове HTML възли</h3>
+        <dl class="fa">
+            <dt>Родител (Parent)</dt>
+            <dt>Дете (Child)</dt>
+            <dt>Наследници (Descendants)</dt>
+            <dt>Братя (Siblings)</dt>
+        </dl>
+    </section>
+    <section><h3>Видове HTML възли</h3>
+        <div class="html_block">
+            <div class="parent">
+            <p>DIV1</p>
+            <div class="parent child">
+                <p>DIV2</p>
+                <div class="child">
+                    <p>DIV3</p>
+                </div>
+            </div>
+            </div>
+            <hr>
+            <ul>
+                <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV3</li>
+                <li><a href="examples/html_nodes_types_code_and_preview.html">Пример</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <p>Поради съображения за сигурност не можем да селектираме елементи и в ляво по  дървото. Поради това няма селектор за предшественик.</p>
+        <p>Селекторите, чрез които можем да избираме елементи в HTML дървото са:</p>
+        <ul>
+            <li>селектор за наследници (descendant selector): '<b>space</b>'</li>
+            <li>селектор за деца (child selector): '<b>></b>'</li>
+            <li>селектор за брат - без значение дали следва непосредствено брат си (general sibling selector): '<b>~</b>'</li>
+            <li>селектор за брат, който е разположен непосредствено след брат си (adjacent sibling selector):  '<b>+</b>'</li>
+        </ul>
+    </section>
+</section>
+
+<section><h2>Селектори за атрибути (Attribute Selectors)</h2>
+    <section><h3>Self-learning section</h3>
+        <a href="http://www.w3schools.com/css/css_attribute_selectors.asp">w3schools - CSS Attribute Selector</a>
+        <hr>
+        <p>Дават възможност да се селектират елементи с произволни атрибути и стойности за тях.</p>
+    </section>
+</section>
+<section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+    <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            // width: '100%',
+            // height: '100%',
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>absolute_in_relative_vs_float</title>
+    <style type="text/css">
+    	#wrapper{
+    		/*position: relative;*/
+    		min-height: 2em;
+    		border: 1px solid #333;    		
+    	}
+    	#left{
+    		/*position: relative;*/
+    		display: inline-block;
+    		text-align: left;
+    		/*left: 0;*/
+    		width: 30em;    		
+    		min-height: 3em;
+    		background-color: green;    		
+    	}
+    	#right{
+    		/*position: relative;*/
+    		display: inline-block;
+    		text-align: right;
+    		/*top: 0;*/
+    		/*width: 20em;*/
+    		min-height: 3em;
+    		background-color: blue;
+    	}
+    	p.date {
+    		display: inline-block;
+		    text-align: right;
+		}
+    </style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="left">LEFT</div>
+		<div id="right">RIGHT</div>
+	</div>
+	<p class="date">May, 2014</p>
+
+</body>
+</html>

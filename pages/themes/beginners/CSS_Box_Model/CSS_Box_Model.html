@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS_Box_Model</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css"><!-- TODO: link to master.css here -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/revel.js/common_classes.css">
+    <link rel="stylesheet" type="text/css" href="/IT-Academy/Front-End-Dev/outfit/css/custom_hljs.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#CSS_Box_Model" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS - The Box Model</h1>
+    <br><h2>или</h2>
+    <h2>как браузърът интерпретира HTML елементите като кутийки</h2>
+</section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>Какво е The Box Model</h2>
+    <section>
+        <dl class="fa">
+            <dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formating Model)– алгоритъма по който браузера визуализира елементите от страницата.</dt>
+            <dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
+            <dt>Подреждането на кутийките зависи от:</dt>
+            <dd>размера на кутийката</dd>
+            <dd>типа на елемента (блоков, поредов)</dd>
+            <dd>схема за позициониране ( normal, float, absolute)</dd>
+            <dd>връзките между елементите в дървовидната структура на документа (document tree)</dd>
+        </dl>
+        <p>Пример: <a href="slides_examples/DocumentVisualFormatingModel_single.html">DocumentVisualFormatingModel_single.html</a> или в <a href="http://codepen.io/webdesigncourse/pen/gaZaVE">codepen</a></p>
+    </section>
+</section>
+<section><h2>Структура на една кутия</h2>
+    <section><h3>Фигура</h3>
+        <img src="images/TheBoxModelFigure.png">
+    </section>
+    <section><h3>Описание</h3>
+        <dl class="fa">
+            <dt><span class="i lightgreen">съдържание (content)</span> - това е съдържанието на самия елемент. Може да е текста между началния и крайния таг или друг елемент.</dt>
+            <dt><span class="i lightgreen">вътрешен отстъп (padding)</span> - това е разстоянието между "ръба" на съдържанието и вътрешната страна на рамката.</dt>
+            <dt><span class="i lightgreen">външен отстъп (margin)</span> - разстоянието от външния ръб на рамката до заобикалящите елементи. За по-кратко ще го наричаме само отстъп.</dt>
+            <dt><span class="i lightgreen">рамка (border)</span> - вътрешния й ръб съвпада с ръба на вътрешния отстъп, а от външния й ръб - започва външния отстъп.</dt>
+        </dl>
+    </section>
+</section>
+<section><h2>Как да зададем размери на кутийката?</h2>
+    <section>
+        <dl class="fa">
+            <dt>Свойства: <code>width</code> и <code>height</code></dt>
+            <dt>Задават ширината(width) и височината(height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
+            <dt>Ако желаем в зададените размери браузера да включи вътрешния отстъп и рамката, то трябва да използваме: <code>box-sizing: border-box;</code></dt>
+            <dt>Възможни стойности за width и height:</dt>
+                <dd>Абсолютни (px, pt, cm, ...)</dd>
+                <dd>Относителни (%, em, vh, vw,...)</dd>
+                <dd>Auto (default) – браузера сам изчислява размера.</dd>
+        </dl>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Дефинирани са и свойствата min-width, max-width, min-heigh и max-heigth, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
+                <dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: 1.min-width; 2.max-width; 3.width </dt>
+                <dd>За височината е в сила същата приоритетна схема.</dd>
+        </dl>
+    </section>
+</section>
+<section><h2>Как да зададем margin и padding?</h2>
+    <section><h4>За всяка една страна, поотделно:</h4><br>
+        <div class="text_left">
+            <dl class="fa">
+                <dt>Вътрешен отстъп (padding):</dt>
+                    <dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
+                    <dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
+                    <dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
+                    <dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
+            </dl>
+            <hr>
+            <dl class="fa">
+                <dt>Външен отстъп (margin):</dt>
+                    <dd><code>margin-top</code> : горен външен отстъп</dd>
+                    <dd><code>margin-right</code> : десен външен отстъп</dd>
+                    <dd><code>margin-bottom</code> : долен външен отстъп</dd>
+                    <dd><code>margin-left</code> : ляв външен отстъп</dd>
+            </dl>
+        </div>
+    </section>
+    <section><h4>Често използвани обобщени записи:</h4>
+        <dl class="fa">
+            <p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
+            <dt><code>padding: T R B L;</code></dt>
+                <dd>задава стойности за всяка една посока поотделно.</dd>
+                <dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
+            <dt><code>padding: TB RL;</code></dt>
+                <dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
+                <dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
+            <dt>padding: TBRL;</dt>
+                <dd>задава едновременно стойност за всички посоки.</dd>
+                <dd><i>пример</i>: <code>padding: 5px;</code></dd>
+        </dl>
+        <br>
+        <p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
+    </section>
+</section>
+<section><h2>Блокови, поредови и замествани елементи</h2>
+    <section><h3>Блокови елементи</h3>
+        <p>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</p>
+        <p><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</p>
+        <p><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</p>
+    </section>
+    <section><h4>Блокови елементи са:</h4>
+        <code>address, article, aside, blockquote, canvas, </code>
+        <code>dd, div, dl, fieldset, figcaption, figure,</code>
+        <code>footer, form, h1, h2, h3, h4, h5, h6, header,</code>
+        <code>hgroup, hr, li, main, nav, noscript, ol, output,</code>
+        <code>p, pre, section, table, tfoot, ul, video</code>
+    </section>
+    <section><h3>Поредови елементи</h3>
+        <p>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Tе се позиционират непосредствено след предхождащият ги елемент, като браузерът поставя спейс между тях за разделител. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</p>
+        <p><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</p>
+        <p><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> нямат влияние над тях.</p>
+    </section>
+    <section><h4>Поредови елементи са:</h4><br>
+            <code>b, big, i, small, tt,</code>
+            <code>abbr, acronym, cite, code, dfn, em, kbd,</code>
+            <code>strong, samp, time, var,</code>
+            <code>a, br, img, map, object, q, script, span, sub, sup,</code>
+            <code>button, input, label, select, textarea</code>
+    </section>
+    <section><h3>Замествани елементи</h3>
+        <p>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </p>
+        <p>Такива са елементите: </p>
+        <code>img, objec, video, textarea, input, button, select и др.</code>
+        <p><span class="nb">NB!</span> Чрез CSS можем да контролираме някои аспекти на заместваните елементи като размери (width и height) и външни отстъпи.</p>
+    </section>
+</section>
+<section><h2>Групиране на HTML елементи</h2>
+    <section>
+        <p>Чрез елемента <code class="lightgreen">div</code> можем да групираме елементи (блокови и/или поредови) в блок.</p>
+        <p>Чрез елемента <code class="lightgreen">span</code> можем да групирам единствено поредови елементи и/или текст.</p>
+        <p><span class="nb darkred">NB!</span> Тези елементи не носят семантичен смисъл и се използват единствено като контейнер за други елементи.</p>
+    </section>
+</section>
+
+<section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

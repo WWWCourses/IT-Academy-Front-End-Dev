@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <title>3_Nested_list_music.html</title>
+        <style type="text/css">
+             body{
+                max-width: 650px;
+                /*background-color: #EBE9D4;*/
+                color: #443020;
+            }
+            p{
+                margin: 5px 0px 0px 0px;
+                padding: 0;
+            }
+            a{
+                color: blue;
+            }
+            .task{
+                /*border: 1px dotted #666;
+                padding: 10px;*/
+            }
+            .task_description{
+                margin: 0px 0px 0px 20px;
+                border: 0px dotted gray;
+            }
+            .results{
+                background-color: #FFF;
+                color: #000;
+                max-width: 630px;
+                margin: 15px 0px 0px 0px;
+                padding: 10px 0px 10px 2px;
+                border: 5px solid #D1D1D1;
+            }
+            .notes{
+                margin: 0px 0px 0px 20px;
+            }
+
+            .title{
+                color: #A67455;
+                margin: 0px 0px 5px 0px;
+                font-style: italic;
+                font-weight: bold;
+            }
+            p.table_caption{
+                margin: 0px 0px 0px 0px;
+                font-style: italic;
+                font-size: 80%;
+            }
+            .hr_div{
+                /*max-width: 640px;*/
+                margin: 40px 0px 1px 0px;
+                padding: 0px;
+                border-style: solid;
+                border-width: 0px;
+                color: #CCC;
+            }
+            .list_level_1{
+                list-style-type: upper-roman;
+            }
+            .list_level_2{
+                list-style-type: decimal;
+            }
+            .list_level_3{
+                list-style-type: disc;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="task">
+            <p class="title">Задача:</p>
+            <div class="task_description">
+                <p><em><strong>Задача: </strong></em>Да се напише HTML код, който реализира дадения по-долу списък.</p>
+                <p>Целта е <em>структурно</em> вашият списък да изглежда по същия начин, като спазите стриктно
+                форматирането на шрифта (чер/курсив) и маркерите на елементите (цифри, булети).<br>
+                <em>Отбележете, че най-вътрешните елементи на списъка по-същество са линкове към свързана статия в wikipedia.</em>
+                </p>
+
+                <p>Разбира се, в елементите на списъка може да попълните вашите любими стилове, групи а защо не и песни за всяка група</p>
+                <div class="results">
+                    <em><strong>Музика:</strong></em>
+                    <ol class="list_level_1">
+                        <li>
+                            <strong>Класическа</strong>
+                            <ol class="list_level_2">
+                                <li><em>Средни векове [500–1400]</em>
+                                    <ul class="list_level_3">
+                                        <li><a href="https://en.wikipedia.org/wiki/Hildegard_of_Bingen">Hildegard of Bingen</a></li>
+                                    </ul>
+                                </li>
+                                <li><em>Ренесанс [1400–1600]</em>
+                                    <ul class="list_level_3">
+                                        <li><a href="https://en.wikipedia.org/wiki/Giovanni_Pierluigi_da_Palestrina">Palestrina</a></li>
+                                        <li><a href="https://en.wikipedia.org/wiki/Carlo_Gesualdo">Gesualdo da Venosa</a></li>
+                                    </ul>
+                                </li>
+                                <li><em>Класика [1730–1820]</em>
+                                    <ul class="list_level_3">
+                                        <li><a href="https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart">Mozart</a></li>
+                                        <li><a href="https://en.wikipedia.org/wiki/Ludwig_van_Beethoven">Beethoven</a></li>
+                                    </ul>
+                                </li>
+                                <li><em>Романтизъм [1815–1910]</em>
+                                    <ul class="list_level_3">
+                                        <li><a href="https://en.wikipedia.org/wiki/Franz_Liszt">Liszt</a></li>
+                                    </ul>
+                                </li>
+                                <li><em>Съвременна [1900–...]</em>
+                                    <ul class="list_level_3">
+                                        <li><a href="https://en.wikipedia.org/wiki/Dmitri_Shostakovich">Dmitri Shostakovich</a></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Рок/Пънк/Джаз</strong>
+                            <ul class="list_level_2">
+                                <li><a href="http://www.last.fm/music/The+Cure">The Cure</a></li>
+                                <li><a href="http://www.last.fm/music/Kraftwerk">Kraftwerk</a></li>
+                                <li><a href="http://www.last.fm/music/Placebo">Placebo</a></li>
+                                <li><a href="http://www.last.fm/music/Серебряная+Свадьба">Серебряная Свадьба</a></li>
+                                <li><a href="http://www.last.fm/music/Nouvelle+Vague">Nouvelle Vague</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <p class="table_caption">Фигура 1: Екран</p>
+                <hr class="hr_div">
+            </div>
+            <p class="title">Забележки: </p>
+            <div class="notes">
+                <p>Tекстът в линковете може да бъде оцветен различно, в зависимост от Вашия браузър.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>form_examples</title>
+</head>
+<body>
+<form action="registration.pl" method="POST">
+    <div>
+        <label for="user_pass">Име: </label>
+        <input name="AAAAAAAA" id="user_name" type="text" required>
+    </div>
+    <div>
+        <label for="user_name">Парола: </label>
+        <input name="BBBBB" id="user_pass" type="password">
+    </div>
+    <div>
+        <label for="CCC">Рожденна дата: </label>
+        <input name="CCC" id="CCC" type="date">
+    </div>
+    <div>
+        <label for="DDD">Телефон:</label>
+        <input pattern="^\+359\d{8,12}$" title="Моля въведете валиден телефонен номер от типа: +359xxxxxxx" name="DDD" id="DDD" type="tel">
+    </div>
+    <div>
+        <label for="ЕЕЕ">Търсене:</label>
+        <input name="ЕЕЕ" id="ЕЕЕ" type="search">
+    </div>
+    <div>
+        <label for="FFF">Възраст:</label>
+        <input name="FFF" id="FFF" type="number">
+    </div>
+    <button type="submit">Изпрати</button>
+</form>
+</body>
+</html>

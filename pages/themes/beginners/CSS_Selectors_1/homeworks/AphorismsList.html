@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS примери</title>
+    <style type="text/css">
+@media print {
+    footer {page-break-after: always;}
+}
+    body {
+    /*max-width: 850px;*/
+    font-family:"Platino Linotype", Times, serif;
+    /*width: 800px;*/
+}
+.task{
+            /*border: 1px dotted #666;
+            padding: 10px;*/
+}
+.task_description{
+            width: 800px;
+            margin: 0px 0px 0px 20px;
+            border: 0px dotted gray;
+}
+.results{
+            background-color: #FFF;
+            color: #000;
+            /*max-width: 830px;*/
+            margin: 15px 0px 0px 0px;
+            padding: 10px 0px 10px 2px;
+            border: 5px solid #D1D1D1;
+}
+.notes{
+            margin: 0px 0px 20px 20px;
+}
+.title{
+            color: #A67455;
+            margin: 0px 0px 5px 0px;
+            font-style: italic;
+            font-weight: bold;
+}
+p.table_caption{
+            margin: 0px 0px 0px 0px;
+            font-style: italic;
+            font-size: 80%;
+}
+.hr_div{
+            /*max-width: 640px;*/
+            margin: 40px 0px 1px 0px;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px;
+            color: #CCC;
+}
+table.hints{
+    width: 800px;
+    border-collapse: collapse;
+    border: 5px solid #BBB;
+}
+td{
+    height: 60px;
+    padding: 15px;
+    vertical-align: middle;
+    border: 1px solid #666;
+}
+tr{
+     text-align: left;
+
+}
+        /* условие*/
+        #chapter1{
+            text-align: center;
+            color: gray;
+            font-size: 1.5em;
+            padding-bottom: 20px;
+            padding-top:10px;
+        }
+        ul{
+            background-color: #FFF;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-indent: middle;
+        }
+        li{
+            padding: 20px;
+        }
+        li.odd{
+            background-color: #41484E;
+            color: #DDD;
+            bottom: rder-bottom: 1px solid #505B65;
+        }
+        li.even{
+            background-color: #5E6F7D;
+            color: #EEE;
+            /*border-bottom: 1px solid #7C5E4F;*/
+        }
+    </style>
+</head>
+<body>
+ <div class="task">
+        <p class="title">Задача:</p>
+        <div class="task_description">
+            <p>Да се напише HTML код, който реализира екрана, даден на фигура 1.<br></p>
+            <div class="results">
+                <h1 id="chapter1">Марк Твен - избрани афоризми</h1>
+                <ul>
+                    <li class="odd">Ако съм свършил някаква работа, то е било, защото съм я чувствал като игра. Ако трябваше да работя, никога нищо нямаше да свърша.</li>
+                    <li class="even">Най-лесното нещо на света е да откажеш пушенето. Аз самият съм го правил хиляди пъти.</li>
+                    <li class="odd">Говори истината и тогава няма да ти се налага да помниш нищо.</li>
+                    <li class="even">Слава Богу, в тази страна имаме три преимущества: свобода на словото, свобода на мисълта, и разумността никога да не ги използваме.</li>
+                    <li class="odd">Един път в живота Фортуна почуква на вратата на всеки, но в това време човекът може да е в близката кръчма и да не чуе.</li>
+                    <li class="even">Тъгата е достатъчна сама по себе си, но за да бъде получено истинско удоволствие от нея, тя трябва да бъде споделена с другите.</li>
+                    <li class="odd">Никога не съм допускал училищните занятия да пречат на образованието ми.</li>
+                    <li class="even">Класика е това, което на всеки му се иска да е прочел, но никой няма желание да чете</li>
+                    <li class="odd">Не искам да си развалям отношенията нито с рая, нито с ада. Имам приятели и на двете места.</li>
+                    <li class="even">Никога не бъди точен — губиш много време, докато чакаш другия.</li>
+                    <br><br><br>
+                    <li class="odd">След двадесет години повече ще съжалявате за нещата, които не сте направили, отколкото за нещата, които сте направили…</li>
+                    <li class="even">Човек трябва да живее така, че когато умре и на гробаря да му е мъчно.</li>
+                </ul>
+            </div>
+            <p class="table_caption">Фигура 1: Екран</p>
+            <hr class="hr_div">
+        </div>
+        <p class="title">Забележки: </p>
+        <div class="notes">
+            <p>Използвани CSS декларации:</p>
+            <table class="hints">
+                <colgroup>
+                    <col width="310px;">
+
+                </colgroup>
+                <tr>
+                    <td>text-align: center;</td>
+                    <td style="text-align: center;">подравнява текста в елемента центрлно по хорозонтала</td>
+                </tr>
+                <tr>
+                    <td>width: 800px;</td>
+                    <td>задава широчината на съответния елемент</td>
+                </tr>
+                <tr>
+                    <td>padding-bottom: 20px;</td>
+                    <td style="padding-bottom: 20px;">задава вертикално разстояние (отстъп) до елемента отдолу = 20 пиксела.</td>
+                </tr>
+                <tr>
+                    <td>padding-top:10px;</td>
+                    <td style="padding-top:10px;">задава вертикално разстояние (отстъп) до елемента отгоре = 10 пиксела</td>
+                </tr>
+                <tr>
+                    <td>padding: 20px;</td>
+                    <td>Задава едновременно еднакво разстояние (отстъп) = 20 пиксела от елементите в дясно, горе, долу и в ляво. </td>
+                </tr>
+                <tr>
+                    <td>background-color: #41484E;<br>color:#DDD;</td>
+                    <td style="background-color:#41484E;color: #DDD;">задава фон с цвят: #41484E<br>
+                    и цвят на шрифта: #DDD</td>
+                </tr>
+                <tr>
+                    <td>background-color: #5E6F7D;<br>color:#EEE;</td>
+                    <td style="background-color:#5E6F7D;color:#EEE;">задава фон с цвят: #5E6F7D<br>
+                    и цвят на шрифта: #EEE</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

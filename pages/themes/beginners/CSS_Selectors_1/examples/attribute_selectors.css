@@ -1,0 +1,54 @@
+body{
+    color: #333;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin: .5em 0 0 0;
+}
+code{
+
+}
+
+/*всички линкове в документа*/
+a{
+    text-decoration: none;
+}
+
+/*всички линкове, със стойност на атрибута 'href' започваща с "http"*/
+a[href^="http"]{
+    color: #2AA92A;
+}
+/*всички линкове, със стойност на атрибута 'href' започваща с "https"*/
+/*Този селектор трябва да е разположен в CSS кода след селектора за http*/
+a[href^="https"]{
+    color: #F2A247;
+}
+/*всички линкове, със стойност на атрибута 'href' започваща с "ftp"*/
+a[href^="ftp"]{
+    color: #143057;
+}
+
+/* ADVANCED: всички линкове, които НЕ започват с "http":*/
+a:not([href^="http"]){
+    border-bottom: 3px double #999;
+}
+
+/*всички линкове, със стойност на атрибута 'href' завършваща на '.pdf'*/
+a[href$=".pdf"]{
+    background-image: url("images/Adobe_PDF_file_icon_32x32.png");
+    background-size: 1em 1em;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 1.2em;
+    color: #DF1D00;
+}
+
+/*всички линкове, в които участва низът 'fm'*/
+a[href*="fm"]{
+    color: #2A2AA9 ;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}

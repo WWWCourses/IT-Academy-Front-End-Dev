@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>html_colors</title>
+    <style type="text/css">
+        body{
+            width: 45em;
+            padding: 0 0 0 2em;
+            margin: 0;
+        }
+        h3{
+            padding: 2em 0 .7em 0;
+            text-align: center;
+            font-family: sans-serif;
+            color:#666;
+            border-bottom: 1px solid #DDD;
+        }
+        hr{
+            padding: 0;
+            margin: 0;
+            width: 45em;
+            border: 2px outset #DDD;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+        }
+        td{
+            width: 15em;
+            height: 3em;
+            border: none;
+            text-align: center;
+        }
+        th{
+            width: 8em;
+            height: 2em;
+            text-align: center;
+            border: none;
+            color: #333;
+        }
+
+        #grayscale td{
+            width: 100%;
+            height: 3em;
+            border-left: 1px solid #777;
+            border-right: 1px solid #777;
+            text-align: center;
+        }
+        #grayscale .row8{
+            border-bottom: 1px solid #777   ;
+        }
+
+        /*~~~~~~~~~~~~~~~~~~~~~~~ rgb ~~~~~~~~~~~~~~~~~~~~~~~*/
+        #rgb .row1 .col1{ background-color: #100;color: #FFF; }
+        #rgb .row2 .col1{ background-color: #300;color: #FFF; }
+        #rgb .row3 .col1{ background-color: #500;color: #FFF; }
+        #rgb .row4 .col1{ background-color: #700;color: #FFF; }
+        #rgb .row5 .col1{ background-color: #900;color: #FFF; }
+        #rgb .row6 .col1{ background-color: #B00;color: #FFF; }
+        #rgb .row7 .col1{ background-color: #D00;color: #FFF; }
+        #rgb .row8 .col1{ background-color: #F00;color: #FFF; }
+
+        #rgb .row1 .col2{ background-color: #010;color: #FFF; }
+        #rgb .row2 .col2{ background-color: #030;color: #FFF; }
+        #rgb .row3 .col2{ background-color: #050;color: #FFF; }
+        #rgb .row4 .col2{ background-color: #070;color: #FFF; }
+        #rgb .row5 .col2{ background-color: #090;color: #FFF; }
+        #rgb .row6 .col2{ background-color: #0B0;color: #FFF; }
+        #rgb .row7 .col2{ background-color: #0D0;color: #FFF; }
+        #rgb .row8 .col2{ background-color: #0F0;color: #FFF; }
+
+        #rgb .row1 .col3{ background-color: #001;color: #FFF; }
+        #rgb .row2 .col3{ background-color: #003;color: #FFF; }
+        #rgb .row3 .col3{ background-color: #005;color: #FFF; }
+        #rgb .row4 .col3{ background-color: #007;color: #FFF; }
+        #rgb .row5 .col3{ background-color: #009;color: #FFF; }
+        #rgb .row6 .col3{ background-color: #00B;color: #FFF; }
+        #rgb .row7 .col3{ background-color: #00D;color: #FFF; }
+        #rgb .row8 .col3{ background-color: #00F;color: #FFF; }
+
+        /*~~~~~~~~~~~~~~~~~~~~~~~ mix ~~~~~~~~~~~~~~~~~~~~~~~*/
+        #mix .row1 .col1{ background-color: #110;color: #FFF; }
+        #mix .row2 .col1{ background-color: #330;color: #FFF; }
+        #mix .row3 .col1{ background-color: #550;color: #FFF; }
+        #mix .row4 .col1{ background-color: #770;color: #FFF; }
+        #mix .row5 .col1{ background-color: #990;color: #FFF; }
+        #mix .row6 .col1{ background-color: #BB0;color: #FFF; }
+        #mix .row7 .col1{ background-color: #DD0;color: #FFF; }
+        #mix .row8 .col1{ background-color: #FF0;color: #FFF; }
+
+        #mix .row1 .col2{ background-color: #011;color: #FFF; }
+        #mix .row2 .col2{ background-color: #033;color: #FFF; }
+        #mix .row3 .col2{ background-color: #055;color: #FFF; }
+        #mix .row4 .col2{ background-color: #077;color: #FFF; }
+        #mix .row5 .col2{ background-color: #099;color: #FFF; }
+        #mix .row6 .col2{ background-color: #0BB;color: #FFF; }
+        #mix .row7 .col2{ background-color: #0DD;color: #FFF; }
+        #mix .row8 .col2{ background-color: #0FF;color: #FFF; }
+
+        #mix .row1 .col3{ background-color: #101;color: #FFF; }
+        #mix .row2 .col3{ background-color: #303;color: #FFF; }
+        #mix .row3 .col3{ background-color: #505;color: #FFF; }
+        #mix .row4 .col3{ background-color: #707;color: #FFF; }
+        #mix .row5 .col3{ background-color: #909;color: #FFF; }
+        #mix .row6 .col3{ background-color: #B0B;color: #FFF; }
+        #mix .row7 .col3{ background-color: #D0D;color: #FFF; }
+        #mix .row8 .col3{ background-color: #F0F;color: #FFF; }
+
+        /*~~~~~~~~~~~~~~~~~~~~~~~ grayscale ~~~~~~~~~~~~~~~~~~~~~~~*/
+        #grayscale .row1 .col1{ background-color: #111;color: #FFF; }
+        #grayscale .row2 .col1{ background-color: #333;color: #DDD; }
+        #grayscale .row3 .col1{ background-color: #555;color: #BBB; }
+        #grayscale .row4 .col1{ background-color: #777;color: #999; }
+        #grayscale .row5 .col1{ background-color: #999;color: #777; }
+        #grayscale .row6 .col1{ background-color: #BBB;color: #555; }
+        #grayscale .row7 .col1{ background-color: #DDD;color: #333; }
+        #grayscale .row8 .col1{ background-color: #FFF;color: #111; }
+    </style>
+</head>
+<body>
+    <h3>Съпоставка на отделните цветове с еднакъв нарастък</h3>
+    <table id="rgb">
+        <tr>
+            <th>Red</th>
+            <th>Green</th>
+            <th>Blue</th>
+        </tr>
+        <tr class="row1">
+            <td class="col1"> #100 </td>
+            <td class="col2"> #010 </td>
+            <td class="col3"> #001 </td>
+        </tr>
+        <tr class="row2">
+            <td class="col1"> #300 </td>
+            <td class="col2"> #030 </td>
+            <td class="col3"> #003 </td>
+        </tr>
+        <tr class="row3">
+            <td class="col1"> #500 </td>
+            <td class="col2"> #050 </td>
+            <td class="col3"> #005 </td>
+        </tr>
+        <tr class="row4">
+            <td class="col1"> #700 </td>
+            <td class="col2"> #070 </td>
+            <td class="col3"> #007 </td>
+        </tr>
+        <tr class="row5">
+            <td class="col1"> #900 </td>
+            <td class="col2"> #090 </td>
+            <td class="col3"> #009 </td>
+        </tr>
+        <tr class="row6">
+            <td class="col1"> #B00 </td>
+            <td class="col2"> #0B0 </td>
+            <td class="col3"> #00B</td>
+        </tr>
+         <tr class="row7">
+            <td class="col1"> #D00 </td>
+            <td class="col2"> #0D0 </td>
+            <td class="col3"> #00D</td>
+        </tr>
+        <tr class="row8">
+            <td class="col1"> #F00 </td>
+            <td class="col2"> #0F0 </td>
+            <td class="col3"> #00F</td>
+        </tr>
+    </table>
+    <!-- <hr> -->
+    <h3>Съпоставка на смесени цветове с еднакъв нарастък</h3>
+    <table id="mix">
+        <tr>
+            <th>Red+Green</th>
+            <th>Green+Blue</th>
+            <th>Blue+Red</th>
+        </tr>
+        <tr class="row1">
+            <td class="col1"> #110 </td>
+            <td class="col2"> #011 </td>
+            <td class="col3"> #101 </td>
+        </tr>
+        <tr class="row2">
+            <td class="col1"> #330 </td>
+            <td class="col2"> #033 </td>
+            <td class="col3"> #303 </td>
+        </tr>
+        <tr class="row3">
+            <td class="col1"> #550 </td>
+            <td class="col2"> #055 </td>
+            <td class="col3"> #505 </td>
+        </tr>
+        <tr class="row4">
+            <td class="col1"> #770 </td>
+            <td class="col2"> #077 </td>
+            <td class="col3"> #707 </td>
+        </tr>
+        <tr class="row5">
+            <td class="col1"> #990 </td>
+            <td class="col2"> #099 </td>
+            <td class="col3"> #909 </td>
+        </tr>
+        <tr class="row6">
+            <td class="col1"> #BB0 </td>
+            <td class="col2"> #0BB </td>
+            <td class="col3"> #B0B</td>
+        </tr>
+         <tr class="row7">
+            <td class="col1"> #DD0 </td>
+            <td class="col2"> #0DD </td>
+            <td class="col3"> #D0D</td>
+        </tr>
+        <tr class="row8">
+            <td class="col1"> #FF0 </td>
+            <td class="col2"> #0FF </td>
+            <td class="col3"> #F0F</td>
+        </tr>
+    </table>
+    <h3>Нюанси на сивото (смесване на всички цветове с еднакъв нарастък)</h3>
+    <table id="grayscale">
+        <tr>
+            <th>Red+Green+Blue</th>
+        </tr>
+        <tr class="row1">
+            <td class="col1"> #111 </td>
+        </tr>
+        <tr class="row2">
+            <td class="col1"> #333 </td>
+        </tr>
+        <tr class="row3">
+            <td class="col1"> #555 </td>
+        </tr>
+        <tr class="row4">
+            <td class="col1"> #777 </td>
+        </tr>
+        <tr class="row5">
+            <td class="col1"> #999 </td>
+        </tr>
+        <tr class="row6">
+            <td class="col1"> #BBB </td>
+        </tr>
+         <tr class="row7">
+            <td class="col1"> #DDD </td>
+        </tr>
+        <tr class="row8">
+            <td class="col1"> #FFF </td>
+        </tr>
+    </table>
+</body>
+</html>

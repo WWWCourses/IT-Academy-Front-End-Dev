@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table_cellspan_FIFA_clean</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../outfit/css/homework_for_pdf.css">
+    <link rel="stylesheet" type="text/css" href="5_Table_cellspan_FIFA.css">
+</head>
+<body>
+    <div class="task">
+        <p class="title">Задача:</p>
+        <div class="task_description">
+            <p>Да се напише валиден <a href="https://validator.w3.org/#validate_by_input" title="пренебрегваме 'warnings'">HTML</a>/<a href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS</a> код, който реализира дадената по-долу таблица. </p>
+            <div class="results">
+                <table>
+                    <tr>
+                        <td rowspan="3">Отбор</td>
+                        <td colspan="5" style="text-align:center"><em>Класиране на ФИФА</em></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><strong>Моментно</strong></td>
+                        <td colspan="2" style="text-align:center"><strong>Най-високо</strong></td>
+                        <td colspan="2" style="text-align:center"><strong>Най-ниско</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Позиция</td>
+                        <td>Месец Година</td>
+                        <td>Позиция</td>
+                        <td>Месец Година</td>
+                    </tr>
+                    <tr>
+                        <td>Германия</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>Август 1993</td>
+                        <td>23</td>
+                        <td>Март 2006</td>
+                    </tr>
+                    <tr>
+                        <td>Испания</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>Декември 1994</td>
+                        <td>25</td>
+                        <td>Март 1998</td>
+                    </tr>
+                    <tr>
+                        <td>Италия</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>Ноем   1993, Фев 2007, Април – Юни 2008</td>
+                        <td>16</td>
+                        <td>Април   1998</td>
+                    </tr>
+                    <tr>
+                        <td>Португалия</td>
+                        <td>9</td>
+                        <td>4</td>
+                        <td>Март 2001</td>
+                        <td>43</td>
+                        <td>Август 1998</td>
+                    </tr>
+                    <tr>
+                        <td>Франция</td>
+                        <td>7</td>
+                        <td>1</td>
+                        <td>Май 2001 – Май 2002</td>
+                        <td>25</td>
+                        <td>Април 1998</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p class="title">Забележки: </p>
+        <div class="notes">
+            <p>Използваните CSS свойства са:
+            <ul>
+                <li><code>border: 5px solid #2E2B78;</code> - <span>външна рамка на таблицата</span></li>
+                <li><code>border-collapse: collapse;</code> - <span>за "сливане" на рамките между клетките</span></li>
+                <hr>
+                <li><code>height: 2em</code> - <span>за височина на всички редове</span></li>
+                <li><code>background: #1D8195;</code> - <span>фон на редовете в заглавната част на таблицата</span></li>
+                <li><code>color: #ddccff;</code> - <span>цвят на шрифта в заглавната част на таблицата</span></li>
+                <hr>
+                <li><code>border-bottom: 1px dotted #2E2B78;</code> - <span>за долна рамка на редовете при изброяването на отборите</span></li>
+                <li><code>border-top: 0;</code> - <span>за горна рамка на редовете при изброяването на отборите</span></li>
+                <hr>
+                <li><code>border: 1px solid #2E2B78;</code> - <span>рамка на всички клетки на таблицата</span></li>
+                <li><code>padding: .5em;</code> - <span>вътрешен отстъп в клетките на таблицата</span></li>
+                <li><code>white-space: nowrap;</code> - <span>за да не се пренася на нов ред автоматично текста в таблицата</span></li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

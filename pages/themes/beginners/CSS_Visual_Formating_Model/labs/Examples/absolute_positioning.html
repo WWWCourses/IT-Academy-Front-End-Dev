@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>absolute_positioning</title>
+    <meta name="description" content="Пример за абсолютно позиционирани блокове, разположени директно в body елемента">
+    <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      background-color: gray;
+    }
+    body{
+      /* забележете, че body елемента е празен (виждаме горе единствено бялата рамка) тъй като всички div елементи в него са абсолютно позиционирани - т.е. те са "извадени" от нормалната схема на позициониране. */
+      border: 1px solid white;
+    }
+    .square{
+      width: 200px;
+      height: 200px;
+    }
+    #red{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+    }
+    #blue{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: blue;
+    }
+    #yellow{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+    }
+    #green{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: green;
+    }
+    </style>
+</head>
+<body>
+  <div id="red" class="square">red</div>
+  <div id="blue" class="square">blue</div>
+  <div id="yellow" class="square">yellow</div>
+  <div id="green" class="square">green</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+  border: 3px solid #CCFF00;
+}
+html {
+  background-color: #052C57;
+  border: 5px solid #FF0088;
+}
+body {
+  background-color: #FFF7E5;
+  border: 5px solid #833;
+}
+.block {
+  background-color: #638B85;
+}
+.inline {
+  background-color: #D0E6E3;
+}

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS_Animations_and_Visual_Effects</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <!-- <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
+    <!-- LIGHT:tomorrow/ -->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="/IT-Academy/Front-End-Dev/outfit/css/custom_hljs.css">
+    <!-- CSS for slides examples -->
+    <link rel="stylesheet" type="text/css" href="slides_examples/css/shadows.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#CSS_Animations_and_Visual_Effects" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS Animations and Visual Effects</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>CSS3 text-shadow</h2>
+        <section>
+            <div class="example bg_blue">
+                <div class="shadow ts_demo">
+                    <span class="code">Text Shadow</span>
+                    <div class="hr">**********</div>
+                </div>
+            </div>
+        </section>
+        <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+text-shadow: h-shadow v-shadow [blur-radius] color;
+        </code></pre>
+        <dl class="fa">
+            <dt>h-shadow</dt>
+                <dd>Задава хоризонтално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е в ляво. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>v-shadow</dt>
+                <dd>Задава вертикално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е над-текста. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+        </dl>
+    </section>
+        <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+    text-shadow: h-shadow v-shadow [blur-radius] color;
+            </code></pre>
+        <dl class="fa">
+            <dt>blur-radius</dt>
+                <dd>Опционален параметър: задава радиус на blur ефекта. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>color</dt>
+                <dd>Задава цвета на сянката. Стойностите са <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">стандартизираните стойности за цвят</a>.</dd>
+        </dl>
+    </section>
+        <section><h4>Вдясно</h4>
+        <pre><code>
+text-shadow: .1em 0 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_right">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Вляво</h4>
+        <pre><code>
+text-shadow: -.1em 0 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_left">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Долу</h4>
+        <pre><code>
+text-shadow: 0 .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_bottom">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Горе</h4>
+        <pre><code>
+text-shadow: 0 -.1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_top">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Долу, вдясно</h4>
+        <pre><code>
+text-shadow: .1em .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_right_bottom">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Горе, вляво</h4>
+        <pre><code>
+text-shadow: .1em .1em 0 #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_left_top">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Blur ефект</h4>
+        <pre><code>
+text-shadow: .1em .1em .3em #D1D8B5;
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_simple_blur">Примерен текст</p>
+        </div>
+    </section>
+        <section><h3>Добавяне на повече от една сянка</h3>
+        <pre><code>
+text-shadow:
+            h-shadow v-shadow [blur-radius] color,
+            h-shadow v-shadow [blur-radius] color,
+            h-shadow v-shadow [blur-radius] color,
+            ...;
+        </code></pre>
+        <p class="note">Разделят се със запетая ','. Накрая се поставя ';'</p>
+
+    </section>
+        <section><h4>Преливащи се цветове</h4>
+        <pre><code>
+color: hsl(0, 100%, 70%);
+text-shadow:
+    1px 1px 0 hsl(360, 100%, 70%),
+    2px 2px 0 hsl(320, 100%, 70%),
+    3px 3px 0 hsl(280, 100%, 70%),
+    4px 4px 0 hsl(240, 100%, 70%),
+    5px 5px 0 hsl(200, 100%, 70%),
+    6px 6px 0 hsl(160, 100%, 70%),
+    7px 7px 0 hsl(120, 100%, 70%),
+    8px 8px 0 hsl(80,  100%, 70%),
+    9px 9px 0 hsl(40,  100%, 70%);
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="ts_faded_red">Примерен текст</p>
+        </div>
+    </section>
+        <section><h4>Редуващи се цветове</h4>
+        <pre><code>
+color: hsl(120, 50%, 50%);
+text-shadow:
+    1px 1px 0px hsl(120, 100%, 50%),
+    2px 2px 0px hsl(60,  100%, 50%),
+    3px 3px 0px hsl(120, 100%, 50%),
+    4px 4px 0px hsl(60,  100%, 50%),
+    5px 5px 0px hsl(120, 100%, 50%),
+    6px 6px 0px hsl(60,  100%, 50%),
+    7px 7px 0px hsl(120, 100%, 50%),
+    8px 8px 0px hsl( 60, 100%, 50%),
+    9px 9px 0px hsl(120, 100%, 50%);
+        </code></pre>
+        <div class="example bg_blue">
+            <p class="green_to_yellow">Примерен текст</p>
+        </div>
+    </section>
+        <section><h3>Resources</h3>
+        <a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp">CSS3 text-shadow Property</a>
+    </section>
+    </section>
+
+<section><h2>CSS3 box-shadow</h2>
+    <section>
+        <div class="example bg_white">
+            <div class="box bg_blue bs_simple_right_bottom">
+                <span class="code">Box Shadow</span>
+            </div>
+        </div>
+    </section>
+    <section><h3>Синтаксис</h3>
+        <pre><code class="html">
+box-shadow: h-shadow v-shadow blur spread color
+        </code></pre>
+        <dl class="fa">
+            <dt>h-shadow</dt>
+                <dd>Задава хоризонтално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е в ляво. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+            <dt>v-shadow</dt>
+                <dd>Задава вертикално отместване на сянката спрямо текста. Ако е отрицателно число, отместването е над-текста. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+        </dl>
+    </section>
+
+    <section><h3></h3>
+        <a href="http://www.w3schools.com/cssref/css3_pr_box-shadow.asp">CSS3 box-shadow Property</a>
+    </section>
+    <section><h2>CSS3 Gradients</h2>
+        <a href="http://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradients</a>
+    </section>
+</section>
+    <section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+        <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+    </section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

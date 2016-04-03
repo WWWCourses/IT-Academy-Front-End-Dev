@@ -1,0 +1,36 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+.header{
+    height: 30vh;
+    background: red;
+}
+.main{
+    position: relative;
+    min-height: 50vh;
+    /* overflow: hidden; */
+    background: green;
+}
+.footer{
+    height: 20vh;
+    background: blue;
+}
+.left{
+    float: left;
+    vertical-align: top;
+    width: 20vw;
+    min-height: 40vh;
+    background: yellow;
+}
+.right{
+    float: right;
+    vertical-align: top;
+    width:80vw;
+    min-height:40vh;
+    margin-left: -.25em;
+    background: aqua;
+}
+

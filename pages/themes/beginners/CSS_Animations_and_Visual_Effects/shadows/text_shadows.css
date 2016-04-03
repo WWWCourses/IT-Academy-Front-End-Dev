@@ -1,0 +1,43 @@
+body{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 32px;
+}
+ul, li, ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.ts ul{
+    margin-top: 1em;
+}
+li>span{
+    border-bottom: 1px dotted #444;
+}
+.ts_simple_center{
+    text-shadow:
+        1px 1px 0 #8DEBFF,
+        2px 2px 0 #8DEBFF,
+        -1px -1px 0 #8DEBFF,
+        -2px -2px 0 #8DEBFF;
+}
+.ts_simple_center_blured{
+    text-shadow:
+        0 0 .2em #8DEBFF;
+}
+.ts_simple_left{
+    text-shadow:
+        .2em 0 0 #8DEBFF;
+}
+.ts_simple_right{
+    text-shadow:
+        -.2em 0 0 #8DEBFF;
+}
+.ts_simple_top{
+    text-shadow:
+        0 -.2em 0 #8DEBFF;
+}
+.ts_simple_bottom{
+    text-shadow:
+        0 .2em 0 #8DEBFF;
+}

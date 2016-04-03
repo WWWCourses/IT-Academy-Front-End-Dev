@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ordered_and_Unordered_lists.html</title>
+    <style type="text/css">
+            .main_list{
+                list-style-type: decimal-leading-zero;
+            }
+            ul, ol, li{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            .main_list>li{
+                border: 1px solid red;
+                float: left;
+            }
+            .main_list>li>ul{
+                border: 1px solid blue;
+                display: block;
+            }
+            .clear{
+                clear: both;
+            }
+    </style>
+</head>
+<body>
+    <em><strong>Любими храни:</strong></em>
+    <ol class="main_list">
+        <li><strong>Супи</strong>
+            <ul class="sub_list">
+                <li>Таратор</li>
+                <li>Френска супа по селски</li>
+            </ul>
+        </li>
+        <li><strong>Основни</strong>
+            <ul class="sub_list">
+                <li>Мусака</li>
+                <li>Пълнени чушки</li>
+                <li>Пиле с броколи и сметана</li>
+            </ul>
+        </li>
+        <li><strong>Десерти</strong>
+            <ul class="sub_list">
+                <li>Палачинки</li>
+                <li>Крем карамел</li>
+            </ul>
+        </li>
+    </ol>
+    <p class="clear">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

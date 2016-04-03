@@ -1,0 +1,24 @@
+form{
+    background-color: #389DA7;
+}
+div{
+    background: #F2FF00;
+    border: 1px solid black;
+}
+label{
+    display: inline-block;
+    border: 1px dotted #333;
+    width: 10em;
+    background: red;
+}
+form>label{
+    background: green !important;
+}
+a{
+    background: red;
+    height: 10em;
+    width: 10em;
+}
+input{
+    /*margin-left:200px;*/
+}

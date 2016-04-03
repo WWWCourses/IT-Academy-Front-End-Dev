@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <style type="text/css">
+        /* премахваме оформлението, което браузърите задават по дефоулт за списъците */
+        .menu ul, .menu li, .menu ol{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* подреждаме основните менюта един до друг */
+        .menu>ol>li{
+            float: left;
+            width: 30vw;
+            /* border: 1px solid red; */
+        }
+        /* скриваме подменютата */
+        .menu>ol>li>ul{
+            visibility: hidden;
+            /* opacity:0; */
+            height: 0;
+            border: 1px solid green; /* for dev&debug */
+        }
+        /* показваме подменюто, когато елемента (li) в който се намира то, е посочен с мишката */
+        .menu>ol>li:hover>ul{
+            visibility: visible;
+        }
+        .menu>ol>hover>ul{
+            transition: visibility 3s;
+        }
+    </style>
+</head>
+<body>
+    <em><strong>Любими храни:</strong></em>
+    <div class="menu">
+        <ol>
+            <li><strong>Супи</strong>
+                <ul>
+                    <li>Таратор</li>
+                    <li>Френска супа по селски</li>
+                </ul>
+            </li>
+            <li><strong>Основни</strong>
+                <ul>
+                    <li>Мусака</li>
+                    <li>Пълнени чушки</li>
+                    <li>Пиле с броколи и сметана</li>
+                </ul>
+            </li>
+            <li><strong>Десерти</strong>
+                <ul>
+                    <li>Палачинки</li>
+                    <li>Крем карамел</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>class_selectors</title>
+    <style type="text/css">
+        /* Селектира всички HTML елементи, които са дефинирали class="c1" */
+        .c1{
+            color: purple;
+        }
+        /* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
+        h1.c1{
+            font-style: italic;
+        }
+
+        /* Селектор по id */
+        #vip{
+            color: #aa3333;
+            font-size: 2em;
+            text-shadow:
+                2px 2px #a000a0,
+                2px 2px #c000c0
+            ;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c1">Заглавие</h1>
+    <p class="c1">Параграф 1</p>
+    <h2 class="c1">Под заглавие</h2>
+    <p class="c1">Параграф 2</p>
+    <p id="vip">Съществува само един елемент с id="vip"</p>
+</body>
+</html>

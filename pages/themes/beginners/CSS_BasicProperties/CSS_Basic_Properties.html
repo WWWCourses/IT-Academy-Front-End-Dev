@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Basic Properties</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <!-- <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
+    <!-- LIGHT:tomorrow/ -->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- custom -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#CSS_Basic_Properties" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Стилизиране на елементите в страницата чрез CSS3</h1>
+        <hr><br>
+        <h2>Основни CSS свойства за оформление на текст, шрифт, цвят, фон и рамка.</h2></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>CSS свойства за оформление на текст</h2>
+    <section><h3>Self-Learning Section</h3>
+        <a href="http://www.w3schools.com/css/css_text.asp">w3schools: CSS Text</a>
+    </section>
+    <section><h3>Text Color</h3>
+        <p>Свойство: color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_color.asp">w3schools: CSS color Property</a></p>
+    </section>
+    <section><h3>Text Alignment</h3>
+        <p>Свойство: text-align</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">w3schools: CSS text-align Property</a></p>
+    </section>
+    <section><h3>Vertical Alignment</h3>
+        <p>Свойство: vertical-align</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_pos_vertical-align.asp">w3schools: CSS vertical-align Property</a></p>
+        <p>Забележка: това свойство се разглежда като свойство за позициониране, но е включено тук за пълнота!</p>
+    </section>
+    <section><h3>Text Decoration</h3>
+        <p>Свойство: text-decoration</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">w3schools: CSS text-decoration Property</a></p>
+    </section>
+    <section><h3>Text Transformation</h3>
+        <p>Свойство: text-transform</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-transform.asp">w3schools: CSS text-transform Property</a></p>
+    </section>
+    <section><h3>Text Indentation</h3>
+        <p>Свойство: text-indent</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-indent.asp">w3schools: CSS text-indent Property</a></p>
+    </section>
+    <section><h3>Letter Spacing</h3>
+        <p>Свойство: letter-spacing</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_letter-spacing.asp">w3schools: CSS letter-spacing Property</a></p>
+    </section>
+    <section><h3>Word Spacing</h3>
+        <p>Свойство: word-spacing</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_word-spacing.asp">w3schools: CSS word-spacing Property</a></p>
+    </section>
+    <section><h3>Line Height</h3>
+        <p>Свойство: line-height</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_dim_line-height.asp">w3schools: CSS line-height Property</a></p>
+    </section>
+</section>
+
+<section><h2>CSS свойства за оформление на шрифт</h2>
+    <section><h3>Self-Learning Section</h3>
+        <a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
+    </section>
+    <section><h3>Font Family</h3>
+        <p>Свойство: font-family</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">w3schools: CSS font-family Property</a></p>
+    </section>
+    <section><h3>Font Size</h3>
+        <p>Свойство: font-size</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">w3schools: CSS font-size Property</a></p>
+    </section>
+    <section><h3>Font Style</h3>
+        <p>Свойство: font-style</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-style.asp">w3schools: CSS font-style Property</a></p>
+    </section>
+    <section><h3>Font Weight</h3>
+        <p>Свойство: font-weight</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-weight.asp">w3schools: CSS font-weight Property</a></p>
+    </section>
+    <section><h3>Font Variant</h3>
+        <p>Свойство: font-variant</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-variant.asp">w3schools: CSS font-variant Property</a></p>
+    </section>
+    <section><h3>Font - съкратен запис за всички Font свойства</h3>
+        <p>Свойство: font</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font.asp">w3schools: CSS font Property</a></p>
+    </section>
+</section>
+
+<section><h2>CSS свойства за фон на елемент</h2>
+    <section><h3>Self-Learning Section</h3>
+        <a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Backgrounds</a>
+    </section>
+    <section><h3>Background Color</h3>
+        <p>Свойство: background-color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-color.asp">w3schools: CSS background-color Property</a></p>
+    </section>
+    <section><h3>Background Image</h3>
+        <p>Свойство: background-image</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-image.asp">w3schools: CSS background-image Property</a></p>
+    </section>
+    <section><h3>Background Image - Repeat</h3>
+        <p>Свойство: background-repeat</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
+    </section>
+    <section><h3>Background Image - Atach</h3>
+        <p>Свойство: background-attachment</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
+    </section>
+    <section><h3>Background - съкратен запис за всички Backgrounds свойства</h3>
+        <p>Свойство: background</p>
+        <p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
+    </section>
+</section>
+
+<section><h2>CSS свойства за рамка на елемент</h2>
+    <section><h3>Self-Learning Section</h3>
+        <a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a>
+    </section>
+    <section><h3>Border Style</h3>
+        <p>Свойство: border-style</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-style.asp">w3schools: CSS border-style Property</a></p>
+    </section>
+    <section><h3>Border Width</h3>
+        <p>Свойство: border-width</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-width.asp">w3schools: CSS border-width Property</a></p>
+    </section>
+    <section><h3>Border Color</h3>
+        <p>Свойство: border-color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-color.asp">w3schools: CSS border-color Property</a></p>
+    </section>
+    <section><h3>Border - съкратен запис за всички Border свойства</h3>
+        <p>Свойство: border</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border.asp">w3schools: CSS border Property</a></p>
+    </section>
+</section>
+
+<section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

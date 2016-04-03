@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>html_nodes_types</title>
+    <style type="text/css">
+        div{
+            width: 80%;
+            padding: 1em;
+            border: 5px solid #00F;
+            overflow: none;
+        }
+        .parent{
+            background: #cc3030; /*red*/
+            border: 5px solid #333;
+        }
+        .child{
+            background: #30cc30; /*green*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>DIV1</p>
+        <div class="parent child">
+            <p>DIV2</p>
+            <div class="child">
+                <p>DIV3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

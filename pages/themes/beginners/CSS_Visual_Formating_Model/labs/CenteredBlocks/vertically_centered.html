@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vertically_centered</title>
+    <style type="text/css">
+    body, html { height: 100%; margin: 0; padding: 0;}
+    .red{
+        background-color: #6b0000;
+    }
+    .green{
+        background-color: #003600 ;
+    }
+    .vertically_inline_centered_wrapper{
+        display: inline-block;
+        width: 100%;
+        line-height: 10em;
+        height: 10em;
+    }
+    .vertically_inline_centered{
+        display: inline-block;
+        width: 80%;
+        height: 1em;
+        line-height: 1em;
+        vertical-align: bottom;
+        margin: 0 auto;
+        overflow: auto;
+    }
+    </style>
+</head>
+<body>
+    <header class="red vertically_inline_centered_wrapper">
+        <div class="green vertically_inline_centered">
+        AAAAA
+        </div>
+    </header>
+</body>
+</html>
