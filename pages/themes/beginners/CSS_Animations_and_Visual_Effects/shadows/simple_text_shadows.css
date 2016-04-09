@@ -1,0 +1,23 @@
+.ts_simple_center{
+    text-shadow:
+        1px 1px 0 #8DEBFF,
+        2px 2px 0 #8DEBFF,
+        -1px -1px 0 #8DEBFF,
+        -2px -2px 0 #8DEBFF;
+}
+.ts_simple_center_blured{
+    text-shadow:
+        0 0 .1em #8DEBFF;
+}
+.ts_simple_left{
+    text-shadow: .1em 0 0 #8DEBFF;
+}
+.ts_simple_right{
+    text-shadow: -.1em 0 0 #8DEBFF;
+}
+.ts_simple_top{
+    text-shadow: 0 -.1em 0 #8DEBFF;
+}
+.ts_simple_bottom{
+    text-shadow: 0 .1em 0 #8DEBFF;
+}

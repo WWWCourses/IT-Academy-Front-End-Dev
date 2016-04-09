@@ -1,0 +1,38 @@
+/* for highlight.js and my beautify_code_blocks {*/
+code[rel]::before{
+    content: attr(rel);
+    display: block;
+    width: 100%;
+    margin-top: -0.5em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    overflow: auto;
+    text-align: center;
+    border-bottom-left-radius:  3px;
+    border-bottom-right-radius: 3px;
+    font-weight: bold;
+    font-family: 'PT Serif',serif;
+}
+code[rel="HTML"]::before{
+    background: rgba(95, 24, 38, .5);
+}
+code[rel="css"]::before{
+    background: rgba(45, 141, 161,.8);
+}
+code[rel="JS"]::before{
+    background: rgba(240, 219, 79, .5);
+}
+code:first-line{
+    line-height: 1em;
+}
+/*padding hack*/
+pre>code>div{
+    margin-top: -2.5em;
+    margin-bottom: -2.5em;
+}
+pre>code>div.tab3{ margin-left: -7em; }
+pre>code>div.tab4{ margin-left: -9.5em; }
+pre>code>div.tab5{ margin-left: -12em; }
+/* TODO: when in reveal.js: */
+
+/* for highlight.js and my beautify_code_blocks }*/

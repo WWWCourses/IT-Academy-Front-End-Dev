@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>font_icons</title>
+    <!-- include Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- include Font Awesome Icons -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style type="text/css">
+    body{
+        font-size: 32px;
+    }
+    ul, ol{
+        list-style-type: none;
+    }
+    .font_icons_list>li{
+        margin-bottom: .8em;
+    }
+    .font_icons_list>li>span{
+        font-style: italic;
+    }
+    /* common to all bullets     */
+    .bullet>ul>li:before{
+        font-size: .8em;
+        margin-right: .3em;
+        vertical-align: middle;
+        color: #666;
+    }
+    /* UTF symbols as bullets */
+    .utf>ul>li:before{
+        content: "\2425"; # това е символа '␥' с код '\2425'
+
+    }
+    /* Material Icons as bullets*/
+    .mi>ul>li:before{
+        content: "\E858"; /* кода взимаме от: <i class="material-icons">&#xE858;</i> */
+        font-family: 'Material Icons';
+    }
+     /* Font Awesome Icons as bullets*/
+     .fa>ul>li:before{
+        content: ""; /* кода взимаме от: <i class="fa fa-hourglass-start"></i> */
+        font-family: 'FontAwesome';
+
+    }
+    </style>
+</head>
+<body>
+    <ul class="font_icons_list">
+        <li class="utf bullet"><span>UTF символи като съдържание на ::before</span>
+            <ul>
+                <li><a href="http://www.fileformat.info/info/charset/UTF-8/list.htm">Complete Character List for UTF-8</a></li>
+                <li><a href="http://www.copypastecharacter.com/">copypastecharacter</a></li>
+            </ul>
+        </li>
+        <li class="mi bullet"><span>Material icons като съдържание на ::before</span>
+            <ul>
+                <li><a href="https://design.google.com/icons/">Material icons home page</a></li>
+                <li><a href="http://google.github.io/material-design-icons/#setup-method-1-using-via-google-web-fonts">Material Icons Usage</a></li>
+            </ul>
+        </li>
+        <li class="fa bullet"><span>Font Awesome icons като съдържание на ::before</span>
+            <ul>
+                <li><a href="http://fontawesome.io/">Font Awesome home page</a></li>
+                <li><a href="https://fortawesome.github.io/Font-Awesome/get-started/">Font Awesome Icons Usage</a></li>
+            </ul>
+         </li>
+         <li class="ff bullet"><span>Foundation Icon Fonts 2 като съдържание на ::before</span>
+            <ul>
+                <li><a href="http://zurb.com/playground/foundation-icons">Foundation Icon Fonts 2 home page</a></li>
+                <li><a href="http://foundation.zurb.com/sites/getting-started.html">Foundation Icon Fonts 2 usage</a></li>
+            </ul>
+         </li>
+         <li class="ion bullet"><span>ionicons като съдържание на ::before</span>
+            <ul>
+                <li><a href="http://ionicons.com/">ionicons home page</a></li>
+                <li><a href="http://stackoverflow.com/questions/30012304/css-html-how-to-add-ionicons-to-css-content-property">ionicons usage</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

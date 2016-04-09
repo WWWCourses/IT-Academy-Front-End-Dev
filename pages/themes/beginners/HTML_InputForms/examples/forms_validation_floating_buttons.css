@@ -1,0 +1,78 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* общи елементи от страницата  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.small_text{
+    font-size: 0.8em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* елементи, свързани с формата */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#test_form{
+    width: 32em;
+    margin: 2em;
+    padding: 1em;
+    background-color: #ddd;
+}
+.user_input_row{
+    width: 30em;
+    margin: .5em 0;
+    padding: .5em 1em;
+    border: 1px solid #999;
+    background-color: #666;
+    color: #EEE;
+}
+.user_input_row > label{
+    display: inline-block;    
+    vertical-align: middle;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    font-size:1.2em; 
+}
+.user_input_row > label::after{
+    content: " :";
+}
+.user_input_row > input{
+    display: inline-block;
+    vertical-align: middle;    
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 50%; /*трябва да е по-малък от 55%, защото браузера слага border и padding и 1спейс, когато подравняваме на нов ред */
+    height: 1.5em;    
+}
+/* използваме селекторите за псевдо-класове :valid и :invalid
+за да оформим полето, когато данните в него са валидни или невалидни */
+.user_input_row > input:valid{
+    background-color: green;    
+}
+/* за да премахнем жълтия фон, слаган от chrome автоматично */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px green inset !important;
+}
+.user_input_row > input:invalid{
+    background-color: red;
+}
+/*~~~~~~~~~~~~ бутоните ~~~~~~~~~~~*/
+/* за всеки един бутон във формата */
+#test_form button{
+    font-size: 1.2em; 
+    padding: .5em 1em;    
+}
+/* само за втория бутон */
+#test_form button:nth-of-type(2){ 
+    /*ако подравняваме бутона в дясно с float:right*/
+    float: right;     
+}
+
+/* Макар и привидно по-лесен, варианта с float може да доведе до много трудности
+(и загуба на време) при цялостното оформление и е за предпочитане да се избягва, когато е възможно.
+Подравняването на бутона "Изчисти" в дясно чрез абсолютно позициониране в 
+релативен блок е показано тук: http://codepen.io/webdesigncourse/pen/mVyooG */
+
+/*Задачи:
+1. Да се промени оцветяването на полетата, като вместо зеленият и червеният фон на полетата,
+(при въвеждане на валидни или невалидни данни, респективно) да се променя единствено по-подходящ начин
+рамката на елемента.*/
+

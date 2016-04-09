@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>target_homework</title>
+    <style type="text/css">
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: #888;
+        }
+        main{
+            top: 100px;
+            background: red;
+        }
+        main:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        section{
+            float: left;
+            width: 33%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#p1">Page1</a>
+    <a href="#p2">Page2</a>
+    <a href="#p3">Page3</a>
+</nav>
+<main>
+    <section id="p1">Page1</section>
+    <section id="p2">Page2</section>
+    <section id="p3">Page3</section>
+</main>
+</body>
+</html>

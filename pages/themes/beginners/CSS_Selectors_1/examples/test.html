@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/tomorrow-night-eighties.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/codepen-embed.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/languages/css.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style type="text/css">
+        /*reset {*/
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        /*reset }*/
+         /* for highlight.js and my beautify_code_blocks {*/
+            code[rel]::before{
+                content: attr(rel);
+                display: block;
+                width: 100%;
+                margin-top: -0.5em;
+                margin-left: -6px;
+                padding-left: 12px;
+                padding-top: .3em;
+                padding-bottom: .3em;
+                overflow: auto;
+                text-align: center;
+                border-bottom-left-radius:  3px;
+                border-bottom-right-radius: 3px;
+
+                font-weight: bold;
+                    font-family: 'PT Serif',serif;
+            }
+            code[rel="HTML"]::before{
+                background: rgba(95, 24, 38, .5);
+            }
+            code[rel="css"]::before{
+                background: rgba(45, 141, 161,.8);
+            }
+            code[rel="JS"]::before{
+                background: rgba(240, 219, 79, .5);
+            }
+            code:first-line{
+                line-height: 1em;
+            }
+            /*padding hack*/
+            pre>code>div{
+                margin-top: -2.5em;
+                margin-bottom: -3em;
+            }
+            pre>code>div.tab3{ margin-left: -7em; }
+            pre>code>div.tab4{ margin-left: -9.5em; }
+            pre>code>div.tab5{ margin-left: -12em; }
+        /* for highlight.js and my beautify_code_blocks }*/
+        /*layout {*/
+            .page>section{
+                display: inline-block;
+                vertical-align: top;
+                width: 49vw;
+                min-height: 100vh;
+            }
+            .page>section.right{
+                margin-left: -4px;
+            }
+            /*responsive*/
+
+            @media screen and (max-width: 680px) {
+                .page>section{
+                    min-height: auto;
+                    width: 100vw;
+                }
+            }
+        /*layout }*/
+        /*page style {*/
+            .page>section{
+                padding: 1em;
+            }
+            .page>section.left{
+                border-right: 3px dotted #999;
+            }
+            .page>section>h2{
+                line-height: 2em;
+                text-align: center;
+                border-bottom: 2px solid #666;
+                color: #999;
+            }
+            pre{
+                margin-top: 1em;
+            }
+            iframe.stretch{
+                width: 100%;
+                min-height: 100vh;
+                border: none;
+            }
+        /*page style }*/
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="left">
+            <h2>Код:</h2>
+            <pre><code rel="CSS">
+                <div class="tab4">
+                    body{
+                        font-family: serif;
+                        color: gray;
+                    }
+                    h1{
+                        text-align: center;
+                        line-height: 3em;
+                        background: burlywood;
+                        border-radius: .5em;
+                    }
+                    h2{
+                        margin-top: 2em;
+                        font-style: italic;
+                        border-bottom: 1px dotted burlywood;
+                    }
+                    ul{
+                        width: 90%;
+                        margin: 0 auto;
+                        list-style-type: katakana;
+                        font-family: sans-serif;
+                    }
+                    li{
+                        margin-top: .7em;
+                    }
+                </div>
+            </code></pre>
+            <pre><code rel="HTML">
+                <div class="tab4">
+                    &lt;h1&gt;Цитати от велики личности&lt;/h1&gt;
+                    &lt;ul&gt;&lt;h2&gt;Марк Твен&lt;/h2&gt;
+                        &lt;li&gt;&quot;Ние в Америка получихме три безценни подаръка: свобода на словото, свобода на съвестта и благоразумие, предпазващо ни да се ползваме от тях.&quot;&lt;/li&gt;
+                        &lt;li&gt;&quot;Ако спориш с идиот, вероятността той да прави абсолютно същото е много голяма.&quot;&lt;/li&gt;
+                        &lt;li&gt;&quot;По-добре дръжте устата си затворена и оставете хората да ви смятат за глупави, отколкото да я отворите и да разсеете всички съмнения.&quot;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;ul&gt;&lt;h2&gt;Луиз Карол&lt;/h2&gt;
+                        &lt;li&gt;„Ако не знаеш къде отиваш, всеки път ще те отведе там”.&lt;/li&gt;
+                        &lt;li&gt;„Не мога да се върна към вчерашния ден – тогава бях друг човек”.&lt;/li&gt;
+                        &lt;li&gt;„Трябва да си полулуд, за да ме накараш да мечтая.“&lt;/li&gt;
+                    &lt;/ul&gt;
+                </div>
+            </code></pre>
+            </section>
+        <section class="right">
+            <h2>Резултат:</h2>
+            <iframe class="stretch" class="" src="type_selectors–famous_quotes.html"></iframe>
+        </section>
+    </div>
+</body>
+</html>

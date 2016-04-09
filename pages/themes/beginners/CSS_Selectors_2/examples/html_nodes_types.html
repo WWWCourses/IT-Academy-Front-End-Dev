@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>html_nodes_types</title>
+    <style type="text/css">
+        .html_block{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .html_block div{
+            width: 80%;
+            padding: 1em;
+            border: 5px solid #00F;
+            overflow: none;
+        }
+        .html_block p{
+            /*background: #ccc;*/
+        }
+        .html_block .parent{
+            background: #cc3030; /*red*/
+            border: 5px solid #333;
+        }
+        .html_block .child{
+            background: #30cc30; /*green*/
+        }
+    </style>
+</head>
+<body>
+    <div class="html_block">
+        <div class="parent">
+        <p>DIV1</p>
+        <div class="parent child">
+            <p>DIV2</p>
+            <div class="child">
+                <p>DIV3</p>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <ul>
+            <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV3</li>
+        </ul>
+    </div>
+</body>
+</html>

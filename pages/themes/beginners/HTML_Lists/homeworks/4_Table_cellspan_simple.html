@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>4_Table_cellspan_simple</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../outfit/css/homework_for_pdf.css">
+</head>
+<body>
+    <div class="task">
+        <p class="title">Задача:</p>
+        <div class="task_description">
+            <p>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден</a> (пренебрегваме 'warnings') HTML код, който реализира таблицата, даден на фигура 1.</p>
+            <div class="results">
+                <table cellpadding="10px" cellspacing="2px" border="1px solid black">
+                    <!-- Първи ред от таблицата -->
+                    <tr>
+                        <td>Cell 1.1</td>
+                        <td colspan="2">Cell 1.2 и Cell 1.3 </td><!--Cell 1.2 и Cell 1.3 са обединени в една-->
+                    </tr>
+                    <!-- Втори ред от таблицата -->
+                    <tr>
+                        <td rowspan="2">Cell 2.1 <br> Cell 3.1</td>
+                        <td>Cell 2.2</td>
+                        <td>Cell 2.3</td>
+                    </tr>
+                    <!-- Трети ред от таблицата -->
+                    <tr>
+                        <td>Cell 3.2</td>
+                        <td>Cell 3.3</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="table_caption">Фигура 1: Екран</p>
+        </div>
+        <!-- <p class="title">Забележки: </p>
+        <div class="notes">
+
+        </div> -->
+    </div>
+</body>
+</html>

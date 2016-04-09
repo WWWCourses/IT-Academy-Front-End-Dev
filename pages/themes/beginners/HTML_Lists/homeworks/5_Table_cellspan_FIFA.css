@@ -1,0 +1,30 @@
+table{
+    border: 5px solid #2E2B78;
+    border-collapse: collapse;
+}
+td{
+    padding: .5em;
+    white-space: nowrap;
+    border: 1px solid #2E2B78;
+}
+tr{
+    height: 2em;
+    background: #1D8195;
+    color: #ddccff;
+}
+/*всички редове с отборите*/
+tr:nth-child(n+4)>td{
+    /*background:red;*/
+    border-bottom: 1px dotted #2E2B78;
+    border-top: 0;
+}
+/*четните редове с отборите*/
+tr:nth-child(2n+4){
+    background: #4B9FAD;
+    color: #ddccff;
+}
+/*нечетните редове с отборите*/
+tr:nth-child(2n+5){
+    background: #8CE8D7;
+    color: #332244;
+}

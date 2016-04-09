@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>list_as_menu_selectors_example</title>
+    <style type="text/css">
+    /*reset some defaults*/
+    html,body{
+        margin: 0;
+        padding: 0;
+    }
+    /*main menu*/
+   /* #hr_menu>ul>li{
+        display: inline-block;
+        /*width: 15em;*/
+        padding: 0;
+        margin: 0;
+        background-color: #FDA;
+    }*/
+
+    /*sub menus*/
+    #hr_menu li{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        background-color: #ADF;
+    }
+    </style>
+</head>
+<body>
+        <nav id="hr_menu">
+        <ul>
+            <li><strong>Супи</strong>
+                <ul>
+                    <li>Таратор</li>
+                    <li>Френска супа по селски</li>
+                </ul>
+            </li>
+            <li><strong>Основни</strong>
+                <ul class="sub_menu">
+                    <li>Мусака</li>
+                    <li>Пълнени чушки</li>
+                    <li>Пиле с броколи и сметана</li>
+                </ul>
+            </li>
+            <li><strong>Десерти</strong>
+                <ul>
+                    <li>Палачинки</li>
+                    <li>Крем карамел</li>
+                </ul>
+            </li>
+        </ul>
+        </nav>
+    </div>
+</body>
+</html>

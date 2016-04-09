@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pseudo_elements_before_and_after</title>
+    <style type="text/css">
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+        }
+        ol>li {
+           /* display: block;*/
+            position: relative;
+        }
+        ol li:before {
+            content: counters(item, ".")".";
+            counter-increment: item;
+            position: absolute;
+            margin-right: 100%;
+            right: 10px;
+        }
+        ol>li>ol>li:before {
+            color: darkred;            
+            font-size: .9em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h3>Пример за автоматично номериране на елементите на вложен списък, като се отчита номера на елемента от горното ниво.</h3>
+    <ol>
+        <li>Супи:
+            <ol>
+                <li>Таратор</li>
+                <li>Френска супа по селски</li>
+            </ol>
+        </li>
+        <li>Основни:
+            <ol>
+                <li>Мусака</li>
+                <li>Задушен телешки език със сос от вино и манатарки</li>
+                <li>Пиле с броколи и сметана</li>
+            </ol>
+        </li>
+        <li>
+            Десерти:
+            <ol>
+                <li>Крем карамел</li>
+                <li>Палачинки</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>

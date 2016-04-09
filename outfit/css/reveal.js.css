@@ -1,0 +1,314 @@
+/*********************************************
+ * IMPORTS
+ *********************************************/
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css");
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css");
+ /*@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");*/
+ @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/*********************************************
+ * HEADERS
+ *********************************************/
+.slides h1, .slides h2, .slides h3, .slides h4,
+.slides h5, .slides h6{
+  text-transform: none;
+}
+/*the presentation title ( all slides )*/
+.reveal .slides h1{
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  opacity: .8;
+}
+/*Main_Sections_Title*/
+.reveal>.slides>section>h2{
+  position: relative;
+  top: -0.5em;
+  font-size: 1em;
+  opacity: .7;
+  /*background: red;*/
+}
+
+/*lists*/
+.reveal section ul>strong{
+  margin-left: -2em;
+}
+.reveal section>ul.fa{
+  display: block;
+  list-style-type: none;
+}
+.reveal section p+img{
+    position: relative;
+    display: block;
+    margin: 1.5em auto 0 auto;
+    height: 5em;
+    width: 80%;
+    box-shadow: 0 0 0.5em .1em;
+}
+.reveal section img.norm{
+    position: relative;
+    display: block;
+    margin: 1.5em auto 0 auto;
+    height: auto;
+    width: auto;
+    box-shadow: 0 0 .5em .1em rgba(150, 150, 150, 0.5);
+}
+.reveal section img.the_end{
+  border-radius: 20%;
+  box-shadow: 0 0 5em 5em rgb(0, 43, 64);
+  /*width: 100vmax;*/
+}
+.reveal section dl.fa>dt{
+  font-weight: normal;
+  margin: .5em 0 0 0;
+  line-height: 1.2em;
+}
+.reveal section dl.fa>dt:first-child{
+  margin: 0;
+}
+.reveal section>ul.fa>li:before, .reveal section dl.fa>dt:before{
+  content: "\f00c";
+  font-family: FontAwesome;
+  margin: 0 .5em 0 -1.5em;
+  opacity: .5;
+  vertical-align: middle;
+  font-size: .7em;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+   /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.reveal section dl>dt>i{
+  margin: 0 .5em 0 -1.5em;
+  opacity: .5;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+.reveal section dl.fa>dd:before{
+  position: relative;
+  bottom: .2em;
+  content: "\f0a4";
+  /*fa-arrow-right "\f061"
+  fa-hand-o-right "\f0a4"
+  fa-caret-right "\f0da"
+  fa-angle-double-right "\f101"
+  fa-long-arrow-right "\f178"*/
+  font-family: FontAwesome;
+  font-size: .5em;
+  margin: 0 .5em 0 0em;
+  opacity: .5;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+   /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.img{
+  margin: 1.5em .2em 0 .2em;
+  font-size: 2em;
+  opacity: .5;
+  /*vertical-align: middle;*/
+   /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.top{
+  margin: .5em .2em .5em .2em;
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+a.home_link{
+    display: inline-block;
+    z-index: 100;
+    margin: .5em;
+    /*background: green;*/
+}
+.theme_switch a{
+    opacity: 0.4;
+    font-size: 12px;
+}
+.theme_switch a:hover{
+  opacity: 1;
+}
+/*********************************************
+ * CUSTOM .copyright
+ *********************************************/
+.footer{
+   position: fixed;
+   bottom: .7em;
+   width: auto;
+   z-index: 200;
+   text-align: center;
+}
+.reveal .copyright{
+    margin: 0 0 0 0;
+    font-size: .7em;
+    font-style: italic;
+    /*width: 100%;
+    text-align: center;
+    vertical-align: middle;*/
+    /*background-color:red;*/
+}
+.copyright>.note{
+  text-align: center;
+  margin: 6em 0 3em 0em;
+}
+.copyright>.company{
+   text-align: center;
+    /*margin: 0 0 2em 0;*/
+    font-size: 1em;
+    /*border: 1px solid red;*/
+}
+.copyright>.author{
+    text-align: center;
+    margin: 16em 0em 0 0;
+    font-size: .7em;
+    /*font-size: 14px;*/
+    /*border: 1px solid red;*/
+}
+.copyright>.company img{
+    /*height: 3em;*/
+    margin: 0;
+    background: none;
+    vertical-align: middle;
+    border: none;
+    box-shadow: none;
+    /*margin-bottom: -1px;*/
+}
+.copyright>.author img{
+    height: 1em;
+    vertical-align: middle;
+    border: none;
+    box-shadow: none;
+}
+.copyright a{
+  cursor: pointer;
+  /*border: 2px solid red;*/
+}
+.reveal section iframe{
+  display: block;
+  margin: 1em 0 1em 0;
+  width: 80%;
+  height: 40vh !important;
+  /*height: auto;*/
+}
+div.results_h{
+  width: 90%;
+  margin: 20px auto;
+  padding: 1em 0 0 0;
+  text-align: left;
+  font-size: .6em;
+  border-top: 1px solid #999;
+}
+.reveal pre{
+  font-size: .6em;
+  line-height: 1;
+}
+.reveal code{
+}
+/*********************************************
+ * OTHER
+ *********************************************/
+.left{
+  display: inline-block;
+  float: left;
+}
+.left pre{
+  margin: 0;
+}
+.right{
+  display: inline-block;
+  float: right;
+  padding: 1em 0 !important;
+  line-height:2.5em !important;
+  text-align: left;
+}
+.half{
+  width: 50%;
+}
+.small_font{
+  font-size: 12px !important;
+}
+.fontsize1{
+  font-size: 1em !important;
+  line-height: 1em !important;
+}
+.reveal section img{
+  border: 0;
+}
+.reveal .inline{
+  display: inline-block;
+  width: auto;
+  box-shadow: none;
+}
+.reveal .inline code{
+  display: inline-block;
+  width: 100%;
+}
+.text_left{
+  text-align: left;
+}
+.text_center{
+  text-align: center !important;
+}
+
+/*marked for advanced*/
+.reveal section .advanced{
+  font-size: .7em;
+}
+.advanced i{
+  margin-right: .3em;
+  color: rgba(250, 23,23, 0.3);
+  font-size: .8em;
+}
+
+/*********************************************
+ * PRINT
+ *********************************************/
+@media print{
+  .footer{
+    display: none;
+  }
+  .copyright>.note{
+    text-align: center;
+    margin: 3em 0 3em 0em;
+  }
+  .copyright>.company{
+     text-align: center;
+      /*margin: 0 0 2em 0;*/
+      font-size: 1em;
+      /*border: 1px solid red;*/
+  }
+  .copyright>.author{
+      text-align: center;
+      margin: 8em 0em 0 0;
+      font-size: .7em;
+      /*font-size: 14px;*/
+      /*border: 1px solid red;*/
+  }
+  /*Main_Sections_Title*/
+  .reveal>.slides>section>h2{
+    display: none;
+    /*position: relative;
+    top: 0.3em;
+    font-size: 1em;
+    opacity: .5;*/
+    /*background: red;*/
+  }
+
+  .reveal .slide-number-pdf {
+    display: none !important;
+    position: absolute !important;
+    font-size: .5em !important;
+    top: .1em !important;
+    right: .1em;
+  }
+}

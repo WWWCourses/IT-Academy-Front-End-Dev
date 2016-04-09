@@ -1,5 +1,5 @@
 /*~~~~~~~~~~ fonts  ~~~~~~~~~~*/
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,400italic,700,700italic,300italic&subset=latin,cyrillic);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,400italic,700,700italic,300italic&subset=latin,cyrillic);*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
@@ -40,9 +40,8 @@ ul,ol,li{
 }
 .resources_list_container h2{
     margin: 1em 0 .5em 0;
-    padding-bottom: .4em;
+    line-height: 1.3em;
     border-bottom: 2px solid #DDD;
-    /*font-family: "Philosopher", sans-serif;*/
     font-family: "Play", sans-serif;
     font-size: 2em;
     color: #999;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>spa_layout</title>
+    <link rel="stylesheet" type="text/css" href="spa_layout.css">
+    <link rel="stylesheet" type="text/css" href="spa_layout_details.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script type="text/javascript" src="spa_layout.js"></script>
+</head>
+<body>
+<nav>
+    <a href="#p1" class="main">Section1</a>
+    <a href="#p2">Section2</a>
+    <a href="#p3">Section3</a>
+</nav>
+<section class="main">
+    <section id="p1" class="page vertical_scroll">
+        <span>Section1</span>
+        <a href="#p2" class="to_top"><i class="material-icons">keyboard_arrow_down</i></a>
+    </section>
+    <section id="p2" class="page vertical_scroll">
+        <a href="#p2_1"><i class="material-icons fs-64">keyboard_arrow_left</i></a>
+        <a href="#p2_2"><i class="material-icons fs-64">keyboard_arrow_right</i></a>
+        <section id="p2_1" class="horizontal_scroll_left"><a href="#p2"><i class="material-icons fs-64">keyboard_arrow_left</i></a></section>
+        <section id="p2_2" class="horizontal_scroll_right"><a href="#p2"><i class="material-icons fs-64">keyboard_arrow_right</i></a></section>
+        <a href="#p1" class="to_top"><i class="material-icons">keyboard_arrow_up</i></a>
+    </section>
+    <section id="p3" class="page vertical_scroll">
+        <span>Section3</span>
+        <a href="#p1" class="to_top"><i class="material-icons">keyboard_arrow_up</i></a>
+    </section>
+</section>
+<footer></footer>
+</body>
+</html>

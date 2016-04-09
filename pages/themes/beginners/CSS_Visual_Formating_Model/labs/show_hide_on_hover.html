@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DropDown Interlude</title>
+    <meta name="description" content="пример за показване/скриване на елемент, когато мишката е
+    позиционирана върху елемент-родител. Без използване на JavaScript!">
+    <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body, div{
+      padding: 2em;
+    }
+    #A{
+      height: 10em;
+      width: 10em;
+      background-color: darkred;
+    }
+    #B{
+      display: none; /*блокът не се изобразява */
+      width: 6em;
+      height: 6em;
+      background-color: darkgreen;
+
+    }
+    #C{
+      display: none; /*блокът не се изобразява */
+      width: 2em;
+      height: 2em;
+      background-color: darkblue;
+    }
+
+    /*когато мишката е върху блок #A (червеният) => блок #B се показва (#B е дете на #A) */
+    #A:hover > #B {
+    	display: block;
+    }
+
+    /*когато мишката е върху блок #A (червеният) => блок #C се показва ( #C е дете на #B, а #B е дете на #A).*/
+    #A:hover > #B > #C {
+      display: block;
+    }
+
+    /*когато мишката е в блок #B (зеленият) => блок #C се оцветява в синьо.*/
+    #B:hover > #C {
+      background-color: blue;
+    }
+
+    /*когато мишката е в блок #B (зеленият), текстът в елемент p, който се намира в блок #C се оцветява в бяло.*/
+    #B:hover > #C > p {
+      color: white;
+    }
+    </style>
+</head>
+<body>
+<div id="A">
+	<div id="B">
+		<div id="C">
+			<p>: )</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

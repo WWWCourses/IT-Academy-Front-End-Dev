@@ -1,0 +1,70 @@
+ul>li>h2{
+    margin: 2em 0 1em 0;
+}
+ul>li>h2>span:before{
+    content: '( източник: ';
+}
+ul>li>h2>span:after{
+    content: ')';
+}
+ul>li>h2>span{
+    color: #666;
+    font-size: .6em;
+}
+ul>li>ul{
+    list-style-type: none;
+}
+ul>li>ul>li{
+    padding: 1em;
+}
+#deyana ul>li:nth-child(2n+1){
+    background-color: #00873d;
+    color:#ffffff;
+}
+#deyana ul>li:nth-child(2n+0){
+    background-color: #b7f6d4;
+    olor:#000000;
+}
+#milena ul>li:nth-child(2n+1){
+    background-color: #41484E;
+    color:#DDD;
+}
+#milena ul>li:nth-child(2n+0){
+    background-color: #5E6F7D;
+    olor:#EEE;
+}
+#rosen ul>li:nth-child(3n+1){
+    background-color: #ff0;
+    color:#000;
+}
+#rosen ul>li:nth-child(3n+2){
+    background-color: #c68c53;
+    color:#fff;
+}
+#rosen ul>li:nth-child(3n+3){
+    background-color:#331a00;
+    color:#fff;
+}
+#tanya ul>li:nth-child(2n+1){
+    background-color: lightpink;
+    color:gray;
+}
+#yasen ul>li:nth-child(3n+1){
+    background-color: #D13A3A;
+    color: #E8E8E8;
+}
+#yasen ul>li:nth-child(3n+2){
+    background-color: #E48D40;
+    color: #E8E8E8;       }
+#yasen ul>li:nth-child(3n+3){
+    background-color: #E1CE2D;
+    color: #B43F3F;
+}
+#darina ul>li:nth-child(2n+1){
+    background-color: #41484E;
+    color:#DDD;
+}
+#darina ul>li:nth-child(2n+0){
+    background-color: #5E6F7D;
+    color:#EEE;
+}

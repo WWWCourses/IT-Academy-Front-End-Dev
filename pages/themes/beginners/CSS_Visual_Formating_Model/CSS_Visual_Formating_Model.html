@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS_Visual_Formating_Model</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <!-- <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
+    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
+    <!-- LIGHT:tomorrow/ -->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy/Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="/IT-Academy/Front-End-Dev/outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="/IT-Academy/Front-End-Dev/outfit/css/custom_hljs.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <a class="home_link" href="../../../agenda/beginners.html#CSS_Visual_Formating_Model" target="_top"><i class="fa fa-home"></i></a>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/league.css'); return false;">League</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/sky.css'); return false;">Sky</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy/Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Да излезем от кутията или как браузърът подрежда HTML елементите.</h1></section>
+<section data-transition="zoom">
+    <div class="copyright">
+        <div class="note">
+            <p>Created for</p>
+        </div>
+        <div class="company">
+            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+            <img style="height:4em" src="/IT-Academy/Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+            </a>
+        </div>
+        <div class="author">
+            <span>Iva E. Popova, 2016,</span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+        </div>
+    </div>
+</section>
+
+<section><h2>Накратко за Visual Formatting Model</h2>
+    <section>
+        <h3>Visual Formatting Model - алгоритъма, който браузерите използват за да визуализират HTML елементите.</h3>
+    </section>
+    <section>
+        <p>Изобразяването и подреждането на елементите, най-общо зависи от:</p>
+        <ul class="fa">
+            <li>Размера на кутийката, която представлява елемента.</li>
+            <li>Типа на елемента (inline, block)</li>
+            <li>Схемата за позициониране ( normal flow/ float /absolute )</li>
+            <li>Останалите елементи в HTML  дървото.</li>
+            <li>Размерът и позицията на viewport-a.</li>
+        </ul>
+    </section>
+</section>
+
+<section><h2>Свойство display</h2>
+    <section><p>Задава типа на кутийката, в която ще се изобрази HTML елементът.</p>
+    <pre><code rel=CSS class="tab3">
+    div.left_column {
+        display: inline-block;
+    }
+    </code></pre>
+    </section>
+    <section><h2>Основни стойности</h2>
+        <ul class="fa">
+            <li><strong>display: none</strong> - елементът не се показва и не заема място в документа.</li>
+            <li><strong>display: inline:</strong> - елементът се интерпретира като поредов елемент</li>
+            <li><strong>display: block:</strong> - елементът се интерпретира като блоков елемент</li>
+            <li><strong>display: inline-block:</strong> - елементът се интерпретира като поредов елемент, на които могат да се задават размери (width, height)</li>
+        </ul>
+        <p>Всички стойности: <a href="http://www.w3schools.com/cssref/pr_class_display.asp">w3schools - CSS display Property</a></p>
+    </section>
+</section>
+
+<section><h2>Свойство position</h2>
+    <section><p>Задава начинът (схемата) за позициониране на елемента.</p>
+        <pre><code rel=CSS class="tab3">
+        div.left_column{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        </code></pre>
+    </section>
+    <section><h3>Основни схеми за позициониране</h3>
+        <ul class="fa">
+            <li><strong>static</strong>: Елементите се подреждат по реда на срещането им в HTML стуктурата. Това е нормалната (default) схема за позициониране.</li>
+            <li><strong>relative</strong>: Елементите се подреждат относително спрямо нормалната схема за позициониране. Отчитат се стойностите за top, right, bottom и left.</li>
+            <li><strong>fixed</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира <i>относително спрямо прозореца на браузера (viewport)</i>.</li>
+            <li><strong>absolute</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
+        </ul>
+    </section>
+</section>
+
+<section><h2>Свойство float</h2>
+    <section><p>Употреба:</p><br>
+        <div>
+            <img src="images/seagull-623520_640.jpg" height="300" style="float: right;">
+            <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    <section>Чрез <b>float</b> съдържанието на следващия/предходния елемент ще се „обтича“ в дясно/ляво от въпросния елемент. Елементите със свойство float се изваждат от нормалната схема за позициониране!
+    </section>
+    <section><h3>Стойности за float</h3>
+        <ul class="fa">
+            <li><b>float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващият го елемент се подрежда плътно вдясно до него.</li>
+            <li><b>float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващият го елемент се подрежда плътно вляво до него.</li>
+        </ul>
+    </section>
+    <section>
+        <p>NB! При дизайна на layout се предпочита употребата на display: flex; (за съвременните браузери)</p>
+    </section>
+</section>
+
+<section data-background="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <!-- <img class="the_end" src="/IT-Academy/Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- external scripts -->
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="/IT-Academy/Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '/IT-Academy/Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Horisontal menu</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body{
+        height: 100%;
+    }
+    #page{
+        width: 80%;
+        height: 100%;
+        margin: 0 0 0 3em;
+        border: 1px dotted #555;
+        border-top: none;
+    }
+    #content{
+        position: absolute;
+        top:3em;
+        width: 75%;
+        padding: 1em 0 1em 1em;
+    }
+    /*главно меню*/
+    #main_menu{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin: 0 auto;
+        list-style-type: none;
+        font-family: sans-serif;
+    }
+    /*елемент от главното меню = етикет + блок с подменю*/
+    .main_menu_item{
+        float: left;
+        width: 33.3%;
+    }
+    /*етикет на главното меню*/
+    .main_menu_item>strong{
+        display: block;
+        padding: 1em 0 1em .5em;
+        background-color: #555;
+        color: #DEDEDE;
+    }
+    /*етикет на главното меню, когато е посочен */
+    .main_menu_item:hover>strong{
+        font-size: 1.2em;
+        padding: .74em 0 .74em .5em;
+        color: #FFF;
+        border-left: .36em solid #888;
+        border-right: .1em solid #888;
+    }
+
+    /*блок с подменю*/
+    .sub_menu{
+        display: none;
+        position: relative;
+        list-style-type: none;
+        background-color: #CCC;
+    }
+    /*подменюто, когато мишката е над елемента в главното меню*/
+    .main_menu_item:hover>.sub_menu{
+        display: block;
+    }
+    /*елемент на подменюто*/
+    .sub_menu_item{
+        padding: .5em 0 .5em .5em;
+        border-bottom: 1px dotted #DEDEDE;
+        border-left:.4em solid #555;
+        border-right: .1em solid #555;
+    }
+    /*първи елемент от подменю*/
+    ul.sub_menu > .sub_menu_item:first-child{
+        padding-top: 1em;
+    }
+    /*последен елемент от подменю*/
+    ul.sub_menu > .sub_menu_item:last-child{
+        border-bottom: .3em solid #555;
+    }
+    /*елементите в подменюто, когато са посочени*/
+    .sub_menu_item:hover{
+        border-left:.4em solid #79E4F6;
+        border-right: 1px solid #79E4F6;
+        background-color: #EFEFEF;
+        color: #07ADC9;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+<div id="page">
+    <nav>
+        <ul id="main_menu">
+            <li class="main_menu_item"><strong>Супи</strong>
+                <ul class="sub_menu">
+                    <li class="sub_menu_item">Таратор</li>
+                    <li class="sub_menu_item">Френска супа по селски</li>
+                </ul>
+            </li>
+            <li class="main_menu_item"><strong>Основни</strong>
+                <ul class="sub_menu">
+                    <li class="sub_menu_item">Мусака</li>
+                    <li class="sub_menu_item">Пълнени чушки</li>
+                    <li class="sub_menu_item">Пиле с броколи и сметана</li>
+                </ul>
+            </li>
+            <li class="main_menu_item"><strong>Десерти</strong>
+                <ul class="sub_menu">
+                    <li class="sub_menu_item">Палачинки</li>
+                    <li class="sub_menu_item">Крем карамел</li>
+                    </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+</body>
+</html>
