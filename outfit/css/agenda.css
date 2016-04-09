@@ -90,11 +90,24 @@
         }
         a:hover{
             text-decoration: none;
+            border-bottom: none;
             background-color: #239DD5;
-            color: inherit;
+            color: #FFF;
         }
         a.active{
             color: inherit;
+        }
+        a.active:hover{
+            background: none;
+            font-weight: bold;
+            text-shadow:
+                1px 1px 1px #23C9D5,
+                -1px -1px 1px #239DD5,
+                2px 2px 2px #239DD5,
+                -2px -2px 2px #239DD5,
+                3px 3px 3px #26ADEB,
+                -3px -3px 3px #26ADEB;
+            color: #FFF;
         }
         a.nonactive{
             color: #BBB;

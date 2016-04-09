@@ -200,13 +200,31 @@ a.home_link{
   height: 40vh !important;
   /*height: auto;*/
 }
-div.results_h{
+.reveal .slides div.results_h{
   width: 90%;
   margin: 20px auto;
   padding: 1em 0 0 0;
   text-align: left;
   font-size: .6em;
   border-top: 1px solid #999;
+}
+.reveal .slides div.results_h h1{
+  font-size: 2em;
+}
+.reveal .slides div.results_h h2{
+  font-size: 1.8em;
+}
+.reveal .slides div.results_h h3{
+  font-size: 1.6em;
+}
+.reveal .slides div.results_h h4{
+  font-size: 1.4em;
+}
+.reveal .slides div.results_h h5{
+  font-size: 1.2em;
+}
+.reveal .slides div.results_h h6{
+  font-size: 1em;
 }
 .reveal pre{
   font-size: .6em;
