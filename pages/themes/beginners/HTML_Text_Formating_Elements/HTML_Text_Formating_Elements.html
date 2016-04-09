@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>cliche</title>
+    <title>Представяне на текст чрез HTML5 елементи</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -51,7 +51,7 @@
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section><h1>PresentationTitile</h1></section>
+<section><h1>Представяне на текст чрез HTML5 елементи</h1></section>
 <section data-transition="zoom">
     <div class="copyright">
         <div class="note">
@@ -69,9 +69,108 @@
     </div>
 </section>
 
-<section><h2>SectionTitle</h2>
+<section><h2>Параграфи и заглавия</h2>
     <section>
+        <p>Елемент p</p>
+        <pre><code>
+            <p>Текст в параграф 1</p>
+            <p>Текст в параграф 2</p>
+        </code></pre>
+        <div class="results_h">
+            <p>Текст в параграф 1</p>
+            <p>Текст в параграф 2</p>
+        </div>
+    </section>
+    <section>
+        <p>Елементи h1 - h6</p>
+        <pre><code>
+            <h1>Заглавие 1</h1>
+            <h2>Заглавие 2</h2>
+            <h3>Заглавие 3</h3>
+            <h4>Заглавие 4</h4>
+            <h5>Заглавие 5</h5>
+            <h6>Заглавие 6</h6>
+        </code></pre>
+        <div class="results_h">
+            <h1>Заглавие 1</h1>
+            <h2>Заглавие 2</h2>
+            <h3>Заглавие 3</h3>
+            <h4>Заглавие 4</h4>
+            <h5>Заглавие 5</h5>
+            <h6>Заглавие 6</h6>
+        </div>
+    </section>
 
+</section>
+<section><h2>Елементи за акцентиране на текст</h2>
+    <section>
+        <pre><code>
+<!-- почернен текст: -->
+&lt;b&gt;bold text&lt;/b&gt;
+&lt;strong&gt;important text&lt;/strong&gt; <!-- SEO ! -->
+<br>
+<!-- текст в курсив: -->
+&lt;i&gt;italic text&lt;/i&gt;
+&lt;em&gt;emphasized text&lt;/em&gt; <!-- SEO ! -->
+        </code></pre>
+        <div class="results_h">
+            <!-- почернен текст: -->
+            <b>bold text</b>
+            <strong>important text</strong> <!-- SEO ! -->
+            <br>
+            <!-- текст в курсив: -->
+            <i>italic text</i>
+            <em>emphasized text</em> <!-- SEO ! -->
+        </div>
+    </section>
+</section>
+<section><h2>Елементи за форматиране на текст.</h2>
+    <section>
+        <p>small and mark</p>
+        <pre><code>&lt;small&gt;Small text&lt;/small&gt;</code></pre>
+        <pre><code>&lt;mark&gt;Marked text&lt;/mark&gt;</code></pre>
+        <div class="results_h">
+             <small>Small text</small>
+             <mark>Marked text</mark>
+        </div>
+    </section>
+    <section>
+        <p>Deleted and inserted</p>
+        <pre><code>
+&lt;del&gt;deleted text&lt;/del&gt;
+&lt;ins&gt;inserted text&lt;/ins&gt;
+        </code></pre>
+        <div class="results_h">
+             <del>Deleted text</del>
+             <ins>inserted text</ins>
+        </div>
+    </section>
+    <section>
+        <p>Super and Sub script</p>
+        <pre><code>
+&lt;sub&gt;subscripted text&lt;/sub&gt;
+&lt;sup&gt;superscripted text&lt;/sup&gt;
+        </code></pre>
+        <div class="result_h">
+            <span>normal text</span>
+            <sub>subscripted text</sub>
+            <sup>superscripted text</sup>
+        </div>
+    </section>
+    <section>
+        <p>Други</p>
+        <pre><code>
+&lt;code&gt;A piece of computer code&lt;/code&gt;
+&lt;samp&gt;Sample output from a computer program&lt;/samp&gt;
+&lt;kbd&gt;Keyboard input&lt;/kbd&gt;
+&lt;var&gt;Variable&lt;/var&gt;
+        </code></pre>
+        <div class="result_h">
+            <code>A piece of computer code</code><br>
+            <samp>Sample output from a computer program</samp><br>
+            <kbd>Keyboard input</kbd><br>
+            <var>Variable</var><br>
+        </div>
     </section>
 </section>
 
