@@ -110,20 +110,20 @@
 <section><h2>Селектори за елементи</h2>
     <section class="text_left"><h3>Element (type) selectors</h3>
         <pre><code>
-            /* Всички параграфи в документа ще бъдат с червен шрифт */
-            p {
-                color: red;
-            }
+/* Всички параграфи в документа ще бъдат с червен шрифт */
+p {
+    color: red;
+}
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи от дадения тип.</p>
         <p><a href="examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
     </section>
     <section class="text_left"><h3>Универсален селектор (Universal selector)</h3>
         <pre><code>
-            * {
-                marging: 0;
-                padding: 0
-            }
+* {
+    marging: 0;
+    padding: 0
+}
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи в документа.</p>
     </section>
@@ -133,17 +133,17 @@
     <section><h3>Селектор за class</h3>
         <p>Записва се с точка ("<b>.</b>") последвана от стойност на class.</p>
          <pre><code>
-            /* Селектира всички HTML елементи, които са дефинирали class="blue" */
-            .blue{
-                color: blue;
-            }
+/* Селектира всички HTML елементи, които са дефинирали class="blue" */
+.blue{
+    color: blue;
+}
         </code></pre>
         <p>Може да бъде специфициран допълнително, като пред него непосдредствено се запише тип на елемент, </p>
         <pre><code>
-            /* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
-            p.red{
-                color: red;
-            }
+/* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
+p.red{
+    color: red;
+}
         </code></pre>
     </section>
     <section><h3>Селектор за id</h3>
@@ -153,23 +153,23 @@
     </section>
     <section><h3>Пример</h3>
         <pre><code>
-        /* Селектира всички HTML елементи, които са дефинирали class="c1" */
-        .c1{
-            color: purple;
-        }
-        /* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
-        h1.c1{
-            font-style: italic;
-        }
+/* Селектира всички HTML елементи, които са дефинирали class="c1" */
+.c1{
+    color: purple;
+}
+/* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
+h1.c1{
+    font-style: italic;
+}
 
-        /* Селектор по id */
-        #vip{
-            color: #aa3333;
-            font-size: 2em;
-            text-shadow:
-                2px 2px #a000a0,
-                2px 2px #c000c0;
-        }
+/* Селектор по id */
+#vip{
+    color: #aa3333;
+    font-size: 2em;
+    text-shadow:
+        2px 2px #a000a0,
+        2px 2px #c000c0;
+}
         </code></pre>
         <pre><code>
         <h1 class="c1">Заглавие</h1>
