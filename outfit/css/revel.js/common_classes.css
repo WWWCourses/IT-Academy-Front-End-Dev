@@ -15,13 +15,25 @@
 .reveal section .small_font{
   font-size: 12px !important;
 }
+.reveal section .fontsize1{
+  font-size: 1em !important;
+  line-height: 1em !important;
+}
+.reveal section .fontsize_09{
+  font-size: 0.9em !important;
+  line-height: 0.9em !important;
+}
+.reveal section .fontsize_08{
+  font-size: 0.8em !important;
+  line-height: 0.8em !important;
+}
 .reveal section .fontsize_07{
   font-size: 0.7em !important;
   line-height: 0.7em !important;
 }
-.reveal section .fontsize1{
-  font-size: 1em !important;
-  line-height: 1em !important;
+.reveal section .fontsize_05{
+  font-size: 0.5em !important;
+  line-height: 0.5em !important;
 }
 .reveal section .inline{
   display: inline-block;

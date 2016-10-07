@@ -15,7 +15,7 @@ code[rel]::before{
     font-weight: bold;
     font-family: 'PT Serif',serif;
     background: #99D78E;
-    color: #000;
+    color: #FFF;
 }
 code[rel="HTML"]::before{
     background: rgba(95, 24, 38, .5);

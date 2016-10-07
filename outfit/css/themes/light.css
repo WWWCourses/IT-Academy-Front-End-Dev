@@ -1,0 +1,23 @@
+/* ********************************************************************** */
+/* Reveal.js themes */
+/* ********************************************************************** */
+@import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css";
+/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/serif.css"; */
+/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/simple.css" */
+/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/sky.css"; */
+/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/solarized.css"; */
+/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/white.css"; */
+/* Custom */
+@import "/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css";
+/* ********************************************************************** */
+/* Code syntax highlighting */
+/* ********************************************************************** */
+@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css";
+@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/custom_hljs.css";
+
+/* ********************************************************************** */
+/* Text formating  */
+/* ********************************************************************** */
+/* @import "/IT-Academy-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css"; */
+
+@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/text_schemes.css"

@@ -25,8 +25,8 @@ footer{
     width: 100%;
     height: 10vh;
     text-align: center;
-    border-top: 1px solid #DFDFDF;
-    /*border-top: 1px solid #718EDA;*/
+    /* border-top: 1px solid #DFDFDF; */
+    border-top: 1px solid #FFF;
     /*background-color: red;*/
 }
 footer div{
@@ -48,11 +48,13 @@ footer div{
 
 .content_left{
     position: absolute;
-    top: 0; left: 0;
-    margin-top: 35vh;
+    top: 0; left: 0; right: 0;
+    margin-top: 20vh;
+    padding-top: 15vh;
     padding-left: 10vw;
     padding-right: 15vw;
     padding-bottom: 20vh;
+    border-bottom-right-radius: 100vw;
     color: #71BA8E;
     /*color: #BA718E;*/
     font-size: 8vmin;
@@ -61,14 +63,17 @@ footer div{
 }
 .content_left:hover ~ .diagonal_bg{
     border-left-color: #000;
+    border-bottom-color: #FFF;
 }
 .content_right{
     position: absolute;
     bottom: 0; right: 0;
-    margin-bottom: 25vh;
+    margin-bottom: 10vh;
+    padding-bottom: 15vh;
     padding-right: 10vw;
-    padding-left: 15vw;
+    padding-left: 35vw;
     padding-top: 20vh;
+    border-top-left-radius: 100vw;
     /*color: #FFBA7E;*/
     color: #718EDA;
     font-size: 8vmin;
@@ -76,7 +81,8 @@ footer div{
     cursor: pointer;
 }
 .content_right:hover ~ .diagonal_bg{
-    border-bottom-color: #FFF;
+    border-left-color: #FFF;
+    border-bottom-color: #000;
 }
 a{
     color: inherit;

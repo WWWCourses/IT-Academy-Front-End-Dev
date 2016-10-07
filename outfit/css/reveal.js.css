@@ -13,7 +13,7 @@
   text-transform: none;
 }
 /*the presentation title ( all slides )*/
-.reveal .slides h1{
+.reveal>.slides h1{
   margin: 0;
   padding: 0;
   font-size: 2em;
@@ -79,14 +79,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.reveal section dl>dt>i{
+/* .reveal section dl>dt>i{
   margin: 0 .5em 0 -1.5em;
   opacity: .5;
   vertical-align: middle;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-}
+} */
 .reveal section dl.fa>dd:before{
   position: relative;
   bottom: .2em;
@@ -107,6 +107,15 @@
    /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.reveal section dl.fa dt blockquote{
+  width: 93%;
+  margin-left: .5em;
+  /* font-size: .8em; */
+}
+.reveal section dl.fa dt blockquote cite{
+  display: block;
+  font-size: .8em;
 }
 i.img{
   margin: 1.5em .2em 0 .2em;
@@ -200,37 +209,39 @@ a.home_link{
   height: 40vh !important;
   /*height: auto;*/
 }
-.reveal .slides div.results_h{
-  width: 90%;
-  margin: 20px auto;
-  padding: 1em 0 0 0;
-  text-align: left;
-  font-size: .6em;
-  border-top: 1px solid #999;
-}
-.reveal .slides div.results_h h1{
-  font-size: 2em;
-}
-.reveal .slides div.results_h h2{
-  font-size: 1.8em;
-}
-.reveal .slides div.results_h h3{
-  font-size: 1.6em;
-}
-.reveal .slides div.results_h h4{
-  font-size: 1.4em;
-}
-.reveal .slides div.results_h h5{
-  font-size: 1.2em;
-}
-.reveal .slides div.results_h h6{
-  font-size: 1em;
-}
 .reveal pre{
   font-size: .6em;
   line-height: 1;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
-.reveal code{
+.reveal pre code{
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1.2em;
+}
+.reveal pre code.tabs3 .xml{
+  display: block;
+  margin-left: -5.25em;
+  /* background: red; */
+}
+.reveal pre code.tabs4 .xml{
+  display: block;
+  margin-left: -7em;
+  /* background: red; */
+}
+.tabs5, .reveal pre code.tabs5 .xml{
+  display: block;
+  margin-left: -9.5em;
+  /* background: red; */
+}
+.reveal pre code.tabs6 .xml{
+  display: block;
+  margin-left: -12em;
+  /* background: red; */
 }
 /*********************************************
  * OTHER
@@ -252,13 +263,31 @@ a.home_link{
 .half{
   width: 50%;
 }
+/* FONT-SIZES */
 .small_font{
   font-size: 12px !important;
 }
-.fontsize1{
+.reveal section .fontsize1{
   font-size: 1em !important;
   line-height: 1em !important;
 }
+.reveal section .fontsize_09{
+  font-size: 0.9em !important;
+  line-height: 0.9em !important;
+}
+.reveal section .fontsize_08{
+  font-size: 0.8em !important;
+  line-height: 0.8em !important;
+}
+.reveal section .fontsize_07{
+  font-size: 0.7em !important;
+  line-height: 0.7em !important;
+}
+.reveal section .fontsize_05{
+  font-size: 0.5em !important;
+  line-height: 0.5em !important;
+}
+
 .reveal section img{
   border: 0;
 }
