@@ -1,0 +1,50 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.tags*",
+				"*.odp*",
+				"*.pdf",
+				"*~lock*"
+			],
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"added_words":
+		[
+			"линка",
+			"text",
+			"css",
+			"javascript",
+			"links"
+		],
+		"build_system":
+		{
+			"selector": "source.js",
+			"shell_cmd":
+			[
+				"/usr/bin/node",
+				"$file"
+			]
+		},
+		"fallback_encoding": "Cyrillic (Windows 1251)",
+		"font_face": "Courier 10 Pitch",
+		"ignored_words":
+		[
+			"links",
+			"script",
+			"layout"
+		],
+		"spell_check": true,
+		"sublime-view-in-browser":
+		{
+			"basePath": "/home/nemsys/projects/www/wwwcourses.github.io",
+			"baseUrl": "http://127.0.0.1"
+		},
+		"tab_size": 4
+	}
+}
