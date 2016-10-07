@@ -45,8 +45,6 @@ function calcTotalDays(){
         }
 
         hours_nodes[i].title = "day:" + current_days;
-        console.log("current_hours:",current_hours);
-        console.log("\tcurrent_days:", current_days);
     };
 }
 function showHideAll(  ){
