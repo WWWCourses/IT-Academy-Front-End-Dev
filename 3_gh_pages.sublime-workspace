@@ -519,33 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
-			"settings":
-			{
-				"buffer_size": 10526,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/various_html_text_elements.html",
-			"settings":
-			{
-				"buffer_size": 3454,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
-			"settings":
-			{
-				"buffer_size": 5476,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -554,10 +527,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "nu",
+		"height": 365.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
 			[
 				"nu",
 				"InsertNums - No Preview"
@@ -587,10 +568,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"rem",
 				"Package Control: Remove Package"
 			],
@@ -609,10 +586,6 @@
 			[
 				"nums",
 				"Insert Nums"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"Snippet: ",
@@ -915,18 +888,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/agenda",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Bases",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements",
-		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework"
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages"
 	],
 	"file_history":
 	[
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/homework_for_pdf.css",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/various_html_text_elements.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
 		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
 		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html",
 		"/home/nemsys/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/apache_vhost_local.conf",
@@ -1050,11 +1022,7 @@
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/simple_text_shadows.css",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/master.css",
 		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/show.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/transitions.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/TODO",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/homeworks/colorfied_shadows.html",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/font_icons/test.htm",
-		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_and_Animation_Effects/font_icons/multiple_font_icon_libs_as_bullets.html"
+		"/home/nemsys/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/shadows/transitions.html"
 	],
 	"find":
 	{
@@ -1372,378 +1340,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10526,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1263,
-								1263
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1309,
-										1310
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1251,
-										1252
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light) (SL).tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/various_html_text_elements.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3454,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								479,
-								479
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										578,
-										579
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										447,
-										448
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light) (SL).tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 375.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5476,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								82,
-								82
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										84,
-										89
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										62,
-										67
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light) (SL).tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1880,7 +1478,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 78.0,
+	"side_bar_width": 286.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
