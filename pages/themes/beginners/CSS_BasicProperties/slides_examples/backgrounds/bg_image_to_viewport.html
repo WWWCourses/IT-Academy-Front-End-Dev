@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>bg_image_to_viewport</title>
+    <style type="text/css">        
+        html,body{
+            margin:0;
+            padding: 0;
+            /*за да бъде body елемента висок поне колкото viewport-a*/
+            min-height: 100%;
+        }        
+        body{
+            background: red url("checkmate-1511866_640.jpg");
+            background-size: 100% 100%;
+            background-position: center center; 
+            background-repeat: no-repeat;
+        }
+        .descr{
+            font-size: 1.5em;
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 2;
+            background: rgba(100, 100, 100, 0.3);
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="descr">
+        Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите <b>не се запазват</b>! 
+    </div>
+    <script type="text/javascript" src="/IT-Academy-Front-End-Dev/outfit/js/components/modalDialog.js"></script>
+</body>
+</html>

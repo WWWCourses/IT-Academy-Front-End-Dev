@@ -8,12 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <!-- css & themes include -->
     <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css" id="theme">
-    <!-- Code syntax highlighting -->
-    <!-- <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/css/zenburn.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
-    <!--DARK:  tomorrow-night/monokai-sublime/obsidian/tomorrow-night-eighties/ -->
-    <!-- LIGHT:tomorrow/ -->
+    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
@@ -32,17 +27,7 @@
 <body>
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
         <a class="home_link" href="../../../agenda/beginners.html#CSS_Basic_Properties" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/white.css'); return false;">White</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">League</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Sky</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css'); return false;">Beige</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/simple.css'); return false;">Simple</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/serif.css'); return false;">Serif</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/night.css'); return false;">Night</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/moon.css'); return false;">Moon</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/solarized.css'); return false;">Solarized</a>
-        </div>
+        <div class="footer theme_switch"></div>        
         <div class="slides">
 <!--
 ########################################################
@@ -158,6 +143,10 @@
         <p>Свойство: background-repeat</p>
         <p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
     </section>
+    <section><h3>Background Image - Size</h3>
+        <p>Свойство: background-size</p>
+        <p><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">w3schools: CSS background-size Property</a></p>
+    </section>
     <section><h3>Background Image - Atach</h3>
         <p>Свойство: background-attachment</p>
         <p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
@@ -166,6 +155,34 @@
         <p>Свойство: background</p>
         <p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
     </section>
+    <section><h3>Задаване на фон за цялата страница.</h3>
+        <dl class="fa">
+            <dt>Елемента, на който искаме да поставим изображението като фон е <b>body</b>.</dt>
+            <dt>Височината на елемента <b>body</b> се определя динамично, в зависимост от съдържанието!</dt>
+            <dt>За да сме сигурни, че елемента <b>body</b> ше бъде висок поне колкото viewport-a, трябва да зададем:</dt>
+            <pre><code rel="CSS">
+                html, body{                    
+                    min-height: 100%;
+                }
+            </code></pre>
+            <dt class="note">Бихме могли да използваме и <b>vh</b> еденици, вместо процент.</dt>
+        </dl>
+    </section>
+    <section><h3>Задаване на фон за цялата страница - примери</h3>
+        <dl class="fa">
+            <dt>Пример за снимка, поместена във viewport-a, като пропорциите се запазват. 
+                Изображението не се изрязва.<br>
+                <span class="note">Не гарантира запълването на целия фон</span>.</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_contain_viewport.html">bg_image_contain_viewport</a></dd>
+            <dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите се запазват.<br>
+                <span class="note">Изображението може да бъде изрязано</span>.</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_cover_viewport.html">bg_image_cover_viewport</a></dd>
+            <dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите <b>не се запазват</b>!</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_to_viewport.html">bg_image_to_viewport</a></dd>
+
+        </dl>
+    </section>
+
 </section>
 
 <section><h2>CSS свойства за рамка на елемент</h2>
@@ -200,7 +217,10 @@
 -->
         </div>
     </div>
+    <!-- Custom processing -->
+    <script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
     <!-- external scripts -->
+
     <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
     <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
      <!-- init reveal -->

@@ -12,7 +12,7 @@
 /* ********************************************************************** */
 /* Code syntax highlighting */
 /* ********************************************************************** */
-@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/github-gist.min.css";
 @import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/custom_hljs.css";
 
 /* ********************************************************************** */

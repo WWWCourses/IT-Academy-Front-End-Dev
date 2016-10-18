@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TheCrow-Task</title>
+    <style type="text/css">
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        /* Task CSS  */
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        @media print {
+            .task_description {page-break-after: always;}
+        }
+        body {
+            /* max-width: 850px;
+            font-family:"Platino Linotype", Times, serif;
+            /*width: 800px;*/
+        }
+        .task{
+            /*border: 1px dotted #666;
+            padding: 10px;*/
+        }
+        .task_description{
+            /* width: 800px; */
+            margin: 0px 0px 0px 20px;
+            border: 0px dotted gray;
+        }
+        .results{
+            background-color: #FFF;
+            color: #000;
+            /*max-width: 830px;*/
+            margin: 15px 0px 0px 0px;
+            padding: 10px 0px 10px 2px;
+            border: 5px solid #D1D1D1;
+        }
+        .notes{
+            margin: 0px 0px 20px 20px;
+        }
+        .title{
+            color: #A67455;
+            margin: 0px 0px 5px 0px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        p.table_caption{
+            margin: 0px 0px 0px 0px;
+            font-style: italic;
+            font-size: 80%;
+        }
+        .hr_div{
+            /*max-width: 640px;*/
+            margin: 40px 0px 1px 0px;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px;
+            color: #CCC;
+        }
+        table.hints{
+            width: 800px;
+            border-collapse: collapse;
+            border: 5px solid #BBB;
+        }
+        td{
+            height: 60px;
+            padding: 15px;
+            vertical-align: middle;
+            border: 1px solid #666;
+        }
+        tr{
+             text-align: left;
+        }
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        /* Sollution CSS */
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        #page{
+            font-size: 20px;
+            border: 1em outset #B0893B;
+            font-weight: 900;
+            color: #1E1616;
+
+            /* задаваме изображение за фон */
+            background-image: url("assets/raven-1002849_1920.jpg");
+
+             /* винаги задаваме и цвят, ако не се зареди картинката */
+            background-color: #B17D14;
+
+            /* картинката ще заеме цялата област и нито една част от нея нама да бъде изрязана.
+               Пропорциите няма да се запазят */
+            background-size: 100% 100%;
+
+            /* картинката ще заеме цялата област, като се запазят пропорциите й.
+               Част от нея може да бъде изрязана */
+            /* background-size: cover; */
+
+            /* кратък запис: */
+            /* background: #B17D14 url("assets/raven-1002849_1920.jpg") bottom/100% 100%; */
+        }
+        #poem{
+            width: 31em;
+            text-indent: 3em;
+            line-height: 1.5em;
+            color: #E7FDFF;
+            font-family: sans-serif;
+        }
+        #poem>h1{
+            text-align: center;
+            color: #F4C76C
+        }
+        #poem>h3{
+            text-align: center;
+            font-style: italic;
+            font-variant: small-caps;
+            color: #322A1A;
+        }
+        .quote{
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        #poem u{
+            text-decoration: none;
+            border-bottom: 2px groove orange;
+        }
+        #about_poem{
+            border-top: 10px double #B0893B;
+            color: #F4C76C;
+        }
+    </style>
+</head>
+<body>
+    <div class="task">
+        <p class="title">Задача - TheCrow</p>
+        <div class="task_description">
+            <p>Да се състави страница, наподобяваща максимално точно показаната на фиг.1. Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</p>
+            <p>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият - шрифтът е наклонен, а разстоянието между буквите в 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа на PDF-a за да видите по-ясно.).</p>
+            <p>Също така, обърнете внимания на типа шрифт (serif, sans-serif) и задайте съответния.</p>
+            <p>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</p>
+            <div class="results">
+                <div id="page">
+                    <div id="poem">
+                        <h1>Едгар Алън По</h1>
+                        <h3>Гарванът</h3>
+                        <p>В късна нощ — преди години — сам над книгите старинни,
+                            безотраден, вниквах, жаден, в знания незнайни тук; —
+                            скръбен, търсех без сполука мир във тайната наука —
+                            но оборен в сънна скука, чух внезапно бавен звук.
+                            <span class="quote">"Някой гост навярно чука — казах, вслушан в тихий звук. —
+                            Някой гост — и <u>никой друг!</u>"</span></p>
+                            <p>Бе декемврий — помня още! — Мрак и мраз от всички нощи; —
+                            от камина блед отблясък пред прага береше дух. —
+                            В скръб деня аз чаках всуе! Без надежда пак да чуя
+                            с благовест и алилуя името <span class="quote">"Ленора"</span> тук!
+                            Светлото и рядко име, що шепне вече тук
+                            на земята — <u>никой друг!</u></p>
+                            <p>А пурпурните коприни на завесите старинни
+                            пълнеха нощта пустинна с ужаси при всеки звук.
+                            Примълнял до изнемога, в зло предчувствие, в тревога,
+                            аз се ободрявах строго: — <span class="quote">"Някой гост дошъл е тук!
+                            Туй е някой гост нечакан, закъснял без покрив тук;
+                            някой гост — и <u>никой друг!</u>"</span></p>
+                            <p>И дори с внезапна дързост тръгнах към вратата бързо,
+                            като казах: <span class="quote">"Извинете! Да! Дочух аз смътен звук; —
+                            но унесен дремех в скука, а тъй слаб и тих бе звука,
+                            че когато се почука, аз не се опомних тук…"</span> —
+                            И отворих, за да видя кой тъй късно чука тук? —
+                            Вън бе мрак — и <u>никой друг!</u></p>
+                    </div>
+                    <div id="about_poem">
+                        Роден на 19 януари, 1809г. Второ от трите деца на Дейвид и Елизабет Арнълд По. Родителите му са актьори в Бостън. Баба му, Елизабет Смит Арнълд, както и майка му, англичанка по произход, са известни актриси. Баща му, Дейвид По, ирландец по произход, скоро изоставя семейството си.
+                    </div>
+                    <div id="footer">
+                        <p><span class="note">Източник: </span><a href="https://chitanka.info/text/2384-garvanyt">chitanka.info</a></p>
+                    </div>
+                </div>
+            </div>
+            <p class="table_caption">Фигура 1: Екран</p>
+            <hr class="hr_div">
+        </div>
+    </div>
+</body>
+</html>
