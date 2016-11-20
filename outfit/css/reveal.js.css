@@ -134,11 +134,48 @@ i.top{
 /*********************************************
  * LINKS
  *********************************************/
+div.top_links{
+  position: relative;
+  /*display: inline-block;*/
+  margin: .5em;
+  z-index: 100;
+}
 a.home_link{
-    display: inline-block;
+    /*display: inline-block;*/
     z-index: 100;
-    margin: .5em;
+    /*margin: .5em;*/
     /*background: green;*/
+}
+a.help_link{
+  position: absolute;
+  right: 0; top: 0;
+  /*opacity: 1;*/
+  /*z-index: 102;*/
+}
+.reveal .help_text{
+  display: none;
+  position: absolute;
+  top: 0; right: 1em;  
+  min-width: 10em;
+  padding: 1em;
+  font-size: .7em;
+  background: #CCC;
+  color: #333;
+  border-radius: 30%;
+}
+.help_text span:nth-child(1){    
+    font-weight: bold;
+}
+.help_text span:nth-child(2):before{
+  content: '- ';
+  font-weight: normal;
+}
+.help_text span:nth-child(2){  
+  margin-left: .5em;
+  font-style: italic;
+}
+a.help_link:hover~.help_text{
+  display: inline-block;
 }
 .theme_switch a{
     opacity: 0.4;
