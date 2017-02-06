@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pure_css_hamburger_menu</title>
+    <style type="text/css">
+    body{
+        margin: 0;
+        overflow: hidden;
+    }
+    .menu{
+        float: left;
+        width: 30%;
+        height: 80vh;
+        box-sizing: border-box;
+        border-right: 2px dotted #999;
+        background-color: #333;
+    }
+    main{
+        float: left;
+        width: 70%;
+        height: 80vh;
+        box-sizing: border-box;
+        background-color: #999;
+        /* clear: both; */
+    }
+    .navigation{
+        position: fixed;
+        top: 50px;
+    }
+    .navigation a{
+        display: block;
+        margin-left: 1em;
+        color: #DDD;
+    }
+    /* скриваме input-a */
+    .toggle_menu{
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+    /* стилизираме label-a да прилича на бутон за меню */
+    label[for="toggle_menu"] {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: red;
+    }
+    /* за скриване/показване на менюто: */
+    .toggle_menu:checked + label {
+        /* left: 215px; */
+    }
+    .toggle_menu:checked ~ .menu {
+        display: none;
+    }
+    .toggle_menu:checked ~ main {
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle_menu" class="toggle_menu" />
+    <label for="toggle_menu"></label>
+    <aside class="menu">
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Students</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </aside>
+    <main></main>
+</body>
+</html>
