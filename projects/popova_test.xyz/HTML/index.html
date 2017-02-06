@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style type="text/css">
+    *{
+        box-sizing: border-box;
+    }
+    #sandanski, #sofia, #smolian{
+        position: relative;
+        /*background-color: red;*/
+        height: 100vh;
+    }
+    .bottom{
+        position: absolute;
+        bottom: 0;
+    }
+    h1{
+        text-align: center;
+        margin: 0 0 1em 0;
+    }
+    img{
+        display: block;
+        width: 30vw;
+        margin: 0 auto;
+    }
+    :target {
+        /*animation: highlight 1s ease;*/
+        background-color: #E7E4CA;
+    }
+    </style>
+</head>
+<body>
+<div class="top">
+    <span>Повече за </span>
+    <a href="#sandanski">Сандански</a>
+    <a href="#sofia">София</a>
+    <a href="#smolian">Смолян</a>
+</div>
+<div id="sandanski">
+    <h1>Добре дошли в Сандански</h1>
+    <img src="../images/towns/sandanski.jpg">
+    <a class="bottom" href="#top">към началото</a>
+</div>
+<div id="sofia">
+    <h1>Добре дошли в София</h1>
+    <img src="../images/towns/sofia.jpg">
+    <a class="bottom" href="#top">към началото</a>
+</div>
+<div id="smolian">
+    <h1>Добре дошли в Смолян</h1>
+    <img src="../images/towns/smolian.jpg">
+    <a class="bottom" href="#top">към началото</a>
+</div>
+
+
+</body>
+</html>

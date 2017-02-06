@@ -1,0 +1,70 @@
+#ads-container {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 160px;
+    display: block;
+    z-index: 100;
+    text-align: center;
+    background: rgba(256, 256, 256, 0.95);
+    -webkit-border-radius: 4px 0px 4px 4px;
+    -moz-border-radius: 4px 0px 4px 4px;
+    border-radius: 4px 0px 4px 4px; 
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.2);
+}
+
+#carbonads {
+    max-width: 160px;
+    padding: 15px;
+    font-size: 13px;
+    position: relative;
+}
+
+#carbonads .carbon-img {
+    border: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#carbonads .carbon-text {
+    padding: 0;
+    font-size: 13px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#carbonads .carbon-text:hover {
+    /*color: #fff;*/
+}
+
+#ads-container #ads-close {
+    color: rgba(256, 256, 256, 0.7);
+    position: absolute;
+    display: inline-block;
+    right: -24px;
+    top: 0px;
+    z-index: 10;
+    cursor: pointer;
+    background: #333;
+    width: 24px;
+    height: 24px; 
+    padding-top: 2px;
+}
+
+#ads-container #ads-close:hover {
+    background: #111;
+    color: #fff;
+}
+
+.carbon-poweredby {
+    font-size: 11px;
+    color: #555E6B;
+}
+
+.carbon-poweredby:hover {
+    color: #343942;
+}
+
