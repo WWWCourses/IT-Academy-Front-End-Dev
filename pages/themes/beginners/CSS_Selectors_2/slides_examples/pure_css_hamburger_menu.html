@@ -3,67 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>pure_css_hamburger_menu</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-    body{
-        margin: 0;
-        overflow: hidden;
-    }
-    .menu{
-        float: left;
-        width: 30%;
-        height: 80vh;
-        box-sizing: border-box;
-        border-right: 2px dotted #999;
-        background-color: #333;
-    }
-    main{
-        float: left;
-        width: 70%;
-        height: 80vh;
-        box-sizing: border-box;
-        background-color: #999;
-        /* clear: both; */
-    }
-    .navigation{
-        position: fixed;
-        top: 50px;
-    }
-    .navigation a{
-        display: block;
-        margin-left: 1em;
-        color: #DDD;
-    }
-    /* скриваме input-a */
-    .toggle_menu{
-        position: absolute;
-        clip: rect(0, 0, 0, 0);
-    }
-    /* стилизираме label-a да прилича на бутон за меню */
-    label[for="toggle_menu"] {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 2;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        background-color: red;
-    }
-    /* за скриване/показване на менюто: */
-    .toggle_menu:checked + label {
-        /* left: 215px; */
-    }
-    .toggle_menu:checked ~ .menu {
-        display: none;
-    }
-    .toggle_menu:checked ~ main {
-        width: 100%;
-    }
+        html{
+            background-color: #D8D0B6;
+        }
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            /*letter-spacing: .1em;*/
+            color: #513A26;
+            line-height: 1.4em;
+            /*overflow: hidden;*/
+        }        
+        main{                        
+            margin: 4em 4em 0 5em;
+            /*text-indent: 2em;            */
+            box-sizing: border-box;            
+        }
+        .menu{
+            position: fixed;
+            top:0; left: -12em;            
+            width: 12em;
+            height: 100vh;
+            box-sizing: border-box;
+            border-right: 1px dotted #999;
+            background-color: #999;
+            transition: left 1s, background 2s;            
+        }
+        .navigation{            
+            margin-top: 3em;
+        }
+        .navigation a{
+            display: block;
+            margin: 0 0 1em 1em;
+            font-weight: bold;
+            color: #FFF;
+        }
+        /* скриваме input-a */
+        #toggle_menu{
+            position: absolute;
+            width: 0;height: 0;
+        }        
+        /* бутона за менюто */        
+        .toggle_menu_button {
+            position: fixed;            
+            top: .8em; left: 0;                    
+            cursor: pointer;            
+            color: #FAE4A5;
+            z-index: 9999;
+            animation-name: twist;
+            animation-duration: 1s;
+        }
+        .toggle_menu_button:before{
+            display: inline-block;            
+            content: "\224b"; 
+            font-size: 3em;
+            margin: .1em 0 0 .5em;           
+            text-shadow:
+                -1px 1px #555, 
+                -2px 2px #444, 
+                -3px 3px #333; 
+            transition: 1s;
+        }
+        /* за скриване/показване на менюто: */
+        #toggle_menu:checked + .toggle_menu_button:before{              
+            content: "\1f1fd";
+            color: #CCC;
+            font-size: 1.8em;
+            margin: .1em 0 0 5.2em;
+            text-shadow:
+                -1px 1px #777, 
+                -2px 2px #666, 
+                -3px 3px #555;             
+        }
+        #toggle_menu:checked ~ .menu {
+            left: 0;    
+            background: #333;    
+            opacity: .8; 
+        } 
+        #toggle_menu:checked ~ main{
+            opacity: .2;
+        }    
+        @keyframes twist{
+            10%, 90% {transform: translate3d(2px, 1px, 0);}     
+            20%, 80% {transform: translate3d(0px, 0, 0);}
+            30%, 50%, 70% {transform: translate3d(2px, -1px, 0);}
+            40%, 60% {transform: translate3d(0px, 0, 0);}
+        }  
     </style>
 </head>
 <body>
-    <input type="checkbox" id="toggle_menu" class="toggle_menu" />
-    <label for="toggle_menu"></label>
+    <input type="checkbox" id="toggle_menu" />
+    <label for="toggle_menu" class="toggle_menu_button"></label>
     <aside class="menu">
         <nav class="navigation">
             <a href="#">Home</a>
@@ -73,6 +105,13 @@
             <a href="#">Contact</a>
         </nav>
     </aside>
-    <main></main>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </main>
 </body>
 </html>
