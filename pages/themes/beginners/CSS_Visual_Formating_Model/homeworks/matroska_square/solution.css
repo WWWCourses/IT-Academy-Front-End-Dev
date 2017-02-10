@@ -1,0 +1,22 @@
+html, body{
+	margin: 0; padding: 0;
+}
+.matroskas_container{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: #821717;
+}
+.matroska{
+	position: absolute;
+	top: 10%; left: 10%;
+	bottom: 10%; right: 10%;
+	background: #821717;
+	border: .1em solid #F1E971;
+}
+.matroska:hover{
+	background: #F1E971;
+}
+.matroska.last{
+	background: #F1E971;
+}

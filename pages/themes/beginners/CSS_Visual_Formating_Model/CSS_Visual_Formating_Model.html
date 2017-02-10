@@ -86,6 +86,14 @@
         </ul>
         <p>Всички стойности: <a href="http://www.w3schools.com/cssref/pr_class_display.asp">w3schools - CSS display Property</a></p>
     </section>
+    <section><h3>Пример 1</h3>
+        <p data-height="400" data-theme-id="20230" data-slug-hash="QKNxkd" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="Display Property Examples 1" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/QKNxkd/">Display Property Examples 1</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <section><h3>Пример 2</h3>
+       <iframe height='500' scrolling='no' title='Display Property Examples 2' src='//codepen.io/webdesigncourse/embed/ZLmabL/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ZLmabL/'>Display Property Examples 2</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+    </section>
 </section>
 
 <section><h2>Свойство position</h2>
@@ -106,10 +114,18 @@
             <li><strong>absolute</strong>: Елементът се „изваждат“ от нормалната схема и се позиционира относително <i>спрямо най-прекият си предшественик, който е позициониран</i> – т.е. има зададено свойство postion различно от static.</li>
         </ul>
     </section>
+     <section><h3>Схеми за позициониране</h3>
+        <p>Static vs. Relative Position:</p>
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/ORNakg/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ORNakg/'>Static vs. Relative Position</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+    </section>
+    <section><h3>Схеми за позициониране</h3>
+        <p>Absolute div in Relative:</p>
+        <iframe height='300' scrolling='no' src='http://codepen.io/webdesigncourse/embed/jbJORR/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/jbJORR/'>Absolute in relative</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+    </section>
 </section>
 
 <section><h2>Свойство float</h2>
-    <section><p>Употреба:</p><br>
+    <section><p>Класическа употреба:</p><br>
         <div>
             <img src="images/seagull-623520_640.jpg" height="300" style="float: right;">
             <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -120,16 +136,89 @@
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </section>
-    <section>Чрез <b>float</b> съдържанието на следващия/предходния елемент ще се „обтича“ в дясно/ляво от въпросния елемент. Елементите със свойство float се изваждат от нормалната схема за позициониране!
+    <section>
+        <pre><code rel="Syntax">
+            float: [left|right|none|inline-start|inline-end];
+        </code></pre>
+        <dl class="fa">
+            <dt>Елемент, за който е зададен <code>float</code> се <span class="note">се изважда от нормалната схема за позициониране</span> и се позиционира възможно най в ляво/дясно в рамката на обхващащият го блок или до ръба на float елемент (ако има такъв).</dt>
+            <dt>Следващите го поредови елементи ще се „обтичат“ в дясно/ляво от въпросния елемент</dt>
+            <dt>Справочник: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a></dt>
+        </dl>
     </section>
     <section><h3>Стойности за float</h3>
         <ul class="fa">
-            <li><b>float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващият го елемент се подрежда плътно вдясно до него.</li>
-            <li><b>float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващият го елемент се подрежда плътно вляво до него.</li>
+            <li><b class="note">float: left</b> - елементът се подрежда най-вляво на текущия ред, а следващите го поредови елементи (или текстът в блокови такива) се подреждат плътно <span class="note">вдясно</span> до него, докато заемат цялата дължина на рамката.</li>
+            <li><b class="note">float: right</b> - елементът се подрежда най-вдясно на текущия ред, а следващите го елементи се подреждат плътно <span class="note">вляво</span> до него.</li>
+        </ul>
+    </section>
+    <section><h3>Пример</h3>
+        <iframe height='300' scrolling='no' src='//codepen.io/webdesigncourse/embed/BLQmZL/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/BLQmZL/'>Simple float example</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+    </section>
+    <section><h3>"Изчистване" на float ефекта</h3>
+        <ul class="fa">
+            <li><b>Справочник: </b> <a href="https://developer.mozilla.org/en/docs/Web/CSS/clear">CSS Clear property</a> (<a href="https://developer.mozilla.org/en-US/">The Mozilla Developer Network</a>)</li>
+            <li><b>Полезно четиво:</b> <a href="http://alistapart.com/article/css-floats-101">CSS Floats 101 by Noah Stokes</a> (<a href="http://alistapart.com/">A List Apart</a> article)</li>
         </ul>
     </section>
     <section>
-        <p>NB! При дизайна на layout се предпочита употребата на display: flex; (за съвременните браузери)</p>
+        <p><b>float</b> е често използвано свойство за подреждане на елементите и layout на страниците.</p>
+        <p>NB! При дизайна на layout се предпочита употребата на <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> (за съвременните браузери)</p>
+    </section>
+</section>
+<section><h2>Примери в codepen</h2>
+    <p>Колекция с примери върху темата, качени в <a href="http://codepen.io/collection/AYWrJg/2/">http://codepen.io/collection/AYWrJg/2/</a></p>
+</section>
+
+<section><h2>Задачa за упражнение: OlimpicRings</h2>
+    <section><h3>Демо</h3>
+        <img src="homeworks/olimpic_rings/images/OlimpicRings-Result.png" height="100%" width="100%">
+    </section>
+    <section><h3>Задание</h3>
+        <dl class="fa">
+        <dt>Да се напише валиден код, който реализира страницата показана на <a href="homeworks/olimpic_rings/images/OlimpicRings-Result.png">фиг.1</a></dt>
+        <dt>Изисквания:</dt>
+        <dd>Изображението да изпълва целия екран.</dd>
+        <dd>Кръговете са центрирани в страницата единствено <span class="note">хоризонтално</span>.</dd>
+        <dt>Използвани елементи:</dt>
+        <dd>Изображение за фон на страницата: <a href="http://www.publicdomainpictures.net/view-image.php?image=42311">Ocean Through Window Frame</a></dd>
+        <dd>Кръг със центриран в него текст: <a href="http://codepen.io/webdesigncourse/pen/KgzOJK">пример</a></dd>
+        </dl>
+    </section>
+    <section><h3>Възможни решения</h3>
+        <dl class="fa">
+            <dt>Чрез абсолютно позициониране на елементите.</dt>
+            <iframe height='300' scrolling='no' src='//codepen.io/webdesigncourse/embed/rrWzwk/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/rrWzwk/'>HW: OlimpicRings - absolute positioned</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+        </dl>
+    </section>
+    <section><h3>Възможни решения</h3>
+        <dl class="fa">
+            <dt>Чрез inline-block елементи, подредени на два реда.
+                <iframe height='300' scrolling='no' src='//codepen.io/webdesigncourse/embed/ZpBJmN/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/ZpBJmN/'>HW: OlimpicRings - inline-blocks, rem based units</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+            </dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>Задачa за упражнение: FloatingImages</h2>
+    <section>
+    <p>Заданието е дадено в <a href="http://codepen.io/webdesigncourse/pen/XmOzYm">http://codepen.io/webdesigncourse/pen/XmOzYm</a></p>
+    </section>
+</section>
+
+<section><h2>Задачa за упражнение: MatroskaSquares</h2>
+    <section><h3>Демо</h3>
+        <img src="homeworks/matroska_square/images/result_crop.png" height="100%" width="100%">
+    </section>
+    <section><h3>Задание</h3>
+        <dl class="fa">
+            <dt>Да се напише валиден код, който реализира страницата показана на <a href="homeworks/matroska_square/images/result_crop.png">фиг.1</a></dt>
+            <dt>Изисквания:</dt>
+            <dd>Червеният фон изпълва целият viewport.</dd>
+            <dd>При промяна на размера на viewport, пропорциите продължават да се запазват.</dd>
+            <dd>В body елемента се използват единствено div елементи.</dd>
+            <dd>Всички вложени блокове (div елементи) намаляват размерите си с еднакъв процент.</dd>
+        </dl>
     </section>
 </section>
 

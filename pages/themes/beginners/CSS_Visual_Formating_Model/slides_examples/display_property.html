@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Display Property Examples 2</title>
+    <style type="text/css">    	
+    	.block>a{
+    		display: block;
+    	}
+    	.inline>a{
+    		display: inline;
+    	}
+    	.inline-block>a{
+    		display: inline-block;
+    		width: 5em;
+    		height: 3em;
+    	}
+    	
+    	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    	/*some eye-friendly css, irrelevant to example*/
+    	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    	hr{
+    		border: 1px solid #999;
+    		height: 1px;
+    		background: #CCC;
+    	}
+    	a{
+    		border: 1px solid #00FFF4;
+    	}
+    </style>   
+</head>
+<body>
+	<h1>CSS свойство: Display </h1>
+	<section class="default">
+		<h1>Дефолтна стойност: </h1>
+		<a href="#">Линк 1</a>
+		<a href="#">Линк 2</a>
+		<a href="#">Линк 3</a>
+	</section>
+	<hr>	
+	<section class="block">
+		<h1>Пример за <code>display="block"</code></h1>
+		<a href="#">Линк 1</a>
+		<a href="#">Линк 2</a>
+		<a href="#">Линк 3</a>
+	</section>	
+	<hr>
+	<section class="inline">
+		<h1>Пример за <code>display="inline"</code></h1>
+		<a href="#">Линк 1</a>
+		<a href="#">Линк 2</a>
+		<a href="#">Линк 3</a>
+	</section>
+	<hr>
+	<section class="inline-block">
+		<h1>Пример за <code>display="inline-block"</code></h1>
+		<a href="#">Линк 1</a>
+		<a href="#">Линк 2</a>
+		<a href="#">Линк 3</a>
+		<p><sup>*</sup>Забележете, че стойностите за width и height се изпълняват от браузера!</p>
+	</section>	
+</body>
+</html>

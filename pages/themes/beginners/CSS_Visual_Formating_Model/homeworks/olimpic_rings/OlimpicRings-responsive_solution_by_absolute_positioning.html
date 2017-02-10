@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Olympic Rings</title>
+    <style>
+    body {
+      /* Задаваме за фон изображение, което ще изпълва целия елемент - избираме един от двата варианта, в зависимост от заданието:  */
+      background-image: url("images/ocean-through-window-frame.jpg");
+      /* Варинат 1: правим компромис с оригиналните пропорции на картинката (възможно е да се "смачка"), но гарантираме, че тя изцяло, без да се реже, ще запълни елемента */
+      background-size: 100% 100%;
+      /* Вариант 2: възможно е част от картинката да се изреже (отдолу или от дясно), но гарантираме че тя изцяло ще запълни елемента без да се нарушават пропорциите й */
+      /* background-size: cover; */
+
+      /* body е блоков елемент, и по дефоулт широчината му е колкото viewport-a, но не и височината. Поради това експлицитно задаваме, че трябва да е висок колкото целия viewport: ; */
+      height: 100vh;
+
+      /* нулираме отстъпа, задаван от браузера */
+      margin:  0;
+    }
+    .rings_wrapper{
+      /* задължително, за да се позиционират абсолютно кръгчетата спрямо този контейнер */
+      position: relative;
+
+      /* задаваме тук font-size спрямо viwporta.  Ще използваме em за базова единица при определяне на размерите на кръгчетата и техните отстъпи. Това ще ни позволи лесно да променяме мащаба на кръгчетата - променяме само тук font-size. */
+      font-size: 4vmin;
+
+      /* задаваме размери на контейнера - толкова колкото да побере кръгчетата*/
+      width: 15em;   /* достатъчно за 3 кръгчета */
+      height: 7.5em;  /* достатъчно за 1.5 кръгчета */
+
+      /* центрираме го хоризонтално */
+      margin: 0 auto;
+
+      /* преместваме го по-надолу */
+      margin-top: 20vh;
+    }
+    .ring {
+      /* задаваме размери за квадрат, като включваме в тях и рамките, за по-лесни изчисления */
+      box-sizing: border-box;
+      width: 5em;
+      height: 5em;
+
+      /* задаваме тук, в общия клас, рамката за да може да променяме лесно размера/типът й при необходимост */
+      border-width: .5em;
+      border-style: solid;
+
+      /* центрираме хоризонтално текста в кръгчето */
+      text-align: center;
+
+      /* центрираме вертикално текста в кръгчето: трябва да зададем височина на реда равна на височината на кръгчето, но тъй като по-горе използваме box-sizing: border-box, то трябва да изключим сега рамката */
+      line-height:  4em;
+      vertical-align: middle;
+
+      /* от квадрата правим кръг */
+      border-radius: 100%;
+
+      /* задаваме прозрачност */
+      opacity: .4;
+
+      /* козметични оформления за текста в кръгчето */
+      font-weight: bold;
+      font-family: serif;
+    }
+    .Europe {
+      border-color: blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .Africa {
+      position: absolute;
+      top: 0;
+      left: 5em;
+      border-color: yellow;
+    }
+    .America {
+      position: absolute;
+      top: 0;
+      left: 10em;
+      border-color: black;
+    }
+    .Asia {
+      position: absolute;
+      top: 2.5em;
+      left: 2.5em;
+      border-color: green;
+    }
+    .Australia {
+      position: absolute;
+      top: 2.5em;
+      left: 7.5em;
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="rings_wrapper">
+    <div class="ring Europe">Europe</div>
+    <div class="ring Africa">Africa</div>
+    <div class="ring America">America</div>
+    <div class="ring Asia">Asia</div>
+    <div class="ring Australia">Australia</div>
+  </div>
+  <script type="text/javascript" src="/ProgressBG-Front-End-Dev/outfit/js/components/modalDialog.js"></script>
+</body>
+</html>

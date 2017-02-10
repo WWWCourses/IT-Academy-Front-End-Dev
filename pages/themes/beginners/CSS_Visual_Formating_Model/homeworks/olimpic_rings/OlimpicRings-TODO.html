@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OlimpicRings - Task</title>
+    <style type="text/css">
+        html{
+            font-size: 16px; /* set for rem units */
+        }
+        body{
+            margin:  0;
+        }
+        .header{
+            box-sizing: border-box;
+            width: 100vw;
+            height: 60vh;
+            background-image: url("images/ocean-through-window-frame.jpg") ;
+            background-size: 100% 100%;
+            text-align: center;
+        }
+        .header:before{
+            content: "A";
+            line-height: 60vh;
+            margin-left: -1em;
+        }
+         .rings_wrapper{
+            display: inline-block;
+            width: 60%;
+            /* height:50%; */
+            margin: 0 auto;
+            line-height: 60vh;
+            text-align: center;
+            font-family: monospace;
+            font-style: italic;
+            font-weight: bolder;
+            color: #000;
+        }
+        .row1, .row2{
+            width: 100%;
+            border:  1px solid red;
+        }
+        .row2{
+            margin:  -12vh 0 0 0rem;
+        }
+        .ring{
+            position: relative
+            display: inline-block;
+            width: 30%;
+            /* height: 30%; */
+            padding-bottom: 30%:
+            line-height: 10vw;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 100%;
+            font-size: 12px;
+            opacity: .4;
+        }
+        .ring>span{
+            position: absolute;
+        }
+
+        .first{ border: 1rem solid blue;}
+        .second{ border: 1rem solid yellow;}
+        .third{ border: 1rem solid black;}
+        .forth{ border: 1rem solid green;}
+        .fifth{ border: 1rem solid red;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="rings_wrapper">
+            <div class="row1">
+                <div class="ring first"><span>Europe</span></div>
+                <div class="ring second"><span>Africa</span></div>
+                <div class="ring third"><span>America</span></div><br>
+            </div>
+            <div class="row2">
+                <div class="ring forth">Asia</div>
+                <div class="ring fifth">Australia</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

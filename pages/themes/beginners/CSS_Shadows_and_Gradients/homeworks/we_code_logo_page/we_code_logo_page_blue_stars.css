@@ -1,0 +1,135 @@
+html, body, p{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #222F3D;
+}
+main{
+    width: 65vw;
+    font-size: 2em;
+    margin: 2em auto 0 auto;
+    color: #FFF;
+}
+.logo_container{
+    font-size: 8em;
+    text-align: center;
+    /* padding: 1em; */
+    background-color: #34495E;
+    border-bottom: .05em solid #85C0FF;
+}
+.logo_text{
+    display: inline-block;
+    margin-top: .1em;
+    margin-bottom: .5em;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+
+    /* transform: skew(-10deg); */
+}
+.symbol{
+
+    /* color: #33475C; */
+    color: #6789ab;
+    /* color: #85C0FF; */
+    opacity: .6;
+    letter-spacing: .05em;
+}
+.word{
+    color: #85C0FF;
+    color: #FFF;
+    opacity: .8;
+    letter-spacing: .03em;
+}
+.stars{
+    font-size: 3em;
+    margin-top: 1em;
+    text-align: center;
+    letter-spacing: .3em;
+    color: #FFF;
+}
+.deep_bottom_right_shadow{
+    text-shadow:
+        0px  0px  0 rgba(133, 192, 255, 1.0),
+        1px  1px  0 rgba(133, 192, 255, 0.96),
+        1px  2px  0 rgba(133, 192, 255, 0.9199999999999999),
+        2px  3px  0 rgba(133, 192, 255, 0.8799999999999999),
+        2px  4px  0 rgba(133, 192, 255, 0.8399999999999999),
+        3px  5px  0 rgba(133, 192, 255, 0.7999999999999998),
+        3px  6px  0 rgba(133, 192, 255, 0.7599999999999998),
+        4px  7px  0 rgba(133, 192, 255, 0.7199999999999998),
+        4px  8px  0 rgba(133, 192, 255, 0.6799999999999997),
+        5px  9px  0 rgba(133, 192, 255, 0.6399999999999997),
+        5px  10px 0 rgba(133, 192, 255, 0.5999999999999996),
+        6px  11px 0 rgba(133, 192, 255, 0.5599999999999996),
+        6px  12px 0 rgba(133, 192, 255, 0.5199999999999996),
+        7px  13px 0 rgba(133, 192, 255, 0.4799999999999996),
+        7px  14px 0 rgba(133, 192, 255, 0.4399999999999996),
+        8px  15px 0 rgba(133, 192, 255, 0.39999999999999963),
+        8px  16px 0 rgba(133, 192, 255, 0.35999999999999965),
+        9px  17px 0 rgba(133, 192, 255, 0.36),
+        9px  18px 0 rgba(133, 192, 255, 0.34299999999999997),
+        10px 19px 0 rgba(133, 192, 255, 0.32599999999999996),
+        10px 20px 0 rgba(133, 192, 255, 0.30899999999999994),
+        11px 21px 0 rgba(133, 192, 255, 0.2919999999999999),
+        11px 22px 0 rgba(133, 192, 255, 0.2749999999999999),
+        12px 23px 0 rgba(133, 192, 255, 0.2579999999999999),
+        12px 24px 0 rgba(133, 192, 255, 0.24099999999999988),
+        13px 25px 0 rgba(133, 192, 255, 0.22399999999999987),
+        13px 26px 0 rgba(133, 192, 255, 0.20699999999999985),
+        14px 27px 0 rgba(133, 192, 255, 0.18999999999999984),
+        14px 28px 0 rgba(133, 192, 255, 0.17299999999999982),
+        15px 29px 0 rgba(133, 192, 255, 0.1559999999999998),
+        15px 30px 0 rgba(133, 192, 255, 0.1389999999999998),
+        16px 31px 0 rgba(133, 192, 255, 0.12199999999999979),
+        16px 32px 0 rgba(133, 192, 255, 0.10499999999999979),
+        17px 33px 0 rgba(133, 192, 255, 0.08799999999999979),
+        17px 34px 0 rgba(133, 192, 255, 0.07099999999999979),
+        18px 35px 0 rgba(133, 192, 255, 0.053999999999999784),
+        18px 36px 0 rgba(133, 192, 255, 0.03699999999999978),
+        19px 37px 0 rgba(133, 192, 255, 0.019999999999999782),
+        19px 38px 0 rgba(133, 192, 255, 0.0029999999999997806);
+}
+.deep_bottom_left_shadow{
+    text-shadow:
+         0px 0px 0 rgba(34, 47, 61, 1),
+        -1px  1px 0 rgba(34, 47, 61, 1),
+        -1px  2px 0 rgba(34, 47, 61, 1),
+        -2px  3px 0 rgba(34, 47, 61, 1),
+        -2px  4px 0 rgba(34, 47, 61, 1),
+        -3px  5px 0 rgba(34, 47, 61, 1),
+        -3px  6px 0 rgba(34, 47, 61, 1),
+        -4px  7px 0 rgba(34, 47, 61, 1),
+        -4px  8px 0 rgba(34, 47, 61, 1),
+        -5px  9px 0 rgba(34, 47, 61, 1),
+        -5px  10px 0 rgba(34, 47, 61, 1),
+        -6px  11px 0 rgba(34, 47, 61, 1),
+        -6px  12px 0 rgba(34, 47, 61, 1),
+        -7px  13px 0 rgba(34, 47, 61, 1),
+        -7px  14px 0 rgba(34, 47, 61, 1),
+        -8px  15px 0 rgba(34, 47, 61, 1),
+        -8px  16px 0 rgba(34, 47, 61, 1),
+        -9px  17px 0 rgba(34, 47, 61, 1),
+        -9px  18px 0 rgba(34, 47, 61, 1),
+        -10px 19px 0 rgba(34, 47, 61, 1),
+        -10px 20px 0 rgba(34, 47, 61, 1),
+        -11px 21px 0 rgba(34, 47, 61, 1),
+        -11px 22px 0 rgba(34, 47, 61, 1),
+        -12px 23px 0 rgba(34, 47, 61, 1),
+        -12px 24px 0 rgba(34, 47, 61, 1),
+        -13px 25px 0 rgba(34, 47, 61, 1),
+        -13px 26px 0 rgba(34, 47, 61, 1),
+        -14px 27px 0 rgba(34, 47, 61, 1),
+        -14px 28px 0 rgba(34, 47, 61, 1),
+        -15px 29px 0 rgba(34, 47, 61, 1),
+        -15px 30px 0 rgba(34, 47, 61, 1),
+        -16px 31px 0 rgba(34, 47, 61, 1),
+        -16px 32px 0 rgba(34, 47, 61, 1),
+        -17px 33px 0 rgba(34, 47, 61, 1),
+        -17px 34px 0 rgba(34, 47, 61, 1),
+        -18px 35px 0 rgba(34, 47, 61, 1),
+        -18px 36px 0 rgba(34, 47, 61, 1),
+        -19px 37px 0 rgba(34, 47, 61, 1),
+        -19px 38px 0 rgba(34, 47, 61, 1),
+        -20px 39px 0 rgba(34, 47, 61, 1);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3_ClickableButton</title>
+    <link rel="stylesheet" type="text/css" href="css/shadows.css">
+    <style type="text/css">
+    .test_blur_spread{
+        border-radius: 16px;
+        box-shadow:
+            0    8px 16px -6px black,
+            0   -8px 16px -6px black,
+            8px  0px 16px -6px black,
+            -8px 0px 16px -6px black;
+    }
+    .test{
+        border-radius: 100%;
+        box-shadow:
+            5px 5px #333,
+            -5px 5px #333;
+    }
+    .test:active{
+        box-shadow: 2px 2px #333;;
+    }
+    .circle{
+        border-radius: 100%;
+    }
+    div.button{
+        /* background: linear-gradient(top: #00796B, #C7C54E); */
+        background: linear-gradient(135deg, hsla(174, 100%, 30%, .9), hsla(174, 100%, 30%, .6));
+        text-align: center;
+        font-size:1em;
+        font-weight: bold;
+        /* border: 1px solid #666; */
+        box-shadow:
+            .2em .2em 0 .2em hsla(174, 100%, 30%, .8);
+    }
+    .button:active{
+        box-shadow: none;
+    }
+    div.button_example{
+        font-size:32px;
+        border:.4em solid #26759E;
+        text-align: center;
+        vertical-align: middle;
+        text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+        box-shadow: #878787 .2em .3em .4em ;
+        background-color: #26759e;
+        background-image: linear-gradient(to bottom, #26759e, #133d5b);
+        font-weight:bold;
+        color: #FFFFFF;
+        transition: .3s;
+    }
+
+    div.button_example:hover{
+        cursor: pointer;
+        /* box-shadow: .5em .5em red; */
+    }
+    div.button_example:active{
+        background-image: linear-gradient(to top, #26759e, #26759E);
+        /* box-shadow: #878787 .1em .2em .2em ; */
+        box-shadow:none;
+        border:.2em solid #558AA6;
+    }
+    </style>
+</head>
+<body>
+    <div class="example bg_white">
+        <div class="box bg_blue button_example circle">
+            <span class="code">Click me</span>
+        </div>
+    </div>
+</body>
+</html>

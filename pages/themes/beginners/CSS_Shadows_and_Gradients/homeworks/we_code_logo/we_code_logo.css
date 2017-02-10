@@ -1,0 +1,73 @@
+html, body, p{
+    margin: 0;
+    padding: 0;
+}
+.logo_container{
+    margin: 3em;
+    /* border: .2em solid #999; */
+}
+.logo_text{
+    font-size: 8em;
+    display: inline-block;
+    margin-top: .1em;
+    margin-bottom: .5em;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+
+    /* transform: skew(-10deg); */
+}
+.symbol{
+
+    /* color: #33475C; */
+    /* color: #6789ab; */
+    color: rgba(103, 137, 171, .6);
+    /* opacity: .6; */
+    letter-spacing: .05em;
+}
+.word{
+    color: rgba(255, 255, 255, .8);
+    letter-spacing: .03em;
+}
+.deep_bottom_left_shadow{
+    text-shadow:
+         0px  0px  0 rgba(34, 47, 61, .5),
+        -1px  1px  0 rgba(34, 47, 61, .5),
+        -1px  2px  0 rgba(34, 47, 61, .5),
+        -2px  3px  0 rgba(34, 47, 61, .5),
+        -2px  4px  0 rgba(34, 47, 61, .5),
+        -3px  5px  0 rgba(34, 47, 61, .5),
+        -3px  6px  0 rgba(34, 47, 61, .5),
+        -4px  7px  0 rgba(34, 47, 61, .5),
+        -4px  8px  0 rgba(34, 47, 61, .5),
+        -5px  9px  0 rgba(34, 47, 61, .5),
+        -5px  10px 0 rgba(34, 47, 61, .5),
+        -6px  11px 0 rgba(34, 47, 61, .5),
+        -6px  12px 0 rgba(34, 47, 61, .5),
+        -7px  13px 0 rgba(34, 47, 61, .5),
+        -7px  14px 0 rgba(34, 47, 61, .5),
+        -8px  15px 0 rgba(34, 47, 61, .5),
+        -8px  16px 0 rgba(34, 47, 61, .5),
+        -9px  17px 0 rgba(34, 47, 61, .5),
+        -9px  18px 0 rgba(34, 47, 61, .5),
+        -10px 19px 0 rgba(34, 47, 61, .5),
+        -10px 20px 0 rgba(34, 47, 61, .5),
+        -11px 21px 0 rgba(34, 47, 61, .5),
+        -11px 22px 0 rgba(34, 47, 61, .5),
+        -12px 23px 0 rgba(34, 47, 61, .5),
+        -12px 24px 0 rgba(34, 47, 61, .5),
+        -13px 25px 0 rgba(34, 47, 61, .5),
+        -13px 26px 0 rgba(34, 47, 61, .5),
+        -14px 27px 0 rgba(34, 47, 61, .5),
+        -14px 28px 0 rgba(34, 47, 61, .5),
+        -15px 29px 0 rgba(34, 47, 61, .5),
+        -15px 30px 0 rgba(34, 47, 61, .5),
+        -16px 31px 0 rgba(34, 47, 61, .5),
+        -16px 32px 0 rgba(34, 47, 61, .5),
+        -17px 33px 0 rgba(34, 47, 61, .5),
+        -17px 34px 0 rgba(34, 47, 61, .5),
+        -18px 35px 0 rgba(34, 47, 61, .5),
+        -18px 36px 0 rgba(34, 47, 61, .5),
+        -19px 37px 0 rgba(34, 47, 61, .5),
+        -19px 38px 0 rgba(34, 47, 61, .5),
+        -20px 39px 0 rgba(34, 47, 61, .5);
+}

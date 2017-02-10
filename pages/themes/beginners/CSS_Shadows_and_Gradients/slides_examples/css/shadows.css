@@ -1,0 +1,261 @@
+/* main {*/
+  .reveal div.example{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding: 50px 0;
+  }
+  .reveal div.box{
+    width: 7em;
+    height: 7em;
+    line-height: 7em;
+    margin: 2em auto;
+  }
+  .reveal div.example p.bs{
+    display: inline-block;
+    /* border: 1px solid red; */
+  }
+  .reveal .bg_blue{
+    color: #CCC;
+    background:#34495e;
+  }
+  .reveal .bg_white{
+    color: #333;
+    background: #FFF;
+  }
+/* main }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TEXT SHADOWS
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ts_demo   {*/
+  div.example .ts_demo{
+    background:#34495e;
+    color: #CCC;
+  }
+  div.example .shadow{
+    font-size: 90px !important;
+    line-height: 2em !important;
+    font-weight: bold;
+    color: #34495e;
+    /* background-color: #34495e; */
+    text-shadow: 0px 0px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     2px 2px 0 #222f3d,
+     3px 3px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     5px 5px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     7px 7px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     9px 9px 0 #222f3d,
+     10px 10px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     12px 12px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     14px 14px 0 #222f3d,
+     15px 15px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     17px 17px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     19px 19px 0 #222f3d,
+     20px 20px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     22px 22px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     24px 24px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     26px 26px 0 #222f3d,
+     27px 27px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     29px 29px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     31px 31px 0 #222f3d,
+     32px 32px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     34px 34px 0 #222f3d,
+     35px 35px 0 #222f3d;
+    color: #6789ab;
+    transform: skew(0deg);
+  }
+  div.example .ts_demo .code {
+    font-family: courier;
+    font-size: 120px;
+    color: #fff;
+  }
+  div.example .ts_demo .hr {
+    position: relative;
+  }
+  div.example p{
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+  }
+/* ts_demo   }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* simple text shadow {*/
+  div.example .ts_simple_left{
+      text-shadow: -.1em 0 0 #D1D8B5;
+  }
+  div.example .ts_simple_right{
+      text-shadow: .1em 0 0 #D1D8B5;
+  }
+  div.example .ts_simple_top{
+      text-shadow: 0 -.1em 0 #D1D8B5;
+  }
+  div.example .ts_simple_bottom{
+      text-shadow: 0 .1em 0 #D1D8B5;
+  }
+  div.example .ts_simple_right_bottom {
+      text-shadow: .1em .1em 0 #D1D8B5;
+  }
+  div.example .ts_simple_left_top{
+    text-shadow: -.1em -.1em 0 #D1D8B5;
+  }
+  div.example .ts_simple_blur{
+    text-shadow: .1em .1em .3em #D1D8B5;
+  }
+/* simple text shadow }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* multiple shadows {*/
+  div.example .ts_faded_red{
+    /* background: #DDD; */
+    color: hsl(0, 100%, 70%);
+    text-shadow:
+      1px 1px 0 hsl(360, 100%, 70%),
+      2px 2px 0 hsl(320, 100%, 70%),
+      3px 3px 0 hsl(280, 100%, 70%),
+      4px 4px 0 hsl(240, 100%, 70%),
+      5px 5px 0 hsl(200, 100%, 70%),
+      6px 6px 0 hsl(160, 100%, 70%),
+      7px 7px 0 hsl(120, 100%, 70%),
+      8px 8px 0 hsl(80,  100%, 70%),
+      9px 9px 0 hsl(40,  100%, 70%);
+  }
+  div.example .green_to_yellow{
+    color: hsl(120, 50%, 50%);
+    text-shadow:
+      1px 1px 0px hsl(120, 100%, 50%),
+      2px 2px 0px hsl(60,  100%, 50%),
+      3px 3px 0px hsl(120, 100%, 50%),
+      4px 4px 0px hsl(60,  100%, 50%),
+      5px 5px 0px hsl(120, 100%, 50%),
+      6px 6px 0px hsl(60,  100%, 50%),
+      7px 7px 0px hsl(120, 100%, 50%),
+      8px 8px 0px hsl( 60, 100%, 50%),
+      9px 9px 0px hsl(120, 100%, 50%);
+  }
+  div.example .blur_efect{
+    color: hsl(120, 50%, 50%);
+    text-shadow:
+      1px 1px 2px hsl(120, 100%, 50%),
+      2px 2px 2px hsl(60,  100%, 50%),
+      3px 3px 2px hsl(120, 100%, 50%),
+      4px 4px 2px hsl(60,  100%, 50%),
+      5px 5px 2px hsl(120, 100%, 50%),
+      6px 6px 2px hsl(60,  100%, 50%),
+      7px 7px 2px hsl(120, 100%, 50%),
+      8px 8px 2px hsl( 60, 100%, 50%),
+      9px 9px 2px hsl(120, 100%, 50%);
+  }
+/* multiple shadows }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* BOX SHADOWS
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* bs_demo   {*/
+  div.example .bs_demo{
+    background:#34495e;
+    color: #CCC;
+    box-shadow: 0px 0px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     1px 1px 0 #222f3d,
+     2px 2px 0 #222f3d,
+     3px 3px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     4px 4px 0 #222f3d,
+     5px 5px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     6px 6px 0 #222f3d,
+     7px 7px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     8px 8px 0 #222f3d,
+     9px 9px 0 #222f3d,
+     10px 10px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     11px 11px 0 #222f3d,
+     12px 12px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     13px 13px 0 #222f3d,
+     14px 14px 0 #222f3d,
+     15px 15px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     16px 16px 0 #222f3d,
+     17px 17px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     18px 18px 0 #222f3d,
+     19px 19px 0 #222f3d,
+     20px 20px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     21px 21px 0 #222f3d,
+     22px 22px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     23px 23px 0 #222f3d,
+     24px 24px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     25px 25px 0 #222f3d,
+     26px 26px 0 #222f3d,
+     27px 27px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     28px 28px 0 #222f3d,
+     29px 29px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     30px 30px 0 #222f3d,
+     31px 31px 0 #222f3d,
+     32px 32px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     33px 33px 0 #222f3d,
+     34px 34px 0 #222f3d,
+     35px 35px 0 #222f3d;
+  }
+/* bs_demo   }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* simple box shadow {*/
+  div.example .bs_simple_center{
+    box-shadow: 0em 0em 5px #48698B;
+  }
+  div.example .bs_simple_left{
+      box-shadow: -1em 0 .1em #84A1C0;
+  }
+  div.example .bs_simple_right{
+      box-shadow: .5em .5em 0 #D1D8B5;
+  }
+  div.example .bs_simple_top{
+      box-shadow: 0 -1em 0 #D1D8B5;
+  }
+  div.example .bs_simple_bottom{
+      box-shadow: 0 1em 0 #D1D8B5;
+  }
+  div.example .bs_simple_right_bottom {
+      box-shadow: 1em 1em 0 #D1D8B5;
+  }
+  div.example .bs_simple_left_top{
+    box-shadow: -1em -1em 0 #D1D8B5;
+  }
+  div.example .bs_simple_blur{
+    box-shadow: 1em 1em .3em #D1D8B5;
+  }
+/* simple box shadow }*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
