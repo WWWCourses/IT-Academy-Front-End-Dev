@@ -520,10 +520,19 @@
 	"buffers":
 	[
 		{
-			"file": "pages/themes/beginners/CSS_Selectors_2/CSS_Selectors_2.html",
+			"file": "pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
 			"settings":
 			{
-				"buffer_size": 17090,
+				"buffer_size": 13819,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/themes/beginners/Course_Intro/Course_Intro.html",
+			"settings":
+			{
+				"buffer_size": 14048,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -536,10 +545,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "sett",
+		"height": 233.0,
+		"last_filter": "key",
 		"selected_items":
 		[
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
 			[
 				"sett",
 				"Preferences: Settings"
@@ -611,10 +624,6 @@
 			[
 				"liv",
 				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"key",
-				"Preferences: Key Bindings"
 			],
 			[
 				"remove",
@@ -971,15 +980,33 @@
 	[
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/agenda",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/readings",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Selectors_2",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Selectors_2/slides_examples",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro"
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro/images"
 	],
 	"file_history":
 	[
+		"/home/nemsys/Documents/{}",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Selectors_2/CSS_Selectors_2.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/CSS_Shadows_and_Gradients.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/CSS_Visual_Formating_Model.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Lists/HTML_Lists.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Tables/HTML_Tables.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/_cliches/slides.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/_cliches/slides.old.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro/Course_Intro.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Animations_and_Visual_Effects/CSS_Animations_and_Visual_Effects.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Intro/CSS_Intro.html",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Selectors_1/CSS_Selectors_part1.html",
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/5_WE.sublime-project",
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/gh_pages.sublime-project",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/agenda/beginners.html",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/index.html",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Selectors_2/slides_examples/pure_css_hamburger_menu.html",
@@ -987,7 +1014,6 @@
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/labs/css/main.css",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/labs/pages/css_intro.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/sti",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro/Course_Intro.html",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/labs/pages/contacts.html",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/labs/pages/tables.html",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/labs/pages/forms.html",
@@ -1035,7 +1061,6 @@
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/agenda/beginners.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Basic_Syntax/codepen_examples/auto_list_generator/auto_list_generator.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_Basic_Syntax/codepen_examples/array_methods/array_methods.html",
-		"/home/nemsys/Documents/{}",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/readings/beginners/UsefulResources.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitignore",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/outfit/css/readings.css",
@@ -1090,34 +1115,18 @@
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Colors_And_Mesuring_Unirs/20161210.css",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/gh-pages.sublime-project",
 		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/labs/css_intro.css",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/tables/tables_intro.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/labs/forms.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/labs/form_test.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/labs/css_intro.html",
-		"/home/nemsys/bin/audio_to_headphone.sh",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/html_bases.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/test.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/html/2016/images.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/index.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/lists/lists_intro.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/2016/images.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/images.html",
-		"/home/nemsys/.ssh/config",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/pesho.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/agenda.css",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_HTML_DOM/labs/20161120.js",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_BasicSyntax_2/labs/objects/20161119.html"
+		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/labs/tables/tables_intro.html"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
 		"height": 161.0,
 		"where_history":
 		[
+			"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
 			"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners",
 			"/DATA/projects/courses/ProgressBGCourses/Angular",
 			"/DATA/projects/courses/ProgressBGCourses/Angular/outfit",
@@ -1160,6 +1169,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",",
+			"\\s+",
+			"\\n\\s+",
+			"div",
+			"face",
+			"<span>Iva E. Popova, 2016,</span>",
+			"<span>Iva E. Popova, 2017,</span>",
+			"(?s)<section data-transition=\"zoom\">(.+?)</section>",
+			"(?s)<section data-transition=\"zoom</section>",
+			"(?m)<section data-transition=\"zoom</section>",
+			"(?:x)<section data-transition=\"zoom</section>",
+			"<section data-transition=\"zoom</section>",
+			"<section data-transition=\"zoom\">",
 			"hambu",
 			"code class",
 			"hambu",
@@ -1274,20 +1296,7 @@
 			"30",
 			"animation",
 			"boll",
-			"gpic",
-			"^[^@]+$",
-			"[^@]+",
-			".*[^@]",
-			"[^@]",
-			"color",
-			"colors",
-			"dd",
-			"dt",
-			"6",
-			"dt",
-			"1",
-			"2",
-			"search_pattern"
+			"gpic"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1295,6 +1304,10 @@
 		"regex": true,
 		"replace_history":
 		[
+			" OR ",
+			"",
+			",",
+			"<span>Iva E. Popova, 2017,</span>",
 			"toggle_menu_button",
 			" OR ",
 			",",
@@ -1418,11 +1431,7 @@
 			"&lt;",
 			"<li><h3><a class=\"nonactive\" href=",
 			"<li><h3><a class=\"active\" href=",
-			"<li><h3><a class=\"nonactive\" href=",
-			"<li><h3><a class=\"active\" href=",
-			"<li><h3><a class=\"nonactive\" href=",
-			"&gt;",
-			"&lt;"
+			"<li><h3><a class=\"nonactive\" href="
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1433,87 +1442,91 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pages/themes/beginners/CSS_Selectors_2/CSS_Selectors_2.html",
+					"file": "pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17090,
+						"buffer_size": 13819,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12228,
-								12228
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
+									"1":
+									[
+										14,
+										15
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/angle_bracket.png",
+										"brackethighlighter.default"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										0,
+										1
+									]
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										10399,
-										10400
-									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1524,27 +1537,158 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
-								"bh_square_content"
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
 							],
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9384.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pages/themes/beginners/Course_Intro/Course_Intro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8822,
+								8822
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										8821,
+										8822
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										8753,
+										8754
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 284.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"file": "pages/themes/beginners/Course_Intro/images/toggl-it-jobs-explained-with-changing-lightbulb_IEP_EDIT.png",
+					"semi_transient": true,
+					"stack_index": 1,
+					"type": "image"
 				}
 			]
 		}
@@ -1588,7 +1732,7 @@
 	"project": "gh_pages.sublime-project",
 	"replace":
 	{
-		"height": 78.0
+		"height": 80.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1694,7 +1838,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 211.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
