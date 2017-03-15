@@ -9,7 +9,7 @@
 				"*.pdf",
 				"*~lock*"
 			],
-			"path": "."			
+			"path": "."
 		},
 		{
 			"file_exclude_patterns":
@@ -19,7 +19,7 @@
 				"*.pdf",
 				"*~lock*"
 			],
-			"path": ".."			
+			"path": ".."
 		}
 	],
 	"settings":
@@ -50,6 +50,7 @@
 			"layout"
 		],
 		"spell_check": true,
+		"dictionary": "Packages/Language - Bulgarian/OldBulgarian.dic",
 		"sublime-view-in-browser":
 		{
 			"basePath": "/DATA/projects/www/wwwcourses.github.io",
