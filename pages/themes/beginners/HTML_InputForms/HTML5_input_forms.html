@@ -55,15 +55,31 @@
 </section>
 
 <section><h3>Елемент form</h3>
-    <p>Контейнер, в който се разполагат елементите на
-формата</p>
-<pre><code class="html">
-    <form action="registration.py" method="POST">
-        <div>Име: <input type="text" name="uname"></div>
-        <div>Парола: <input type="password" name="pass"></div>
-        <button type="submit">Submit</button>
-    </form>
-</code></pre>
+    <section>
+        <p>Контейнер, в който се разполагат елементите на формата</p>
+        <pre><code class="html">
+            <form action="registration.py" method="POST">
+                <div>Име: <input type="text" name="uname"></div>
+                <div>Парола: <input type="password" name="pass"></div>
+                <button type="submit">Submit</button>
+            </form>
+        </code></pre>
+    </section>
+    <section><h3>Основни атрибути</h3>
+        <dl class="fa">
+            <dt><span class="code">action</span></dt>
+            <dd>Задава пътя до back-end програмата, която ще обработва данните на сървъра.</dd>
+            <dt><span class="code">method</span></dt>
+            <dd>Задава начина по който ще се изпратят данните. Основните HTTP методи за изпращане на данни са:
+            <ul>
+                <li><span class="keyword">get</span> - данните ще се "закачат" в самото URL; </li>
+                <li><span class="keyword">post</span> - данните се предават в тялото на съобщенето.</li>
+            </ul>
+            </dd>
+        </dl>
+        <br><br>
+        <p class="note">Когато чрез формата ще се изпращат конфиденциални данни (като парола), то винаги използвайте <code>method="post"</code></p>
+    </section>
 </section>
 
 <section><h3>Допустими елементи във <code><b>form</b></code></h3>
@@ -151,6 +167,13 @@
 
 <section><h3>Елемент <code>button</code></h3>
     <a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a>
+</section>
+
+<section><h3>Задачи за упражнение</h3>
+<p>Разгледайте показания пример в <a href="http://codepen.io/webdesigncourse/pen/mVyooG">codepen</a> и променете цвета по подразбиране в <code>&lt;input type="color"&gt;</code> да бъде не черно, а червено</p>
+
+<p data-height="300" data-theme-id="20230" data-slug-hash="mVyooG" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="Input Form - HTML validation" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/mVyooG/">Input Form - HTML validation</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
 <section data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
