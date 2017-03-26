@@ -80,11 +80,12 @@
     </div>
 </section>
 
+
 <section><h2>Какво са CSS селекторите?</h2>
     <section>
         <dl class="fa">
             <dt>Шаблони, които определят над кои HTML елементи ще се приложи зададеният стил в декларациите.</dt>
-            <dt>Mогат да бъдат съвсем прости, като '<code>*</code>' или '<code>p</code>' или доста по-сложни като:
+            <dt>Могат да бъдат съвсем прости, като '<code>*</code>' или '<code>p</code>' или доста по-сложни като:
             <pre><code>a[href^="https://"]:hover</code></pre></dt>
         </dl>
         <p class="advanced text_left">Списък със всички дефинирани в стандарта (CSS1 – CSS3) селектори: <a href="http://www.w3schools.com/cssref/css_selectors.asp">css_selectors</a></p>
@@ -94,82 +95,115 @@
 
 <section><h2>Селектори за елементи</h2>
     <section class="text_left"><h3>Element (type) selectors</h3>
-        <pre><code>
-/* Всички параграфи в документа ще бъдат с червен шрифт */
-p {
-    color: red;
-}
+        <pre><code rel="CSS">
+            /* Всички параграфи в документа ще бъдат с червен шрифт */
+            p {
+                color: red;
+            }
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи от дадения тип.</p>
-        <p><a href="examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
+        <p><a href="slides_examples/type_selectors_example.html">Пример: "Цитати на известни личности"</a></p>
     </section>
     <section class="text_left"><h3>Универсален селектор (Universal selector)</h3>
-        <pre><code>
-* {
-    marging: 0;
-    padding: 0
-}
+        <pre><code rel="CSS">
+            * {
+                marging: 0;
+                padding: 0
+            }
         </code></pre>
         <p><u>Действие</u>: селектира всички HTML елементи в документа.</p>
+        <p>Не се препоръчва да се използва, тъй като забавя обработката на страницата.</p>
     </section>
 </section>
 
 <section><h2>Селектори за class и id</h2>
+    <section><h3>Атрибутите: class и id</h3>
+        <dl class="fa">
+            <dt><span class="code note">class</span> - можем да зададем един и същи клас на <span class="note">множество</span> елементи в HTML. Така лесно можем да селектираме всички тях.</dt>
+            <dt><span class="code note  ">id</span> - само <span class="note">един</span> елемент в документа може да има дадено id. T.e. чрез <span class="code">id</span> селектираме само един елемент.</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <p class="odd">Параграф 1</p>
+            <p class="even" id="vip">Параграф 2</p>
+            <p class="odd">Параграф 3</p>
+            <p class="even">Параграф 4</p>
+            <p class="odd">Параграф 5</p>
+        </code></pre>
+    </section>
+    <section><h3>Атрибутите: class и id</h3>
+        <dl class="fa">
+            <dt>Стойностите на атрибутите <b>class</b> и <b>id</b>, задължително започват с буква, след която може да има произволна съвкупност от букви, цифри, '_' и '-'.</dt>
+            <dt>Можем да зададем <span class="note">няколко класа</span> за един елемент, като ги разделяме със <span class="note">спейс</span>.</dt>
+            <pre><code rel="HTML" style="width: 105%; margin-left: -2em;">
+                <!--Параграфът ще принадлежи към 2 класа: 'odd' и 'red'-->
+                <p class="odd red">Параграф 3</p>
+            </code></pre>
+            <dt><span class="note">В атрибута <b>id</b> не можем да имаме спейс!</span></dt>
+        </dl>
+    </section>
     <section><h3>Селектор за class</h3>
-        <p>Записва се с точка ("<b>.</b>") последвана от стойност на class.</p>
-         <pre><code>
-/* Селектира всички HTML елементи, които са дефинирали class="blue" */
-.blue{
-    color: blue;
-}
-        </code></pre>
-        <p>Може да бъде специфициран допълнително, като пред него непосдредствено се запише тип на елемент, </p>
-        <pre><code>
-/* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
-p.red{
-    color: red;
-}
-        </code></pre>
+        <dl class="fa" style="font-size: .9em">
+            <dt>Записва се с точка ("<b>.</b>") последвана от стойност на class.</dt>
+            <dt>Може да бъде специфициран допълнително, като пред него непосредствено се запише тип на елемент.</dt>
+            <pre><code rel="CSS">
+                /* Селектира всички HTML елементи, които са дефинирали class="blue" */
+                .blue{
+                    color: blue;
+                }
+                /* Селектира всички HTML елементи, от тип 'p', които са дефинирали class="red" */
+                p.red{
+                    color: red;
+                }
+            </code></pre>
+        </dl>
     </section>
     <section><h3>Селектор за id</h3>
-        <p>Записва се с диез (хаш таг) - "<b>#</b>", последван от стойност на атрибута <b>id</b>.</p>
-        <p>Тъй като с дадено <b>id</b> можем да обозначим само един единствен елемент от  цялто HTML дърво, то е безсмислен записът с тип на елемент отрпед.</p>
-        <p> Например: <code>p#vip{...}</code> няма смисъл и не се препоръчва да се използва.</p>
+        <dl class="fa">
+            <dt>Записва се с диез (хаш таг) - "<b>#</b>", последван от стойност на атрибута <b>id</b>.</dt>
+            <pre><code rel="CSS">
+                /* Селектира елементът с id="main_title" */
+                #main_title{
+                    color: red;
+                }
+            </code></pre>
+            <dt>Тъй като с дадено <b>id</b> можем да обозначим само един единствен елемент от  цялото HTML дърво, то е безсмислен записът с тип на елемент отпред.</dt>
+            <dt> Например: <code>p#vip{...}</code> няма смисъл и не се препоръчва да се използва.</dt>
+        </dl>
     </section>
     <section><h3>Пример</h3>
-        <pre><code>
-/* Селектира всички HTML елементи, които са дефинирали class="c1" */
-.c1{
-    color: purple;
-}
-/* Селектира всички HTML елементи, от тип 'h1', които са дефинирали class="c1" */
-h1.c1{
-    font-style: italic;
-}
-
-/* Селектор по id */
-#vip{
-    color: #aa3333;
-    font-size: 2em;
-    text-shadow:
-        2px 2px #a000a0,
-        2px 2px #c000c0;
-}
+        <pre><code rel="CSS" style="width: 120%; height: 50vh; margin-left: -2em;">
+        /* Селектира всички HTML елементи, които са дефинирали class="c1" */
+        .c1{
+            color: purple;
+        }
+        /* Селектира всички H1 елементи, които са дефинирали class="c1" */
+        h1.c1{
+            font-style: italic;
+        }
+        /* Селектор по id */
+        #vip{
+            color: #aa3333;
+            font-size: 2em;
+            text-shadow:
+                2px 2px #a000a0,
+                2px 2px #c000c0;
+        }
         </code></pre>
-        <pre><code>
-        <h1 class="c1">Заглавие</h1>
-        <p class="c1">Параграф 1</p>
-        <h2 class="c1">Под заглавие</h2>
-        <p class="c1">Параграф 2</p>
-        <p id="vip">Съществува само един елемент с id="vip"</p>
+        <pre><code rel="HTML" style="width: 120%;  height: 40vh; margin-left: -2em;">
+            <p>Purple Section:</p>
+            <h1 class="c1">Заглавие</h1>
+            <p class="c1">Параграф</p>
+            <h2 class="c1">Под заглавие</h2>
+            <p class="c1">Параграф</p>
+            <p id="vip">Параграф с id="vip"</p>
         </code></pre>
-        <a href="examples/class_selectors.html">резултат</a>
+        <a href="slides_examples/class_selectors.html">резултат</a>
     </section>
 </section>
 
-<section><h2>CSS Комбинатори (CSS Combinators)</h2>
+<section><h2>CSS Комбинатори (<a href="https://www.w3schools.com/css/css_combinators.asp">CSS Combinators</a>)</h2>
     <section>
-        <p>Това са селектори отчитащи позицията (контекста) на елементите в HTML дървото.</p>
+        <p>Чрез комбинаторите съставяме селектори, които отчитат позицията (контекста) на елементите в HTML дървото.</p>
     </section>
     <section><h3>Видове HTML възли</h3>
         <dl class="fa">
@@ -179,7 +213,7 @@ h1.c1{
             <dt>Братя (Siblings)</dt>
         </dl>
     </section>
-    <section><h3>Видове HTML възли</h3>
+    <section style="font-size: .7em"><h3>Видове HTML възли</h3>
         <div class="html_block">
             <div class="parent">
             <p>DIV1</p>
@@ -192,20 +226,44 @@ h1.c1{
             </div>
             <hr>
             <ul>
-                <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV3</li>
-                <li><a href="examples/html_nodes_types_code_and_preview.html">Пример</a></li>
+                <li>DIV3: Child of DIV2; Descendant of DIV2 and DIV1</li>
+                <li><a href="slides_examples/html_nodes_types_code_and_preview.html">Пример</a></li>
             </ul>
         </div>
     </section>
     <section>
-        <p>Поради съображения за сигурност не можем да селектираме елементи и в ляво по  дървото. Поради това няма селектор за предшественик.</p>
-        <p>Селекторите, чрез които можем да избираме елементи в HTML дървото са:</p>
-        <ul>
-            <li>селектор за наследници (descendant selector): '<b>space</b>'</li>
-            <li>селектор за деца (child selector): '<b>></b>'</li>
-            <li>селектор за брат - без значение дали следва непосредствено брат си (general sibling selector): '<b>~</b>'</li>
-            <li>селектор за брат, който е разположен непосредствено след брат си (adjacent sibling selector):  '<b>+</b>'</li>
-        </ul>
+        <p>Селекторите, чрез които можем да избираме елементи според позицията им в HTML дървото се образуват чрез <span class="note">комбинатори</span>:</p>
+        <p>Комбинаторите, са символи, чрез които се задава връзка между селектори и така чрез тях се образува съставен селектор.</p>
+    </section>
+    <section>
+        <pre><code rel="Syntax">
+            selector1&lt;combinator&gt;selector2
+        </code></pre>
+        <table>
+            <tr>
+                <th>Комбинатор</th>
+                <th>Селектор</th>
+            </tr>
+            <tr>
+                <td>'&nbsp;&nbsp;' (<span class="note">спейс</span>)</td>
+                <td>parentSelector &nbsp; descendantsSelector</td>
+            </tr>
+            <tr>
+                <td>'<span class="note">></span>'</td>
+                <td>parentSelector <span class="note">></span> childrenSelector</td>
+            </tr>
+            <tr>
+                <td>'<span class="note">~</span>'</td>
+                <td>previousSelector<span class="note">~</span>generalSiblingSelector</td>
+            </tr>
+            <tr>
+                <td>'<span class="note">+</span>'</td>
+                <td>previousSelector<span class="note">+</span>adjacentSiblingSelector</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <p>Поради съображения за сигурност, засега, не можем да селектираме елементи <span class="note">нагоре</span> и в <span class="note">ляво</span> по  дървото. Поради това няма селектор за предшественик.</p>
     </section>
 </section>
 
@@ -215,7 +273,12 @@ h1.c1{
         <hr>
         <p>Дават възможност да се селектират елементи с произволни атрибути и стойности за тях.</p>
     </section>
+    <section><h3>Пример:</h3>
+    <a href="http://codepen.io/webdesigncourse/pen/pEzRQA/">Attribute selectors in codepen</a>
+    </section>
 </section>
+
+
 
 <section id="homework"><h2>Задачи за упражнение</h2>
     <a href="homeworks/AphorismsList/AphorismsList-Task.pdf">AphorismsList-Task.pdf</a>
