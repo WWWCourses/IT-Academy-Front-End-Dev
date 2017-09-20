@@ -21,9 +21,6 @@
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
     <!-- CUSTOM -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css">
     <base target="_blank">
 </head>
 <body>
@@ -54,110 +51,257 @@
     </div>
 </section>
 
-<section><h2>Параграфи и заглавия</h2>
-    <section>
-        <p>Елемент p</p>
-        <pre><code>
-            <p>Текст в параграф 1</p>
-            <p>Текст в параграф 2</p>
-        </code></pre>
-        <div class="results_h">
-            <p>Текст в параграф 1</p>
-            <p>Текст в параграф 2</p>
-        </div>
-    </section>
-    <section>
-        <p>Елементи h1 - h6</p>
-        <pre><code>
-            <h1>Заглавие 1</h1>
-            <h2>Заглавие 2</h2>
-            <h3>Заглавие 3</h3>
-            <h4>Заглавие 4</h4>
-            <h5>Заглавие 5</h5>
-            <h6>Заглавие 6</h6>
-        </code></pre>
-        <div class="results_h">
-            <h1>Заглавие 1</h1>
-            <h2>Заглавие 2</h2>
-            <h3>Заглавие 3</h3>
-            <h4>Заглавие 4</h4>
-            <h5>Заглавие 5</h5>
-            <h6>Заглавие 6</h6>
-        </div>
-    </section>
 
+<section><h2>Параграфи (paragraphs)</h2>
+	<section><h3>HTML елемент: <span class="keyword">P</span></h3>
+		<dl class="fa">
+			<dt><span class="note">Употреба</span>: когато искаме да представим съдържание, отделено в параграф.</dt>
+			<dt><span class="note">Атрибути</span>: няма задължителни. В HTML5 не се допуска използването на атрибута <span class="keyword">align</span>. Допустими са единствено <a href="http://www.w3schools.com/tags/ref_standardattributes.asp">глобалните HTML атрибути</a>.</dt>
+		</dl>
+		<pre><code rel="HTML">
+			<p>Текст в параграф 1</p>
+			<p>Текст в параграф 2</p>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<p>Текст в параграф 1</p>
+			<p>Текст в параграф 2</p>
+		</div>
+		<p class="note fs-small">Браузърите слагат определено разстояние между параграфите, но това лесно можем да променим със CSS.</p>
+	</section>
+	<section><h3>Справочник</h3>
+		<dl>
+			<dt><a href="http://www.w3schools.com/tags/tag_p.asp">w3schools: HTML p Tag</a></dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Заглавия (headings)</h2>
+	<section><h3>HTML елементи: <span class="keyword">H1</span> - <span class="keyword">H6</span></h3>
+		<dl class="fa">
+			<dt>Използват се за маркиране на заглавия в документа.</dt>
+			<dt><span class="note">SEO</span>: Имат голяма тежест при структурирането и индексирането на страницата от търсещите системи. В тях е добре да участват ключовите думи за страницата.</dt>
+			<dt><span class="note">UX: </span>Подпомагат потребителя да навигира и възприема бързо съдържанието на страницата.</dt>
+		</dl>
+	</section>
+	<section>
+		<p>HTML елементи H1 - H6</p>
+		<pre><code rel="HTML" class="html">
+			<h1>Заглавие 1</h1>
+			<h2>Заглавие 2</h2>
+			<h3>Заглавие 3</h3>
+			<h4>Заглавие 4</h4>
+			<h5>Заглавие 5</h5>
+			<h6>Заглавие 6</h6>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<h1>Заглавие 1</h1>
+			<h2>Заглавие 2</h2>
+			<h3>Заглавие 3</h3>
+			<h4>Заглавие 4</h4>
+			<h5>Заглавие 5</h5>
+			<h6>Заглавие 6</h6>
+		</div>
+	</section>
+	<section><h3>Справочник</h3>
+		<dl>
+			<dt><a href="http://www.w3schools.com/tags/tag_hn.asp">w3schools: HTML h1-h6 Tags</a></dt>
+		</dl>
+	</section>
 </section>
 <section><h2>Елементи за акцентиране на текст</h2>
-    <section>
-        <pre><code>
-<!-- почернен текст: -->
-&lt;b&gt;bold text&lt;/b&gt;
-&lt;strong&gt;important text&lt;/strong&gt; <!-- SEO ! -->
-<br>
-<!-- текст в курсив: -->
-&lt;i&gt;italic text&lt;/i&gt;
-&lt;em&gt;emphasized text&lt;/em&gt; <!-- SEO ! -->
-        </code></pre>
-        <div class="results_h">
-            <!-- почернен текст: -->
-            <b>bold text</b>
-            <strong>important text</strong> <!-- SEO ! -->
-            <br>
-            <!-- текст в курсив: -->
-            <i>italic text</i>
-            <em>emphasized text</em> <!-- SEO ! -->
-        </div>
-    </section>
+	<section><h3>HTML елементи: <span class="keyword">I</span>,<span class="keyword">EM</span></h3>
+		<dl class="fa" style="font-size:.8em">
+			<dt><span class="keyword">i: </span> - маркира текст, който да се представи чрез курсив.
+				<blockquote>"The i element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text"<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-i-element">The <code>i</code> element</a></cite>
+				</blockquote>
+			</dt>
+			<dt><span class="keyword">em</span> - за текст, който носи семантично ударение.
+			<blockquote>"The em element <a href="https://www.w3.org/TR/html5/dom.html#represents">represents</a> stress emphasis of its contents."<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-em-element">The <code>em</code> element</a></cite>
+				</blockquote>
+			</dt>
+		</dl>
+	</section>
+	<section><h3>HTML елементи: <span class="keyword">B</span>,<span class="keyword">STRONG</span></h3>
+		<dl class="fa" style="font-size:.8em">
+			<dt><span class="keyword">b</span> - текст, който да се представи почернен.
+				<blockquote>"The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede"<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-b-element">The <code>b</code> element</a></cite>
+				</blockquote>
+			</dt>
+			<dt><span class="keyword">strong</span> -  за текст, който носи важен смисъл.
+				<blockquote>"The strong element represents strong importance, seriousness, or urgency for its contents."<cite> - HTML5 W3C Recommendation: <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">The <code>strong</code> element</a></cite>
+				</blockquote>
+			</dt>
+		</dl>
+	</section>
+	<section><h3>Пример</h3>
+		<pre><code rel="HTML">
+			<p>При закупуване на пералня модел <b>XYZ0101</b> клиентът получава <em>5% <strong>отстъпка</strong></em></p>
+
+			<p>"<strong>Внимание! </strong><strong>Внимание! </strong><strong>Внимание! </strong>Всички роботи да се придвижат към балната зала". <i>Колко хубаво би било да бъда сега на плажа</i> - помисли си той, докато тътреше колелата си по пода.</p>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<p>При закупуване на пералня модел <b>XYZ0101</b> клиентът получава <em>5% <strong>отстъпка</strong></em></p>
+
+			<p>"<strong>Внимание! </strong><strong>Внимание! </strong><strong>Внимание! </strong>Всички роботи да се придвижат към балната зала". <i>Колко хубаво би било да бъда сега на плажа</i> - помисли си той, докато тътреше колелата си по пода.</p>
+		</div>
+	</section>
 </section>
 <section><h2>Елементи за форматиране на текст.</h2>
-    <section>
-        <p>small and mark</p>
-        <pre><code>&lt;small&gt;Small text&lt;/small&gt;</code></pre>
-        <pre><code>&lt;mark&gt;Marked text&lt;/mark&gt;</code></pre>
-        <div class="results_h">
-             <small>Small text</small>
-             <mark>Marked text</mark>
-        </div>
-    </section>
-    <section>
-        <p>Deleted and inserted</p>
-        <pre><code>
-&lt;del&gt;deleted text&lt;/del&gt;
-&lt;ins&gt;inserted text&lt;/ins&gt;
-        </code></pre>
-        <div class="results_h">
-             <del>Deleted text</del>
-             <ins>inserted text</ins>
-        </div>
-    </section>
-    <section>
-        <p>Super and Sub script</p>
-        <pre><code>
-&lt;sub&gt;subscripted text&lt;/sub&gt;
-&lt;sup&gt;superscripted text&lt;/sup&gt;
-        </code></pre>
-        <div class="result_h">
-            <span>normal text</span>
-            <sub>subscripted text</sub>
-            <sup>superscripted text</sup>
-        </div>
-    </section>
-    <section>
-        <p>Други</p>
-        <pre><code>
-&lt;code&gt;A piece of computer code&lt;/code&gt;
-&lt;samp&gt;Sample output from a computer program&lt;/samp&gt;
-&lt;kbd&gt;Keyboard input&lt;/kbd&gt;
-&lt;var&gt;Variable&lt;/var&gt;
-        </code></pre>
-        <div class="result_h">
-            <code>A piece of computer code</code><br>
-            <samp>Sample output from a computer program</samp><br>
-            <kbd>Keyboard input</kbd><br>
-            <var>Variable</var><br>
-        </div>
-    </section>
+	<section><h3>HTMl елементи <span class="keyword">small</span> и <span class="keyword">mark</span></h3>
+		<dl class="fa">
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_small.asp">HTML <code>small</code> Tag</a></dt>
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_mark.asp">HTML <code>mark</code> Tag</a></dt>
+		</dl>
+		<pre><code rel="HTML">
+			<small>Small text</small>
+			<mark>Marked text</mark>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<p>
+				<small>Small text</small>
+				<mark>Marked text</mark>
+			</p>
+		</div>
+	</section>
+	<section><h3>HTMl елементи <span class="keyword">del</span> и <span class="keyword">ins</span></h3>
+		<dl class="fa">
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_del.asp">HTML <code>del</code> Tag</a></dt>
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_ins.asp">HTML <code>ins</code> Tag</a></dt>
+		</dl>
+		<pre><code rel="HTML">
+			<del>deleted text</del>
+			<ins>inserted text</ins>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<p>
+				<del>deleted text</del>
+				<ins>inserted text</ins>
+			</p>
+		</div>
+	</section>
+	<section><h3>HTMl елементи <span class="keyword">sub</span> и <span class="keyword">sup</span></h3>
+		<dl class="fa">
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_del.asp">HTML <code>sub</code> Tag</a></dt>
+			<dt>W3schools: <a href="http://www.w3schools.com/tags/tag_ins.asp">HTML <code>sup</code> Tag</a></dt>
+		</dl>
+		<pre><code rel="HTML">
+			<sub>subscripted text</sub>
+			<span>normal text</span>
+			<sup>supscripted text</sup>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<p>
+				<sub>subscripted text</sub>
+				<span>normal text</span>
+				<sup>supscripted text</sup>
+			</p>
+		</div>
+	</section>
+	<section>
+		<p>Други</p>
+		<pre><code rel="HTML">
+			<code>A piece of computer code</code><br>
+			<samp>Sample output from a computer program</samp><br>
+			<kbd>Keyboard input</kbd><br>
+			<var>Variable</var><br>
+		</code></pre>
+		<div class="results_h" rel="РЕЗУЛТАТ">
+			<code>A piece of computer code</code><br>
+			<samp>Sample output from a computer program</samp><br>
+			<kbd>Keyboard input</kbd><br>
+			<var>Variable</var><br>
+		</div>
+	</section>
 </section>
+<section><h2>Нов ред (new line)</h2>
+	<section><h3>HTML елемент: <span class="keyword">BR</span></h3>
+		<dl class="fa">
+			<dt>Независимо колко спейса и нови редове поставяме в кода, браузърите изобразяват текста на един ред, докато има място на реда (<span class="note fs-small">естествено, и това можем да регулираме със CSS</span>).</dt>
+			<dt>Ако желаем браузъра да постави нов ред - то използваме елемента <span class="keyword">BR</span>. Той няма съдържание и се състои само от отварящия таг: <span class="keyword"><br></span></dt>
+			<pre><code rel="HTML">
+				<p>Първи ред.<br>Втори ред.</p>
+			</code></pre>
+			<div class="results_h" rel="РЕЗУЛТАТ">
+				<p>Първи ред.<br>Втори ред.</p>
+			</div>
+		</dl>
+	</section>
+	<section><h3>Справочник</h3>
+		<dl>
+			<dt><a href="http://www.w3schools.com/tags/tag_br.asp">w3schools: HTML br Tag</a></dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Преформатиран текст (preformated text)</h2>
+	<section><h3>HTML елемент: <span class="keyword">PRE</span></h3>
+		<dl class="fa">
+			<dt>Текстът в елемент <span class="keyword">PRE</span> се изобразява буквално, както е въведен в кода. Т.е. запазват се въведените спейсове и символи за нов ред.</dt>
+			<dt>Обикновено се изобразява със <a href="https://en.wikipedia.org/wiki/Monospaced_font">fixed-width</a> шрифт.</dt>
+		</dl>
+		<pre><code rel="HTML">
+			<pre>
+
+				Този     текст    ще   се
+						представи
+
+						  така,
+				както е въведен в кода.
+
+			</pre>
+		</code></pre>
+		<p class="note fs-small">Изпробвайте и вижте сами резултата от горния примерен код!</p>
+	</section>
+	<section><h3>Справочник</h3>
+		<dl>
+			<dt><a href="http://www.w3schools.com/tags/tag_pre.asp">w3schools: HTML pre Tag</a></dt>
+		</dl>
+	</section>
+</section>
+<section><h2>Хоризонтална черта (horizontal line)</h2>
+	<section><h3>HTML елемент: <span class="keyword">HR</span></h3>
+		<dl class="fa">
+			<dt>В HTML5 използваме хоризонтална черта за да отделим съдържанието <span class="note">тематично</span>.</dt>
+			<dt>Атрибути: всички специфични за <span class="note">HR</span> атрибути са свързани с оформлението, и не се препоръчва да се използват в HTML5.</dt>
+		</dl>
+	</section>
+	<section><h3>Справочник</h3>
+		<dl>
+			<dt><a href="http://www.w3schools.com/tags/tag_hr.asp">w3schools: HTML hr Tag</a></dt>
+		</dl>
+	</section>
+</section>
+<section id="hw">
+	<section><h1>Задачи за упражнения</h1></section>
+	<section><h3>Лична страница</h3>
+		<p>Да се състави <a href="https://validator.w3.org/#validate_by_input">валидна</a> HTML5 лична страница.</p>
+		<p>Целта е да <span class="note">структурирате правилно съдържанието</span>, като подберете правилните HTML елементи.</p>
+		<p><span class="note">KAK</span> ще изглежда вашата страница, няма значение, за сега.</p>
+		<p>Съдържанието е изцяло според вашия вкус и идеи, но то трябва да съдържа минимум следните секции:</p>
+	</section>
+	<section style="font-size: .9em"><h3>Лична страница</h3>
+		<dl class="fa">
+			<dt>за мен</dt>
+				<div class="fs-small">тук бихте могли да сложите отделни под-секции, например:</div class="fs-small">
+				<dd>образование</dd>
+				<dd>трудов опит</dd>
+				<dd>интереси/хоби</dd>
+				<dd>домашни любимци </dd>
+				<dd>и каквото още ви хрумне</dd>
+			<dt>какво очаквам от курса по HTML/CSS/JS</dt>
+			<dt>какъв курсов проект бих желал/а да мога да реализирам до края на курса.</dt>
+			<dt>защо записах курса към IT-Academy (или: откъде разбрах за курса)</dt>
+		</dl>
+	</section>
+	<section><h3>CV - task</h3>
+		<p>Да се състави <a href="https://validator.w3.org/#validate_by_input">валидна</a> HTML5 страница със ваше CV.</p>
+		<p>Целта е да <span class="note">структурирате правилно съдържанието</span>, като подберете правилните HTML елементи.</p>
+		<p><span class="note">KAK</span> ще изглежда вашето CV, няма значение, за сега.</p>
+	</section>
+	<section><h3>CV - example</h3>
+		<p>Примерно CV - за момента използвайте само като пример за съдържанието: <a href="homework/CV-Template/IvanIvanovCV.html" title="IvanIvanovCV">Ivan Ivanov CV</a></p>
+		<p></p>
+	</section>
+</section>
+
 
 <section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
     <p>These slides are based on</p>

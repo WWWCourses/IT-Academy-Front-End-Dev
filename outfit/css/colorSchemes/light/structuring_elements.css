@@ -4,9 +4,8 @@
     box-shadow: 0 0 .5em .1em rgba(150, 150, 150, 0.5);
 }
 .reveal section table{
-    color: #CCC;
+    color: #666;
 }
-
 
 /* results blocks */
 .reveal>.slides div.results_h{
@@ -15,7 +14,7 @@
   padding: 1em 0 0 0;
   text-align: left;
   font-size: .6em;
-  border: 3px inset #999;
+  border: 1px inset #999;
   background: #FFF;
   color: #000;
 }

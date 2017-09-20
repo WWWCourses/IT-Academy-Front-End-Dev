@@ -2,6 +2,9 @@
     Styling text-level page elements, like notes, abbreviations, keywords etc.
     2016, Iva E.Popova
 */
+.reveal section{
+    color: #333;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* abbreviations and their definitions/explanations
    HTML: <abbr>DB</abbr><dfn id="DB"><span>Data</span><span>Base</span></dfn> */
@@ -87,9 +90,3 @@
     font-size: 1.6em;
     line-height: 1.2;
 }
-
-.reveal .advanced i{
-  color: #EEA8A8;
-  font-size: .8em;
-}
-
