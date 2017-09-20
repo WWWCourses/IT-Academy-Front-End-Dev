@@ -51,210 +51,245 @@
         </div>
     </div>
 </section>
+
+
 <section><h2>Структура на една Уеб страница.</h2>
-    <section>
-        <img src="images/HTML_page_as_magazine_page.png">
-    </section>
-    <section><h3>Представена с HTML елементи</h3>
-        <pre><code>
-        <h1>Main Heading</h1>
-        <h2>Subheading</h2>
-        <p>Paragraph</p>
-        &lt;img src=&quot;URL&quot; alt=&quot;some text&quot;&gt;
-        </code></pre>
-    </section>
+	<section>
+		<img src="images/HTML_page_as_magazine_page.png">
+	</section>
+	<section><h3>Представена с HTML елементи</h3>
+		<pre><code rel="HTML">
+		<h1>Main Heading</h1>
+		<h2>Subheading</h2>
+		<p>Paragraph</p>
+		&lt;img src=&quot;URL&quot; alt=&quot;some text&quot;&gt;
+		</code></pre>
+	</section>
 </section>
-<section><h2>Структура на HTML документ</h2>
-    <section>
-        <pre><code>
-&lt;!DOCTYPE html&gt;   <!-- Информация за езика и версията на документа -->
-&lt;html&gt;
-    &lt;head&gt;
-    ...           <!-- Мета информация -->
-    &lt;/head&gt;
 
-    &lt;body&gt;
-    ...           <!-- Същинската част на документа -->
-    &lt;/body&gt;
-&lt;/html&gt;
-       </code></pre>
-    </section>
-</section>
 <section><h2>Какво е HTML?</h2>
-    <section><h2>Какво е HTML/HTML5?</h2></section>
-    <section>
-        <dl class="fa">
-            <dt>HTML - <em>HyperText Markup Language</em></dt>
-            <dt>HTML5 - последната версия на езика</dt>
-            <dd><a href="https://www.w3.org/TR/html5/">W3C Recommendation 28 October 2014</a></dd>
-            <dt>HTML5.1 - текущата работна версия на езика</dt>
-            <dd><a href="https://www.w3.org/TR/html51/">W3C Working Draft 08 October 2015</a></dd>
-        </dl>
-    </section>
-    <section>
-        <dl class="fa">
-            <dt>В основата му са множество HTML елементи, специфицирани от W3C.</dt>
-            <dd>HTML4: <a href="http://www.w3.org/TR/html4/">http://www.w3.org/TR/html4/</a></dd>
-            <dd>HTML5: <a href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a></dd>
-            <dt>Това са пълни спецификации, подобно на разработките в Института по български език към БАН.</dt>
-            <dt>Ползвайте ги единствено като справочник за напреднали, не и като самоучител !!!</dt>
-        </dl>
-    </section>
+	<section><h2>Какво е HTML/HTML5?</h2></section>
+	<section>
+		<dl class="fa">
+			<dt><abbr>HTML</abbr><dfn id="HTML"><span>Hyper</span><span>Text</span><span>Markup</span><span>Language</span></dfn></dt>
+			<dd>съвкупност от правила, според които браузерите изобразяват (rendering) един HTML документ.</dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Първата (неофициална) версия на HTML</dt>
+			<dd><a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">HTML Tags by T.B.Lee</a></dd>
+			<dt>Последната официално приета версия на езика</dt>
+			<dd><a href="https://www.w3.org/TR/html/">Latest Version of HTML</a></dd>
+			<dt>Текуща работна версия на езика</dt>
+			<dd><a href="https://w3c.github.io/html/">Latest Editor’s Draft</a></dd>
+			<dt><small class="NB small-font">Това са пълни спецификации предназначени за специалисти, подобно на разработките в Института по български език към БАН.</small></dt>
+		</dl>
+	</section>
 </section>
+
 <section><h2>Синтаксис на HTML</h2>
-    <section><h2>Синтаксисът е в основата на всичко.</h2></section>
-    <section>
-       <pre><code>
-    &lt;h1&gt;Hello World&lt;/h1&gt;
-    &lt;h1&gt;Hello &lt;i&gt;World&lt;/i&gt;&lt;/h1&gt;
-    &lt;h1 class="primary"&gt;Hello World&lt;/h1&gt;
-       </code></pre>
-    <img src="images/HTML_elements_syntax.png">
-    </section>
-    <section><h3>HTML елемент</h3>
-        <dl class="fa">
-            <dt>Градивните еденици ("тухлите") от които е съставена всяка една Уеб страница!</dt>
-            <dt>Състои се от:</dt>
-            <dd><pre class="inline"><code>&lt;отварящ таг&gt; съдържание &lt;/затварящ таг&gt;</code></pre>
-            </dd>
-            <dt>Съдържанието може да е текст или друг HTML елемент</dt>
-            <dt>Някои HTML елементи са "празни" - състоят се само от отварящ таг. Например: </dt>
-            <dd><pre class="inline"><code>&lt;img src=&quot;images/cats.png&quot;&gt;</code></pre></dd>
-        </dl>
-    </section>
-    <section>
-        <dl class="fa">
-            <dt>HTML5 позволява имената на елементите в таговете да се записват както с малки, така и с големи букви, но се препоръчва употребата на малки букви.</dt>
-        </dl>
-    </section>
+	<section><h2>Синтаксисът е в основата на всичко.</h2></section>
+	<section><h3>HTML елемент</h3>
+	   <pre><code rel="HTML">
+			&lt;h1&gt;Hello World&lt;/h1&gt;
+			&lt;h1&gt;Hello &lt;i&gt;World&lt;/i&gt;&lt;/h1&gt;
+			&lt;h1 class="primary"&gt;Hello World&lt;/h1&gt;
+	   </code></pre>
+	<img src="images/HTML_elements_syntax.png">
+	</section>
+	<section style="font-size: .9em"><h3>HTML елемент</h3>
+		<dl class="fa">
+			<dt>Градивните еденици ("тухлите") от които е съставена всяка една Уеб страница!</dt>
+			<dt>Състои се от:</dt>
+			<dd><pre class="inline"><code>&lt;отварящ таг&gt; съдържание &lt;/затварящ таг&gt;</code></pre></dd>
+			<dd>Възможно е <span class="note">в отварящия таг</span> да имаме 1 или повече двойки <code>атрибут="стойност"</code>, които се разделят със спейс.</dd>
+			<dd><pre class="inline"><code class="dust">
+				<p class="red" id="p1">lorem ipsum...</p>
+			</code></pre></dd>
+		</dl>
+	</section>
+	<section style="font-size: .9em"><h3>HTML елемент</h3>
+		<dl class="fa">
+			<dt>Съдържанието може да е текст или други HTML елементи</dt>
+			<dd><pre class="inline"><code class="html">
+				&lt;section&gt;
+					&lt;h1&gt;Секция 1&lt;/h1&gt;
+					&lt;p&gt;lorem ipsum...&lt;/p&gt;
+				&lt;/section&gt;
+			</code></pre></dd>
+			<dt>Някои HTML елементи са "празни" - нямат съдържание и се състоят само от отварящ таг. Например: </dt>
+			<dd><pre class="inline"><code class="html">&lt;img src=&quot;images/cats.png&quot;&gt;</code></pre></dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>HTML5 позволява имената на елементите в таговете да се записват както с малки, така и с големи букви, но се препоръчва употребата на малки букви.</dt>
+		</dl>
+	</section>
 </section>
+
+<section><h2>Структура на HTML документ</h2>
+	<section>
+		<pre><code rel="HTML">
+			<!-- Информация за езика и версията на документа -->
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+				<!-- Мета информация -->
+				&lt;head&gt;
+				...
+				&lt;/head&gt;
+				<!-- Същинската част на документа -->
+				&lt;body&gt;
+				...
+				&lt;/body&gt;
+			&lt;/html&gt;
+	   </code></pre>
+	</section>
+</section>
+
 <section><h2>Секции в HTML документа</h2>
-    <section><h2>Doctype, head и body секции.</h2></section>
-    <section><h3>Doctype</h3>
-        <p>Информация за HTML версията на документа</p>
-    </section>
-    <section><h4>Примери за DOCTYPE</h4>
-<pre><code data-trim>
-&lt;!-- За HTML5 --&gt;
-&lt;!DOCTYPE html&gt;
-</code></pre>
-<pre><code data-trim>
-&lt;!-- За HTML 4.01 Strict --&gt;
-&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd "&gt;
-</code></pre>
-<pre><code data-trim>
-&lt;!-- за HTML 4.01 Transitional --&gt;
-&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd"&gt;
-</code></pre>
-    </section>
-    <section><h3>head</h3>
-        <p>Съдържа мета информация за документа</p>
-    </section>
-    <section><h3>body</h3>
-        <p>Тяло на документа - съдържанието на документа, което ще се изобрази от браузеа.</p>
-    </section>
+	<section><h2>Doctype, head и body секции.</h2></section>
+	<section><h3>Doctype</h3>
+		<p>Информация за HTML версията на документа</p>
+	</section>
+	<section><h4>Примери за DOCTYPE</h4>
+		<pre><code data-trim rel="HTML5">
+			&lt;!DOCTYPE html&gt;
+		</code></pre>
+		<pre><code data-trim rel="HTML 4.01 Strict">
+			&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01//EN"
+			"http://www.w3.org/TR/html4/strict.dtd "&gt;
+		</code></pre>
+		<pre><code data-trim rel="HTML 4.01 Transitional">
+			&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01 Transitional//EN"
+			"http://www.w3.org/TR/html4/loose.dtd"&gt;
+		</code></pre>
+	</section>
+	<section><h3>head</h3>
+		<p>Съдържа мета информация за документа</p>
+	</section>
+	<section><h3>body</h3>
+		<p>Тяло на документа - съдържанието на документа, което ще се изобрази от браузъра.</p>
+	</section>
 </section>
+
 <section><h2>Елементи в head секцията</h2>
-    <section><h2>Елементи в head секцията.</h2></section>
-    <section><h3>Допустими елементи:</h3>
-        <ul>
-            <li>title</li>
-            <li>style</li>
-            <li>link</li>
-            <li>script</li>
-            <li>meta</li>
-            <li>base</li>
-        </ul>
-    </section>
-    <section><h3>Елемента title</h3>
-        <pre><code data-trim>
-            &lt;title&gt;WebDesign курс-&gt;Начало&lt;/title&gt;
-        </code></pre>
-        <dl class="fa">
-            <dt>Трябва да съдържа съвсем сбито описание на страницата.</dt>
-            <dt>Един от елементите с най-голяма тежест при SEO.</dt>
-            <dt>Съдържанието му се показва като заглавие на таба/прозореца в браузера.</dt>
-            <dt>Показва се и в списъка резултати на търсещите машини. Ключовите думи в него ще бъдат подчертани.</dt>
-            <dt>Повече за SEO и title елемента:</dt>
-            <dd><a href="https://moz.com/learn/seo/title-tag">https://moz.com/learn/seo/title-tag</a></dd>
-        </dl>
-    </section>
-    <section><h3>Елемента style</h3>
-        <p>Вграждане на стил в страницата:</p>
-        <pre><code>
-        &lt;style&gt;
-            body {background­-color:lightgray}
-            h1 {color:red;}
-            p {color:green;}
-        &lt;/style&gt;
-        </code></pre>
-        <p><em>NB!</em>Стиловете ще разгледаме детайлно в уроците за CSS, а самото вграждане - в темата "<a href="../CSS_Intro/CSS_Intro.html">Въведение в CSS</a>".</p>
-    </section>
-    <section><h3>Елемента script</h3>
-        <pre><code>
-        &lt;script src="scripts/JS/MyFunctions.js&gt;&lt;/script&gt;
+	<section><h2>Елементи в head секцията.</h2></section>
+	<section><h3>Допустими елементи:</h3>
+		<ul>
+			<li>title</li>
+			<li>style</li>
+			<li>link</li>
+			<li>script</li>
+			<li>meta</li>
+			<li>base</li>
+		</ul>
+	</section>
+	<section style="font-size: .8em"><h3>Елемента title</h3>
+		<pre><code data-trim>
+			&lt;title&gt;WebDesign курс-&gt;Начало&lt;/title&gt;
+		</code></pre>
+		<dl class="fa">
+			<dt>Трябва да съдържа съвсем сбито описание на страницата.</dt>
+			<dt>Един от елементите с най-голяма тежест при SEO.</dt>
+			<dt>Съдържанието му се показва като заглавие на таба/прозореца в браузера.</dt>
+			<dt>Показва се и в списъка резултати на търсещите машини. Ключовите думи в него ще бъдат подчертани.</dt>
+			<dt>Повече за SEO и title елемента:</dt>
+			<dd><a href="https://moz.com/learn/seo/title-tag">https://moz.com/learn/seo/title-tag</a></dd>
+		</dl>
+	</section>
+	<section><h3>Елемента style</h3>
+		<p>Вграждане на стил в страницата:</p>
+		<pre><code rel="HTML">
+		&lt;style&gt;
+			body {background­-color:lightgray}
+			h1 {color:red;}
+			p {color:green;}
+		&lt;/style&gt;
+		</code></pre>
+		<p><em>NB!</em>Стиловете ще разгледаме детайлно в уроците за CSS, а самото вграждане - в темата "<a href="../CSS_Intro/CSS_Intro.html">Въведение в CSS</a>".</p>
+	</section>
+	<section><h3>Елемента script</h3>
+		<pre><code rel="HTML">
+			<script src="scripts/JS/MyFunctions.js"></script>
 
-        &lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
-        </code></pre>
-        <p><em>NB!</em> Със JavaScript и елемента script ще се запознаем основно в уроците за JavaScript.</p>
-    </section>
-    <section><h3>Елемента link</h3>
-        <p>Връзка между документа и друг външен ресурс.</p>
-        <pre><code>
-        &lt;link rel="stylesheet" type="text/css" href="default.css"&gt;
+			<!-- или: -->
 
-        &lt;link rel="icon" href="/favicon.ico" type="image/x-icon"&gt;
-        </code></pre>
-    </section>
-    <section><h3>Елемента meta</h3>
-        <p>Дефинира мета-данни за документа</p>
-        <pre><code>
-        &lt;meta http­equiv="content­type" content="text/html; charset=UTF­8"&gt;
-        &lt;meta charset="UTF­8"&gt;
-        &lt;meta name="robots" content="selection"&gt;
-        &lt;meta name="keywords" content="WebDesign, Course, HTML, CSS, JavaScript"&gt;
-        &lt;meta name="description" content=" Кратко описание на съдържанието на страницата"&gt;
-        &lt;meta name="author" content="Iva E.Popova"&gt;
-        </code></pre>
-        <p><a href="http://www.metatags.org/all_metatags">Описание на всички мета-данни</a></p>
-    </section>
-    <section><h3>Елемента base</h3>
-        <p>Задава за <u>всички</u> линкове в документа стойности по подразбиране за URL и target</p>
-        <pre><code>
-        <!-- задаваме базов URL, който ще служи за префикс на всички релативни URL -->
-        &lt;base href=" /home/nemsys/Courses/WebDesign/Images/ "&gt;
+			&lt;script&gt;
+				alert(&quot;JavaScript welcomes you!&quot;);
+			&lt;/script&gt;
+		</code></pre>
+		<p><em>NB!</em> Със JavaScript и елемента script ще се запознаем основно в уроците за JavaScript.</p>
+	</section>
+	<section><h3>Елемента link</h3>
+		<p>Връзка между документа и друг външен ресурс.</p>
+		<pre><code rel="HTML">
+			&lt;link rel="stylesheet" type="text/css" href="default.css"&gt;
 
-        <!-- всички линкове ще се отварят в нов таб/прозорец -->
-        &lt;base target="_blank"&gt;
-        </code></pre>
-    </section>
+			&lt;link rel="icon" href="/favicon.ico" type="image/x-icon"&gt;
+		</code></pre>
+	</section>
+	<section><h3>Елемента meta</h3>
+		<p>Дефинира мета-данни за документа</p>
+		<pre><code rel="HTML">
+			&lt;meta charset="UTF­8"&gt;
+			&lt;meta name="robots" content="selection"&gt;
+			&lt;meta name="keywords" content="WebDesign, Course, HTML, CSS, JavaScript"&gt;
+			&lt;meta name="description" content=" Кратко описание на съдържанието на страницата"&gt;
+			&lt;meta name="author" content="Iva E.Popova"&gt;
+		</code></pre>
+		<p><a href="http://www.metatags.org/all_metatags">Описание на всички мета-данни</a></p>
+	</section>
+	<section><h3>Елемента base</h3>
+		<p>Задава за <u>всички</u> линкове в документа стойности по подразбиране за URL и target</p>
+		<pre><code rel="HTML">
+			<!-- задаваме базов URL, който ще служи за префикс на всички релативни URL -->
+			&lt;base href=" /home/nemsys/Courses/WebDesign/Images/ "&gt;
+
+			<!-- всички линкове ще се отварят в нов таб/прозорец -->
+			&lt;base target="_blank"&gt;
+		</code></pre>
+		<p><em>NB!</em>Повече примери за BASE елемента ще разгледаме в темата за хиперлинкове.</p>
+	</section>
 </section>
+
 <section><h2>Коментари в HTML</h2>
-    <section><h3>Коментарите, макар и безгласни, могат да бъдат важни.</h3></section>
-    <section><h3>Self-learning section!</h3>
-        <p><a href="http://www.w3schools.com/tags/tag_comment.asp">W3Schools HTML comments</a></p>
-    </section>
-    <section><h3>Употреба</h3>
-        <dl class="fa">
-            <dt>Кратко описание на естествен език, за последователност от код, която върши определено действие</dt>
-            <dd>Спестява (на вас и колегите ви) време за разчитане на кода.</dd>
-            <dt>За визуални разграничители на кода.</dt>
-            <dd>По-лесна навигация в кода.</dd>
-            <dt>Когато искате временно да премахнете част от вашия код, но все пак да не го изтривате.</dt>
-        </dl>
-    </section>
-    <section><h3>Употреба</h3>
-        <dl class="fa">
-            <dt>Не използвайте HTML коментари в JavaScript код, каквато бе практиката преди > 15г. Днес всички браузери могат да се справят със елемента script, дори и да не могат да интерпретират самия код.</dt>
-            <dd><a href="http://www.javascripttoolbox.com/bestpractices/#comments">http://www.javascripttoolbox.com/bestpractices/#comments</a></dd>
-        </dl>
-
-    </section>
+	<section><h3>Коментарите, макар и безгласни, могат да бъдат важни.</h3></section>
+	<section><h3>Self-learning section!</h3>
+		<p><a href="http://www.w3schools.com/tags/tag_comment.asp">W3Schools HTML comments</a></p>
+	</section>
+	<section><h3>Употреба</h3>
+		<dl class="fa">
+			<dt>Кратко описание на естествен език, за последователност от код, която върши определено действие</dt>
+			<dd>Спестява (на вас и колегите ви) време за разчитане на кода.</dd>
+			<dt>За визуални разграничители на кода.</dt>
+			<dd>По-лесна навигация в кода.</dd>
+			<dt>Когато искате временно да премахнете част от вашия код, но все пак да не го изтривате.</dt>
+		</dl>
+	</section>
 </section>
-<section data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <!-- <img class="the_end" src="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg"> -->
+
+<section><h2>HTML validator</h2>
+	<section>
+		<a href="https://validator.w3.org/">W3C Markup Validation Service</a>
+	</section>
+	<section style="font-size: .9em"><h3>Защо да валидираме кода?</h3>
+		<dl class="fa">
+			<dt><span class="keyword">SEO: </span>Валидния HTML код е необходима предпоставка за точното индексиране на сайта( search engines, crowlers, etc.), респективно - за оптимизацията на нашия сайт.</dt>
+			<dt><span class="keyword">UX: </span>Точно индексирания код позволява на търсачките да представят сайта ни в резултатите по най-удобния за потребителя начин.</dt>
+			<dt>Това е единствения сигурен начин да си открием грешка в кода, която дори да не рефлектира визулно върху страницата, ще ни спести много време за оправяне на <em>проблеми</em> с CSS и JS.</dt>
+		</dl>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+    <p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	<p>framework</p>
 </section>
 <!--
 ########################################################
