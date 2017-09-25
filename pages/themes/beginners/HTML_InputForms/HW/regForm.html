@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration form</title>
+</head>
+<body>
+	<form id="test_form" action="#">
+		<p >
+			<label for="age">Име:</label>
+			<input type="text" id="name" placeholder="Вашето име..." title="Името може да съдържа само букви, точка, подчертавка и тире" name="uname" required>
+		</p>
+		<p >
+			<label for="age">Възраст:</label>
+			<input name="age" type="number" id="age" min="0" max="100" step="1" />
+		</p>
+		<p >
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" placeholder="моля, въведете валиден email">
+		</p>
+		<p >
+			<label for="password">Парола:</label>
+			<input type="password" id="password" name="password">
+		</p>
+		<p >
+			<label for="password2">Повторете паролата:</label>
+			<input type="password" id="password2" name="password2">
+		</p>
+		<p >
+			<label for="avatar">Снимка
+				<br><span >( < 50KB )</span>:</label>
+				<input type="file" id="avatar" maxlength="12" name="avatar">
+		</p>
+		<p >
+			<label for="color"><span>Любим цвят</span>:</label>
+			<input type="color" id="color" maxlength="12" name="color" >
+		</p>
+		<p>
+			Любима бира:
+			<label>Ариана<input type="checkbox" name="beer" value="ariana"></label>
+			<label>Загорка<input type="checkbox" name="beer" value="zagorka"></label>
+			<label>Каменица<input type="checkbox" name="beer" value="kamenitsa"></label>
+		</p>
+			<!-- пример за подравняване на бутоните чрез абсолютно позициониране в блок -->
+			<p>
+				<button type="submit" value="Submit">Изпрати <img src="if_send-01_186386.svg" width="20"></button>
+				<button type="reset" value="Reset">Изчисти <img src="if_leaf_cleaning_stick_896664.svg" width="20"></button>
+			</p>
+		</form>
+
+	</body>
+	</html>
