@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin-top"
+			],
+			[
 				"ani",
 				"animation-duration"
 			],
@@ -288,10 +292,6 @@
 				"border-box"
 			],
 			[
-				"marg",
-				"margin"
-			],
-			[
 				"border-co",
 				"border-color"
 			],
@@ -520,28 +520,28 @@
 	"buffers":
 	[
 		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
+			"file": "pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
 			"settings":
 			{
-				"buffer_size": 16837,
+				"buffer_size": 16557,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/CV-Template/IvanIvanovCV.html",
+			"contents": "https://www.google.bg/maps/place/ul.+%22413-ta%22+101,+1404+Manastirski+Livadi,+Sofia/@42.6583567,23.2951708,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa848cdf60a291:0xa6f3340d69dcd55a!8m2!3d42.6583567!4d23.2973648?hl=en",
 			"settings":
 			{
-				"buffer_size": 4498,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 210,
+				"line_ending": "Unix",
+				"name": "https://www.google.bg/maps/place/ul.+%22413-ta%22+"
 			}
 		},
 		{
-			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
+			"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
 			"settings":
 			{
-				"buffer_size": 5481,
+				"buffer_size": 16312,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -561,6 +561,18 @@
 			[
 				"enti",
 				"String Utilities: Convert Chars to HTML Entities"
+			],
+			[
+				"snip code",
+				"Snippet: html_code_rel_terminal"
+			],
+			[
+				"snipp js",
+				"Snippet: html_code_rel_js"
+			],
+			[
+				"Snippet: js",
+				"Snippet: html_code_rel_js"
 			],
 			[
 				"key",
@@ -993,22 +1005,19 @@
 	[
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.bin",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/colorSchemes",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/dark",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/themes",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/Course_Intro",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Lists",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/CV-Template"
 	],
 	"file_history":
 	[
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Lists/HTML_Lists.html",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/CV-Template/IvanIvanovCV.html",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/themes/light.css",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/structuring_elements.css",
@@ -1133,14 +1142,11 @@
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_MesuringUnits/CSS_Colors_and_mesuring_units.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Tables/HTML_Tables.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/JS_HTML_DOM/JS_HTML_DOM.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/Tools_ST3/Tools_ST3.html",
-		"/DATA/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/5_HTML_CSS.sublime-project"
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html"
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 33.0
 	},
 	"find_in_files":
 	{
@@ -1190,6 +1196,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"checkbox",
+			"blue",
+			"red",
+			"favColors",
+			"MDN",
+			"checbox",
+			"blue",
+			"red",
+			"dd",
+			"4",
+			"h3",
+			"<br>",
 			"Ivanov.com",
 			"Joe",
 			"Bloggs",
@@ -1305,19 +1323,7 @@
 			"wire",
 			"answers",
 			"90",
-			"panel",
-			"242, 147, 89,",
-			"menu",
-			"pallet",
-			"oran",
-			"section class=\"disclaimer\"",
-			"ol",
-			"съвремен",
-			"тест",
-			"linked",
-			"();\"></",
-			"z",
-			"getUserName"
+			"panel"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1468,19 +1474,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
+					"file": "pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 16837,
+						"buffer_size": 16557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13534,
-								13534
+								10866,
+								10866
 							]
 						],
 						"settings":
@@ -1503,51 +1509,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1557,15 +1533,47 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3343.0,
+						"translation.y": 7282.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1573,23 +1581,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/CV-Template/IvanIvanovCV.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4498,
+						"buffer_size": 210,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								938,
-								938
+								210,
+								210
 							]
 						],
 						"settings":
 						{
+							"auto_name": "https://www.google.bg/maps/place/ul.+%22413-ta%22+",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
@@ -1608,31 +1616,6 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1643,16 +1626,31 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1662,15 +1660,24 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
 							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 750.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1678,19 +1685,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/homework/cv_structuring.html",
-					"semi_transient": true,
+					"file": "pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5481,
+						"buffer_size": 16312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								14125,
+								13811
 							]
 						],
 						"settings":
@@ -1702,15 +1709,15 @@
 								{
 									"1":
 									[
-										14,
-										15
+										14117,
+										14124
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/angle_bracket.png",
+										"Packages/BracketHighlighter/icons/tag.png",
 										"brackethighlighter.default"
 									]
 								},
@@ -1718,8 +1725,8 @@
 								{
 									"1":
 									[
-										0,
-										1
+										13812,
+										13819
 									]
 								},
 								"unmatched":
@@ -1728,31 +1735,6 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1763,16 +1745,31 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1782,15 +1779,27 @@
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1650.0,
+						"translation.y": 9675.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1801,7 +1810,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -1842,7 +1851,7 @@
 	"project": "gh_pages.sublime-project",
 	"replace":
 	{
-		"height": 88.0
+		"height": 62.0
 	},
 	"save_all_on_build": false,
 	"select_file":
