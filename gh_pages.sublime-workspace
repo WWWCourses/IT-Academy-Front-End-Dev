@@ -519,15 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
-			"settings":
-			{
-				"buffer_size": 23432,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -995,17 +986,14 @@
 	[
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.bin",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Lists",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework",
-		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/homework/CV-Template"
+		"/data/projects/www/wwwcourses.github.io"
 	],
 	"file_history":
 	[
+		"/data/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitignore",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.gitignore",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Text_Formating_Elements/HTML_Text_Formating_Elements.html",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/HTML_Lists/HTML_Lists.html",
@@ -1129,15 +1117,11 @@
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Iframes/slides_examples/multiple_links_in_a_frame.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Intro/CSS_Intro.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Visual_Formating_Model/CSS_Visual_Formating_Model.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_MesuringUnits/CSS_Colors_and_mesuring_units.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Tables/HTML_Tables.html"
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 33.0
 	},
 	"find_in_files":
 	{
@@ -1460,136 +1444,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18548,
-								17083
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										17667,
-										17674
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										17084,
-										17091
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6867.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -1630,7 +1492,7 @@
 	"project": "gh_pages.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 62.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1735,7 +1597,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 313.0,
 	"status_bar_visible": true,
 	"template_settings":
