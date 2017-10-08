@@ -519,6 +519,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
+			"settings":
+			{
+				"buffer_size": 13915,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,10 +536,54 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "num",
+		"height": 123.0,
+		"last_filter": "set shell",
 		"selected_items":
 		[
+			[
+				"set shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"conver",
+				"Convert Case: snake_case"
+			],
+			[
+				"cyrill",
+				"Translit: Russian Cyrillic -> Latin (GOST 7.79b)"
+			],
+			[
+				"convert",
+				"Convert Case: dash-case"
+			],
+			[
+				"trasn",
+				"Translit: Russian Cyrillic -> Latin (GOST 7.79b)"
+			],
+			[
+				"Came",
+				"Convert Case: camelCase"
+			],
+			[
+				"trans",
+				"Translit: Russian Cyrillic -> Latin (GOST 7.79b)"
+			],
+			[
+				"tra",
+				"Translit: Russian Cyrillic -> Latin (GOST 7.79b)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"con",
+				"Convert Case: PascalCase"
+			],
+			[
+				"live",
+				"LiveReload: Enable/disable plug-ins"
+			],
 			[
 				"num",
 				"Insert Nums"
@@ -542,10 +595,6 @@
 			[
 				"snip code",
 				"Snippet: html_code_rel_html"
-			],
-			[
-				"live",
-				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"mini",
@@ -598,10 +647,6 @@
 			[
 				"colo",
 				"Select Color Scheme"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"set per",
@@ -986,10 +1031,19 @@
 	[
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.bin",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Box_Model",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/slides_examples",
 		"/data/projects/www/wwwcourses.github.io"
 	],
 	"file_history":
 	[
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Box_Model/slides_examples/dev_tools_example.html",
+		"/etc/default/tlp",
+		"/home/nemsys/.config/gromit-mpx.cfg",
+		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.bin/start_gromit.sh",
 		"/data/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/.gitignore",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/.gitignore",
 		"/data/projects/www/wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_BasicProperties/CSS_Basic_Properties.html",
@@ -1113,15 +1167,11 @@
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/codepen_tests/Less_Long_Shadow.css",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Iframes/labs/20161213.html",
 		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Lists/HTML_Lists.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Iframes/slides_examples/multiple_links_in_a_frame.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/CSS_Intro/CSS_Intro.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html",
-		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/pages/themes/beginners/HTML_Bases/HTML_Bases.html"
+		"/DATA/projects/www/wwwcourses.github.io/ProgressBG-Front-End-Dev/gh-pages.sublime-"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -1171,6 +1221,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bluetooth",
+			"thinkpad",
+			"START_CHARGE_THRESH_",
+			"http://.*?mp3",
+			"mp3",
+			"*\\.mp3",
+			"*.mp3",
+			"Painter",
+			"blue",
+			"orange",
+			"green",
 			"Heading",
 			"h3",
 			"h2",
@@ -1287,23 +1348,12 @@
 			"blue",
 			"nodeP",
 			"pesho",
-			"maria",
-			"p>",
-			"advanced",
-			">\n",
-			"code",
-			"dt",
-			"p>",
-			"JS_BasicSyntax_2",
-			"\\+\\s+\"",
-			"+\\s+\"",
-			",\\n",
-			"//(.+):\\s*(\\w+[()]+)"
+			"maria"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"ivanov.com",
@@ -1444,18 +1494,141 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "pages/themes/beginners/CSS_Box_Model/CSS_Box_Model.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4865,
+								4865
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										4862,
+										4864
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/tag.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										4137,
+										4139
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 34.0
 	},
 	"input":
 	{
-		"height": 45.0
+		"height": 51.0
 	},
 	"layout":
 	{
@@ -1492,7 +1665,7 @@
 	"project": "gh_pages.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 84.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1598,7 +1771,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 313.0,
+	"side_bar_width": 188.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
