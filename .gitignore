@@ -8,4 +8,4 @@ nohup.out
 
 *.sublime-workspace
 *.sublime-project
-!gh-pages*
+!gh-pages.sublime-project
