@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Настройка на средата. Работа с текстов редактор ( Sublime Text 3)</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- custom -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+			<div><span>N/Спейс</span><span>следващ слайд</span></div>
+			<div><span>P</span><span>предишен слайд</span></div>
+			<div><span>O</span><span>всички слайдове</span></div>
+			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch"></div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section>
+	<h1>Sublime Text</h1>
+	<h3>Редактора, в който ще се влюбите</h3>
+</section>
+<section data-transition="zoom">
+		<section class="copyright" data-transition="zoom">
+				<div class="note">
+						<p>Created for</p>
+				</div>
+				<div class="company">
+						<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+						<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+						</a>
+				</div>
+				<div class="author">
+						<span class="note">Iva E. Popova, 2015-2018</span>
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+				</div>
+		</section>
+		<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+				<div class="company">
+					 <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
+				</div>
+		</section>
+</section>
+
+
+<section><section><h2>Инструменти за създаване на Уеб страници</h2></section>
+	<section>
+		<dl class="fa">
+			<dt>Текстови редактори</dt>
+			<dd><a href="https://notepad-plus-plus.org/">Notepad++</a> (Windows)</dd>
+			<dd><a href="https://www.sublimetext.com/">Sublime Text</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dd><a href="https://atom.io/">Atom</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dd><a href="https://code.visualstudio.com/">Visual Studio Code</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dd><a href="http://brackets.io/">Brackets</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+			<dt>WYSIWYG ( What You See Is What You Get) редактори</dt>
+			<dd>Adobe Dreamweaver</dd>
+			<dd>Google Web Designer</dd>
+			<dd>Visual Web Developer (Microsoft Visual Studio)</dd>
+			<dt class="note">Предимства, недостатъци?</dt>
+		</dl>
+	</section>
+</section>
+<section style="font-size: .9em"><h2>Защо избрах Sublime Text?</h2>
+	<dl class="fa">
+		<dt>Мултиплатформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
+		<dt>Гъвкав, мощен и <span class="note">изключително бърз</span>!</dt>
+		<dt>Може да се използва за обучение безплатно, <strong>без ограничения във функционалността и времето</strong>.</dt>
+		<dt>Изчерпателна документация: <a href="http://docs.sublimetext.info/en/latest/">Sublime Text Unofficial Documentation</a>.</dt>
+		<dt>Многобройна общност, създаваща непрекъснато множество полезни добавки за най-новите технологии: <a href="https://packagecontrol.io/">Package Control - The Sublime Text package manager</a>.</dt>
+		<dt>Python-базиран, с добре разработен и документиран API позволяващ да добавяте нова функционалност.</dt>
+	</dl>
+</section>
+
+<section><h2>Инсталиране</h2>
+	<p>От официалния сайт, където е последната версия: <a href="http://www.sublimetext.com/3">Sublime Text 3 - Download</a></p>
+	<p>Повече информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/getting_started/install.html">ST3 installation notes</a></p>
+</section>
+
+<section><h2>Запознаване с редактора</h2>
+	<section><h3>Основни панели</h3>
+		<a href="images/ST3MainPannels.png"><img src="images/ST3MainPannels.png"></a>
+	</section>
+	<section><h3>Menu</h3>
+		<dl class="fa">
+			<dt>Основно меню на Sublime Text 3</dt>
+			<dd>Повечето от опциите в менюто са достъпни и чрез Командната Палитра, което гарантира по-бърз достъп.</dd>
+		</dl>
+	</section>
+	<section><h3>The sidebar</h3>
+		<dl class="fa">
+			<dt>Позволява елементарни операции с директории/файлове. Внимавайте с <span class="note"><code>Delete Folder</code>, което изтрива безвъзвратно директорията от хард диска.</span></dt>
+			<dt>Показване/скриване</dt>
+			<dd>Menu->View->Side Bar->Show/Hide Side Bar</dd>
+			<dt>Open Files - списък с отворените файлове</dt>
+			<dd>Menu->View->Side Bar->Show/Hide Open Files</dd>
+			<dt>За повече възможности на Side Bar: <a href="https://packagecontrol.io/packages/SideBarEnhancements">Side​Bar​Enhancements Package</a></dt>
+		</dl>
+	</section>
+	<section><h3>The Editor Area</h3>
+		<dl class="fa">
+			<dt>Мястото, където пишем код : )</dt>
+			<dt>Оцветяването се определя от <code>Color Scheme</code></dt>
+			<dt>Color Scheme се променя чрез:</dt>
+			<dd>Preferences->Color Scheme...</dd>
+			<dd><kbd>CTRL+SHIFT+P</kbd>->UI: Select Color Scheme</dd>
+			<dt>Могат да се инсталират допълнително Color Scheme, по същия начин както Пакетите</dt>
+		</dl>
+	</section>
+	<section><h3>Minimap</h3>
+		<dl class="fa">
+			<dt>Показва карта на кода, в която се запазва текущото оцветяване на кода.</dt>
+			<dt>Изключително полезна за бързо навигиране в по-големи файлове.</dt>
+			<dt>Скриване/Показване</dt>
+			<dd>Menu->View->Show/Hide Minimap</dd>
+			<dd>CTRL+SHIFT+P => Toggle Minimap</dd>
+		</dl>
+	</section>
+	<section><h3>Status Bar</h3>
+		<dl class="fa">
+			<dt>Лента със статуса :)</dt>
+			<dt>Показва резултата от операциите, които се извършват. Като инсталиране на пакети и пр.</dt>
+		</dl>
+	</section>
+</section>
+
+<!-- <section><h2>Работа с директории и папки</h2>
+	<section><h3></h3></section>
+</section> -->
+
+<section><h2>The Command Palette</h2><br>
+	<dl class="fa">
+		<dt>Предимства:</dt>
+		<dd>Дава бърз достъп до всички команди в Sublime Text и инсталираните пакети.</dd>
+		<dd>Филтриране/търсене по произволна част от низа (fuzzy search)</dd>
+		<dt>Активиране:</dt>
+		<dd>Чрез клавиатура: <span class="code note">Ctrl+Shift+P</span></dd>
+		<dd>Чрез мишка: Tools=>Command Palette...</dd>
+	</dl>
+</section>
+
+<section><h2>Инсталиране на пакети (packages, plugins)</h2>
+	<section><h3>Package Control</h3>
+		<dl class="fa">
+			<dt>Чрез Package Control можем бързо да инсталираме и премахваме пакети в ST3</dt>
+			<dt>Инсталиране:</dt>
+			<dd>Активирайте командната палитра (<span class="code">Ctrl+Shift+P</span>)</dd>
+			<dd>В полето за търсене въведете: <span class="code">Install Package Control</span></dd>
+		</dl>
+	</section>
+	<section><h3>Package Control Commands</h3>
+		<p class="note">Всяка от посочените команди е достъпна чрез командната палитра (CTRL+SHIFT+P)</p>
+		<dl class="fa">
+			<dt><code>Package Control: <span class="note">Install</span> Package</code></dt>
+			<dd>Инсталира пакет от <a href="https://packagecontrol.io/browse">основния канал</a> - необходима е интернет връзка.</dd>
+			<dd>Показва списък със всички налични, но неинсталирани пакети, от който можете да избере кой пакет да инсталирате</dd>
+		</dl>
+	</section>
+	<section><h3>Package Control Commands</h3>
+		<dl class="fa">
+			<dt><code>Package Control: <span class="note">Remove</span> Package</code></dt>
+			<dd>Показва списък с всички инсталирани на системата пакети, от който можете да изберете кой пакет да бъде деинсталиран.</dd>
+			<dt><code>Package Control: <span class="note">List</span> Packages</code></dt>
+			<dd>Показва списък с всички инсталирани на системата пакети</dd>
+		</dl>
+	</section>
+</section>
+
+<section><h2>Полезни пакети за Sublime Text 3</h2>
+	<a href="/IT-Academy-Front-End-Dev/pages/readings/beginners/UsefulResources.html#ST3_packages">Полезни пакети за Sublime Text 3</a>
+</section>
+
+<section><h2>Теми и цветови схеми</h2>
+	<section>
+		<dl class="fa">
+			<dt><span class="note">Color Scheme</span> - касае визията на Editor Area и оцветяването на кода.</dt>
+			<dd>Променя се чрез <code>Menu->Preferences->Color Scheme...</code></dd>
+			<dt><span class="note">Theme</span> - касае визията на SideBar,Status Bar и табовете.</dt>
+			<dd>Променя се чрез <code>Menu->Preferences->Theme...</code></dd>
+			<dt>Съществуват множество теми и цветови схеми за Sublime, които лесно се инсталират чрез Package Control</dt>
+			<dt><a href="https://scotch.io/@Viclotana/the-10-best-sublime-text-3-themes-of-2017">The 10 Best Sublime Text 3 Themes of 2017</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section><h2>Настройки</h2>
+	<section><h3>Глобални настройки</h3>
+		<dl class="fa">
+			<dt>Всички настройки в ST3, се записват в <a href="https://bg.wikipedia.org/wiki/JSON">JSON формат</a>. Използват се 2 файла, които са достъпни от:</dt>
+			<dd>Sublime Text 3 => Preferences => Settings</dd>
+			<dt>Файлът, в който записваме промените е:</dt>
+			<dd><span class="note">Preferences.sublime-settings – User</span></dd>
+			<dd>Това гарантира, че настройките ни ще се запазят дори и след ъпдейт на Sublime</dd>
+			<dt>Голяма част (но не всички) от настройките на редактора са достъпни и от <code>Menu->Preferences</code>.</dt>
+			<dt>Настройките за Пакети са достъпни от: <br> <code>Preferences->Package Settings->"package"</code></dt>
+		</dl>
+	</section>
+	<section><h3>Примерни потребителски настройки</h3>
+		<pre><code rel="JSON">
+			{
+				"font_face": "Courier New",
+				"font_size": 11,
+				"draw_white_space": "all",
+				"rulers": [80],
+				"tab_size": 4,
+				"translate_tabs_to_spaces": true,
+				"show_encoding": true,
+			}
+		</code></pre>
+	</section>
+</section>
+
+<section><h2>Клавишни комбинации (Keyboard Shortcuts)</h2>
+	<section>
+		<dl class="fa">
+			<dt>В Sublime Text 3 се използват множество клавишни комбинации, които ускоряват значително процеса на разработка.</dt>
+			<dt>Списък със стандартните клавишни комбинации:</dt>
+			<dd><a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></dd>
+			<dd><a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Разбира се, ние можем да променим и да добавим нови комбинации.</dt>
+			<dt>Отново се използват 2 файла (Default и User), достъпни чрез:</dt>
+			<dd>Sublime Text 3 => Preferences => Key Bindings</dd>
+			<dt>Детайлна информация: <a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html">http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/key_bindings.html</a></dt>
+		</dl>
+	</section>
+	<section><h3>Пример:</h3>
+		<p>В Sublime Text 3 => Preferences => Key Bindings - User:</p>
+		<!-- TODO: ident do not work here -->
+		<pre><code rel="JSON">
+			[
+				&nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
+				&nbsp;&nbsp;&nbsp;&nbsp;{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
+			]
+		</code></pre>
+	</section>
+</section>
+
+<section><h2 class="advanced">Работа с проекти (<span class="note">advanced</span> )</h2>
+	<section>
+		<dl class="fa">
+			<dt>Проекта капсулира и запазва файловете и директориите с които работите.</dt>
+			<dt>Голяма част, но не всички, от настройките на Sublime могат да се приложат отделно за всеки отделен проект. Например, в проект А можем да работим с цветова схема, различна от тази на останалите проекти.</dt>
+			<dt>Работата с проекти драстично ускорява работата върху множество проекти</dt>
+			<dt>Подробна информация за работа с проекти: <a href="http://docs.sublimetext.info/en/latest/file_management/projects.html">Projects - </a></dt>
+		</dl>
+	</section>
+	<section><h3>Настройки за проект</h3>
+		<p>Sublime Text 3 => Project => Edit Project.</p>
+		<p>Структурата на файла е описана тук: <a href="https://www.sublimetext.com/docs/3/projects.html">Sublime Text 3 Documentation: Projects</a></p>
+	</section>
+</section>
+
+<section><h3>YouTube Tutorials</h3>
+	<section>
+		<h4>Sublime Text Basics: All the Best Features in One Video</h4>
+		 <iframe class="resultFrame"
+								src="https://www.youtube.com/embed/zIkg3Oo1PVM"
+								allowfullscreen></iframe>
+	</section>
+	<section>
+		<h4>Sublime Text Tutorial</a> - 12 videos by <a href="https://www.youtube.com/channel/UCHRp19HU7Y2LwfI0Ai6WAGQ">LearnWebCode</a></h4>
+		 <iframe class="resultFrame"
+								src="https://www.youtube.com/embed/SVkR1ZkNusI?list=PLpcSpRrAaOaqQMDlCzE_Y6IUUzaSfYocK"
+								allowfullscreen></iframe>
+	</section>
+</section>
+
+<section><h3>Docs</h3>
+		<dl class="fa">
+			<dt><a href="https://www.sublimetext.com/docs/3/">SUBLIME TEXT 3 (official) Documentation</a></dt>
+			<dt><a href="http://sublime-text-unofficial-documentation.readthedocs.io/en/latest/">Неофициална, но изчерпателна, документация</a></dt>
+		</dl>
+</section>
+
+<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
+		<p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	<p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+				</div>
+		</div>
+		<!-- Custom processing -->
+		<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+		<!-- external scripts -->
+		<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+		<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+		<!-- init reveal -->
+		<script>
+				// Full list of configuration options available at:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+						controls: true,
+						progress: true,
+						slideNumber: 'c/t',
+						keyboard: true,
+						history: true,
+						center: true,
+						// width: '100%',
+						// height: '100%',
+						// slide transition
+						transition: 'concave', // none/fade/slide/convex/concave/zoom
+						// Factor of the display size that should remain empty around the content
+						margin: 0.1,
+						// shift+maous click to zoom in/out element
+						zoomKey: 'ctrl',
+						// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+						// transition: Reveal.getQueryHash().transition || 'default'
+						// Optional reveal.js plugins
+						dependencies: [
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+								{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+						]
+				});
+		</script>
+		<!-- linkedin badge -->
+		<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

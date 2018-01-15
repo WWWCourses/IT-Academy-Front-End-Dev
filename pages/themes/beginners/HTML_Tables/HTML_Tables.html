@@ -1,37 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Списъци в HTML</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <!-- css & themes include -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-    <!-- custom -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-    <base target="_blank">
+	<meta charset="utf-8">
+	<title>Таблици в HTML</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- custom -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
+	<base target="_blank">
 </head>
 <body>
-    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Lists" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
-        </div>
-        <div class="slides">
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Tables" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+			<div><span>N/Спейс</span><span>следващ слайд</span></div>
+			<div><span>P</span><span>предишен слайд</span></div>
+			<div><span>O</span><span>всички слайдове</span></div>
+			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+		</div>
+		<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -39,125 +48,130 @@
 -->
 <section><h1>Таблици в HTML</h1></section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Created for</p>
-        </div>
-        <div class="company">
-            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-            <img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<section class="copyright" data-transition="zoom">
+		<div class="note">
+			<p>Created for</p>
+		</div>
+		<div class="company">
+			<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+			<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+			</a>
+		</div>
+		<div class="author">
+			<span class="note">Iva E. Popova, 2015-2018</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="company">
+			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
+		</div>
+	</section>
 </section>
 
 <section><h3>Използване</h3>
 <ul class="fa">
-    <li>Само за представяне на информация във вид на таблица!</li>
-    <li>Преди CSS2 таблиците се използваха за оформление на страницата. Което водеше до маркъп код, многократно надвишаваш самото съдържание на страницата! (пример: <a href="https://web.archive.org/web/20091228021514/http://www.store.bg/?">Wayback Machine: store.bg</a>)</li>
-    <li>След CSS2 е абсолютно недопустимо е да се използват таблици за тези цели!</li>
-    <li>В CSS2.1 се въвеждат множество свойства, чрез който можем да изградим табличен layout, без да пренасищаме HTML съдържанието с излишен код.</li>
+	<li>Само за представяне на информация във вид на таблица!</li>
+	<li>Преди CSS2 таблиците се използваха за оформление на страницата. Което водеше до маркъп код, многократно надвишаваш самото съдържание на страницата! (пример: <a href="https://web.archive.org/web/20091228021514/http://www.store.bg/?">Wayback Machine: store.bg</a>)</li>
+	<li>След CSS2 е абсолютно недопустимо е да се използват таблици за тези цели!</li>
+	<li>В CSS2.1 се въвеждат множество свойства, чрез който можем да изградим табличен layout, без да пренасищаме HTML съдържанието с излишен код.</li>
 </ul>
 </section>
 
 <section><h2>Създаване на таблица</h2>
-    <section>
-    <p><a href="http://www.w3schools.com/html/html_tables.asp">w3schools - HTML Tables</a></p>
-    <p>Основни елементи:</p>
-    <ul>
-        <li><code><a href="http://www.w3schools.com/tags/tag_table.asp">table</a></code></li>
-        <li><code><a href="http://www.w3schools.com/tags/tag_caption.asp">caption</a></code></li>
-        <li><code><a href="http://www.w3schools.com/tags/tag_colgroup.asp">colgroup</a></code></li>
-        <li><code><a href="http://www.w3schools.com/tags/tag_tr.asp">tr</a></code></li>
-        <li><code><a href="http://www.w3schools.com/tags/tag_td.asp">td</a></code></li>
-        <li><code><a href="http://www.w3schools.com/tags/tag_th.asp">th</a></code></li>
-    </ul>
-    <p>Обърнете внимание, че почти всички атрибути на посочените елементи са забранени в HTML5!</p>
-    </section>
-    <section>
-        <p>Пример:</p>
-        <img class="norm" src="images/table_no-span.png">
-        <pre><code rel="HTML">
-            &lt;table border="1"&gt;
-                &lt;tr&gt;
-                    &lt;td&gt;Едно&lt;/td&gt;
-                    &lt;td&gt;Две&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td&gt; Три &lt;/td&gt;
-                    &lt;td&gt; Четири &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/table&gt;
-        </code></pre>
-    </section>
+	<section>
+	<p><a href="http://www.w3schools.com/html/html_tables.asp">w3schools - HTML Tables</a></p>
+	<p>Основни елементи:</p>
+	<ul>
+		<li><code><a href="http://www.w3schools.com/tags/tag_table.asp">table</a></code></li>
+		<li><code><a href="http://www.w3schools.com/tags/tag_caption.asp">caption</a></code></li>
+		<li><code><a href="http://www.w3schools.com/tags/tag_colgroup.asp">colgroup</a></code></li>
+		<li><code><a href="http://www.w3schools.com/tags/tag_tr.asp">tr</a></code></li>
+		<li><code><a href="http://www.w3schools.com/tags/tag_td.asp">td</a></code></li>
+		<li><code><a href="http://www.w3schools.com/tags/tag_th.asp">th</a></code></li>
+	</ul>
+	<p>Обърнете внимание, че почти всички атрибути на посочените елементи са забранени в HTML5!</p>
+	</section>
+	<section>
+		<p>Пример:</p>
+		<img class="norm" src="images/table_no-span.png">
+		<pre><code rel="HTML">
+			&lt;table border="1"&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Едно&lt;/td&gt;
+					&lt;td&gt;Две&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt; Три &lt;/td&gt;
+					&lt;td&gt; Четири &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Обединение на клетки в таблица</h2>
-    <section>
-        <h4>(Cells span - аналогично на 'merge' в Excel)</h4>
-    </section>
-    <section><h5>Хоризонтално (обединяване по колони)</h5>
-        <h4><a href="http://www.w3schools.com/tags/att_td_colspan.asp">td colspan attribute</a></h4>
-        <p>Пример:</p>
-        <img class="norm" src="images/table_colspan.png">
-        <pre><code rel="HTML">
-            &lt;table border="1"&gt;
-                &lt;tr&gt;
-                    &lt;td&gt;Едно&lt;/td&gt;
-                    &lt;td&gt;Две&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td colspan="2"&gt; Три и четири &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/table&gt;
-        </code></pre>
-    </section>
-    <section><h5>Вертикално (обединяване по редове)</h5>
-        <h4><a href="http://www.w3schools.com/tags/att_td_rowspan.asp">td rowspan attribute</a></h4>
-        <p>Пример:</p>
-        <img class="norm" src="images/table_rowspan.png">
-        <pre><code rel="HTML">
-            &lt;table border="1"&gt;
-                &lt;tr&gt;
-                    &lt;td&gt;Едно&lt;/td&gt;
-                    &lt;td rowspan="2"&gt;Две и четири&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td&gt; Три &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/table&gt;
-        </code></pre>
-        <p class="note fs-small">Браузера изобразява елементите последователно, отгоре-надолу, поради това не може да имаме вертикално обединяване на клетки отдолу-нагоре.</p>
-    </section>
+	<section>
+		<h4>(Cells span - аналогично на 'merge' в Excel)</h4>
+	</section>
+	<section><h5>Хоризонтално (обединяване по колони)</h5>
+		<h4><a href="http://www.w3schools.com/tags/att_td_colspan.asp">td colspan attribute</a></h4>
+		<p>Пример:</p>
+		<img class="norm" src="images/table_colspan.png">
+		<pre><code rel="HTML">
+			&lt;table border="1"&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Едно&lt;/td&gt;
+					&lt;td&gt;Две&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td colspan="2"&gt; Три и четири &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		</code></pre>
+	</section>
+	<section><h5>Вертикално (обединяване по редове)</h5>
+		<h4><a href="http://www.w3schools.com/tags/att_td_rowspan.asp">td rowspan attribute</a></h4>
+		<p>Пример:</p>
+		<img class="norm" src="images/table_rowspan.png">
+		<pre><code rel="HTML">
+			&lt;table border="1"&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Едно&lt;/td&gt;
+					&lt;td rowspan="2"&gt;Две и четири&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt; Три &lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		</code></pre>
+		<p class="note fs-small">Браузера изобразява елементите последователно, отгоре-надолу, поради това не може да имаме вертикално обединяване на клетки отдолу-нагоре.</p>
+	</section>
 </section>
 
 <section><h2>Задачи за упражнение</h2>
-    <section><h3>FIFA_Table</h3>
-        <dl class="fa">
-        <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/FIFA_Table/FIFA_Table-result.png">фиг.1</a>. Обърнете внимание на клетките, които са обединени!</dt>
-        <dt class="note">Забележки:</dt>
-        <dd>За да се визуализира рамката на таблицата е използван атрибута <code>border="1"</code> на елемента <code>table</code>, който не се препоръчва да се използва в HTML5. </dd>
-        <dd>Никакво друго оформление не е приложено върху таблицата.</dd>
-        <dd>Разбира се, таблицата изглежда почти неизползваема, без подходящото оформление. Когато стигнем до уроците за CSS, ще приложим необходимия стил.</dd>
-        </dl>
-    </section>
-    <section><h3>Slot_Machine</h3>
-        <dl class="fa">
-        <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/Slot_Machine/Slot_Machine-result.png">фиг.1</a>.</dt>
-        <dt class="note">Забележки:</dt>
-        <dd>Подберете изображения за плодовете според вашия вкус, но следвайте тяхното подреждане в заданието.</dd>
-        <dd>Изображението на всеки плод, трябва да бъде линк към съответна статия за плода в <a href="https://www.wikipedia.org/">wikipedia</a>.</dd>
-        <dd>Списък със свободни за използване изображения/фотографии може да намерите тук: <a href="/IT-Academy-Front-End-Dev/pages/readings/beginners/UsefulResources.html#Images">UsefulResources - Images</a></dd>
-        </dl>
-    </section>
+	<section><h3>FIFA_Table</h3>
+		<dl class="fa">
+		<dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/FIFA_Table/FIFA_Table-result.png">фиг.1</a>. Обърнете внимание на клетките, които са обединени!</dt>
+		<dt class="note">Забележки:</dt>
+		<dd>За да се визуализира рамката на таблицата е използван атрибута <code>border="1"</code> на елемента <code>table</code>, който не се препоръчва да се използва в HTML5. </dd>
+		<dd>Никакво друго оформление не е приложено върху таблицата.</dd>
+		<dd>Разбира се, таблицата изглежда почти неизползваема, без подходящото оформление. Когато стигнем до уроците за CSS, ще приложим необходимия стил.</dd>
+		</dl>
+	</section>
+	<section><h3>Slot_Machine</h3>
+		<dl class="fa">
+		<dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/Slot_Machine/Slot_Machine-result.png">фиг.1</a>.</dt>
+		<dt class="note">Забележки:</dt>
+		<dd>Подберете изображения за плодовете според вашия вкус, но следвайте тяхното подреждане в заданието.</dd>
+		<dd>Изображението на всеки плод, трябва да бъде линк към съответна статия за плода в <a href="https://www.wikipedia.org/">wikipedia</a>.</dd>
+		<dd>Списък със свободни за използване изображения/фотографии може да намерите тук: <a href="/IT-Academy-Front-End-Dev/pages/readings/beginners/UsefulResources.html#Images">UsefulResources - Images</a></dd>
+		</dl>
+	</section>
 </section>
 
 <section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <p>These slides are based on</p>
+	<p>These slides are based on</p>
 	<p>customised version of </p>
 	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
 	<p>framework</p>
@@ -169,47 +183,49 @@
 ##################### SLIDES END   #####################
 ########################################################
 -->
-        </div>
-    </div>
-    <!-- Custom processing -->
-    <script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- external scripts -->
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            slideNumber: 'c/t',
-            keyboard: true,
-            history: true,
-            center: true,
-            width: 1024,
-            height: 850,
-            // Bounds for smallest/largest possible scale to apply to content
-            // minScale: .5,
-            maxScale: 1,
-            // slide transition
-            transition: 'concave', // none/fade/slide/convex/concave/zoom
-            // Factor of the display size that should remain empty around the content
-            margin: 0.1,
-            // shift+maous click to zoom in/out element
-            zoomKey: 'ctrl',
-            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            // transition: Reveal.getQueryHash().transition || 'default'
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	 <!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1024,
+			height: 850,
+			// Bounds for smallest/largest possible scale to apply to content
+			// minScale: .5,
+			maxScale: 1,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

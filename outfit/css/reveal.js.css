@@ -248,7 +248,7 @@ a.home_link{
 }
 .copyright>.note{
   text-align: center;
-  margin: 0em 0 3em 0em;
+  margin: 0em 0 2em 0em;
 }
 .copyright>.company{
    text-align: center;
@@ -259,23 +259,24 @@ a.home_link{
 .copyright>.company img{
     /*height: 3em;*/
     margin: 0;
+    padding: .5em;
     background: none;
     vertical-align: middle;
     border: none;
     box-shadow: none;
     /*margin-bottom: -1px;*/
 }
-section.copyright>.author{
-    text-align: center;
-    margin: 1em 0em 0.5em 0;
-    font-size: 3em;
-    /*font-size: 14px;*/
-    /*border: 1px solid red;*/
+.copyright>.company img:hover{
+  border-radius: 10%;
 }
-div.copyright>.author{
+.copyright>.author{
   text-align: center;
-  margin: 8em 0em 0.5em 0;
+  margin: 4em 0em 0.5em 0;
   font-size: 1em;
+}
+.copyright>.author a[rel="license"]{
+  display: block;
+  margin-top: .7em;
 }
 section.copyright>.contacts{
   font-size: 3em;
@@ -283,11 +284,15 @@ section.copyright>.contacts{
 section.copyright>.license{
   margin: 9em 0 0 0;
 }
-.copyright>.license img, div.copyright>.author img{
+.copyright>.license img, .copyright>.author img{
     height: 1em;
     vertical-align: middle;
     border: none;
     box-shadow: none;
+    opacity: 0.5;
+}
+.copyright>.author img:hover{
+  opacity: 1;
 }
 .copyright a{
   cursor: pointer;

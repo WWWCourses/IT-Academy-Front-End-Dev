@@ -1,37 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Списъци в HTML</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <!-- css & themes include -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-    <!-- custom -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-    <base target="_blank">
+	<meta charset="utf-8">
+	<title>Списъци в HTML</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- custom -->
+	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
+	<base target="_blank">
 </head>
 <body>
-    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Lists" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
-        </div>
-        <div class="slides">
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Lists" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+			<div><span>N/Спейс</span><span>следващ слайд</span></div>
+			<div><span>P</span><span>предишен слайд</span></div>
+			<div><span>O</span><span>всички слайдове</span></div>
+			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<!-- <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a> -->
+		</div>
+		<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -39,113 +48,118 @@
 -->
 <section><h1>Списъци в HTML</h1></section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Created for</p>
-        </div>
-        <div class="company">
-            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-            <img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<section class="copyright" data-transition="zoom">
+		<div class="note">
+			<p>Created for</p>
+		</div>
+		<div class="company">
+			<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
+			<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+			</a>
+		</div>
+		<div class="author">
+			<span class="note">Iva E. Popova, 2015-2018</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="company">
+			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
+		</div>
+	</section>
 </section>
 
 <section><h2>Неподреден списък (Unordered List)</h2>
-    <section><h3>Семантика:</h3>
-        <dl class="fa">
-            <dt>Представя списък от елементи, при който редът на елементите <span class="note">не е от значение</span>. Т.е. ако разменим местата на елементите то смисълът на документа няма да се промени!</dt>
-        </dl>
-    </section>
-    <section><h3>Елемент: <code><strong>UL</strong></code></h3>
-        <pre><code rel="HTML">
-            <ul>
-                <li>2 бр. яйца</li>
-                <li>1 ч.ч. прясно мляко или вода</li>
-                <li>1 ч.ч. брашно тип 500</li>
-                <li>1 с.л. краве масло</li>
-                <li>Щипка сол, щипка захар</li>
-            </ul>
-        </code></pre><br>
-        <ul class="fa">
-            <li class="note">В елемент <code><strong>UL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
-            <li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
-            <li>Форматирането на неподредения списък се извършва <a href="http://www.w3schools.com/css/css_list.asp">изцяло чрез CSS</a>!</li>
-        </ul>
-    </section>
+	<section><h3>Семантика:</h3>
+		<dl class="fa">
+			<dt>Представя списък от елементи, при който редът на елементите <span class="note">не е от значение</span>. Т.е. ако разменим местата на елементите то смисълът на документа няма да се промени!</dt>
+		</dl>
+	</section>
+	<section><h3>Елемент: <code><strong>UL</strong></code></h3>
+		<pre><code rel="HTML">
+			<ul>
+				<li>2 бр. яйца</li>
+				<li>1 ч.ч. прясно мляко или вода</li>
+				<li>1 ч.ч. брашно тип 500</li>
+				<li>1 с.л. краве масло</li>
+				<li>Щипка сол, щипка захар</li>
+			</ul>
+		</code></pre><br>
+		<ul class="fa">
+			<li class="note">В елемент <code><strong>UL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
+			<li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
+			<li>Форматирането на неподредения списък се извършва <a href="http://www.w3schools.com/css/css_list.asp">изцяло чрез CSS</a>!</li>
+		</ul>
+	</section>
 </section>
 <section><h2>Подреден списък (Ordered List)</h2>
-    <section><h3>Семантика:</h3>
-        <dl class="fa">
-            <dt>Представя списък, чиито елементите са подредени, и тази подредба <span class="note">е от съществено значение</span>. Промяната на реда на елементите на такъв списък би довела до промяна в смисъла на документа.</dt>
-        </dl>
-    </section>
-    <section>
-        <h4>Елемент: <code><strong>OL</strong></code></h4>
-        <pre><code rel="HTML">
-            <ol>
-                <li>Яйцата се разбиват, докато се получи еднородна смес.</li>
-                <li>Добавя се млякото, щипка сол и щипка захар.</li>
-                <li>На малки порции се добавя пресятото брашно.</li>
-                <li>Разбъркваме до получаването на гъста смес,
-                    с консистенция подобна на боза.</li>
-                <li>Намазваме с масло предварително нагрятия тиган
-                    и поставяме черпак от сместа.</li>
-                <li>След няколко минути обръщаме палачинката.</li>
-            </ol>
+	<section><h3>Семантика:</h3>
+		<dl class="fa">
+			<dt>Представя списък, чиито елементите са подредени, и тази подредба <span class="note">е от съществено значение</span>. Промяната на реда на елементите на такъв списък би довела до промяна в смисъла на документа.</dt>
+		</dl>
+	</section>
+	<section>
+		<h4>Елемент: <code><strong>OL</strong></code></h4>
+		<pre><code rel="HTML">
+			<ol>
+				<li>Яйцата се разбиват, докато се получи еднородна смес.</li>
+				<li>Добавя се млякото, щипка сол и щипка захар.</li>
+				<li>На малки порции се добавя пресятото брашно.</li>
+				<li>Разбъркваме до получаването на гъста смес,
+					с консистенция подобна на боза.</li>
+				<li>Намазваме с масло предварително нагрятия тиган
+					и поставяме черпак от сместа.</li>
+				<li>След няколко минути обръщаме палачинката.</li>
+			</ol>
 
-        </code></pre><br>
-        <ul class="fa">
-            <li class="note">В елемент <code><strong>OL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
-            <li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
-        </ul>
-    </section>
-    <section><h3>Атрибути</h3>
-        <ul class="fa">
-            <li>Можем да управляваме типа на номерирането чрез атрибутите на елемента <code>OL</code>: <a href="http://www.w3schools.com/tags/tag_ol.asp">http://www.w3schools.com/tags/tag_ol.asp</a></li>
-            <li>Както и чрез атрибута <code>value</code> на елемент <code>LI</code> (<strong>само в подреден списък</strong>): <a href="http://www.w3schools.com/tags/tag_li.asp">http://www.w3schools.com/tags/tag_li.asp</a>
-            </li>
-            <li>Всички останали аспекти на списъка се оформят <a href="http://www.w3schools.com/css/css_list.asp">чрез CSS</a></li>
-        </ul>
-    </section>
+		</code></pre><br>
+		<ul class="fa">
+			<li class="note">В елемент <code><strong>OL</strong></code> може да имаме единствено <code><strong>LI</strong></code> елементи!</li>
+			<li class="note">В <code><strong>LI</strong></code> е позволено да вмъкваме всякакви елементи!</li>
+		</ul>
+	</section>
+	<section><h3>Атрибути</h3>
+		<ul class="fa">
+			<li>Можем да управляваме типа на номерирането чрез атрибутите на елемента <code>OL</code>: <a href="http://www.w3schools.com/tags/tag_ol.asp">http://www.w3schools.com/tags/tag_ol.asp</a></li>
+			<li>Както и чрез атрибута <code>value</code> на елемент <code>LI</code> (<strong>само в подреден списък</strong>): <a href="http://www.w3schools.com/tags/tag_li.asp">http://www.w3schools.com/tags/tag_li.asp</a>
+			</li>
+			<li>Всички останали аспекти на списъка се оформят <a href="http://www.w3schools.com/css/css_list.asp">чрез CSS</a></li>
+		</ul>
+	</section>
 </section>
 <section><h2>Вложени списъци (Nested Lists)</h2>
-    <section><h3>Пример</h3>
-        <pre><code rel="HTML">
-            &lt;p&gt;Моите любими неща&lt;/p&gt;
-            &lt;ol&gt;
-                &lt;li&gt;Автори
-                    &lt;ul type="square"&gt;
-                        &lt;li&gt;Агоп Мелконян&lt;/li&gt;
-                        &lt;li&gt;Борис Виан&lt;/li&gt;
-                        &lt;li&gt;Кърт Вонегът&lt;/li&gt;
-                        &lt;li&gt;Марк Твен&lt;/li&gt;
-                        &lt;li&gt;Павел Вежинов&lt;/li&gt;
-                        &lt;li&gt;Тери Пратчет&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-            &lt;/ol&gt;
-        </code></pre>
-    </section>
+	<section><h3>Пример</h3>
+		<pre><code rel="HTML">
+			&lt;p&gt;Моите любими неща&lt;/p&gt;
+			&lt;ol&gt;
+				&lt;li&gt;Автори
+					&lt;ul type="square"&gt;
+						&lt;li&gt;Агоп Мелконян&lt;/li&gt;
+						&lt;li&gt;Борис Виан&lt;/li&gt;
+						&lt;li&gt;Кърт Вонегът&lt;/li&gt;
+						&lt;li&gt;Марк Твен&lt;/li&gt;
+						&lt;li&gt;Павел Вежинов&lt;/li&gt;
+						&lt;li&gt;Тери Пратчет&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ol&gt;
+		</code></pre>
+	</section>
 </section>
 <section><h2>Списък с дефиниции</h2>
-    <h3>Self-Learning Section</h3>
-    <a href="http://www.w3schools.com/tags/tag_dl.asp">DL element</a>
+	<h3>Self-Learning Section</h3>
+	<a href="http://www.w3schools.com/tags/tag_dl.asp">DL element</a>
 </section>
 <section><h2>Упражнения</h2>
-    <dl class="fa">
-        <dt><a href="homeworks/1_Ordered_and_Unordered_lists.pdf">Ordered and Unordered lists</a></dt>
-        <dt><a href="homeworks/2_Nested_lists_food.pdf">Nested lists food</a></dt>
-        <dt><a href="homeworks/3_Nested_list_music.pdf">Nested lists music</a></dt>
-    </dl>
+	<dl class="fa">
+		<dt><a href="homeworks/1_Ordered_and_Unordered_lists.pdf">Ordered and Unordered lists</a></dt>
+		<dt><a href="homeworks/2_Nested_lists_food.pdf">Nested lists food</a></dt>
+		<dt><a href="homeworks/3_Nested_list_music.pdf">Nested lists music</a></dt>
+	</dl>
 </section>
 
 <section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <p>These slides are based on</p>
+	<p>These slides are based on</p>
 	<p>customised version of </p>
 	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
 	<p>framework</p>
@@ -155,47 +169,49 @@
 ##################### SLIDES END   #####################
 ########################################################
 -->
-        </div>
-    </div>
-    <!-- Custom processing -->
-    <script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- external scripts -->
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            slideNumber: 'c/t',
-            keyboard: true,
-            history: true,
-            center: true,
-            width: 1024,
-            height: 850,
-            // Bounds for smallest/largest possible scale to apply to content
-            // minScale: .5,
-            maxScale: 1,
-            // slide transition
-            transition: 'concave', // none/fade/slide/convex/concave/zoom
-            // Factor of the display size that should remain empty around the content
-            margin: 0.1,
-            // shift+maous click to zoom in/out element
-            zoomKey: 'ctrl',
-            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            // transition: Reveal.getQueryHash().transition || 'default'
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+	 <!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1024,
+			height: 850,
+			// Bounds for smallest/largest possible scale to apply to content
+			// minScale: .5,
+			maxScale: 1,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

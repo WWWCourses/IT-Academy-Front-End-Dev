@@ -42,7 +42,7 @@
 			]
 		},
 		"fallback_encoding": "Cyrillic (Windows 1251)",
-		"font_face": "Courier 10 Pitch",
+		// "font_face": "Courier 10 Pitch",
 		"ignored_words":
 		[
 			"links",
