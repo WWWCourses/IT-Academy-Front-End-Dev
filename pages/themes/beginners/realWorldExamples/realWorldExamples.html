@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>realWorldExamples</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Класически компоненти (HTML/CSS/JS snippets) за реални проекти</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Позициониране и Layouts</h2>
+    <section><h3>Вертикално и хоризонтално подравняване</h3>
+        <dl class="fa">
+            <dt>Проблем: не знаем предварително височината на контейнера и на вътрешния елемент, който ще центрираме</dt>
+            <dd>Вариант 1: добавяме псевдо-елемент, който да увеличи височината на реда</dd>
+        </dl>
+
+        <iframe title='apwNgQ' src='//codepen.io/webdesigncourse/embed/apwNgQ/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/apwNgQ/'>apwNgQ</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Вертикално и хоризонтално подравняване</h3>
+        <dl class="fa">
+            <dt>Проблем: не знаем предварително височината на контейнера и на вътрешния елемент, който ще центрираме</dt>
+            <dd>Вариант 2: позиционираме вътрешния контейнер абсолютно, спрямо родителя</dd>
+        </dl>
+
+        <iframe height='300' scrolling='no' title='Center an element: with position and translate' src='//codepen.io/webdesigncourse/embed/pxJKXx/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/pxJKXx/'>Center an element: with position and translate</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Layout: 3 колони с "гъвкава" височина:</h3>
+        <dl class="fa">
+            <dt>В този layout, височината на колоните се определя автоматично, спрямо най-високата колона. При динамично съдържание, колоните се разтягат/скъсяват според съдържанието на най-високата колона.</dt>
+        </dl>
+        <iframe title='ThreeCoumnsFloated-EqualSize' src='//codepen.io/webdesigncourse/embed/EZXvOZ/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/EZXvOZ/'>ThreeCoumnsFloated-EqualSize</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Забележки</h3>
+        <dl class="fa">
+            <dt>За съвременни браузери се препоръчва използването на:</dt>
+            <dd><a href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout</a></dd>
+            <dd><a href="https://www.w3schools.com/css/css3_flexbox.asp">CSS Flexbox</a></dd>
+        </dl>
+    </section>
+</section>
+
+
+<section><h2>Навигация на страницата</h2>
+    <section><h3>Smooth Scrolling (vanilla JS)</h3>
+        <iframe title='SmoothScrollingWithHashLinks-PureJS' src='//codepen.io/webdesigncourse/embed/vzMZzg/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/vzMZzg/'>SmoothScrollingWithHashLinks-PureJS</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Animated Scroll with AOS</h3>
+        <p>Анимирани скрол ефекти от библиотеката: <a href="https://michalsnik.github.io/aos/">AOS</a> </p>
+        <iframe height='300' scrolling='no' title='Animated Scroll with AOS' src='//codepen.io/webdesigncourse/embed/ePOQev/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/ePOQev/'>Animated Scroll with AOS</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>CSS Only Parallax Scroll</h3>
+        <iframe height='300' scrolling='no' title='CSS Only Parallax Scroll' src='//codepen.io/webdesigncourse/embed/QZLJRG/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/QZLJRG/'>CSS Only Parallax Scroll</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Simple Paralax With Vanila JS</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="SimpleParalaxWithVanilaJS" src="https://codepen.io/webdesigncourse/embed/jOEoZBz?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/jOEoZBz'>SimpleParalaxWithVanilaJS</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Change Header opacity on scroll</h3>
+        <iframe height='300' scrolling='no' title='changeHeaderOpacityOnScroll' src='//codepen.io/webdesigncourse/embed/vVBQYj/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/vVBQYj/'>changeHeaderOpacityOnScroll</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Image Sliders and Galleries</h2>
+    <section><h3>Slider With Interval And Clearing</h3>
+        <iframe title='Slider With Interval And Clearing' src='//codepen.io/webdesigncourse/embed/KQBwKJ/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/KQBwKJ/'>Slider With Interval And Clearing</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Simple Overlay</h3>
+        <iframe title="simpleOverlay" src="//codepen.io/webdesigncourse/embed/GbWjgO/?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/GbWjgO/'>simpleOverlay</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Simple overlay with pseudo element</h3>
+        <iframe title="simpleOverlayWithPseudoElement" src="//codepen.io/webdesigncourse/embed/OepRNZ/?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/OepRNZ/'>simpleOverlayWithPseudoElement</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Overlay </h3>
+        <iframe title='simple_overlay_demo' src='//codepen.io/webdesigncourse/embed/oaXdoM/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/oaXdoM/'>simple_overlay_demo</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Други</h2>
+    <section><h3>Simple Accordeon with Pure JS and CSS animation</h3>
+        <iframe height="300" scrolling="no" title="Simple Accordeon with Pure JS and CSS animation " src="//codepen.io/webdesigncourse/embed/LqKXRR/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/LqKXRR/'>Simple Accordeon with Pure JS and CSS animation </a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Resources</h2>
+    <section><h3>codepen</h3>
+        <dl class="fa">
+            <dt><a href="https://codepen.io/collection/DORxpq/">Колекция с всички примери</a></dt>
+            <dt>Още повече примери за най-различни компоненти и трикове: <a href="https://www.w3schools.com/howto/default.asp">W3Schools How To</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Definitions</title>
+</head>
+<body>
+<h1>Examples of functions definitions in JS.</h1>
+<p>Call a function in the оnclick event bellow</p>
+<button onclick="sumVar(3,4)">Execute function</button>
+
+<script type="text/javascript">
+// ***********************
+// Function Declarations:
+// ***********************
+// Декларация на функция без параметри, върнатия резултат е 'undefined'
+function welcomePrompt () {
+    var name = prompt("Здравейте! Бихте ли се представили?","моля, въведете Вашето име тук");
+    alert("Добре дошли на борда, " + name + "!");
+}
+
+// Декларация на функция с 1 параметър, върнатия резултат е 'undefined'
+function welcome(name){
+    alert("Добре дошли на борда, " + name + "!");
+}
+
+// Декларация на функция с 1 параметър, и връщане на явен резултат
+function isЕven(x){
+    if( x % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Декларация на функция с 1 параметър, върнатия резултат е 'undefined'
+function conditionalStatemens(age){
+    var status;
+    if (age > 19) {
+        status = "adult";
+    } else if ( age < 19 && age >13) {
+        status = "teen";
+    }else {
+        status = "child"
+    }
+
+    alert(status);
+}
+
+// Декларация на функция с 2 параметъра, върнатия резултат е 'undefined'
+function sum(x,y){
+    var total = x+y;
+    alert("Сумата е "+total);
+}
+
+// Декларация на функция с 2 параметъра, и връщане на явен резултат
+function sum(x,y){
+    var total = x+y;
+    return total;
+}
+
+// ***********************
+// Function Variables:
+// ***********************
+// Името на функцията е променлива:
+var sumVar = sum;
+console.log( "sumVar(3,4) = ", sumVar(3,4) );
+
+// Можем да създадем функцията и чрез израз:
+var sumVarNew = function(x,y){
+    var total = x+y;
+    return total;
+}; //тук трябва да сложим ';'
+console.log( "sumVarNew(3,4) = ", sumVarNew(3,4) );
+
+</script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AJAX_and_RESTFullAPIs</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#AJAX_and_RESTFullAPIs" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>AJAX and RESTFull APIs</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Preamble: HTTP protocol overview 								-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section data-min="5"><h1>Client-Server Communications on HTTP</h1></section>
+<section><h2>Client-Server Communications on HTTP</h2>
+		<a href="images/big/HTTP_ClientServerSystem.png"><img src="images/big/HTTP_ClientServerSystem.png"></a>
+</section>
+<section data-min="5"><h1>HTTP protocol overview</h1></section>
+<section><h2 class="NB">HTTP protocol overview</h2>
+	<section><h3>in brief</h3>
+		<dl class="fa">
+			<dt>HTTP = HyperText Transfer Protocol</dt>
+			<dt>HTTP is a <span class="note">request-response</span> protocol.</dt>
+			<dt>the client sends a <span class="note">request message</span> to the server</dt>
+			<dt>the server returns a <span class="note">response message</span></dt>
+		</dl>
+	</section>
+	<section><h3>message format</h3>
+		<img class="" src="images/small/HTTP_MessageFormat.png">
+		<dl class="fa">
+			<dt>each message consists of two parts:</dt>
+			<dd><span class="note">Header</span> - information about the message</dd>
+			<dd><span class="note">Body</span> - message content</dd>
+		</dl>
+	</section>
+</section>
+<section data-min="5"><h1>Request Message Format</h1></section>
+<section><h2 class="advanced">Request Message Format</h2>
+	<section>
+		<img src="images/small/HTTP_RequestMessage.png">
+	</section>
+	<section><h3>Request Line</h3>
+		<pre><code rel="Syntax" class="ascii">
+			request-method-name request-URI HTTP-version
+		</code></pre>
+		<dl class="fa">
+			<dt><span class="note">request-method</span>: defines how to send the request (GET, POST, HEAD etc)</dt>
+			<dt><span class="note">request-URI</span>: the URI of the resource requested</dt>
+			<dt><span class="note">HTTP-version</span>: latest version is <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			GET /search?q=apple HTTP/1.1
+			HEAD /query.html HTTP/1.1
+			POST /index.html HTTP/1.1
+		</code></pre>
+	</section>
+	<section><h3>Request Headers</h3>
+		<pre><code rel="Syntax" class="ascii">
+			field-name: field-value1[, field-value2, ...]
+		</code></pre>
+		<p>The request-header fields allow the client to pass additional information about the request, and about the client itself, to the server</p>
+		<pre><code rel="Examples" class="js">
+			Host: google.com
+			User-Agent: curl/7.47.0
+			Accept: */*
+		</code></pre>
+	</section>
+	<section><h3>Request Body</h3>
+		<p>Optional</p>
+	</section>
+</section>
+<section data-min="5"><h1>Response Message Format</h1></section>
+<section><h2 class="advanced">Response Message Format</h2>
+	<section>
+		<a href="images/small/HTTP_ResponseMessage.png"><img src="images/small/HTTP_ResponseMessage.png"></a>
+	</section>
+	<section><h3>Status Line</h3>
+		<pre><code rel="Syntax" class="ascii">
+			HTTP-version status-code reason-phrase
+		</code></pre>
+		<dl class="fa">
+			<dt><span class="note">HTTP-version</span>: The HTTP version used in this session.</dt>
+			<dt><span class="note">status-code</span>: a 3-digit number generated by the server to reflect the outcome of the request</dt>
+			<dt><span class="note">reason-phrase</span>: gives a short explanation to the status code.</dt>
+		</dl>
+		<pre><code rel="Examples" class="ascii">
+			HTTP/1.1 200 OK
+			HTTP/1.1 301 Moved Permanently
+			HTTP/1.1 404 Not Found
+		</code></pre>
+		<p><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">List of HTTP status codes</a></p>
+	</section>
+	<section><h3>Response Headers</h3>
+		<pre><code rel="Syntax" class="http">
+			field-name: field-value1[, field-value2, ...]
+		</code></pre>
+		<p></p>
+		<pre><code rel="Examples" class="ascii">
+			HTTP/1.1 200 OK
+			Server: nginx
+			Date: Sun, 11 Jun 2017 14:05:01 GMT
+			Content-Type: text/html; charset=UTF-8
+			Connection: keep-alive
+			Keep-Alive: timeout=20
+			X-Pingback: http://www.javelingroup.com/xmlrpc.php
+			Link: <http://www.javelingroup.com/wp-json/>; rel="https://api.w.org/"
+			Link: <http://www.javelingroup.com/>; rel=shortlink
+			X-Cacheable: SHORT
+			Vary: Accept-Encoding,Cookie
+			Cache-Control: max-age=600, must-revalidate
+			X-Cache: HIT: 4
+			X-Pass-Why:
+			X-Cache-Group: normal
+			X-Type: default
+
+		</code></pre>
+	</section>
+	<section><h3>Response Body</h3>
+		<p>The response message body contains the resource data requested</p>
+	</section>
+</section>
+<section data-min="5"><h1>HTTP Request Methods</h1></section>
+<section><h2>HTTP Request Methods</h2>
+	<p>HTTP protocol defines a set of request methods, which a client can use to request a server resource.</p>
+</section>
+<section data-min="5"><h1>The "GET" Request Method</h1></section>
+<section><h2 class="NB">The "GET" Request Method</h2>
+	<section>
+		<dl class="fa">
+			<dt>Used to request data from a specified resource</dt>
+			<dt class="note">The query string is sent in the URL</dt>
+		</dl>
+		<pre><code rel="Example" class="http">
+			https://duckduckgo.com/?q=http+get+request&t=hz&ia=web
+		</code></pre>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>GET requests should be used only to retrieve data, and not to change the server state</dt>
+			<dt>GET requests should NEVER be used with sensitive data</dt>
+			<dt>GET requests have length restrictions</dt>
+			<dt>GET requests can be cached</dt>
+			<dt>GET requests remain in the browser history</dt>
+			<dt>GET requests can be bookmarked</dt>
+		</dl>
+	</section>
+</section>
+<section data-min="5"><h1>The "POST" Request Method</h1></section>
+<section><h2 class="NB">The "POST" Request Method</h2>
+	<section>
+		<dl class="fa">
+			<dt>POST request method is used to sent data to the server, like customer information, file upload etc.</dt>
+			<dt>POST request should change the server state</dt>
+			<dt>the query string will be sent in the body of the request message</dt>
+			<dt>the request headers Content-Type and Content-Length are used to notify the server the type and the length of the query string</dt>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>POST requests are never cached</dt>
+			<dt>POST requests do not remain in the browser history</dt>
+			<dt>POST requests cannot be bookmarked</dt>
+			<dt>POST requests have no restrictions on data length</dt>
+		</dl>
+	</section>
+	<section>
+		<p>Simply putted, POST is used to <span class="note">create</span> content on the server!</p>
+	</section>
+</section>
+<section data-min="5"><h1>Other HTTP Request Methods</h1></section>
+<section><h2 class="advanced">Other HTTP Request Methods</h2>
+	<section><h3>HEAD</h3>
+		<p>Same as GET, but transfers the status line and header section only. No document body is returned!</p>
+	</section>
+	<section><h3>PUT</h3>
+		<p>Replaces all current representations of the target resource with the uploaded content.</p>
+		<p>In oder words, PUT is used to <span class="note">create or update</span> content on server</p>
+	</section>
+	<section><h3>DELETE</h3>
+		<p>Deletes the specified resource</p>
+	</section>
+	<section><h3>OPTIONS</h3>
+		<p>Ask the server to return the list of request methods it supports</p>
+	</section>
+	<section><h3>CONNECT</h3>
+		<p>Establishes a transparent TCP/IP tunnel to the server.</p>
+	</section>
+</section>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Preamble: Asynchronous vs Synchronous Communications			-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<section data-min="5"><h1>Preamble: Asynchronous vs Synchronous Communications</h1></section>
+<section><h2>Preamble: Asynchronous vs Synchronous Communications</h2>
+  <section>
+  	<a href="images/asynchronous_vs_synchronous_process_comunication.png"><img src="images/asynchronous_vs_synchronous_process_comunication.png"></a>
+  </section>
+  <section>
+  	<a href="images/asynchronous_vs_synchronous_request_responce.jpg"><img src="images/asynchronous_vs_synchronous_request_responce.jpg"></a>
+  </section>
+  <!-- <section><h3>Resources</h3>
+  	<dl class="fa">
+  		<dt><a href="https://dev.to/gafi/7-reasons-to-always-use-async-await-over-plain-promises-tutorial-4ej9?ref=hackernoon.com">7 Reasons Why JavaScript Async/Await Is Better Than Plain Promises (Tutorial)</a> @<a href="https://hackernoon.com">hackernoon.com</a></dt>
+  	</dl>
+  </section> -->
+</section>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- What is AJAX?								 					-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section data-min="5"><h1>What is AJAX?</h1></section>
+<section><h2>What is AJAX?</h2>
+	<section>
+		<p class="note">AJAX</p>
+		<p><hr></p>
+		<div style="text-align: center">
+			<p><span class="note">A</span>synchronous</p>
+			<p><span class="note">J</span>avaScript</p>
+			<p><span class="note">A</span>nd</p>
+			<p><span class="note">X</span>ML</p>
+		</div>
+		<p><em>In reality, these days, the use of JSON prevails over XML, but for backward compatibility we do not say AJAJ</em></p>
+	</section>
+	<section>
+		<p>With AJAX, Web applications can send and retrieve data from a Web server <span class="note">asynchronously</span> (in the background)  without refreshing the existent page </p>
+	</section>
+	<section>
+		<p>With AJAX we can:</p>
+		<dl class="fa">
+			<dt>Update a web page without reloading the page</dt>
+			<dt>Request data from a server - after the page has loaded</dt>
+			<dt>Receive data from a server - after the page has loaded</dt>
+			<dt>Send data to a server - in the background</dt>
+		</dl>
+	</section>
+	<section>
+		<a href="images/Ajax_vs_Conventinal_Model.png"><img src="images/Ajax_vs_Conventinal_Model.png"></a>
+	</section>
+	<section><h3>So, what is AJAX and what's behind it?</h3>
+		<dl class="fa">
+			<dt>AJAX is just the name for combination of technologies:</dt>
+			<dd>the use of the built-in <span class="note">XMLHttpRequest</span> object to request data from a web server</dd>
+			<dd>the use of JavaScript and HTML DOM (to display or use the data)</dd>
+		</dl>
+	</section>
+</section>
+<section data-min="5"><h1>the XMLHttpRequest object</h1></section>
+<section><h2>the XMLHttpRequest object</h2>
+	<section>
+		<a href="https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest">XMLHttpRequest at MDN</a>
+	</section>
+	<section><h3>Simple example</h3>
+		<pre><code rel="HTML" class="html">
+			<button class="getDataBtn">Get data</button>
+			<div class="output"></div>
+		</code></pre>
+		<p>An empty DIV in which the data will be load, after the button click.</p>
+		<p>Note, that only the DIV content will be updated!</p>
+	</section>
+	<section><h3>Simple example</h3>
+		<pre><code rel="JS" class="js">
+			var nodes={
+				output:  document.getElementsByClassName('output')[0],
+				getDataBtn: document.getElementsByClassName('getDataBtn')[0],
+			};
+
+			var dataURL = 'loremIpsum.txt';
+
+			var AJAXcall = function(){
+				// create a XMLHttpRequest object
+				var xhr = window.XMLHttpRequest ? new XMLHttpRequest() :
+								new ActiveXObject("Microsoft.XMLHTTP");
+
+				// initializes the request:
+				xhr.open("GET", dataURL, true);
+
+				// EventHandler, that will be fired each time when the xhr state changes
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						// finally do something with content:
+						nodes.output.innerHTML = this.responseText;
+					};
+				};
+
+				// sends the request:
+				xhr.send();
+			};
+
+			nodes.getDataBtn.addEventListener('click', function(){
+				AJAXcall();
+			});
+		</code></pre>
+	</section>
+</section>
+<section data-min="5"><h1>the Fetch API</h1></section>
+<section><h2>the Fetch API</h2>
+	<section>
+		<dl class="fa">
+			<dt>The Fetch API provides an interface for fetching resources, similar to the XMLHttpRequest, but the new API provides a more powerful and flexible feature set.</dt>
+			<dt>Fetch APIs use the concept of <a href="https://www.sitepoint.com/overview-javascript-promises/">promises</a> in JavaScript</dt>
+			<dt>As Fetch APIs are "A modern replacement for XMLHttpRequest", do think about the browser compatibility: <a href="http://caniuse.com/#feat=fetch">caniuse.com: fetch</a></dt>
+		</dl>
+	</section>
+	<section>
+		<a href="https://developer.mozilla.org/en/docs/Web/API/Fetch_API">Fetch API at MDN</a>
+	</section>
+	<section><h3>fetch by <code>fetch</code></h3>
+		<pre><code rel="JS" class="js">
+			fetch(url)
+				.then(function (response){
+					return response.text();
+				})
+				.then(function (responseText){
+					// do something with responseText
+					nodes.output.innerHTML = responseText;
+				})
+		</code></pre>
+		<p class="note">Async by promises!</p>
+	</section>
+	<section><h3>with error checks</h3>
+		<pre><code rel="JS" class="js">
+			fetch(url)
+				.then(function (response) {
+					if( response.text){
+						return response.text();
+					}else{
+						throw new Error("No response.text")
+					}
+				})
+				.then(function (responseText) {
+					// renderHTML(responseText);
+					nodes.output.innerHTML = responseText;
+				})
+				.catch( function(error){
+					console.error('Upss, an error occurred');
+					console.error(error.message);
+				});
+		</code></pre>
+	</section>
+	<section><h3>More on <code>response</code> interface</h3>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response interface at MDN</a>
+	</section>
+</section>
+<section data-min="5"><h1>Create HTTP request with jQuery</h1></section>
+<section><h2>Create HTTP request with jQuery</h2>
+	<section>
+		<a href="https://www.w3schools.com/jquery/jquery_ajax_get_post.asp">jQuery - AJAX get() and post() Methods at w3schools</a>
+		<a href="https://www.w3schools.com/jquery/jquery_ref_ajax.asp">jQuery AJAX Methods Reference at w3schools</a>
+	</section>
+	<section><h3>simple get() example</h3>
+		<pre><code rel="HTML" class="html">
+			&lt;head&gt;
+					&lt;script type=&quot;text/javascript&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;button class=&quot;getDataBtn&quot;&gt;Get data&lt;/button&gt;
+				&lt;div class=&quot;output&quot;&gt;&lt;/div&gt;
+			&lt;/body&gt;
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			$(".getDataBtn").click(function(){
+				$.get(dataURL, function(data, status){
+					// do something with data:
+					$(".output").html(data);
+				});
+			});
+		</code></pre>
+	</section>
+	<section><h3>simple load() example</h3>
+		<pre><code rel="HTML" class="html">
+			&lt;head&gt;
+					&lt;script type=&quot;text/javascript&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;button class=&quot;getDataBtn&quot;&gt;Get data&lt;/button&gt;
+				&lt;div class=&quot;output&quot;&gt;&lt;/div&gt;
+			&lt;/body&gt;
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			$(".getDataBtn").click(function(){
+				$(".output").load(dataURL);
+			});
+		</code></pre>
+	</section>
+</section>
+<section data-min="5"><h1>Examples</h1></section>
+<section><h2>Examples</h2>
+	<section><h3>example: songs lyrics</h3>
+		<a href="examples/songLyricsAjaxLoad/songLyricsAjaxLoad.html">Load Song Lyrics By AJAX</a>
+	</section>
+	<section><h3>Task: songs lyrics</h3>
+		<dl class="fa">
+			<dt>Create a similar page, with your favorite artists and songs</dt>
+			<dt>For getting the lyrics data, use the three approaches for making AJAX requests:</dt>
+			<dd>by XMLHttpRequest object</dd>
+			<dd>by Fetch APIs</dd>
+			<dd>by jQuery get() or load() methods</dd>
+		</dl>
+	</section>
+	<section><h3>example: simple Shopping Cart</h3>
+		<a href="examples/ShoppingCart/index.html">Shopping Cart</a>
+		<p>* created by Martin Harsovski *</p>
+	</section>
+	<section><h3>task: simple Shopping Cart</h3>
+		<dl class="fa">
+			<dt>Create the simple Shopping Cart page by yourself, with the similar functionality, but <span class="note">fix the bug</span> of products disappearing from list after being added to shopping cart. Instead, fade them a little by css.</dt>
+			<dt>The products are generated dynamically, using the information in <code><a href="https://raw.githubusercontent.com/IT-Academy-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json">https://raw.githubusercontent.com/IT-Academy-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json</a> file</code></dt>
+			<dt>You can use the Martin's html and css (<a href="https://github.com/IT-Academy-WWW-Courses/JavaScript-Advanced/raw/gh-pages/downloads/ShoppingCartMartinBase.zip">ShoppingCartMartinBase.zip</a>), or create your own style.</dt>
+		</dl>
+	</section>
+</section>
+<section data-min="5"><h1>Resources</h1></section>
+<section><h2>Resources</h2>
+	<dl class="fa">
+		<dt>List of public APIs</dt>
+		<dd><a href="https://github.com/toddmotto/public-apis">Public APIs list on GitHub</a></dd>
+	</dl>
+</section>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Preamble: Data exchange formats: XML, JSON 					-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section data-min="5"><h1>Data exchange formats: XML, JSON</h1></section>
+<section><h2>Data exchange formats: XML, JSON</h2>
+	<section>
+		<dl class="fa">
+			<dt>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</dt>
+			<dt>A <span class="note">data-interchange format</span></dt>
+			<dt>Language agnostic</dt>
+			<dt>Proposed by <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a> in early 2000s</dt>
+		</dl>
+	</section>
+	<section><h3>Why JSON</h3>
+		<dl class="fa">
+			<dt>Easy for humans (and the machines) to read and write</dt>
+			<dt>Minimalistic syntax</dt>
+			<dt>A strict subset of JavaScript (could be passed directly to <code>eval()</code>)</dt>
+			<dt><a href="https://en.wikipedia.org/wiki/JSON#JSON_Schema">JSON Schema</a> defined</dt>
+		</dl>
+	</section>
+	<section><h3>JSON vs XML</h3>
+	<pre><code rel="JSON" class="js">
+		{
+			'fruits': ['apple', 'orange', 'banana'],
+		}
+	</code></pre>
+	<pre><code rel="XML" class="js">
+		<fruits>
+			<fruit>apple</fruit>
+			<fruit>orange</fruit>
+			<fruit>banane</fruit>
+		</fruits>
+	</code></pre>
+	<p><a href="http://json.org/example.html">JSON Example</a></p>
+	</section>
+</section>
+<section data-min="5"><h1>Syntax</h1></section>
+<section style="font-size: 0.7em"><h2>Syntax</h2>
+	<section><h3>JSON's basic data types</h3>
+	<dl class="fa">
+		<dt class="note">Number</dt>
+		<dd>a signed decimal number that may contain a fractional part</dd>
+		<dt class="note">String</dt>
+		<dd>a sequence of zero or more Unicode characters, delimited by double quotation mark</dd>
+		<dt class="note">Boolean</dt>
+		<dd>either of the values true or false</dd>
+		<dt class="note">Array</dt>
+		<dd>an ordered list of zero or more values (may be of any type). Comma-separated elements in square brackets</dd>
+		<dt class="note">Object</dt>
+		<dd>an unordered collection of <code>name:value</code> pairs, delimited by curly braces, where the names (also called keys) are strings. Pairs are separated by comma.</dd>
+	</dl>
+	</section>
+</section>
+<section data-min="5"><h1>JSON WebServices</h1></section>
+<section><h2>JSON WebServices</h2>
+	<section><h3>fetch data by XHR</h3>
+		<pre><code rel="JS" class="js">
+			var fetchByXHR = {
+				get: function(url){
+					var xhr = window.XMLHttpRequest ? new XMLHttpRequest() :
+									new ActiveXObject("Microsoft.XMLHTTP");
+
+					xhr.open("GET", url, true);
+					xhr.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							renderHTML(this.responseText);
+						};
+					};
+
+					xhr.send();
+				},
+			};
+		</code></pre>
+	</section>
+	<section><h3>fetch by <code>fetch</code></h3>
+		<pre><code rel="JS" class="js">
+			fetch(url).then(function (response) {
+				response.text().then(function (responseText) {
+					renderHTML(responseText);
+				});
+			});
+		</code></pre>
+		<p class="note">Async by promises!</p>
+	</section>
+	<section><h23>JSON to JS object</h3>
+		<pre><code rel="JS" class="js">
+			var obj = JSON.parse(response);
+		</code></pre>
+	</section>
+	<section><h3>JS obj to JSON</h3>
+		<pre><code rel="JS" class="js">
+			var json = JSON.stringify(obj);
+		</code></pre>
+	</section>
+</section>
+
+
+<section data-min="20"><h1>Setup fake REST API json-server and DB</h1></section>
+<section><h2>Setup fake REST API json-server and DB</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>We can use a fake REST API <a href="https://www.npmjs.com/package/json-server">json-server</a>, to mock the back-end endpoints.</dt>
+			<dt>It is freely  available on NPM and ready to use.</dt>
+			<dt>Please note, that this server is useful only for learning purposes and you must not use it for any production code.</dt>
+		</dl>
+	</section>
+	<section><h3>Installation</h3>
+		<dl class="fa">
+			<dt>Install <a href="https://www.npmjs.com/package/json-server">json-server</a></dt>
+			<dd>To prevent polluting your global environment, it's recommended to install NPM packages locally, i.e. without the <code>-g</code> option.</dd>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			# navigate to your project root folder
+			$ cd /path/to/TodoApp
+
+			# install json-server package
+			npm install json-server
+		</code></pre>
+	</section>
+	<section><h3>Create the DB file</h3>
+		<dl class="fa">
+			<dt>In project root folder create the file <code>db.json</code> with next content:</dt>
+		</dl>
+		<pre><code rel="db.json" class="json">
+			{
+				"todos":[
+					{
+						"id": 1,
+						"title": "Learn HTML",
+						"completed": false
+					},
+					{
+						"id": 2,
+						"title": "Learn CSS",
+						"completed": false
+					},
+					{
+						"id": 3,
+						"title": "Learn JavaScript",
+						"completed": false
+					}
+				]
+			}
+		</code></pre>
+	</section>
+	<section><h3>Start the server</h3>
+		<dl class="fa">
+			<dt>All locally installed NPM packages place the executable commands in <code>./node-modules/.bin/</code> folder. You can start json-server by:</dt>
+			<pre><code rel="Terminal" class="bash">
+				$ ./node_modules/.bin/json-server --watch db.json
+			</code></pre>
+			<dt class="advanced">Or you can use <a href="https://www.npmjs.com/package/npx">npx</a> which executes 'command' either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for 'command' to run.</dt>
+		</dl>
+	</section>
+	<section><h3>json-server usage notes</h3>
+		<dl class="fa">
+			<dt>Your request body JSON should be object enclosed, just like the GET output. (for example {"name": "Foobar"})</dt>
+			<dt>Id values are not mutable. Any id value in the body of your PUT or PATCH request will be ignored. Only a value set in a POST request will be respected, but only if not already taken.</dt>
+			<dt>A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will result in a 200 OK but without changes being made to the data.</dt>
+		</dl>
+	</section>
+	<section><h3>References</h3>
+		<dl class="fa">
+			<dt>Video Tutorial: <a href="https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server">Creating demo APIs with json-server</a></dt>
+			<dt>Official docs: <a href="https://www.npmjs.com/package/json-server">json-server</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="20"><h1>Client-Side vs Server-Side libraries and frameworks</h1></section>
+<section><h2>Client-Side vs Server-Side Rendering libraries and frameworks</h2>
+	<section>
+		<dl class="fa" style="font-size: .9em">
+			<dt>Ember</dt>
+			<dd><a href="https://www.emberjs.com/">Ember</a> - Client-Side rendering</dd>
+			<dd><a href="https://ember-fastboot.com/">Ember-Fastboot</a> - Server-Side rendering</dd>
+			<dt>Vue</dt>
+			<dd><a href="https://vuejs.org/">vue.js</a> - Client-Side rendering</dd>
+			<dd><a href="https://nuxtjs.org/">nuxt.js</a> - Server-Side rendering for vue.js</dd>
+			<dt><a href="https://reactjs.org/">React</a> - it can render on the client-side and on the server-side</dt>
+			<dt>Angular</dt>
+			<dd><a href="https://angular.io/">Angular</a> - - Client-Side rendering</dd>
+			<dd><a href="https://angular.io/guide/universal">Angular Universal</a> - Server-Side rendering</dd>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Resources</h1></section>
+<section><h2>Resources</h2>
+  <section><h3>Tools</h3>
+  	<dl class="fa">
+  		<dt><a href="https://www.mockaroo.com/">Mockaroo</a> - <span>A free test/random data generator and API mocking tool (JSON, CSV, SQL, and Excel)</span></dt>
+  	</dl>
+  </section>
+</section><section data-min="5"><h1>Exercises && Tasks</h1></section>
+<section><h2>Exercises && Tasks</h2>
+	<section><h3>GitHub: top 10 last updated</h3>
+		<p>Generate an HTML list with the top 10 repositories from a given user, sorted by <b>last-updated</b> order</p>
+		<p>Note: use the <a href="https://developer.github.com/v3/repos/#list-user-repositories">GitHub REST API v3 (List user repositories)</a></p>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

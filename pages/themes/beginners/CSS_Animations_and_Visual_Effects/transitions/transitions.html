@@ -5,26 +5,22 @@
     <title>transitions</title>
     <link rel="stylesheet" type="text/css" href="transitions.css">
     <style type="text/css">
-        div.test {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 10vh;
+        div {
+            width: 100px;
+            height: 100px;
             background: red;
-            cursor: pointer;
-            transition: all 3s;
+            float: left;
+            transition: float 5s;
         }
-        div.test:active{
-            bottom: 0;
-            left: 0;
+        div:hover
+{            float: right
+            margin-left: 80%;
             width: 200px;
             height: 200px;
-            background: blue;
         }
     </style>
 </head>
 <body>
-    <div class="test">Test</div>
+    <div>Test</div>
 </body>
 </html>

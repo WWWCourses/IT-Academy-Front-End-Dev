@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EInForLoopUseCounterInFunction</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.songs,
+		.songs>li {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		.songs>li:before {
+			content: '\f04b';
+			font: 0.8em FontAwesome;
+			color: hsla(179, 50%, 50%, .5);
+			margin: 0 .5em 0 0;
+		}
+
+		.songs>li:hover {
+			cursor: pointer;
+			color: hsla(179, 70%, 50%, .5);
+		}
+
+		.songs>li:hover:before {
+			color: hsla(179, 100%, 50%, .5);
+		}
+
+		.status {
+			margin: 1em 0 0 0;
+			font-style: italic;
+		}
+
+		.status > span {
+			font-size: 1.2em;
+			font-weight: bold;
+			color: hsla(179, 100%, 50%, .5);
+		}
+	</style>
+</head>
+<body>
+	<ul class="songs">
+		<li id="1">Song 1</li>
+		<li id="2">Song 2</li>
+		<li id="3">Song 3</li>
+		<li id="4">Song 4</li>
+		<li id="5">Song 5</li>
+	</ul>
+	<div class="status"> Now listening to Song <span> </span></div>
+
+	<script type="text/javascript">
+		// "cache" DOM:
+		var output = document.querySelector(".status > span");
+		var songItems = document.querySelectorAll(".songs>li");
+
+
+		function callbackWithParams(i){
+			// пример за closure
+			return function(){
+				output.innerHTML = i;
+			}
+		}
+		
+		for (var i = 0, len = songItems.length; i < len; i++) {			songItems[i].addEventListener("click", callbackWithParams(i+1) );
+		}
+		// i = songItems.length, i.e.6
+
+	</script>
+</body>
+</html>

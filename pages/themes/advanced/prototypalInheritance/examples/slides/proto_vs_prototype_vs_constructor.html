@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // define Car Constructor:
+        function Car() {
+            this.manufacturer = undefined;
+            this.speed = 100;
+        }
+        Car.prototype.drive = function () {
+            if (this.wings >= 2){
+                console.log(`Flying wiht ${this.speed} km/h`);
+            }else{
+                console.log(`Driving wiht ${this.speed} km/h`);
+            }
+        }
+        // define Ford Constructor:
+        function Ford(speed) {
+            this.manufacturer = "Ford";
+            this.speed = speed;
+        }
+        // Make Ford objects to inherit from Car.prototype:
+		Ford.prototype = Object.create(Car.prototype);
+
+        // create a Ford object
+        let ford = new Ford(200);
+
+        // create another Ford object, and attach wings to it:
+        let fordOfPesho = new Ford(300);
+        fordOfPesho.wings = 2;
+
+        // let's use the object:
+        ford.drive();
+        fordOfPesho.drive();
+    </script>
+</body>
+</html>

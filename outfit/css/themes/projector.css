@@ -1,0 +1,25 @@
+/* ********************************************************************** */
+/* Reveal.js themes*/
+/* ********************************************************************** */
+@import "../../../lib/reveal.js/dist/theme/beige.css";
+/* @import "../../../lib/reveal.js/dist/theme/serif.css"; */
+/* @import "../../../lib/reveal.js/dist/theme/simple.css" */
+/* @import "../../../lib/reveal.js/dist/theme/sky.css"; */
+/* @import "../../../lib/reveal.js/dist/theme/solarized.css";*/
+/* @import "../../../lib/reveal.js/dist/theme/white.css"; */
+/* Custom */
+@import "../../../outfit/css/reveal.js.css";
+/* ********************************************************************** */
+/* Code syntax highlighting */
+/* ********************************************************************** */
+/*@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css";*/
+/*@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/solarized-light.min.css";*/
+@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css";
+@import "../../../outfit/css/custom_hljs.css";
+/* ********************************************************************** */
+/* Text formating  */
+/* ********************************************************************** */
+@import "../../../outfit/css/colorSchemes/projector/structuring_elements.css";
+@import "../../../outfit/css/colorSchemes/projector/text_schemes.css";
+@import "../../../outfit/css/colorSchemes/projector/color_classes.css";
+@import "../../../outfit/css/colorSchemes/font_sizes.css";

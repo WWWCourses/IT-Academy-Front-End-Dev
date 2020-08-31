@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS_CombinatorsDepictionInTree</title>
+    <style type="text/css">
+        /*set black border to all elements*/
+        *{
+            border: 5px solid black;
+        }
+
+        /*set  red border to all descendants of body*/
+        body *{
+            border-color: red;
+        }
+
+         /*set green border to all children of body*/
+        body>*{
+            border-color: green;
+        }
+
+        /*set blue border to all adjacent siblings of h2*/
+        h2+*{
+            border-color: blue;
+        }
+
+        /*set purple border to all general siblings of h2*/
+        h2~*{
+            border-color: purple;
+        }
+    </style>
+</head>
+<body>
+	<main>
+		<h2>Heading 2</h2>
+		<p id="p1">Paragraph 1</p>
+		<p id="p2">paragprah 2</p>
+	</main>	
+</body>
+</html>

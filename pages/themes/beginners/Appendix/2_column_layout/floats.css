@@ -1,0 +1,36 @@
+html, body{
+	margin: 0; padding: 0;
+}
+header{
+	position: fixed;
+	top:0;left: 0; right: 0;
+	height: 10vh;
+	background-color: darkgray;
+}
+section{
+	margin-top: 10vh;
+	max-width: 100vw;
+	min-height: 80vh;
+	/*overflow: hidden;*/
+}
+aside, main{
+	float: left;
+	min-height: 100%;
+}
+aside{
+	width: 20%;
+	background-color: red;	
+}
+main{
+	width: 80%;
+	background-color: orange;
+}
+/*main:after{
+	content: "";
+	display: block;
+	clear: both;
+}*/
+footer{
+	height: 10vh;
+	background-color: blue;
+}

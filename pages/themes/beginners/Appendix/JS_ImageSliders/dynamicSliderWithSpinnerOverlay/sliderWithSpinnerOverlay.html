@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>slidersDemo</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		/*common page styling*/
+		h1{
+			height: 5vh;
+			margin-bottom: 1em;
+			text-align: center;
+			color: #666;
+		}
+		.clear:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+
+		/* carousel styling */
+		.carousel {
+			position: relative;
+			width: 80vw;
+			height: calc(100vh - 15vh - 1em);
+			margin: auto;
+			/*padding: .2em;*/
+			border: 5px outset #999;
+		}
+		.carousel img {
+		 	/*display: none;*/
+		 	width: 100%;
+		 	height: 100%;
+		}
+
+		 /*carousel overlay styling*/
+		.carousel .spinner_overlay{
+			display: block;
+			position: absolute;
+			top: 0; bottom: 0; left: 0; right: 0;
+			background-color: #999;
+			/*opacity: .3;*/
+			z-index: 100;
+		}
+		.carousel .spinner_overlay p{
+			font-size: 2em;
+			color: #FFF;
+			text-align: center;
+		}
+		.carousel .spinner_overlay .fa-spinner{
+			display: block;
+			font-size: 5em;
+			color: #FFF;
+		}
+		.spinner_container{
+			width: 5em;
+			height: 5em;
+			/*center it*/
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			/*border: 1px solid blue;*/
+		}
+
+
+		/*navigation panels*/
+		.carousel .prev,
+		.carousel .next {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 50%;
+			color: #FFF;
+			font-weight: bold;
+		}
+		.carousel .next {
+		 	right: 0;
+		}
+		.carousel .prev {
+		 	left: 0;
+		}
+		.carousel .next:hover,
+		.carousel .prev:hover {
+		 	cursor: pointer;
+		}
+
+		/*arrows*/
+		.carousel .next:before,
+		.carousel .prev:before {
+		 	display: inline-block;
+		 	position: relative;
+		 	top: 50%;
+		 	transform: translateY(-50%);
+		 	margin: 0 3em;
+		 	font-size: 5em;
+		 	opacity: 0;
+		 	transition: all .5s;
+		}
+		.carousel .prev:before {
+		 	content: "\00AB";
+		 	float: left;
+		}
+		.carousel .next:before {
+		 	content: "\00BB";
+		 	float: right;
+		}
+		.carousel .next:hover:before,
+		.carousel .prev:hover:before {
+		 	opacity: .7;
+		 	margin: 0 .3em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Very Simple JavaScript Slider</h1>
+	<div class="carousel">
+		<div class="spinner_overlay">
+			<p>Loading image...</p>
+			<div class="spinner_container">
+				<i class="fa fa-spinner fa-spin"></i>
+			</div>
+		</div>
+ 		<img id="imgWrapper" src="" alt="galery image">
+		<div class="prev"></div>
+		<div class="next clear"></div>
+	</div>
+	<script type="text/javascript" src="sliderWithSpinnerOverlay.js"></script>
+</body>
+</html>

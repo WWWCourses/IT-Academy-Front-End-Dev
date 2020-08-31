@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+    <style type="text/css">
+        .playground{
+            /*border: 1px solid red;*/
+            /*box-sizing: border-box;*/
+        }
+        .playground:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    	.playground table{
+            margin: 0 auto;
+    		border-collapse: collapse;
+    		border: 5px outset #49383D;
+            box-sizing: border-box;
+    	}
+    	.playground table td{
+            margin: 0;
+            padding: 0;
+    		text-align: center;
+    		border: 1px solid #666;
+            box-sizing: border-box;
+    	}
+
+    	.playground .buttons{
+    		width: 100%;
+    	}
+    	#move, #reset{
+    		margin: 1em 0 0 0;
+    		/*width: 4rem;
+    		height: 2rem;*/
+    		color: #CCC;
+    		background: #49383D;
+    	}
+    	#move{
+    		float: left;
+
+    	}
+    	#reset{
+    		float: right;
+    	}
+
+    	/*tr:nth-child(2)>td:nth-child(1){background: orange;}*/
+    </style>
+</head>
+<body>
+    <div class="playground">
+        <table></table>
+        <div class="buttons">
+            <button id="move">Move</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+<script type="text/javascript" src="array_tic-tac-toe.js"></script>
+</html>

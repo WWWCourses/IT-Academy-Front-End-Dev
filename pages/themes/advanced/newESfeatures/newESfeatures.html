@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>newESfeatures</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#newESfeatures" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section data-min-total="80"><h1>ES6 new features</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+			 <div class="LI-profile-badge"	data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+
+
+<section data-min="5" id="let_const_var"><h1><code>let</code> and <code>const</code></h1></section>
+<section><h2><code>let</code> and <code>const</code></h2>
+	<p>Read more for <a href="http://wwwcourses.github.io/IT-Academy-Front-End-Dev/pages/themes/beginners/JS_Functions/JS_Functions.html#/let_const_var">let/const</a> in the Beginners Course Slides</p>
+</section>
+
+<section data-min="5"><h1>The arrow function syntax</h1></section>
+<section><h2>The arrow function syntax</h2>
+		<section><h3>arrow functions</h3>
+			<dl class="fa">
+				<dt>ES6 introduces a new function declaration <b>syntax</b> called <span class="note">arrow notation</span></dt>
+				<dt>Synonyms:</dt>
+				<dd>Arrow functions</dd>
+				<dd>Fat arrow functions</dd>
+				<dt>Arrow functions are perfectly suited for Callback functions and Functional Programming constructs, like map, filter, reduce...</dt>
+				<dd><span class="advanced"></span>Check <a href="https://github.com/getify/Functional-Light-JS" title="https://github.com/getify/Functional-Light-JS">Functional-Light-JS Book</a> by <a href="https://github.com/getify">Kyle Simpson</a></dd>
+				<!-- <dt>It is essentially syntactic sugar that reduces the number of times you have to type the word function, as well as the number of curly braces you have to type</dt> -->
+			</dl>
+		</section>
+		<section><h3>Function expression vs arrow syntax - demo</h3>
+			<pre><code rel="JS">
+				const pi = 3.14;
+
+				// function declaration with expression:
+				let circleAreaExp = function(r){
+							return r*r*pi;
+				}
+
+				// function declaration with arrow syntax:
+				let circleAreaArr = r=>r*r*pi;
+
+				console.log( circleAreaArr(10) );
+				console.log( circleAreaExp(10) );
+			</code></pre>
+		</section>
+		<section><h3>syntax - full</h3>
+			<pre><code rel="Basic Syntax">
+				(param1, param2, …, paramN) => { statements }
+			</code></pre>
+			<pre><code rel="JS">
+				let circleArea = (r)=>{return r*r*pi};
+
+				console.log(`circleArea(2) = ${circleArea(2)}`);
+			</code></pre>
+		</section>
+		<section><h3>syntax - single parameter</h3>
+			<dl class="fa">
+				<dt>If the function has only one parameter, you can omit the parentheses</dt>
+			</dl>
+			<pre><code rel="Basic Syntax">
+				singleParam => { statements }
+			</code></pre>
+			<pre><code rel="JS">
+				let circleArea = r=>{return r*r*pi};
+
+				console.log(`circleArea(2) = ${circleArea(2)}`);
+			</code></pre>
+		</section>
+		<section><h3>syntax - single expression in body</h3>
+			<dl class="fa">
+				<dt>If the function body is a single expression, you can <span class="note">omit curly braces and the return statement</span></dt>
+			</dl>
+			<pre><code rel="Basic Syntax">
+				(param1, param2, …, paramN) => expression
+			</code></pre>
+			<pre><code rel="JS">
+				let circleArea = r=>r*r*pi;
+
+				console.log(`circleArea(2) = ${circleArea(2)}`);
+			</code></pre>
+		</section>
+		<section><h3>arrow syntax vs function definition - example</h3>
+			<pre><code rel="JS" class="js">
+				let calculator1 = {
+					'add': (a,b) => a+b,
+					'sub': (a,b) => a-b,
+					'mult': (a,b) => a*b,
+					'div': (a,b) => a/b,
+				}
+
+
+				let calculator2 = {
+					'add': function(a,b){return  a+b},
+					'sub': function(a,b){return  a-b},
+					'mult': function(a,b){return  a*b},
+					'div': function(a,b){return  a/b},
+				}
+
+
+				console.log( calculator1.add(2,3) );
+				console.log( calculator2.add(2,3) );
+
+			</code></pre>
+		</section>
+		<section><h3>lexical arguments</h3>
+			<dl class="fa">
+				<dt>the <code>arguments</code> object in arrow function is reference to the arguments object in the enclosing scope</dt>
+				<dt>Remember, that this is not the case with function definition/expression</dt>
+			</dl>
+			<pre><code rel="JS">
+				const dirFuncExprArgs = function() {
+					console.dir(arguments);
+				}
+
+				let dirArrowArgs = ()=>{
+					console.dir(arguments);
+				}
+
+				dirFuncExprArgs(1,2,3); // [1,2,3]
+				dirArrowArgs(1,2,3);    // error in browsers
+			</code></pre>
+		</section>
+		<section><h3>lexical arguments - example</h3>
+			<pre><code rel="JS" class="js">
+				function foo() {
+					console.log(`arguments in foo:`);
+					console.dir(arguments);
+
+					const bar = () => {
+						console.log(`arguments in bar:`);
+						console.dir(arguments);
+					}
+					bar(4,5,6);
+				}
+
+				foo(1,2,3);
+
+				// arguments in foo:
+				// [Arguments] { '0': 1, '1': 2, '2': 3 }
+				// arguments in bar:
+				// [Arguments] { '0': 1, '1': 2, '2': 3 }
+			</code></pre>
+		</section>
+		<section><h3>lexical "this"</h3>
+			<dl class="fa">
+				<dt>"this" value in arrow functions is <span class="note">lexically scoped</span> in contrast to standard functions, whose "this" value is dynamically scoped.<br>I.e the value of "this" in arrow functions is this same as the value of "this" in the enclosing scope.</dt>
+				<dt>"this" in arrow functions can not be changed with <code>call/apply or bind</code> methods!</dt>
+				<p class="note">the "this" value, as well as the <code>call/apply/bind</code> methods are discussed in further topics.</p>
+			</dl>
+		</section>
+		<section><h3>lexical "this" - example</h3>
+			<pre><code rel="JS">
+				lexicalThis = this;
+
+				var obj = {
+					'exp': function(){
+						console.log(this === lexicalThis);
+					},
+					'arr': ()=>{console.log(this === lexicalThis)}
+				}
+
+				obj.exp(); // false
+				obj.arr(); // true
+			</code></pre>
+		</section>
+		<section><h3>lexical "this" - example</h3>
+			<pre><code rel="JS" class="js">
+				let user = {
+					'userName': 'Ada Byron',
+					'greet': function () {
+						console.log(`Hello, I'm ${this.userName}`);
+					},
+					'greetArr':  () =>  console.log(`Hello, I'm ${this.userName}`)
+				}
+
+				user.greet();
+				user.greetArr();
+
+				// Hello, I'm Ada Byron
+				// Hello, I'm undefined
+			</code></pre>
+		</section>
+		<section><h3 class="advanced">loose binding</h3>
+			<pre><code rel="JS">
+				let cb;
+
+				cb = cb || function() {}; // ok
+
+				cb = cb || () => {};
+				// SyntaxError: invalid arrow-function arguments
+
+				cb = cb || (() => {});		// ok
+			</code></pre>
+			<!-- <pre><code rel="JS">
+				// here there is no problem
+				const oddOrEven = x => (x % 2) === 0 ? 'even' : 'odd';
+
+				console.log( oddOrEven(6) );
+				console.log( oddOrEven(5) );
+			</code></pre> -->
+		</section>
+		<section><h3>Notes</h3>
+			<dl class="fa">
+				<dt class="note">Arrow functions are always anonymous!</dt>
+				<dt>They are perfect for callbacks</dt>
+				<dt>Arrow functions cannot be used as constructors and will throw an error when used with new</dt>
+				<dt>Because of their lexical binding, no need to add <code>this.handleClick = this.handleClick.bind(this)</code> in the constructor.</dt>
+			</dl>
+		</section>
+</section>
+
+<section data-min="5"><h1>Default parameter values</h1></section>
+<section><h2>Default parameter values</h2>
+	<section><h3>Before ES6</h3>
+		<pre><code rel="JS">
+			function f(x, y, z){
+				var x = x || 1;
+				var y = y || 2;
+				var z = z || 3;
+
+				console.log(x, y, z); //6,7,3
+			}
+			f(6, 7);
+		</code></pre>
+	</section>
+	<section><h3>After ES6</h3>
+		<pre><code rel="JS">
+			function f(x=1, y=2, z=3){
+				console.log(x, y, z); //6,7,3
+			}
+			f(6, 7);
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>The spread operator</h1></section>
+<section><h2>The spread operator</h2>
+	<section>
+		<pre><code rel="Syntax - in Function call">
+			myFunction(...iterableObj);
+		</code></pre>
+		<pre><code rel="Syntax - in Array literal">
+			[...iterableObj, 4, 5, 6];
+		</code></pre>
+		<dl class="fa">
+			<dt>Converts an iterable object (for now, you can simply think of it as an JS array or the DOM ) into a list of values</dt>
+			<dt><span class="advanced">Iterable objects are those which prototype implements an <code>@@iterator</code> method (<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Iteration_protocols">more on MDN...</a>)</span></dt>
+		</dl>
+	</section>
+	<section><h3>spread operator in function call - example</h3>
+		<pre><code rel="JS" class="js">
+			function foo(a,b,c){
+				console.log(`a=${a}`)
+				console.log(`b=${b}`)
+				console.log(`c=${c}`)
+			}
+
+			var args = [1,2,3];
+			foo(...args);
+
+			//a=1
+			//b=2
+			//c=3
+		</code></pre>
+	</section>
+	<section><h3>spread operator in array literal - example</h3>
+		<pre><code rel="JS" class="js">
+			let arr1 = [1,2,3];
+			let arr2 = [4,5];
+
+			let arrNew = [ ...arr1, ...arr2];
+
+			console.log( arrNew );
+			// [ 1, 2, 3, 4, 5 ]
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>The rest parameter</h1></section>
+<section><h2>The rest parameter</h2>
+	<section>
+		<dl class="fa">
+			<dt>The last parameter of a function prefixed with " ... " is called as <span class="note">a rest parameter</span></dt>
+			<dt>replaces the <code>arguments</code> object</dt>
+			<dt>In contrast with <code>arguments</code> object, the <code>...rest</code> parameter is an array type</dt>
+		</dl>
+	</section>
+	<section><h3>example</h3>
+		<pre><code rel="JS">
+			function f(a, b, ...args){
+				console.log(args); //"3, 4, 5"
+			}
+
+			f(1, 2, 3, 4, 5);
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="5"><h1>De-structuring assignments</h1></section>
+<section><h2>De-structuring assignments</h2>
+	<section>
+		<dl class="fa">
+			<dt>The de-structuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			let [a, b, ...rest] = [1,2,3,4,5]
+
+			console.log(`a = ${a}`)
+			console.log(`b = ${b}`)
+			console.log(`rest = ${rest}`)
+
+			// a = 1
+			// b = 2
+			// rest = 3,4,5
+		</code></pre>
+	</section>
+</section>
+
+
+<!--
+<section><h2>Enhanced object literals</h2></section>
+ -->
+
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END	 #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '	';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

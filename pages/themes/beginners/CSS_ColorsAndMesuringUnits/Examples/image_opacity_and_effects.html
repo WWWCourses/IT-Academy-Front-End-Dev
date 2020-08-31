@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image_opacity_and_effects</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .image-galery{
+            display: grid;
+            grid-gap: .5em;
+            grid-template:1fr 1fr 1fr/1fr 1fr 1fr;
+            width: 60vmax;
+            margin: 0 auto;
+        }
+        .effect{
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .no-effect{
+            border: 1px solid #999;
+        }
+        .effect>div{
+            text-align: center;
+            padding: .8em 0 1em 0;
+            color:#666;
+        }
+        .effect>img{
+            width: 30%;
+        }
+
+        .opacity>img{
+            opacity: .3;
+        }
+        .grayscale>img{
+            filter:grayscale(100%);
+        }
+        .blur>img{
+            filter:blur(5px);
+        }
+        .invert>img{
+            filter:invert(100%);
+        }
+        .sepia>img{
+            filter:sepia(100%);
+        }
+        .contrast>img{
+            filter:contrast(200%);
+        }
+        .brightness>img{
+            filter:brightness(50%);
+        }
+        .drop-shadow>img{
+            filter:drop-shadow(0px 0px 10px gold);
+        }
+
+    </style>
+</head>
+<body>
+    <h1><code>opacity</code> and <code>effect</code> properties on image</h1>
+    <div class="image-galery">
+        <div class="effect opacity">
+            <img src="/images/apple-158419_640.png" />
+            <div><code>opacity: .3;</code></div>
+        </div>
+        <div class="effect grayscale">
+            <img src="/images/apple-158419_640.png" />
+            <div><code>filter:grayscale(100%);</code></div>
+        </div>
+        <div class="effect blur">
+            <img src="/images/apple-158419_640.png" />
+            <div><code>filter:blur(5px);</code></div>
+        </div>
+        <div class="effect invert">
+            <img src="/images/apple-158419_640.png" />
+            <div>invert effect</div>
+        </div>
+        <div class="effect no-effect">
+            <img src="/images/apple-158419_640.png">
+            <div>no-effect</div>
+        </div>
+        <div class="effect sepia">
+            <img src="/images/apple-158419_640.png" />
+            <div>sepia effect</div>
+        </div>
+        <div class="effect contrast">
+            <img src="/images/apple-158419_640.png" />
+            <div>contrast effect</div>
+        </div>
+        <div class="effect brightness">
+            <img src="/images/apple-158419_640.png" />
+            <div>brightness effect</div>
+        </div>
+        <div class="effect drop-shadow">
+            <img src="/images/apple-158419_640.png" />
+            <div>drop-shadow effect</div>
+        </div>
+    </div>
+</body>
+</html>

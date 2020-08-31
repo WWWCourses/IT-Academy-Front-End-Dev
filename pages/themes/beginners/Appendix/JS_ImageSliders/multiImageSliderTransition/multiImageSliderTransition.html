@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>multiImageSliderTransition</title>
+    <style>
+        .sliderWrapper, .sliderItems, .sliderItem, .imgLeft, .imgRight, .sliderButtons{
+            box-sizing: border-box;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        .sliderWrapper{
+            width: 80vw;
+            height: 50vh;
+            border: 1px solid #999;
+        }
+        .sliderItems{
+            height: 100%;
+        }
+        .sliderItem{
+            height: 100%;
+            border: 5px solid green;
+        }
+        .sliderItem::after{
+            content:"";
+            display: block;
+            clear: both;
+
+        }
+        .sliderItem>.imgLeft, .sliderItem>.imgRight{
+            width: 50%;
+            height: 100%;
+            float: left;
+            border: 1px solid red;
+        }
+        .sliderItem>.imgLeft{
+            background: red;
+        }
+        .sliderItem>.imgRight{
+            background: blue;
+        }
+
+        .sliderButtons{
+            border: 1px solid purple;
+        }
+        .sliderButtons::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .btnPrev, .btnNext{
+            width: 5em;
+            height: 3em;
+            border: 1px solid #999;
+            /* float: left; */
+        }
+    </style>
+</head>
+<body>
+    <div class="sliderWrapper">
+        <div class="sliderButtons">
+            <!-- <div class="btnPrev">Prev</div>
+            <div class="btnNext">Next</div> -->
+            <button class="btnPrev">Prev</button>
+            <button class="btnNext">Next</button>
+        </div>
+        <div class="sliderItems">
+            <div class="sliderItem" data-slide-num="1">
+                <div class="imgLeft"></div>
+                <div class="imgRight"></div>
+            </div>
+            <div class="sliderItem" data-slide-num="2">
+                <div class="imgLeft"></div>
+                <div class="imgRight"></div>
+            </div>
+            <div class="sliderItem" data-slide-num="3">
+                <div class="imgLeft"></div>
+                <div class="imgRight"></div>
+            </div>
+            <div class="sliderItem" data-slide-num="4">
+                <div class="imgLeft"></div>
+                <div class="imgRight"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="comment">
+        <ul class="commentList">
+            <li data-show-slide="1">Comment 1</li>
+            <li data-show-slide="2">Comment 2</li>
+            <li data-show-slide="3">Comment 3</li>
+        </ul>
+    </div>
+
+    <script src="multiImageSliderTransition.js"></script>
+</body>
+</html>

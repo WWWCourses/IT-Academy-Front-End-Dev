@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>valign_test</title>
+    <style type="text/css">
+        /* Problem center the element if the parent height and the content height are not known in advance! */
+        html,
+        body {
+            height: 100%;
+        }
+        .wrapper {
+            position: relative;
+            width: 20em;
+            height: 50%;
+            background: #5c1313;
+        }
+        .v_centered {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            /*percentage in translate are calculated according to element's height and weight, not the parent's. And that do the centering trick!*/
+
+            width: 15em;
+        }
+        span {
+            background: #f6f4e4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="v_centered">
+            <span>Вертикално и хоризонтално центриран блок.Вертикално и хоризонтално центриран блок.</span>
+        </div>
+    </div>
+</body>
+</html>

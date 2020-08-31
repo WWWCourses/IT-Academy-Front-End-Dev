@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda - Advanced [Front-end Dev Course]</title>
+	<meta name="generator" content="Sublime Text3, SASS">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../outfit/css/master.css">
+	<link rel="stylesheet" type="text/css" href="../../outfit/css/agenda.css">
+</head>
+<!-- <body onload="calcTotalHours();showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes') );" class="background"> -->
+<body class="background">
+
+<header>
+	<h2>HTML, CSS, JavaScript</h2>
+	<h3><a href="../../index.html">WebDesign/Front-end Dev Course</a></h3>
+	<h4>Advanced</h4>
+</header>
+<article class="iep_course_about">
+</article>
+<article class="iep_syllabus">
+	<h4 class="iep_syllabus_title">Agenda
+		<div class="show_hide_buttons">( <span class="btn_show" onclick="showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes'))">Show Subtopics</span>
+		<span class="btn_hide"  onclick="hideAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes'))">Hide Subtopics</span> )</div>
+	</h4>
+	<ol class="iep_syllabus_themes">
+		<li id="Course_Intro"><h3><a class="ready" href="../../pages/themes/advanced/Course_Intro/Course_Intro.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Introduction</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes start">
+				<li>About the course and the online resources being used.</li>
+				<li>What happens with the Web, and the technologies behind it during the past years?</li>
+			</ol>
+		</li>
+		<li id="git_overview"><h3><a class="ready" href="../../pages/themes/advanced/git_overview/git_overview.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Practical introduction to git and GitHub/GitLab</span><span class="hours">6</span></h3>
+			<ol class="iep_syllabus_sub_themes start">
+				<li>What is a VCS and how it makes life easier?</li>
+				<li>Installing and configuring git.</li>
+				<li>Create and configure a git repository.</li>
+				<li>Adding files to repository and committing changes.</li>
+				<li>Working with branches.</li>
+				<!-- <li>Merging and reverting changes.</li> -->
+				<li>Overview of GitHub/GitLab and setting-up an account.</li>
+				<li>Connect your local git repository to your GitHub/GitLab repository.</li>
+				<li>Using GitHub/GitLab pages as free hosting for your project.</li>
+			</ol>
+		</li>
+		<li id="JS_Overview"><h3><a class="ready" href="../../pages/themes/advanced/JS_Overview/JS_Overview.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">JavaScript Overview</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Historical overview in 10 minutes (or how the history repeats itself)</li>
+				<li>JavaScript standards: ES5, ES6,ES2018, ... ES.Next?</li>
+				<li>The difference between JavaScript and other OOP languages</li>
+				<li>The object oriented nature of JavaScript: "everything is an object"?!?</li>
+			</ol>
+		</li>
+		<li id="advancedJSfunctions"><h3><a class="ready" href="../../pages/themes/advanced/advancedJSfunctions/advancedJSfunctions.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Advanced JavaScript Functions</span><span class="hours">12</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Function Declaration vs. Function Expression vs. Function Constructor</li>
+				<li>Higher-Order Functions (Functions as first-class citizens)</li>
+				<li>Immediately-invoked function expressions (IIFE)</li>
+				<li>Scope</li>
+				<li>Closures.</li>
+				<li>Recursion</li>
+			</ol>
+		</li>
+		<li id="newESfeatures"><h3><a class="ready" href="../../pages/themes/advanced/newESfeatures/newESfeatures.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">ES6 new features</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>The arrow function syntax</li>
+				<li>Default parameter values</li>
+				<li>The spread operator</li>
+				<li>The rest parameter</li>
+				<li>De-structuring assignments</li>
+			</ol>
+		</li>
+		<li id="OOP_Basics"><h3><a class="ready" href="../../pages/themes/advanced/OOP_Basics/OOP_Basics.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">OOP in JavaScript - the basics</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Class-based vs. Prototype-based OOP paradigms</li>
+				<li>JavaScript objects in a nutshell. New ES2015 features.</li>
+			</ol>
+		</li>
+		<li id="thisContext"><h3><a class="ready" href="../../pages/themes/advanced/thisContext/thisContext.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">The "this" context</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>"this" in global context</li>
+				<li>"this" in function invocation context (strict or non-strict)</li>
+				<li>"this" in method invocation context</li>
+				<li>"this" in constructor invocation context</li>
+				<li>"this" in call(), apply() and bind() methods</li>
+				<li>"this" in static methods</li>
+			</ol>
+		</li>
+
+		<li id="references_vs_values"><h3><a class="ready" href="../../pages/themes/advanced/references_vs_values/references_vs_values.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">References vs Values</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Copy by value</li>
+				<li>Copy by reference</li>
+			</ol>
+		</li>
+
+		<li id="prototypalInheritance"><h3><a class="ready" href="../../pages/themes/advanced/prototypalInheritance/prototypalInheritance.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Prototypal Inheritance in JavaScript</span><span class="hours">6</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Classical (class-based) Inheritance vs. Prototypal Inheritance</li>
+				<li>Object prototype</li>
+				<li>The Object.create() method</li>
+				<li>Let's got deep - what's in a object?</li>
+				<li>Classical (class-based) Inheritance in JavaScript?</li>
+				<li>Prototypal Inheritance - How it works?</li>
+			</ol>
+		</li>
+		<li id="regexes"><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Regular Expressions in JavaScript</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>The syntax</li>
+				<li>Create Regex in JavaScript</li>
+				<li>The match() String method</li>
+				<li>The replace() String method</li>
+			</ol>
+		</li>
+		<li id="jQueryBasics"><h3><a class="ready" href="../../pages/themes/advanced/jQueryBasics/jQueryBasics.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">jQuery in 2 hours</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>jQuery essentials.</li>
+				<li>Traversing and Manipulating the DOM.</li>
+				<li>DOM Events and Event Delegation.</li>
+				<li>Useful JQuery plugins.</li>
+				<li>JQuery vs ES6 and beyond</li>
+			</ol>
+		</li>
+
+
+		<li id="semantic_web"><h3><a class="ready" href="../../pages/themes/advanced/semantic_web/semantic_web.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Bring Semantic to the Web</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>HTML5 Semantic elements - the right usage and SEO considerations.</li>
+				<li>Data Attributes in HTML5.</li>
+				<!-- <li>What is Microdata, Microformats, RDF and why should you know about them?</li> -->
+				<!-- <li>How to boost the SEO of the site by adding more semantics.</li> -->
+			</ol>
+		</li>
+		<li id="browsersDevTools"><h3><a class="ready" href="../../pages/themes/advanced/chrome_dev_tools/chrome_dev_tools.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Master the Browser's WebDevelopers Tools and be productive</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes start">
+				<li>Page and loading time optimizations.</li>
+				<li>Profile and Analyze.</li>
+				<li>Debugging JavaScript.</li>
+			</ol>
+		</li>
+		<li id="css_preprocessors"><h3><a class="ready" href="../../pages/themes/advanced/css_preprocessors/css_preprocessors.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">CSS pre-processors and native CSS Custom properties</span><span class="hours">6</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Why to pre-process CSS?</li>
+				<li>Yes, LESS is more.</li>
+				<li>How about Sass/SCSS? Or Stylus?</li>
+				<li>CSS Custom properties and CSS variables</li>
+			</ol>
+		</li>
+		<li id="responsive_web_design_concepts"><h3><a class="ready" href="../../pages/themes/advanced/responsive_web_design_concepts/responsive_web_design_concepts.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Responsive Web design essential concepts</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Modern design strategies - why 'Progressive Enhancement' is better than 'Graceful Degradation'?</li>
+				<li>Manage the viewport.</li>
+				<li>CSS media queries - apply different styles for different viewports.</li>
+			</ol>
+		</li>
+		<li id="CSS_GridAndFlexbox"><h3><a class="ready" href="../../pages/themes/advanced/CSS_GridAndFlexbox/CSS_GridAndFlexbox.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Responsive Layouts with CSS Grid and Flexboxes</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>The Flexbox Layout model.</li>
+				<li>The Grid Layout model.</li>
+				<li>Create Responsive Layouts.</li>
+			</ol>
+		</li>
+		<li id="Bootstrap"><h3><a class="ready" href="../../pages/themes/advanced/Bootstrap/Bootstrap.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Bootstrap in 2 hours</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Responsive Design Frameworks - Overview</li>
+				<li>Introduction to Bootstrap</li>
+				<li>Bootstrap Components.</li>
+				<li>The Bootstrap Grid System.</li>
+				<li>Bootstrap Plugins.</li>
+			</ol>
+		</li>
+		<!-- <li id="graphicsAndVisualization"><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Drawing Graphics - SVG, Canvas, WebGL and more</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>A gentile introduction to HTML5 Canvas, SVG.</li>
+				<li>Create graphical effects using HTML5 Canvas and JavaScript.</li>
+				<li>When to use Canvas and when - SVG?</li>
+				<li>Overview of WebGL rendering.</li>
+				<li class="optional_theme">(optional theme) Bring data to life using d3.js data visualization library.</li>
+				<li class="optional_theme">(optional theme) Visualize your musical taste with D3.js and last.fm.</li>
+			</ol>
+		</li> -->
+		<!-- <li id="CSS_Animations"><h3><span class="label arrow_down">CSS3 Animations</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>When to use animations, and when - transitions?</li>
+				<li>The @keyframes rules.</li>
+				<li>Create astonishing animations only with HTML5/CSS3.</li>
+				<li>To animate or not to animate - some precautions before using animations.</li>
+			</ol>
+		</li> -->
+
+
+		<li id="AJAX_and_RESTFullAPIs"><h3><a class="ready" href="../../pages/themes/advanced/AJAX_and_RESTFullAPIs/AJAX_and_RESTFullAPIs.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">AJAX and RESTFull APIs</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Preamble: HTTP protocol overview</li>
+				<li>Preamble: Asynchronous vs Synchronous Communications</li>
+				<li>What is AJAX?</li>
+				<li>Understand the basics: implement AJAX requests with XMLHttpRequest (XHR) object</li>
+				<li>Preamble: Data exchange formats: XML, JSON</li>
+				<li>What is a RESTful web API and why we use it?</li>
+				<li>Create a simple RESTful API endpoint with nodejs.</li>
+				<li>Consume RESTful API data with JS and JQuery.</li>
+			</ol>
+		</li>
+
+		<li id="nodejs_intro"><h3><a class="ready" href="../../pages/themes/advanced/nodejs_intro/nodejs_intro.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Introduction to Node.js - the JavaScript back-end breakthrough.</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Simple explanation of node.js principles.</li>
+				<li>NPM - the node Package Manager.</li>
+				<li>Live Demo - simple Express app</li>
+			</ol>
+		</li>
+		<!-- <li id="buildTools"><h3><a class="ready" href="../../pages/themes/advanced/buildTools/buildTools.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Build a modern Front-End App with modern Tools</span><span class="hours">1</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Task Runners Overview. Using Gulp - live demo.</li>
+				<li>Bundle your app with Webpack.</li>
+			</ol>
+		</li> -->
+		<!-- <li id="staticSiteGenerators"><h3><span class="label arrow_down">Static Site Generators</span><span class="hours">4</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Introduction to front-end Template Engines.</li>
+				<li>Getting started with Handlebars.</li>
+				<li>Build fast, effective and manageable full-featured blog on GitHub Pages (a Jekyll use-case).</li>
+			</ol>
+		</li> -->
+		<!-- <li id="SPA_Intro"><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Building modern SPA</span><span class="hours">1</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>What is Single Page Applications (SPA).</li>
+				<li>Basic SPA concepts (router, state) depicted with vanilla ES6+</li>
+			</ol>
+		</li> -->
+		<li id="react"><h3><a class="ready" href="../../pages/themes/advanced/react/react.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">React - the Facebook's library for building user interfaces.</span><span class="hours">1</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>React overview and basic concepts.</li>
+				<!-- <li>Working with React CLI.</li> -->
+				<li>Build a ToDo App with React from scratch.</li>
+			</ol>
+		</li>
+		<li id="Angular"><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><!--<i class="fa fa-file-powerpoint-o"></i>--></a><span class="label arrow_down">Angular - the Google's platform for building apps</span><span class="hours">1</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Angular overview and basic concepts.</li>
+				<!-- <li>Working with Angular CLI.</li>
+				<li>TypeScript basics (needed for Angular Development)</li> -->
+				<li>Build a ToDo App with Angular7 from scratch.</li>
+			</ol>
+		</li>
+		<!-- <li id="Vue"><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><i class="fa fa-file-powerpoint-o"></i></a><span class="label arrow_down">Vue - the Progressive JavaScript Framework</span><span class="hours">2</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Build a ToDo App with View from scratch.</li>
+			</ol>
+		</li> -->
+
+		<li><h3><a class="ready" href="../../pages/themes/advanced/regexes/regexes.html" title="slides"><!--<i class="fa fa-file-powerpoint-o"></i>--></a><span class="label arrow_down">Instead of conclusion</span><span class="hours">0</span></h3>
+			<ol class="iep_syllabus_sub_themes">
+				<li>Web Components?</li>
+				<li>JavaScript-based polyfills?</li>
+			</ol>
+		</li>
+	</ol>
+	<div>
+		<a href="../../pages/readings/advanced/UsefulResources.html" title="Свободни ресурси"><i class="fa fa-link"></i></a>
+		<h4 class="total_hours">Total hours: <span class="total_hours_value">0</span></h4>
+	</div>
+</article>
+<!-- <article id="iep_course_project">
+	<h4>Курсов проект</h4>
+	<p class="TODO">По време на обучението, курсистите ще имат възможността да разработят самостоятелно цялостния дизайн и front-end на Уеб сайт (по зададена или избрана от тях тематика) като курсов проект. Акцентът отново ще бъде поставен върху качествения код, съобразен с актуалните стандарти( HTML5/CSS3/JavaScript (ES5, ES6) ), съвместимостта (cross browser compatibility) и добрите SEO практики.</p>
+</article>
+<article id="ip_course_about">
+	<section><h4>За кого е предназначен курса:</h4>
+	</section>
+	<section><h4>Какво ще научите в курса</h4>
+	</section>
+</article> -->
+<footer><div class="license left">
+		<p><span>Iva E. Popova.</span>, 2018.
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></p>
+		</div>
+		<div class="right">Created for <a href="https://IT-Academy.net/web-design-advanced/">IT-Academy WebDesign - Advanced Course</a></div>
+</footer>
+<script type="text/javascript" src="../../outfit/js/agenda.js"></script>
+</body>
+</html>

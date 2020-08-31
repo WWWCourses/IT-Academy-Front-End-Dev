@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>objectsCreationPatterns</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	"use strict";
+	var examples = {
+		'objectLiteralPattern': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car ={
+				doors: 4,
+				maxSpeed: 300,
+				drive: function(speed){
+					console.log(`Driving with ${speed} km/h!!!`);
+				}
+			};
+			car.drive(120);
+			// Driving with 120 km/h!!!
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'theConstructorPattern': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(doors, maxSpeed){
+				this.doors = doors // 4,
+				this.maxSpeed= maxSpeed // 300,
+			};
+			Car.prototype.drive = function(speed){
+				console.log(`Driving with ${speed} km/h!!!`);
+			}
+
+			var car = new Car();
+			car.drive(220);
+			// Driving with 220 km/h!!!
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'carByLiteralInternals': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car ={};
+
+			console.log(car.__proto__);
+			console.log(car.constructor);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'carByConstructor': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(){};
+			var ford = new Car();
+			var BMV = new Car();
+
+			console.log(ford.__proto__ === BMV.__proto__);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'carByFactory': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var carFactory = function(){
+				return {}
+			}
+			var ford = carFactory();
+			var BMV = carFactory();
+
+			console.dir(carFactory);
+			console.dir(ford);
+			console.dir(BMV);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factoryVSconstructor': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			function CarConstructor(){};
+			CarConstructor.prototype.sayHello=()=>
+				console.log(`Hello from CarConstructor.prototype`);
+			var constructedCar = new CarConstructor();
+
+			function CarFactory(){
+				return {}
+			};
+			CarFactory.prototype.sayHello=()=>
+				console.log(`Hello from CarFactory.prototype`);
+			var fabricatedCar = CarFactory();
+
+			constructedCar.sayHello();
+			fabricatedCar.sayHello();
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factoryEncapsulation': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var carFactory = function(model, doors){
+				//private
+				var objCount = 0;
+				var couter = (count)=>{
+					return count++;
+				}
+
+				var sayModel = ()=>{
+					console.log(`I'm ${model}`);
+				}
+
+				// public
+				var obj = {};
+				obj.model = model // '';
+				obj.doors = doors // 5;
+				obj.sayModel = sayModel;
+
+				return obj;
+			}
+
+			var ford = carFactory("Ford", 3);
+			ford.sayModel();
+			console.dir(ford);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'objectCreateMethodSimple': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car = {
+				speed: 100,
+				drive: function(){
+					console.log(`Driving with ${speed} km/h`);
+				}
+			}
+			console.dir(car);
+
+			var ford = Object.create(car);
+			console.dir(ford);
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'objectCreateVsConstructor': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var literalObj = {};
+
+			function ObjConstructor(){}
+			var constructedObj = new ObjConstructor();
+
+			var createdObj = Object.create(null);
+
+			console.dir(literalObj);
+			console.dir(ObjConstructor);
+			console.dir(constructedObj);
+			console.dir(createdObj);
+
+			console.log(`typeof literalObj: ${typeof literalObj}`);
+			console.log(`typeof constructedObj: ${typeof constructedObj}`);
+			console.log(`typeof createdObj: ${typeof createdObj}`);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'traceObjectsChain': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			"use strict";
+			var arr = [];
+			var f = function(){};
+			var objLiteral = {};
+
+			var indent = "";
+			function traceProtoChain(obj){
+				// exit condition
+				if (obj.__proto__ == null){
+					console.log(`Tracing ${obj}`);
+					indent += '\t';
+					console.log(`${indent}obj.__proto: ${obj.__proto__}`);
+					return;
+				}
+
+				// action
+				console.log(`Tracing ${obj}`);
+				indent += '\t';
+				console.log(`${indent}obj.__proto: ${obj.__proto__}`);
+				traceProtoChain(obj.__proto__);
+			}
+
+			traceProtoChain(objLiteral);
+			// traceProtoChain(f);
+			// traceProtoChain(objLiteral);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.traceObjectsChain();
+
+</script>
+</body>
+</html>

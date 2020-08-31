@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pseudo_classes_example_1</title>
+	<style type="text/css">
+		p{
+			font-size: 2em;
+			margin: .3em;
+		}
+		p:hover{
+			color: #007899
+		}
+		p:active{
+			color: #00998B
+		}
+		p:lang(bg){
+			color: green;
+		}
+		p:lang(en){
+			color: blue;
+		}
+		p:nth-of-type(1){
+			color: #FFF400;
+			text-shadow: 1px 1px red;
+		}
+		p:last-of-type{
+			color: red;
+			text-shadow: 2px 2px 2px #FFF400;
+		}
+		a:visited{
+			color: #999;
+			/*next will not work - security reasons:*/
+			text-decoration: none;
+			border: 1px dotted red;
+		}
+	</style>
+</head>
+<body>
+	<p>I'm the first Paragraph!</p>
+	<p><a href="https://google.bg">I'm visited link (https://google.bg)!</a></p>
+	<p>Hover me!</p>
+	<p lang="bg">Параграф на български език...</p>
+	<p lang="en">A paragraph in English... </p>
+	<p>I'm the last Paragraph!</p>
+
+</body>
+</html>

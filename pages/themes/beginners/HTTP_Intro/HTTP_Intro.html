@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Клиент-Сървър комуникация. Основи на HTTP. Работа с Уеб хостинг.</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#CSS_Selectors_1" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Клиент-Сървър комуникация.<br>Основи на HTTP.<br>Internet <span class="bold">&gt;</span> WWW</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section><section><h2>Що е то Интернет?</h2></section>
+	<section><h3 class="smile">Едно добро обяснение от "<a href="https://en.wikipedia.org/wiki/The_IT_Crowd">the IT Crowd</a>"</h3>
+		<dl class="fa" style="font-size: 0.5em">
+			<dt><span class="note">Jen</span> - директор на IT отдела в голяма корпорация, която трябва да изнесе реч пред акционерите, тъй като е избрана за <i>Служител на месеца</i>. <span class="note">Moss, Roy</span> - момчетата от IT отдела, който решават да "помогнат" на шефката си, и предлагат да използва Интернет в речта си пред акционерите.</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/iDbyYGrswtg?start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+	<section><h3 class="smile">Речта пред акционерите</h3>
+		<dl class="fa" style="font-size: 0.5em">
+			<dt>Компютърния експерт, шеф на IT отдела, избрана за <i>Служител на месеца</i> изнася реч, подготвена с помощта на подчинените си <span class="note">Moss, Roy</span> пред акционерите на компанията. В речта си, тя представя на <i>обикновените хора</i> какво е това Интернет.</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/Vywf48Dhyns?start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+</section>
+
+<section><section><h2>Internet: Клиент-Сървър Архитектура</h2></section>
+	<section><h3>Обобщен модел</h3>
+		<a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model"><img src="images/Client-server-model.svg.wiki.png"></a>
+		<dl class="fa" style="font-size: .6em">
+			<dt>Сървър</dt>
+			<dd>предлага определен вид услуги (File/Mail/Web/... Server), които са достъпни за клиентите. Машината, върху която се намира Сървъра има специфични хардуерни изисквания(HDD, CPU,..)</dd>
+			<dt>Клиент</dt>
+			<dd>използва предоставените от Сървъра услуги (FTP/Mail/Web/... Client)</dd>
+			<dt>Връзка между Клиента и Сървъра</dt>
+			<dd>Клиента се свързва със Сървъра, който може да е разположен на същата машина или на отдалечена такава, свързана с Клиента в мрежа (ethernet, internet).</dd>
+		</dl>
+	</section>
+</section>
+
+<section><section><h2>WWW <span class="bold">&lt;</span> Internet</h2></section>
+	<section>
+		<dl class="fa">
+			<dt><abbr>WWW</abbr><dfn id="WWW"><span>World</span><span>Wide</span><span>Web</span>(Световна глобална мрежа)</dfn></dt>
+			<dt>WWW <span class="bold">&lt;</span> Internet</dt>
+			<dt>WWW е мрежа от свързани HTML документи, достъпни чрез HTTP.<br>
+			HTML документите, наричани още Уеб страници, са свързани помежду си чрез хипер-линкове.</dt>
+			<dt>Създаване</dt>
+			<dd>Internet: 1969, ARPANET project</dd>
+			<dd>WWW - 1989, <b>CERN</b>,<a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL) </dd>
+		</dl>
+	</section>
+	<section><h3><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Тим Бърнърс-Лий</a> (TimBL)</h3>
+		<dl class="fa">
+			<dt>Създател на HTML</dt>
+			<dt>Създател на първия Уеб Браузър</dt>
+			<dt>Създател на първия Уеб Сървър</dt>
+			<dt>Идеолог на <a href="https://bg.wikipedia.org/wiki/Семантична_мрежа">Семантичната Мрежа</a></dt>
+			<dt>Директор на <a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium"> World Wide Web Consortium (W3C)</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section><section><h2>Клиент-Сървър Комуникация в WWW</h2></section>
+	<section><h3 class="advanced">Обобщен модел</h3>
+		<a href="images/Client-Server_Communication.png"><img src="images/Client-Server_Communication.png" style="height: 40vh;"></a>
+		<dl class="fa" style="font-size: .8em">
+			<dt>Начинът по който Уеб Клиента и Уеб Сървъра обменят информация помежду си е стандартизиран в <span class="note">протокола HTTP</span>.</dt>
+		</dl>
+	</section>
+</section>
+
+<section><h2>WebClient</h2>
+	<section><h3>Уеб клиент (Web Client) - хардуер</h3>
+		<p>Всяко устройство, свързано към Internet</p>
+		<a href="images/webclientsDevices.jpg"><img src="images/webclientsDevices.jpg"></a>
+	</section>
+	<section><h3>Уеб клиент (Web Client) - Софтуер</h3>
+		<p class="note">Web Client == User Agent</p>
+		<dl class="fa">
+			<dt>Графични (GUI - Graphical User Interface)</dt>
+			<dd>Chrome, FF, IE, Edge, Opera, Safari, Brave, ...</dd>
+			<dt><span class="advanced">Текстови</span></dt>
+			<dt><span class="advanced">CLI инструменти</span></dt>
+			<!-- <dd>Curl, Wget</dd> -->
+		</dl>
+	</section>
+	<section><h3>Графични (GUI - Graphical User Interface)</h3>
+		<p class="note smile">browser = "the button for the Internet"</p>
+		<iframe src="https://www.youtube.com/embed/YDNmyyrEZho" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+	<section><h3 class="advanced">Текстови</h3>
+		<p>Ето как изглежда <a href="http://bnr.bg/hristobotev/post/100925611">„Саломе“ на Оскар Уайлд – емблема на декадентството @БНР</a> под <a href="https://en.wikipedia.org/wiki/ELinks">ELinks</a></p>
+		<a href="images/ElinksBrowser-BNR_page-Salome.png"><img src="images/ElinksBrowser-BNR_page-Salome.png"></a>
+	</section>
+	<section><h3 class="advanced">CLI tools</h3>
+		<p>Ето как изглежда <a href="http://bnr.bg/hristobotev/post/100925611">„Саломе“ на Оскар Уайлд – емблема на декадентството @БНР</a> под <a href="https://en.wikipedia.org/wiki/CURL">cURL</a></p>
+		<a href="images/curlOutput-BNR_page-Salome.png"><img src="images/curlOutput-BNR_page-Salome.png"></a>
+	</section>
+</section>
+
+<section><h2>WebServer</h2>
+	<section><h3>Уеб Сървър (WebServer) - хардуер</h3>
+		<p>Най-общо - компютър със специфични изисквания за CPU/GPU/HDD/SDD и пр</p>
+		<a href="images/Inside_and_Rear_of_Webserver.jpg"><img src="images/Inside_and_Rear_of_Webserver.jpg"></a>
+	</section>
+	<section><h3>Уеб Сървър (WebServer) - софтуер</h3>
+		<dl class="fa">
+			<dt>Програма, която изпълнява заявките на Уеб клиентите.</dt>
+			<dd>Apache Web Server</dd>
+			<dd>nginx</dd>
+			<dd>Microsoft's IIS</dd>
+		</dl>
+	</section>
+</section>
+
+<section><h2 class="advanced">HTTP communication</h2>
+	<section><h3>HTTP Request</h3>
+		<dl class="fa">
+			<dt>HTTP Request - съобщението, което се изпраща от клиента към сървъра</dt>
+			<dt>Request Methods - определят начина, по които ще се изпрати съобщението</dt>
+			<dd>GET</dd>
+			<dd>POST</dd>
+			<dd>HEAD</dd>
+		</dl>
+		<p class="note">Повече за GET/POST методите ще разгледаме в темата за <a href="../../../../pages/themes/beginners/HTML_InputForms/HTML5_input_forms.html#/">HTML Форми</a></p>
+	</section>
+	<section><h3>HTTP Response</h3>
+		<dl class="fa">
+			<dt>HTTP Response - съобщението с което отговаря сървъра на клиента</dt>
+			<dt>Response status codes</dt>
+			<dd>2xx - Success</dd>
+			<dd>4xx - Client errors</dd>
+			<dd>5xx - Server errors</dd>
+		</dl>
+	</section>
+	<section><h3>live demo</h3>
+		<pre><code rel="Terminal" class="shell">
+			curl --trace-ascii curldump.log http://IT-Academy.net/
+		</code></pre>
+	</section>
+</section>
+
+<section><h2 class="important">URL</h2>
+	<section><h3>Уеб ресурс</h3>
+		<dl class="fa">
+			<dt>С общото наименование <span class="note">(Уеб) ресурс</span> ще наричаме файл ( разположен на Уеб сървър ) съдържащ текст, мултимедия или софтуерен компонент, който може да бъде достъпен от Клиента.</dt>
+			<dd>Могат да бъдат .html, .css, .js, .png, .mp3, .pdf и пр. файлове.</dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt><abbr>URL</abbr><dfn id="URL"><span>Uniform</span><span>Resource</span><span>Locator</span></dfn></dt>
+			<dd>често наричан и Уеб <i>адрес</i></dd>
+			<dd>еднозначно локализира даден ресурс в Уеб пространството, както и метода за неговото получаване.</dd>
+			<dd>В едно URL се съдържа всичката необходима информация за локализирането на сървъра, както и къде точно е разположен този ресурс на сървъра. В URL може да се добави и допълнителна информация, която да се изпрати към сървъра.</dd>
+		</dl>
+	</section>
+	<section>
+		<div><a href="images/URLwithQueryGoogleImageSearchExample.png"><img src="images/URLwithQueryGoogleImageSearchExample.png" style="height: auto; margin: 1em auto;"></a></div>
+		<dl class="fa" style="font-size: .7em">
+			<dt><span style="color: #BD615E">Протокол (Protocol)</span>:</dt>
+			<dd>Указва протокола (HTTP, FTP и пр.) за достъп до ресурса.</dd>
+			<dt><span style="color: #D6B758">Домейн (Domain)</span>:</dt>
+			<dd>Идентификатор на машината (host), на която е поместен ресурса. Еднозначно се съпоставя на даден IP адрес посредством DNS.</dd>
+			<dt style="font-size: 0.7em"><span style="color: #C2C2C2">Порт (Port)</span>:</dt>
+			<dd style="font-size: 0.7em">Порта, на който е настроен да "приема" заявки сървъра. По-често не се задава явно, като се подразбира :80 за http и :443 za https.</dd>
+			<dt><span style="color: #6C8EBF">Път до файла (Path)</span>:</dt>
+			<dd>Или по-точно: идентификатор на ресурса. Задава пътя (в контекста на файлова система) до търсения ресурс. Съвременните сървъри могат да променят точният път до ресурса със зададеният в URL.</dd>
+			<dt><span style="color: #85B56B">Параметри на заявката (Query Sring)</span>:</dt>
+			<dd>Опционална.Съдържа параметри необходими за изпълнение на заявката</dd>
+		</dl>
+	</section>
+	<section><h3>примери</h3>
+		<ol class="fa" style="font-size: 0.8; font-family: sans-serif; width: 130%;">
+			<li><a href="http://IT-Academy.net/">http://IT-Academy.net/</a></li>
+			<li><a href="http://IT-Academy.net/index.php">http://IT-Academy.net/index.php</a></li>
+			<li><a href="http://files.binar.bg/media/2018/01/Damata-s-rentgenovite-ochi.mp3">http://files.binar.bg/media/2018/01/Damata-s-rentgenovite-ochi.mp3</a></li>
+			<li><a href="exmaples/simplePageWithResources/sentiment-998357_960_720.jpg">http://wwwcourses.github.io../../../../pages/themes/beginners/HTTP_Intro/exmaples/simplePageWithResources/sentiment-998357_960_720.jpg</a></li>
+		</ol>
+	</section>
+</section>
+<!-- <section><section><h2></h2></section></section>
+<section><section><h2></h2></section></section> -->
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	 <!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1024,
+			height: 768,
+			// Bounds for smallest/largest possible scale to apply to content
+			// minScale: .5,
+			maxScale: 1,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

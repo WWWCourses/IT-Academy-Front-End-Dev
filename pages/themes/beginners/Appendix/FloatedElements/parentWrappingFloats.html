@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>parentWrappingFloats</title>
+    <style type="text/css">
+    	.wrapper{
+    		background: red;
+    		border: 5px solid red;
+    	}
+    	.col{
+    		float: left;
+    		width: 50%;
+    		height: 40vh;
+    	}
+    	.blue{
+    		background: blue;
+    	}
+    	.green{
+    		background: green;
+    	}
+    	.clear:after {
+    		display: block;
+    		content: "";
+    		clear: both;
+    	}
+    </style>
+</head>
+<body>
+	<div class="wrapper clear">
+		<div class="col blue "></div>
+		<div class="col green "></div>		
+	</div>
+</body>
+</html>

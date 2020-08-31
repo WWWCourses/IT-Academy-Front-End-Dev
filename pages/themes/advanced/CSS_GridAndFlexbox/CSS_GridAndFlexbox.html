@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS_GridAndFlexbox</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#CSS_GridAndFlexbox" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Responsive Layouts with CSS Grid and Flexboxes</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="50"><h1>The Flexbox Layout model</h1></section>
+<section><h2>The Flexbox Layout model</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>The Flexbox model is a  <span class="note">one-dimensional</span> method for laying out items in rows or columns.</dt>
+			<dt>It is a powerful layout model, which provides space distribution between items and alignment capabilities.</dt>
+		</dl>
+	</section>
+	<section><h3>Demo: right-aligned menu (Flexboxes)</h3>
+		<iframe height="10" style="width: 100%;" scrolling="no" title="Right-aligned Menu (Flexboxes)" src="https://codepen.io/webdesigncourse/embed/BGLqLy?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/BGLqLy'>Right-aligned Menu (Flexboxes)</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Demo: 3 column layout with Flexboxes</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="HolyGrail_flexbox_layout" src="https://codepen.io/webdesigncourse/embed/JeRmex?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/JeRmex'>HolyGrail_flexbox_layout</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>The model</h3>
+		<a href="images/flexbox_model.png"><img src="images/flexbox_model.png" alt="flexbox_model" style="height: 50vh;"></a>
+	</section>
+	<section><h3>The Basics</h3>
+		<dl class="fa">
+			<dt><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></dt>
+		</dl>
+	</section>
+	<section><h3>Flexbox - playground</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="Flexbox playground" src="https://codepen.io/enxaneta/embed/adLPwv?height=300&theme-id=20230&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+		See the Pen <a href='https://codepen.io/enxaneta/pen/adLPwv'>Flexbox playground</a> by Gabi
+		(<a href='https://codepen.io/enxaneta'>@enxaneta</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+</section>
+
+<section data-min="5"><h1>The Grid Layout model</h1></section>
+<section><h2>The Grid Layout model</h2>
+  <section><h3>Overview</h3>
+	<dl class="fa">
+		<dt>CSS Grid Layout is a <span class="note">two-dimensional</span> layout system</dt>
+		<dt>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements</dt>
+	</dl>
+	</section>
+	<section><h3>Basic concepts</h3>
+		<a href="images/grid-concepts.svg"><img src="images/grid-concepts.svg" alt=""></a>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

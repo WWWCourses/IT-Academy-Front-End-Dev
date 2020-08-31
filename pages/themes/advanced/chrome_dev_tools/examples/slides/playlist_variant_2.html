@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>20181020-homework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            cursor: default;
+        }
+
+        ul.genere-tabs li,
+        .genere-tabs label {
+            display: inline-block;
+            margin: 0 3px;
+            padding: 3px 12px 3px 3px;
+            border-right: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        ul.genere-tabs li:last-of-type,
+        .genere-tabs label:last-of-type {
+            border-right: none;
+        }
+
+        ul.playlist li {
+            list-style: none;
+            padding: 3px;
+        }
+
+        ul.playlist li:before {
+            content: '\025BA';
+            margin-right: 3px;
+            font-size: .75em;
+        }
+
+        ul.genere-tabs li[data-genere="heavy_metal"],
+        ul.playlist li[data-genere="heavy_metal"]:before {
+            color: #ee4242;
+        }
+        ul.playlist li[data-genere="heavy_metal"]:hover {
+            background-color: #ee4242;
+        }
+
+        ul.genere-tabs li[data-genere="rock"],
+        ul.playlist li[data-genere="rock"]:before {
+            color: #6742ee;
+        }
+
+        ul.playlist li[data-genere="rock"]:hover {
+            background-color: #6742ee;
+        }
+
+        ul.genere-tabs li[data-genere="ethno"],
+        ul.playlist li[data-genere="ethno"]:before {
+            color: #238330;
+        }
+
+        ul.playlist li[data-genere="ethno"]:hover {
+            background-color: #238330;
+        }
+
+        ul.genere-tabs li[data-genere="jazz"],
+        ul.playlist li[data-genere="jazz"]:before {
+            color: #b83a8e;
+        }
+
+        ul.playlist li[data-genere="jazz"]:hover {
+            background-color: #b83a8e;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('ul.genere-tabs li');
+            const radios = document.querySelectorAll('.genere-tabs input[type="radio"]');
+            const list = document.querySelectorAll('ul.playlist li');
+
+            [...radios].forEach(radio => {
+                radio.addEventListener('change', () => {
+                    const genere = radio.parentNode.dataset['genere'];
+                    [...list].forEach(element => {
+                        element.style.display = (!genere || element.dataset['genere'] === genere)? 'block' : 'none';
+                    });
+                });
+            });
+        }, false);
+    </script>
+</head>
+
+<body>
+    <h1>The playlist</h1>
+    <nav class="genere-tabs">
+        <label data-genere="">
+            All <input type="radio" name="genere" checked>
+        </label>
+        <label data-genere="heavy_metal">
+            Heavy metal <input type="radio" name="genere">
+        </label>
+        <label data-genere="rock">
+            Rock <input type="radio" name="genere">
+        </label>
+        <label data-genere="ethno">
+            Ethno <input type="radio" name="genere">
+        </label>
+        <label data-genere="jazz">
+            Jazz <input type="radio" name="genere">
+        </label>
+    </nav>
+    <section>
+        <ul class="playlist">
+            <li data-genere="heavy_metal">Iron Maiden - The Trooper</li>
+            <li data-genere="ethno">Omnia - Fee Ra Huri</li>
+            <li data-genere="rock">Toto - Africa</li>
+            <li data-genere="heavy_metal">Metallica - Seek and Destroy</li>
+            <li data-genere="jazz">Miles Davis - Blue in Green</li>
+            <li data-genere="ethno">Percival - Naranca</li>
+            <li data-genere="heavy_metal">Sonata Arctica - Full Moon</li>
+            <li data-genere="rock">Deep Purple - Time fo Bedlam</li>
+            <li data-genere="heavy_metal">Kamelot - Karma</li>
+            <li data-genere="rock">Pearl Jam - Jeremy</li>
+        </ul>
+    </section>
+</body>
+
+</html>

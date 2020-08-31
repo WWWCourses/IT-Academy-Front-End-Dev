@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>prototypalInheritance</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#__clicheTitle__" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>OOP - Inheritance in JavaScript</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section><h1>Classical (class-based) Inheritance vs. Prototypal Inheritance - Overview</h1></section>
+<section><h2>Classical (class-based) Inheritance vs. Prototypal Inheritance - Overview</h2>
+	<section><h3>Classical (class-based) Inheritance</h3>
+		<dl class="fa">
+			<dt><span class="note">Classes inherits from classes!</span></dt>
+			<dt><span class="note">Objects are just instances of classes!</span></dt>
+		</dl>
+		<a href="images/class-basedInheritance.png"><img src="images/class-basedInheritance.png"></a>
+	</section>
+	<section><h3>Classical (class-based) Inheritance</h3>
+		<dl class="fa">
+			<dt>The inheritance is based on copies! I.e. when a child class inherits its parents members, they are actually <span class="note">copied</span> to the child class.</dt>
+			<dt>The Cons?</dt>
+			<dd>Gorilla / Banana problem</dd>
+			<dd>Tight Coupling Problem</dd>
+			<dd>Duplication by Necessity Problem</dd>
+		</dl>
+	</section>
+	<section><h3>Prototypal Inheritance</h3>
+		<dl class="fa">
+			<dt><span class="note">Objects inherits from objects!</span></dt>
+			<dt>There are no classes!	</dt>
+		</dl>
+		<p><a href="images/prototypalInheritanceOfObjectLiteralsUsingDunderProto.png"><img src="images/prototypalInheritanceOfObjectLiteralsUsingDunderProto.png"></a></p>
+	</section>
+	<section><h3>Prototypal Inheritance</h3>
+		<dl class="fa">
+			<dt>The inheritance is based on <span class="note"> a prototype chain</span>! As a result, each child will be able to access by reference its prototype.</dt>
+			<dt>Pros?</dt>
+			<dd>Changing prototype definitions dynamically!</dd>
+		</dl>
+	</section>
+</section>
+
+<section><h1>Object prototype</h1></section>
+<section style="font-size: .8em"><h2>Object prototype</h2>
+	<section style="font-size: .8em"><h3>intro</h3>
+		<dl class="fa">
+			<dt>In JavaScript every object is build on the top of a <span class="note">prototype object</span>, from which it <span class="note">inherits</span> all properties and methods. </dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var car = {};
+			console.log('The car object: ');
+			console.dir(car);
+		</code></pre>
+		<p>The Object object (i.e. the object created by Object constructor) does not have prototype. You can think of it as the God of all objects.</p>
+		<a href="images/TheGodOfAllObjects.png"><img src="images/TheGodOfAllObjects.png"></a>
+	</section>
+	<section><h3 class="advanced">the <code>__proto__</code> property</h3>
+		<dl class="fa">
+			<dt>By ECMAScript standard, every object has the [[Prototype]] property, which points to its prototype.</dt>
+			<dt>Most JavaScript engines gives direct access to the [[Prototype]] property by the special property <code class="note">__proto__</code>.</dt>
+			<dt>From ES2015 the <code>__proto__</code> property is part of the standard!</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var car = {};
+
+			console.dir(car.__proto__);
+			// Object
+
+			console.dir(car.__proto__.__proto__);
+			// null
+		</code></pre>
+	</section>
+	<section><h3 class="NB">the <code>prototype</code> property</h3>
+		<dl class="fa">
+			<dt>When a function is created, the JavaScript engine creates a new, empty object which is associated with that function object through the function <code>prototype</code> property.</dt>
+			<dt>The role of the <code>prototype</code> property will be discussed in next slides.</dt>
+		</dl>
+	</section>
+	<section><h3><code>__proto__</code> vs. <code>prototype</code></h3>
+		<dl class="fa">
+			<dt>Do not mix the <code>__proto__</code> with <code>prototype</code> properties</dt>
+			<dt><span class="note">Every object</span> has the <code>__proto__</code> property.</dt>
+			<dt><span class="note">Only function objets</span> has the <code>prototype</code> property</dt>
+		</dl>
+	</section>
+</section>
+
+
+<section><h1>Let's got deep - what's in a object?</h1></section>
+<section><h2>Let's got deep - what's in a object?</h2>
+	<section><h3>at Object Literal</h3>
+		<pre><code rel="JS" class="js">
+			var car = {};
+		</code></pre>
+		<img src="images/objectCreationInternals.png">
+	</section>
+	<section><h3>at  Constructor (what  does it do?)</h3>
+		<pre><code rel="JS" class="js">
+			var Car = function(){};
+			var ford = new Car();
+			var BMV = new Car();
+		</code></pre>
+		<a href="images/whatNewDo.png"><img src="images/whatNewDo.png"></a>
+	</section>
+	<section><h3>at Factory</h3>
+		<pre><code rel="JS" class="js">
+			var carFactory = function(){ return {} }
+			var ford = carFactory();
+			var BMV = carFactory();
+		</code></pre>
+		<a href="images/whatFactoryDo.png"><img src="images/whatFactoryDo.png"></a>
+	</section>
+	<section><h3>Factory vs Constructor</h3>
+		<pre><code rel="JS" class="js">
+			function CarConstructor(){};
+			CarConstructor.prototype.sayHello=()=>
+				console.log(`Hello from CarConstructor.prototype`);
+			var constructedCar = new CarConstructor();
+
+			function CarFactory(){
+				return {}
+			};
+			CarFactory.prototype.sayHello=()=>
+				console.log(`Hello from CarFactory.prototype`);
+			var fabricatedCar = CarFactory();
+
+			constructedCar.sayHello();
+			//Hello from CarConstructor.prototype
+			fabricatedCar.sayHello();
+			//TypeError: fabricatedCar.sayHello is not a function
+		</code></pre>
+	</section>
+</section>
+
+<section><h2>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a> method</h2>
+	<section><h3>syntax</h3>
+		<dl class="fa">
+			<dt>The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.</dt>
+		</dl>
+		<pre><code rel="Syntax" class="js">
+			Object.create( prototype_object [, propertiesObject] );
+		</code></pre>
+		<dl class="fa">
+			<dt><code>prototype_object</code> - the prototype for the new object.</dt>
+			<dt><code>propertiesObject</code> - an object, describing the properties for the newly created object.  The syntax is like the <code>props</code> object in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties() method</a></dt>
+			<dt><code>return</code> - new object with the specified prototype object and properties (if given ).</dt>
+		</dl>
+	</section>
+	<section><h3>example</h3>
+		<pre><code rel="JS" class="js">
+			var car = {
+				sayHello:()=>console.log(`Hello, I'm car literal`),
+			};
+			var ford = Object.create(car);
+			ford.sayHello();
+			// Hello, I'm car literal
+
+			console.log(ford.__proto__ === car);
+			// true
+		</code></pre>
+	</section>
+	<section><h3 class="advanced">example</h3>
+		<pre><code rel="JS" class="js">
+			var car = {
+				drive : function(){
+					console.log(`Driving with ${this.speed} km/h`);
+				},
+				speed: 100, // a default value for all objects created by "car"
+			};
+
+			var ford = Object.create(car, {
+				speed: {
+					value: 200,
+					writable: false,
+				}
+			});
+			ford.drive();
+
+			// let's try to change the speed
+			ford.speed = 300;
+			console.log(`ford.speed: ${ford.speed}`);
+		</code></pre>
+	</section>
+</section>
+
+<section><h1>Prototypal Inheritance in JavaScript</h1></section>
+<section><h2>Prototypal Inheritance in JavaScript</h2>
+	<section><h3>The Prototype Chain</h3>
+		<dl class="fa">
+			<dt>Each JavaScript object has a <span class="note">prototype object</span> (accessed by the <code>__proto__</code> property.)</dt>
+			<dt>An object "inherits" - i.e. has access to all members of its prototype.</dt>
+			<dt>An object prototype is just an object, so it can also have prototype from which to inherit from.</dt>
+			<dt>This is known as the <span class="note">prototype chain!</span></dt>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Prototypal Inheritance of Object Literals using '__proto__'  - example</h3>
+		<pre style="width: 100%"><code rel="JS" class="js">
+			// create 'car' object
+			const car = {
+				manufacturer: undefined,
+				speed: 100,
+				drive: function(){
+					if (this.wings >= 2){
+						console.log(`Flying wiht ${this.speed} km/h`);
+					}else{
+						console.log(`Driving wiht ${this.speed} km/h`);
+					}
+				}
+			}
+
+			// create the 'ford' object
+			const ford = {
+				manufacturer: "Ford",
+				speed: 200,
+				// make 'ford' to inherit from 'car'
+				__proto__ : car,
+			}
+
+			// create 'theFordOfPesho' object
+			const theFordOfPesho = {
+				wings: 2,
+				speed: 300,
+				// make 'theFordOfPesho' to inherit from 'ford'
+				__proto__ : ford,
+			}
+
+			car.drive();
+			ford.drive();
+			theFordOfPesho.drive();
+		</code></pre>
+		<dl class="fa">
+			<dt>Be careful when using <code>__proto__</code></dt>
+			<dd><a class="advanced" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation">Prototype_mutation on MDN</a></dd>
+			<dt>Do not use <code>__proto__</code> outside of object literals!</dt>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Prototypal Inheritance of Object Literals using '__proto__'  - diagram</h3>
+		<a href="images/prototypalInheritanceOfObjectLiteralsUsingDunderProto.png"><img src="images/prototypalInheritanceOfObjectLiteralsUsingDunderProto.png"></a>
+
+	</section>
+	<section><h3 class="advanced">Prototypal Inheritance of Object Literals using Object.create() - example</h3>
+		<pre><code rel="JS" class="js">
+			// create 'car' object
+			const car = {
+				manufacturer: undefined,
+				speed: 100,
+				drive: function(){
+					if (this.wings >= 2){
+						console.log(`Flying wiht ${this.speed} km/h`);
+					}else{
+						console.log(`Driving wiht ${this.speed} km/h`);
+					}
+				}
+			}
+			// create 'ford' and make it to inherit from 'car'
+			const ford = Object.create( car, {
+				manufacturer: {value: "Ford"},
+				speed: {value: 200},
+			})
+
+			// create 'theFordOfPesho' and make it to inherit from 'ford'
+			const theFordOfPesho = Object.create(ford, {
+				wings: {value: 2},
+				speed: {value: 300},
+			})
+
+			car.drive();
+			ford.drive();
+			theFordOfPesho.drive();
+		</code></pre>
+	</section>
+	<section><h3>Prototypal Inheritance of Object Literals using Object.create() - diagram</h3>
+		<a href="images/prototypalInheritanceOfObjectLiteralsUsingObjectCreate.png"><img src="images/prototypalInheritanceOfObjectLiteralsUsingObjectCreate.png"></a>
+		<dl class="fa">
+			<dt>Yes, the diagram is identical with the one with '<code>__proto__</code>'</dt>
+			<dt>It's better and safe to use <code>Object.create() </code> aproach, instead of '<code>__proto__</code>'</dt>
+		</dl>
+	</section>
+	<section><h3 class="important">Prototypal Inheritance of constructed objects</h3>
+		<pre><code rel="JS" class="js">
+			// define Car Constructor:
+			function Car() {
+				this.manufacturer = undefined;
+				this.speed = 100;
+			}
+			Car.prototype.drive = function () {
+				if (this.wings >= 2){
+					console.log(`Flying wiht ${this.speed} km/h`);
+				}else{
+					console.log(`Driving wiht ${this.speed} km/h`);
+				}
+			}
+			// define Ford Constructor:
+			function Ford(speed) {
+				this.manufacturer = "Ford";
+				this.speed = speed;
+			}
+			// Make Ford objects to inherit from Car.prototype:
+			Ford.prototype = Object.create(Car.prototype);
+
+			// create a Ford object
+			let ford = new Ford(200);
+
+			// create another Ford object, and attach wings to it:
+			let fordOfPesho = new Ford(300);
+			fordOfPesho.wings = 2;
+
+			// let's use the object:
+			ford.drive();
+			fordOfPesho.drive();
+		</code></pre>
+	</section>
+	<section><h3></h3>
+		<a href="images/prototypalInheritanceOfConstructedObjects.png"><img src="images/prototypalInheritanceOfConstructedObjects.png" alt="images/prototypalInheritanceOfConstructedObjects.png"></a>
+	</section>
+
+	<section><h3>Prototypal Inheritance with Class Syntax</h3>
+		<dl class="fa">
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes @MDN</a></dt>
+		</dl>
+	</section>
+
+	<section><h3>Prototypal Inheritance with Class Syntax - examples</h3>
+		<pre><code rel="JS" class="js">
+			// define Car Class:
+			class Car{
+				constructor(speed){
+					this.manufacturer = undefined;
+					this.speed = speed;
+				}
+
+				drive = function () {
+					if (this.wings >= 2) {
+						console.log(`Flying wiht ${this.speed} km/h`);
+					} else {
+						console.log(`Driving wiht ${this.speed} km/h`);
+					}
+				}
+			}
+
+			// define Ford Class, which will inherits from Car:
+			class Ford extends Car{
+				constructor(speed) {
+					// call the Parent Constructor first:
+					super(speed);
+					this.manufacturer = "Ford";
+				}
+			}
+
+			// create a Ford object
+			let ford = new Ford(200);
+
+			// create another Ford object, and attach wings to it:
+			let fordOfPesho = new Ford(300);
+			fordOfPesho.wings = 2;
+
+			// let's use the object:
+			ford.drive();
+			fordOfPesho.drive();
+		</code></pre>
+	</section>
+
+
+	<!-- <section><h2>Classical (class-based) Inheritance in JavaScript</h2>
+		<section><h3>example</h3>
+			<pre><code rel="JS" class="js">
+				// create 'Car' constructor
+				var Car = function(manufacturer, speed){
+					this.manufacturer = manufacturer || undefined;
+					this.speed= speed || 100;
+				}
+				Car.prototype= {
+					drive: function(){
+						if (this.wings >= 2){
+							console.log(`Flying wiht ${this.speed} km/h`);
+						}else{
+							console.log(`Driving wiht ${this.speed} km/h`);
+						}
+					}
+				}
+
+				// create 'Ford' constructor
+				var Ford = function( speed){
+					var manufacturer = 'Ford';
+					// use the parent constructor
+					Car.apply(this, [manufacturer, speed]);
+				}
+				// set the prototype chain
+				Ford.prototype.__proto__ = Car.prototype;
+
+				// create 'ford' object
+				var ford = new Ford(200);
+
+				// create 'theFordOfPesho' object
+				var theFordOfPesho = new Ford(300);
+				theFordOfPesho.wings = 2;
+
+
+				ford.drive();
+				theFordOfPesho.drive();
+			</code></pre>
+		</section>
+		<section><h3>diagram</h3>
+			<a href="images/prototypalInheritanceOfObjectLiteralsUsingConstructors.png"><img src="images/prototypalInheritanceOfObjectLiteralsUsingConstructors.png"></a>
+		</section>
+	</section> -->
+
+	<!-- <section><h3>Prototypal Inheritance - How it works?</h3>
+		<img src="images/Prototype Inheritance.png">
+	</section> -->
+</section>
+
+
+
+
+<section><h1>Exercises</h1></section>
+<section><h2>Exercises</h2>
+	<section><h3>createCatConstructor:</h3>
+		<script src="https://gist.github.com/WWWCourses/56fd395fce77a5df4cb38791ad54359e.js"></script>
+	</section>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

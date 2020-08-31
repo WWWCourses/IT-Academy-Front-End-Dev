@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>responsive_web_design_concepts</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#responsive_web_design_concepts" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section data-min-total="160"><h1>Responsive Web design essential concepts</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="10"><h1>Modern design strategies</h1></section>
+<section><h2>Design strategies</h2>
+  <section><h3>Clear the concepts</h3>
+	<a href="images/Responsive_All_Strategies.png"><img src="images/Responsive_All_Strategies.png"></a>
+  </section>
+  <section><h3>Progressive enhancement</h3>
+	<blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement is a design philosophy that centers around providing a <span class="note">baseline of essential content and functionality</span> to as many users as possible, while at the same time going further and delivering the best possible experience only to users of the most modern browsers that can run all the required code.</blockquote>
+	<a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive_Enhancement @MDN</a>
+  </section>
+  <section><h3>Graceful degradation</h3>
+	<blockquote cite="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful degradation is a design philosophy that centers around trying to build a <span class="note">modern web site/application that will work in the newest browsers</span>, but fall back to an experience that while not as good still delivers essential content and functionality in older browsers.</blockquote>
+	<a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">Graceful_degradation @MDN</a>
+  </section>
+  <section><h3>Mobile First</h3>
+	<dl class="fa">
+	  <dt>Start prototyping your site for the smallest screen first and add features for larger displays</dt>
+	  <dt>Mobile first == Content first (Extras later)</dt>
+	</dl>
+  </section>
+  <section><h3>Desktop First</h3>
+	<dl class="fa">
+	  <dt>Start prototyping for desktop first and then work your way down to tablet/mobile devices.</dt>
+	</dl>
+  </section>
+  <section><h3>Mobile First vs. Desktop First</h3>
+	<a href="images/responsive-vs-mobile-first-webdesign-022-1024x689.png"><img src="images/responsive-vs-mobile-first-webdesign-022-1024x689.png" width="80%"></a>
+  </section>
+</section>
+
+<section data-min="5"><h1>Essential Concepts</h1></section>
+<section><h2>Essential Concepts</h2>
+  <section>
+	<p><abbr>RWD</abbr><dfn id="RWD"><span>Responsive</span><span>Web</span><span>Design</span></dfn></p>
+	<dl class="fa">
+	  <dt>The Viewport</dt>
+	  <dt>Media Queries</dt>
+	  <dt>Responsive Units</dt>
+	  <dt>Adaptive Images</dt>
+	  <dt>Grid and Flexboxes</dt>
+	</dl>
+  </section>
+</section>
+
+
+<section data-min="30"><h1>CSS media queries</h1></section>
+<section><h2>CSS media queries</h2>
+  <section><h3>Overview</h3>
+  	<dl class="fa">
+  		<dt>From CSS2  are supported <span class="note">media-dependent style sheets</span> tailored for different media types</dt>
+  		<dd>I.e. we can define one style when the document is rendered on <span class="note">screen</span>, and another stylesheet, when the document is <span class="note">printed</span>.</dd>
+  		<dt><span class="note">Media queries</span> extend the functionality of media types by allowing more precise labeling of style sheets.</dt>
+  		<dd>By using media queries, presentations can be tailored to a specific <span class="note">range of output devices</span> without changing the content itself.</dd>
+  	</dl>
+  </section>
+  <section><h3>Example</h3>
+  	<a href="examples/slides/printCSSDemo/index.html">Simple page with screen and print styles</a>
+  </section>
+  <section><h3>Usage</h3>
+  	<dl class="fa">
+  		<dt>To conditionally apply styles with the CSS @media and @import at-rules.</dt>
+  		<dt>To target specific media for the &lt;link&gt;, &lt;source&gt;, and other HTML elements.</dt>
+  		<dd>I.e. if you provide a media type or query inside the link media attribute, then the  resource will only be loaded if the media condition is true. </dd>
+  		<dt>To test and monitor media states using JavaScript methods</dt>
+  		<dd>We can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a> or similar method, to check if the device is in landscape or portrait orientation.</dd>
+  	</dl>
+  </section>
+  <section><h3>Syntax</h3>
+  	<pre><code rel="Syntax" class="css">
+  		@media [media_type and] [(media_feature_expr)*]{CSS Rules}
+  	</code></pre>
+  	<pre><code rel="CSS" class="css">
+  		@media (min-width: 600px){}
+  		@media (min-width: 600px) and (max-width: 1000px ){}
+  		@media print and (min-width: 600px){}
+  		@media print and (orientation: landscape){}
+  		@media print and (min-width:800px), print and (orientation: landscape){}
+  	</code></pre>
+  </section>
+  <section><h3>Syntax</h3>
+  	<pre><code rel="Syntax" class="css">
+		@media [media_type and] [(media_feature_expr)*]{CSS Rules}
+  	</code></pre>
+  	<dl class="fa">
+  		<dt>A media query is composed of an optional <span class="note">media type</span> and any number of <span class="note">media feature</span> expressions</dt>
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types">media type</a>: describe the general category of a device, like <span class="note">print</span>, <span class="note">screen</span>, <span class="note">speech</span></dt>
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">Media features: </a> describe specific characteristics of the user agent, output device, or environment. Like <span class="note">width</span>, <span class="note">orientation</span>, <span class="note">resolution</span>, etc.</dt>
+  		<dd>Media feature expressions test for their presence or value, and are entirely optional.</dd>
+  		<dd>Each media feature expression must be surrounded by parentheses.</dd>
+  		<dt>Media queries are case-insensitive.</dt>
+  	</dl>
+  </section>
+  <section><h3>Example</h3>
+  	<pre><code rel="HTML" class="html">
+  		<div class="box">box 1</div>
+  		<div class="box">box 2</div>
+  		<div class="box">box 3</div>
+  	</code></pre>
+  	<pre><code rel="CSS" class="css">
+  		.box {
+  		  width: 370px;
+  		  float: none;
+  		  border: 1px solid red;
+  		  box-sizing: border-box;
+  		}
+
+  		@media (min-width: 375px) and (max-width: 812px) {
+  		  .box {
+  			width: 33%;
+  			float: left;
+  			background: blue;
+  		  }
+  		}
+  		@media (min-width: 812px) {
+  		  .box {
+  			width: 30%;
+  			float: left;
+  		  }
+  		}
+  	</code></pre>
+  </section>
+  <section><h3>Media features</h3>
+  	<dl class="fa">
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">Media features</a> describe specific characteristics of the user agent, output device, or environment.</dt>
+  		<dt>Media feature expressions test for their presence or value, and are entirely optional.</dt>
+			<dt class="note">Each media feature expression must be surrounded by parentheses.</dt>
+  	</dl>
+  	<pre><code rel="CSS" class="css">
+  		@media (max-width: 600px){}
+  		@media (hover: none){}
+  		@media (orientation: portrait){}
+  		@media (display-mode: fullscreen){}
+  	</code>
+  </section>
+  <section><h3>Media types</h3>
+  	<dl class="fa">
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types">Media types</a> describe the general category of a device.</dt>
+  		<dt>Except when using the <code>not</code> or <code>only</code> logical operators, the media type is optional and defaults to <code>all</code>.</dt>
+  	</dl>
+  	<pre><code rel="CSS" class="css">
+  		@media screen and (max-width: 600px){}
+  	</code>
+  </section>
+  <section><h3>Complex media queries with logical operators</h3>
+  	<dl class="fa">
+  		<dt>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Logical_operators">logical operators</a> <code class="note">not</code>, <code class="note">and</code>, and <code class="note">only</code> can be used to compose a complex media query.</dt>
+  		<dt>With <code class="note">,</code> (comma) we can combine multiple media queries into one. If any of them is <code>true</code> then the entire media rule is considered as True. I.e. comma operator behives like logical OR.</dt>
+  	</dl>
+  	<pre><code rel="CSS" class="css">
+  		@media (min-width: 375px) and (max-width: 812px){}
+  		@media only screen and (min-width: 375px){}
+  	</code>
+  </section>
+</section>
+
+<section data-min="10"><h1>Media Queries with Sass</h1></section>
+<section><h2>Media Queries with Sass</h2>
+  <section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>We can set our media queries into Sass variable and interpolate it on the desired place.</dt>
+		</dl>
+		<pre><code rel="Sass" class="scss">
+			$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
+			$desktop: "(min-width: 812px)";
+
+			.box{
+				width: 370px;
+				float: none;
+				border: 1px solid red;
+				box-sizing: border-box;
+			}
+
+			@media #{$iPhoneX}{
+			  .box{
+			  	width: 33%;
+			  	float: left;
+			  	background: blue;
+			  }
+			};
+
+			@media #{$desktop}{
+				.box{
+					width: 30%;
+					float: left;
+				}
+			}
+		</code></pre>
+  </section>
+  <section><h3>Media query bubbling</h3>
+  	<dl class="fa">
+  		<dt>Other cool feature with Sass is "Media query bubbling": if a media query is nested inside a selector Sass will lift (bubble) this query out and will nest the selector rule.</dt>
+  	</dl>
+  	<pre><code rel="Sass" class="scss">
+			$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
+			$desktop: "(min-width: 812px)";
+
+			.box{
+				width: 370px;
+				float: none;
+				border: 1px solid red;
+				box-sizing: border-box;
+
+				@media #{$iPhoneX}{
+				width: 33%;
+				float: left;
+				background: blue;
+			  };
+
+				@media #{$desktop}{
+					width: 30%;
+					float: left;
+				}
+			}
+		</code></pre>
+  </section>
+</section>
+
+<section data-min="20"><h1>Manage the viewport for mobile design.</h1></section>
+<section><h2>Manage the viewport for mobile design.</h2>
+  <section><h3>CSS pixels and device pixels</h3>
+	<dl class="fa">
+	  <p>Or "Hardware pixels" and "Software pixels"</p>
+	  <dt><span class="note">Hardware pixel</span> - an individual dot of light in the display</dt>
+	  <dt><span class="note">CSS pixel</span> - a CSS measurement unit</dt>
+	  <dt><span class="note">device pixel ratio</span> -  how many hardware pixels equals one software pixel</dt>
+	  <dt>For instance, on a device with dpr=2, a font size of 14px will take up 14 CSS pixels but render at 28 hardware pixels. </dt>
+	  <dt>Reading: <a href="https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html">A pixel is not a pixel</a></dt>
+	</dl>
+  </section>
+  <section><h3>Hi-DPI</h3>
+	<dl class="fa">
+	  <dt>Mobile devices reach more and more high <a href="https://en.wikipedia.org/wiki/Dots_per_inch">dpi</a></dt>
+	  <dd><a href="https://pixensity.com/list/phone/">pixensity.com</a></dd>
+	</dl>
+	<a href="images/standard_vs_retina_pixels.png"><img src="images/standard_vs_retina_pixels.png"></a>
+  </section>
+  <section><h3>The problem</h3>
+	<dl class="fa">
+	  <dt>Browsers on mobile devices render pages in a viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once.</dt>
+	  <dt>That is good for pages, which are not mobile-optimized, but it's not good for optimized pages (using @media queries)</dt>
+	  <dt>Check why the media query does not fire: <a href="examples/slides/viewport.html">viewport.html</a></dt>
+	  <dt>Reference: <a href="https://www.quirksmode.org/mobile/viewports2.html">A tale of two viewports — part two</a> @quirksmode.org</dt>
+	</dl>
+  </section>
+  <section><h3>viewport meta tag</h3>
+	<dl class="fa">
+	  <dt>Let web developers control the viewport's size and scale</dt>
+	  <dt>Introduced by Apple for Safari iOS, but respected by most mobile browsers</dt>
+	  <dt>Is not part of any web standard</dt>
+	  <dt>No consistent documentation</dt>
+	  <dt>Reference: </dt>
+	  <dd><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Configuring the Viewport</a> @Safari Web Content Guide</dd>
+	</dl>
+  </section>
+  <section><h3>Syntax</h3>
+	<pre><code rel="Syntax" class="html">
+	  <meta name="viewport" content="Viewport properties">
+	</code></pre>
+	<pre><code rel="HTML" class="html">
+	  <meta name="viewport" content="width=480">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=480, initial-scale=1, user-scalable=no">
+	</code></pre>
+	<dl class="fa">
+	  <dt>Cheatsheet: <a href="http://andreasbovens.github.io/understanding-viewport/">Understanding viewport: examples</a></dt>
+	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>Task</h1></section>
+<section><h2>Task</h2>
+	<section><h3>Mobile First Navigation Menu</h3>
+		<dl class="fa">
+			<dt>Create the CSS for the menu, as you want it to be displayed on mobile device</dt>
+			<a href="images/menu_mobile_proto.png"><img src="images/menu_mobile_proto.png"></a>
+		</dl>
+		</section>
+		<section><h3></h3>
+			<dl class="fa">
+				<dt>After, apply CSS for desktop</dt>
+				<a href="images/menu_desktop_proto_.png"><img src="images/menu_desktop_proto_.png"></a>
+			</dl>
+		</section>
+
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1440,
+			height: 900,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

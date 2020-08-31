@@ -1,0 +1,98 @@
+.page{
+    height: 100vh;
+    background: #333;
+    padding-top: 3em;
+}
+header{
+    font-size: 2em;
+    color: aquamarine;
+    text-align: center;
+}
+.todoApp{
+    width: 80%;
+    margin: 3em auto;
+    border: .3em solid #DDD;
+    background: #FFF;
+}
+
+.addTodo{
+    position: relative;
+    line-height: 6em;
+    vertical-align: middle;
+}
+.addTodo>input{
+    width: 98%;
+    height: 3em;
+    /* border: 1px solid aquamarine; */
+    outline: aquamarine;
+}
+.addTodo>input:focus{
+    border: 1px solid aquamarine;
+}
+.addTodo>.btnAdd{
+    display: inline-block;
+    position: absolute;
+    top: 0; right: 0;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: -3em;
+    border-radius: 100%;
+    background: aquamarine;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.addTodo>.btnAdd:focus, .addTodo>.btnAdd:hover{
+    box-shadow: 2px 2px 5px 4px #7FDDC4;
+}
+.todoListItems{
+    margin-top: 1em;
+}
+.todoListItems li{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    vertical-align: middle;
+    padding-left: 1em;
+    /* padding-right: 1em; */
+    box-sizing: border-box;
+    clear: both;
+    background: #666;
+    color: #DDD;
+}
+.todoListItems li:hover{
+    font-weight: bold;
+    color: #FFF;
+}
+.todoListItems li:nth-child(2n){
+    background: #777;
+}
+
+.removeTodo{
+    display: inline-block;
+    float: right;
+    width: 2em;
+    text-align: center;
+    /* vertical-align: middle; */
+    /* line-height: 3em; */
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+}
+.removeTodo:hover{
+    cursor: pointer;
+}
+.removeTodo i{
+    color: #FF7E7E;
+}
+.removeTodo:hover i{
+    color: #FF5E5E;
+}
+.total{
+    line-height: 3em;
+}
+

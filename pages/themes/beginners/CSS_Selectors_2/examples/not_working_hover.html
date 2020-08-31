@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>not_working_hover</title>
+    <style type="text/css">
+    	/*broken order*/
+    	a.broken:active{
+    		color: orange;
+    	}
+    	a.broken:hover{
+    		color: yellow;
+    	}
+    	a.broken:visited{
+    		color: green;
+    	}
+    	a.broken:link{
+    		color: red;
+    	}
+
+    	/*:link , :visited , :hover , :active*/
+    	a.proper:link{
+    		color: red;
+    	}
+    	a.proper:visited{
+    		color: green;
+    	}
+    	a.proper:hover{
+    		color: yellow;
+    	}
+    	a.proper:active{
+    		color: orange;
+    	}
+    </style>
+</head>
+<body>
+	<div>
+		<h2>Next link is with bad ordered pseudo-classes rules:</h2>
+		<p>test hover or active (left click) on link:</p>
+		<a href="#1" class="broken">test on me</a>
+	</div>
+	<div>
+		<h2>Next link is with proper ordered pseudo-classes rules:</h2>
+		<p>test hover or active (left click) on link:</p>
+		<a href="#1" class="proper">test on me</a>
+	</div>
+</body>
+</html>

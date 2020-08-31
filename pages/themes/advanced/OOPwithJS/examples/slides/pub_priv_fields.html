@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pub/Privite/Priviledged Members</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'objLiteral': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var event = {
+				name: 'Mariinsky Theatre Orchestra with Gergiev',
+				date: '22.05.2017',
+				time: '19.30',
+				place: 'Bulgaria Hall',
+			}
+
+			console.log(`Event name: ${event.name}`);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'publicMembers': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Event = function(name, date, time) {
+				// public data
+				this.name 	= name;
+				this.date 	= date;
+				this.time 	= time;
+			}
+			// public shared methods
+			Event.prototype.setReminder = function(minutesBefore) {
+				alert('Reminder set for '+  minutesBefore +' minutes before start!');
+			};
+
+			var event1 = new Event(
+				'Mariinsky Theatre Orchestra with Gergiev',
+				'22.05.2017',
+				'19.30'
+			) ;
+
+			event1.setReminder(60);
+			 // yep, event.setReminder() is public!
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'private': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Event = function(name) {
+				// private data
+				var name = name;
+
+				// private method
+				var sayName = function(){
+					console.log(`Event name: ${name}`);
+				}
+
+			}
+
+			var event1 = new Event('event1');
+			console.log(`event1.name: ${event1.name}`);
+			// event1.name: undefined
+			event1.sayName();
+			// Uncaught TypeError: event1.sayName is not a function
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'privileged': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Event = function(name) {
+				// private data
+				var name = name;
+
+				// public method
+				this.sayName = function(){
+					console.log(`Event name: ${name}`);
+				}
+
+			}
+			var event1 = new Event('event1');
+			console.log(`event1.name: ${event1.name}`);
+			// event1.name: undefined
+
+			event1.sayName();
+			// Event name: event1
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'privilegedCons': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Event = function(name) {
+				// private data
+				var name = name;
+			}
+			// shared public method
+			Event.prototype.sayName = function(){
+				// no way to access Event.name outside the constructor!!!
+				console.log(`Event name: ${this.name}`);
+				console.log(`Event name: ${name}`);
+			}
+
+			var event1 = new Event('event1');
+			event1.sayName();
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'example1': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.privilegedCons();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>link_pseudo_classes</title>
+    <style type="text/css">
+        a{
+            font-size: 1em;
+            text-decoration: none;
+        }
+        a:link{
+            color: green;
+            font-size: 3em;
+            border: 1px solid red;
+        }
+        a:visited{
+            color: red;
+            /*само border-color се прилага!*/
+            border: 5px solid blue;
+        }
+        a:active{
+            background: blue;
+        }
+        a:focus{
+            color: yellow;
+            border: 5px dotted red;
+        }
+        a:hover{
+            color: green;
+            border: none;
+            border-bottom: 5px dotted green;
+        }
+
+
+    </style>
+    <base target="_blank">
+</head>
+<body>
+    <a href="#23">Unviseted Link</a>
+    <a href="http://www.w3schools.com">Visited Link</a>
+</body>
+</html>

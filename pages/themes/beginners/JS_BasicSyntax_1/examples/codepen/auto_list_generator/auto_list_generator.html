@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>auto_list_generator</title>
+    <style type="text/css">
+    	#form_container{
+    		float: left;
+    		width: 50%;
+    		min-height: 100vh;
+    	}
+    	#result_container{
+    		float: left;
+    		width: 50%;
+    		min-height: 100vh;
+    		border-left: 1px solid red;
+    		box-sizing: border-box;
+    	}
+
+    	section>h1{
+    		text-align: center;
+    	}
+
+    	#form_container>div{
+    		margin: 1em 0;
+    	}
+    	#form_container>div>label{
+    		display: inline-block;
+    		width: 50%;
+    		text-align: right;
+    	}
+    	#form_container>div>button{
+    		display: block;
+    		width: 50%;
+    		margin: 0 auto;
+    	}
+    </style>
+</head>
+<body>
+	<section id="form_container">
+		<h1>Автоматично създаване на списък:</h1>
+		<div>
+			<label>Брой на елементите на списъка: </label>
+			<input type="number" id="listItemsCount">
+		</div>
+		<div>
+			<label>Тип на списъка:</label>
+			<select id="listType">
+				<option value="ol" name="list_type">Ordered List</option>
+				<option value="ul" name="list_type">Unordered List</option>
+			</select>
+		</div>
+		<div>
+			<button onclick="createList();">Create List</button>
+		</div>
+	</section>
+	<section id="result_container">
+		<h1>Резултат</h1>
+	</section>
+
+<script type="text/javascript">
+	var outputNode = document.getElementById('result_container');
+	var listType;
+	var listItemsCount;
+
+	function createList(){
+		// clean the outputNode content
+		outputNode.innerHTML = '<h1>Резултат</h1>';
+
+		// get list parameters
+		listItemsCount  = document.getElementById('listItemsCount').value;
+		listType = document.getElementById('listType').value;
+
+		// create the list element
+		var listNode = document.createElement(listType);
+
+		//create list items
+		for (var i = 1; i <= listItemsCount; i++){
+			var listItem = document.createElement('li');
+			listItem.innerHTML = 'Item '+ i;
+			listNode.appendChild(listItem);
+		}
+
+		// attach to output node:
+		outputNode.appendChild( listNode );
+	}
+</script>
+</body>
+</html>

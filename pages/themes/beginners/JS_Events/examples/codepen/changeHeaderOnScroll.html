@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Header On Scroll</title>
+	<style type="text/css">
+		header.smaller {
+			height: 75px;
+		}
+
+		header.smaller h1#logo {
+			width: 150px;
+			height: 75px;
+			line-height: 55px;
+			font-size: 55px;
+			margin: 0;
+		}
+
+		header.smaller nav a {
+			line-height: 75px;
+		}
+
+		*,
+		*:before,
+		*:after {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body {
+			color: #505050;
+			font-family: "Open Sans", sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 1.8;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1;
+			font-weight: 100;
+			color: #77C7AC;
+		}
+
+		a {
+			text-decoration: none;
+			color: #fcfcfc;
+			font-weight: 300;
+		}
+
+		a:hover {
+			color: #3c3c3c;
+		}
+
+		#wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		#main {
+			background-color: #fff;
+			padding-top: 150px;
+		  min-height:500px;
+		}
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0 30px;
+		}
+
+		section {
+			padding: 60px 0;
+		}
+
+		section h1 {
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		section p {
+			margin-bottom: 30px;
+		}
+
+		section p:last-child {
+			margin-bottom: 0;
+		}
+
+		section.color {
+			background-color: #f4f4f4;
+		}
+
+		header {
+			width: 100%;
+			height: 10em;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+		  border-bottom:solid 0.5em #f4f4f4;
+			background-color: #394e63;
+			transition: height 0.3s;
+		}
+
+		header h1#logo {
+			display: inline-block;
+			line-height:3em;
+		   margin: 0;
+		   padding:0 1em;
+		   background-color:#fd5559;
+			float: left;
+			font-family: "Open Sans", sans-serif;
+			font-size: 60px;
+			color: #fcfcfc;
+		  text-shadow: 0.1em 0.03em #C0392B;
+			font-weight: 400;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+
+		header nav {
+			display: inline-block;
+			float: right;
+		}
+
+		header nav a {
+			line-height: 150px;
+			margin-left: 20px;
+			color: #fcfcfc;
+			font-weight: 300;
+			font-size: 1em;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+
+		header nav a:hover {
+			color: #fd5559;
+		}
+
+		header.smaller {
+			height: 75px;
+		}
+
+		header.smaller h1#logo {
+			line-height: 75px;
+			font-size: 30px;
+		}
+
+		header.smaller nav a {
+			line-height: 75px;
+		}
+
+		footer {
+			background-color: #3c3c3c;
+			text-align: center;
+		   min-height:17em;
+		   color: #bababa;
+		}
+
+		footer  a {
+			display: inline-block;
+			margin: 0;
+		  text-decoration:underline;
+		}
+		footer div.col {
+		  width:20%;
+		  display:inline-block;
+		  vertical-align: top;
+		}
+		footer col a {
+		  display:block;
+		}
+
+		footer ul li a:hover {
+			color: #fd5559;
+		}
+		footer ul li a {
+		    color: #bababa;
+		}
+		footer div#copy {
+		  margin-top: 1em;
+		  padding:0;
+		}
+		footer div#copy a {
+		  color: #fd5559;
+		}
+		footer div.container {
+		  position:relative;
+
+		}
+		footer ul{
+		  list-style:none;
+		  margin-top:2em;
+		  padding:0;
+		}
+		footer ul li {
+		  text-align:left;
+		  margin:0;
+		  padding:0;
+		}
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			content: "";
+			clear: both;
+			height: 0;
+		}
+
+		@media all and (max-width: 760px) {
+			header h1#logo {
+				display: block;
+				float: none;
+				margin: 0 auto;
+				height: 100px;
+				line-height: 80px;
+				text-align: center;
+			}
+
+			header nav {
+				display: block;
+				float: none;
+				height: 50px;
+				text-align: center;
+				margin: 0 auto;
+			}
+
+			header nav a {
+				line-height: 50px;
+				margin: 0 10px;
+			}
+
+			header.smaller {
+				height: 75px;
+			}
+
+			header.smaller h1#logo {
+				height: 40px;
+				line-height: 40px;
+				font-size: 30px;
+		     width:100%;
+			}
+
+			header.smaller nav {
+				height: 35px;
+			}
+
+			header.smaller nav a {
+				line-height: 35px;
+			}
+		  footer div.col {
+		    width:100%;
+		    display:inline-block;
+		    vertical-align: top;
+		  }
+		  footer ul li {
+		    display:inline-block;
+		    margin:0 0.5em;
+		    float:left;
+		  }
+
+		}
+
+		@media all and (max-width: 600px) {
+			.container {
+				width: 100%;
+			}
+
+			footer a {
+				display: block;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+	  <header id="js-header">
+	      <div class="container clearfix">
+	          <h1 id="logo">Apples</h1>
+	          <nav>
+	              <a href="#bacon">Bacon</a>
+	              <a href="#sausage">Sausage</a>
+	              <a href="#biltong">Biltong</a>
+	          </nav>
+	      </div>
+	  </header>
+
+	  <div id="main">
+	      <div id="content">
+	          <section>
+	              <div class="container">
+	                  <h1>I Second That Emotion</h1>
+	                  <p>Aww, it's true. I've been hiding it for so long. Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you! You guys go on without me! I'm going to go… look for more stuff to steal! When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I?" Then later, Leela made the film. But if I did make it, you can bet there would have been more topless women on motorcycles. Roll film! So I really am important? How I feel when I'm drunk is correct? Is the Space Pope reptilian!?</p>
+	                  <p>Bacon atball corned beef strip steak andouille.</p>
+	              </div>
+	          </section>
+	          <section class="color">
+	              <div class="container">
+	                  <h1>The Duh-Vinci Code</h1>
+	                  <p>Bender, you risked your life to save me! Good news, everyone! I've taught the toaster to feel love! I can explain. It's very valuable. Can we have Bender Burgers again?
+
+	For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs! You seem malnourished. Are you suffering from intestinal parasites? Say what? Now, now. Perfectly symmetrical violence never solved anything. Eeeee! Now say "nuclear wessels"! Ugh, it's filthy! Why not create a National Endowment for Strip Clubs while we're at it?
+
+	I suppose I could part with 'one' and still be feared… Noooooo! Have you ever tried just turning off the TV, sitting down with your children, and hitting them?
+
+	Isn't it true that you have been paid for your testimony? All I want is to be a monkey of moderate intelligence who wears a suit… that's why I'm transferring to business school! We'll need to have a look inside you with this camera. Really?!</p>
+	                  <p>Bacon ipsum dolor sit amet pig biltong filet mignon, kiel</p>
+	              </div>
+	          </section>
+	         <section>
+	              <div class="container">
+	                  <h1>A Bicyclops Built For Two</h1>
+	                  <p>I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money. Ugh, it's filthy! Why not create a National Endowment for Strip Clubs while we're at it? Oh dear! She's stuck in an infinite loop, and he's an idiot! Well, that's love for you. For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs! I was having the most wonderful dream. Except you were there, and you were there, and you were there! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
+	                  <p>Bacon </p>
+	              </div>
+	          </section>
+	     </div>
+	  </div>
+	   <footer>
+	        <div class="container clearfix">
+	          <div class ="col" id="col-1">
+	            <ul>
+	              <li>APPLES</li>
+	              <li><a href="#0">Home</a></li>
+	              <li><a href="#0">Services</a></li>
+	              <li><a href="#0">Contact</a></li>
+	              <li><a href="#0">Sitemap</a></li>
+	            </ul>
+	          </div>
+	          <div  class ="col" id="col-2">
+	            <ul>
+	              <li>SOCIAL</li>
+	              <li><a href="#0">Facebook</a></li>
+	              <li><a href="#0">Twitter</a></li>
+	              <li><a href="#0">LinkedIn</a></li>
+	            </ul>
+	          </div>
+	          <div  class ="col" id="col-3">
+	            <ul>
+	              <li>SERVICES</li>
+	              <li><a href="#0">Bacon</a></li>
+	              <li><a href="#0">Sausage Services</a></li>
+	              <li><a href="#0">Cheese</a></li>
+	              <li><a href="#0">Cider Apples</a></li>
+	            </ul>
+	          </div>
+	          <div id="copy">&#xa9; Designed and built by <a href="https://twitter.com/lilianakastilio">@liianakastilio</a> 2013 - 2014</div>
+	        </div>
+	  </footer>
+	</div>
+
+	<script type="text/javascript">
+		function resizeHeaderOnScroll() {
+		  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+		  shrinkOn = 200,
+		  headerEl = document.getElementById('js-header');
+
+		  console.log(`distanceY=${distanceY}`);
+		  if (distanceY > shrinkOn) {
+		    headerEl.classList.add("smaller");
+		  } else {
+		    headerEl.classList.remove("smaller");
+		  }
+		}
+
+		window.addEventListener('scroll', resizeHeaderOnScroll);
+
+	</script>
+</body>
+</html>

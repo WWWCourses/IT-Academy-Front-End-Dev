@@ -1,20 +1,22 @@
 /* ********************************************************************** */
 /* Reveal.js themes */
 /* ********************************************************************** */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/black.css" */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/blood.css" */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/league.css"; */
-@import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/moon.css";
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/night.css" */
+/* @import "../../../lib/reveal.js/dist/theme/black.css" */
+/* @import "../../../lib/reveal.js/dist/theme/blood.css" */
+/* @import "../../../lib/reveal.js/dist/theme/league.css"; */
+@import "../../../lib/reveal.js/dist/theme/moon.css";
+/* @import "../../../lib/reveal.js/dist/theme/night.css" */
 /* Custom */
-@import "/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css";
+@import "../../../outfit/css/reveal.js.css";
 /* ********************************************************************** */
 /* Code syntax highlighting */
 /* ********************************************************************** */
 @import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css";
-@import "/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css";
+@import "../../../outfit/css/custom_hljs.css";
 /* ********************************************************************** */
 /* Text formating  */
 /* ********************************************************************** */
-@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/dark/structuring_elements.css";
-@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/dark/text_schemes.css";
+@import "../../../outfit/css/colorSchemes/dark/structuring_elements.css";
+@import "../../../outfit/css/colorSchemes/dark/text_schemes.css";
+@import "../../../outfit/css/colorSchemes/dark/color_classes.css";
+@import "../../../outfit/css/colorSchemes/font_sizes.css";

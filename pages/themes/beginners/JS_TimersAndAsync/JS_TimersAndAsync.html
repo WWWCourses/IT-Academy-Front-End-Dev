@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS_TimersAndAsync</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#JS_Functions" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Tаймери в JavaScript</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Въведение</h2>
+    <section>
+        <dl class="fa">
+            <dt>В JavaScript разполагаме с 2 метода, които позволяват да изпълним код след/през определен интервал от време</dt>
+            <dt>Това са методите (дефинирани в глобалния обект): <code>setTimeout()</code> и <code>setInterval()</code></dt>
+            <dt>Тези методи изпълняват кода <span class="note">асинхронно</span>!</dt>
+
+        </dl>
+    </section>
+    <section><h3>Синхронен и асинхронен JavaScript</h3>
+        <dl class="fa">
+            <dt>Синхронно изпълнение на програма</dt>
+            <dd>Когато всяка инструкция се изпълнява <span class="note">след</span> като предходната инструкция завърши изпълнението си.</dd>
+            <dt>А-синхронно изпълнение на програма</dt>
+            <dd>Всяка следваща инструкция се изпълнява <span class="note">веднага</span> след предходната, независимо дали предходната инструкция е приключила работата си или не.</dd>
+        </dl>
+    </section>
+    <section><h3>Пример за синхронно изпълнение</h3>
+        <pre><code rel="JS" class="js">
+            // докато функцията alert() не приключи изпълнението си, нито един ред след нея няма да се изпълни:
+            alert(`1`);
+
+            console.log(`2`);
+        </code></pre>
+    </section>
+    <section><h3>Пример за асинхронно изпълнение</h3>
+        <pre><code rel="JS" class="js">
+            //функцията setTimeout() се извиква веднага, но кода в нея - едва след 1000ms
+            setTimeout(function(){
+                console.log(`1`);
+            },1000)
+
+            console.log(`2`);
+        </code></pre>
+        <pre><code rel="OUTPUT" class="js" data-noescape>
+            2
+            1 // след 1 секунда
+        </code></pre>
+        <dl class="fa">
+            <dt>Забележете, че кода <code>console.log(`2`)</code> <span class="note">не изчаква</span> предходната инструкция да завърши изпълнението си, а се изпълнява веднага.</dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>setTimeout()</h2>
+    <section><h3>Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            var timeoutID = setTimeout(function, milliseconds[, arg1, arg2, ...])
+        </code></pre>
+        <dl class="fa">
+            <dt>Метода setTimeout() изпълнява <b>еднократно</b> подадената функция (<span class="note">декларация на функция, анонимна или не</span>) след определен интервал от време, зададен в <span class="note">милисекунди</span>.</dt>
+            <dt>Ако функцията е дефинирана с параметри, то можем да подадем съответните аргументи (<span class="note">arg1, arg2, ...</span>)</dt>
+            <dt>timeoutID - число, което идентифицира таймера. Можем да използваме тази стойност, за да прекратим изпълнението на setTimeout().</dt>
+        </dl>
+    </section>
+    <section><h3>Example: change body background after 2 seconds</h3>
+        <pre><code rel="JS" class="js">
+            var color = "#DAA371";
+
+            function changeBodyBG(){
+                console.log(`changeBodyBG() will change the body background!`);
+                document.body.style.backgroundColor = color;
+            }
+
+            setTimeout(changeBodyBG, 2000);
+
+            console.log(`After setTimeout()`);
+        </code></pre>
+        <pre><code rel="OUTPUT" class="js">
+            After setTimeout()
+            changeBodyBG() will change the body background!
+        </code></pre>
+    </section>
+    <section><h3>Example: createDivsWithTimeout</h3>
+        <iframe scrolling='no' title='createDivsWithTimeout' src='//codepen.io/webdesigncourse/embed/WXBpNb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/WXBpNb/'>createDivsWithTimeout</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Reference</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp">setTimeout() @w3schools</a></dt>
+            <dt><a href="https://developer.mozilla.org/ro/docs/Web/API/window.setTimeout">setTimeout() @MDN</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>setInterval()</h2>
+    <section><h3>Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            var intervalID = setInterval(function, milliseconds[, arg1, arg2, ...])
+        </code></pre>
+        <dl class="fa">
+            <dt>Метода setInterval() изпълнява <b>през зададения интервал от време</b> подадената дефиниция на функция.</dt>
+            <dt>Функцията ще се извиква непрекъснато, докато действието на setInterval() не се прекрати чрез <strong><code>clearInterval()</code></strong> или до затваряне на прозореца на браузъра.</dt>
+            <dt><span class="note">function</span> трябва да бъде дефиниция на функция: анонимна или променлива, в която е дефиницията.</dt>
+            <dt>Ако функция е дефинирана с параметри, то можем да подадем съответните аргументи (<span class="note">arg1, arg2, ...</span>) </dt>
+        </dl>
+    </section>
+    <section><h3>Example: changeColorWithSetInterval</h3>
+        <iframe scrolling='no' title='changeColorWithSetInterval' src='//codepen.io/webdesigncourse/embed/VQByBr/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VQByBr/'>changeColorWithSetInterval</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Reference</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">setInterval() @w3schools</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval() @MDN</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>Crearing Timers</h2>
+    <section><h3>clearInterval() - Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            clearInterval(intervalID)
+        </code></pre>
+        <dl class="fa">
+            <dt>Прекратява изпълнението на даден setInterval()</dt>
+            <dt><span class="note">intervalID</span> е стойността върната при извикването на setInterval()</dt>
+        </dl>
+        <pre><code rel="Example" class="js">
+            // взимаме ID на setInterval():
+            var intervalID = setInterval(foo, 1000);
+
+            // прекратяваме изпълнението на съответния интервал:
+            clearInterval(intervalID);
+        </code></pre>
+    </section>
+    <section><h3>Example: clearInterval()</h3>
+        <iframe scrolling='no' title='Example: clearInterval()' src='//codepen.io/webdesigncourse/embed/yvqvRb/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/yvqvRb/'>Example: clearInterval()</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>clearTimeout() - Syntax</h3>
+        <pre><code rel="Syntax" class="js">
+            clearTimeout(timeoutID)
+        </code></pre>
+        <dl class="fa">
+            <dt>Прекратява изпълнението на даден setTimeout()</dt>
+            <dt><span class="note">timeoutID</span> е стойността върната при извикването на setTimeout()</dt>
+            <dt>Технически погледнато, <code>clearInterval()</code> и <code>clearTimeout()</code> могат да се използват взаимозаменяемо. Но кодът би бил по чист, ако се придържаме към дадените правила.</dt>
+        </dl>
+    </section>
+    <section><h3>clearTimeout() - Example</h3>
+        <iframe title='set_or_cancle_bodyBGchange_on_user_input' src='//codepen.io/webdesigncourse/embed/zmOaKY/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/zmOaKY/'>set_or_cancle_bodyBGchange_on_user_input</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+
+    <section><h3>Reference</h3>
+        <dl class="fa">
+            <dt><a href="https://www.w3schools.com/jsref/met_win_clearinterval.asp">clearInterval() @w3schools</a></dt>
+            <dt><a href="https://www.w3schools.com/jsref/met_win_cleartimeout.asp">clearTimeout() @w3schools</a></dt>
+        </dl>
+    </section>
+
+</section>
+
+
+<section><h2>Примери и Задачи</h2>
+<a href="https://codepen.io/collection/XzexzB/">codepen колекция с примери и задачи върху темата</a>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

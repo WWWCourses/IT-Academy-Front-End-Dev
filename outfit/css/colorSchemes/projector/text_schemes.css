@@ -54,39 +54,10 @@
     font-style: italic;
 }
 .reveal .newterm{
-    color: #C5E1A5;
+    color: #3FC0A9;
     font-weight: bold;
 }
 .reveal .code{
     font-family: monospace;
     font-weight: bold;
-}
-/* font sizes */
-.reveal .fs-smallest{
-    font-size: .4em;
-    line-height: 1m;
-}
-.reveal .fs-smaller{
-    font-size: .6em;
-    line-height: 1.2;
-}
-.reveal .fs-small{
-    font-size: .8em;
-    line-height: 1.2;
-}
-.reveal .fs-big{
-    font-size: 1.2em;
-    line-height: 1.2;
-}
-.reveal .fs-normal{
-    font-size: 1em;
-    line-height: 1.2;
-}
-.reveal .fs-biger{
-    font-size: 1.4em;
-    line-height: 1.2;
-}
-.reveal .fs-bigest{
-    font-size: 1.6em;
-    line-height: 1.2;
 }

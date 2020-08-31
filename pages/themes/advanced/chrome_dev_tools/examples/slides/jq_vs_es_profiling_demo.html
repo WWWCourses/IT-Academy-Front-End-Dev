@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Console APIs Demo</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <style type="text/css">
+  	.box{
+  		width: 50em;
+  		height: 10em;
+  		border: 2px solid #999;
+  	}
+  </style>
+</head>
+<body>
+	<h2>Task: find which one will be faster using the console.time()?</h2>
+	<div class="box es">
+		<button>Color me with ES</button>
+	</div>
+	<div class="box jq">
+		<button>Color me with jQuery</button>
+	</div>
+
+<script type="text/javascript">
+	repeat = 1000;
+
+	$('.jq>button').click(function(){
+		console.time('jq timer');
+		for(let i = 0; i < repeat; i++){
+			$(this).parent().css('background',"red");
+		}
+		$(this).parent().css('background',"darkred");
+		console.log(console.timeEnd('jq timer'))
+	})
+
+	document.querySelector('.es>button').
+		addEventListener('click', function(){
+			console.time('es timer');
+			for(let i = 0; i < repeat; i++){
+				this.parentNode.style.backgroundColor = "blue";
+			}
+			this.parentNode.style.backgroundColor = "darkblue";
+			console.log(console.timeEnd('es timer'))
+	})
+</script>
+</body>
+</html>

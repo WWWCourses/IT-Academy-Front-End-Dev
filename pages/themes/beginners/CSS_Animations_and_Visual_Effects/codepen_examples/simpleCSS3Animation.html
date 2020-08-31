@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple CSS3Animation</title>
+    <style type="text/css">
+    	.boll{
+            position: relative;
+    		width: 100px;
+    		height: 100px;
+            margin: 300px auto;
+    		border-radius: 100%;
+            border:5px solid #999;
+    		background: red;
+            color: #FFF;
+    		transition:
+                width 1s,
+                height 1s,
+                font-size 1s,
+                background 1s;
+    	}
+    	.boll:hover{
+            width: 300px;
+            height: 300px;
+            font-size: 3em;
+            background: blue;
+    	}
+
+        /*the text inside the boll"*/
+        .boll:before{
+            content: "A";
+            position: absolute;
+            top: 30%;
+            display: inline-block;
+            width: 100%;
+            font-size: 2em;
+            text-align: center;
+        }
+        .boll:hover:before{
+            content: "B";
+        }
+
+    </style>
+</head>
+<body>
+	<div class="boll"></div>
+</body>
+</html>

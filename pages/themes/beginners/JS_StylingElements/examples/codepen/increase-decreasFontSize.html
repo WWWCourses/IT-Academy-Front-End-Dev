@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>increase-decreasFontSize.html</title>
+	<style type="text/css">
+		.fontControls{
+			position: fixed;
+			top: 0; right: 0;
+			padding: .2em .2em 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="fontControls">
+		<button onclick="increaseFont();">A+</button>
+		<button onclick="decreaseFont();">A-</button>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+
+	<script type="text/javascript">
+		var pNode = document.querySelector("p");
+
+		var pFontSize = getNodeFontSize(pNode);// as number:		
+		pFontSize = pFontSize.slice(0,-2)*1;
+
+		console.log(`pFontSize: ${pFontSize}`);
+
+		function increaseFont(){			
+			pFontSize += 2;
+			pNode.style.fontSize = pFontSize+"px";
+		}
+
+		function decreaseFont(){
+			pFontSize -= 2;
+			pNode.style.fontSize = pFontSize+"px";
+
+			//no negative font-size:
+			if( pFontSize < 0 ){
+				pFontSize = 0;
+			};			
+		}
+
+		function getNodeFontSize(node){
+			var nodeStyleObj = window.getComputedStyle( node );
+
+				return nodeStyleObj.fontSize;		
+		}
+	</script>
+</body>
+</html>

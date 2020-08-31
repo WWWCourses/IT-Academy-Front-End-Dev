@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*контейнер за колоните. Трябва да бъде позициониран, заради фонът под колоните/
+		.wrapper{			
+			position: relative;				
+			min-height: 80vh; 					
+		}
+		.col1, .col2{
+			float: left;
+		}
+
+		/*колоните и фона под тях, трябва да бъдат с еднаква в широчина*/		
+		.col1, .col1:before{
+			width: 30%;			
+		}
+		.col2, .col2:before{
+			width: 70%;
+		}
+
+		/*Фонът под колоните (псевдо-елемента) е позициониран абсолютно, за да се "разпъне" по височина спрямо контейнерът (.wrapper).*/
+		.col1:before, .col2:before{
+			position: absolute;
+			top: 0; bottom: 0;
+			content: "";
+			/*За да бъде под самите колони*/
+			z-index: -1;
+		}
+
+		/*Задаваме цвят и позиция за всеки фонов псевдо-елемент*/
+		.col1:before{			
+			left: 0;		
+			background: red;			
+		}
+		.col2:before{
+			/*Фонът под 2та колона отместваме вдясно, спрямо широчината на първата колона*/
+			left:30%;			
+			background: blue;
+		}
+
+		/*Трябва да спрем "Float ефекта" за да може контейнерът да обхване по височина децата си, които са float-ed.*/
+		.clear:after{
+			display: block;
+			content: '';
+			clear: both;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper clear">
+		<div class="col1">LEFT</div>
+		<div class="col2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

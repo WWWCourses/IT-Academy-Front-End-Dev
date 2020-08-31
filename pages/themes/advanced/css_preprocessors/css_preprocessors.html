@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>css_preprocessors</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+
+
+	<style type="text/css">
+		.reveal section{
+			font-size: .9em;
+		}
+		.reveal section pre{
+			font-size: .6em;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#css_preprocessors" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>CSS pre-processors and native CSS Custom properties</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>Why to pre-process CSS?</h1></section>
+<section><h2>Why to pre-process CSS?</h2>
+  <section><h3></h3>
+  	<dl class="fa">
+  		<dt>CSS is difficult to be maintained in large code-bases.</dt>
+  		<dt>CSS Preprocessors offers advanced features:</dt>
+  		<dd>Write code quicker.</dd>
+  		<dd>Write clear-structured code</dd>
+  		<dd>Use Variable, Conditionals, Loops, Mixins</dd>
+  		<dt>Yes, CSS is evolving, and the knowledge you'll get from using CSS pre-processors will help you master the new CSS features.</dt>
+  		<dd>CSS variables are real, now!</dd>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>What is CSS Preprocessor?</h1></section>
+<section><h2>What is CSS Preprocessor?</h2>
+  <section>
+  	<dl class="fa">
+  		<dt>A CSS preprocessor is a scripting language that extends CSS</dt>
+  		<dt>There are lots of CSS Preprocessor, but most popular among them sre:</dt>
+  		<dd>Less, SASS and Stylus</dd>
+  		<dd><a href="https://stackshare.io/stackups/less-vs-postcss-vs-sass">Sass vs. Less vs. PostCSS</a> @<a href="https://stackshare.io/">stackshare</a></dd>
+  		<dt>Browsers <span class="note">do not understand</span> any of them, so in order to use one, we need to have the corresponding compiler (to CSS).</dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>LESS is more.</h1></section>
+<section><h2>LESS is more.</h2>
+  <section><h3>Overview</h3>
+  	<dl class="fa">
+  		<dt><a href="http://lesscss.org/">Less CSS</a></dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="20"><h1>Sass Overview</h1></section>
+<section><h2>Sass Overview</h2>
+	<section>
+		<dl class="fa">
+			<dt>Sass = Syntactically Awesome StyleSheets</dt>
+			<dt>Sass = CSS with superpowers</dt>
+			<dd>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</dd>
+			<dt>Sass official page: <a href="https://sass-lang.com/">sass-lang.com</a></dt>
+		</dl>
+	</section>
+	<section><h3>Install Anywhere (Standalone) </h3>
+		<dl class="fa">
+			<dt>Go to: <a href="https://github.com/sass/dart-sass/releases">sass-lang.com/install</a> and download the package for your operating system</dt>
+			<dt>Extract the archive where you want it to be "installed"</dt>
+			<dd>like 'Program Files'</dd>
+			<dt>Add that path to your OS $PATH</dt>
+			<dd>Google for:<br> [windows|linux|macos] how to add folder to path</code></dd>
+			<dt>For Windows troubleshooting: <a href="https://stackoverflow.com/questions/51571814/how-to-install-dart-sass">How to install Dart Sass?</a></dt>
+
+		</dl>
+	</section>
+	<section><h3>Test it</h3>
+		<dl class="fa">
+			<dt>Create an HTML5 page with an empty <code>div.test</code> element.</dt>
+			<dt>Create a simple sass file:</dt>
+			<pre><code rel="sass_demo.scss" class="css" style="width: 70vw;">
+				$color 	  : #F100FF;
+				$bg_color : #5C5454;
+
+				.test{
+					width: 50em;
+					height: 5em;
+					color: $color;
+					background: $bg_color;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Test it</h3>
+		<dl class="fa">
+			<dt>Open your terminal and navigate to the folder where your .scss file lives.</dt>
+			<dt>And just compile it into CSS by:</dt>
+			<pre><code rel="Terminal" class="bash" data-noescape>
+					$ sass sass_demo.scss sass_demo.css
+			</code></pre>
+			<dt>The CSS file is generated, along with the <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Source Map</a> file</dt>
+			<dd>If you wander, what for is that Source Map, go on and read <a href="https://robots.thoughtbot.com/sass-source-maps-chrome-magic">Sass Source Maps + Chrome = Magic</a></dd>
+		</dl>
+	</section>
+	<section><h3><code>--watch</code> files</h3>
+		<dl class="fa">
+			<dt>Instead of manually compiling on each change, you can tell <code>sass</code> to <span class="note">--watch</span> your file or directory for changes and to <span class="note">compile automatically</span> on each change</dt>
+			<dt>I.e. we can write in our Terminal:</dt>
+			<pre><code rel="Terminal" class="bash" data-noescape>
+					$ sass --watch sass_demo.scss sass_demo.css
+				</code></pre>
+		</dl>
+	</section>
+	<section><h3><code>--watch</code> folder</h3>
+		<dl class="fa">
+			<dt>SASS can also watch all files in a directory.</dt>
+			<pre><code rel="Folder Structure" class="bash" data-noescape>
+				├── app
+				│  └── scss
+				│      └── sass_demo.scss
+				├── dist
+				│  └── stylesheets
+				└── sass_demo.html
+			</code></pre>
+			<pre><code rel="Terminal" class="bash" data-noescape>
+				$ sass --watch app/scss:dist/stylesheets
+
+				>Compiled app/scss/sass_demo.scss to dist/stylesheets/sass_demo.css.
+				>Sass is watching for changes. Press Ctrl-C to stop.
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Final note on compiling</h3>
+		<dl class="fa">
+			<dt>Of course, there are even more automated ways for compiling SASS</dt>
+			<dt>You can use a plugin for your text editor.</dt>
+			<dt>Or even better - you can setup a bundler, like webpack, which will be covered in next lectures.</dt>
+		</dl>
+	</section>
+
+
+	<section><h3>Sass: the two syntaxes</h3>
+		<dl class="fa">
+			<dt>There are two syntaxes available for Sass</dt>
+			<dt>The <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">indented syntax</a>, or just Sass</dt>
+			<dd>files are with extension <code class="note">.sass</code></dd>
+			<dt>SCSS (or Sassy CSS) is the newer version, as of Sass v3.</dt>
+			<dd>files are with extension <code class="note">.scss</code></dd>
+
+
+		</dl>
+	</section>
+	<section><h3>The indented syntax overview</h3>
+		<dl class="fa">
+
+
+			<dt>The indented syntax is the older syntax.</dt>
+			<dt>It provides more concise way for writing code</dt>
+			<dd>No brackets - just indentation</dd>
+			<dd>No semicolon - new line is enough to separate declarations</dd>
+			<dt>But it deviates away from CSS.</dt>
+		</dl>
+	</section>
+	<section><h3>SCSS overview</h3>
+		<dl class="fa">
+			<dt>The newer syntax is a <span class="note">superset of CSS</span>, i.e each valid CSS is a valid SCSS.</dt>
+
+
+		</dl>
+	</section>
+</section>
+
+
+<section data-min="20"><h1>SASS basic features</h1></section>
+<section><h2>SASS basic features</h2>
+	<section><h3>Partials</h3>
+		<dl class="fa">
+			<dt>You can create partial Sass files that contain little snippets  of CSS that you can include in other Sass files.</dt>
+			<dt><span class="note">A partial is a Sass file named with a leading underscore</span>, like <code>_variables.scss</code>.</dt>
+			<dt>The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the @use rule.</dt>
+			<dt>You can include the partial file, with <code>@import "file_name"</code>, where <code>file_name</code> is the name of the partial <span class="note">without underscore</span>. You can skip the ".scss" extension</dt>
+		</dl>
+		<pre><code rel="_global_variables.scss" class="scss">
+			$box_width:200px;
+			$box_height:200px;
+		</code></pre>
+		<pre><code rel="main.scss" class="scss">
+			@import "global_variables";
+		</code></pre>
+	</section>
+	<section><h3>Variables</h3>
+		<dl class="fa">
+			<dt>A variable in Sass begins with <code>$</code> and its value is assigned like a CSS value to a property. I.e. with the column notation.</dt>
+			<pre><code rel="SCSS" class="scss">
+				// declare to variables:
+				$color: #F100FF;
+				$bg_color: #952b2b;
+
+				// and use it, like that:
+				.test{
+					color: $color;
+					background: $bg_color;
+				}
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Property Declarations</h3>
+		<dl class="fa">
+			<dt>In SASS, a  declaration's value can be any <a href="https://sass-lang.com/documentation/syntax/structure#expressions">SassScript expression</a>, which will be evaluated and included in the result.</dt>
+		</dl>
+	</section>
+	<section><h3>Hidden Declarations</h3>
+		<dl class="fa">
+			<dt>If a declaration’s value is false (or null or an empty unquoted string), Sass won’t compile that declaration to CSS at all.</dt>
+		</dl>
+		<pre><code rel="SASS" class="scss">
+			$rounded: false;
+
+			.button {
+				border: 1px solid #999;
+				border-radius: if($rounded, 5px, null);
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css">
+			.button {
+				border: 1px solid black;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Nested Rules</h3>
+		<dl class="fa">
+			<dt>Sass allows CSS rules to be nested, and the inner rule only applies within the outer rule's selector.</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.A{
+				/* A declarations */
+				.B{
+					/* B declarations */
+				}
+			}
+		</code></pre>
+		<pre><code rel="css" class="scss" data-noescape>
+			.A{
+				/* A declarations */
+			}
+			.A .B{
+				/* B declarations */
+			}
+		</code></pre>
+	</section>
+	<section><h3>Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt>We can point to the parent selector using the <code class="note">&</code> symbol. Like in</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			a {
+			  text-decoration: none;
+			}
+			a:hover {
+			  text-decoration: underline;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Resolving Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt>On deeper nesting, the parent selectors will be fully resolved before replacing the <code>&:</code></dt>
+		</dl>
+		<pre><code rel="SCS" class="scss" data-noescape>
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+					&:after{
+						content: ">>";
+					}
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			a {
+			  text-decoration: none;
+			}
+			a:hover {
+			  text-decoration: underline;
+			}
+			a:hover:after {
+			  content: ">>";
+			}
+		</code></pre>
+	</section>
+	<section><h3>Suffixed Parent Selectors: <code>&</code></h3>
+		<dl class="fa">
+			<dt><code>&</code> should be at the beginning of the selector, but  it can be followed by a suffix that will be added to the parent selector</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.btn{
+				background: gray;
+				border-radius: 20%;
+				&-alert{
+					background: red;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			.btn {
+			  background: gray;
+			  border-radius: 20%;
+			}
+			.btn-alert {
+			  background: red;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Nested Properties</h3>
+		<dl class="fa">
+			<dt>The namespaced properties, like: background-image, background-size, etc. can be economically written is SCSS like:</dt>
+		</dl>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			.cover{
+				background:{
+					image:"img1.png";
+					size: 100% 100%;
+					position: center;
+				}
+			}
+		</code></pre>
+		<pre><code rel="CSS" class="css" data-noescape>
+			.cover {
+			  background-image: "img1.png";
+			  background-size: 100% 100%;
+			  background-position: center;
+			}
+		</code></pre>
+	</section>
+
+	<section><h3>Data Types</h3>
+		<pre><code rel="SCSS" class="scss" data-noescape>
+			// numbers
+			$number: 1.23;
+
+			// strings
+			$foo:"bar";
+			$foo:bar;
+
+			// colors:
+			$color:red;
+			$color:#F00;
+			$color:rgba(255,0,0,0.5);
+
+			// booleans
+			$shown:true;
+			$shown:false;
+
+			// null:
+			$test:null;
+
+			// lists
+			$border: 1px solid $color;
+			$font: "Helvetica", serif;
+
+			//maps (like dictionary)
+			$color_map: (
+			  light: #ccc,
+			  dark: #000
+			);
+		</code></pre>
+	</section>
+	<section><h3>SCSS Operations</h3>
+		<dl class="fa">
+			<dt>Reference: <a href="https://sass-lang.com/documentation/operators">operators @sass-lang.com</a></dt>
+		</dl>
+		<pre><code rel="SASS" class="scss">
+			$box_width:200px;
+			$box_height:$box_width*2;
+
+			.parent{
+				width: $box_width;
+				height: $box_height;
+				background-color: red;
+
+				div{
+					width: $box_width/2;
+					height: $box_height/2;
+					background-color: blue;
+				}
+			}
+		</code></pre>
+	</section>
+	<section><h3>@-Rules and Directives</h3>
+		<dl class="fa">
+			<dt>@mixin</dt>
+			<dd>live demo</dd>
+		</dl>
+	</section>
+
+	<section><h3>Examples</h3>
+		<iframe  scrolling='no' title='SCSS demo' src='//codepen.io/webdesigncourse/embed/dgrqZB/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/dgrqZB/'>SCSS demo</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+</section>
+
+
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

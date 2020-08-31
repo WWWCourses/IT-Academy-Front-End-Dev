@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical Align - using_before_element_to_stretch_the_line</title>
+    <style type="text/css">
+        /* Problem center the element if the parent height and the content height are not known in advance! */
+        html, body{
+            height: 100%;
+        }
+        .wrapper{
+            width: 20em;
+            height: 50%;
+            background: #5C1313;
+        }
+        .wrapper:before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            vertical-align: middle;
+            /*move next element*/
+            margin-left: 5em;
+        }
+
+        .v_centered{
+            display: inline-block;
+            vertical-align: middle;
+
+            width: 10em;
+        }
+        span{
+            background: #F6F4E4;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="v_centered">
+            <span>Вертикално  центриранцентриран блок.Вертикално  центриранцентриран блок</span>
+        </div>
+    </div>
+    <div>Нормално поставен блок</div>
+</body>
+</html>

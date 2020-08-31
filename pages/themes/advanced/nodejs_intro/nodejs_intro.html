@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>nodejs_intro</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#nodejs_intro" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Introduction to Node.js</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="10"><h1>Overview</h1></section>
+<section><h2>Overview</h2>
+  <section><h3>What is node?</h3>
+  	<dl class="fa">
+			<dt>Node.js is <span class="note">a JavaScript runtime</span> built on Chrome’s V8 JavaScript engine.</dt>
+			<dt>Node.js has a standard library for IO, networking and other common back-end tasks.</dt>
+  		<dt>Its community provides a vast set of libraries easily installed and managed with NPM (Node Package Manager)</dt>
+  	</dl>
+	</section>
+	<section><h3>What is node?</h3>
+		<dl class="fa">
+			<dt>Node.js uses an <span class="note">event-driven</span>, <span class="note">non-blocking I/O</span> model that makes it lightweight and efficient.</dt>
+			<dt>Node.js, as JS itself, is a <span class="note">single-threaded</span> (<a href="https://html.spec.whatwg.org/multipage/workers.html#workers">Web Workers APIs</a> are another story).</dt>
+		</dl>
+	</section>
+	<section><h3>What is node?</h3>
+		<dl class="fa">
+			<dt>Node.js is created by <a href="http://tinyclouds.org/">Ryan Dahl</a> (leaves the project at 2012)</dt>
+		</dl>
+		<iframe src="https://www.youtube.com/embed/jo_B4LTHi3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+  <section><h3>Install</h3>
+  	<dl class="fa">
+  		<dt>Install from: <a href="https://nodejs.org/en/">nodejs official site</a></dt>
+  		<dt class="advanced"><span class="advanced"></span>	Manage multiple active node.js versions:</dt>
+  		<dd><a href="https://github.com/creationix/nvm">Node Version Manager (nvm)</a></dd>
+  		<dd><a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a></dd>
+  	</dl>
+	</section>
+	<section><h3>Update</h3>
+		<pre><code rel="Terminal" class="bash">
+			npm install npm@latest -g
+		</code></pre>
+	</section>
+  <section><h3>Check installed versions</h3>
+  	<pre><code rel="Terminal" class="bash">
+  		$ node --version
+  		# node -v
+  		# you should see the installed node version
+  	</code></pre>
+  </section>
+  <section><h3>Node and EcmaScript Support</h3>
+  	<dl class="fa">
+  		<dt>The new features from the JavaScript <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262 specification</a> are brought to Node.js developers in a timely manner</dt>
+  		<dt>Overview over supported ECMAScript features in various versions of Node.js is given in <a href="https://node.green/"><b>node.green</b></a> site.</dt>
+  	</dl>
+  </section>
+  <section><h3>References</h3>
+  		<dl class="fa">
+  			<dt><a href="https://nodejs.org/en/docs/guides/">Guides section</a> @<a href="https://nodejs.org/en/docs/">nodejs - docs</a></dt>
+  			<dt><a href="https://nodejs.org/api/index.html">Node.js API docs</a></dt>
+  		</dl>
+  </section>
+</section>
+
+<section data-min="20"><h1>Nodejs Basics</h1></section>
+<section><h2>Nodejs Basics</h2>
+	<section><h3>Blocking vs. Non-blocking</h3>
+		<a href="images/blocking_IO.gif"><img src="images/blocking_IO.gif" alt="" style="height: 30vh;"></a>
+		<a href="images/non_blocking_IO.gif"><img src="images/non_blocking_IO.gif" alt="" style="height: 30vh;"></a>
+		<p>Reference: <a href="https://sudonull.com/post/164210-Visualization-of-the-flow-of-work-in-Nodejs">Visualization of the flow of work in Node.js</a></p>
+	</section>
+	<section><h3>NodeJS Event Loop - Diagram</h3>
+		<a href="images/nodejs_eventloop.png"><img src="images/nodejs_eventloop.png" alt=""></a>
+	</section>
+	<section><h3>NodeJS Event Loop Overview</h3>
+		<dl class="fa">
+			<dt>NodeJS is <span class="note">a Single Thread application</span>. But it is built on top of a platform written in C++, which uses multi-thread to carry out tasks at the same time.</dt>
+			<dt>Each event (like user request) is placed into an Event Queue (organized as FIFO: First In First Out).</dt>
+			<dt>The Event Loop is an endless loop, which passes the requests to the C++ based Thread Pool and each request is registered a Callback function</dt>
+			<dt>When the request is finished handling, the corresponding  Callback function will be executed.</dt>
+		</dl>
+	</section>
+	<section><h3>Blocking vs Non-blocking IO - example</h3>
+		<pre><code rel="JS" class="js">
+			const fs = require('fs');
+
+			let fileName = './someData.txt';
+
+			function blockingRead(fileName) {
+				const data = fs.readFileSync(fileName, 'utf8');
+				// blocks here until file is read
+
+				console.log(`Sync data read:`);
+				console.log(data);
+			}
+
+			function nonBlocking(fileName) {
+				fs.readFile(fileName,'utf8', (err, data) => {
+					if (err) {
+						throw err;
+					}else{
+						console.log(`Async data read:`);
+						console.log(data);
+					}
+				});
+
+				// the callback  will be executed when data are readed.
+			}
+
+			console.log(`~~~ 1 ~~~ `);
+			blockingRead(fileName);
+			console.log(`~~~ 2 ~~~ `);
+
+			console.log(`~~~ 3 ~~~ `);
+			nonBlocking(fileName);
+			console.log(`~~~ 4 ~~~ `);
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="50"><h1>Nodejs - server demo</h1></section>
+<section><h2>Nodejs - server demo</h2>
+	<section><h3>Creating simple server</h3>
+		<pre><code rel="JS" class="js">
+			const http = require('http');
+
+			const hostname = '127.0.0.1';
+			const port = process.env.PORT || 8080;
+
+			const server = http.createServer((req, res) => {
+				res.statusCode = 200
+				res.setHeader('Content-Type', 'text/plain')
+				res.end('Hello from My Server!\n')
+			});
+
+			server.listen(port, hostname, () => {
+				console.log(`Nodejs server is running at http://${hostname}:${port}/`)
+			});
+		</code></pre>
+	</section>
+</section>
+<!--
+<section data-min="5"><h1>Node Architecture</h1></section>
+<section><h2>Node Architecture</h2>
+  <section><h3>Overview</h3>
+
+  </section>
+</section> -->
+<!--
+
+<section data-min="5"><h1>The Event Loop Model</h1></section>
+<section><h2>The Event Loop Model</h2>
+  <section><h3>Overview</h3>
+  	<dl class="fa">
+
+  	</dl>
+  </section>
+</section> -->
+
+<section data-min="5"><h1>The node package manager (npm)</h1></section>
+<section><h2>The node package manager (npm)</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt><a href="https://www.npmjs.com/">npm</a> is an open source package manager for JavaScript code.</dt>
+			<dt>Helps the developers to share and re-use packages.</dt>
+			<dt>It's the world’s largest software registry (<a href="http://www.modulecounts.com/">modulecounts.com</a>)</dt>
+		</dl>
+	</section>
+	<section><h3>What is NPM?</h3>
+		<dl class="fa">
+			<dt>NPM allows you to <span class="note">install external node packages</span> (utility functions, libraries or whole frameworks) from the command line. They are the <span class="note">dependencies</span> of your application.</dt>
+			<dt>You can install these packages either to your global node package folder or to your local project folder.</dt>
+			<dd>Global node packages are accessible from everywhere in the terminal and you have to install them only once to your global directory</dd>
+			<dd>Local node packages are accessible only from your project folder</dd>
+		</dl>
+	</section>
+	<section><h3>What is NPM - official video</h3>
+		<iframe width="670" height="480" src="https://www.youtube.com/embed/x03fjb2VlGY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+	<section><h3>Install/Update</h3>
+		<dt>npm is installed with Node.js</dt>
+		<dt>Update:</dt>
+		<pre><code rel="Linux" class="bash">
+			# you may need sudo if you've installed node globally
+			npm install npm@latest -g
+		</code></pre>
+	</section>
+	<section><h3>initialize a npm project</h3>
+		<dl class="fa">
+			<dt>Before starting your project, which will use node modules, you have to initialize the project, and write the <span class="note">package.json</span> file</dt>
+			<dt>Only when you have that file, you can install new local packages via npm</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			#initialize a npm project (-y == defaults for package.json)
+			npm init -y
+		</code></pre>
+	</section>
+	<section><h3>share a npm project</h3>
+		<dl class="fa">
+			<dt>the <code>package.json</code> enables you to share your project with other developers without sharing all the node packages (the dependencies).</dt>
+			<dt>Someone who will use your project can simply install all packages by using <code>npm install</code> on the command line.</dt>
+			<dt><code>npm install</code> script takes all the dependencies listed in the package.json file and installs them in the node_modules folder</dt>
+		</dl>
+	</section>
+	<section><h3>package installation</h3>
+		<pre><code rel="Terminal" class="bash">
+			# Install package locally
+			npm install &lt;package&gt;
+
+			# Install package globally
+			npm install -g &lt;package&gt;
+		</code></pre>
+		<dl class="fa">
+			<dt>The installed package will automatically appear in a folder called <span class="note">node_modules</span> and will be listed in the package.json file next to your other dependencies.</dt>
+		</dl>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>Nodejs Pros/Cons</h1></section>
+<section><h2>Nodejs Pros/Cons</h2>
+  <section><h3>Pros</h3>
+  	<dl class="fa">
+  		<dt>Simplicity (just bindings to c libraries and V8)</dt>
+  		<dt>Extremely fast - can handle hundreds of requests on a single thread.</dt>
+  		<dd>if they are not CPU intensive</dd>
+  		<dt>NodeJs is a perfect candidate for real time communication over internet. Combine it with Socket.IO and you will get a good scalable web socket server </dt>
+  		<dt>Huge ecosystem and vibrant community</dt>
+  	</dl>
+  </section>
+  <section><h3>Cons</h3>
+  	<dl class="fa">
+  		<dt>Node Js handles multiple requests using one single thread. If a problem occurs whole node js instance will crash along with any global data that was stored</dt>
+  		<dt>when NodeJs gets a CPU intensive request, all the other requests get blocked till this CPU intensive request stops for an I/O</dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>What's next?</h1></section>
+<section><h2>What's next?</h2>
+	<section>
+		<iframe src="https://www.youtube.com/embed/M3BM9TB-8yA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+  <section><h3>Deno</h3>
+  	<dl class="fa">
+  		<dt><a href="https://github.com/denoland/deno">deno</a> - <span>A secure TypeScript runtime built on V8 (From the creator of node.js)</span></dt>
+  	</dl>
+  </section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1280,
+			height: 1024,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

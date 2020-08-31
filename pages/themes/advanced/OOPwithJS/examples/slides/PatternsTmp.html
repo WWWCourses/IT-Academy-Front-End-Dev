@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tmp Patterns</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'factory': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var eventFactory = function(name, date, time, place){
+				var obj ={};
+				obj.name = name;
+				obj.date = date;
+				obj.time = time;
+				obj.place = place;
+
+				obj.sayDate = function(){
+					console.log(`${this.date}`);
+				}
+				return obj;
+			}
+			eventFactory.prototype
+
+			var event1 = eventFactory(
+				'Mariinsky Theatre Orchestra with Gergiev',
+				'22.05.2017',
+				'19.30',
+				 'Bulgaria Hall',
+			);
+			var event2 = eventFactory(
+				'Gheorghi Arnaoudov at 60',
+				'21.06.2017',
+				'19.00',
+				 'Bulgarian national radio-Studio 1',
+			);
+
+			console.dir(eventFactory.prototype);
+			event1.sayDate();
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factory': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var eventProto = function(){};
+			eventProto.prototype.name = 'default name';
+			eventProto.prototype.date = '01.01.1999';
+			eventProto.prototype.time = '00:00:00';
+			eventProto.prototype.place = 'Bulgaria Hall';
+
+			eventProto.prototype.sayDate = function(){
+				console.log(`${this.date}`);
+			}
+
+
+			var event1 = new eventProto();
+			event1.name = 'Mariinsky Theatre Orchestra with Gergiev';
+			console.dir(event1);
+			event1.sayDate();
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.factory();
+</script>
+</body>
+</html>

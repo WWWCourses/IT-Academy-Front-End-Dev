@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Styling FA icons</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="FontAwesome.css">
+    <style type="text/css">
+    	body{
+    		background-color: gray;
+    		color: #DDD;
+    	}
+
+    	/*Вариант1:*/
+    	.custom-facebook{
+    		/*позиционираме "иконката", където желаем. А може и да не е позиционирана:*/
+    		position: fixed;
+    		top:30%; left: 0;
+
+    		/*размери на иконката.*/
+    		font-size: 2.5em;
+    		width: 1em;
+    		height: 1em;
+
+    		/*стилизираме "буквата":*/
+    		text-align: right;
+    		padding: .5em;
+    		color: yellow;
+
+    		/*стилизираме фона:*/
+    		background: green;
+    		border-radius: 30%;
+    	}
+
+    	/*Вариант2:*/
+    	.fa-wrapper{
+    		/*позиционираме "иконката", където желаем. А може и да не е позиционирана:*/
+    		position: fixed;
+    		top:50%; left: 0;
+
+    		/*задаваме размери на "иконата", т.е. фона:*/
+    		width: 5em;
+    		height: 5em;
+
+    		/*стилизираме фона:*/
+    		background: darkblue;
+    		border-radius: 30%;
+    	}
+    	.fa-wrapper>i{
+    		/*центрираме "буквата" по хоризонтал и вертикал спрямо фона:*/
+    		position: relative;
+	      top: 50%; left: 50%;
+	      transform: translate(-50%,-50%);
+
+	      /*стилизираме "буквата":*/
+    		color: #FFF;
+    		font-size: 2.5em;
+    		text-align: right;
+
+
+    		/*ако искаме допълнителни ефекти*/
+    		width: 1em;
+    		height: 1em;
+    		background-color: #2828C5;
+    		padding: .35em;
+    		border-radius: 30%;
+    	}
+    </style>
+</head>
+<body>
+	<h1>Styling FA icon with custom background and foreground colors:</h1>
+
+	<!-- Вариант1: Използваме FA иконата, която е без фон, като добавяме само наш клас (custom-facebook) и допълнително стилизираме фона и шрифта: -->
+	<i class="fa fa-facebook custom-facebook"></i>
+
+
+	<!-- Вариант2: използваме FA иконата, която е без фон, като слагаме един контейнер за фон, който може да стилизираме както пожелаем. Този вариант дава повече възможности за бъдещи ефекти, тъй като разполагаме с един контейнер в повече: -->
+	<div class="fa-wrapper"><i class="fa fa-facebook"></i></div>
+</body>
+</html>

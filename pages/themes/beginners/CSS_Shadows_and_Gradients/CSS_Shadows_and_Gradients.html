@@ -7,32 +7,41 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <!-- css & themes include -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css" id="theme">
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
     <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
     <!-- CUSTOM -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css">
+    <link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
+    <link rel="stylesheet" type="text/css" href="../../../../outfit/css/custom_hljs.css">
+    <link rel="stylesheet" type="text/css" href="../../../../outfit/css/themes/MatDes/text_schemes.css">
     <!-- CSS for slides examples -->
     <link rel="stylesheet" type="text/css" href="slides_examples/css/shadows.css">
     <base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
 </head>
 <body>
     <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#CSS_Animations_and_Visual_Effects" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch">
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/dark.css'); return false;">Dark</a>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/outfit/css/themes/light.css'); return false;">Light</a>
+        <div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#CSS_Animations_and_Visual_Effects" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
         </div>
         <div class="slides">
 <!--
@@ -42,20 +51,30 @@
 -->
 <section><h1>CSS Shadows and Gradients</h1></section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Created for</p>
-        </div>
-        <div class="company">
-            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-            <img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
 </section>
 
 
@@ -218,6 +237,13 @@
                 <dd>Сянката се изобразява вътре в кутийката. Параметъра е опционален и ако не е зададен се подразбира <span class="note">outset</span> (навън от кутийката)</dd>
             <dt><span class="note">h-shadow</span></dt>
                 <dd>Задава хоризонтално отместване (<span class="note">в дясно</span>) на сянката спрямо кутийката на елемента. Ако е отрицателно число, отместването е <span class="note">в ляво</span>. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
+        </dl>
+    </section>
+    <section id="syntax"><h3>Синтаксис</h3>
+        <pre><code class="JSON" rel="Formal syntax">
+            box-shadow: [inset] h-shadow v-shadow blur-radius spread-radius color;
+        </code></pre>
+        <dl class="fa">
             <dt><span class="note">v-shadow</span></dt>
                 <dd>Задава вертикално отместване (<span class="note">надолу</span>) на сянката спрямо кутийката на елемента. Ако е отрицателно число, отместването е <span class="note">нагоре</span>. Стойностите са единствено в <a href="https://developer.mozilla.org/en/docs/Web/CSS/length">CSS Length Units</a>.</dd>
         </dl>
@@ -246,14 +272,16 @@
         <a href="http://www.w3schools.com/css/css3_gradients.asp">CSS3 Gradients</a>
     </section>
 </section>
-
 <section><h2>Примери</h2>
     <p>Codepen collection:</p>
     <a href="http://codepen.io/collection/AVjQZg/">CSS_Shadows_and_Gradients</a>
 </section>
-
 <section><h2>Задачи за упражнение</h2>
-    <section id="we_code_logo"><h3>we_code_logo</h3>
+    <section id="we_code_logo"><h3>Задача 1: we_code_logo</h3>
+        <p>Фиг.1</p>
+        <a href="homeworks/we_code_logo/we_code_logo.png"><img src="homeworks/we_code_logo/we_code_logo.png"></a>
+    </section>
+    <section id="we_code_logo"><h3>Задача 1: we_code_logo</h3>
         <dl class="fa">
         <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира логото показано на <a href="homeworks/we_code_logo/we_code_logo.png">фиг.1</a>.</dt>
         <dt class="note">Забележки:</dt>
@@ -263,21 +291,25 @@
         <dd>Символите в текста на логото ( <span class="keyword">@</span>, <span class="keyword">{</span> и <span class="keyword">}</span> ) са с цвят:<br> <code>rgba(103, 137, 171, .6);</code></dd>
         </dl>
     </section>
-    <section id="we_code_logo_page"><h3>we_code_logo_page</h3>
+    <section id="we_code_logo_page"><h3>Задача 2: we_code_logo_page</h3>
+        <p>Фиг.1</p>
+        <a href="homeworks/we_code_logo_page/we_code_logo_page_blue_stars.png"><img src="homeworks/we_code_logo_page/we_code_logo_page_blue_stars.png"></a>
+    </section>
+    <section id="we_code_logo_page"><h3>Задача 2: we_code_logo_page</h3>
         <dl class="fa">
         <dt>Да се напише <a href="https://validator.w3.org/#validate_by_input">валиден код</a>, който реализира страницата показана на <a href="homeworks/we_code_logo_page/we_code_logo_page_blue_stars.png">фиг.1</a>.</dt>
         <dt class="note">Забележки:</dt>
-        <dd>Използвано е логото в <a href="/IT-Academy-Front-End-Dev/pages/themes/beginners/CSS_Shadows_and_Gradients/CSS_Shadows_and_Gradients.html#we_code_logo">предходната задача</a></dd>
+        <dd>Използвано е логото в <a href="../../../../pages/themes/beginners/CSS_Shadows_and_Gradients/CSS_Shadows_and_Gradients.html#we_code_logo">предходната задача</a></dd>
         <dd>Импровизирайте с цветовете за останалите елементи.</dd>
         </dl>
     </section>
 </section>
 
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
 </section>
 <!--
 ########################################################
@@ -287,14 +319,15 @@
         </div>
     </div>
     <!-- Custom processing -->
-    <script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+    <script src="../../../../outfit/js/slides.js"></script>
     <!-- external scripts -->
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
     <script>
         // Full list of configuration options available at:
         // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
         Reveal.initialize({
             controls: true,
             progress: true,
@@ -317,14 +350,15 @@
             // transition: Reveal.getQueryHash().transition || 'default'
             // Optional reveal.js plugins
             dependencies: [
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
             ]
         });
     </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

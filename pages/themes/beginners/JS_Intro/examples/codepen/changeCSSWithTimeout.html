@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>changeCSSWithTimeout</title>
+    <style type="text/css">
+    	.box{
+    		width: 100px;
+    		height: 100px;
+    		border: 1px solid #999;
+    	}
+    </style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+<script type="text/javascript">
+		var divNode  = document.getElementsByClassName('box')[0];
+		var colors = ["red", "green", "blue", "purple", "magenta", "yellow", "orange"];
+
+		for (var i = 0; i < colors.length; i++) {
+			setTimeout(changeColorOnTimeout(divNode, colors[i]), 1000*i)
+		}
+
+		function changeColorOnTimeout(divNode, color){
+			return function(){
+				divNode.style.backgroundColor = color;
+			}
+		}
+</script>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hamburgerMenu</title>
+    <style type="text/css">
+    	html {
+				background-color: #D8D0B6;
+			}
+
+			body {
+				margin: 0;
+				font-family: sans-serif;
+				/*letter-spacing: .1em;*/
+				color: #513A26;
+				line-height: 1.4em;
+				/*overflow: hidden;*/
+			}
+
+			main {
+				margin: 4em 4em 0 5em;
+				/*text-indent: 2em;            */
+				box-sizing: border-box;
+			}
+
+			.menu {
+				position: fixed;
+				top: 0;
+				left: -12em;
+				width: 12em;
+				height: 100vh;
+				box-sizing: border-box;
+				border-right: 1px dotted #999;
+				background-color: #999;
+				transition: left 1s, background 2s;				
+			}
+
+			.navigation {
+				margin-top: 3em;
+			}
+
+			.navigation a {
+				display: block;
+				margin: 0 0 1em 1em;
+				font-weight: bold;
+				color: #FFF;
+			}
+
+			/* бутона за менюто */
+			.toggle_menu_button {
+				position: fixed;
+				top: .8em;
+				left: 0;
+				cursor: pointer;
+				color: #FAE4A5;
+				z-index: 9999;
+				animation-name: twist;
+				animation-duration: 1s;
+			}
+			/*по-малък бутон, когато менюто е видимо*/
+			.toggle_menu_button_small{
+				position: absolute;
+				top: .5em; right: .5em;
+				padding: .1em .5em;
+				color: #FFF;
+				border: 1px dotted #FFF; 
+			}
+			.toggle_menu_button_small:hover{
+				cursor: pointer;
+			}
+
+			.toggle_menu_button:before {
+				display: inline-block;
+				content: "\224b";
+				font-size: 3em;
+				margin: .1em 0 0 .5em;
+				text-shadow: -1px 1px #555, -2px 2px #444, -3px 3px #333;
+				transition: 1s;
+			}
+
+
+
+			@keyframes twist {
+				10%,
+				90% {
+					transform: translate3d(4px, 0px, 0);
+				}
+				20%,
+				80% {
+					transform: translate3d(0px, 0, 0);
+				}
+				30%,
+				50%,
+				70% {
+					transform: translate3d(4px, -0px, 0);
+				}
+				40%,
+				60% {
+					transform: translate3d(0px, 0, 0);
+				}
+			}
+
+			@keyframes slowShow{
+					0%{
+						opacity: 0
+					}
+					50%{
+						opacity: 0
+					}
+					100%{
+						opacity: 1
+					}
+			}
+    </style>
+</head>
+<body>
+	<div class="toggle_menu_button" onclick="toggleMenu()"></div>
+	<aside class="menu">
+		<div class="toggle_menu_button_small" onclick="toggleMenu()">X</div>
+		<nav class="navigation">
+			<a href="#">Home</a>
+			<a href="#">Portfolio</a>
+			<a href="#">Students</a>
+			<a href="#">Blog</a>
+			<a href="#">Contact</a>
+		</nav>
+	</aside>
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+			in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime odit id, accusantium debitis enim deserunt similique odio molestias voluptatem optio, ipsa! Voluptatum delectus placeat rem necessitatibus reiciendis corrupti quas accusamus.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae temporibus reiciendis similique eaque tenetur aut, aspernatur et omnis enim cum dignissimos, doloribus ut. Nisi illum quam ad, impedit velit quis.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit consequuntur assumenda ab facere tempore enim similique quaerat ut recusandae. Non perspiciatis molestias distinctio, dolor provident officia architecto cupiditate assumenda?</p>
+	</main>
+</body>
+<script type="text/javascript">
+		var toggleMenuButtonNode = document.querySelector('.toggle_menu_button');
+		var toggleMenuButtonSmallNode = document.querySelector('.toggle_menu_button_small');
+		var menuNode = document.querySelector('.menu');
+		var mainNode = document.querySelector('main');
+
+		var menuVisible = false;
+
+		function toggleMenu(){
+			// ако менюто е видимо => скриваме го:
+			if( menuVisible ){
+				setNodeStyle(menuNode, {
+					left: "-12em",
+					backgroundColor: '#999',
+					opacity: ".8",
+				});
+
+				// стилизираме и другите елементи, когато менюто е скрито:
+				setNodeStyle(mainNode,{
+					opacity: "1"
+				});	
+				setNodeStyle(toggleMenuButtonNode,{
+					display: "block",
+					// искаме бутона да се покаже след като менюто се е скрило напълно
+					animation:"slowShow 2s"
+				});				
+
+				// задаваме флага за видимост
+				menuVisible = false;
+			}else{
+				// ако менюто е скрито => показваме го:				
+				setNodeStyle(menuNode, {
+					left: "0px",
+					backgroundColor: '#333',
+					opacity: "1",
+				});
+
+				// стилизираме и другите елементи, когато менюто е видимо:
+				setNodeStyle(mainNode,{
+					opacity: "0.2"
+				});
+				setNodeStyle(toggleMenuButtonNode,{
+					display: "none"
+				});
+
+				// задаваме флага за видимост
+				menuVisible = true;
+			}
+		}
+
+		function setNodeStyle(node, stl){
+			console.log(`\nStyling ${node.tagName}`);
+			for( var p in stl){				
+				node.style[p] = stl[p];
+				console.log(`${p} = ${node.style[p]}`);
+			}			
+		}
+
+</script>
+</html>

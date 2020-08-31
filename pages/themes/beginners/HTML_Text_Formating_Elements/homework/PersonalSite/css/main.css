@@ -1,0 +1,47 @@
+body{
+	padding: 2em;
+	background: #222;
+}
+#main{
+	padding: 1em 1em 1em 2em;
+	box-shadow: -3px -3px 1px 3px #cdcdcd;
+	background: #dedede;
+}
+#header{
+	position: relative;
+	height: 10em;
+	padding: 1em 1em 1.5em 1em;
+	border-bottom: .1em solid #CF8A05;
+	box-shadow: 0 4px 4px -2px gray;
+	box-sizing: border-box;
+}
+#sections{
+
+}
+#footer{
+
+}
+
+
+.section{
+	border-bottom: .1em solid #CF8A05;
+	box-shadow: 0 4px 4px -2px gray;
+	box-sizing: border-box;
+}
+
+.section3>h3{
+	width: 40%;
+	float: left;
+}
+.section3>ul{
+	width: 60%;
+	float: right;
+}
+header img{
+	height: 7em;
+	width:  7em;
+	margin-right: 1em;
+	border-radius: 100%;
+}
+
+/*common classes*/

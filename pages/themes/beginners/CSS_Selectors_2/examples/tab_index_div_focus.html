@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tabindex Div Focus Example</title>
+	<style type="text/css">
+		.example1>div:focus{
+			/*няма да работи, ако елементите нямат зададен tabindex!*/
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<h1>Tabindex Div Focus Example</h1>
+<p><em>Кликнете върху някой от div елементите или натиснете <kbd>tab</kbd> няколко пъти</em></p>
+<div class="example1">
+	<div class="d1" tabindex="1">Div1 <code>//tabindex="1"</code></div>
+	<div class="d2">Div2 <code>//no tabindex!</code></div>
+	<div class="d3" tabindex="2">Div3 <code>//tabindex="2"</code></div>
+</div>
+</body>
+</html>

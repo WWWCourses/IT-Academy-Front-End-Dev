@@ -1,0 +1,28 @@
+body{
+	margin: 0;
+	background: #B8ADCB;
+}
+header{
+	height: 20vh;
+	background: #666;
+	color: #ccc;
+	text-align: center;
+	font-size: 3em;
+	padding-top: .7em;
+	animation: color_flow 5s;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+main{
+	text-align: center;
+}
+
+@keyframes color_flow{
+	0%,100%{
+		background-color: #666;
+	}
+	50%{
+		background-color: #B8ADCB;
+	}
+}

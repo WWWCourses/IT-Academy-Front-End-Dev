@@ -1,49 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Въведение в CSS</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<!-- css & themes include -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
-	<!-- custom -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-	<style type="text/css">
-		.reveal .slides > section > section{
-			/*zoom: .9;*/
-		}
-	</style>
-	<base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
+		<meta charset="utf-8">
+		<title>Въведение в CSS</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!-- css & themes include -->
+		<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- custom -->
+		<link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
+		<style type="text/css">
+				.reveal .slides > section > section{
+						/*zoom: .9;*/
+				}
+		</style>
+		<base target="_blank">
 </head>
 <body>
-	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<div class="top_links">
-			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Lists" target="_top"><i class="fa fa-home"></i></a>
-			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+		<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+				<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#CSS_Intro" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
 			<div class="help_text">
-			<div><span>N/Спейс</span><span>следващ слайд</span></div>
-			<div><span>P</span><span>предишен слайд</span></div>
-			<div><span>O</span><span>всички слайдове</span></div>
-			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
 			</div>
 		</div>
-		<div class="footer theme_switch"></div>
-		<div class="slides">
+		<div class="footer theme_switch">
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+				</div>
+				<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -51,314 +47,384 @@
 -->
 <section><h1>Въведение</h1><h1>в</h1><h1>CSS</h1></section>
 <section data-transition="zoom">
-	<section class="copyright" data-transition="zoom">
-		<div class="note">
-			<p>Created for</p>
-		</div>
-		<div class="company">
-			<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-			<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-			</a>
-		</div>
-		<div class="author">
-			<span class="note">Iva E. Popova, 2015-2018</span>
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
 		</div>
 	</section>
 	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
 		<div class="company">
-			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
 		</div>
 	</section>
 </section>
 
 <section><h2>Какво е CSS?</h2>
-	<section>
-		<p><strong>CSS</strong> = Cascading Style Sheets.</p>
-		<p>Съвкупност от форматиращи препоръки, правила, които указват <b>КАК</b> да се представи документа от браузера.</p>
-	</section>
-	<section><h3>Cascading?</h3>
-		<p>Комбиниране (каскадно) на различни стилови шаблони.</p>
-		<img class="norm" src="images/CSS_Cascade.png">
-	</section>
+		<section>
+				<dl class="fa">
+					<dt><abbr>CSS</abbr><dfn id="CSS"><span>Cascading</span><span>Style</span><span>Sheets</span></dfn></dt>
+					<dt>Съвкупност от форматиращи препоръки, правила, които указват <b>КАК</b> да се представи документа от браузера.</dt>
+					<dt>Първа версия: Декември, 1996</dt>
+				</dl>
+		</section>
+		<section><h3>Cascading? Sheets? </h3>
+				<p>Комбиниране (каскадно) на различни стилови шаблони.</p>
+				<img class="norm" src="images/CSS_Cascade.png">
+		</section>
 </section>
 
 <section><h2>Защо CSS?</h2>
-	<section>
-		<p class="advanced"><i class="fa fa-graduation-cap"></i><a href="https://bg.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8F%D0%BD%D0%B5_%D0%BD%D0%B0_%D0%BE%D1%82%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8">Разделяне на отговорности</a><a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript"> (Separation of concernrs)</a></p>
-		<dl class="fa">
-			<dt><strong>HTML:</strong></dt>
-			<dd>Съдържанието на документа.</dd>
-			<dd><b>КАКВО</b> ще се изобрази.</dd>
-			<dd>Структура и семантика на елементите.</dd>
-			<dt><strong>CSS:</strong></dt>
-			<dd>Оформлението на документа.</dd>
-			<dd><b>КАК</b> ще се изобрази.</dd>
-			<dd>Форматиране и подреждане на елементите</dd>
-		</dl>
-	</section>
-	<section>
-		<p>Преносимост на документа между различните видове медии: екран (PC, tablet, phones, ...), принтер, проектор, аудио браузер, и пр.)</p>
-		<img class="norm" src="images/MultiViewports.png">
-	</section>
-	<section>
-		<dl class="fa">
-			<dt>Keep <strong><a href="https://bg.wikipedia.org/wiki/%D0%9D%D0%B5_%D1%81%D0%B5_%D0%BF%D0%BE%D0%B2%D1%82%D0%B0%D1%80%D1%8F%D0%B9">DRY</a></strong> (Don't repeat yourself)<strong></dt>
-			<dt>Do not <a href="https://bg.wikipedia.org/wiki/%D0%9D%D0%B5_%D1%81%D0%B5_%D0%BF%D0%BE%D0%B2%D1%82%D0%B0%D1%80%D1%8F%D0%B9#cite_note-DryIsForLosers-2">WET</a></strong> (Write Everything Twice) your foot</dt>
-		</dl>
-		<img class="norm" src="images/CSS_DRY.png">
-	</section>
-	<section>
-		<p>Структуриран, концентриран единствено върху съдържанието, четим код.</p>
-		<pre><code>
-&lt;body bgcolor="#000000"&gt;
-	&lt;div border="1" bordercolor="red"&gt;
-		&lt;p&gt;&lt;font face="verdana" color="blue"&gt; Това е параграф оцветен в синьо !&lt;/font&gt;&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/body&gt;
-</code></pre>
-<p>VS.</p>
-<pre><code>
-&lt;body&gt;
-	&lt;div&gt;
-		&lt;p&gt;Това е параграф оцветен в синьо !&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/body&gt;
-		</code></pre>
-	</section>
+		<section>
+			<p>Как изглеждаха Уеб страниците преди CSS:</p>
+			<dl>
+				<dt><a href="http://www.vicove.eu/details.php?image_id=7014">vicove.eu</a></dt>
+				<dt><a href="http://erights.org/">Open Source Distributed Capabilities</a></dt>
+				<dt><a href="http://eim.twenkid.com/old/index.html">Свещеният сметач, e-zin 2005</a></dt>
+			</dl>
+		</section>
+		<section>
+				<p class="advanced"><a href="https://bg.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8F%D0%BD%D0%B5_%D0%BD%D0%B0_%D0%BE%D1%82%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8">Разделяне на отговорности</a><a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript"> (Separation of concernrs)</a></p>
+				<dl class="fa">
+						<dt><strong class="note">HTML:</strong></dt>
+						<dd>Съдържанието на документа.</dd>
+						<dd><b class="note">КАКВО</b> ще се изобрази.</dd>
+						<dd>Структура и семантика на елементите.</dd>
+						<dt><strong class="note">CSS:</strong></dt>
+						<dd>Оформлението на документа.</dd>
+						<dd><b class="note">КАК</b> ще се изобрази.</dd>
+						<dd>Форматиране и подреждане на елементите</dd>
+				</dl>
+		</section>
+		<section>
+				<p>Преносимост на документа между различните видове медии: екран (PC, tablet, phones, ...), принтер, проектор, аудио браузер, и пр.)</p>
+				<img class="norm" src="images/MultiViewports.png">
+		</section>
+		<section>
+				<dl class="fa">
+						<dt>Keep <strong><a href="https://bg.wikipedia.org/wiki/%D0%9D%D0%B5_%D1%81%D0%B5_%D0%BF%D0%BE%D0%B2%D1%82%D0%B0%D1%80%D1%8F%D0%B9">DRY</a></strong> (Don't Repeat Yourself)</dt>
+				</dl>
+				<img class="norm" src="images/CSS_DRY.png">
+		</section>
+		<section>
+				<p>Структуриран, концентриран единствено върху съдържанието, четим HTML код.</p>
+				<pre><code rel="HTML">
+						&lt;body bgcolor=&quot;#000000&quot;&gt;
+								&lt;div border=&quot;1&quot; bordercolor=&quot;red&quot;&gt;
+										&lt;p&gt;&lt;font face=&quot;verdana&quot; color=&quot;blue&quot;&gt; Това е параграф оцветен в синьо !&lt;/font&gt;&lt;/p&gt;
+								&lt;/div&gt;
+						&lt;/body&gt;
+				</code></pre>
+				<p>VS.</p>
+				<pre><code rel="HTML">
+						&lt;head&gt;
+							&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;main.css&quot;&gt;
+						&lt;/head&gt;
+						&lt;body&gt;
+								&lt;div&gt;
+										&lt;p&gt;Това е параграф оцветен в синьо !&lt;/p&gt;
+								&lt;/div&gt;
+						&lt;/body&gt;
+				</code></pre>
+		</section>
 </section>
-
+<section><h2>Какво можем да правим със CSS?</h2>
+	<p>Просто разгледайте тук: <a href="https://codepen.io/search/pens/?limit=all&page=2&q=CSS+only" title="CSS only Pens in Codepen">"CSS only" Pens in Codepen</a></p>
+</section>
 <section><h2>Как?</h2>
-	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Inline CSS</a></h3>
-		<p>Чрез <em>атрибутa</em> <code>style</code> за всеки един HTML елемент: </p>
-		<pre><code>
-&lt;tag style="[property : value;]+"&gt;
-		</code></pre>
-		<p>Например:</p>
-		<pre><code>
-&lt;p style="color : green;"&gt;текст в зелено&lt;/p&gt;
-		</code></pre>
-		<p><i>Предимства? Недостатъци?</i></p>
-	</section>
+		<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Inline CSS</a></h3>
+				<p>Чрез <em>атрибутa</em> <code>style</code> за всеки един HTML елемент: </p>
+				<pre><code rel="Formal Syntax">
+						&lt;tag style="[property:value;]+"&gt;
+				</code></pre>
+				<p>Например:</p>
+				<pre><code rel="HTML">
+						&lt;p style="color:green;"&gt;текст в зелено&lt;/p&gt;
+				</code></pre>
+				<p><i>Предимства? Недостатъци?</i></p>
+		</section>
+		<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Internal CSS</a></h3>
+				<p>В HEAD секцията, в ‘style’ елемента:</p>
+				<pre><code rel="HTML">
+						&lt;head&gt;
+								&lt;style type=”text/css”&gt;
+										p {
+												text-indent:5%;
+												color : gray;
+										}
 
-	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">Internal CSS</a></h3>
-		<p>В HEAD секцията, в ‘style’ елемента:</p>
-		<pre><code>
-&lt;head&gt;
-	&lt;style type=”text/css”&gt;
-		p {
-			text-indent:5%;
-			color : black;
-		}
-
-		h2 {
-			text-indent:5%;
-			font-size: 1.5em;
-			color : red;
-		}
-	&lt;/style&gt;
-&lt;/head&gt;
-		</code></pre>
-		<p><i>Предимства? Недостатъци?</i></p>
-	</section>
-
-	<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">External CSS</a></h3>
-		<p>Чрез дефиниране на CSS правилата в отделен файл ( *.css ). Свързва се с документа посредством елемента <code>link</code> в заглавната част на документа:</p>
-		<pre><code>
-&lt;head&gt;
-	&lt;link rel=StyleSheet href="css/basic.css " type="text/css" media=screen &gt;
-&lt;/head&gt;
-		</code></pre>
-		<p><i>Предимства? Недостатъци?</i></p>
-	</section>
+										h2 {
+												text-indent:15%;
+												font-size: 1.5em;
+												color : red;
+										}
+								&lt;/style&gt;
+						&lt;/head&gt;
+				</code></pre>
+				<p><i>Предимства? Недостатъци?</i></p>
+		</section>
+		<section><h3><a href="http://www.w3schools.com/css/css_howto.asp">External CSS</a></h3>
+				<p>Чрез дефиниране на CSS правилата в отделен файл ( *.css ). Свързва се с документа посредством елемента <code>link</code> в заглавната част на документа:</p>
+				<pre><code rel="HTML">
+						&lt;head&gt;
+								&lt;link rel="stylesheet" type="text/css" href="css/basic.css" &gt;
+						&lt;/head&gt;
+				</code></pre>
+				<p><span class="note">NB! </span>Атрибута <code>type</code> може да се пропуска, тъй като в HTML5 се подразбира <code>type="text/css"</code></p>
+				<p><i>Предимства? Недостатъци?</i></p>
+		</section>
 </section>
 
 <section><h2>CSS правила - синтаксис</h2>
-	<section>
-		<p>Общ синтаксис на едно CSS правило:</p>
-		<pre><code>
-selector {
-	property1: value1;
-	property2: value2;
-	   ...
-}
-		</code></pre>
-	</section>
+		<section>
+				<p>Общ синтаксис на едно CSS правило:</p>
+				<pre><code rel="Formal Syntax">
+						selector {
+								property1: value1;
+								property2: value2;
+									 ...
+						}
+				</code></pre>
+				<p>Пример:</p>
+				<pre><code rel="CSS">
+						h1{
+								background-color: red;
+								color: white;
+						}
+				</code></pre>
+		</section>
+		<section><p>Общ синтаксис на едно CSS правило:</p>
+				<img class="norm" src="images/CSS_syntax_image.png">
+		</section>
+		<section>
+				<p>Селекторите могат да се групират - отделят се със запетайка</p>
+				<pre><code rel="CSS">
+						h2,h4 {
+								color: white;
+						}
+				</code></pre>
+		</section>
+		<section>
+				<p>Декларациите също могат да се групират – отделят се с точка и запетая ‘ ; ’</p>
+				<pre><code rel="CSS">
+						h4 {
+								background-color: red;
+								color: white;
+								border: 5px solid gray;
+						}
+				</code></pre>
+				<p>' ; ' след последна декларация не е задължителна, но е добра практика да се поставя винаги – улеснява редактирането на кода.</p>
+		</section>
 
-	<section><p>Общ синтаксис на едно CSS правило:</p>
-		<img class="norm" src="images/CSS_syntax_image.png">
-	</section>
-
-	<section>
-		<p>Селекторите могат да се групират - отделят се със запетайка ‘ , ’</p>
-		<pre><code>
-h2,h4 {
-	color: white;
-}
-		</code></pre>
-	</section>
-
-	<section>
-		<p>Декларациите също могат да се групират – отделят се с точка и запетая ‘ ; ’</p>
-		<pre><code>
-h4 {
-	background-color: red;
-	color: white;
-	border: 5px solid gray;
-}
-		</code></pre>
-		<p>' ; ' след последна декларация не е задължителна, но е добра практика да се поставя винаги – улеснява редактирането на кода.</p>
-	</section>
-
-	<section>
-		<p>Пример</p>
-		<pre><code>
-		<div class="flag bg">
-			<span>Бяло</span><span>Зелено</span><span>Червено</span>
-		</div>
-		</code></pre>
-		<a  href="examples/flag_without_css.html">резултат (без CSS)...</a>
-		<pre class="fragment"><code >
-		.flag{
-			display: inline-block;
-			line-height: 2em;
-			width: 20em;
-			border: .2em solid #333;
-		}
-		.flag>span{
-			display: block;
-		}
-		.bg>span:nth-child(1){
-			background: white;
-			color: #CCC;
-		}
-		.bg>span:nth-child(2){
-			background: green;
-			color: #CCC;
-		}
-		.bg>span:nth-child(3){
-			background: red;
-			color: #CCC;
-		}
-		</code></pre>
-		<a class="fragment" href="examples/flag_with_css.html">резултат (със CSS)...</a>
-	</section>
-
-	<section><h3>Коментари в CSS</h3>
-		<dl>
-			<dt><code>/*</code> - за начало на коментар</dt>
-			<dt><code>*/</code> - за край на коментар</dt>
-		</dl>
-		<p>Пример:</p>
-		<pre><code>
-			/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			  Пример за многоредов коментар
-			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-			/*Main_Sections_Title*/
-			section>h2{
-				font-size: 1em;
-				-webkit-border-radius: 12px;  /* Safari 3-4 */
-				-moz-border-radius: 12px;     /* Firefox 3.6 and below */
-				border-radius: 12px;          /* modern browsers */
-				/*background: red;*/
-			}
-		</code></pre>
-	</section>
+		<section style="font-size: .7em">
+				<p>Пример</p>
+				<pre><code rel="HTML">
+						<div class="flag bg">
+								<span>Бяло</span><span>Зелено</span><span>Червено</span>
+						</div>
+				</code></pre>
+				<a  href="examples/flag_without_css.html">резултат (без CSS)...</a>
+				<pre class="fragment"><code rel="CSS" style="height: 40vh">
+					.flag{
+							display: inline-block;
+							line-height: 2em;
+							width: 20em;
+							border: .2em solid #333;
+					}
+					.flag>span{
+							display: block;
+					}
+					.bg>span:nth-child(1){
+							background: white;
+							color: #CCC;
+					}
+					.bg>span:nth-child(2){
+							background: green;
+							color: #CCC;
+					}
+					.bg>span:nth-child(3){
+							background: red;
+							color: #CCC;
+					}
+				</code></pre>
+				<a class="fragment" href="examples/flag_with_css.html">резултат (със CSS)...</a>
+		</section>
+		<section><h3>Коментари в CSS</h3>
+				<dl>
+						<dt><code>/*</code> - за начало на коментар</dt>
+						<dt><code>*/</code> - за край на коментар</dt>
+				</dl>
+				<p>Пример:</p>
+				<pre><code rel="CSS">
+						/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+							Пример за многоредов коментар
+						~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+						/*Main_Sections_Title*/
+						section>h2{
+								font-size: 1em;
+								-webkit-border-radius: 12px;  /* Safari 3-4 */
+								-moz-border-radius: 12px;     /* Firefox 3.6 and below */
+								border-radius: 12px;          /* modern browsers */
+								/*background: red;*/
+						}
+				</code></pre>
+		</section>
 </section>
 
 <section><h2>Каскадност на CSS правилата</h2>
 	<section>
-		<h3>Специфичност (specificity)</h3>
-		<h3>Наследяване (inheritance)</h3>
-		<h3>Местоположение (location)</h3>
+			<h3>Специфичност (specificity)</h3>
+			<h3>Наследяване (inheritance)</h3>
+			<h3>Местоположение (location)</h3>
 	</section>
 	<section><h3>Специфичност (specificity)</h3>
-		<p>Определя се от типа на селектора - колкото по-специфичен е един селектор, с толкова по-висок приоритет ще бъде той.</p>
-		<p>(ще разгледаме подробно в темата за CSS селектори)</p>
+			<p>Определя се от типа на селектора - колкото по-специфичен е един селектор, с толкова по-висок приоритет ще бъде той.</p>
+			<p><i>(ще разгледаме подробно в темата за CSS селектори)</i></p>
 	</section>
 	<section><h3>Наследяване (inheritance)</h3>
-		<h3>Дървовидна структура на HTML документ</h3>
-		<img src="images/HTML_tree.png">
-	</section>
-	<section>
-		<h3>От елементи-родители в HTML дървото</h3>
-		<pre><code>
-		body{
-			/*Всички елементи в body, ще се изобразят с черен на цвят шрифт*/
-			color: black;
-		}
-		/*Всички елементи в div, ще се изобразят с бял на цвят шрифт*/
-		div{
-			color: white;
-		}
-		</code></pre>
-		<p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p>
-		<img class="norm" src="images/CSS_rules_inheritance_on_tree.png">
+			<h5>Дървовидна структура на HTML документ</h5>
+			<img src="images/HTML_tree.png">
 	</section>
 	<section><h3>Наследяване (inheritance)</h3>
-		<p><strong>Не всички свойства се наследяват!</strong></p>
-		<p>Експериментирайте със следния код:</p>
-		<pre><code>
-		body{
-			background-color: lightblue;
-			color: black;
-		}
-		div{
-			background-color: red;
-			color: white;
-			/*забележете дали свойството border се наследява, така както color*/
-			border: 5px solid green;
-		}
-		</code></pre>
-		<pre><code>
-		<h2>Заглавие</h2>
-		<div>
-			<p>текст в параграф...</p>
-			<ul>
-				<li>Елемент1</li>
-				<li>Елемент2</li>
-				<li>Елемент3</li>
-			</ul>
-		</div>
-		<p>друг параграф...</p>
-		</code></pre>
+			<p> Някои CSS свойства се наследяват  от елементи-родители в HTML дървото</p>
+			<p>Такива са повечето <em>свойства за оформление на текст</em>, които ще бъдат разгледани по-детайлно в следващите теми.</p>
+			<!-- <p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p> -->
+			<!-- <img class="norm" src="images/CSS_rules_inheritance_on_tree.png"> -->
 	</section>
-	<section><h3>Местоположение (location)</h3>
-		<ol reversed>
-			<li>Стил, прилаган от Браузера.</li>
-			<li>Потребителски стил на Браузера (“reader/user style sheet”)</li>
-			<li><span>Стил, зададен в HEAD секцията:</span>
-				<ul>
-					<li>Външен стил, свързан със документа чрез елемента link.</li>
-					<li>Импортиран стил в документа, добавен чрез @import функцията)</li>
-					<li>Вграден в документа стил (Embedded style sheets) чрез елемента style</li>
-				</ul>
-			</li>
-			<li>Инлайн стил, добавен към елемент чрез атрибута му style в отварящия таг</li>
-			<li>Правило, маркирано като  !important от автора на страницата.</li>
-			<li>Правило, маркирано като  !important от потребителя</li>
-		</ol>
+	<section><h3>Наследяване (inheritance) - пример</h3>
+			<pre><code rel="CSS" style="font-size: .8em">
+				body{
+						/*Всички елементи в body, ще се изобразят с черен  шрифт*/
+						color: black;
+				}
+				/*Всички елементи в div, ще се изобразят с бял  шрифт върху червен фон*/
+				div{
+						color: white;
+						background-color: red;
+				}
+			</code></pre>
+			<!-- <p style="font-size: .5em"><a href="examples/CSS_rules_inheritance_on_tree.html">Пример</a></p> -->
+			<img class="norm" src="images/CSS_rules_inheritance_on_tree.png">
 	</section>
-	<section>
-		<h3>Пример за !important</h3>
-		<pre><code>
-		p{
-			background: red !important;
-			color: white;
-		}
-		</code></pre>
-		<pre><code>
-		<p style="background-color: gray; color: black">текст в параграф...</p>
-		</code></pre>
-		<p>Как ще бъде оцветен параграфа и текста в него?</p>
-		<a class="fragment" href="examples/CSS_rules_precedence_important.html">Резултат...</a>
+	<section style="font-size: .7em"><h3>Наследяване (inheritance) - primer</h3>
+			<p><strong>Не всички свойства се наследяват!</strong></p>
+			<p>Експериментирайте със следния код:</p>
+			<pre><code rel="CSS">
+				body{
+						background-color: lightblue;
+						color: black;
+				}
+				div{
+						background-color: red;
+						color: white;
+						/*забележете дали свойството border се наследява, така както color*/
+						border: 5px solid green;
+				}
+			</code></pre>
+			<pre><code rel="HTML">
+				<h2>Заглавие</h2>
+				<div>
+						<p>текст в параграф...</p>
+						<ul>
+								<li>Елемент1</li>
+								<li>Елемент2</li>
+								<li>Елемент3</li>
+						</ul>
+				</div>
+				<p>друг параграф...</p>
+			</code></pre>
+	</section>
+	<section id="CSS_cascade_Location_Rule"><h3>Местоположение (location): rule of thumbs</h3>
+			<p>Колкото по-близо до даден елемент е дефинирано правилото касаещо неговото оформление, толкова по-висок приоритет ще има това правило</p>
+	</section>
+	<section style="font-size: .8em"><h3 class="advanced">Местоположение (location): official rule</h3>
+			<ol reversed>
+				<li>Стил, прилаган от Браузера.</li>
+				<li>Потребителски стил на Браузера (“reader/user style sheet”)</li>
+				<li><span>Стил, зададен в HEAD секцията:</span>
+					<ul>
+						<li>Външен стил, свързан със документа чрез елемента link.</li>
+						<li>Импортиран стил в документа, добавен чрез @import правилото)</li>
+						<li>Вграден в документа стил (Embedded style sheets) чрез елемента style</li>
+					</ul>
+				</li>
+				<li>Инлайн стил, добавен към елемент чрез атрибута му style в отварящия таг</li>
+				<li>Правило, маркирано като  !important от автора на страницата.</li>
+				<li>Правило, маркирано като  !important от потребителя</li>
+			</ol>
+	</section>
+	<section style="font-size: .95em"><h3>Местоположение (location) - пример</h3>
+			<pre><code rel="CSS (CSS_cascade_location_rule.css)" class="css">
+				p{
+					color: blue;
+				}
+			</code></pre>
+			<pre><code rel="HTML (CSS_cascade_location_rule.html)" class="html" style="height: 40vh">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;CSS_cascade_location_rule&lt;/title&gt;
+					&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+						p{
+							color: red;
+						}
+					&lt;/style&gt;
+					&lt;!-- тъй като включваме CSS файла след style елемента, то правилата в него ще бъдат с приоритет --&gt;
+					&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;CSS_cascade_location_rule.css&quot;&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+					&lt;p&gt;Paragraph 1&lt;/p&gt;
+					&lt;p style=&quot;color: green&quot;&gt;Paragraph 2&lt;/p&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+			<p>Какъв цвят ще бъде шрифта на всеки параграф?</p>
+			<a class="fragment" href="examples/CSS_cascade_location_rule.html">Резултат...</a>
+	</section>
+	<section><h3>Пример за !important</h3>
+			<pre><code rel="CSS">
+				p{
+						background: red !important;
+						color: white;
+				}
+			</code></pre>
+			<pre><code rel="HTML">
+					<p style="background-color: gray; color: black">текст в параграф...</p>
+			</code></pre>
+			<p>Как ще бъде оцветен параграфа и текста в него?</p>
+			<a class="fragment" href="examples/CSS_rules_precedence_important.html">Резултат...</a>
 	</section>
 </section>
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-	<p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+
+<!-- <section><h2>Задачи за упражнение</h2>
+	<section><h3>StyleTheParagraphs</h3>
+	<dl class="fa">
+		<dt>Задачата е описана във файла <a href="HW/styleTheParagraphs.html" title="Click to Open">styleTheParagraphs.html</a></dt>
+		<dt>Работете в отделна папка с име: <code>StyleTheParagraphs</code></dt>
+		<dt>Работете в същия HTML файл: <a href="HW/styleTheParagraphs.html" title="Click to Download" download>styleTheParagraphs.html</a>, като добавите необходимия CSS на необходимите места</dt></dt>
+		<dt>Изпратете решението си - архив на папката, като в името добавите вашите инициали. Например: <code>iepStyleTheParagraphs.zip</code></dt>
+	</dl>
+	</section>
+</section> -->
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
 </section>
 <!--
 ########################################################
@@ -368,42 +434,58 @@ h4 {
 		</div>
 	</div>
 	<!-- Custom processing -->
-	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+	<script src="../../../../outfit/js/slides.js"></script>
 	<!-- external scripts -->
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+
 	<!-- init reveal -->
 	<script>
 		// Full list of configuration options available at:
 		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		var highlightjsTabSize = '  ';
 		Reveal.initialize({
 			controls: true,
 			progress: true,
 			slideNumber: 'c/t',
 			keyboard: true,
 			history: true,
-			center: true,
-			width: 1024,
-			height: 850,
-			// Bounds for smallest/largest possible scale to apply to content
-			// minScale: .5,
-			maxScale: 1,
-			// slide transition
-			transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+			// display control
+			// center: true,
+			// width: '100%',
+			// height: '100%',
+			// // Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+
+			// The "normal" size of the presentation, aspect ratio will be preserved
+			// when the presentation is scaled to fit different resolutions. Can be
+			// specified using percentage units.
+			width: 960,
+			height: 700,
+
 			// Factor of the display size that should remain empty around the content
 			margin: 0.1,
+
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 1.5,
+
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
 			// shift+maous click to zoom in/out element
 			zoomKey: 'ctrl',
 			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 			// transition: Reveal.getQueryHash().transition || 'default'
 			// Optional reveal.js plugins
 			dependencies: [
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
 			]
 		});
 	</script>

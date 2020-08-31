@@ -1,0 +1,40 @@
+*{
+	/*Do not use star selector in production!*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+header{
+	height: 20vh;
+	background: #666;
+	color: #CCC;
+}
+nav.main_menu{
+	height: 8vh;
+	background: #999;
+}
+main{
+	min-height: 62vh;
+}
+.card{
+	float: left;
+	width: 31.3%;
+	height: 200px;
+	margin: 1%;
+	border: 1px solid red;
+}
+.card_gallery{
+
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+footer{
+	/*position: fixed;*/
+	bottom: 0; left: 0; right: 0;
+	height: 10vh;
+	background: #666;
+	color: #CCC;
+}

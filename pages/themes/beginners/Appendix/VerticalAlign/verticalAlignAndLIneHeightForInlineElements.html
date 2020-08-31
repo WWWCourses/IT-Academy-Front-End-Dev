@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>verticalAlignAndLIneHeightForInlineElements</title>
+	<style type="text/css">
+		body, p{
+			margin: 0;
+			padding: 0;
+		}
+		p{
+			border: 1px solid #000;
+		}
+		.row{
+			font-size: 100px;
+			line-height: 	2;
+			border: 1px solid red;
+		}
+		.phrase{
+			font-size: 20px;
+			border: 1px solid blue;
+		}
+		.vaTop{
+			vertical-align: top;
+		}
+		.vaBottom{
+			vertical-align: bottom;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<span class="row">ROW 1<span class="phrase vaTop">Ала</span><span class="phrase vaBottom">Бала</span></span>
+	</p>
+	<p>
+		<span class="row">ROW 2<span class="phrase vaTop">Ала</span><span class="phrase vaBottom">Бала</span></span>
+	</p>
+</body>
+</html>

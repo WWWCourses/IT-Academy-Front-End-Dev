@@ -1,451 +1,448 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>CSS Basic Properties</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<!-- css & themes include -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
-	<!-- custom -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-	<base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
-	<style type="text/css">
-		.fa-example>i{margin: 2rem;}
-		.fa-example>i:nth-of-type(1){font-size: 7em;color: #77EE77;}
-		.fa-example>i:nth-of-type(2){font-size: 6em;color: #EE7777;}
-		.fa-example>i:nth-of-type(3){font-size: 5em;color: #7777EE;}
-	</style>
+    <meta charset="utf-8">
+    <title>CSS Basic Properties</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- vendor's stuff -->
+    <!-- <script src="https://use.fontawesome.com/7e49a2f105.js"></script> -->
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- custom -->
+    <link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <base target="_blank">
+    <style type="text/css">
+        @font-face {
+            font-family: ChasingEmbers;
+
+            src: url("slides_examples/fonts/Chasing Embers Demo Version.otf"),
+                 url("slides_examples/fonts/Chasing Embers Demo Version.ttf");
+        }
+        .reveal>.slides h1.customFont{
+            font-family: "ChasingEmbers", cursive;
+            font-size: 3em;
+            font-weight: normal;
+            color: #000;
+            background: #FFF;
+        }
+
+        .fa-example>i{margin: 2rem;}
+        .fa-example>i:nth-of-type(1){font-size: 7em;color: #77EE77;}
+        .fa-example>i:nth-of-type(2){font-size: 6em;color: #EE7777;}
+        .fa-example>i:nth-of-type(3){font-size: 5em;color: #7777EE;}
+    </style>
 </head>
 <body>
-	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<a class="home_link" href="../../../agenda/beginners.html#CSS_Basic_Properties" target="_top"><i class="fa fa-home"></i></a>
-		<div class="footer theme_switch"></div>
-		<div class="slides">
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#CSS_Basic_Properties" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
 ########################################################
 -->
 <section><h1>Стилизиране на елементите в страницата чрез CSS3</h1>
-	<hr><br>
-	<h2>Основни CSS свойства за оформление на текст, шрифт, цвят, фон и рамка.</h2></section>
-	<section data-transition="zoom">
+        <hr><br>
+        <h2>Основни CSS свойства за оформление на текст, шрифт, цвят, фон и рамка.</h2>
+</section>
+<section data-transition="zoom">
+	<section>
 		<div class="copyright">
 			<div class="note">
 				<p>Created for</p>
 			</div>
 			<div class="company">
-				<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-				<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
 				</a>
 			</div>
-			<div class="author">
-				<span>Iva E. Popova, 2017,</span>
-				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
 		</div>
 	</section>
 </section>
 
-<section><h2>CSS свойства за оформление на текст</h2>
-	<section><h3>Overview</h3>
-		<a href="http://www.w3schools.com/css/css_text.asp">w3schools: CSS Text</a>
-		<div class="results_h" style="color: #555; padding: .6em;">
-			<p style="color:red; border: 1px solid #999;line-height:2em;">Можем да променяме цвета на шрифта</p>
-			<p style="text-align: right;border: 1px solid #999;line-height:2em;">Да зададем хоризонтално подравняване на текста</p>
-			<p style="line-height:2em; border: 1px solid #999;"><span style="line-height:normal; vertical-align:top;">Да подравним <span style="line-height:normal; vertical-align:bottom;">текста вертикално</span>.</span></p>
-			<p style="border: 1px solid #999;line-height:2em;text-decoration: underline;">Да подчертаваме текста</p>
-			<p style="border: 1px solid #999;line-height:2em;text-transform: uppercase">Да преобразуваме малки/големи букви</p>
-			<p style="border: 1px solid #999;line-height:1em;text-indent:30px">Да отместваме в ляво първия ред на параграф, с каквато пожелаем стойност. Така, както се прави в печатната литература, с цел да се улесни читателя визуално да разграничава началото на параграф.</p>
-			<p style="border: 1px solid #999;line-height:2em;letter-spacing: .5em">Да променяме разстоянието между буквите.</p>
-			<p style="border: 1px solid #999;line-height:2em;word-spacing: .7em">Да променяме разстоянието между думите.</p>
-			<p style="border: 1px solid #999;line-height:2em;">Да променяме разстоянието между редовете. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.</p>
-		</div>
-	</section>
-	<section><h3>Text Color</h3>
-		<p>Свойство: color</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_color.asp">w3schools: CSS color Property</a></p>
-		<pre><code rel="HTML" class="html">
-			<p>Paragraph 1</p>
-			<p>Paragraph 2</p>
-			<p>Paragraph 3</p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			h1{ color: lightgreen };
-			h2{ color: #F94576 };
-			h3{ color: hsl(250,100%,50%) };
-		</code></pre>
-		<div class="results_h" style="color: #555; padding: .6em;">
-			<p style="color: lightgreen; text-shadow: none;">Paragraph 1</p>
-			<p style="color: #F94576">Paragraph 2</p>
-			<p style="color: hsl(250,100%,50%)">Paragraph 3</p>
-		</div>
-	</section>
-	<section><h3>Text Alignment</h3>
-		<p>Свойство: text-align</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">w3schools: CSS text-align Property</a></p>
-		<pre><code rel="HTML" class="html">
-			<p>Paragraph 1</p>
-			<p>Paragraph 2</p>
-			<p>Paragraph 3</p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			p:nth-child(1){ text-align: center };
-			p:nth-child(2){ text-align: right };
-			p:nth-child(3){ text-align: justify };
-		</code></pre>
-		<div class="results_h"; padding: .6em;">
-			<p style="text-align: center; text-shadow: none;">Paragraph 1</p>
-			<p style="text-align: right">Paragraph 2</p>
-			<p style="text-align: justify">Paragraph 3</p>
-		</div>
-	</section>
-	<section><h3>Vertical Alignment</h3>
-		<p>Свойство: vertical-align</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_pos_vertical-align.asp">w3schools: CSS vertical-align Property</a></p>
-		<p>Забележка: това свойство се разглежда като свойство за позициониране, но е включено тук за пълнота!</p>
-		<pre><code rel="HTML" class="html">
-			<p>normal text<span class="w1">word1</span><span class="w2">word2</span></p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			p{ font-size: 50px;}
-			.w1{ font-size: 20px; vertical-align: top }
-			.w2{ font-size: 20px;vertical-align: bottom }
-		</code></pre>
-		<div class="results_h"; padding: .6em;">
-			<p style="font-size: 50px;">normal text<span class="w1"; style="font-size: 20px; vertical-align: top">word1</span><span class="w2" style="font-size: 20px;vertical-align: bottom">word2</span></p>
-		</div>
-	</section>
-	<section><h3>Text Decoration</h3>
-		<p>Свойство: text-decoration</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">w3schools: CSS text-decoration Property</a></p>
-		<pre><code rel="HTML" class="html">
-			<p>Paragraph 1</p>
-			<p>Paragraph 2</p>
-			<p>Paragraph 3</p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			p:nth-child(1){ text-decoration: underline };
-			p:nth-child(2){ text-decoration: line-through };
-			p:nth-child(3){ text-decoration: overline };
-		</code></pre>
-		<div class="results_h"; padding: .6em;">
-			<p style="text-decoration: underline; text-shadow: none;">Paragraph 1</p>
-			<p style="text-decoration: line-through">Paragraph 2</p>
-			<p style="text-decoration: overline">Paragraph 3</p>
-		</div>
-	</section>
-	<section><h3>Text Transformation</h3>
-		<p>Свойство: text-transform</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_text-transform.asp">w3schools: CSS text-transform Property</a></p>
-		<pre><code rel="HTML" class="html">
-			<p>Paragraph 1</p>
-			<p>Paragraph 2</p>
-			<p>Paragraph 3</p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			p:nth-child(1){ text-transform: capitalize };
-			p:nth-child(2){ text-transform: uppercase };
-			p:nth-child(3){ text-transform: lowercase };
-		</code></pre>
-		<div class="results_h"; padding: .6em;">
-			<p style="text-transform: capitalize; text-shadow: none;">Paragraph 1</p>
-			<p style="text-transform: uppercase">Paragraph 2</p>
-			<p style="text-transform: lowercase">Paragraph 3</p>
-		</div>
-	</section>
-	<section><h3>Text Indentation</h3>
-		<p>Свойство: text-indent</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_text-indent.asp">w3schools: CSS text-indent Property</a></p>
-		<pre><code rel="HTML" class="html">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</code></pre>
-		<pre><code rel="CSS" class="css">
-			p{ text-indent: 100px;}
-		</code></pre>
-		<div class="results_h"; padding: .6em;">
-			<p style="text-indent: 100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-	</section>
-	<section><h3>Letter Spacing</h3>
-		<p>Свойство: letter-spacing</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_letter-spacing.asp">w3schools: CSS letter-spacing Property</a></p>
-	</section>
-	<section><h3>Word Spacing</h3>
-		<p>Свойство: word-spacing</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_text_word-spacing.asp">w3schools: CSS word-spacing Property</a></p>
-	</section>
-	<section><h3>Line Height</h3>
-		<p>Свойство: line-height</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_dim_line-height.asp">w3schools: CSS line-height Property</a></p>
-		<p class="advanced"><a href="https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align">Deep dive CSS: font metrics, line-height and vertical-align</a></p>
-	</section>
+<section id="textStylingProperties"><h2>CSS свойства за оформление на текст</h2>
+    <section><h3>Overview</h3>
+        <a href="http://www.w3schools.com/css/css_text.asp">w3schools: CSS Text</a>
+        <div class="results_h" style="color: #555; padding: .6em;">
+            <p style="color:red; border: 1px solid #999;line-height:2em;">Можем да променяме цвета на шрифта</p>
+            <p style="text-align: right;border: 1px solid #999;line-height:2em;">Да зададем хоризонтално подравняване на текста</p>
+            <p style="line-height:2em; border: 1px solid #999;"><span style="line-height:normal; vertical-align:bottom;">Да подравним текста вертикално.</span></p>
+            <p style="border: 1px solid #999;line-height:2em;text-decoration: underline;">Да подчертаваме текста</p>
+            <p style="border: 1px solid #999;line-height:2em;text-transform: uppercase">Да преобразуваме малки/големи букви</p>
+            <p style="border: 1px solid #999;line-height:1em;text-indent:30px">Да отместваме в ляво първия ред на параграф, с каквато пожелаем стойност. Така, както се прави в печатната литература, с цел да се улесни читателя визуално да разграничава началото на параграф.</p>
+            <p style="border: 1px solid #999;line-height:2em;letter-spacing: .5em">Да променяме разстоянието между буквите.</p>
+            <p style="border: 1px solid #999;line-height:2em;word-spacing: .7em">Да променяме разстоянието между думите.</p>
+            <p style="border: 1px solid #999;line-height:2em;">Да променяме разстоянието между редовете. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.</p>
+        </div>
+    </section>
+    <section><h3>Text Color</h3>
+        <p>Свойство: color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_color.asp">w3schools: CSS color Property</a></p>
+    </section>
+    <section><h3>Text Decoration</h3>
+        <p>Свойство: text-decoration</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">w3schools: CSS text-decoration Property</a></p>
+    </section>
+    <section><h3>Text Transformation</h3>
+        <p>Свойство: text-transform</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-transform.asp">w3schools: CSS text-transform Property</a></p>
+    </section>
+    <section><h3>Text Indentation</h3>
+        <p>Свойство: text-indent</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-indent.asp">w3schools: CSS text-indent Property</a></p>
+    </section>
+    <section><h3>Letter Spacing</h3>
+        <p>Свойство: letter-spacing</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_letter-spacing.asp">w3schools: CSS letter-spacing Property</a></p>
+    </section>
+    <section><h3>Word Spacing</h3>
+        <p>Свойство: word-spacing</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_word-spacing.asp">w3schools: CSS word-spacing Property</a></p>
+    </section>
+    <section><h3>Text Align</h3>
+        <p>Свойство: text-align</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">w3schools: CSS text-align Property</a></p>
+    </section>
+    <section><h3>Vertical Align</h3>
+        <p>Свойство: vertical-align</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_pos_vertical-align.asp">w3schools: CSS vertical-align Property</a></p>
+        <p>Забележка: често се употребява в комбинация с <code>line-height</code> върху поредови елементи. За да разберете добре как работи, е необходимо задълбочено познаване на поредовия форматиращ контекст.</p>
+    </section>
+    <section><h3>vertical-align: пример</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="vertical-align (quick demo)" src="https://codepen.io/webdesigncourse/embed/NWqXwEE?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href='https://codepen.io/webdesigncourse/pen/NWqXwEE'>vertical-align (quick demo)</a> by Iva Popova
+          (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3 class="advanced">vertical-align:middle - пример</h3>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="vertical-align: middle" src="https://codepen.io/webdesigncourse/embed/qBdppVp?height=300&theme-id=20230&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href='https://codepen.io/webdesigncourse/pen/qBdppVp'>vertical-align: middle</a> by Iva Popova
+            (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+          </iframe>
+    </section>
+    <section><h3>Line Height</h3>
+        <p>Свойство: line-height</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_dim_line-height.asp">w3schools: CSS line-height Property</a></p>
+    </section>
+    <section id="textStylingPropertiesAppendix">
+        <p>Повече информация:</p>
+        <dl class="fa">
+            <dt><a href="https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align">Deep dive CSS: font metrics, line-height and vertical-align</a></dt>
+            <dt><a href="https://christopheraue.net/design/why-vertical-align-is-not-working">Why This Damn Vertical-Align Is Not Working (CSS)</a> by <a href="https://christopheraue.net/">Christopher Aue</a></dt>
+        </dl>
+    </section>
 </section>
 
 <section><h2>CSS свойства за оформление на шрифт</h2>
-	<section>
-		<a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
-		<div class="results_h" style="color: #555; padding: .6em;">
-			<p style="font-family: 'Marck Script', cursive; font-size: 1.5em; border: 1px solid #999;">Можем да задаваме тип на шрифта</p>
-			<p style="font-size: 3em; border: 1px solid #999;">Можем да управляваме размера на шрифта</p>
-			<p style="font-size: 1em; border: 1px solid #999; font-style: italic;">Можем да задаваме стила на шрифта</p>
-			<p style="font-size: 1em; border: 1px solid #999; font-weight: 900;">Можем да управляваме дебелината на шрифта.</p>
-		</div>
-	</section>
-	<section><h3>Self-Learning Section</h3>
-		<a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
-	</section>
-	<section><h3>Font Family</h3>
-		<p>Свойство: font-family</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">w3schools: CSS font-family Property</a></p>
-	</section>
-	<section><h3>Font Size</h3>
-		<p>Свойство: font-size</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">w3schools: CSS font-size Property</a></p>
-	</section>
-	<section><h3>Font Style</h3>
-		<p>Свойство: font-style</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font-style.asp">w3schools: CSS font-style Property</a></p>
-	</section>
-	<section><h3>Font Weight</h3>
-		<p>Свойство: font-weight</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font-weight.asp">w3schools: CSS font-weight Property</a></p>
-	</section>
-	<section><h3>Font Variant</h3>
-		<p>Свойство: font-variant</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font-variant.asp">w3schools: CSS font-variant Property</a></p>
-	</section>
-	<section><h3>Font - съкратен запис за всички Font свойства</h3>
-		<p>Свойство: font</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_font_font.asp">w3schools: CSS font Property</a></p>
-	</section>
-	<section><h3>Включване на онлайн шрифтове</h3>
-		<dl class="fa">
-			<dt>Когато искаме да използваме нестандартен шрифт то освен да го посочим в <code>font-family</code>, трябва да включим и съответния файл с шрифта към страницата, за да бъде достъпен за потребителите.</dt>
-		</dl>
-	</section>
-	<section><h3>Включване на Google Fonts</h3>
-		<dl class="fa" style="font-size: .9em">
-			<dt>Отворете <a href="https://fonts.google.com/">fonts.google.com</a></dt>
-			<dt>От менюто "Categories" (в дясно), маркирайте категориите шрифтове, които ви интересуват.</dt>
-			<dt>Ако желаете само шрифтове, които да поддържат кирилица, то задайте език "Cyrillic" чрез менюто "Languages"</dt>
-			<dt>Може да прегледате отделните шрифтове като зададете ваш текст, от настройките за съответния шрифт:</dt>
-			<dd>От падащото меню за дадения шриф, изберете "custom" (<a href="images/googleFonts/select_custom_preview_1.png">ето как</a>)</dd>
-			<dd>След като въведете текста, може да го приложите върху всички шрифтове, като изберете "APPLY TO AL FONTS" (<a href="images/googleFonts/select_custom_preview_2.png">ето как</a>)</dd>
-		</dl>
-	</section>
-	<section><h3>Включване на Google Fonts</h3>
-		<dl class="fa" style="font-size: .9em">
-		 	<dt>За да използвате даден шрифт във вашата страница: </dt>
-		 	<dd>Натиснете бутона '+' към избрания от вас шрифт.</dd>
-		 	<dd>Отворете появилият се в дъното на страницата блок с текст: "1 Family Selected" (<a href="images/googleFonts/select_custom_preview_3.png">ето как</a>)</dd>
-		 	<dd>Следвайте посочените там инструкции :)</dd>
-		</dl>
-	</section>
-	<section><h3>Включване на шрифтове-икони</h3>
-		<dl class="fa">
-			<dt>Предпочитан вариант за икони е да използвате някоя от библиотеките, които предлагат векторни икони като шрифтове, вместо 'jpg', 'png' и пр. растерни изображения.</dt>
-			<dt>Може да търсите по име в някои от най-популярните библиотеки: <a href="https://glyphsearch.com/">glyphsearch</a></dt>
-		</dl>
-	</section>
-	<section><h3>Font Awesome Icons</h3>
-		<div class="fa-example"><i class="fa fa-smile-o"></i><i class="fa fa-meh-o"></i><i class="fa fa-frown-o"></i></div>
-	</section>
-	<section><h3>Font Awesome Icons- howto</h3>
-		<dl class="fa">
-			<dt>Вместо да сваляме  Font Awesome на нашия сървър, ще използваме CDN (Content Delivery Network), тъй като те са cloud базирани. Може да използвате:</dt>
-			<dd><a href="https://fontawesomecdn.com/">Font Awesome CDN</a></dd>
-			<dd><a href="https://www.bootstrapcdn.com/fontawesome/">BootstrapCDN</a></dd>
-			<dd>Или да се регистрирате с мейл към <a href="https://cdn.fontawesome.com/">Font Awesome CDN</a> за да получите персонализирана библиотека.</dd>
-			<dt>Без значение кой източник ще използвате, бъдете сигурни, че сте избрали <span class="note">min</span> версията на съответния файл.</dt>
-		</dl>
-	</section>
-	<section><h3>Font Awesome Icons- howto</h3>
-			<pre><code rel="HTML">
-				<!-- включваме Font Awesome min css : -->
-				&lt;head&gt;
-					<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
-				&lt;/head&gt;
-				&lt;body&gt;
-					<!-- слагаме елемента, който ще генерира иконката -->
-					<i class="fa fa-smile-o"></i>
-				&lt;/body&gt;
-			</code></pre>
-	</section>
+    <section>
+        <a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Fonts</a>
+        <div class="results_h" style="color: #555; padding: .6em;">
+            <p style="font-family: 'Marck Script', cursive; font-size: 1.5em; border: 1px solid #999;">Можем да задаваме тип на шрифта</p>
+            <p style="font-size: 3em; border: 1px solid #999;">Можем да управляваме размера на шрифта</p>
+            <p style="font-size: 1em; border: 1px solid #999; font-style: italic;">Можем да задаваме стила на шрифта</p>
+            <p style="font-size: 1em; border: 1px solid #999; font-weight: 900;">Можем да управляваме дебелината на шрифта.</p>
+        </div>
+    </section>
+    <section><h3>Font Family</h3>
+        <p>Свойство: font-family</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">w3schools: CSS font-family Property</a></p>
+    </section>
+    <section><h3>Font Size</h3>
+        <p>Свойство: font-size</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">w3schools: CSS font-size Property</a></p>
+    </section>
+    <section><h3>Font Style</h3>
+        <p>Свойство: font-style</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-style.asp">w3schools: CSS font-style Property</a></p>
+    </section>
+    <section><h3>Font Weight</h3>
+        <p>Свойство: font-weight</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_weight.asp">w3schools: CSS font-weight Property</a></p>
+    </section>
+    <section><h3>Font Variant</h3>
+        <p>Свойство: font-variant</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font-variant.asp">w3schools: CSS font-variant Property</a></p>
+    </section>
+    <section><h3>Font - съкратен запис за всички Font свойства</h3>
+        <p>Свойство: font</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_font_font.asp">w3schools: CSS font Property</a></p>
+    </section>
+    <section id="customFontsInclude"><h3>Включване на custom шрифтове</h3>
+        <dl class="fa">
+            <dt>Когато искаме да използваме нестандартен шрифт то освен да го посочим в <code>font-family</code>, трябва да включим и съответния файл с шрифта към страницата, за да бъде достъпен за потребителите.</dt>
+            <dt>Това се осъществява, чрез CSS правилото <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">@font-face </a></dt>
+        </dl>
+    </section>
+    <section><h3>Включване на custom шрифтове - пример</h3>
+        <pre style="width: 110%; font-size: .5em;"><code rel="CSS" class="css">
+            @font-face {
+                /* задаваме име на шрифта":*/
+                font-family: ChasingEmbers;
+
+                /* указваме пътя до файловете със шрифта */
+                src: url("fonts/Chasing Embers Demo Version.otf"),
+                     url("fonts/Chasing Embers Demo Version.ttf");
+            }
+
+            .customFont{
+                /* използваме "нашия шрифт", с името, което сме указали по-горе: */
+                font-family: "ChasingEmbers", cursive;
+                font-size: 5em;
+                font-weight: normal;
+            }
+        </code></pre>
+        <pre style="width: 110%; font-size: .5em;"><code rel="HTML" class="html">
+            <h1 class="customFont">Heading with custom font</h1>
+        </code></pre>
+        <pre style="width: 110%; font-size: .5em;"><code rel="Output" class="bash" data-noescape>
+            <h1 class="customFont">Heading with custom font</h1>
+        </code></pre>
+        <p>Самите файлове със шрифта, може да свалите от <a href="https://www.wfonts.com/font/chasing-embers-demo-version">тук</a></p>
+    </section>
+    <section><h3>Включване на Google Fonts</h3>
+        <dl class="fa" style="font-size: .9em">
+            <dt>Отворете <a href="https://fonts.google.com/">fonts.google.com</a></dt>
+            <dt>От менюто "Categories" (в дясно), маркирайте категориите шрифтове, които ви интересуват.</dt>
+            <dt>Ако желаете само шрифтове, които да поддържат кирилица, то задайте език "Cyrillic" чрез менюто "Languages"</dt>
+            <dt>Може да прегледате отделните шрифтове като зададете ваш текст, от настройките за съответния шрифт:</dt>
+            <dd>От падащото меню за дадения шриф, изберете "custom" (<a href="images/googleFonts/select_custom_preview_1.png">ето как</a>)</dd>
+            <dd>След като въведете текста, може да го приложите върху всички шрифтове, като изберете "APPLY TO AL FONTS" (<a href="images/googleFonts/select_custom_preview_2.png">ето как</a>)</dd>
+        </dl>
+    </section>
+    <section><h3>Включване на Google Fonts</h3>
+        <dl class="fa" style="font-size: .9em">
+            <dt>За да използвате даден шрифт във вашата страница: </dt>
+            <dd>Натиснете бутона '+' към избрания от вас шрифт.</dd>
+            <dd>Отворете появилият се в дъното на страницата блок с текст: "1 Family Selected" (<a href="images/googleFonts/select_custom_preview_3.png">ето как</a>)</dd>
+            <dd>Следвайте посочените там инструкции :)</dd>
+        </dl>
+    </section>
+    <section><h3>Включване на шрифтове-икони</h3>
+        <dl class="fa">
+            <dt>Предпочитан вариант за икони е да използвате някоя от библиотеките, които предлагат векторни икони като шрифтове, вместо 'jpg', 'png' и пр. растерни изображения.</dt>
+            <dt>Може да търсите по име в някои от най-популярните библиотеки: <a href="https://glyphsearch.com/">glyphsearch</a></dt>
+        </dl>
+    </section>
+    <section><h3>Font Awesome Icons</h3>
+        <div class="fa-example"><i class="fa fa-smile-o"></i><i class="fa fa-meh-o"></i><i class="fa fa-frown-o"></i></div>
+    </section>
+    <section><h3>Font Awesome Icons- howto</h3>
+        <dl class="fa">
+            <dt>Вместо да сваляме  Font Awesome на нашия сървър, ще използваме CDN (Content Delivery Network), тъй като те са cloud базирани. Може да използвате:</dt>
+            <dd><a href="https://fontawesomecdn.com/">Font Awesome CDN</a></dd>
+            <dd><a href="https://www.bootstrapcdn.com/fontawesome/">BootstrapCDN</a></dd>
+            <dd>Или да се регистрирате с мейл към <a href="https://cdn.fontawesome.com/">Font Awesome CDN</a> за да получите персонализирана библиотека.</dd>
+            <dt>Без значение кой източник ще използвате, бъдете сигурни, че сте избрали <span class="note">min</span> версията на съответния файл.</dt>
+        </dl>
+    </section>
+    <section><h3>Font Awesome Icons- howto</h3>
+            <pre><code rel="HTML">
+                <!-- включваме Font Awesome min css : -->
+                &lt;head&gt;
+                    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+                &lt;/head&gt;
+                &lt;body&gt;
+                    <!-- слагаме елемента, който ще генерира иконката -->
+                    <i class="fa fa-smile-o"></i>
+                &lt;/body&gt;
+            </code></pre>
+    </section>
 </section>
 
 <section><h2>CSS свойства за фон на елемент</h2>
-	<section><h3>Self-Learning Section</h3>
-		<a href="http://www.w3schools.com/css/css_font.asp">w3schools: CSS Backgrounds</a>
-	</section>
-	<section><h3>Background Color</h3>
-		<p>Свойство: background-color</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_background-color.asp">w3schools: CSS background-color Property</a></p>
-	</section>
-	<section><h3>Background Image</h3>
-		<p>Свойство: background-image</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_background-image.asp">w3schools: CSS background-image Property</a></p>
-	</section>
-	<section><h3>Background Image - Repeat</h3>
-		<p>Свойство: background-repeat</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
-	</section>
-	<section><h3>Background Image - Size</h3>
-		<p>Свойство: background-size</p>
-		<p><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">w3schools: CSS background-size Property</a></p>
-	</section>
-	<section><h3>Background Image - Atach</h3>
-		<p>Свойство: background-attachment</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
-	</section>
-	<section><h3>Background - съкратен запис за всички Backgrounds свойства</h3>
-		<p>Свойство: background</p>
-		<p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
-	</section>
-	<section id="background_examples"><h3>Задаване на фон за цялата страница.</h3>
-		<dl class="fa">
-			<dt>Елемента, на който искаме да поставим изображението като фон е <b>body</b>.</dt>
-			<dt>Височината на елемента <b>body</b> се определя динамично, в зависимост от съдържанието!</dt>
-			<dt>За да сме сигурни, че елемента <b>body</b> ше бъде висок поне колкото viewport-a, трябва да зададем:</dt>
-			<pre><code rel="CSS">
-				html, body{
-					min-height: 100%;
-				}
-			</code></pre>
-			<dt class="note">Бихме могли да използваме и <b>vh</b> еденици, вместо процент.</dt>
-		</dl>
-	</section>
-	<section><h3>Задаване на фон за цялата страница - примери</h3>
-		<dl class="fa">
-			<dt>Пример за снимка, поместена във viewport-a, като пропорциите се запазват.
-				Изображението не се изрязва.<br>
-				<span class="note">Не гарантира запълването на целия фон</span>.</dt>
-			<dd><a href="slides_examples/backgrounds/bg_image_contain_viewport.html">bg_image_contain_viewport</a></dd>
-			<dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите се запазват.<br>
-				<span class="note">Изображението може да бъде изрязано</span>.</dt>
-			<dd><a href="slides_examples/backgrounds/bg_image_cover_viewport.html">bg_image_cover_viewport</a></dd>
-			<dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите <b>не се запазват</b>!</dt>
-			<dd><a href="slides_examples/backgrounds/bg_image_to_viewport.html">bg_image_to_viewport</a></dd>
+    <section>
+        <a href="http://www.w3schools.com/css/css_background.asp">w3schools: CSS Backgrounds</a>
+    </section>
+    <section><h3>Background Color</h3>
+        <p>Свойство: background-color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-color.asp">w3schools: CSS background-color Property</a></p>
+    </section>
+    <section><h3>Background Image</h3>
+        <p>Свойство: background-image</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-image.asp">w3schools: CSS background-image Property</a></p>
+    </section>
+    <section><h3>Background Image - Size</h3>
+        <p>Свойство: background-size</p>
+        <p><a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">w3schools: CSS background-size Property</a></p>
+    </section>
+    <section><h3>Background Image - Repeat</h3>
+        <p>Свойство: background-repeat</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-repeat.asp">w3schools: CSS background-repeat Property</a></p>
+    </section>
+    <section><h3>Background Image - Position</h3>
+        <p>Свойство: background-position</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-position.asp">w3schools: CSS background-position Property</a></p>
+    </section>
+    <section><h3>Background Image - Attachment</h3>
+        <p>Свойство: background-attachment</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_background-attachment.asp">w3schools: CSS background-attachment Property</a></p>
+    </section>
+    <section><h3>Background - съкратен запис за всички Backgrounds свойства</h3>
+        <p>Свойство: background</p>
+        <p><a href="http://www.w3schools.com/cssref/css3_pr_background.asp">w3schools: CSS background Property</a></p>
+    </section>
+    <section id="background_examples"><h3>Задаване на фон за цялата страница.</h3>
+        <dl class="fa">
+            <dt>Елемента, на който искаме да поставим изображението като фон е <b>body</b>.</dt>
+            <dt>Височината на елемента <b>body</b> се определя динамично, в зависимост от съдържанието!</dt>
+            <dt>За да сме сигурни, че елемента <b>body</b> ше бъде висок поне колкото viewport-a, трябва да зададем:</dt>
+            <pre><code rel="CSS">
+                html, body{
+                    min-height: 100%;
+                }
+            </code></pre>
+            <dt class="note">Бихме могли да използваме и <b>vh</b> еденици, вместо процент.</dt>
+        </dl>
+    </section>
+    <section><h3>Задаване на фон за цялата страница - примери</h3>
+        <dl class="fa">
+            <dt>Пример за снимка, поместена във viewport-a, като пропорциите се запазват.
+                Изображението не се изрязва.<br>
+                <span class="note">Не гарантира запълването на целия фон</span>.</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_contain_viewport.html">bg_image_contain_viewport</a></dd>
+            <dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите се запазват.<br>
+                <span class="note">Изображението може да бъде изрязано</span>.</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_cover_viewport.html">bg_image_cover_viewport</a></dd>
+            <dt>Пример за снимка, заемаща <b>изцяло</b> viewport-a. Пропорциите <b>не се запазват</b>!</dt>
+            <dd><a href="slides_examples/backgrounds/bg_image_to_viewport.html">bg_image_to_viewport</a></dd>
 
-		</dl>
-	</section>
+        </dl>
+    </section>
 </section>
 
 <section><h2>CSS свойства за рамка на елемент</h2>
-	<section><h3>Self-Learning Section</h3>
-		<a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a>
-	</section>
-	<section><h3>Border Style</h3>
-		<p>Свойство: border-style</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_border-style.asp">w3schools: CSS border-style Property</a></p>
-	</section>
-	<section><h3>Border Width</h3>
-		<p>Свойство: border-width</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_border-width.asp">w3schools: CSS border-width Property</a></p>
-	</section>
-	<section><h3>Border Color</h3>
-		<p>Свойство: border-color</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_border-color.asp">w3schools: CSS border-color Property</a></p>
-	</section>
-	<section><h3>Border - съкратен запис за всички Border свойства</h3>
-		<p>Свойство: border</p>
-		<p><a href="http://www.w3schools.com/cssref/pr_border.asp">w3schools: CSS border Property</a></p>
-	</section>
+    <section>
+        <a href="http://www.w3schools.com/css/css_border.asp">w3schools: CSS Borders</a>
+    </section>
+    <section><h3>Border Style</h3>
+        <p>Свойство: border-style</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-style.asp">w3schools: CSS border-style Property</a></p>
+    </section>
+    <section><h3>Border Width</h3>
+        <p>Свойство: border-width</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-width.asp">w3schools: CSS border-width Property</a></p>
+    </section>
+    <section><h3>Border Color</h3>
+        <p>Свойство: border-color</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border-color.asp">w3schools: CSS border-color Property</a></p>
+    </section>
+    <section><h3>Border - съкратен запис за всички Border свойства</h3>
+        <p>Свойство: border</p>
+        <p><a href="http://www.w3schools.com/cssref/pr_border.asp">w3schools: CSS border Property</a></p>
+    </section>
 </section>
-<section id="homework"><h4>Задачи за упражнение</h4>
-	<section><h5>The Crow</h5>
-		<div class="text_left fontsize_08">
-		<p>Да се състави страница, наподобяваща максимално точно показаната на <a href="homework/the_crow/TheCrow Solution-Screen1.png">фиг.1</a>. Кодът трябва да е <a href="https://validator.w3.org/nu/#textarea">валиден HTML5</a>!</p>
-		<p>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият - шрифтът е наклонен, а разстоянието между буквите е 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа за да видите по-ясно.).Също така, обърнете внимания на типа шрифт (serif, sans-serif) и задайте съответния.</p>
-		<p>Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</p>
-		<p>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</p>
-		<hr>
-		<p class="fontsize_08">Едно от възможните решения може да видите тук:  <a href="homework/the_crow/TheCrow-Solution.html">TheCrow-Solution.html</a></p>
-		</div>
-	</section>
+<section><h4>Задачи за упражнение</h4>
+    <section style="font-size:.9em"><h5>The Crow</h5>
+        <div class="text_left fontsize_08">
+        <p>Да се състави страница, наподобяваща максимално точно показаната на <a href="homework/the_crow/TheCrow Solution-Screen1.png">фиг.1</a>. Кодът трябва да е <a href="https://validator.w3.org/nu/#textarea">валиден HTML5</a>!</p>
+        <p>Забележете, че всеки текст, който е заграден в кавички е оформен различно от останалият: шрифтът е наклонен, а разстоянието между буквите е 2px. Отделно, всяка фраза "никой друг!" е подчертана с оранжево (преливащо към кафяво -  може да увеличите изгледа за да видите по-ясно).Също така, обърнете внимание на типа шрифт (serif, sans-serif) и задайте съответния.</p>
+        <p>Текстът на стихотворението може да копирате и от тук: <a href="https://chitanka.info/text/2384-garvanyt">https://chitanka.info/text/2384-garvanyt</a> (използвани са само първите 4 куплета.)</p>
+        <p>Използваното за фон изображение, може да изтеглите от тук: <a href="https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849">https://pixabay.com/en/raven-crow-night-creepy-darkness-1002849</a>. То заема цялото съдържание на страницата, като пропорциите НЕ СЕ запазват.</p>
+        <hr>
+        <p class="fontsize_08">Едно от възможните решения може да видите тук:  <a href="homework/the_crow/TheCrow-Solution.html">TheCrow-Solution.html</a></p>
+        </div>
+    </section>
 </section>
 
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-	<p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
 </section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
 ########################################################
 -->
-		</div>
-	</div>
-	<!-- Custom processing -->
-	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
-	<!-- external scripts -->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
 
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-	 <!-- init reveal -->
-	<script>
-		// Full list of configuration options available at:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			slideNumber: 'c/t',
-			keyboard: true,
-			history: true,
-			center: true,
-			width: 1024,
-			height: 850,
-			// Bounds for smallest/largest possible scale to apply to content
-			// minScale: .5,
-			maxScale: 1,
-			// slide transition
-			transition: 'concave', // none/fade/slide/convex/concave/zoom
-			// Factor of the display size that should remain empty around the content
-			margin: 0.1,
-			// shift+maous click to zoom in/out element
-			zoomKey: 'ctrl',
-			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			// transition: Reveal.getQueryHash().transition || 'default'
-			// Optional reveal.js plugins
-			dependencies: [
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-			]
-		});
-	</script>
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

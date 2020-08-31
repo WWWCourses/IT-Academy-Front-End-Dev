@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For Loop Examples</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// // брои от 5 до 1:
+	// for(var i = 5; i>0; i--){
+	// 	console.log("i=", i);
+	// }
+
+	// half Pine Tree print
+	var crownHeight = 5;
+	for(var i = 1; i<=crownHeight; i++){
+		console.log("*".repeat(i));
+	};
+
+	// full tree print
+	var crownHeight = 6;
+	var boleHeight = 2;
+	var boleWidth = 3;
+	var spaceCount;
+
+
+	// print the crown:
+	for(var i = 1; i<=crownHeight; i++){
+		spaceCount = Math.floor(crownHeight) - i;
+		console.log( " ".repeat(spaceCount)+"*".repeat(i*2-1) );		
+	}
+
+	// print the bole:	
+	spaceCount = Math.floor(((crownHeight*2-1)-boleWidth)/2);
+	for(var i = 1; i<=boleHeight; i++){		
+		console.log( " ".repeat(spaceCount)+"*".repeat(boleWidth));		
+	}	
+
+
+</script>
+</body>
+</html>

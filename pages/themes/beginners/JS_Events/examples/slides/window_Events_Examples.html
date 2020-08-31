@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>window_Events_Examples</title>
+</head>
+<body>
+	<button>click me</button>
+</body>
+<script type="text/javascript">
+	var handleUnload = function (e) {
+	  var confirmationMessage = "ddd";
+
+	  e.returnValue = confirmationMessage;
+	  return confirmationMessage;
+	}
+
+	window.addEventListener("beforeunload", handleUnload);
+
+</script>
+</html>

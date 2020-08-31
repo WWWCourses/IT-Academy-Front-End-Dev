@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Home Page</title>
+	<script type="text/javascript" src="smartLogger.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	// TASK: Implement the logger object, whose method log() logs a message if the script is running under local machine (i.e. dev env), and outputs nothing, if the script is run under server (i.e. prod machine).
+
+	var logger = smartLogger(document.URL);
+
+	logger.log(`I'm the logger.log!`);
+	// If script is running by server, i.e. the document.url starts with 'http://' or 'https://', then no output to console.
+	 // If script is running locally, i.e. the document.URL starts with 'file://', then in console:
+	 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	 // I'm the logger.log!
+	 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+</script>
+</body>
+</html>

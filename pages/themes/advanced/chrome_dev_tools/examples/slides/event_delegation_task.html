@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo1</title>
+</head>
+<body>
+	<p>Output</p>
+	<button class="test1">Test1</button>
+	<button class="test2">Test2</button>
+	<script type="text/javascript">
+		let outNode = document.querySelector('p');
+		let ulNode = document.createElement("ul");
+		let btnTest1 = document.querySelector('.test1');
+		let btnTest2 = document.querySelector('.test2');
+
+		btnTest1.addEventListener('click', test1);
+		btnTest2.addEventListener('click', test2);
+
+		let list_items = 10000;
+
+		function createList(list_items){
+			for(let i = 0; i < list_items; i++){
+				let liNode = document.createElement("li");
+				liNode.innerHTML = `Item ${i}`
+				ulNode.appendChild(liNode)
+			}
+
+			document.body.appendChild(ulNode);
+		}
+		createList(list_items);
+		outNode.innerHTML = `Created ${list_items} items!`;
+
+		function test1(){
+			// SLOW: attach event to each child:
+			if(ulNode){
+				let liNodes = ulNode.children;
+
+				for(let i = 0, length1 = liNodes.length; i < length1; i++){
+					liNodes[i].addEventListener("click", function(){
+						outNode.innerHTML = liNodes[i].innerHTML;
+						outNode.style.backgroundColor = "red"
+					},false)
+				}
+			}
+		}
+
+
+		function test2(){
+			/* TASK:
+				1. Implement the same functionality as 'Test1', but this time using
+				the "Event Delegation" approach. But lets this time the output node
+				background to be 'green'
+
+				2. Measure the performance between two approaches.
+				3. Use the Performance Tab in dev Tools
+				4. Also use the console.profile methods
+			*/
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>playlist</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    	.player{
+    		padding: .2em;
+    		background: #333;
+    		color: #FFF;
+    		font-size: 1.2em;
+    		height: 24em;
+    	}
+    	.player>h2{
+    		margin: .5em 0 .8em .5em;
+    		font-size: 2em;
+    	}
+    	.track_list_wrapper{
+    		list-style-type: none;
+    		margin: 1em 0;
+    		padding: .5em;
+    	}
+    	.track_list_wrapper li{
+    		line-height: 1.3em;
+    	}
+    	.track_list_wrapper li:before{
+    		content: "\f04b";
+   			font-family: FontAwesome;
+   			font-size: 0.8em;
+   			color: #1CABCA;
+   			margin-right: .5em;
+    	}
+    	.track_list_wrapper li:hover{
+    		cursor: pointer;
+    	}
+    	.track_list_wrapper li[data-genre="1"]:before{
+    		color: #00F1FF;
+    	}
+    	.track_list_wrapper li[data-genre="1"]:hover{
+    		background: #00F1FF;
+    	}
+    	.track_list_wrapper li[data-genre="2"]:before{
+    		color: #FF0078;
+    	}
+    	.track_list_wrapper li[data-genre="2"]:hover{
+    		background: #FF0078;
+    	}
+    	.track_list_wrapper li[data-genre="3"]:before{
+    		color: #D293F2;
+    	}
+    	.track_list_wrapper li[data-genre="3"]:hover{
+    		background: #D293F2;
+    	}
+
+    	.genre_select #clasical{
+    		color: #00F1FF;
+    	}
+    	.genre_select #rock{
+    		color: #FF0078;
+    	}
+    	.genre_select #wave{
+    		color: #D293F2;
+    	}
+    	.hide{
+    		display: none;
+    	}
+    	.show{
+    		display: block;
+    	}
+
+    </style>
+</head>
+<body>
+	<div class="player">
+		<h2>The playlist</h2>
+		<div class="genre_select">
+			|
+			<label id="all">All<input type="radio" name="genres"></label>
+			| <label id="clasical">Classical<input type="radio" name="genres"></label>
+			| <label id="rock">Rock<input type="radio" name="genres"></label>
+			| <label id="wave">New Wave<input type="radio" name="genres"></label>
+			|
+		</div>
+		<ul class="track_list_wrapper">
+			<li data-track_lenght="3.20" data-genre="1">Antonio Vivaldi - The Four Seasons, Op. 8, "Spring": Allegro</li>
+			<li data-track_lenght="2.40" data-genre="1">Richard Wagner - The Valkyrie: Ride of the Valkyries</li>
+			<li data-track_lenght="3.20" data-genre="2">AC/DC - Dirty Deeds Done Dirt Cheap</li>
+			<li data-track_lenght="2.20" data-genre="3">a-Ha - Take On Me</li>
+			<li data-track_lenght="3.20" data-genre="2">Deep Purple - Smoke On The Water</li>
+			<li data-track_lenght="3.20" data-genre="1">Frédéric Chopin - Nocturne No. 2 In E-Flat Major, Op. 9</li>
+			<li data-track_lenght="3.20" data-genre="3">Blue Monday - New Order</li>
+			<li data-track_lenght="3.20" data-genre="3">Transmission - Joy Division</li>
+			<li data-track_lenght="3.20" data-genre="2">Nirvana - Smells Like Teen Spirit</li>
+			<li data-track_lenght="3.20" data-genre="3">A Forest - The Cure</li>
+			<li data-track_lenght="3.20" data-genre="1">Gustav Holst - The Planets, Op. 32</li>
+		</ul>
+	</div>
+
+
+
+
+<script type="text/javascript">
+	let nodes = {
+		'track_list_wrapper': document.querySelector('.track_list_wrapper'),
+		'genre_select':document.querySelector('.genre_select')
+	}
+
+	genresMap = {
+		'all': 0,
+		'clasical' : 1,
+		'rock' : 2,
+		'wave' : 3,
+	}
+
+	nodes.genre_select.addEventListener('click', function(e){
+		if(e.target.nodeName === "LABEL"){
+			let selected_genre = genresMap[e.target.id];
+			let all_tracks = nodes.track_list_wrapper.children;
+
+
+			// show only selected_genre tracks
+			for(let i = 0, len = all_tracks.length; i < len; i++){
+				if(selected_genre == 0){
+					all_tracks[i].style.display = "block";
+				}else{
+					// hide all:
+					all_tracks[i].style.display = "none";
+					if(all_tracks[i].dataset.genre == selected_genre){
+						all_tracks[i].style.display = "block";
+					}
+				}
+			}
+		}
+
+	})
+	nodes.track_list_wrapper.addEventListener('click', function(e){
+		console.log(e.target.dataset.genre);
+
+	})
+
+
+
+
+
+	function sc_player(){
+		// let url_tmplate = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146432418&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+
+		// <!-- <iframe class="sc_player" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146432418"></iframe> -->
+
+		// <!-- <iframe src="http://cmd.fm/116347308"></iframe> -->
+
+		let sc_playerURL = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/"
+
+		let iframe = document.querySelector('.sc_player')
+		let playlist = document.querySelector('.playlist')
+		playlist.addEventListener('click', function(e){
+			let track_id = e.target.dataset.track_id;
+			iframe.src = sc_playerURL + track_id;
+		})
+	}
+
+</script>
+</body>
+</html>

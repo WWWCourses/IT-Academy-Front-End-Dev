@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<title>Guess_The_Number</title>
+
+	<style type="text/css">
+		body{
+			background-color: #5AE;
+			font-family: "Trebuchet MS", sans-serif;
+		}
+		.playfield{
+			width: 20vw;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 1rem;
+			background-color: #FFF;
+			border: 2px solid #AAA;
+			border-radius: 1rem;
+		}
+		#end{
+			font-weight: bold;
+		}
+		input:focus {
+			background-color: #FF9;
+		}
+		h1, h3{
+			text-align: center;
+		}
+		img{
+			width: 15vw;
+			height: 15vw;
+		}
+		img:nth-child(4){
+			position: absolute;
+			top: 10vh;
+			right: 5vw;
+		}
+		img:nth-child(5){
+			position: absolute;
+			top: 10vh;
+			left: 5vw;
+		}
+		.level{
+			width: 20vw;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1rem;
+		}
+		.level>button{
+			margin-right: 1.2rem;
+		}
+		.fas{
+			font-size: 1.5rem;
+			vertical-align: bottom;
+			color: #FFF;
+		}
+		.balloon{
+			height: 40vh;
+			width: 20vh;
+
+			display: none;
+			
+			animation-name: balloon;
+			animation-duration: 4s;
+			animation-iteration-count: 3;
+			animation-delay: 1s;
+			animation-play-state: paused;
+		}
+
+		#balloon_blue{
+			position: absolute;
+			bottom: -40vh;
+			left: 30vw;
+		}
+		#balloon_green{
+			position: absolute;
+			bottom: -40vh;
+			left: 10vw;
+		}
+		#balloon_purple{
+			position: absolute;
+			bottom: -40vh;
+			right: 30vw;
+		}
+		#balloon_red{
+			position: absolute;
+			bottom: -40vh;
+			right: 10vw;
+		}
+
+		@keyframes balloon{
+			0% {bottom: -40vh;}
+			50% {bottom: 50vh;}
+			100% {bottom: 100vh;}
+		}
+	</style>
+</head>
+<body>
+	<h1>Познай числото!</h1>
+	<h3>Избери ниво на трудност:</h3>
+	<div class="level">
+		<i class="fas fa-smile"></i>
+		<button onclick="writeMachineNum10()">0-10</button>
+		<i class="fas fa-grin"></i>
+		<button onclick="writeMachineNum100()">0-100</button>
+		<i class="fas fa-laugh-beam"></i>
+		<button onclick="writeMachineNum1000()">0-1000</button>
+		<p style="text-align: center;"></p>
+	</div>
+
+	<img  src="kisspng-computer-cartoon-vector-to-play-computer-girl-5aa6610866bad7.9461477615208532564208.png">
+	<img src="kisspng-laptop-royalty-free-clip-art-girls-play-computer-5aac10ec5a39e0.7243666615212259643696.png">
+	<div class="playfield">
+		<b><label>Въведи число: </label></b>
+		<input onkeyup="checkForEnter(event)" type="number" min="0" max="1000" id="input" style="width: 3rem;">
+		<button onclick="guessMe()">Познай!</button>
+
+		<p id="history"></p>
+		<p id="end"></p>
+	</div>
+
+	<img src="balloon_blue.png" class="balloon" id="balloon_blue">
+	<img src="balloon_green.png" class="balloon" id="balloon_green">
+	<img src="balloon_purple.png" class="balloon" id="balloon_purple">
+	<img src="balloon_red.png" class="balloon" id="balloon_red">
+
+	<script type="text/javascript">
+		var machineNum;
+		var count = 0;
+		var difficulty = 0;
+
+		function writeMachineNum10(){
+			restartGame();
+			difficulty = 1;
+			machineNum = Math.round(Math.random()*10);
+			console.log(machineNum);
+			document.querySelector(".level>p").innerHTML = "Избери число от 0 до 10!";
+			document.querySelector(".level>i:nth-child(1)").style.color = "yellow";
+			
+			return machineNum;
+		}
+
+		function writeMachineNum100(){
+			restartGame();
+			difficulty = 2;
+			machineNum = Math.round(Math.random()*100);
+			console.log(machineNum);
+			document.querySelector(".level>p").innerHTML = "Избери число от 0 до 100!";
+			document.querySelector(".level>i:nth-child(3)").style.color = "yellow";
+			
+			return machineNum;
+		}
+
+		function writeMachineNum1000(){
+			restartGame();
+			difficulty = 3;
+			machineNum = Math.round(Math.random()*1000);
+			console.log(machineNum);
+			document.querySelector(".level>p").innerHTML = "Избери число от 0 до 1000!";
+			document.querySelector(".level>i:nth-child(5)").style.color = "yellow";
+			
+			return machineNum;
+		}
+
+		function restartGame(){
+			//clear input and history
+			var arr = document.getElementsByTagName("input");
+			arr[0].value = "";
+			document.getElementById("history").innerHTML = "";
+			document.getElementById("end").innerHTML = "";
+
+			var awesome = document.querySelectorAll(".level>i");
+			for(let i = 0; i < awesome.length; i++){
+				awesome[i].style.color = "#FFF";
+			}
+			//broi na opitite da poznaem chisloto
+			count = 0;
+
+			//restart animation
+			var bal = document.getElementsByClassName("balloon");
+			for(let i = 0; i < bal.length; i++){
+					bal[i].style.display = "none";
+					bal[i].style.animationPlayState="paused";
+				}
+		}
+
+		function writeUserNum(){
+			var userNum = document.getElementById("input").valueAsNumber;
+
+			if(!userNum){
+				document.getElementById("history").innerHTML += `<i>Трябва първо да въведеш число!</i><hr>`;
+				return;
+			}else{
+				switch(difficulty){
+					case 1:
+						if((userNum < 0)||(userNum > 10)){
+							document.getElementById("history").innerHTML += `<b>${userNum}</b> <i>:Не, не! Числото трябва да е от 0 до 10.</i><hr>`;
+							var arr = document.getElementsByTagName("input");
+							arr[0].value = "";
+							return;
+						}else
+							return userNum;
+					case 2:
+						if((userNum < 0)||(userNum > 100)){
+							document.getElementById("history").innerHTML += `<b>${userNum}</b> <i>:Не, не! Числото трябва да е от 0 до 100.</i><hr>`;
+							var arr = document.getElementsByTagName("input");
+							arr[0].value = "";
+							return;
+						}else
+							return userNum;
+					case 3:
+						if((userNum < 0)||(userNum > 1000)){
+							document.getElementById("history").innerHTML += `<b>${userNum}</b> <i>:Не, не! Числото трябва да е от 0 до 1000.</i><hr>`;
+							var arr = document.getElementsByTagName("input");
+							arr[0].value = "";
+							return;
+						}else
+							return userNum;
+				}
+			}	
+
+		}
+
+		function checkForEnter(event){
+			if (event.keyCode === 13) {
+				guessMe();
+			}
+		}
+
+		function guessMe(){
+			if (document.getElementById("end").innerHTML){
+				return ;
+			}
+
+			count++;
+			
+			var userNum = writeUserNum();
+			if(machineNum === userNum){
+				document.getElementById("end").innerHTML = "Браво! Числото е: " + machineNum;
+				var bal = document.getElementsByClassName("balloon");
+				for(let i = 0; i < bal.length; i++){
+					bal[i].style.display = "block";
+					bal[i].style.animationPlayState="running";
+				}
+			}else if(count === 10){
+				document.getElementById("end").innerHTML = "Съжалявам, нямаш право на повече опити. Избери нова игра!"
+			
+			}else if(userNum > machineNum && userNum <= 1000 && userNum >= 0){
+				document.getElementById("history").innerHTML += `<b>${userNum}</b> <i>:Опитай пак! По-надолу!</i><hr>`;
+				var arr = document.getElementsByTagName("input");
+				arr[0].value = "";
+
+			}else if(userNum < machineNum && userNum <= 1000 && userNum >= 0){
+				document.getElementById("history").innerHTML += `<b>${userNum}</b> <i>:Опитай пак! По-нагоре!</i><hr>`;
+				var arr = document.getElementsByTagName("input");
+				arr[0].value = "";
+			}
+		}
+	</script>
+</body>
+</html>

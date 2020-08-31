@@ -1,0 +1,39 @@
+.container {
+  width: 10em;
+  height: 10em;
+  background: #FAA;
+}
+
+.container .child {
+  width: 50%;
+  height: 50%;
+  background: #AFA;
+}
+
+.cover {
+  background-image: "img1.png";
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:hover:after {
+  content: ">>";
+}
+
+.btn {
+  background: gray;
+  border-radius: 20%;
+}
+
+.btn-alert {
+  background: red;
+}
+/*# sourceMappingURL=sass_demo.css.map */

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML_Hyperlinks_and_Images</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Хипервръзки (линкове) и изображения.</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Вмъкване на изображения</h2>
+    <section><h3>HTML елемент <code>img</code></h3>
+        <dl class="fa">
+            <dt>Употреба: когато искаме да вмъкнем изображение, което <span class="note">да бъде част от съдържанието на страницата</span>.</dt>
+            <dd>Например: снимка на продукт, лого и пр.</dd>
+            <dt class="note">Не използвайте <code>img</code> елемент, когато желате изображението да бъде фон - това се прави изцяло със CSS!</dt>
+        </dl>
+    </section>
+    <section><h3>HTML елемент <code>img</code></h3>
+        <pre><code rel="HTML" class="html">
+            <img src="images/redApples.jpg" alt="Fresh Red Apples">
+        </code></pre>
+        <dl class="fa">
+            <dt>Елемента няма съдържание!</dt>
+            <dt>Има два задължителни атрибута:</dt>
+            <dd><span class="keyword">src</span> - <i>URL</i> на файлът, от който искате да се зареди изображението.</dd>
+            <dd><span class="keyword">alt</span> - кратко описание (2-3 думи) на съдържанието на изображението.</dd>
+        </dl>
+    </section>
+    <section><h3>Атрибута <code>src</code></h3>
+        <dl class="fa">
+            <dt>Като стойност задаваме URL - за предпочитане е да бъде <a href="https://www.w3schools.com/html/html_filepaths.asp">релативен път</a> до файла с изображението.</dt>
+            <dt>Но ако вашия файл е разположен на друг сървър - задавате абсолютното URL.</dt>
+        </dl>
+    </section>
+    <section><h3 class="advanced">Какво е Hotlinking</h3>
+        <dl class="fa">
+            <dt class="note">Не използвайте URL към изображения които се намират на чужд сървър (hotlinking) тъй като това натоварва въпросния сървър.</dt>
+            <dt>Повечето сървъри забраняват това автоматично.</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+             <!-- НЕ ПРАВЕТЕ ТОВА: -->
+             <img src="https://cdn.pixabay.com/photo/2016/07/09/12/16/apple-1506119_960_720.jpg">
+
+             <!-- A си свалете въпросното изображение на вашия сървър, ако лицензът му позволява! -->
+        </code></pre>
+    </section>
+    <section><h3>Атрибута <code>alt</code></h3>
+        <dl class="fa">
+            <dt>Атрибута alt дава алтернативно (текстово) описание на съдържанието, което представяме с изображението. Използвайте го винаги, за да бъде вашето съдържание достъпно.</dt>
+            <dt>Текстът в alt е текстът, който ще се появи до placeholder, когато изображението не може да бъде заредено</dt>
+            <dt>Текстът в alt се използва от гласовите браузъри!</dt>
+            <dt class="note">Една чудесна възможност да сложите в него ключова дума за SEO!</dt>
+        </dl>
+    </section>
+     <section><h3>Атрибути <code>width</code> и <code>height</code></h3>
+        <dl class="fa">
+            <dt>HTML5 поддържа атрибутите <code>width</code> и <code>height</code>, чрез които указваме колко пиксела да заема даденото изображение.</dt>
+            <dt class="note">Това може да направим и със CSS, което е предпочитания вариант, тъй като дава много повече възможности!</dt>
+            <dt>За да не променяме оригиналните пропорции, трябва да зададем <span class="note">само width или само height</span>. Браузърът автоматично ще изчисли другото измерение.</dt>
+        </dl>
+    </section>
+    <section><h3>Анимирани (gif) изображения?</h3>
+        <dl class="fa">
+            <dt>Съвременните браузъри поддържат .gif файлове!</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <img src="images/funny_bear_by_belthazor1.gif">
+        </code></pre>
+        <a href="images/funny_bear_by_belthazor1.gif"><img src="images/funny_bear_by_belthazor1.gif"></a>
+        <p style="font-size: 0.6em"><a href="http://fav.me/d4vjbi9">gif by Belthazor1@deviantart.com</a></p>
+    </section>
+    <section><h3>HTML елемент <code>img</code> - полезни ресурси</h3>
+        <a href="../../../../pages/readings/beginners/UsefulResources.html#Images">Сайтове, предлагащи безплатни за използване изображения</a>
+        <a href=""></a>
+    </section>
+    <section><h3>Повече за HTML images</h3>
+        <dl class="fa">
+            <dt>Oбщо описание за употребата на изображения в HTML: <a href="https://www.w3schools.com/html/html_images.asp">HTML Images@w3schools</a></dt>
+            <dt>Сбит справочник за HTML img елемента: <a href="https://www.w3schools.com/tags/tag_img.asp">HTML &lt;img&gt; Tag@w3schools</a></dt>
+
+        </dl>
+    </section>
+</section>
+
+<section><h2>Хипервръзки</h2>
+    <section><h3>HTML елемент <code>a</code> (anchor)</h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot;&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt><i>URL</i> – идентификатор на ресурс в WWW или на локален файл. Задължителен атрибут!</dt>
+            <dt><i>content</i> – това, което ще се изобрази в страницата като линк. Може да бъде текст, изображение или друг HTML елемент.</dt>
+            <dd class="note">Ако пропуснете <i>content</i>, то браузърът няма да изобрази линка!</dd>
+            <dt>Браузърите слагат дефоултен CSS за посетени/непосетени линкове. Детайлното им оформление ще разгледаме в частта за CSS.</dt>
+        </dl>
+    </section>
+    <section><h3>Атрибут <code>target</code></h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot; target="_blank"&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt>Атрибута <code class="note">target</code> задава <span class="note">къде</span> да се отвори ресурсът към който сочи линка.</dt>
+            <dt>Стойности:</dt>
+            <dd><code class="note">_self</code>: това е дефоултната стойност. Ресурсът ще се отвори в текущия таб/прозорец.</dd>
+            <dd><code class="note">_blank</code>: ресурсът ще се отвори в нов таб/прозрец на браузера</dd>
+            <dd><code class="note"><i>frame_id</i></code>: ресурсът ще се отвори в зададения фрейм. Ще разгледаме по-подробно в темата за iframes.</dd>
+        </dl>
+    </section>
+    <section><h3>Атрибут <code>title</code></h3>
+        <pre><code rel="Syntax" class="shell" data-noescape>
+            &lt;a href=&quot;<i>URL</i>&quot; title="more info"&gt;<i>content</i>&lt;/a&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt><code>title</code> е <a href="https://www.w3schools.com/tags/ref_standardattributes.asp">глобален атрибут, който често се употребява при хипер-линкове.</a></dt>
+            <dt>В него можем да зададем допълнителна информация, която ще се изобрази като <a href="https://en.wikipedia.org/wiki/Tooltip">tooltip</a>, когато мишката е върху елемента. </dt>
+            <dt>Позиционирайте мишката върху долния линк, и вижте какво прави атрибута <code>title</code></dt>
+            <dd><a href="https://www.google.bg/search?ei=P5muWrLoEMGUmwXaho-AAQ&q=tooltip&oq=tooltip&gs_l=psy-ab.3..0i67k1l4j0i203k1l4j0l2.3960.4583.0.4917.5.5.0.0.0.0.108.468.3j2.5.0....0...1.1.64.psy-ab..0.5.467....0.Dp9GKCA_kVs" title="more info">what is tooltip</a></dd>
+        </dl>
+    </section>
+    <section><h3>SEO и <code>title</code> атрибута</h3>
+        <pre><code rel="Syntax" class="shell">
+            &lt;a href=&quot;images/redApples.jpg&quot; title=&quot;buy red apples&quot;&gt;
+                &lt;img src=&quot;images/redApples.jpg&quot; alt=&quot;red apples&quot;&gt;
+            &lt;/a&gt;
+        </code></pre>
+        <dt><span class="note">SEO</span>: когато в линка имаме изображение към продукт от нашия сайт, атрибута <code>title</code> е прекрасна възможност да сложим ключовата дума и тук.</dt>
+    </section>
+    <section><h3>Линк към bookmark в страницата</h3>
+        <dl class="fa">
+            <dt>При дълги документи можем да маркираме отделни секции (bookmarks) в страницата ни, и да сложим линкове, които сочат към тях.</dt>
+            <dd>Използва се, когато слагаме съдържание на нашата страница</dd>
+            <dd>Линк, който да навигира страницата в началото и пр.</dd>
+            <dd>Когато искаме външен линк, да отвори страницата ни в определента секция</dd>
+        </dl>
+    </section>
+    <section><h3>Линк към bookmark в страницата - как?</h3>
+        <dl class="fa">
+            <dt>За целта са необходими 2 HTML елемента:</dt>
+            <dd>Единият ще маркира секцията (bookmark), мястото в документа към което искаме да направим прехода. Това се осъществява като добавим <span class="note">атрибут id (или name)</span> към съответния елемент.</dd>
+            <dd>Вторият елемент ще бъде самия линк (<span class="note">a елемент</span>), които ще ни отведе до маркираното място в страницата.</dd>
+        </dl>
+    </section>
+    <section><h3>Линк към bookmark в страницата - как?</h3>
+        <pre><code rel="HTML" class="html">
+            <!-- линк към секция с id="Chapter 4" в текущата страница-->
+            <a href="#Chapter4">Към Chapter 4</a>
+
+            <!-- code, code, code -->
+
+            <!-- маркираме този елемент като секция с id="Chapter4" -->
+            <h2 id="Chapter4">Chapter 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </code></pre>
+        <p>Разгледайте внимателно примера на следващата страница, в който участва дадения фрагмент.</p>
+    </section>
+    <section><h3>Линк към bookmark в страницата - приемр</h3>
+        <p>Кликнете "<a href="https://codepen.io/webdesigncourse/pen/LdbRab">edit on Codepen</a>" за да разгледате примера директно в codepen.</p>
+        <iframe height='300' scrolling='no' title='Link to bookmark in the page' src='//codepen.io/webdesigncourse/embed/LdbRab/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/LdbRab/'>Link to bookmark in the page</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Повече за HTML hyperlinks</h3>
+        <dl class="fa">
+            <dt>Общо описание за употребата на хипер-линкове в HTML: <a href="https://www.w3schools.com/html/html_links.asp">HTML Links@w3schools</a></dt>
+            <dt>Сбит справочник за HTML a елемента: <a href="https://www.w3schools.com/tags/tag_a.asp">HTML &lt;a&gt; Tag@w3schools</a></dt>
+
+        </dl>
+    </section>
+</section>
+
+<section id="hw">
+    <h1>Задачи за упражнения</h1>
+</section>
+<section><h2>Подобрение на Personal Page и CV</h2>
+    <section><h3>Структура на проекта</h3>
+        <p>Работете в папка HW със следната структура:</p>
+        <pre><code rel="JS" class="js">
+            hw/
+            ├── images/
+            │   ├── CV/
+            │   │   └── IvaPopova.png
+            │   └── personalPage/
+            │       ├── my_cat1.png
+            │       ├── my_cat2.png
+            │       ├── my_cat3.png
+            │       ├── my_dog1.png
+            │       └── my_dog2.png
+            ├── pages/
+            │    ├── CV.html
+            │    └── personalPage.html
+            ├── index.html
+        </code></pre>
+        <p class="note">Имената на файловете са примерни. Единствено, трябва да изпозлвате <code>index.html</code>, който да е в главната папка на проекта (<strong>hw/</strong>).</p>
+    </section>
+    <section><h3>CV update (CV.html)</h3>
+        <dl class="fa">
+            <dt>Добавете  ваша снимка в CV-то си.</dt>
+            <dt>Включите линкове към сайтовете на компаниите за които сте работили и университетите в който сте учили.</dt>
+            <dt class="note">Валидирайте CV.html!</dt>
+        </dl>
+    </section>
+    <section><h3>Personal Page update (personalPage.html)</h3>
+        <dl class="fa">
+            <dt>Добавете секция "<i>Домашни Любимци</i>" в която поместете няколко (<strong>поне 5</strong>) снимки на любими ваши животни. Използвайте width/height за да изглеждат снимките по-добре. Бихте могли да добавите и линкове към сайтове свързани с тези животни.</dt>
+            <dt>Разбира се, вместо "<i>Домашни Любимци</i>", можете да използвате каквато и да е друга тематика (книги, държави, планини и пр.), но изискванията за изображения и линкове остават.</dt>
+            <dt class="note">Ако ще използвате изображения от Интернет, уверете се, че те са с необходимите права за ползване.</dt>
+            <dt class="note">Валидирайте personalPage.html</dt>
+        </dl>
+    </section>
+    <section><h3>Създаване на главна (home) страница на проекта</h3>
+        <dl class="fa">
+            <dt>Уверете се, че в главната папка (hw/) сте създали файла <code class="note">index.html</code></dt>
+            <dt>Сложете заглавие на страницата. Например: "Списък със реализирани от мен задачи"</dt>
+            <dt>В него добавете линкове към:</dt>
+            <dd>CV.html</dd>
+            <dd>personalPage.html</dd>
+            <dt class="note">Валидирайте index.html</dt>
+        </dl>
+    </section>
+    <section><h3>Изпращане на задачите</h3>
+        <dl class="fa">
+            <dt>Архивирайте <span class="note">цялата папка <strong>hw</strong></span></dt>
+            <dt>Преименувайте архива, като го префексирате с вашите инициали. Например, аз бих именувала архива като <code style="font-style: normal;"><b>iepHW.zip</b></code></dt>
+            <dt>Изпратете архива на папката по имейл, като го прикачите като отговор на изпратения от мен мейл с тема: "HW: dayN"</dt>
+        </dl>
+    </section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

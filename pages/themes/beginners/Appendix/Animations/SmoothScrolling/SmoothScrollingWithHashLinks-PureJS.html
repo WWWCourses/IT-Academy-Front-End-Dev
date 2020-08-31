@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SmoothScrollingWithHashLinks-PureJS</title>
+    <style type="text/css">
+    	body,h1,p{
+    		margin: 0;
+    	}
+    	header{
+    		position: fixed;
+    		top: 0; left: 0; right: 0;
+    		height: 20vh;
+    		text-align: center;
+    		padding: 1em 0 0 0;
+    		background: #999;
+    		z-index: 1;
+    		box-sizing: border-box;
+    	}
+    	header>nav{
+    		position: absolute;
+    		bottom: 0; left: 0; right: 0;
+    		height: 3em;
+    		padding: 1em 1em 0 0;
+    		background: #333;
+    		box-sizing: border-box;
+    	}
+    	header>nav:after{
+    		content: "";
+    		display: block;
+    		clear: both;
+    	}
+    	header>nav>a{
+    		display: block;
+    		float: left;
+    		width: 3em;
+    		color: #FFF;
+    	}
+
+    	main{
+    		height: 80vh;
+    		margin-top: 20vh;
+    	}
+    	main>section.articles{
+    		/*border: 5px solid yellow;
+    		box-sizing: border-box;*/
+    	}
+    	main>section.articles>article{
+    		height: 100vh;
+    		padding: 1em;
+    		color: #FFF;
+    		transition: 1s;
+    		opacity: 0.5;
+    		box-sizing: border-box;
+    	}
+    	main>section.articles>article:focus{
+    		opacity: 1;
+    		outline: none;
+    	}
+
+    	main>section.articles>article:nth-child(1){background: hsla(0, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(2){background: hsla(45, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(3){background: hsla(90, 60%, 80%, 0.9)}
+    	main>section.articles>article:nth-child(4){background: hsla(135, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(5){background: hsla(180, 60%, 70%, 0.9)}
+    </style>
+</head>
+<body>
+	<header>
+		<h1>ScrollingWithBookmarkLinks</h1>
+		<nav id="content">
+			<a href="#page1">page1</a>
+			<a href="#page2">page2</a>
+			<a href="#page3">page3</a>
+			<a href="#page4">page4</a>
+			<a href="#page5">page5</a>
+		</nav>
+	</header>
+	<main>
+		<section class="articles">
+			<article id="page1" tabindex="-1">
+				<h1>Article 1</h1>
+				<p>some content</p>
+			</article>
+			<article id="page2" tabindex="-1">
+				<h1>Article 2</h1>
+				<p>some content</p>
+			</article>
+			<article id="page3" tabindex="-1">
+				<h1>Article 3</h1>
+				<p>some content</p>
+			</article>
+			<article id="page4" tabindex="-1">
+				<p>some content</p>
+				<h1>Article 4</h1>
+				<p>some content</p>
+			</article>
+			<article id="page5" tabindex="-1">
+				<h1>Article 5</h1>
+				<p>some content</p>
+			</article>
+		</section>
+	</main>
+	<script type="text/javascript">
+		let navLinks = document.querySelectorAll('a[href^="#"]');
+		let articleHeight = document.querySelector('main>section.articles>article').clientHeight;
+
+		function scrollToPage(i){
+			console.log(`i = ${i}`);
+			let topScrol = i*articleHeight;
+			// if we have pages with different height, we'll need to sum all of previous page heights, in order to calculate the topScroll
+
+			window.scrollTo({
+			  top: topScrol,
+			  left: 0,
+			  behavior: 'smooth'
+			});
+			console.log(`topScrol: ${topScrol}`);
+		}
+
+		for(let i = 0; i<navLinks.length; i++){
+	    navLinks[i].addEventListener('click', function(e){
+	    	// we want our scroll actions, not the browser defaults
+	    	e.preventDefault();
+
+	    	// do the scroll:
+	    	scrollToPage(i);
+
+	    	// (optional): keep browser history tidy - allows to navigate back and forward to pages.
+	    	// with this the hash value would not be displayed:
+	    	history.pushState(null, document.title, window.location.pathname+window.location.search);
+	    	// if we want to preserve the hash value:
+	    	let pageHref = navLinks[i].href;
+	    	// history.pushState(null, document.title, pageHref);
+
+
+				// (optional): set the focus to the article - for that to work with non Form elements we have to set "tabindex" attribute to the element in HTML:
+				let pageID = pageHref.slice( pageHref.indexOf('#') );
+				let pageNode = document.querySelector(pageID)
+				pageNode.focus({preventScroll: true});
+			})
+		}
+	</script>
+</body>
+
+</html>

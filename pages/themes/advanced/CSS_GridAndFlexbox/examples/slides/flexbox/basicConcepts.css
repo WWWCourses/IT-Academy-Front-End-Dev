@@ -1,0 +1,25 @@
+.flex-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	height: 5em;
+	margin: 2em;
+	border: 3px solid #333;
+}
+
+.flex-item{
+	/* padding: 1em; */
+}
+.flex-item:nth-child(1){
+	/* flex-grow: 1; */
+	background-color: #F99;
+}
+.flex-item:nth-child(2){
+	/* flex-grow: 2; */
+	background-color: #9F9;
+}
+.flex-item:nth-child(3){
+	/* flex-grow: 1; */
+	background-color: #99F;
+}

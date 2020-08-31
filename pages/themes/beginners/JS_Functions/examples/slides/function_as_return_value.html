@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>function_as_return_value</title>
+</head>
+<body>
+<script type="text/javascript">
+		function foo(){
+			return function(){
+				console.log(`I'm the returned function`);
+			}
+		}
+
+		// var bar = foo();
+		// bar();
+
+		foo()();
+</script>
+</body>
+</html>

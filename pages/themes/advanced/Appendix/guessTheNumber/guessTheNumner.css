@@ -1,0 +1,44 @@
+header{
+	height: 20vh;
+	background: #333;
+	color: #CCC;
+}
+header h1{
+	font-size: 3em;
+	line-height: 20vh;
+	vertical-align: middle;
+	text-align: center;
+}
+main{
+	padding: 2em 2em 2em 2em;
+	border: 1px solid red;
+	box-sizing: border-box;
+}
+.level{
+	margin: 0 auto;
+	margin-bottom: 1em;
+	text-align: center;
+	/*border: 5px solid red;*/
+}
+.gameField {
+	display: none;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0.3em;
+	border: 1px dotted #999;
+}
+.columnsWrapper{
+	/*position: relative;*/
+}
+.userInput{
+
+}
+.output {
+	min-height: 1em;
+	margin: 1em 0 0 0;
+	padding: 0.5em;
+	background: inherit;
+}
+.surprise{
+	display: none;
+}

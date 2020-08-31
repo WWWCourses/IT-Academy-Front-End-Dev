@@ -7,39 +7,42 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 	<!-- css & themes include -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
 	<!-- Printing and PDF exports -->
 	<script>
 		var link = document.createElement( 'link' );
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
 		document.getElementsByTagName( 'head' )[0].appendChild( link );
 	</script>
 	<!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
 	<![endif]-->
 	<!-- custom -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-	<link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/lessons/code_preview.css">
-	<link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css">
+	<link rel="stylesheet" href="../../../../outfit/css/reveal.js.css">
+	<link rel="stylesheet" type="text/css" href="../../../../outfit/css/lessons/code_preview.css">
+	<link rel="stylesheet" type="text/css" href="../../../../outfit/css/custom_hljs.css">
 	<base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
 </head>
 <body>
 	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
 		<div class="top_links">
-			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_InputForms" target="_top"><i class="fa fa-home"></i></a>
-			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#HTML5_input_forms" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
 			<div class="help_text">
-			<div><span>N/Спейс</span><span>следващ слайд</span></div>
-			<div><span>P</span><span>предишен слайд</span></div>
-			<div><span>O</span><span>всички слайдове</span></div>
-			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
 			</div>
 		</div>
-		<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
 		<div class="slides">
 <!--
 ########################################################
@@ -48,38 +51,45 @@
 -->
 <section><h1>HTML форми</h1></section>
 <section data-transition="zoom">
-	<section class="copyright" data-transition="zoom">
-		<div class="note">
-			<p>Created for</p>
-		</div>
-		<div class="company">
-			<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-			<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-			</a>
-		</div>
-		<div class="author">
-			<span class="note">Iva E. Popova, 2015-2018</span>
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
 		</div>
 	</section>
 	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
 		<div class="company">
-			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
 		</div>
 	</section>
 </section>
 
 
-<section id="forms_intro"><h2>Какво са HTML Формите?</h2>
+<section id="forms_intro"><h1>Какво са HTML Формите?</h1></section>
+<section><h2>Какво са HTML Формите?</h2>
 	<dl class="fa">
 		<dt>Основен елемент от взаимодействието на потребителя със приложението (сайта).</dt>
-		<dt>Чрез формите потребителя може да изпраща данни към сървъра.</dt>
-		<dt>Формата може да се използва и за взаимодействие изцяло на Front-End ниво.</dt>
-		<dt>Формата се състои от множество компоненти, като текстови полета, падащи списъци, чек-боксове, бутони.</dt>
+		<dt>Чрез формите потребителя може да изпраща данни към сървъра. <span class="note">В този случай, се работи с повишено внимание относно сигурността на системата.</span></dt>
+		<dt>Формата може да се използва и за взаимодействие изцяло на Front-End ниво (например, калкулатор и пр.).</dt>
+		<dt>Формата се състои от множество компоненти (контроли), като текстови полета, падащи списъци, чек-боксове, бутони.</dt>
 	</dl>
 </section>
 
-<section id="form_element"><h2>Елемент form</h2>
+<section id="form_element"><h1>Елемент form</h1></section>
+<section><h2>Елемент form</h2>
 	<section>
 		<p>Контейнер, в който се разполагат елементите на формата</p>
 		<pre><code rel="HTML">
@@ -90,48 +100,38 @@
 			</form>
 		</code></pre>
 	</section>
-	<section><h3>Атрибута <code><strong>action</strong></code></h3>
-		<p>Задава URL до back-end програмата, която ще обработва данните на сървъра</p>
-		<pre><code rel="HTML" class="html">
-			<form action="/cgi-bin/registration.php"></form>
-		</code></pre>
-		<p class="note">Наклонената черта "<strong>/</strong>" в началото на URL, обозначава root директорията на сайта, която се обслужва от сървъра.</p>
-		<p>Повече за <a href="https://www.w3schools.com/TAgs/att_form_action.asp">HTML &lt;form&gt; action Attribute</a></p>
-	</section>
-	<section><h3>Атрибута <code><strong>method</strong></code></h3>
-		<p>Указва начинът по който ще се изпратят данните към сървъра</p>
-		<dl class="fa">
-			<dt>method="<span class="keyword">get</span>" - данните ще се добавят в самото URL.</dt>
-			<dt>method="<span class="keyword">post</span>" - данните се предават в тялото на съобщението и не са видими в самото URL.</dt>
+	<section><h3>Основни атрибути</h3>
+		<dl class="fa" style="font-size: .9em">
+			<dt><span class="code">action</span></dt>
+			<dd>Задава пътя до back-end програмата, която ще обработва данните на сървъра.</dd>
+			<dt><span class="code">method</span></dt>
+			<dd>Задава начина по който ще се изпратят данните. Основните HTTP методи за изпращане на данни са:
+			<ul>
+				<li><span class="keyword">get</span> - данните ще се "закачат" в самото URL; </li>
+				<li><span class="keyword">post</span> - данните се предават в тялото на съобщенето.</li>
+			</ul>
+			</dd>
 		</dl>
-	</section>
-	<section><h3><code><strong>method="get"</strong></code></h3>
-		<p>Данните се добавят в URl, след знака <code><strong>?</strong></code> като <code>name=value</code> двойки, които се отделят една от друга чрез знака <code><strong>&</strong></code></p>
-		<p><code>https://www.google.bg/search<strong class="note">?</strong>q=html5<strong class="note">&</strong>lr=lang_bg</code></p>
-	</section>
-	<section><h3><code><strong>method="post"</strong></code></h3>
+		<br><br>
 		<p class="note">Когато чрез формата ще се изпращат конфиденциални данни (като парола), то винаги използвайте <code>method="post"</code></p>
 	</section>
-	<section>
-		<p>Повече за client-server взаимодействията и изпращането на данни към сървър: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data @MDN</a></p>
+	<section id="form_controls_list"><h3>Допустими елементи във <code><b>form</b></code></h3>
+		<pre><code rel="" class="html" data-noescape>
+			<a href="http://www.w3schools.com/tags/tag_input.asp">input</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">textarea</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">button</a>
+
+			<a href="http://www.w3schools.com/tags/tag_option.asp">option</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">optgroup</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">select</a>
+
+			<a href="http://www.w3schools.com/tags/tag_label.asp">label</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset</a>
+		</code></pre>
 	</section>
 </section>
 
-<section id="form_controls_list"><h2>Допустими елементи във <code><b>form</b></code></h2>
-	<pre>
 
-		<a href="http://www.w3schools.com/tags/tag_input.asp">input</a>       <a href="http://www.w3schools.com/tags/tag_textarea.asp">textarea</a>        <a href="http://www.w3schools.com/tags/tag_button.asp">button</a>
-
-		<a href="http://www.w3schools.com/tags/tag_option.asp">option</a>      <a href="http://www.w3schools.com/tags/tag_optgroup.asp">optgroup</a>        <a href="http://www.w3schools.com/tags/tag_select.asp">select</a>
-
-		<a href="http://www.w3schools.com/tags/tag_label.asp">label</a>       <a href="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset</a>
-	</pre>
-</section>
-
-<section><h3>Елемент input</h3>
+<section id="id="InputTag""><h1>Елемент input</h1></section>
+<section><h2>Елемент input</h2>
 	<section>
 		<p>Създава поле за въвеждане на данни от потребителя</p>
-		<p>Елемента е празен. Типът му се регулира от атрибута <a href="http://www.w3schools.com/tags/att_input_type.asp">type</a>.</p>
+		<p>Елемента е празен. Типът му се регулира от атрибута <a href="http://www.w3schools.com/tags/att_input_type.asp">type</a>:</p><br>
 		<div class="left half">
 			<pre><code rel="HTML">
 				Text type: <input type="text">
@@ -144,155 +144,210 @@
 				Reset button: <input type="reset">
 			</code></pre>
 		</div>
-		<div class="right half" style="font-size: .9em; margin-top: -1.5em;">
-			<div>Text type: <input type="text"></div>
-			<div>Pass type: <input type="password"></div>
-			<div>
-				Checkbox: <input type="checkbox" style="transform: scale(2);margin-left:1em">&nbsp;&nbsp;
-				Radio: <input type="radio" style="transform: scale(2);margin-left:1em">
-			</div>
-			<div>File: <input type="file" style="font-size: .7em"></div>
-			<div>Color: <input type="color"></div>
-			<div>Submit button: <input type="submit" style="font-size: 1em"></div>
-			<div>Reset button: <input type="reset" style="font-size: 1em"></div>
+		<div class="right half">
+			<div>Text type: <input type="text" style="vertical-align: middle;"></div>
+			<div>Pass type: <input type="password" style="vertical-align: middle;"></div>
+			<div>Checkbox: <input type="checkbox" style="vertical-align: middle; transform: scale(1.5);"></div>
+			<div>Radio: <input type="radio" style="vertical-align: middle;transform: scale(1.5);"></div>
+			<div>File: <input type="file" style="vertical-align: middle;"></div>
+			<div>Color: <input type="color" style="vertical-align: middle;"></div>
+			<div>Submit button: <input type="submit" style="vertical-align: middle;"></div>
+			<div>Reset button: <input type="reset" style="vertical-align: middle;"></div>
 		</div>
 	</section>
-	<section><h3>Нови типове input в HTML5</h3>
-			<a href="https://www.w3schools.com/tags/att_input_type.asp">HTML &lt;input&gt; type Attribute</a>
-	</section>
-	<section><h3>Атрибута <code><strong>name</strong></code></h3>
-		<p class="note">Въведените от потребителя данни в input елемент ще се изпратят към сървъра <strong>единствено ако сме задали стойност за name атрибута</strong> на този елемент!</p>
-	</section>
-	<section><h3>Атрибут <code><strong>name</strong></code> - пример</h3>
-		<pre><code rel="HTML" class="html">
-			<form accept="/cgi-bin/reg.php" method="get">
-				<div>User Name: <input type="text" name="userName"></div>
-				<div>Password: <input type="password"></div>
-				<button type="submit">Submit</button>
-			</form>
-		</code></pre>
-		<p>Забележете, че при изпращане на формата, ще се изпратят само данните в полето за <code>User Name</code>, но не и тези за <code>Password</code>, тъй като за него няма зададен атрибут <code>name</code>.</p>
-	</section>
-	<section>
-		<code>Повече за елемента <code>input</code>: <a href="http://www.w3schools.com/tags/tag_input.asp">HTML &lt;input&gt; Tag</a></code>
-	</section>
-</section>
-
-<section><h3>Елемент <code class="html">label</code></h3>
-	<p>Задава етикет на input поле. Асоциираме текста в label с дадения input, чрез атрибута <strong>for</strong>, чиято стойност трябва да съвпада със стойността на атрибута <strong>id</strong> на даденото input поле.</p>
-<a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a>
-</section>
-<section><h3>Елемент <code class="html">label</code> - пример</h3>
-	<pre><code rel="HTML" class="html">
-		<label for="userName">User Name: </label>
-		<input type="text" id="userName" name="userName">
-	</code></pre>
-	<p>Може да използваме и съкратен запис, където не е нужно да указваме атрбута for:</p>
-	<pre><code rel="HTML" class="html">
-		<label>User Name: <input type="text" name="userName"></label>
-	</code></pre>
-</section>
-
-<section><h3><code>&lt;input type=&quot;checkbox&quot;&gt;</code></h3>
-	<p>Дава възможност на потребителя да избере <strong>една или повече</strong> от предварително зададени стойности.</p>
-	<pre><code rel="HTML" class="html">
-		<div>
-			<strong>любими цветове:</strong>
-			<label><input type="checkbox" name="favColors" value="red"> red</label>
-			<label><input type="checkbox" name="favColors" value="blue"> blue</label>
-			<label><input type="checkbox" name="favColors" value="green"> green</label>
-		</div>
-	</code></pre>
-	<div class="results_h" rel="РЕЗУЛТАТ">
-		<strong>любими цветове:</strong>
-		<label><input type="checkbox" name="favColors" value="red"> red</label>
-		<label><input type="checkbox" name="favColors" value="blue"> blue</label>
-		<label><input type="checkbox" name="favColors" value="green"> green</label>
-	</div>
-	<p>Забележете, че стойността която ще се изпрати трябва да се зададе експлицитно чрез атрибута <code><strong>value</strong></code> </p>
-	<p>Повече за checkbox: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type=&quot;checkbox&quot;&gt; @MDN</a></p>
-</section>
-<section><h3><code>&lt;input type=&quot;radio&quot;&gt;</code></h3>
-	<p>Дава възможност на потребителя да избере <strong>само една</strong> стойност от предварително зададени стойности.</p>
-	<pre><code rel="HTML" class="html">
-		<div>
-			<strong>gender:</strong>
-			<input type="radio" name="gender" value="female">female
-			<input type="radio" name="gender" value="male">male
-		</div>
-	</code></pre>
-	<div class="results_h" rel="РЕЗУЛТАТ">
-		<div>
-			<strong>gender:</strong>
-			<input type="radio" name="gender" value="female"> female
-			<input type="radio" name="gender" value="male"> male
-		</div>
-	</div>
-	<p>И тук, стойността която ще се изпрати трябва да се зададе експлицитно чрез атрибута <code><strong>value</strong></code> </p>
-	<p>Повече за radio: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">&lt;input type=&quot;radio&quot;&gt; @MDN</a></p>
-</section>
-
-<section><h3>Елемент <code>textarea</code></h3>
-	<a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a>
-</section>
-
-<section><h3>Елемент <code>select</code></h3>
-	<a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a>
-</section>
-
-<section><h3>Елементи <code>option и optgroup</code></h3>
-	<a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a>
-	<a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a>
-	<p>
-		<select name="town" class="fontsize1">
-			<option value="">Населено място</option>
-			<option value="София">София</option>
-			<optgroup label="А">
-				<option value="Айдемир">Айдемир</option>
-				<option value="Айрово">Айрово</option>
-				<option value="...">...</option>
-			</optgroup>
-			<optgroup label="Б">
-				<option value="Багренци">Багренци</option>
-				<option value="Балабанско">Балабанско</option>
-				<option value="...">...</option>
-			</optgroup>
-			<option value="towncustom_option">Друго</option>
-		</select>
-	</p>
-</section>
-
-<section><h3>Елементи <code>fieldset & legend</code></h3>
-	<a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
-	<a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
-</section>
-
-<section><h3>Елемент <code>button</code></h3>
-	<a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a>
-</section>
-
-<section><h2>Задачи за упражнение</h2>
-	<!-- <section>
-		<p>Разгледайте показания пример в <a href="http://codepen.io/webdesigncourse/pen/mVyooG">codepen</a> и променете цвета по подразбиране в <code>&lt;input type="color"&gt;</code> да бъде не черно, а червено</p>
-
-		<p data-height="300" data-theme-id="20230" data-slug-hash="mVyooG" data-default-tab="html,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="Input Form - HTML validation" class="codepen">See the Pen <a href="http://codepen.io/webdesigncourse/pen/mVyooG/">Input Form - HTML validation</a> by Iva Popova (<a href="http://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-	</section> -->
-	<section><h3>Task: registrationForm.html</h3>
-		<p>Реализирайте формата дадена на следната <a href="HW/mozilla.pdf">фиг.1</a></p>
+	<section><h3>Основни атрибути</h3>
 		<dl class="fa">
-			<dt>Забележете, че в бутоните освен текст, има и изображения. Може да използвате безплатни икони от: <a href="https://www.iconfinder.com/">iconfinder.com</a></dt>
-			<dt>Различните браузери и OS ще изобразят различно input елементите - това не бива да ви притеснява, стига да сте използвали правилните елементи.</dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_autocomplete.asp"><code class="note">autocomplete</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_autofocus.asp"><code class="note">autofocus</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_checked.asp"><code class="note">checked</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_name.asp"><code class="note">name</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_placeholder.asp"><code class="note">placeholder</code> attribute @w3schools</a></dt>
+		</dl>
+	</section>
+	<section><h3>Основни атрибути</h3>
+		<dl class="fa">
+			<dt><a href="https://www.w3schools.com/tags/att_input_readonly.asp"><code class="note">readonly</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_required.asp"><code class="note">required</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_size.asp"><code class="note">size</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_type.asp"><code class="note">type</code> attribute @w3schools</a></dt>
+			<dt><a href="https://www.w3schools.com/tags/att_input_value.asp"><code class="note">value</code> attribute @w3schools</a></dt>
 		</dl>
 	</section>
 </section>
 
+<section><h1>Ролята на <code class="note">name</code> атрибута в елементите на една форма</h1></section>
+<section><h2>Ролята на <code class="note">name</code> атрибута в елементите на една форма</h2>
+	<section>
+		<dl class="fa">
+			<dt>От гледна точка на изпращането на данни, чрез <code>name</code> атрибута задаваме име на данните, които ще се асоциират с това поле.</dt>
+			<dt class="note">Ако дадено input поле няма дефиниран <code>name</code> атрибут, то няма да се изпратят въведените в него данни към сървъра!</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<form action="/login" method="get">
+				<div>Име: <input type="text"></div>
+				<div>Парола: <input type="password" name="pass"></div>
+				<button type="submit">Submit</button>
+			</form>
+		</code></pre>
+		<p>Тествайте и погледнете в query string-а на URL какви данни ще се изпратя към сървъра.</p>
+	</section>
+</section>
 
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-	<p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+<section><h1>Радио-бутони (input type="radio")</h1></section>
+<section><h2>Радио-бутони (input type="radio")</h2>
+	<section>
+		<dl class="fa" style="font-size: .8em">
+			<dt>За да функционират радио контролите като избор на една от множество алтернативни стойности, то тези input полета трябва да имат <span class="note">една и съша стойност за атрибута <code>name</code></span></dt>
+			<dt>Стойността, която ще се подаде на сървъра след избора на потребителя, се определя от атрибута <code>value</code></dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<form action="/test" method="get">
+				<fieldset>
+					<legend>Gender</legend>
+					<label>male: <input type="radio" name="gender" value="male"></label>
+					<label>female: <input type="radio" name="gender" value="female"></label>
+					<label>other: <input type="radio" name="gender" value="other"></label>
+				</fieldset>
+
+				<input type="submit" name="">
+			</form>
+		</code></pre>
+	</section>
+</section>
+
+<section><h1>Елемент <code>input</code> като бутон</h1></section>
+<section><h2>Елемент <code>input</code> като бутон</h2>
+	<section>
+		<dl class="fa">
+			<dt>input елемента притежава стойности за атрибута <code>type</code>: <code>submit</code>, <code>reset</code> и <code>button</code>, които имат същото значение и ефект, както при <code>button</code> елемента</dt>
+		</dl>
+		<pre><code rel="HTML" class="html">
+			<input type="submit" name="" value="Изпрати">
+			<input type="reset" name="" value="Изчисти">
+			<input type="бутон" name="" value="Click me">
+		</code></pre>
+		<p class="note">Вероятно бихте предпочели да използвате елемента <code>button</code>, когато искате да сложите бутон.</p>
+	</section>
+</section>
+
+<section><h1>Елемент <code>button</code></h1></section>
+<section><h2>Елемент <code>button</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_button.asp">http://www.w3schools.com/tags/tag_button.asp</a></p>
+		<pre><code rel="HTML" class="html">
+			<!-- бутон, за изпращане на формата: -->
+			<button type="submit">Изпрати</button>
+
+			<!-- бутон, за изчистване на полетата: -->
+			<button type="reset">Изчисти</button>
+
+			<!-- бутон, без дефинирана функционалност - използва се с JavaScript: -->
+			<button type="button">Click me</button>
+		</code></pre>
+	</section>
+</section>
+
+
+<section><h1>Елемент <code class="html">label</code></h1></section>
+<section><h2>Елемент <code class="html">label</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_label.asp">http://www.w3schools.com/tags/tag_label.asp</a></p>
+		<p>Use case:</p>
+		<div class="results_h">
+			<fieldset>
+				<legend>Gender:</legend>
+				<label>male <input type="radio" name="gender" value="male" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>female <input type="radio" name="gender" value="female" style="transform: scale(1.5); vertical-align: middle;"></label>
+				<label>other <input type="radio" name="gender" value="other" style="transform: scale(1.5); vertical-align: middle;"></label>
+			</fieldset>
+		</div>
+	</section>
+</section>
+
+<section><h1>Елементи <code>fieldset & legend</code></h1></section>
+<section><h2>Елементи <code>fieldset & legend</code></h2>
+	<section>
+		<a href="http://www.w3schools.com/tags/tag_fieldset.asp">http://www.w3schools.com/tags/tag_fieldset.asp</a>
+		<a href="http://www.w3schools.com/tags/tag_legend.asp">http://www.w3schools.com/tags/tag_legend.asp</a>
+	</section>
+</section>
+
+<section><h1>Елементи <code>select, option и optgroup</code></h1></section>
+<section><h2>Елементи <code>select, option и optgroup</code></h2>
+	<section>
+		<dl class="fa">
+			<dt><a href="http://www.w3schools.com/tags/tag_select.asp">http://www.w3schools.com/tags/tag_select.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_option.asp">http://www.w3schools.com/tags/tag_option.asp</a></dt>
+			<dt><a href="http://www.w3schools.com/tags/tag_optgroup.asp">http://www.w3schools.com/tags/tag_optgroup.asp</a></dt>
+		</dl>
+		<p>
+			<select name="town" style="font-size: 1em">
+				<option value="">Населено място</option>
+				<option value="София">София</option>
+				<optgroup label="А">
+					<option value="Айдемир">Айдемир</option>
+					<option value="Айрово">Айрово</option>
+					<option value="...">...</option>
+				</optgroup>
+				<optgroup label="Б">
+					<option value="Багренци">Багренци</option>
+					<option value="Балабанско">Балабанско</option>
+					<option value="...">...</option>
+				</optgroup>
+				<option value="towncustom_option">Друго</option>
+			</select>
+		</p>
+	</section>
+</section>
+
+<section><h1>Атрибута <code>multiple</code> върху <code>select</code></h1></section>
+<section><h2>Атрибута <code>multiple</code> върху <code>select</code></h2>
+	<section>
+		<p>АКо желаем потребителя да има възможност да избере няколко опции от <code>select</code> елемент, то трябва да добавим атрибута <a href="https://www.w3schools.com/tags/att_input_multiple.asp">multiple</a></p>
+		<pre><code rel="HTML" class="html">
+			<select name="color" multiple>
+				<option value="">Червено</option>
+				<option value="">Зелено</option>
+				<option value="">Синьо</option>
+				<option value="">Оранжево</option>
+				<option value="">Черно</option>
+				<option value="">Бяло</option>
+			</select>
+		</code></pre>
+			<select name="town" class="fontsize1" multiple>
+				<option value="">Червено</option>
+				<option value="">Зелено</option>
+				<option value="">Синьо</option>
+				<option value="">Оранжево</option>
+				<option value="">Черно</option>
+				<option value="">Бяло</option>
+			</select>
+		</p>
+	</section>
+</section>
+
+<section><h1>Елемент <code>textarea</code></h1></section>
+<section><h2>Елемент <code>textarea</code></h2>
+	<section>
+		<p><a href="http://www.w3schools.com/tags/tag_textarea.asp">http://www.w3schools.com/tags/tag_textarea.asp</a></p>
+		<div>
+			<textarea style="font-size: 1em;" rows="4" cols="50" placeholder="write your comment here..."></textarea>
+		</div>
+	</section>
+</section>
+
+<section id="HW"><h1>Упражнения</h1></section>
+<section><h2>Упражнения</h2>
+	<section><h3>Задача 1: simpleFormControls</h3>
+		<a href="HW/simpleFormControls.pdf">simpleFormControls</a>
+	</section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
 </section>
 <!--
 ########################################################
@@ -302,14 +357,14 @@
 		</div>
 	</div>
 	<!-- Custom processing -->
-	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
+	<script src="../../../../outfit/js/slides.js"></script>
 	<!-- external scripts -->
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-	 <!-- init reveal -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
 	<script>
 		// Full list of configuration options available at:
 		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
 		Reveal.initialize({
 			controls: true,
 			progress: true,
@@ -332,12 +387,12 @@
 			// transition: Reveal.getQueryHash().transition || 'default'
 			// Optional reveal.js plugins
 			dependencies: [
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
 			]
 		});
 	</script>

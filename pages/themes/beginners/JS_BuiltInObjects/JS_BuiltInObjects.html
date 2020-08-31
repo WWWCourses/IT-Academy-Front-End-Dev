@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS_BuiltInObjects</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Стандартни вградени обекти в EcmaScript</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Вградени обекти (built-in objects)</h2>
+    <section><h3>Въведение</h3>
+        <dl class="fa">
+            <dt>В JavaScript съществуват няколко (със всяка версия се увеличават) вградени обекти/конструктори на обекти, чрез които се разширява функционалността и гъвкавостта на езика. Например:</dt>
+        </dl>
+        <pre><code rel="JS">
+            // using built in Math object
+            console.log( Math.max(2,12,5)); // 12
+
+            // using built in Date() constructor
+            var currentDate = new Date();
+            console.log( currentDate.getFullYear() ); // 2018
+        </code></pre>
+    </section>
+    <section>
+        <p>Някои от най-често използваните вградени обекти/функции са: </p>
+        <dl class="fa">
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></dt>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></dt>
+        </dl>
+        <p>Ако сте любопитни относно другите: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">Standard built-in objects @MDN</a></p>
+    </section>
+    <section><h3>Работа с дати (Date objects)</h3>
+        <dl class="fa">
+            <dt>Текущата дата и време в компютърните системи се представят като брой <span class="note">милисекунди</span> изминали от началото на <em>епохата</em> (1 January 1970 UTC)</dt>
+            <dt>За да работим с измерения, като година, месец, час и пр. трябва да използваме вградените методи на обект от тип Date, който създаваме като използваме конструктора <code>Date()</code></dt>
+            <pre><code rel="JS" class="js">
+                var currentDateTimeObj = new Date();
+            </code></pre>
+            <dt>Справочник: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date @MDN</a></dt>
+        </dl>
+    </section>
+    <section><h3>getCurentTimeFormated - пример</h3>
+        <iframe title='getCurentTimeFormated' src='//codepen.io/webdesigncourse/embed/XPoNBv/?editors=0011&theme-id=20230&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/XPoNBv/'>getCurentTimeFormated</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>calcUserAge - пример</h3>
+        <p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="js,result" data-user="webdesigncourse" data-slug-hash="LJXepg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="calcUserAge">
+            <span>See the Pen <a href="https://codepen.io/webdesigncourse/pen/LJXepg">
+            calcUserAge</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <section><h3>dateObjectForTimingCode - пример</h3>
+        <iframe title='Date object for timing code' src='//codepen.io/webdesigncourse/embed/QVJqYY/?height=300&theme-id=20230&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/QVJqYY/'>Date object for timing code</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3><a href="arguments">arguments</a> object</h3>
+        <dl class="fa" style="font-size: .8em">
+            <dt>За да имплементираме функция с променлив брой параметри в JavaScript можем да използваме вградения обект <a href="arguments">arguments</a></dt>
+            <dt>Той се използва единствено в тяло на функция и съдържа подобна на масив структура с аргументите подадени към функцията.</dt>
+        </dl>
+        <pre><code rel="JS" class="js">
+            // using built in arguments object - available within functions only!
+            function sum(){
+                sum = 0;
+                for (var i = 0; i < arguments.length; i++){
+                    sum += arguments[i];
+                }
+                console.log("sum = " + sum);
+            }
+            sum(1,2,3); // 6
+            sum(1,2,3,4); // 10
+        </code></pre>
+    </section>
+    <section><h3>built-in objects == primitive types?</h3>
+        <p>Много често примитивните типове string, number, boolean се бъркат със съответните им "двойници - обекти: String, Number, Boolean</p>
+        <pre><code rel="JS">
+            var str1 = new String("ada");
+            var str2 = "ada";
+
+            console.log( typeof(str1) ); // object
+            console.log( typeof(str2) ); // string
+        </code></pre>
+        <p>и макар и привидно еднакви, не бива да се забравя, че те все пак са различни неща!</p>
+    </section>
+    <section><h3>primitive objects wrapping</h3>
+        <p>Когато опитаме да използваме примитивен тип ( string, number и пр.) като обект, например:</p>
+        <pre><code rel="JS">
+            // примитивните типове не са обекти и нямат пропъртита, но:
+            "ada".toUpperCase(); // "ADA"
+        </code></pre>
+        <p>това, което прави JavaScript e да "обвие" примитивният тип в обект от съответния тип (в примера: String обекта) и да използва съответното свойство/метод (в примера: toUpperCase). </p>
+    </section>
+    <section><h3>best practises</h3>
+        <p>Въпреки че можем да създадем и работим с число, което е създадено като обект (същото е в сила и за останалите типове), на практика се предпочита използването на примитивния тип.</p>
+        <p>Например:</p>
+        <pre><code rel="JS">
+            // create number - the good way (as primitive)
+            var x = 42;
+
+            // create number - the bad way (as Number object)
+            var y = new Number(42);
+
+            // we can use it the same way:
+            console.log( x + 10 ); // 52
+            console.log( x.toPrecision(5) ); // "42.000"
+
+            console.log( y + 10 ); // 52
+            console.log( y.toPrecision(5) ); // "42.000"
+
+            // but "x" and "y" are different entities with same value
+            console.log( x == y )  // true
+            console.log( x === y ) // false
+        </code></pre>
+    </section>
+    <section><h3>best practises</h3>
+        <p>Разбира се, <span class="note">използването</span> на методите на вградените обекти е необходимо и се препоръчва (по важните от тях бяха разгледани в съответните теми за Strings и Arrays)</p>
+        <p>Например:</p>
+        <pre><code rel="JS">
+            var str = "ada";
+            console.log( str.toUpperCase() ); // ADA
+
+            var arr = [1,2,3];
+            console.log( arr.reverse() );  // [3, 2, 1]
+        </code></pre>
+    </section>
+    <section><h3 class="advanced">Readings</h3>
+        <dl class="fa">
+            <dt><a href="https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">The Secret Life of JavaScript Primitives</a></span></dt>
+        </dl>
+    </section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

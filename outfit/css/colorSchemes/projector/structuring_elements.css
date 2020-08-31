@@ -7,6 +7,15 @@
     color: #333;
 }
 
+.reveal section .advanced:before{
+    color: #ef9a9a;
+}
+.reveal section .smile:before{
+    color: #FFDA00;
+}
+.reveal section .important:before{
+    color: #A70215;
+}
 
 /* results blocks */
 .reveal>.slides div.results_h{

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>tmp</title>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+    }
+
+    .page {
+      height: 100vh;
+
+      perspective: 1px;
+      transform-style: preserve-3d;
+
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      border: 1px solid red;
+    }
+    .parallax_container {
+      position: relative;
+      z-index: -1;
+
+      transform: translateZ(-1px) scale(2);
+
+      height: 60vh;
+      background-color: #D8F8FA;
+    }
+    .parallax_container h2{
+      color: white;
+      text-align: center;
+      font-size: 3em;
+    }
+    .content {
+      background-color: white;
+      font-size: 3em;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="parallax_container">
+        <h2>A parallaxed content 1...</h2>
+        <h2>A parallaxed content 2...</h2>
+        <h2>A parallaxed content 3...</h2>
+        <h2>A parallaxed content 4...</h2>
+      </div>
+
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+    </body>
+    </html>

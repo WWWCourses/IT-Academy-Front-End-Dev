@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>base-line_of_inline-block</title>
+    <style type="text/css"> 
+    	.note{
+    		font-style: italic;
+    	}  	
+    	.example{
+    		display: inline-block;
+    		/*float: left;*/
+    		background: yellow;
+    		border: 1px solid orange;	
+    		padding: 0 1em;
+    	}
+    	.inline-block{
+    		display: inline-block;
+    		width: 10px;
+    		height: 50px;
+    		background: #CCC;
+    		/*vertical-align: middle;*/
+    	}
+    	.letter{
+    		background: red; 
+    		color: #FFF;   		
+    	}
+    </style>
+</head>
+<body>
+<h1>Пример за това как се променя base-line, когато имаме празен и не-празен inline-block елемент в реда.</h1>
+<div class="example">	
+	<p>None-empty inline block</p>
+	base
+	<div class="inline-block">
+		<span class="letter">x</span>
+	</div>
+	line
+</div>
+<div class="example">
+	<p>Empty inline block</p>
+	base
+	<div class="inline-block"></div>
+	line
+</div>
+<hr>
+<p><a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/visudet.html#line-height">CSS2: Line height calculations:</a></p>
+<p class="note">vertical-align: baseline — align the baseline of the box with the baseline of the parent box. If the box doesn't have a baseline, align the bottom of the box with the parent's baseline.</p>
+</body>
+</html>

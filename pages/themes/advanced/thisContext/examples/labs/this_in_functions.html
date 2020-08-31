@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>this_in_functions</title>
+</head>
+<body>
+<h1>This in functions</h1>
+<ul>
+	<li><strong>this</strong> in function invocation is the <strong>global object</strong>. It depends on the execution environment.</li>
+	<li><strong>this</strong> in function invocation in srtict mode is <strong>undefined</strong> </li>
+	<li><strong>this</strong> in method invocation is the object that owns the method</li>
+
+</ul>
+</body>
+<script type="text/javascript">
+	function invocation(){
+		function foo(){ return this};
+		console.log( "this in function invocation:", foo() );
+	}
+
+	function strictInvocation(){
+		"use strict";
+		function foo(){ return this};
+		console.log( "this in strict function invocation:", foo() );
+	}
+
+	function nestedFunction(){
+		function foo(){
+			function bar(){
+				return this;
+			}
+			return bar();
+		};
+		console.log( "this in nestedFunction:", foo() );
+	}
+
+	function iife(){
+		(function(){
+			console.log("This in IIFE", this);
+		})();
+	}
+
+	function methodInvocation(){
+		var obj = {
+			foo: function(){ return this}
+		};
+
+		console.log("this in methodInvocation():", obj.foo() );
+	}
+
+	function constructorInvocation(){
+		function Constructor(){
+			return this;
+		};
+
+		var obj = new Constructor();
+
+		console.log("this in constructorInvocation():", obj );
+	}
+
+	invocation();
+	strictInvocation();
+	nestedFunction();
+	iife();
+	methodInvocation();
+	constructorInvocation();
+</script>
+</html>

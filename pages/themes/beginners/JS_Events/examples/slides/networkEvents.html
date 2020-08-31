@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>networkEvents</title>
+</head>
+<body>
+	<p>Toggle your internet connection to see the "online"/"offline" events in action...</p>
+</body>
+<script type="text/javascript">
+	window.addEventListener('offline', function(e) {
+	  alert("Upps, I've lost the connection!")
+	});
+
+	window.addEventListener('online', function(e) {
+	  alert("CONNECTED!!!")
+	});
+
+</script>
+</html>

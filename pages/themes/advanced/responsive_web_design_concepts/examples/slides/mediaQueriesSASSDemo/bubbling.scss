@@ -1,0 +1,20 @@
+$iPhoneX: "(min-width: 375px) and (max-width: 812px)";
+$desktop: "(min-width: 812px)";
+
+.box{
+	width: 370px;
+	float: none;
+	border: 1px solid red;
+	box-sizing: border-box;
+
+	@media #{$iPhoneX}{
+			width: 33%;
+			float: left;
+			background: blue;
+	};
+
+	@media #{$desktop}{
+		width: 30%;
+		float: left;
+	}
+}

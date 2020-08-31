@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tmp</title>
+    <style type="text/css">
+    	.columns-wrapper{
+    		position: relative;
+    		border: 5px solid blue;
+    	}
+    	.columns-wrapper:after{
+    		content: "";
+    		display: block;
+    		clear: both;
+    	}
+    	.columns-wrapper .col{
+    		float: left;
+    		width: 40%;
+    		height: 2em;
+    		border: 5px solid red;
+    		box-sizing: border-box;
+    	}
+    	.output {
+				/*position: absolute;*/
+				min-height: 1em;
+				margin: 1em 0 0 0;
+				padding: 0.5em;
+				background: inherit;
+			}
+    </style>
+</head>
+<body>
+	<div class="columns-wrapper">
+		<div class="col-left"></div>
+		<div class="col-left output"></div>
+	</div>
+</body>
+<script type="text/javascript" src="tmp.js"></script>
+</html>

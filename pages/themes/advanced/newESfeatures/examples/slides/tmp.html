@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMP</title>
+</head>
+<body>
+    <script>
+        // function foo() {
+        //     console.log(`arguments in foo:`);
+        //     console.dir(arguments);
+
+        //     function bar() {
+        //         console.log(`arguments in bar:`);
+        //         console.dir(arguments);
+        //     }
+        //     bar();
+        // }
+
+
+        // const dirFuncExprArgs = function() {
+        //     console.dir(arguments);
+        // }
+        // let dirArrowArgs = ()=>{
+        //     console.dir(arguments);
+        // }
+
+        // dirFuncExprArgs(1,2,3);
+        // dirArrowArgs(1,2,3);
+
+        // let user = {
+        //     'userName': 'Ada Byron',
+        //     'greet': function () {
+        //         console.log(`Hello, I'm ${this.userName}`);
+        //     },
+        //     'greetArr':  () =>  console.log(`Hello, I'm ${this.userName}`)
+        // }
+
+        // user.greet();
+        // user.greetArr();
+
+        let [a, b, ...rest] = [1,2,3,4,5];
+
+        console.log(`a = ${a}`)
+        console.log(`b = ${b}`)
+        console.log(`rest = ${rest}`)
+        console.dir(rest);
+
+        // a = 1
+        // b = 2
+        // rest = 3,4,5
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Prototype Example</title>
+</head>
+<body>
+	<script type="text/javascript">
+    var DeveloperConstrucor = function(firstName, surName, skills){
+      this.firstName = firstName;
+      this.surName = surName;
+      this.skills = skills;
+    }
+
+    // функцията се копира в паметта един единствен път, без значение колко обекта ще генерираме. Всеки обект има достъп до нея чрез механизмът на наследяване в JavaScript, който се разглежда детайлно в Advanced JavaScript курса.
+    DeveloperConstrucor.prototype.applyForJob = function(){
+        var skillsStr = this.skills.toString();
+
+        console.log(`Hi, I'm ${this.firstName} ${this.surName}. My strongest skills are ${skillsStr}.`);
+    }
+
+		var developer1 = new DeveloperConstrucor(
+      "Ivan", "Ivanov",
+      ["HTML", "CSS", "JavaScript"]
+    );
+
+    var developer2 = new DeveloperConstrucor(
+      "Maria", "Mineva",
+      ["HTML", "CSS", "JavaScript", "Python", "RestAPIs"]
+    );
+
+    developer1.applyForJob();
+    developer2.applyForJob();
+
+	</script>
+</body>
+</html>

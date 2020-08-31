@@ -1,0 +1,70 @@
+html,body, p{
+	margin: 0;
+	padding: 0;
+}
+header{
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	height: 20vh;
+	background: gray;
+	z-index: 100;
+	/*opacity: 1;*/
+}
+footer{
+	position: relative;
+	top: 20vh;
+	/*bottom: 0; left: 0; right: 0;*/
+	height: 10vh;
+	background: #333;
+	color: #CCC;
+}
+
+/*контейнер за колоните. Трябва да бъде позициониран, заради фонът под колоните*/
+.wrapper{			
+	position: relative;		
+	top: 20vh;		
+	min-height: 80vh; 	
+}
+.col1, .col2{
+	float: left;
+}
+
+/*колоните и фона под тях, трябва да бъдат с еднаква в широчина*/		
+.col1, .col1:before{
+	width: 20%;			
+}
+.col2, .col2:before{
+	width: 80%;
+}
+
+/*Фонът под колоните (псевдо-елемента) е позициониран абсолютно, за да се "разпъне" по височина спрямо контейнерът (.wrapper).*/
+.col1:before, .col2:before{
+	position: absolute;
+	top: 0; bottom: 0;
+	content: "";
+	/*За да бъде под самите колони*/
+	z-index: -1;
+}
+
+/*Задаваме цвят и позиция за всеки фонов псевдо-елемент*/
+.col1:before{			
+	left: 0;		
+	background: red;			
+}
+.col2:before{
+	/*Фонът под 2та колона отместваме вдясно, спрямо широчината на първата колона*/
+	left:20%;			
+	background: blue;
+}
+
+/*Трябва да спрем "Float ефекта" за да може контейнерът да обхване по височина децата си, които са float-ed.*/
+.clear:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+
+/*Оформяме самите колони*/
+.col2{
+	font-size: 2em;
+}

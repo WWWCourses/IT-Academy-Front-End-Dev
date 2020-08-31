@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>regexes</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#regexes" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Regular Expressions in JavaScript</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>Regular Expressions basis</h1></section>
+<section><h2>Regular Expressions basis</h2>
+	<section><h3>Intro</h3>
+		<dl class="fa">
+			<dt>Regular Expression synonyms:</dt>
+			<dd data-tooltip="/\breg(?:ular\s*)?exp?(?:ression)?\b/i">Regex, RegEx, RegExp</dd>
+			<dt>Regular Expression is a <span class="note">string pattern</span>, which can match or not other stings</dt>
+			<dt>You can think of it a as a kind of search mechanism.</dt>
+		</dl>
+	</section>
+	<section>
+		<pre><code rel="JS" class="js">
+			var userEmail = "prefix@domain.com";
+
+			//the RegEx to find if the userEmail contains '@' symbol:
+			var re = /@/;
+
+			// do the test:
+			if ( re.test(userEmail) ){
+				console.log(`Match`);
+			}else{
+				console.log(`No match!`);
+			}
+		</code></pre>
+	</section>
+	<section><h3>the language</h3>
+		<dl class="fa">
+			<dt>You can think of Regular Expressions as a separate language, with its own rules and specs.</dt>
+			<dt>In fact, the Regular Expressions are coming from the <span class="note">regular language</span> defined by <a href="https://en.wikipedia.org/wiki/Stephen_Cole_Kleene">Kleene</a> in the early 1950s</dt>
+			<dt>Nowadays, almost all programming languages implements the concept of Regex.</dt>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>A regex grammar includes 2 types of symbols:</dt>
+			<dd><span class="note">Regular symbols</span>: they are matched literally on the matching string</dd>
+			<dd><span class="note">Meta-characters</span>: they have special meaning and gives the power of regex</dd>
+		</dl>
+	</section>
+	<section>
+		<pre><code rel="JS" class="js">
+			var strings = [
+				'alabala',
+				' alabala',
+				'Astronomy',
+				'the apple'
+			];
+			var re = /^a/;
+
+			strings.forEach((str)=>
+				re.test(str) ?
+					console.log(str+' -> match!') :
+					console.log(str+'  -> NO match!')
+			)
+		</code></pre>
+		<dl class="fa">
+			<dt>The regex <code>/^a/</code> matches each string starting with 'a'</dt>
+		    	<dd>the <code>a</code> is a regular symbol</dd>
+		    	<dd>the <code>^</code> is a special symbol</dd>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Regex Syntax</h1></section>
+<section><h2>Regex Syntax</h2>
+	<section><h3>Special Characters</h3>
+		<p>Next characters has special meaning in Regex:</p>
+		<code class="note">^ $ \ . * + ? ( ) [ ] { } |</code>
+		<p>They can be combined with ordinary characters to change their meaning too</p>
+		<p>If we want to match <b>literally</b> a special character we have to escape it with backslash <code>'\'</code></p>
+	</section>
+	<section><h3>Modifiers/Flags</h3>
+		<p class="note">They reflects how the regular expression is executed.</p>
+		<table >
+			<tr><th>Modifier</th><th>Description</th></tr>
+			<tr><td>i</td><td>case-<b>i</b>nsensitive matching</td></tr>
+			<tr><td>g</td><td><b>g</b>lobal match (find all matches rather than stopping after the first match)</td></tr>
+			<tr><td>m</td><td><b>m</b>ultiline matching</td></tr>
+		</table>
+	</section>
+	<section><h3>Modifiers/Flags example</h3>
+		<pre><code rel="JS" class="js">
+			var matched, str = `alAbAla`;
+
+			matched = str.match(/a/); // no flags
+			console.log(`matched: ${matched}`);
+			// matched: a (the first one)
+
+			matched = str.match(/a/g); // g flag added
+			console.log(`matched: ${matched}`);
+			//matched: a,a
+
+			matched = str.match(/a/gi); // g and i flags
+			console.log(`matched: ${matched}`);
+			//matched: a,A,A,a
+		</code></pre>
+	</section>
+	<section><h3>More on Modifiers/Flags</h3>
+		<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">more on Flags at MDN</a></p>
+	</section>
+
+	<section><h3>Character Sets</h3>
+		<dl class="fa">
+		    <dt>The square brackets are used to define a character set. Like: <code><b>[</b>abc<b>]</b></code>.</dt>
+		    <dt>Symbols inside brackets are the elements of set.</dt>
+		    <dt>The hyphen (<code>-</code>), when it is between 2 symbols, has special meaning inside the character class  - it defines a range. Like: <code>[0-9]</code>. If it is in the end, it is considered as a hyphen.</dt>
+		    <dt>The character set itself match only one symbol - one which is defined in set.</dt>
+		</dl>
+	</section>
+	<section><h3>Character Sets</h3>
+		<table>
+			<tr><th>Character set</th><th>Description</th></tr>
+			<tr><td><code class="note">[abc]</code></td><td>Match any one of the symbols listed ('a' or 'b' or 'c')</td></tr>
+			<tr><td><code class="note">[a-z]</code></td><td>Match any symbol, from 'a' till 'z' (i.e. any lower Latin letter)</td></tr>
+			<tr><td><code class="note">[^abc]</code></td><td>Match any symbol, except 'a or 'b' or 'c' (i.e. the <code><b>^</b></code> negates the characters in the set)</td></tr>
+		</table>
+	</section>
+	<section><h3>Character Sets examples</h3>
+		<pre><code rel="JS" class="js">
+			// match single vocals
+			matched = "asteroid".match(/[aeiouy]/g);
+			console.log(`matched: ${matched}`);
+			// matched: a,e,o,i
+
+			// match any consecutive vocals
+			matched = "asteroid".match(/[aeiouy]+/g);
+			console.log(`matched: ${matched}`);
+			// matched: a,e,oi
+
+			// match bg mobile phone numbers
+			matched = "+359888123456".match(/\+3598[7-9][0-9]{7}/g);
+			console.log(`matched: ${matched}`);
+			// matched: +359888123456
+		</code></pre>
+	</section>
+	<section><h3>More on Character Sets</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#character-sets">more Character Sets on MDN</a>
+	</section>
+
+	<section><h3>Character classes</h3>
+		<dl class="fa">
+		    <dt>Character classes can be regarded as shorthands for some of the most used  character sets. They work only on <span class="note"><a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a></span> symbols.</dt>
+		</dl>
+	</section>
+	<section><h3>Character classes</h3>
+		<table style="font-size: .8em">
+			<tr><th>Char class</th><th>Description</th></tr>
+			<tr><td><code class="note">.</code></td><td>Match <b>any</b> character, except newline/line terminator.</td></tr>
+			<tr><td><code class="note">\w</code></td><td>Match word character <br>(a character from a-z, A-Z, 0-9, including the _ (underscore) character.)</td></tr>
+			<tr><td><code class="note">\d</code></td><td>Match any Arabic digit ( from 0 to 9)</td></tr>
+			<tr><td><code class="note">\s</code></td><td>Match any whitespace character(space, tab, form feed, line ending, etc.)</td></tr>
+		</table>
+	</section>
+	<section><h3>Character classes example</h3>
+		<pre><code rel="JS" class="js">
+			// match bg mobile phone numbers
+			matched = "+359888123456".match(/\+3598[7-9]\d{7}/g);
+			console.log(`matched: ${matched}`);
+			// matched: +359888123456
+		</code></pre>
+	</section>
+	<section><h3>Character classes example</h3>
+		<pre><code rel="JS" class="js">
+			var re = /[a-z]\w+/;
+			var strings = [
+				'petrov42',
+				'42petrov',
+				'ivan_pterov',
+			]
+			strings.forEach(str=>console.log(`${str.match(re)} matched in ${str}:`));
+
+			// petrov42 matched in petrov42:
+			// petrov matched in 42petrov:
+			// ivan_pterov matched in ivan_pterov:
+		</code></pre>
+	</section>
+	<section><h3>More on Character Classes</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#character-classes">More Character classes on MDN</a>
+	</section>
+
+	<section><h3>Quantifiers</h3>
+		<table style="font-size: .9em">
+			<tr><th>Quantifier</th><th>Description</th></tr>
+			<tr><td><i>r</i> <b class="note">*</b></td><td><i>r</i> match <b>0</b> or <b>more times</b></td></tr>
+			<tr><td><i>r</i> <b class="note">+</b></td><td><i>r</i> match <b>1</b> or <b>more times</b></td></tr>
+			<tr><td><i>r</i> <b class="note">?</b></td><td><i>r</i> match <b>0</b> or <b>1</b>time</td></tr>
+			<tr><td><i>r</i> <b class="note">{n}</b></td><td><i>r</i> match <b>exactly <i>n</i> times</b></td></tr>
+			<tr><td><i>r</i> <b class="note">x{n,m}</b></td><td><i>r</i> match between <b>n</b> and <b>m</b> times (n, m are positive)</td></tr>
+		</table>
+		<p class="note"><code>r</code> can be any regex!</p>
+	</section>
+	<section><h3>Quantifiers (greedy and non-greedy match)</h3>
+		<dl class="fa">
+		    	<dt>The quantifiers are <span class="note">greedy</span>, meaning they will match the maximum part of the string they can:</dt>
+		    	<pre><code rel="JS" class="js">
+				var matched, str = `ala bala`;
+
+				matched = str.match(/a.*a/);
+				console.log(`matched: ${matched}`); //matched: ala bala
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Quantifiers (greedy and non-greedy match)</h3>
+		<dl class="fa">
+			<dt>We can make them <span class="note">non-greedy</span>, if we suffixed them with '<code class="note">?</code>'</dt>
+			<pre><code rel="JS" class="js">
+				var matched, str = `ala bala`;
+
+				matched = str.match(/a.*?a/);
+				console.log(`matched: ${matched}`); //matched: ala
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Quantifiers example</h3>
+		<pre><code rel="JS" class="js">
+			matched = "ala aa bala".match(/a.?a/g);
+			console.log(`matched: ${matched}`);
+			// matched: ala,aa,ala
+
+			matched = "ala aa bala".match(/a.{3,5}a/g);
+			console.log(`matched: ${matched}`);
+			// matched: ala aa
+
+			matched = "ala aa bala".match(/a.{3,}a/g);
+			console.log(`matched: ${matched}`);
+			// matched: ala aa bala
+
+			matched = "ala aa bala".match(/a.{3,}?a/g);
+			console.log(`matched: ${matched}`);
+			// matched: ala a,a bala
+		</code></pre>
+	</section>
+	<section><h3>Quantifiers</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#quantifiers">more on Quantifiers at MDN</a>
+	</section>
+
+	<section><h3>Anchors and Boundaries</h3>
+		<dl class="fa">
+			<dt>They specify a <b>position</b> in the string where a match should occurs.</dt>
+			<dt>They are zero-width, i.e.when matched they do NOT consume characters from the string.</dt>
+		</dl>
+	</section>
+	<section><h3>Anchors and Boundaries</h3>
+		<table style="font-size: .9em">
+			<tr><th>Anchor</th><th>Description</th></tr>
+			<tr><td class="note">^</td><td>Matches the <span class="note">beginning</span> of the string (or the line, if <b>m</b> flag is used)</td></tr>
+			<tr><td class="note">$</td><td>Matches the <span class="note">end</span> of the string (or the line, if <b>m</b> flag is used)</td></tr>
+			<tr><td class="note">\b</td><td>Matches on word boundaries, i.e. between <i>word</i>(\w) and <i>non-word</i>(\W) characters.<br>Note that the <b>start</b> and <b>end</b> of string are considered as non-word characters.</td></tr>
+		</table>
+	</section>
+	<section><h3>Anchors and Boundaries example</h3>
+		<pre><code rel="JS" class="js">
+			var re = /\b/g;
+			var strings = [
+				'',
+				'a',
+				'@',
+				'aa',
+				'a!',
+				'a,a',
+			]
+
+			strings.forEach(str=>{
+				var res = str.match(re);
+				res && console.log(`${res.length} matches in '${str}'`)
+			});
+			// 2 matches in 'a'
+			// 2 matches in 'aa'
+			// 2 matches in 'a!'
+			// 4 matches in 'a,a'
+		</code></pre>
+	</section>
+	<section><h3>Anchors and Boundaries example</h3>
+		<pre><code rel="JS" class="js">
+			var re = /^a\w+\a$/g;
+			var strings = [
+				'ana',
+				'ana bel',
+			]
+			strings.forEach(str=>{
+				var res = str.match(re);
+				res && console.log(`${res.length} matches in '${str}'`)
+			});
+			// 1 matches in 'ana'
+		</code></pre>
+	</section>
+	<section><h3>Anchors and Boundaries example</h3>
+		<pre><code rel="JS" class="js">
+			var re = /\b[\w-]+\b/gi;
+			var strings = [
+				'one two three four, five, six. Seven!',
+				'one-two,three!',
+			];
+			strings.forEach(str=>{
+				var res = str.match(re);
+				res && console.log(`${res.length} matches in '${str}'`)
+			});
+			// 7 matches in 'one two three four, five, six. Seven!'
+			// 2 matches in 'one-two,three!'
+		</code></pre>
+	</section>
+	<section><h3>More on 	Anchors and Boundaries</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#boundaries">Boundaries</a>
+	</section>
+
+	<section><h3>Alternation</h3>
+		<dl class="fa">
+			<dt>With alternation we can match one <span class="note">or</span> another regexp!</dt>
+		</dl>
+		<table>
+			<tr><th>Alternation</th><th>Description</th></tr>
+			<tr><td>r1<span class="note">|</span>r2</td><td>Matches if r1 OR r2 is matched</td></tr>
+		</table>
+	</section>
+	<section><h3>Alternation example</h3>
+		<pre><code rel="JS" class="js">
+			// NB: this is not example of good practice for grouping regex. Why? => check next slides
+			var re = /\b(straw|rasp)?berries/;
+			var strings = [
+				'Icecream with strawberries? Yes!',
+				'Icecream with blueberries? No!',
+				'Icecream with raspberries? Yes!',
+				'Icecream with berries? Yes!',
+			]
+
+			strings.forEach(str=> str.match(re) ?
+				console.log(`${str} YES! YES!`) : console.log(`${str} NO! NO!`)
+			)
+			// Icecream with strawberries? Yes! YES! YES!
+			// Icecream with blueberries? No! NO! NO!
+			// Icecream with raspberries? Yes! YES! YES!
+			// Icecream with berries? Yes! YES! YES!
+		</code></pre>
+	</section>
+	<section><h3>More on Alternation</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#alternation">Alternation</a>
+	</section>
+
+	<section><h3>Grouping and back references</h3>
+		<dl class="fa" style="font-size: .8em">
+			<dt>Brackets: <span class="note">(</span> and <span class="note">)</span>, play a dual role in regex!</dt>
+			<dt>They can be used for grouping regexes.Like: </dt>
+			<dd><code><b>/(r1|r2)r3/</b></code> => match <code><b>r1r3</b></code> OR <code><b>r2r3</b></code>, but not <code><b>r1r2r3</b></code></dd>
+			<dt>Or they can be used to <span class="note">capture</span> (remember) the matched part of the string. Like: </dt>
+			<dd><code><b>/(r1)r2/</b></code> => match <code><b>r1r2</b></code> and capture the part of the string that matched <code><b>r1</b></code></dd>
+			<dt>If you just want to <span class="note">group regexes, without capturing the match</span>, you should explicitly state that by: </dt>
+			<dd><code>(<span class="note">?:</span>r1|r2)</code> => match <code><b>r1</b></code> or <code><b>r2</b></code> but <span class="note"><b>do not capture</b></span> the match</dd>
+			<dt class="note">NB! Capturing is slow and memory consuming! If you need the parenthesis just for grouping- always use the <b>?:</b> prefix.</dt class="note">
+		</dl>
+	</section>
+	<section><h3>Grouping regexes example</h3>
+		<pre><code rel="JS" style="font-size: .8em;">
+			var re = /\b(?:straw|rasp)?berries/;
+			var strings = [
+				'Icecream with strawberries?',
+				'Icecream with blueberries?',
+				'Icecream with raspberries?',
+				'Icecream with strawraspberries?',
+				'Icecream with berries?',
+			];
+			strings.forEach(str=>str.match(re) ?
+				console.log(`${str} YES!`) : console.log(`${str} NO!`)
+			);
+			// Icecream with strawberries? YES!
+			// Icecream with blueberries? NO!
+			// Icecream with raspberries? YES!
+			// Icecream with strawraspberries? NO!
+			// Icecream with berries? YES!
+		</code></pre>
+	</section>
+	<section><h3>Grouping regexes: to group or not to group?</h3>
+		<pre><code rel="JS" class="js" style="min-height: 30em;">
+			var regexes = [
+				// task: match only 'strawberries' or 'raspberries':
+				/\bstraw|rasp{1}berries/,         // not what we want
+				/(?:\bstraw)|(?:rasp{1}berries)/, // the same as above!!!
+				/\b(?:straw|rasp){1}berries/,     // That's it!
+			];
+			var strings = [
+				'Icecream with strawberries?',
+				'Icecream with raspberries?',
+				'Icecream with straw?',
+				'Icecream with whateverraspberries?',
+			];
+
+			regexes.forEach(re=>{
+				console.log(`\nMatched with: ${re}`);
+				strings.forEach(str=>str.match(re) ?
+					console.log(`${str} YES!`) : console.log(`${str} NO!`)
+				)
+			});
+			// Matched with: /\bstraw|rasp{1}berries/
+			// Icecream with strawberries? YES!
+			// Icecream with raspberries? YES!
+			// Icecream with straw? YES!
+			// Icecream with whateverraspberries? YES!
+
+			// Matched with: /(?:\bstraw)|(?:rasp{1}berries)/
+			// Icecream with strawberries? YES!
+			// Icecream with raspberries? YES!
+			// Icecream with straw? YES!
+			// Icecream with whateverraspberries? YES!
+
+			// Matched with: /\b(?:straw|rasp){1}berries/
+			// Icecream with strawberries? YES!
+			// Icecream with raspberries? YES!
+			// Icecream with straw? NO!
+			// Icecream with whateverraspberries? NO!
+		</code></pre>
+	</section>
+	<section><h3>More on Grouping and back references</h3>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references">Grouping and back references</a>
+	</section>
+	<section><h3>Assertions</h3>
+		<p>Gives the possibility to match a regex only if it is followed or not by something. I.e. we can make lookahead!</p>
+		<p class="advanced"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#assertions">Assertions on MDN</a></p>
+	</section>
+</section>
+
+<section data-min="5"><h1>Create Regex in JavaScript</h1></section>
+<section><h2>Create Regex in JavaScript</h2>
+	<section><h3>How to create the RegExp object</h3>
+		<dl class="fa">
+			<dt>Each Regular Expression is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp object</a></dt>
+			<dt>2 ways to create a RegExp object:</dt>
+			<dd>By <span class="note">RegExp literal</span>:</dd>
+			<pre><code rel="JS" class="js">
+				var myNameRE = /iva/gi;
+			</code></pre>
+			<dd>By <span class="note">RegExp Constructor</span>:</dd>
+			<pre><code rel="JS" class="js">
+				var myNameRE = new RegExp('iva','gi');
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>RegExp literal</h3>
+		<dl class="fa">
+			<dt>Place the pattern between 2 slashes</dt>
+			<dt>Place the modifiers after the second slash</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var str = 'Maria, ivan, eli, zdravka, stoyan';
+
+			// match the first word which ends on 'a':
+			var re1 = /\b\w+a\b/;
+
+			// match all words which end on 'a':
+			var re2 = /\b\w+a\b/g;
+
+			console.log( str.match(re1).toString() ); // Maria
+			console.log( str.match(re2).toString() ); // Maria,zdravka
+		</code></pre>
+	</section>
+	<section><h3 class="advanced">RegExp Constructor</h3>
+		<pre><code rel="JS" class="js">
+			var str = 'Maria, ivan, eli, zdravka, stoyan';
+
+			// match the first word which ends on 'a':
+			var re1 = new RegExp('\\b\\w+a\\b');
+
+			// match all words which end on 'a':
+			var re2 = new RegExp('\\b\\w+a\\b', 'g');
+
+			console.log( str.match(re1).toString() ); // Maria
+			console.log( str.match(re2).toString() ); // Maria,zdravka
+		</code></pre>
+		<p class="note">As the Regex is given as string, we have to escape the backslash. I.e:  <code>\b</code> => <code>\\b</code></p>
+	</section>
+	<section><h3 class="advanced">RegEx Literal vs Constructor</h3>
+		<dl class="fa">
+		    	<dt>Literal:</dt>
+		    	<dd>Compiles only once - when <b>evaluated</b>.</dd>
+			<dd class="note">Use literal notation when you know the regular expression in advance.</dd>
+			<dt>Constructor</dt>
+			<dd>Compiles dynamically,  i.e. <b>each time the regex obj is used</b>.</dd>
+			<dd class="note"> Use the constructor function when you don't know the pattern in advance and will receive it from variable.</dd>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Regex in a loop</h3>
+		<pre><code rel="JS" class="js">
+			var words = ["ябълка", "ария", "ягода", "ясен"];
+
+			// Match string starting with 'я' and ending with 'а':
+			//  RegExp literals:
+			var re1 = /^я.*а$/i;
+			words.forEach(word=>{
+				// re1 is compiled only once !!!:
+				let re1Matched = word.match(re1);
+				re1Matched && console.log('re1: ' + re1Matched);
+			});
+
+			// RegExp Constructor
+			var re2 = new RegExp('^я.*а$','i');
+			words.forEach(word=>{
+				// re2 is re-compiled in each iteration:
+				let re2Matched = word.match(re2);
+				re2Matched && console.log('re2: ' + re2Matched);
+			})
+		</code></pre>
+	</section>
+	<section><h3>Array of RegExp</h3>
+		<pre><code rel="JS" class="js">
+			var commentsREs = [/\/\/.*/gm, /\/\*[^]+?\*\//g];
+			var str = `
+				// single line comment 1
+				var x = 5;
+				// single line comment 2
+				var y = 10;
+				/*this is multiline
+				comment in JS */
+				const pi = 3.14;
+				for (let i = 0; i< x; i++) console.log(i);
+			`;
+			commentsREs.forEach( re=>{
+				var matched = str.match(re);
+				matched && matched.forEach(m=>
+					console.log(m.toString())
+				);
+			});
+		</code></pre>
+	</section>
+	<!-- <section><h3>Regex in variable</h3>
+		<pre><code rel="JS" class="js">
+			var str = `The RegExp constructor creates a regular expression object for matching text with a pattern.
+			For an introduction to regular expressions, read the Regular Expressions chapter in the JavaScript Guide`;
+
+			// next regexp can be user input or coming form elsewhare,
+			// but it's just a string:
+			var searchTerm  =  'reg(?:ular)?\\s*exp?(?:ression)?';
+
+			// we can convert string to regex only byRegExp Constructor
+			var re = new RegExp('('+searchTerm+')', 'gi');
+			// console.dir(re);
+
+			str.match(re).forEach(m=>console.log(m));
+			// RegExp
+			// regular expression
+			// regular expression
+			// Regular Expression
+		</code></pre>
+	</section> -->
+</section>
+
+<section data-min="5"><h1>Use Regex in <code>String</code> object methods</h1></section>
+<section><h2>Use Regex in <code>String</code> object methods</h2>
+	<section>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search">search()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></dt>
+		</dl>
+	</section>
+	<section><h3>The match() String method: syntax</h3>
+		<pre><code rel="Syntax">
+			str.match(regexp)
+		</code></pre>
+		<dl class="fa">
+		    <dt>Argument:</dt>
+		    <dd>A RegExp object, or a string which will be converted to RegExp pbject</dd>
+		</dl>
+	</section>
+	<section><h3>The match() String method: Return value</h3>
+		<dl class="fa">
+		    <dt>If no match is found, the method returns <code class="note">null</code>.</dt>
+		    <dt>Without <code>g</code> modifier, <code>match()</code> returns an Array like object with next properties</dt>
+		    <table style="font-size: .9em">
+		    	<tr><th>Property/index</th><th>Description</th></tr>
+		    	<tr><td><code class="note">[0]</code></td><td>The part of the string that mathched the Regex</td></tr>
+		    	<tr><td><code class="note">[1]..[n]</code></td><td>The captured groups matches, if any</td></tr>
+		    	<tr><td><code class="note">index</code></td><td>The string index, where the match starts. Strings indexes are 0-based!</td></tr>
+		    	<tr><td><code class="note">input</code></td><td>The original string</td></tr>
+		    </table>
+		</dl>
+	</section>
+	<section><h3>The match() String method: Return value</h3>
+		<dl class="fa">
+			<dt>When <code>g</code> modifier is present, the result is an Array like object, containing all matched substrings.</dt>
+		</dl>
+	</section>
+	<section><h3>The match() String method</h3>
+		<pre><code rel="JS" class="js">
+			var str = 'abracadabra';
+
+			var resultSimple = str.match(/r/);
+			console.dir(resultSimple);
+
+			var resultGlobal = str.match(/r/g);
+			console.dir(resultGlobal);
+		</code></pre>
+	</section>
+	<section><h3>The replace() String method</h3>
+		<pre><code rel="JS" class="js">
+			// Goal: remove all vocal letters in a string
+
+			// the input string:
+			let str = 'The quick brown fox jumps over the lazy dog';
+
+			// the regex:
+			const re = /[aeiouy]/gi; // global and case-insensitive
+
+			// replace all matches with empty string:
+			let newStr = str.replace(re, '');
+
+			// print output:
+			console.log(`str: ${str}`);
+			console.log(`newStr: ${newStr}`);
+
+		</code></pre>
+		<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace @mdn</a></p>
+	</section>
+	<section><h3>The split() String method</h3>
+		<pre><code rel="JS" class="js">
+			// Goal: split a string by any whitespace, or ',' or '.' sequences
+
+			// the input string:
+			let str = `word1, word2
+			word3	word4. Word5`;
+
+			// the regex: match any whitespace, or ',' or '.' sequences:
+			const re = /[\s,.]+/;
+			let words = str.split(re);
+
+			// print the words array:
+			console.log(words);
+		</code></pre>
+	</section>
+	<section><h3>by <code>RegExp</code> object methods</h3>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec()</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">test()</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Useful Resources</h1></section>
+<section><h2>Useful Resources</h2>
+	<section><h3>Sites:</h3>
+		<dl class="fa">
+			<dt><a href="https://regex101.com/">regex101</a> <span>Online Regex tester</span></dt>
+			<dt><a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">JavaScript RegExp Reference</a> on <span>w3schools</span></dt>
+		</dl>
+	</section>
+	<section><h3>YouTube</h3>
+		<dt><a href="https://www.youtube.com/watch?v=EkluES9Rvak&list=PL-BwA4EWrxLCZ73--QvjEd1IOkJsfTa05&index=1">YouTube: Best of Fluent 2012: /Reg(exp){2}lained/: Demystifying Regular Expressions</a></dt>
+		<iframe width="896" height="504" src="https://www.youtube.com/embed/EkluES9Rvak?list=PL-BwA4EWrxLCZ73--QvjEd1IOkJsfTa05" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+</section>
+
+<section id="HW" data-min="1"><h1>HW</h1></section>
+<section><h2>HW</h2>
+	<section><h3>TASK: replace_numbers</h3>
+		<dl class="fa">
+			<dt>Given is the string: '<code>a1b2c3d</code>'</dt>
+			<dt>Write a program which will replace each digit in string with '-'. I.e. the resulting string should be '<code>a-b-c-d</code>'</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace @mdn</a></dt>
+		</dl>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

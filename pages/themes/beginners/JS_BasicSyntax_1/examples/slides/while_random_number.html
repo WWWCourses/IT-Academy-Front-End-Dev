@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>while_random_number</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// Машината си "намисля" число:
+	var machineNumber = Math.round(Math.random() * 10);
+	console.log(`machineNumber: ${machineNumber}`);
+
+	// Потребителя "въвежда" число:
+	var userNumber = Math.round(Math.random() * 10);
+	console.log(`userNumber: ${userNumber}`);
+
+	while(userNumber != machineNumber){
+		// Потребителя "въвежда" ново число:
+		userNumber = Math.round(Math.random() * 10);
+		console.log(`new userNumber: ${userNumber}`);
+	}
+</script>
+</body>
+</html>

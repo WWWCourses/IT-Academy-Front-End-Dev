@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VS Code Intro</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Tools_VSCode" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section>
+    <h1>Настройка на средата. Работа с текстов редактор</h1>
+</section>
+<section data-transition="zoom">
+    <section>
+        <div class="copyright">
+            <div class="note">
+                <p>Created for</p>
+            </div>
+            <div class="company">
+                <a href="http://IT-Academy.net/kurs-po-web-design/">
+                <img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+        <div class="note">
+            <p>Created by</p>
+        </div>
+        <div class="company">
+           <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+        </div>
+        <div class="author">
+            <span class="date">2015 - 2020, </span>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+        </div>
+    </section>
+</section>
+
+
+<section data-min="50"><h1>Инструменти за създаване на Уеб страници</h1></section>
+<section><h2>Инструменти за създаване на Уеб страници</h2>
+    <section><h3>Преглед</h3>
+        <dl class="fa">
+            <dt>Текстови редактори</dt>
+            <dd><a href="https://notepad-plus-plus.org/">Notepad++</a> (Windows)</dd>
+            <dd style="font-size: 1.1em"><a href="https://www.sublimetext.com/"><span class="note">Sublime Text</span></a> ( Linux/Unix, Windows, Mac OS X )</dd>
+            <dd><a href="https://atom.io/">Atom</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+            <dd style="font-size: 1.1em"><a href="https://code.visualstudio.com/"><span class="note">Visual Studio Code</span></a> ( Linux/Unix, Windows, Mac OS X )</dd>
+            <dd><a href="http://brackets.io/">Brackets</a> ( Linux/Unix, Windows, Mac OS X )</dd>
+            <dt>WYSIWYG ( What You See Is What You Get) редактори</dt>
+            <dd>Adobe Dreamweaver</dd>
+            <dd>Google Web Designer</dd>
+            <dd>Visual Web Developer (Microsoft Visual Studio)</dd>
+            <dt class="note">Предимства, недостатъци?</dt>
+        </dl>
+    </section>
+    <section><h3>Характеристики на VSCode?</h3>
+        <dl class="fa" style="font-size: .9em">
+            <dt>Мулти-платформен: <span class="note">Linux</span>,<span class="note"> Windows</span>,<span class="note"> Mac OS X</span>.</dt>
+            <dt>Open-source: <a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></dt>
+            <dt>Ежемесечно обновяване.</dt>
+            <dt>Изчерпателна документация: <a href="https://code.visualstudio.com/docs">VSCode Docs</a>.</dt>
+            <dt>Многобройна общност, създаваща непрекъснато множество полезни разширения за най-новите технологии: <a href="https://marketplace.visualstudio.com/vscode">VSCode extensions marketplace</a>.</dt>
+            <dt>Интуитивен и подходящ за начинаещи програмисти</dt>
+        </dl>
+    </section>
+    <section><h3>Какво ще ползваме?</h3>
+        <dl class="fa" style="font-size: .8em;">
+            <dt>В следващите слайдове са дадени подходящи ресурси, които ще ви улеснят в усвояването на VSCode, тъй като това е <span class="note">редактора, който ще ползваме по време на курса</span>.</dt>
+            <dt>Ако (желаете да) ползвате Sublime Text 3, може да прегледате презентацията: <a href="../Tools_ST3/Tools_ST3.html">Sublime Text 3 - Редактора, в който ще се влюбите</a></dt>
+            <dt>Недостатък на SublimeText е факта, че <span class="note">не е open source</span>.</dt>
+            <dt>Избора на един от двата редактора е преди всичко въпрос на лични предпочитания. И двата са достатъчно добри и изключително близки като функционалност.</dt>
+            <dt>Това, което е важно, е да се чувствате добре с редактора, които сте избрали и да отделите време и усилия за неговото усвояване.</dt>
+        </dl>
+    </section>
+    <section><h3>VSCode - Инсталиране</h3>
+        <p>От официалния сайт, където е последната версия: <a href="https://code.visualstudio.com">Visual Studio Code</a></p>
+    </section>
+    <section><h3>VSCode - Интерфейс</h3>
+        <dl class="fa">
+            <dt>Документация: <a href="https://code.visualstudio.com/docs/getstarted/userinterface">User Interface</a></dt>
+        </dl>
+    </section>
+    <section><h3>VSCode - Разширения</h3>
+        <dl class="fa">
+            <dt>Документация: <a href="https://code.visualstudio.com/docs/introvideos/extend">Using extensions in Visual Studio Code</a></dt>
+        </dl>
+    </section>
+    <section><h3>VSCode - Настройка на цветова тема</h3>
+        <dl class="fa">
+            <dt>Документация: <a href="https://code.visualstudio.com/docs/getstarted/themes">Color Themes</a></dt>
+        </dl>
+    </section>
+    <section><h3>VSCode - The Command Palette</h3><br/>
+        <dl class="fa">
+            <dt>Предимства:</dt>
+            <dd>Дава бърз достъп до всички команди в VSCode и инсталираните пакети.</dd>
+            <dd>Филтриране/търсене по произволна част от низа (fuzzy search)</dd>
+            <dt>Активиране:</dt>
+            <dd>Чрез клавиатура: <span class="code note">Ctrl+Shift+P</span></dd>
+        </dl>
+    </section>
+    <section><h3>VSCode - Клавиатурни комбинации</h3>
+        <dl class="fa">
+            <dt><a href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_keyboard-reference-sheets">keyboard shortcut reference sheet for your platform (macOS, Windows, Linux).</a></dt>
+        </dl>
+    </section>
+</section>
+
+
+<section data-min="50"><h1>Стуктура на директориите</h1></section>
+<section><h2>Стуктура на директориите</h2>
+    <section><h3>Основна директория за курса</h3>
+        <pre><code rel="" class="bash">
+            WD_Course/
+            ├── ipHW # файлове за задачите за домашно
+            ├── labs # файлове за упражнения в часовете
+            └── project # файлове за курсовия проект
+        </code></pre>
+    </section>
+    <section><h3>Структура на директориите за курсовия проект</h3>
+        <pre><code rel="" class="bash" style="line-height: 1.5">
+            project/
+            ├── design_notes # файлове касаещи дизайна на сайта
+            └── site_root # главната (root) папка за сайта
+                ├── images # файлове с изображения за сайта
+                ├── js # JavaScript файлове
+                ├── pages # HTML файлове за отделните страници на сайта
+                └── styles # CSS файлове
+                └── index.html # HTML файл за началната страница на сайта
+        </code></pre>
+    </section>
+    <section><h3>Структура на директориите за курсовия проект - пример</h3>
+        <pre><code rel="" class="bash">
+            project/
+            ├── design_notes
+            │   ├── about_sketch.png
+            │   ├── contacts_sketch.png
+            │   ├── home_sketch.png
+            │   └── mysite_description.txt
+            └── site_root
+                ├── images
+                │   ├── img1.png
+                │   └── img2.png
+                ├── js
+                │   └── main.js
+                ├── pages
+                │   ├── about.html
+                │   ├── contacts.html
+                │   └── products.html
+                ├── styles
+                │   └── main.css
+                └── index.html
+
+
+
+        </code></pre>
+    </section>
+    <section><h3>Конвенции за имена на файловете</h3>
+        <p class="note" style="font-size: .7em;">Файловете за вашият Web сайт ще бъдат качени на сървър. За да си спестите излишни усложнения, спазвайте следните конвенции.</p>
+        <dl class="fa">
+            <dt>Използвайте само латински букви, цифри, тире (<kbd>-</kbd>) и подчертавка (<kbd>_</kbd>)</dt>
+            <dt>За четимост на отделните думи, не използвайте спейс, a тире (<kbd>-</kbd>) или подчертавка (<kbd>_</kbd>) или <a href="https://en.wikipedia.org/wiki/Camel_case">Camel Case</a> конвенцията.</dt>
+            <dt>Имайте предвид, че Linux сървърите (за разлика от Windows) правят разлика между малки и големи букви в имената на файловете/директориите.</dt>
+        </dl>
+    </section>
+</section>
+
+
+<section><h2>Ресурси</h2>
+    <section><h3>Readings</h3>
+        <a href="https://code.visualstudio.com/docs">VS Code offical docs</a>
+    </section>
+    <section><h3>Videos</h3>
+        <p>Кратко въведение от официалния Youtube канал на <a href="https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w">Visual Studio Code</a></p>
+        <iframe width="785" height="480" src="https://www.youtube.com/embed/Sdg0ef2PpBw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section><h3>VSCode Keyboard Shortcuts For Productivity</h3>
+        <p>Представяне на някои от основните клавиатурни комбинации, които драстично ще увеличат продуктивността ви при използването на VSCode</p>
+        <iframe width="831" height="467" src="https://www.youtube.com/embed/Xa5EU-qAv-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section><h3>Videos</h3>
+        <p>Доста по-пълно въведение от <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w">Academind</a> - популярен Youtube канал посветен на Web Development</p>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/VqCgcpAypFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section><h3>Videos</h3>
+        <p>А ето и цял Youtube playlist: <a href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwhleivq1QohBZN4d8IdzG3c">Visual Studio Code Tutorial</a>, ако нямате против лекият индийски акцент ;)</p>
+    </section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+     <!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            // maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+    <!-- linkedin badge -->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

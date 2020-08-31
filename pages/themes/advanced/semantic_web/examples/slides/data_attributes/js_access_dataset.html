@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js_access_dataset</title>
+	<style type="text/css">
+		.log_ouput{
+			display: none;
+			border-top: 1px solid #999;
+			font-size: 3em;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li data-price="11">Item 1</li>
+		<li data-price="12">Item 2</li>
+		<li data-price="11">Item 1</li>
+		<li data-price="12">Item 2</li>
+		<li data-price="13">Item 3</li>
+	</ul>
+	<button>Calc total</button>
+	<div class="log_ouput"></div>
+
+	<script type="text/javascript">
+		var btnOrder = document.querySelector("button");
+		var items = document.querySelectorAll('li[data-price]');
+
+		btnOrder.addEventListener('click', function(){
+			var total = 0;
+
+			for(let i=0; i<items.length ;i++){
+				total += items[i].dataset.price*1; // "*1" - cast to number type
+			}
+
+			console.log(`total = ${total}`);
+			logInPage('.log_ouput', total)
+		})
+
+		function logInPage(sel, msg){
+			var output = document.querySelector(sel);
+			output.innerHTML = msg;
+			output.style.display = "block";
+		}
+	</script>
+	</body>
+	</html>

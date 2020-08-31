@@ -1,0 +1,41 @@
+    body{
+        font-size: 32px;
+    }
+    ul, ol{
+        list-style-type: none;
+    }
+    .font_icons_list>li{
+        margin-bottom: .8em;
+    }
+    .font_icons_list>li>span{
+        font-style: italic;
+    }
+    /* common to all bullets     */
+    .bullet>ul>li:before{
+        font-size: .8em;
+        margin-right: .3em;
+        vertical-align: middle;
+        color: #666;
+    }
+    /* UTF symbols as bullets */
+    .utf>ul>li:before{
+        content: "\2425"; # това е символа '␥' с код '\2425'
+
+    }
+    /* Material Icons as bullets*/
+    .mi>ul>li:before{
+        content: "\E858"; /* кода взимаме от: <i class="material-icons">&#xE858;</i> */
+        font-family: 'Material Icons';
+    }
+    .fa>ul>li::before{
+        content: "\f281";
+        font-family: 'FontAwesome';
+      }
+    .fi>ul>li:before{
+        content: "\f12d";
+        font-family: "foundation-icons";
+      }
+    .ion>ul>li:before{
+        content: "\f4ea";
+        font-family: "Ionicons";
+    }

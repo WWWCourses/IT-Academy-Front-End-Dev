@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw and scrollbars</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .red{
+            /* 	90% от широчината на body елемента, която изключва вертиклания скролбар */
+            width: 90%;
+            height: 50vh;
+            background-color: red;
+        }
+        .blue{
+            /* 	90% от широчината на viewport-а, която включва и вертиклания скролбар */
+            width: 90vw;
+            height: 51vh;
+            background-color: blue;
+        }
+        div{
+            text-align: center;
+        }
+        div>code{
+            font-size: 2em;
+            line-height: 50vh;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"><code>width: 90%</code></div>
+    <div class="blue"><code>width: 90vw</code></div>
+</body>
+</html>

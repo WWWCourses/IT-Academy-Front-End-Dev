@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>relativeUnitsForBoxSizes</title>
+	<style type="text/css">
+		html{
+			font-size: 50px;	
+		}		
+		.box{	
+			margin: 10% auto;				
+			vertical-align: middle;
+			text-align: center;
+			border-radius: 50%;	
+			text-transform: uppercase;
+		}
+		#red{
+			/* 	absolute units: */
+			width: 200px;
+			height: 50px;
+			line-height: 1;
+			padding: 25px;			
+			background-color: red;
+		}
+		#green{
+			/* 	em units: */	
+			font-size: 0.5em; 
+			width: 4em;
+			height: 1em;
+			line-height: 1;
+			padding: 0.5em;
+			background-color: green;
+		}
+		#blue{
+			/* 	rem units: */
+			font-size: 0.5rem; 
+			width: 4rem;
+			height: 1rem;
+			line-height: 1rem;
+			padding: 0.5rem;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="red">logo 1</div>
+	<div class="box" id="green">logo 2</div>
+	<div class="box" id="blue">logo 3</div>
+</body>
+</html>

@@ -1,23 +1,24 @@
 /* ********************************************************************** */
 /* Reveal.js themes */
 /* ********************************************************************** */
-@import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css";
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/serif.css"; */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/simple.css" */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/sky.css"; */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/solarized.css"; */
-/* @import "/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/white.css"; */
+@import "../../../lib/reveal.js/dist/theme/beige.css";
+/* @import "../../../lib/reveal.js/dist/theme/serif.css"; */
+/* @import "../../../lib/reveal.js/dist/theme/simple.css" */
+/* @import "../../../lib/reveal.js/dist/theme/sky.css"; */
+/*@import "../../../lib/reveal.js/dist/theme/solarized.css";*/
+/* @import "../../../lib/reveal.js/dist/theme/white.css"; */
 /* Custom */
-@import "/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css";
+@import "../../../outfit/css/reveal.js.css";
 /* ********************************************************************** */
 /* Code syntax highlighting */
 /* ********************************************************************** */
-@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/github-gist.min.css";
-@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/custom_hljs.css";
-
+/*@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css";*/
+@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css";
+@import "../../../outfit/css/custom_hljs.css";
 /* ********************************************************************** */
 /* Text formating  */
 /* ********************************************************************** */
-/* @import "/IT-Academy-Front-End-Dev/outfit/css/common/themes/MatDes/text_schemes.css"; */
-@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/text_schemes.css";
-@import "/IT-Academy-Front-End-Dev/outfit/css/colorSchemes/light/structuring_elements.css";
+@import "../../../outfit/css/colorSchemes/light/structuring_elements.css";
+@import "../../../outfit/css/colorSchemes/light/text_schemes.css";
+@import "../../../outfit/css/colorSchemes/light/color_classes.css";
+@import "../../../outfit/css/colorSchemes/font_sizes.css";

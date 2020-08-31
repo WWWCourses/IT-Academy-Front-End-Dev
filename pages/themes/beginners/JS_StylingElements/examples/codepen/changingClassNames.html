@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>changingClassNames</title>
+
+    <style type="text/css">
+    	.box{
+    			width: 7em;
+    			height: 7em;
+    			text-align: center;
+    			line-height: 7em;
+    			vertical-align: middle;
+    	}
+    	.style1{    	
+    		background: purple;
+    	}
+    	.style2{    		
+    		border-radius: 100%;    		
+    		background: blue;
+    	}
+    </style>
+</head>
+<body>
+	<button onclick="applyStyle('box style1');">apply style1</button>
+	<button onclick="applyStyle('box style2');">apply style2</button>
+	<button onclick="removeStyle();">remove style</button>
+	<p>Paragraph 1</p>	
+</body>
+<script type="text/javascript">
+	var pNode = document.querySelector("p:nth-of-type(1)");
+
+	function applyStyle( className){
+		pNode.className = className;
+	}
+
+	function removeStyle(){
+		pNode.className = "";
+	}
+
+</script>
+</html>

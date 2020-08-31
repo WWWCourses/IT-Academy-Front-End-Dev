@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>to_debug</title>
+</head>
+<body>
+<label>Enter a number [1..10]:<input type="number" name="userInput"></label>
+<button class="test">Test for even</button>
+<div class="output"></div>
+<script type="text/javascript">
+	let userInput = document.querySelector('input[type="number"]');
+	let output = document.querySelector('.output');
+	let btnTest = document.querySelector('.test');
+
+
+	btnTest.addEventListener("click", function(){
+		x = userInput.vаlue*1;
+		output.innerHTML = (x % 2) &&  "ODD" || "EVEN";
+	},false)
+
+</script>
+</body>
+</html>

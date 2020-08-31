@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS_Functions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function caller(f){
+	    console.log("1")
+	    f();
+	}
+
+	function callback(){
+	    console.log("2")
+	}
+
+
+	// try to find what will be loged, without executing the code, and then compare your guess
+	console.log("Feeding the caller() with function declaration")
+	caller( callback );
+
+	console.log("Feeding the caller() with function execution")
+	caller( callback() );
+</script>
+</body>
+</html>

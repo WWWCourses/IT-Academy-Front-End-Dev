@@ -1,0 +1,27 @@
+.wrapper{
+	position: relative;
+	height: 80vh;
+}
+.col_left, .col_right{
+	float: left;
+	width: 50%;
+	min-height: 100%;
+}
+.col_right{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background: red;
+}
+.col_left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: blue;
+}
+
+.clear:after{
+	display: block;
+	content: '';
+	clear: both;
+}

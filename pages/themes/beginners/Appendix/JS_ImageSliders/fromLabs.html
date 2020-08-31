@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Image Slider</title>
+	<style>
+		.slider_cotainer{
+			position: relative;
+			width: 80%;
+			height: 30vh;
+			margin: 0 auto;
+			border: 5px solid #999;
+		}
+		.slide{
+			position: absolute;
+			top:0; bottom: 0; left: 0; right: 0;
+			border: 5px solid #F99;
+		}
+		.img{
+			height: 100%;
+			font-size: 2em;
+			text-align: center;
+			color: #FFF;
+		}
+		.slide:nth-of-type(1)>.img{
+			background: linear-gradient(45deg, orange, yellow);
+		}
+		.slide:nth-of-type(2)>.img{
+			background: linear-gradient(45deg, red, blue);
+		}
+		.slide:nth-of-type(3)>.img{
+			background: linear-gradient(45deg, blue, green);
+		}
+
+		.btnContainer{
+			width: 80%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="slider_cotainer">
+		<div class="slide"><div class="img">img1</div></div>
+		<div class="slide"><div class="img">img2</div></div>
+		<div class="slide"><div class="img">img3</div></div>
+	</div>
+	<div class="btnContainer">
+		<button class="btnPrev">Prev</button>
+		<button class="btnNext">Next</button>
+	</div>
+
+	<script>
+		// DOM cache
+		let slides = document.querySelectorAll('.slide');
+		let btnPrev = document.querySelector('.btnPrev');
+		let btnNext = document.querySelector('.btnNext');
+
+		// helper functions
+		function hideAllSlides(slides) {
+			for (let i = 0; i < slides.length; i++) {
+				const slide = slides[i];
+				slide.style.display = "none";
+			}
+		}
+
+		function showSlide(slideNumber, slides) {
+			hideAllSlides(slides);
+
+			const slide = slides[slideNumber-1]
+			slide.style.display = "block";
+		}
+
+		function showNextSlide(slides) {
+			slideNumber++;
+
+			if( slideNumber === slides.length+1){
+				slideNumber=1;
+			};
+			showSlide(slideNumber, slides);
+			console.log(`slideNumber = ${slideNumber}`);
+		}
+		function showPrevSlide(slides) {
+			slideNumber--;
+
+			if( slideNumber === 0){
+				slideNumber=slides.length;
+			};
+			showSlide(slideNumber, slides);
+			console.log(`slideNumber = ${slideNumber}`);
+		}
+
+		// global vars:
+		var intervalId;
+		var slideNumber = 1;
+
+		// main program
+		showSlide(slideNumber, slides);
+
+		// on window load => slide images on Interval
+		window.addEventListener('load', function (params) {
+			intervalId = setInterval( showNextSlide, 1000, slides);
+		} )
+
+		// on button click: stop interval and slide manually
+		btnNext.addEventListener('click', function (params) {
+			clearInterval(intervalId);
+			showNextSlide(slides);
+		});
+		btnPrev.addEventListener('click', function () {
+			clearInterval(intervalId);
+			showPrevSlide(slides)
+
+		} );
+	</script>
+</body>
+</html>

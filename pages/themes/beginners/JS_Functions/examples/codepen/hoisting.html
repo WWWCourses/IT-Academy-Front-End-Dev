@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hoisting</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// тук JavaScript вече "знае" за съществуването на x, тъй като декларацията "var x;" вече се е изпълнила! Но не и израза, чрез който записваме 10 в x.
+
+	console.log("x:", x); // undefined
+
+	var x;
+	x = 10;
+
+
+
+</script>
+</body>
+</html>

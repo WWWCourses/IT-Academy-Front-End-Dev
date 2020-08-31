@@ -1,0 +1,14 @@
+{
+    "liveServer.settings.port": 5502,
+    "spellright.language": [
+        "Bulgarian",
+        "English (American)"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "python",
+        "html"
+    ]
+}

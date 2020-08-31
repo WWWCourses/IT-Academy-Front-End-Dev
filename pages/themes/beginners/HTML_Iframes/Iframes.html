@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML Iframes</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-home"></i></a>
+            <a class="help_link" href="../../../../pages/agenda/beginners.html#Course_Intro" target="_top"><i class="fa fa-question"></i></a>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>HTML Iframes</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="50"><h1>Какво е iframe?</h1></section>
+<section><h2>Какво е iframe?</h2>
+    <section>
+        <dl class="fa">
+            <dt>Дава възможност за вмъкване на друга HTML страница в нашия документ.</dt>
+            <dt>Не бива да се бърка с <a href="http://www.w3schools.com/tags/tag_frameset.asp">frameset</a> елемента, който не се поддържа вече в HTML 5!</dt>
+        </dl>
+    </section>
+    <section><h3>Общ синтаксис</h3>
+        <pre><code rel="HTML">
+            &lt;iframe src=&quot;URL&quot;&gt;
+                Съобщение, което ще се изпише ако браузъра не поддържа iframes.
+            &lt;/iframe&gt;
+        </code></pre>
+        <p><a href="http://www.w3schools.com/tags/tag_iframe.asp">HTML &lt;iframe&gt; Tag (w3schools)</a></p>
+    </section>
+    <section><h3>Основни атрибути</h3>
+        <dl class="fa">
+            <dt><code>src</code></dt>
+            <dd>задава URL на документа, който ще се зареди във фрейма.</dd>
+            <dt><code>height</code></dt>
+            <dd>Задава височината на фрейма. В пиксели.</dd>
+            <dt><code>width</code></dt>
+            <dd>Задава широчината на фрейма. В пиксели.</dd>
+            <dt><code>name</code></dt>
+            <dd>Задава име на фрейма. Използва се за да отворим линк в дадения фрейм. <a href="slides_examples/multiple_links_in_a_frame.html"></a></dd>
+            <dt><code>sandbox</code></dt>
+            <dd>Задава ограничения върху поведението на документа, който се зарежда във фрейма.</dd>
+        </dl>
+    </section>
+    <section><h3>Повече за iframe</h3>
+        <dl class="fa">
+            <dt><a href="https://developers.whatwg.org/the-iframe-element.html#the-iframe-element">във HTML: The Living Standard</a></dt>
+        </dl>
+    </section>
+</section>
+
+<section data-min="50"><h1>Iframe, в който се отваря съдържанието на различни линкове</h1></section>
+<section><h2>Iframe, в който се отваря съдържанието на различни линкове</h2>
+    <section>
+        <iframe class="resultFrame" scrolling='no' title='Multiple links targeted to one Iframe'
+        src='//codepen.io/webdesigncourse/embed/rWZqxR/?height=500&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/webdesigncourse/pen/rWZqxR/'>Multiple links targeted to one Iframe</a> by Iva Popova (<a href='http://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+    </section>
+</section>
+
+<section data-min="50"><h1>Вмъкване на карта от Google Maps</h1></section>
+<section><h2>Вмъкване на карта от Google Maps</h2>
+    <section>
+        <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
+        <dl class="fa">
+            <dt>Намираме желания адрес в <a href="http://maps.google.com">maps.google.com</a></dt>
+            <dt>От менюто в ляво избираме: "Share or Embed map"</dt>
+            <dt>В показания модален прозорец избираме таба "Embed map"</dt>
+            <dt>В прозореца се показва отново картата, като желания адрес е центриран в прозореца.</dt>
+            <dt>Копираме HTML кода даден в текстовото поле.</dt>
+            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на iframe-a (ако е необходимо).</dt>
+        </dl>
+        <pre><code rel="HTML">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500"></iframe>
+        </code></pre>
+    </section>
+    <section><h3>Резултат</h3>
+        <iframe class="resultFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.523298557758!2d23.321390480093637!3d42.69263917926799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85729d853a49%3A0xc5257e42efdfe9b5!2spl.+%22Petko+R.+Slaveykov%22+11%2C+1000+Sofia!5e0!3m2!1sen!2sbg!4v1481210129500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+</section>
+<section data-min="50"><h1>Вмъкване на карта от bgmaps</h1></section>
+<section><h2>Вмъкване на карта от bgmaps</h2>
+    <section>
+        <p>За да намерим URL-а на отрязъка от картата, която желаем:</p>
+        <dl class="fa">
+            <dt>Намираме желания адрес в <a href="http://www.bgmaps.com/">bgmaps.com</a></dt>
+            <dt>Кликваме върху оранжевото кръгче, ограждащо мястото</dt>
+            <dt>В долния десен ъгъл на повилият се прозорец избираме "карта за уеб"</dt>
+            <dt>Копираме кода и го поставяме в нашия код, като редактираме атрибутите на iframe-a</dt>
+        </dl>
+    </section>
+    <section><h3>Резултат</h3>
+        <iframe width="300" height="250" frameborder="0" scrolling="no" src="https://www.bgmaps.com/link/map/16F5DC94DD2C7ECC0576301A8B988408"></iframe>
+    </section>
+</section>
+
+
+<section data-min="50"><h1>Вмъкване на YouTube Видео</h1></section>
+<section><h2>Вмъкване на YouTube Видео</h2>
+    <section>
+        <dl class="fa">
+            <dt>Кликваме с десния бутон на мишката, върху youtube видеото, което желаем да използваме.</dt>
+            <dt>От появилото се меню избираме: "Copy embed code"</dt>
+            <dt>В нашия HTML файл, поставяме копираният код и редактираме атрибутите на ifram-a</dt>
+            <dt class="note">За да има възможност видеото да се гледа на цял екран, трябва да присъства атрибута allowfullscreen</dt>
+        </dl>
+    </section>
+    <section class="advanced">
+        <p>Повече настройки за това как да се изобрази YouTube видео: <a href="https://developers.google.com/youtube/player_parameters">YouTube Embedded Players and Player Parameters</a></p>
+        <p></p>
+    </section>
+    <section><h4>Пример</h4>
+        <pre><code rel="HTML" class="html">
+            <iframe id="youtubeFrame"
+                class="resultFrame"
+                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
+                allowfullscreen
+                onload="onYouTubeIframeAPIReady(this)"></iframe>
+        </code></pre>
+        <iframe id="youtubeFrame"
+                class="resultFrame"
+                src="https://www.youtube.com/embed/7S0X0OWMu_k?enablejsapi=1&autoplay=1&controls=1&showinfo=0"
+                allowfullscreen
+                onload="onYouTubeIframeAPIReady(this)"></iframe>
+    </section>
+    <section><h4>iframe, в който се отваря съдържанието на различни видео клипове:</h4>
+        <iframe  title='youtubeTargetedInFrame' src='https://codepen.io/webdesigncourse/embed/OOeOow/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-height: 70vh;width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/OOeOow/'>youtubeTargetedInFrame</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
+    </section>
+</section>
+
+<section data-min="50"><h1>Вмъкване на Pen от codepen.io</h1></section>
+<section><h2>Вмъкване на Pen от codepen.io</h2>
+    <section>
+        <ol>
+                <li>Влезте във страницата на избрания Pen.</li>
+                <li>В долния ляв край на страницата има бутон 'Embed', който натискате.</li>
+                <li>За да ползвате генериран от codepen.io <code><b>iframe</b></code> елемент, изберете таба <pre class="inline"><code class="html">iframe</code></pre></li>
+                <li>Копирате кодът във полето и го поставяте на желаното от вас място в страницата.</li>
+            </ol>
+    </section>
+    <section>
+        <p>Повече информация за вграждане на Pens   : </p>
+        <a href="https://blog.codepen.io/documentation/features/embedded-pens/">Embedded Pens - CodePen Blog</a>
+    </section>
+</section>
+
+<section data-min="50"><h1>weather widget</h1></section>
+<section><h2>weather widget</h2>
+    <section>
+        <dl class="fa">
+            <dt>
+
+            </dt>
+        </dl>
+    </section>
+</section>
+
+<section id="HW"><h1>Упражнения</h1></section>
+<section><h2>Упражнения</h2>
+    <section><h3>Задача 1: SelectedCodepens</h3>
+        <dl class="fa">
+            <dt>Условието на задачата е дадено тук: <a href="homeworks/SelectedCodepens.pdf">SelectedCodepens</a></dt>
+            <dt>Работете във файл <code>selectedCodepens.html</code> в папка /pages:</dt>
+            <dt>Добавете линк към решението във файла <code>index.html</code></dt>
+        </dl>
+        <pre><code rel="Terminal" class="html" data-noescape>
+            ipHW/
+            ├── images
+            │   └── ..
+            ├── <span style="color: #C00 !important">index.html</span>
+            ├── pages
+            │   ├── CV.html
+            │   ├── personalPage.html
+            │   └── <span style="color: #C00 !important">selectedCodepens.html</span>
+
+        </code></pre>
+    </section>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+    function onYouTubeIframeAPIReady(node) {
+        if ( !node ){
+            return
+        }
+        var nodeID = node.getAttribute("id");
+        // var nodeID = 'youtubeFrame';
+        var player = new YT.Player(nodeID, {
+            events: {
+              'onReady': function(e){
+                e.target.mute();
+              },
+            }
+        });
+      }
+</script>
+
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

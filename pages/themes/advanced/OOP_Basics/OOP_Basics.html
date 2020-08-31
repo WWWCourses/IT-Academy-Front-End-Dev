@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>OOP_Basics</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#OOP_Basics" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section data-min-total="80"><h1>OOP in JavaScript - the basics</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>OOP in a nutshell</h1></section>
+<section><h2>OOP in a nutshell</h2>
+	<section><h3>Overview</h3>
+		<!-- TODO: new image -->
+		<img src="images/drinksOntology.png">
+	</section>
+	<section><h3>Pros</h3>
+		<dl class="fa">
+			<dt>Real-World Modelling</dt>
+			<dt>Support and Maintenance</dt>
+			<dt>Structured (code for big systems)</dt>
+		</dl>
+	</section>
+	<section><h3>Class-based vs. Prototype-based OOP paradigms</h3>
+		<dl class="fa">
+			<dt>Class-based paradigm</dt>
+			<dd>Objects are instanses of <span class="note">classes</span></dd>
+			<dd>Classes inherit from <span class="note">classes</span></dd>
+			<dd>Classes are <span class="note">immutable</span></dd>
+			<dt>Prototype-based paradigm</dt>
+			<dd>Objects are instanses of <span class="note">objects</span></dd>
+			<dd>Objects inherit from <span class="note">objects</span></dd>
+			<dd>Objects are <span class="note">mutable</span></dd>
+		</dl>
+	</section>
+	<section><h3>OOP in JavaScript</h3>
+		<table>
+			<tr>
+				<th>Java</th>
+				<th>JavaScript</th>
+			</tr>
+			<tr>
+				<td>Classes</td>
+				<td>Functions</td>
+			</tr>
+			<tr>
+				<td>Constructors</td>
+				<td>Functions</td>
+			</tr>
+			<tr>
+				<td>Methods</td>
+				<td>Functions</td>
+			</tr>
+		</table>
+		<hr>
+		<p>Tables excerpt from Douglas Crockford's "<a href="http://www.crockford.com/javascript/inheritance.html">Classical Inheritance in JavaScript</a>"</p>
+	</section>
+</section>
+
+<section data-min="5"><h1>Single Object creation by Literal</h1></section>
+<section><h2>Single Object creation by Literal</h2>
+	<!-- <section>
+		<dl class="fa">
+			<dt>Two main ways of object creation:</dt>
+			<dd>Object creation <span class="note">ex nihilo</span> ("from nothing") </dd>
+			<dd>Object creation by <span class="note">cloning</span> an existing object</dd>
+		</dl>
+	</section> -->
+	<section id="objectLiteral" style="font-size: .8em"><h3>Object Literal (object initializer)</h3>
+		<dl class="fa">
+			<dt>An object literal, also known as object initializer, is a <span class="note">comma-delimited</span> list of zero or more <span class="note">pairs of property names and associated values</span> of an object, enclosed in curly braces <code class="note">{}</code>.</dt>
+		</dl>
+		<pre><code rel="Syntax" class="js">
+			const obj = {
+				property1: value1,
+				...
+				propertyN: valueN
+			};
+		</code></pre>
+		<dl class="fa">
+			<dt>The value of a property can by any JS data type: a primitive, array, function or any other object. <span class="note">When the value is a <strong>function</strong> we call that property <strong>method</strong>!</span></dt>
+		</dl>
+		<p class="advanced ">By object literals in JavaScript, we can create <a href="https://en.wikipedia.org/wiki/Associative_array">associative arrays/dictionaries</a> data structures.</p>
+	</section>
+	<section><h3>Object Literal - example</h3>
+		<pre><code rel="JS">
+			const apple = {
+				// define properties:
+				color: "red",
+				price: [3.5, 2, 2.5],
+
+				// define methods:
+				calcMinPrice: function(){
+					return  Math.min( ...this.price ); // from ES6
+				},
+				calcMaxPrice: function(){
+					return  Math.max( ...this.price ); // from ES6
+				}
+			}
+			// objects usage:
+			console.log(`apple min price: ${apple.calcMinPrice()}`);
+		</code></pre>
+	</section>
+	<section><h3>Create empty object literal and add properties</h3>
+		<dl class="fa">
+			<dt>We can create an object, by creating empty object literal and add the properties later</dt>
+		</dl>
+		<pre><code rel="Syntax" class="js">
+			// create empty object lieral:
+			const obj = {};
+
+			// add properties
+			obj.property1 = value1;
+			...
+			obj.propertyN = valueN;
+		</code></pre>
+
+	</section>
+	<section><h3>Object Literal: Pros&Cons</h3>
+		<dl class="fa">
+			<dt>Pros</dt>
+			<dd>Simple and clear syntax for one instance</dd>
+			<dt>Cons</dt>
+			<dd>To much "copy-paste" syntax for multitude instances</dd>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>Object properties</h1></section>
+<section><h2>Object properties</h2>
+	<section><h3>Property names</h3>
+		<dl class="fa">
+			<dt>Property names must be strings</dt>
+			<dt>If they are not, JavaScript try to typecast them</dt>
+		</dl>
+	</section>
+	<section><h3>Accessing properties - the dot notation</h3>
+		<pre><code rel="Syntax" class="js">
+			get = object.property;
+			object.property = set;
+		</code></pre>
+		<dl class="fa">
+			<dt><code>property</code> must be a valid identifier!</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var obj = {};
+
+			obj.$1 = "first"; // valid
+			obj.1  = "first"; // invalid
+		</code></pre>
+	</section>
+	<section style="font-size: .9em"><h3>Accessing properties - square brackets notation</h3>
+		<pre><code rel="Syntax" class="js">
+			get = object[property_name];
+			object[property_name] = set;
+		</code></pre>
+		<dl class="fa">
+			<dt><code>property_name</code> is a string, or expression that evaluates to string!</dt>
+			<dt><code>property_name</code> can be any string, not necessarily valid identifier.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var obj = {};
+			var keyName = 2;
+
+			obj["1"] = "first"; 	// valid
+			obj[keyName]   = "second"; 	// valid
+
+			console.log(obj)
+			// Object {1: "first", 2: "second"}
+		</code></pre>
+	</section>
+	<section><h3>Duplicate property names</h3>
+		<dl class="fa">
+			<dt>An object can not have 2/more properties with a same name!</dt>
+			<dt>When 2/more properties with a same name are given, then the last of them will overwrite the others.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var obj={
+				prop1: 1,
+				prop2: 2,
+				prop1: 3,
+				prop4: 4
+			}
+			console.log(obj);
+			// Object {prop1: 3, prop2: 2, prop4: 4}
+		</code></pre>
+	</section>
+	<section><h3>Computed property names (ES2015)</h3>
+		<dl class="fa">
+			<dt>ES2015 spec allow an expression to be placed inside square brackets, which will be computed as the property name</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var i = 0;
+			var obj = {
+				[`key${++i}`] : i,
+				[`key${++i}`] : i,
+				[`key${++i}`] : i,
+			};
+			console.dir(obj);
+			// Object
+			// 	key1: 1
+			// 	key2: 2
+			// 	key3: 3
+
+		</code></pre>
+	</section>
+	<section><h3>Shorthand property names (ES2015)</h3>
+		<pre><code rel="JS" class="js">
+			var key1 = 'first', key2 = 'second';
+
+			var obj = {key1, key2};
+
+			console.log(obj);
+			// Object {key1: "first", key2: "second"}
+
+		</code></pre>
+	</section>
+	<section><h3>Shorthand method notation (ES2015)</h3>
+		<dl class="fa">
+			<dt>We can omit the function keyword, when defining methods after ES2015 </dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			var obj = {
+				id: 1,
+				sayID(){console.log(this.id)},
+			}
+			obj.sayID();
+			// 1
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="60"><h1>Multiple Objects Creation</h1></section>
+<section><h2>Multiple Objects Creation</h2>
+	<section><h3>Factory Function</h3>
+		<dl class="fa">
+			<dt>We can define a function, which creates an object by given property values and return that object.</dt>
+			<dt><span class="note">Pros</span>: could be very flexible.</dt>
+			<dt><span class="note">Cons</span>: write everything by hand. Difficult to implement object inheritance.</dt>
+		</dl>
+	</section>
+	<section><h3>Factory Function - example</h3>
+		<pre><code rel="JS" class="js">
+			const appleFactory = function( color, prices ){
+				const obj = {};
+
+				// define properties:
+				obj.color = color;
+				obj.prices = prices;
+
+				// define methods:
+				obj.calcMinPrice = function(){
+					return  Math.min( ...this.prices ); // from ES6
+				};
+				obj.calcMaxPrice = function(){
+					return  Math.max( ...this.prices ); // from ES6
+				};
+
+				return obj;
+			}
+
+			// create object instances:
+			const apple1 = appleFactory("red", [3.5, 2, 2.5]);
+			const apple2 = appleFactory("green", [1.80, 2.10, 2.40]);
+
+			// objects usage:
+			console.log( "apple1 min price: ", apple1.calcMinPrice());
+			console.log( "apple2 min price: ", apple2.calcMinPrice());
+		</code></pre>
+	</section>
+	<section id="constructor"><h3>"Constructor" Function</h3>
+		<dl class="fa">
+			<dt>Constructor function is a function which constructs objects.</dt>
+			<dt>Every function in JS can act as a Constructor function.</dt>
+			<dt>What make difference is the <span class="note">way you call</span> the constructor function!</dt>
+			<dt><span class="note">You must prefix the constructor function call with the keyword <code>new</code>, and only that will do the magic.</span></dt>
+		</dl>
+	</section>
+	<section><h3>The <code>new</code> keyowrd</h3>
+		<p>The <code>new</code> keyword does the following things:</p>
+		<dl class="fa">
+			<dt>Creates a blank, plain JavaScript object.</dt>
+			<dt>Links (sets the constructor of) this object to another object (will be discussed in further topics).</dt>
+			<dt>Passes the newly created object from Step 1 as the this context.</dt>
+			<dt>Returns this if the function doesn't return its own object.</dt>
+		</dl>
+	</section>
+	<section><h3>"Constructor" Function - example</h3>
+		<pre><code rel="JS">
+			const AppleConstructor = function( color, prices ){
+				// define properties:
+				this.color = color;
+				this.prices = prices;
+
+				// define methods:
+				this.calcMinPrice = function(){
+					return  Math.min( ...this.prices ); // from ES6
+				};
+				this.calcMaxPrice = function(){
+					return  Math.max( ...this.prices ); // from ES6
+				};
+			}
+
+			// create object instances:
+			const apple3 = new AppleConstructor("red", [3.5, 2, 2.5]);
+			const apple4 = new AppleConstructor("green", [1.80, 2.10, 2.40]);
+
+			// objects usage:
+			console.log( "apple3 min price: ", apple3.calcMinPrice());
+			console.log( "apple4 min price: ", apple4.calcMinPrice());
+		</code></pre>
+	</section>
+	<section><h3>"Constructor" Function: Pros&Cons</h3>
+		<dl class="fa">
+			<dt>Pros</dt>
+			<dd>Easy to write (just set properties and methods). And when callled with <code>new</code> it will auto-magically care of object creation, including the inheritance.</dd>
+			<dt>Cons</dt>
+			<dd><code>new</code> and <code>this</code> problems!</dd>
+		</dl>
+	</section>
+	<section><h3>The <code>class</code> syntax</h3>
+		<dl class="fa">
+			<dt>ES6 introduces the <span class="note">class syntax</span> which makes it easier to write class-based OOP with JS.</dt>
+			<dt>The <code>class</code> syntax is just a <span class="note">syntactical sugar</span> over JavaScript's existing <span class="note">prototype-based inheritance</span> (will be discussed in further topics).</dt>
+			<dt><span class="note">The class syntax does not introduce a new object-oriented inheritance model to JavaScript.</span></dt>
+		</dl>
+	</section>
+	<section><h3>The <code>class</code> syntax - example</h3>
+		<pre><code rel="JS" class="js">
+			class AppleClass{
+				constructor( color, prices ){
+					// define properties:
+					this.color = color;
+					this.prices = prices;
+				}
+
+				// define methods:
+				calcMinPrice(){
+					return  Math.min( ...this.prices ); // from ES6
+				}
+
+				calcMaxPrice(){
+					return  Math.max( ...this.prices ); // from ES6
+				}
+			}
+
+
+			// create object instances:
+			const apple5 = new AppleClass("red", [3.5, 2, 2.5]);
+			const apple6 = new AppleClass("green", [1.80, 2.10, 2.40]);
+
+			// objects usage:
+			console.log( "apple5 min price: ", apple5.calcMinPrice());
+			console.log( "apple6 min price: ", apple6.calcMinPrice());
+		</code></pre>
+	</section>
+	<section><h3>References:</h3>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Class syntax</a> @MDN</dt>
+		</dl>
+	</section>
+</section>
+
+<section><h2>Excercises</h2>
+	<section id="maxRectangleArea"><h3>maxRectangleArea</h3>
+		<pre><code rel="Task Description" class="ascii">
+			Represent the data, about 5 rectangles with next properties:
+
+						id: r1, width: 40, height: 20
+						id: r2, width: 30, height: 30
+						id: r3, width: 10, height: 80
+						id: r4, width: 90, height: 2
+						id: r5, width: 20, height: 20
+
+			Write a function which will return the id of the rectangle with biggest area.
+
+			Expected output: r2
+		</code></pre>
+	</section>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

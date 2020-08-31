@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Pattern</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'PrototypeProperty': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car = {
+				maxSpeed: 300,
+				currentSpeed: 0,
+			};
+			var ford = {
+				currentSpeed: 280,
+				__proto__: car
+			};
+
+			console.log(`ford max speed: ${ford.maxSpeed}`);
+			console.log(`ford current speed: ${ford.currentSpeed}`);
+			// ford max speed: 300
+			// ford current speed: 280
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+
+	}
+
+	examples.classVsPrototypalInheritance();
+</script>
+</body>
+</html>

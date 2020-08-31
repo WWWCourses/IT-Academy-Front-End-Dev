@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryBasics</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#jQueryBasics" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>jQuery in 2 hours</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+					<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>jQuery overview</h1></section>
+<section><h2>jQuery overview</h2>
+	<section><h3>What is?</h3>
+		<dl class="fa">
+			<dt>jQuery is a <span class="note">JavaScript Library</span>.</dt>
+			<dt>Focuses on simplifying DOM manipulation, AJAX calls, Event handling, animation.</dt>
+			<dt>Provides API that <span class="note">works across a multitude of browsers</span>.</dt>
+		</dl>
+	</section>
+	<section><h3>Getting started</h3>
+		<dl class="fa">
+			<dt>To start using jQuery in your site, you can:</dt>
+			<dd><a href="https://jquery.com/download/">Download it</a></dd>
+			<dd>include it from a CDN (Content Delivery Network)</dd>
+		</dl>
+	</section>
+	<section><h3>jQuery CDNs</h3>
+		<dl class="fa">
+			<dt><a href="https://code.jquery.com/">jQuery @jQuery CDN</a></dt>
+			<dt><a href="https://developers.google.com/speed/libraries#jquery">jQuery @Google CDN</a></dt>
+			<dt>or just search in google: <a href="">jQuery CDN</a></dt>
+		</dl>
+	</section>
+	<section><h3>The benefits of using CDN</h3>
+		<dl class="fa">
+			<dt>Popular CDNs libraries are cached on user's machines</dt>
+			<dt>Cloud based - the file will be downloaded from the nearest server to the user</dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="20"><h1>jQuery Syntax</h1></section>
+<section><h2>jQuery Syntax</h2>
+	<section>
+		<p>The most basic concept of jQuery is to "<span class="note">select some elements and do something with them</span>."</p>
+	</section>
+	<section><h3>jQuery Syntax</h3>
+		<dl class="fa">
+			<dt>The jQuery syntax is tailor-made for <span class="note">selecting HTML elements</span> and <span class="note">perform actions</span> on the element(s).</dt>
+		</dl>
+		<pre><code rel="Syntax" class="js">
+			$(selector).action()
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			$(&quot;div&quot;).hide() - hides all &lt;div&gt; elements.
+
+			$(&quot;.red&quot;).hide() - hides all elements with class=&quot;red&quot;
+
+			$(&quot;#vip&quot;).hide() - hides the element with id=&quot;vip&quot;
+
+			$(this).hide() - hides the current element.
+		</code></pre>
+	</section>
+	<section><h3>How it works?</h3>
+		<dl class="fa">
+			<dt>The jQuery library exposes its methods and properties via two properties of the window object called <code>jQuery</code> and <code>$</code> </dt>
+			<dt><code>$</code> is just an alias for <code>jQuery</code> and it's often employed because it's shorter and faster to write</dt>
+		</dl>
+	</section>
+	<section><h3>The Document Ready Event</h3>
+		<dl class="fa">
+			<dt>It's a good practice to run your code as soon as the document is ready to be manipulated, and not before that.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$( document ).ready(function() {
+
+				// Your code here.
+
+			});
+		</code></pre>
+		<pre><code rel="JS" class="js">
+			// Shorthand for $( document ).ready()
+			$(function() {
+
+				// Your code here.
+
+			});
+		</code></pre>
+	</section>
+</section>
+
+<section data-min="10"><h1>jQuery Selectors</h1></section>
+<section><h2>jQuery Selectors</h2>
+	<section><h3>jQuery Selectors</h3>
+		<dl class="fa">
+			<dt>jQuery supports most CSS3 selectors, as well as some non-standard selectors. </dt>
+			<dt>Reference: <a href="https://api.jquery.com/category/selectors/">Selectors @jquery.com</a></dt>
+		</dl>
+	</section>
+	<section><h3>Basic Selectors - Examples</h3>
+		<pre><code rel="JS" class="js">
+			// by ID:
+			$( "#vip" );
+
+			// by class name:
+			$( ".red" );
+
+			// by attribute selector:
+			$( "input[target='_blank']" );
+
+			// by pseudo-elemement selector:
+			$( "div:nth-of-type(1)" )
+		</code></pre>
+	</section>
+</section>
+
+
+<section data-min="10"><h1>Jquery Events</h1></section>
+<section><h2>Jquery Events</h2>
+	<section><h3></h3>
+		<dl class="fa">
+			<dt>jQuery provides simple methods for attaching event handlers to selections.</dt>
+			<dt>In jQuery, most DOM events have an equivalent jQuery method.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$(".title").click();
+		</code></pre>
+	</section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="js">
+			$( 'selector' ).eventMethod( eventHandlerFunction );
+		</code></pre>
+		<dl class="fa">
+			<dt><span class="note">eventMethd</span> is any of <a href="https://api.jquery.com/category/events/">jQuery Event Methods</a></dt>
+			<dt><span class="note">eventHandlerFunction</span> - definition of the function which will be executed when the event fires.</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$('.title').click(function (e) {
+				$(this).css('color','red');
+			})
+		</code></pre>
+	</section>
+	<section><h3>The on() Method</h3>
+		<dl class="fa">
+			<dt>Attach an event handler function for one or more events to the selected elements</dt>
+			<dt>Reference: <a href="https://api.jquery.com/on/">on() @jquery</a></dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			$('.item').on('click', function (e) {
+				$(this).css('color','red');
+			})
+		</code></pre>
+	</section>
+	<section><h3>The Event Handler Function</h3>
+		<pre><code rel="Syntax" class="js">
+			$('.title').click(function (e) {
+				console.dir(e);
+				$(this).css('color','red');
+			})
+		</code></pre>
+		<dl class="fa">
+			<dt>The eventHandlerFunction can receive an event object.</dt>
+			<dd>Reference: <a href="https://api.jquery.com/category/events/event-object/">event object @jquery</a></dd>
+			<dt>Inside the function, '<code>this</code>' refers to the DOM element that initiated the event.</dt>
+			<dt>use: <code>$(this)</code> to convert the DOM object to jQuery Object</dt>
+
+		</dl>
+	</section>
+	<section><h3>Live Demo</h3></section>
+</section>
+
+<section data-min="10"><h1>jQuery Traversing</h1></section>
+<section><h2>jQuery Traversing</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>The most common traversing operations is to get <span class="note">parents</span>, <span class="note">descendants</span>, and <span class="note">siblings</span> of element.s</dt>
+		</dl>
+	</section>
+	<section><h3>Parents</h3>
+		<dl class="fa">
+			<dt><code>parent()</code> - returns immediate parent</dt>
+			<dd>Reference: <a href="https://api.jquery.com/parent/">parent @jquery</a></dd>
+			<dt><code>parents()</code> - returns ancestors</dt>
+			<dd>Reference: <a href="https://api.jquery.com/parents/">parents @jquery</a></dd>
+			<dt><a href="https://api.jquery.com/parentsUntil/">parentsUntil()</a> and <a href="https://api.jquery.com/closest/">closest()</a></dt>
+
+		</dl>
+		<pre><code rel="JS" class="js">
+			// get parents of all selected children:
+			$('.child').parent().css('background', 'yellow');
+
+			// get parents with class='uncle' of all selected children:
+			$('.child').parent('.uncle').css('background', 'orange')
+		</code></pre>
+	</section>
+	<section><h3>Descendants</h3>
+		<dl class="fa">
+			<dt>Self-learning: <a href="https://www.w3schools.com/jquery/jquery_traversing_descendants.asp">Traversing - Descendants @w3schools</a></dt>
+		</dl>
+	</section>
+	<section><h3>Siblings</h3>
+		<dl class="fa">
+			<dt>Self-learning: <a href="https://www.w3schools.com/jquery/jquery_traversing_siblings.asp">Traversing - Siblings @w3schools</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="10"><h1>get.set HTML content</h1></section>
+<section><h2>get.set HTML content</h2>
+	<section><h3>get</h3>
+		<dl class="fa">
+			<dt><code>text()</code> - Sets or returns the text content of selected elements</dt>
+			<dt><code>html()</code> - Sets or returns the content of selected elements (including HTML markup)</dt>
+			<dt><code>val()</code> - Sets or returns the value of form fields</dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="20"><h1>jQuery Effects</h1></section>
+<section><h2>jQuery Effects</h2>
+	<section><h3>Live Demos</h3>
+		<dl class="fa">
+			<dt>Simple Accordion Effect</dt>
+			<dt>Simple ToDo app</dt>
+		</dl>
+	</section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	<p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	<p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>emUnit</title>
+    <style type="text/css">
+    		html{
+    			height: 100%;    			
+    		}
+    		body{
+    			min-height: 100%;
+    			margin: 0;
+    			box-sizing: border-box;    			
+    			border: 5px solid red;
+    		}
+    		u{
+    			text-decoration: none;
+    			border-bottom: .15em double #666;
+    			padding: 0 .2em .1em;
+    		}
+    		main{
+    			border: 5px solid blue;
+    		}
+    		main>h1{
+    			min-height: 10%;
+    			text-align: center;    			
+    		}    		
+    		.clearedFloats:after{
+    			display: block;
+    			content: "";
+    			clear: both;
+    		}
+    		.col{
+    			float: left;
+    			width: 50%;
+    			margin: 2em 0 0 0;
+    			box-sizing: border-box;
+    		}
+    		.col>h2{
+    			text-align: center;
+    			padding: 0;
+    			margin: 0;
+    		}
+    		.left{
+    			border-right: 1px solid green;
+    		}
+
+    		/*the example styling*/
+    		.left{
+    			padding-left: 8px;
+    			line-height: 1.4em;
+    		}    		
+    		.right{
+    			padding-left: .8em;
+    			line-height: 1.4;
+    		}
+
+    		.smallFont{
+    			font-size: .5em; 
+    			line-height: inherit;
+    		}
+    		.normalFont{
+    			font-size: 1em;    			
+    		}
+    		.bigFont{
+    			font-size: 1.5em;    			
+    		}
+    </style>
+</head>
+<body>
+	<main class="clearedFloats">
+		<h1><u>EMs vs Pixels examples</u></h1>
+		<section class="col left">
+			<h2><u>Pixels</u></h2>
+			<article class="smallFont">
+				<h3>Small font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article class="normalFont">
+				<h3>Normal font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article class="bigFont">
+				<h3>Big font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+		<section class="col right">
+			<h2><u>EMs</u></h2>
+			<article class="smallFont">
+				<h3>Small font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article class="normalFont">
+				<h3>Normal font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article class="bigFont">
+				<h3>Big font</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

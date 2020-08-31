@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>targetVsCurrentTarget</title>
+    <style type="text/css">
+    	.outer{
+    		width: 10em;
+    		height: 10em;
+    		background: #F99;
+    	}
+    	.inner{
+    		width: 5em;
+    		height: 5em;
+    		background: #9F9;
+    	}
+    </style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var outerNode = document.querySelector('.outer');
+	var clickHandle = function(e){
+		console.log("e.target is:");
+		console.log(e.target);
+		console.log("e.currentTarget is:");
+		console.log(e.currentTarget);
+	}
+	outerNode.addEventListener('click', clickHandle);
+
+
+</script>
+</html>

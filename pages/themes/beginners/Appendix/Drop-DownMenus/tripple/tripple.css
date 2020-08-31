@@ -1,0 +1,124 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	menu alignment and positioning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.level_0>li{
+	float: left;
+	width: 5em;
+}
+/*clear floats*/
+.level_0:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*equivelent to "ul>li>ul", but readability matters"*/
+.level_1,
+.level_2,
+.level_3{
+	display: none;
+	position: relative;
+}
+/*equivelent to "ul>li:hover>ul", but readability matters"*/
+.level_0>li:hover>.level_1,
+.level_1>li:hover>.level_2,
+.level_2>li:hover>.level_3{
+	display: block;
+}
+
+.level_1>li,
+.level_2>li,
+.level_3>li{
+	/*comment, if you want the sub-menus to align to the bottom of level_0 menu*/
+	position: relative;
+}
+
+.level_2, .level_3{
+	position: absolute;
+	top:0;
+	left:10em;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	elements styling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header{
+	height: 8em;
+	background: #555;
+}
+/*level_0 menu items*/
+nav{
+	float: right;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	background: #666;
+	color: #CCC;
+}
+.level_1>li>a,
+.level_2>li>a,
+.level_3>li>a{
+	display: inline-block;
+	width: 100%;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	padding: .5em;
+}
+
+.level_0>li{
+	width: 10em;
+}
+.level_0>li:hover{
+	background: #7171A1;
+}
+.level_0>li>a{
+	padding-left: .5em;
+}
+
+/*level_1 menu*/
+.level_1{
+	width: 10em;
+	background:#6161A1;
+	z-index: 10;
+}
+.level_1>li:hover{
+	background: #71A171;
+	cursor: pointer;
+}
+
+/*level_2 menu*/
+.level_2{
+	width: 10em;
+	background:#61A161;
+	z-index: 11;
+}
+.level_2>li:hover{
+	background: #A17171;
+	cursor: pointer;
+}
+
+/*level_3 menu*/
+.level_3{
+	width: 10em;
+	background: #A16161;
+	z-index: 13;
+}
+
+/*other*/
+h2{
+	margin: 1em 0 0 0;
+	font-size: 1.4em;
+	text-align: center;
+}
+/*links*/
+a:link{
+	color: white;
+	text-decoration: none;
+}
+a:visited{
+	color: gray;
+}
+a:hover{
+	text-decoration: underline;
+}

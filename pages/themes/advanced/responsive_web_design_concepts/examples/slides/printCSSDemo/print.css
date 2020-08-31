@@ -1,0 +1,15 @@
+body{
+	margin: 0;
+	background: #FFF;
+}
+body:after{
+	display: block;
+	content: "Ups, you've printed me!";
+	height: 20vh;
+	padding: 2em;
+	font-size: 3em;
+	text-align: center;
+}
+header,main{
+	display: none;
+}

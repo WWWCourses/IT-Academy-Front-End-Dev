@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>type_selectors_example.html</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/tomorrow-night-eighties.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/codepen-embed.min.css"> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/languages/css.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="../../../../outfit/css/lessons/code_preview.css">
+    <link rel="stylesheet" type="text/css" href="../../../../outfit/css/custom_hljs.css">
+    <link rel="shortcut icon" href="/images/WebDesignDourseLogo_16_16.png"/>
+</head>
+<body>
+    <div class="page">
+        <section class="left">
+            <h2>Код:</h2>
+            <pre><code rel="HTML">
+                <div class="tab5">
+                    &lt;div class=&quot;parent&quot;&gt;
+                        &lt;p&gt;DIV1&lt;/p&gt;
+                        &lt;div class=&quot;parent child&quot;&gt;
+                            &lt;p&gt;DIV2&lt;/p&gt;
+                            &lt;div class=&quot;child&quot;&gt;
+                                &lt;p&gt;DIV3&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </div>
+            </code></pre>
+            <pre><code rel="CSS">
+                <div class="tab5">
+                    div{
+                        width: 80%;
+                        padding: 1em;
+                        border: 5px solid #00F;
+                        overflow: none;
+                    }
+                    .parent{
+                        background: #cc3030; /*red*/
+                        border: 5px solid #333;
+                    }
+                    .child{
+                        background: #30cc30; /*green*/
+                    }
+                </div>
+            </code></pre>
+            </section>
+        <section class="right">
+            <h2>Резултат:</h2>
+            <iframe class="stretch" class="" src="html_nodes_types.html"></iframe>
+        </section>
+    </div>
+</body>
+</html>

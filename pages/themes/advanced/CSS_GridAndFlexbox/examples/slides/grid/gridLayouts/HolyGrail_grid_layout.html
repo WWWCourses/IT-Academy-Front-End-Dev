@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+		}
+		.grid_container{
+			display: grid;
+		  grid-template-columns: 20vw auto 20vw;
+		  grid-template-rows: 10em 1fr 5em;
+		  height: 100vh;
+		  /*grid-gap: .5em;*/
+		}
+
+		header, footer{
+			grid-column: 1 / 4;
+			background: #666;
+			color: #CCC;
+		}
+		aside{
+			background: #CCC;
+		}
+		main{
+			background: #999;
+		}
+	</style>
+</head>
+<body class="grid_container">
+	<header>HEADER</header>
+	<aside>LEFT</aside>
+	<main>MAIN</main>
+	<aside>RIGHT</aside>
+	<footer>FOOTER</footer>
+</body>
+</html>

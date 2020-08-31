@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>objectCreationPatterns</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'factorySimpleExample': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			"use strict";
+			var objFactory = function(name){
+				var obj = {};
+				obj.name = name;
+				obj.sayName = () =>console.log(`I'm object: ${obj.name}`);
+
+				return obj;
+			}
+
+			var obj1 = objFactory('Object 1');
+			var obj2 = objFactory('Object 2');
+			obj1.sayName();
+			obj2.sayName();
+			// I'm object: Object 1
+			// I'm object: Object 2
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factoryFlexibilityExample': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			"use strict";
+			// aux constructors
+			function AudioPlayer(name){
+				this.name = name;
+				this.play = ()=>{
+					console.log(`${this.name} is playing as Audio!`);
+				}
+			}
+			function VideoPlayer(name){
+				this.name = name;
+				this.play = ()=>{
+					console.log(`${this.name} is playing as Video!`);
+				}
+			}
+
+			// the factory
+			function mediaPlayerMaker(name) {
+				if(name.match(/\.(?:mp3|ogg|flack)$/i) ){
+					return new AudioPlayer(name);
+				}
+				if (name.match(/\.(?:mp4|avi|divx)$/i)) {
+					return new VideoPlayer(name);
+				}
+			}
+
+			// the instancies
+			const player1 = mediaPlayerMaker('time_lapse.mp3');
+			const player2 = mediaPlayerMaker('micahel_nyman_band_live.avi');
+
+			// the usage
+			player1.play();
+			player2.play();
+
+			// time_lapse.mp3 is playing as Audio!
+			// micahel_nyman_band_live.avi is playing as Video!
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factoryEncapsulationExample': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			"use strict";
+			var objFactory = function(name){
+				// private members
+				var name = name;
+				// public
+				var obj = {
+					sayName: () =>console.log(`I'm object: ${name}`),
+				};
+
+				return obj;
+			}
+
+			var obj1 = objFactory('Object 1');
+			obj1.sayName();
+			console.log(`obj1.name: ${obj1.name}`);
+			// I'm object: Object 1
+			// obj1.name: undefined
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'example': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			"use strict";
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.factoryEncapsulationExample();
+</script>
+</body>
+</html>

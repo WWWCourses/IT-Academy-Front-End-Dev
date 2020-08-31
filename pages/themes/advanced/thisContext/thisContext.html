@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>"this" context</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#thisContext" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+
+<section><h1>the "this" context</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h1>the "this" in global context (non-function context)</h1></section>
+<section><h2>the "this" in global context (non-function context)</h2>
+    <section><h3></h3>
+        <dl class="fa">
+                <dt><code class="note">this ≅ global object</code></dt>
+                <dd>in Browsers: <code class="note">Window</code></dd>
+                <dd>in Node:<code class="note">global</code></dd>
+                <dd>Note, that in nodejs, the top-level scope is not the global scope. Ref: <a href="https://nodejs.org/api/globals.html#globals_global">nodejs#globals_global</a>. Each JS file is treated as a module.</dd>
+        </dl>
+    </section>
+</section>
+
+
+
+<section><h1>the "this" in <span class="note">function call</span> context</h1></section>
+<section><h2>the "this" in <span class="note">function call</span> context</h2>
+    <section>
+        <dl class="fa">
+            <dt><code class="note">this</code> depends on <b>how</b> a function is invoked!</dt>
+            <dt>different ways of function invocation:</dt>
+            <dd>as a <strong>function</strong></dd>
+            <dd>as a <strong>method</strong></dd>
+            <dd>as a <strong>constructor</strong></dd>
+            <dd>with <span class="code">apply</span> or <span class="code">call</span> or <span class="code">bind</span> </dd>
+        </dl>
+    </section>
+</section>
+
+<section><h2>Invoke as a function</h2>
+    <section><h3>in non Strict Mode</h3>
+        <dl class="fa">
+            <dt><code class="note">this ≅ global object</code></dt>
+            <dd>in Browsers: <code class="note">Window</code></dd>
+            <dd>in Node:<code class="note">global</code></dd>
+        </dl>
+        <pre><code rel="JS">
+            function f(){
+                console.log( "this in function call:", this );
+            }
+
+            f();
+            // Window
+        </code></pre>
+    </section>
+    <section><h3>in Strict Mode</h3>
+        <dl class="fa">
+            <dt><code class="note">this = undefined</code></dt>
+            <dd>in Browsers <code>global = Window</code></dd>
+            <dd>in Node <code>global = global</code></dd>
+        </dl>
+        <pre><code rel="JS">
+            "use strict";
+            function f(){
+                console.log( "this in strict function call:", this );
+            }
+
+            f();
+            // undefined
+        </code></pre>
+        <p>more on Strict Mode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN JavaScript Reference</a></p>
+    </section>
+</section>
+
+<section><h2>Invoke as a method</h2>
+   <section>
+        <p><code class="note">this = the object </code> the method is called on</p>
+        <pre><code rel="JS">
+            var obj = {
+                foo: function(){
+                    console.log(`this = ${this}`);
+                }
+            };
+
+            obj.foo();
+            // this = [object Object]
+        </code></pre>
+   </section>
+</section>
+
+<section><h2 class="advanced">In static (class) methods</h2>
+    <section>
+        <dl class="fa">
+            <dt>In static methods, <span class="note">this</span> refers to the class itself. Not to the object being created.</dt>
+            <dt>Note, that you can not invoke a static method from an object.</dt>
+            <dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static">Classes/static @mdn</a></dt>
+        </dl>
+    </section>
+    <section><h3>Example</h3>
+        <pre><code rel="JS">
+            class A{
+                method1(){
+                    console.log(`This in method: ${this}`);
+                }
+                static staticMethod(){
+                    console.log(`This in static method: ${this}`);
+                }
+            }
+
+            let obj = new A();
+
+            obj.method1()
+            A.staticMethod()
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>Invoke as a constructor</h2>
+   <section>
+        <p><code class="note">this = the object being constructed</code></p>
+        <pre><code rel="JS">
+            function Constructor(id){
+                this.id = id;
+                console.log(`this = ${this}`);
+                // this = [object Object]
+            };
+
+            var obj1 = new Constructor(1);
+        </code></pre>
+   </section>
+   <section>
+        <p>in method call this will be bound to the object, as well</p>
+        <pre><code rel="JS">
+            function Constructor(id){
+                this.id = id;
+                console.log(`this = ${this}`);
+                // this = [object Object]
+
+                this.sayHello = function(){
+                    console.log(`Oh, hello dear. I'm obj ${id}`);
+                    console.log(`this = ${this}`);
+                    // this = [object Object]
+                }
+            };
+
+            var obj1 = new Constructor(1);
+            obj1.sayHello();
+        </code></pre>
+   </section>
+</section>
+
+<section><h2>This in function call - cheatsheet</h2>
+    <section>
+        <a href="images/thisCheatsheet.png"><img src="images/thisCheatsheet.png" alt="thisCheatsheet.png"></a>
+    </section>
+</section>
+
+<section><h2>the "this" Pitfall and "that" Solution</h2>
+    <section><h3>the problem</h3>
+        <iframe height='265' scrolling='no' title='the This Pitfall' src='//codepen.io/ProgressWWWCourses/embed/OmxEGw/?height=265&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/OmxEGw/'>the This Pitfall</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>the "that" solution</h3>
+        <iframe height='265' scrolling='no' title='the "that" solution to "this" Pitfall' src='https://codepen.io/ProgressWWWCourses/embed/oWpzrO/?height=265&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/oWpzrO/'>the "that" solution to "this" Pitfall</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Function invocation with apply()</h2>
+   <section>
+       <dl class="fa">
+           <dt>The <code>apply()</code> method <span class="note">calls a function</span> with a given this value, and <span class="note">arguments provided as an array</span></dt>
+       </dl>
+        <pre><code rel="Syntax">
+            func.apply(thisArg, [argsArray])
+        </code></pre>
+        <dl class="fa">
+            <dt>the <code class="note">this</code> value inside function <code>func</code> will be equal to the object passed by <code class="note">thisArg</code> argument</dt>
+        </dl>
+        <pre><code rel="JS">
+            const maria = {name: "Maria", age:18};
+
+            function update(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            console.log("maria before", maria);
+            update.call(maria, "Maria Ivanova", 23);
+            console.log("maria after", maria);
+        </code></pre>
+   </section>
+</section>
+<section><h2>Function invocation call()</h2>
+    <section>
+        <dl class="fa">
+            <dt>The <code>call()</code> method <span class="note">calls a function</span> with a given this value, and <span class="note">arguments provided individually (comma separated)</span></dt>
+        </dl>
+        <pre><code rel="Syntax">
+            func.call(thisArg, arg1, arg2, ...)
+        </code></pre>
+        <dl class="fa">
+            <dt>the <code class="note">this</code> value inside function <code>func</code> will be equal to the object passed by <code class="note">thisArg</code> argument</dt>
+        </dl>
+        <pre><code rel="JS">
+            const maria = {name: "Maria", age:18};
+            function update(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            mariaNewRecord = ["Maria Ivanova", 23];
+
+            console.log("maria before", maria);
+            update.apply(maria, mariaNewRecord );
+            console.log("maria after", maria);
+        </code></pre>
+    </section>
+</section>
+<section><h2>Create new function with bind()</h2>
+    <section>
+        <dl class="fa">
+            <dt>The <code>bind()</code> method <span class="note">creates a new function</span> that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</dt>
+            <dt>the <code class="note">this</code> value inside function <code>func</code> will be equal to the object passed by <code class="note">thisArg</code> argument</dt>
+        </dl>
+        <pre><code rel="Syntax">
+            func.bind(thisArg[, arg1[, arg2[, ...]]])
+        </code></pre>
+
+        <pre><code rel="JS">
+            const maria = {name: "Maria", age:18};
+            function update(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            console.log("maria before", maria);
+            var updateMaria = update.bind(maria,"Maria Ivanova", 23);
+
+            updateMaria();
+            console.log("maria after", maria);
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>"this" in <code>addEventListener handler</code></h2>
+    <section>
+        <dl class="fa">
+            <dt>"this" in addEventListener handler is the object on which the event is fired</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <button>Click me</button>
+
+            <script>
+                let btn = document.querySelector('button');
+
+                btn.addEventListener('click', function () {
+                    console.log(`this === btn : ${this === btn}`);
+                    // true
+                })
+            </script>
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>"this" in <code>setTimeout/setInterval handler</code></h2>
+    <section>
+        <dl class="fa">
+            <dt>"this" in setTimeout/setInterval handler is the <span class="note">Window</span> object</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <button>Click me</button>
+
+            <script>
+                setTimeout(function () {
+                    console.log(`this === window: ${this === window}`);
+                }, 1000);
+                // true
+            </script>
+        </code></pre>
+    </section>
+</section>
+
+<section><h2>Excercises</h2>
+    <section><h3>Task: setTieoutInEventListener</h3>
+        <pre><code rel="HTML" class="html">
+            <button class="btn">Click me</button>
+        </code></pre>
+        <dl class="fa">
+            <dt>Given the above HTML, write the JS code, which will change the button background to "red", but <span class="note">2 seconds after the button is clicked</span>.</dt>
+        </dl>
+    </section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

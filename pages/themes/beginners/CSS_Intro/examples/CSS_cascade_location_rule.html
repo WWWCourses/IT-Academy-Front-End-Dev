@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS_cascade_location_rule</title>
+	<style type="text/css" media="screen">
+		p{
+			color: red;
+		}
+	</style>
+	<!-- тъй като включваме CSS файла след style елемента, то правилата в него ще бъдат с приоритет -->
+	<link rel="stylesheet" type="text/css" href="CSS_cascade_location_rule.css">
+</head>
+<body>
+	<p>Paragraph 1</p>
+	<p style="color: green">Paragraph 2</p>
+</body>
+</html>

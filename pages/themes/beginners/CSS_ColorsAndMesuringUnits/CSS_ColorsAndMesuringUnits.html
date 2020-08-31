@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Colors and Mesuring units</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#cliche_id" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Стойности за цветове и мерни единици в CSS3</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>Стойности за цветове</h2>
+	<section><h3>Чрез предефинирани имена</h3>
+		<div id="colors" style="height: 70vh; overflow: scroll"></div>
+		<script type="text/javascript">
+			let cssColorModuleLevel4 = ['aliceblue','antiquewhite','aqua','aquamarine','azure','beige','bisque','black','blanchedalmond','blue','blueviolet','brown','burlywood','cadetblue','chartreuse','chocolate','coral','cornflowerblue','cornsilk','crimson','cyan','darkblue','darkcyan','darkgoldenrod','darkgray','darkgreen','darkgrey','darkkhaki','darkmagenta','darkolivegreen','darkorange','darkorchid','darkred','darksalmon','darkseagreen','darkslateblue','darkslategray','darkslategrey','darkturquoise','darkviolet','deeppink','deepskyblue','dimgray','dimgrey','dodgerblue','firebrick','floralwhite','forestgreen','fuchsia','gainsboro','ghostwhite','gold','goldenrod','gray','green','greenyellow','grey','honeydew','hotpink','indianred','indigo','ivory','khaki','lavender','lavenderblush','lawngreen','lemonchiffon','lightblue','lightcoral','lightcyan','lightgoldenrodyellow','lightgray','lightgreen','lightgrey','lightpink','lightsalmon','lightseagreen','lightskyblue','lightslategray','lightslategrey','lightsteelblue','lightyellow','lime','limegreen','linen','magenta','maroon','mediumaquamarine','mediumblue','mediumorchid','mediumpurple','mediumseagreen','mediumslateblue','mediumspringgreen','mediumturquoise','mediumvioletred','midnightblue','mintcream','mistyrose','moccasin','navajowhite','navy','oldlace','olive','olivedrab','orange','orangered','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','papayawhip','peachpuff','peru','pink','plum','powderblue','purple','rebeccapurple','red','rosybrown','royalblue','saddlebrown','salmon','sandybrown','seagreen','seashell','sienna','silver','skyblue','slateblue','slategray','slategrey','snow','springgreen','steelblue','tan','teal','thistle','tomato','turquoise','violet','wheat','white','whitesmoke','yellow','yellowgreen'];
+				let outputNode = document.getElementById('colors');
+
+				for (let i = 0; i < cssColorModuleLevel4.length; i++) {
+					let color = cssColorModuleLevel4[i];
+
+					let newDiv = document.createElement("div");
+					newDiv.appendChild( document.createTextNode(color) );
+					outputNode.appendChild(newDiv);
+
+					newDiv.style.backgroundColor = color;
+					newDiv.style.color = "#000";
+					newDiv.style.display = "inline-block";
+					newDiv.style.fontSize = "16px";
+					newDiv.style.minWidth = "5em";
+					newDiv.style.padding = "0.6em";
+				}
+		</script>
+	</section>
+	<section><h3>Чрез предефинирани имена</h3>
+		<dl class="fa">
+			<dt>Имената могат да се записват чрез малки или големи букви (case-insensitive).</dt>
+			<dt><a href="https://www.w3schools.com/colors/colors_hex.asp">Color Values @w3schools</a></dt>
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords">Color_keywords @MDN</a></dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: purple;
+			}
+		</code></pre>
+	</section>
+	<section><h3>Чрез предефинирани имена</h3>
+		<p>Този начин за задаване на цветове се използва рядко, предимно за примери/тестване.</p>
+	</section>
+	<section><h3>Чрез RGB - десетичен запис</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				rgb(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>);
+		</div>
+		<dl class="fa">
+			<dt>Стойностите могат да бъдат зададени като:</dt>
+			<dd>Десетично число в интервала [0 - 255]</dd>
+			<dd>Процент: от 0% до 100%</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+				color: rgb(255, 0, 0);	   /*червено*/
+				color: rgb(100%, 0%, 0%);  /*червено*/
+				color: rgb(0, 0, 255);     /*синьо*/
+				color: rgb(0%, 0%, 100%);  /*синьо*/
+				color: rgb(255, 255, 0);   /*жълто*/
+				color: rgb(100%, 100%, 0%);/*жълто*/
+				color: rgb(0, 0, 0);       /*черно*/
+				color: rgb(255,255,255);   /*бяло*/
+				color: rgb(127,127,127);   /*сиво*/
+		</code></pre>
+	</section>
+	<section><h3>Чрез RGB - шестнадесетичен запис (Hex triplet)</h3>
+		<p>Използват се шестнадесетични цифри (hexadecimal notation)</p>
+		<a href="images/HexDigits.png"><img src="images/HexDigits.png"></a>
+	</section>
+	<section><h3>Чрез RGB - шестнадесетичен запис (Hex triplet)</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span>;
+		</div>
+		<dl class="fa">
+			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 00 - FF</dt>
+			<dt>Общо 6 шестнадесетични цифри</dt>
+			<dt><i class="advanced"></i>С две допълнителни цифри в края може да се зададе алфа нивото (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>)</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: #FF0000; /*червено*/
+				color: #0000FF; /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>RGB - съкратен шестнадесетичен запис</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span>;
+		</div>
+		<dl class="fa">
+			<dt>За всеки цвят задаваме шестнадесетично число в диапазона: 0 - F</dt>
+			<dt>Общо 3 шестнадесетични цифри</dt>
+			<dt><i class="advanced"></i>С допълнителна, 4-та цифра, може да се зададе алфа нивото  (<a href="#alphaChanelByHextriplets">виж alphaChanelByHextriplets</a>).</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: #F00; /*червено*/
+				color: #00F; /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Hex triplet - пример</h3>
+		<iframe   title='Формиране на цветове в HTML' src='//codepen.io/webdesigncourse/embed/qOLdod/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/qOLdod/'>Формиране на цветове в HTML</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3 class="advanced">Чрез HSL: Hue, Saturation, Lightness</h3>
+		<p>The color wheel</p>
+		<a href="images/hsl-color-wheel.png"><img src="images/hsl-color-wheel.png"></a>
+	</section>
+	<section><h3 class="advanced">Чрез HSL: Hue, Saturation, Lightness</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+			hsl(hue, saturation%, lightness%);
+		</div>
+		<dl class="fa">
+			<dt>hue – стойност в интервала [0-360] градуса, където:</dt>
+			<dd>0 – червен цвят</dd>
+			<dd>120 – зелен цвят</dd>
+			<dd>240 – син цвят</dd>
+
+			<dt>saturation – насищане на цвета: от 0% до 100%</dt>
+			<dt>lightness - осветеност: 0% - черно, 100% - бяло;</dt>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: hsl(0, 100%, 50% ); /*червено*/
+				color: hsl(240, 100%, 50% ); /*синьо*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Задаване на прозрачност за цвят (alpha channel) чрез RGBA</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				rgba(<span style="color: red">RedValue</span>, <span style="color: green">GreenValue</span>, <span style="color:blue">BlueValue</span>, <span>alphaValue</span>);
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
+			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
+			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				background-color: rgba(255, 0, 0, 0.5); /* полупрозрачно червено*/
+				background-color: rgba(255, 0, 0, 0); /* напълно прозрачно "червено"*/
+			}
+		</code></pre>
+	</section>
+	<section><h3>Задаване на прозрачност за цвят (alpha channel) чрез HSLA</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+			hsla(hue, saturation%, lightness%, alphaValue);
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [0 - 1] или в [0% - 100%]</dd>
+			<dd>alphaValue = 0 (или 0%): пълна прозрачност</dd>
+			<dd>alphaValue = 1 (или 100%): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				/* полупрозрачно червено*/
+				background-color: hsla(0, 100%, 50%, 0.5 );
+
+				 /* напълно прозрачно "червено"*/
+				background-color: hsla(0, 100%, 50%, 0 );
+			}
+		</code></pre>
+	</section>
+	<section id="alphaChanelByHextriplets"><h3>Задаване на прозрачност за цвят (alpha channel) чрез Hex Triplets</h3>
+		<div class="results_h" style="padding: 1.2em 0.5em 0.5em 0.5em; font-size: 1em; text-align: center;">
+				#<span style="color: red">RedValue</span><span style="color: green">GreenValue</span><span style="color:blue">BlueValue</span><span>alphaValue</span>;
+		</div>
+		<dl class="fa">
+			<dd>alphaValue може да бъде в интервала [00 - FF] или в [0 - F]</dd>
+			<dd>alphaValue = 00 (или 0): пълна прозрачност</dd>
+			<dd>alphaValue = FF (или F): пълна непрозрачност</dd>
+		</dl>
+		<pre><code rel="CSS" class="css">
+			#test{
+				/* полупрозрачно червено - чрез  8 цифрен hex запис*/
+				background-color: #FF000080;
+
+				 /* напълно прозрачно "червено" - чрез  4 цифрен hex запис*/
+				background-color: #FF00;
+			}
+		</code></pre>
+	</section>
+	<section><h3>alphaChanelValues - пример</h3>
+		<iframe   title='alphaChanelvalues' src='//codepen.io/webdesigncourse/embed/EbqLeX/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/EbqLeX/'>alphaChanelvalues</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Задаване на прозрачност за елемент (<a href="https://www.w3schools.com/cssref/css3_pr_opacity.asp">opacity property</a>)</h3>
+		<p>Прозрачността за цвят, не бива да се бърка със свойството <code>opacity</code>, което задава прозрачност за целия елемент! </p>
+		<iframe title='Element vs BG color Opacity' src='//codepen.io/webdesigncourse/embed/rpwJvV/?height=300&theme-id=20230&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/rpwJvV/'>Element vs BG color Opacity</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+		<!-- <iframe   title='Формиране на цветове в HTML' src='//codepen.io/webdesigncourse/embed/qOLdod/?height=300&theme-id=20230&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/qOLdod/'>Формиране на цветове в HTML</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe> -->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+</section>
+
+<section><h2>Единици за дължина (length units)</h2>
+	<section>
+		<dl class="fa">
+			<dt>Чрез тях задаваме стойности за width, height, margin, padding, font-size и пр.</dt>
+			<dt>Например:</dt>
+			<pre><code rel="CSS" data-noescape>
+				width: 100<b>px</b>;
+				height: 80<b>%</b>;
+				margin: 0;
+				font-size: 2<b>em</b>;
+			</code></pre>
+			<dt>Записват се <span class="note">непосредствено</span> след самото число, без спейс.</dt>
+			<dt>Ако стойността е 0 можем да не уточняваме мерната единица.</dt>
+			<dt>Реалните числа се записват с точка, не със запетая. Например: <code>1.5px</code></dt>
+			<dt>Нулата в цялата част на числото може да се пропусне. Например: <code>0.5px</code> може да се запише като <code>.5px</code></dt>
+		</dl>
+	</section>
+	<section><h3>Абсолютни:</h3>
+		<dl class="fa">
+			<dt><span class="keyword">px</span> : пиксела (1px = 1/96 от инча)</dt>
+			<dd>Използват се при екранна медия (screen media)</dd>
+			<dt><span class="keyword">pt</span> : точки (1pt = 1/72 от инча)</dt>
+			<dd>Използват се, когато медията е принтер.</dd>
+			<dt><span class="keyword">cm</span> : сантиметъра</dt>
+			<dt><span class="keyword">mm</span> : милиметра</dt>
+			<dt><span class="keyword">in</span> : инча</dt>
+		</dl>
+		<p class="note">Когато желаете страницата да изглежда еднакво добре на различни устройства (responsive design), не бихте желали да използвате абсолютни мерни единици</p>
+		<p>Абсолютни мерни единици, и то <code>pt</code>, бихте желали да използвате, когато подготвяте документ за принтиране.</p>
+	</section>
+	<section><h3>Релативни:</h3>
+		<dl class="fa">
+			<dt><span class="keyword">em</span> : изчислява се спрямо  <span class="note">размера на шрифта на текущия елемент</span>. Не забравяйте, че font-size е наследимо свойство!.</dt>
+			<dt><span class="keyword">rem</span> : изчислява се спрямо спрямо  <span class="note">размера на шрифта на root елемента</span> (елемента <b>html</b> за HTML езика).</dt>
+			<dt><span class="keyword">%</span> : <span class="note">Зависи от конкретното свойство!</span> За повечето свойства се изчислява като % от стойността на даденото свойство дефинирана в родителския елемент. </dt>
+			<dd>Пример за изключение: <a href="https://www.w3schools.com/cssref/pr_padding-top.asp"><code>padding-top</code></a></dd>
+		</dl>
+	</section>
+	<section><h3>Релативни (спрямо viewport)</h3>
+		<dl class="fa">
+			<dt><span class="keyword">vw</span> : 1% от широчината на изгледа (viewport width)</dt>
+			<dt><span class="keyword">vh</span> : 1% от височината на изгледа (viewport height)</dt>
+			<dt><span class="keyword">vmin:</span> : 1% от дължината на по-малката страна.</dt>
+			<dt><span class="keyword">vmax:</span> : 1% от дължината на по-голямата страна.</dt>
+		</dl>
+		<p>Viewport-a е онази част от прозореца на браузера, в която се изобразява страницата. Вертикалният и хоризонталеният скрол на странницата <span class="note">се включват</span> в рзмерите на viewport-a.</p>
+	</section>
+	<section><h3>Viewport content vs HTML element content</h3>
+		<a href="images/viewport_vs_html_content.png"><img src="images/viewport_vs_html_content.png" alt=""></a>
+	</section>
+	<section><h3>Разлика между % и viewport unit, когато има скролбар</h3>
+		<iframe height="300" style="width: 100%;" scrolling="no" title="VW_vs_Percentage_and_Scrolls" src="https://codepen.io/webdesigncourse/embed/NWqENEY?height=300&theme-id=20230&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+		See the Pen <a href='https://codepen.io/webdesigncourse/pen/NWqENEY'>VW_vs_Percentage_and_Scrolls</a> by Iva Popova
+		(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section><h3>Browser compatability</h3>
+		<p>Стойностите <code><b>rem, vw, vh, vmin, vmax</b></code> са въведени от CSS3 и не биха работили под по-стари браузери.</p>
+		<p class="note"><a href="https://caniuse.com/#search=Viewport%20units">Can I use Viewport units?</a></p>
+	</section>
+</section>
+
+<section><h2>Полезни статии</h2>
+	<dl class="fa">
+		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units @MDN Guides</a></dt>
+		<!-- <dt><a href="https://24ways.org/2006/compose-to-a-vertical-rhythm">Compose to a Vertical Rhythm</a> by Richard Rutter</dt> -->
+		<dt><a class="advanced" href="https://www.w3.org/WAI/GL/css2em.htm">The amazing em unit and other best practices</a></dt>
+		<dt><a class="advanced" href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css">Understanding and Using HSL in Your CSS</a></dt>
+	</dl>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	 <!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1024,
+			height: 850,
+			// Bounds for smallest/largest possible scale to apply to content
+			// minScale: .5,
+			maxScale: 1,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

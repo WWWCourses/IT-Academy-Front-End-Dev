@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>the_THIS_in_event_callback</title>
+    <style type="text/css">
+    	ul{
+    		list-style-type: none;
+    	}
+    	ul>li{
+    		float: left;
+    		width: 20%;
+    		height: 2em;
+    		line-height: 2em;
+    		vertical-align: middle;
+    		text-align: center;
+    		/*border: 1px solid red;*/
+    	}
+    	ul>li:hover:after, ul>li.selected:after{
+    		display: block;
+    		content: "";
+    		height: 3px;
+    		width: 50%;
+    		margin: 0 auto;
+    		margin-top: -.3em;
+    		background-image: linear-gradient(90deg, #00ABFF, #09FF42,#00ABFF);
+    		animation: stretch 100ms linear;
+    	}
+
+    	@keyframes stretch{
+    		0%{
+    			width: 10%;
+    		}
+    		50%{
+    			width: 25%;
+    		}
+    		100%{
+    			width: 50%;
+    		}
+    	}
+    </style>
+</head>
+<body>
+<nav>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+</nav>
+<script type="text/javascript">
+	var ulNode = document.querySelector('ul');
+	ulNode.addEventListener('click', function(e){
+		// clear bg on all child elements:
+		var liNodes = e.target.parentElement.children;
+		for(let i = 0, length1 = liNodes.length; i < length1; i++){
+			liNodes[i].style.background = '#FFF';
+		}
+
+		// set bg to the clicked element:
+		e.target.style.background = '#B8D7D6'
+
+		// set some other style, defined by class:
+		// e.target.className = "selected"
+	})
+</script>
+</body>
+</html>

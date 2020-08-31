@@ -1,0 +1,5 @@
+mogrify -resize x150 -transparent white -gravity center -extent x150 -format png -quality 100 -path "../thumbs-x150" *.*
+
+
+
+mogrify -transparent white *.png

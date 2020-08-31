@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>rotateOnLoad</title>
+    <style type="text/css">
+    	.picture{
+    		width: 5em;
+    		height: 5em;
+    		background: red;
+    		border-radius: 0%;
+    		transform: rotate(0deg);
+    		transition: transform 3s;
+    		transition-delay: 0s;
+    	}
+    </style>
+</head>
+<body>
+<div class="picture">picture</div>
+</body>
+<script type="text/javascript">
+	var pictureNode = document.getElementsByClassName('picture')[0];
+	function rotateNode( node, deg){
+		node.style.transform = 'rotate('+ deg +'deg)';
+	}
+
+	window.onload = function(){
+		rotateNode(pictureNode, 360);
+	};
+</script>
+</html>

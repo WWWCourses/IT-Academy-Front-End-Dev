@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Pattern</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'settingProperties': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(model){
+				this.doors = 4;
+				this.model = model;
+			}
+			var ford = new Car("Ford");
+			var BMV = new Car("BMV");
+
+			ford.doors =5;
+
+			console.log(ford);
+			console.log(BMV);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'prototypeInheritance': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car = {
+				maxSpeed: 300,
+				currentSpeed: 0,
+				drive(){
+					console.log(`I'm driving`)
+				},
+				accelerate(n){
+					var newSpeed = this.currentSpeed+n;
+					newSpeed<=this.maxSpeed ?
+						console.log(`Accelerated to `) :
+						console.log(`I'm already on max speed (${this.maxSpeed})`);
+				}
+			};
+			var ford = {
+				maxSpeed: 320,
+				currentSpeed: 280,
+				__proto__: car
+			};
+
+			ford.accelerate(50);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'classInheritance': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(maxSpeed, currentSpeed){
+				this.maxSpeed = maxSpeed // 300,
+				this.currentSpeed = currentSpeed // 0,
+				this.drive=function(){
+					console.log(`I'm driving`)
+				},
+				this.accelerate = function(n){
+					var newSpeed = this.currentSpeed+n;
+					newSpeed<=this.maxSpeed ?
+						console.log(`Accelerated to `) :
+						console.log(`I'm already on max speed (${this.maxSpeed})`);
+				}
+			};
+
+			var ford = new Car(320, 280) ;
+
+			ford.accelerate(50);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'classVsPrototypalInheritance': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			// class-based
+			function PersonClass(name){
+				this.name = name // '';
+				this.sayHi = ()=>console.log(`Hi, I'm ${name}`);
+			}
+			function MusicianClass(name, instrument){
+				this.name = name;
+				this.instrument = instrument;
+			}
+			MusicianClass.prototype = new PersonClass();
+
+			var smithClassed = new MusicianClass('Robert Smith', 'guitar');
+			smithClassed.sayHi(); // Error
+			console.dir(smithClassed);
+
+			// prototype based
+			var personProto = function(name){
+				return {
+
+					sayHi : ()=>console.log(`Hi, I'm ${this.name}`)
+				}
+			}
+			var musicianProto = function(name, instrument){
+				return{
+					name: name,
+					instrument: instrument,
+				}
+			}
+
+
+			var smithPrototyped = musicianProto('Robert Smith', 'guitar');
+			smithPrototyped.__proto__ = personProto();
+			smithPrototyped.sayHi(); // Error
+			console.dir(smithPrototyped);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'privacyByProtorypeLiteral': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Obj = function(name){
+				// private
+				var _id = 100;
+
+				//public data
+				this.name = name;
+
+				//privileged method
+				this.getID =()=>_id;
+			}
+
+			Obj.prototype = (function(){
+				var _count = 0;
+
+				var doCount = ()=>_count++;
+				var showCount = ()=>console.log(_count);;
+
+				return {
+					doCount: doCount,
+					showCount: showCount,
+				}
+			})();
+
+			var obj1 = new Obj("obj1");
+			var obj2 = new Obj("obj2");
+
+			obj1.doCount();
+			obj1.showCount();
+
+			console.dir(obj1);
+			console.dir(obj2);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.settingProperties();
+</script>
+</body>
+</html>

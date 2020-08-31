@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>mouseEvents</title>
+    <style type="text/css">
+    	.test{
+    		height: 3em;
+    		border: 1px solid #333;
+    		color: #CCC;
+    		background: #333;
+    	}
+    </style>
+</head>
+<body>
+	<p class="test" onclick="clickHandler();">test your mouse on me</p>
+	<hr>
+	<div class="output"></div>
+</body>
+<script type="text/javascript">
+	var btnNode = document.querySelector('.test');
+	var outputNode = document.querySelector('.output');
+
+	// btnNode.addEventListener('click', function(){
+	// 	outputNode.innerHTML = "You have clicked with left mouse button"
+	// })
+
+	function clickHandler(){
+		outputNode.innerHTML += "You have clicked with left mouse button<br>"
+	}
+</script>
+</html>

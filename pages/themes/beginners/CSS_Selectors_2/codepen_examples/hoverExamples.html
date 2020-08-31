@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hoverExamples</title>
+    <style type="text/css">
+    	section{
+    		border: 1px dotted #999;
+    	}
+    	/*hoverOnParent*/
+    	#parent{
+    		width: 50vw;
+    		height: 50vw;
+    		background: red;
+    	}
+    	#child{
+    		width: 50%;
+    		height: 50%;
+    		background-color: blue;
+    	}
+    	#parent:hover>#child{
+    		background-color: green;
+    	}
+
+    	/*hoverOnSibling*/
+    	#previous{
+    		width: 25vw;
+    		height: 25vw;
+    		background-color: red;
+    	}
+    	#sibling{
+    		width: 25vw;
+    		height: 25vw;
+    		background-color: blue;
+    	}
+    	#previous:hover~#sibling{
+    		background-color: green;
+    	}
+
+    </style>
+</head>
+<body>
+	<section id="hoverOnParent">
+		<h2>Select child while hover on Parent</h2>
+		<div id="parent">
+			<div id="child"></div>
+		</div>
+	</section>
+	<section id="hoverOnSibling">
+		<h2>Select sibling while hover on previous node</h2>
+		<div id="previous"></div>
+		<div id="sibling"></div>
+	</section>
+</body>
+<script type="text/javascript" src="hoverExamples.js"></script>
+</html>

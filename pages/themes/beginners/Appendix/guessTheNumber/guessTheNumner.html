@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>guessTheNumner</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="guessTheNumner.css">
+</head>
+<body>
+	<header><h1>Guess the number</h1></header>
+	<main>
+		<div class="dropdown level">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Select level
+		  </button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		    <li><a class="dropdown-item" data-value="1" href="#">easy: 1-50</a></li>
+		    <li><a class="dropdown-item" data-value="2" href="#">middle: 1-100</a></li>
+		    <li><a class="dropdown-item" data-value="3" href="#">hard: 1-500</a></li>
+		  </ul>
+		</div>
+		<div class="gameField">
+			<p>Познай числото, което съм си намислил :)</p>
+			<div class="columnsWrapper">
+				<div class="userInput">
+					<input type="number" class="userNumber" autofocus><button class="guessBtn">OK</button>
+				</div>
+				<div class="output"></div>
+			</div>
+		</div>
+	</main>
+	<section class="surprise">
+		<h2>Задачи:</h2>
+		<ol>
+			<li>Проментете кода, така че променливата count да отразява правилно броят опити за отгатване на числото.</li>
+			<li>При избор на ниво, интервала от възможни стойности да се изобрзява в "Познай числото, което съм си намислил" </li>
+			<li>Съобщенията за грешен опит да се изобразяват един след друг, за да може играча да следи използваните до момента числа.</li>
+			<li>При избор на ниво, играта да се нулира и да започне отново</li>
+		</ol>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="guessTheNumner.js"></script>
+</body>
+</html>

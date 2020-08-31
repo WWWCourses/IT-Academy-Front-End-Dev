@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>labsExamples</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var examples = {
+		'objLiteral': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var F = function(color, year){
+				this.color = color;
+				this.date = year;
+
+
+			}
+
+			var prop = "color";
+
+			var car1 = new F("red", 2007);
+			var car2 = new F("blue", 2011);
+			var car3 = new F("green", 2015);
+
+
+			console.log( car2["howOld"]() );
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'proto': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var car = {
+				color: "red"
+			}
+
+			var arr = new Array();
+
+			function changeCar(car){
+				var tmpCar = car;
+
+				tmpCar.color = 'black';
+
+				return tmpCar;
+			}
+
+			var carChanged = changeCar(car);
+			console.log(`carChanged.color: ${carChanged.color}`);
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'factory': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(color){
+				this.color = color || 'red';
+			}
+			Car.prototype.sayColor = function(){
+				console.log(`I'm a ${this.color} car!`);
+			}
+
+			var constructedCar = new Car();
+			console.log(`constructedCar.color: ${constructedCar.sayColor()}`);
+
+
+			var carFactory = function(color){
+				var car = {};
+				car.color = color || 'red';
+
+				return car;
+			}
+			carFactory.prototype.sayColor = function(){
+				console.log(`I'm a ${this.color} car!`);
+			}
+			var fabricatedCar = carFactory();
+			fabricatedCar.__proto__ = carFactory.prototype;
+			console.log(`fabricatedCar.color: ${fabricatedCar.sayColor()}`);
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'example3': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'privateMembers': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			var Car = function(name, color){
+				this.color = color;
+				this.name = name;
+
+
+			}
+			Car.prototype.getColor = function(){
+				console.log(`this.color: ${this.color}`);
+			}
+
+			var ford = new Car('Ford', 'RED');
+			ford.doors = 2;
+
+			// var myFord = {}; [[P]]
+			// myFord.__proto__ = ford;
+			// myFord.wings = 2;
+			var myFord = Object.create(ford, {
+				'wings': {value: '2'}
+			});
+
+
+			console.dir(myFord);
+			myFord.getColor();
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+		'prototypeChain': function(){
+		//▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾//
+			// Animal constructor
+			var Animal = function(food){
+			  this.food = food;
+			}
+			Animal.prototype.eat = function(){
+			  console.log(`${this.name} is eating ${this.food}`);
+			}
+
+			// Cat constructor
+			var Cat = function(name, food){
+			  // reuse the Animal Constructor
+			  Animal.call(this, food);
+			  this.name = name || 'Tom';
+			}
+			// Cat objects will inherit from Animal.prototype
+			Cat.prototype = Object.create(Animal.prototype);
+			// Cat.prototype.constructor
+
+			// Cat instance
+			var tom = new Cat('Tom', 'cheese');
+			tom.eat();
+
+			console.dir(tom);
+			console.log(tom.constructor.name);
+
+		//▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴//
+		},
+	}
+
+	examples.prototypeChain();
+</script>
+</body>
+</html>

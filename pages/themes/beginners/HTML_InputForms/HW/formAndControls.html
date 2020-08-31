@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>formAndControls</title>
+    <!-- <style type="text/css">
+    	form div{
+    		margin: 0.5em 0 0.7em 0;
+    	}
+    	label[for]{
+    		display: inline-block;
+    		width: 6em;
+    		text-align: right;
+    	}
+    	fieldset{
+    		border: 3px double #999;
+    	}
+    	legend{
+    		color: #666;
+    		text-align: right;
+    		padding: 0em;
+    	}
+    </style> -->
+</head>
+<body>
+	<h2>Регистрация</h2>
+	<form action="/cgi-bin/registration.py" method="get">
+		<fieldset>
+			<legend>Лични данни</legend>
+			<div>
+				<label for="userName">Име:</label>
+				<input type="name" name="userName" id="userName" placeholder="малко име, на латиница">
+			</div>
+            <div>
+                <label for="userSurName">Име:</label>
+                <input type="name" name="userSurName" id="userSurName" placeholder="фамилия, на латиница">
+            </div>
+			<div>
+				<label>Пол:</label>
+				<label>мъж: <input type="radio" name="gender" value="m"/label>
+				<label>жена: <input type="radio" name="gender" value="f"></label>
+			</div>
+		</fieldset>
+        <div>
+            <label>Коментар:</label><br>
+            <textarea name="comment" placeholder="напишете ни нещо"></textarea>
+        </div>
+        <button>Изпрати</button>
+	</form>
+</body>
+</html>

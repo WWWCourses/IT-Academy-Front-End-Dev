@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floats - Simple Example</title>
+    <style type="text/css">
+        .red {
+            width: 5em;
+            height: 10em;
+            background: #F99;
+        }
+
+        .blue {
+            background: #99F;
+            width: 10em;
+            height: 10em;
+        }
+        .left{
+            float: left;
+        }
+        .inline {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <i>" The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it." (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a>)</i>
+    <h3>Only the text content of the blue box is wrapped arround the red box;</h3>
+    <div class="red left">Red box: width: 100px;</div>
+    <div class="blue">Blue box: width: 200px; </div>
+    <hr>
+    <h3>The blue box will wrap arround the red one, if it is an inline element</h3>
+    <div class="red left">Red box: width: 100px;</div>
+    <div class="blue inline">Blue box: width: 200px; </div>
+    <hr>
+    <h3>The blue box will wrap arround the red one, if is floated left aswell</h3>
+    <div class="red left">Red box: width: 100px;</div>
+    <div class="blue left">Blue box: width: 200px; </div>
+</body>
+</html>

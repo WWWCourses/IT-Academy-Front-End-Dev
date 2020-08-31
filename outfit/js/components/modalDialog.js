@@ -57,12 +57,12 @@ document.body.appendChild(modalDialogArea);
 
 modalDialogClose.addEventListener("click", function(){
             removeDialog(modalDialogArea,0);
+            // console.log("@@@@@@@@@@@@@@@@@@@@");
             // console.dir(modalDialogArea);
 });
 
 //remove dialog after N seconds, if it exists:
-var showTime = 2;
-removeDialog(modalDialogArea, showTime);
+removeDialog(modalDialogArea, 5);
 
 
 //functions

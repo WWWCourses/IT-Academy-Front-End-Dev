@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS_StylingElements</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
+</head>
+<body>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+            <a class="home_link" href="../../../../pages/agenda/beginners.html#JS_Functions" target="_top"><i class="fa fa-home"></i></a>
+            <span class="help_link"><i class="fa fa-question"></i></span>
+            <div class="help_text">
+                <div><span>N/Спейс</span><span>следващ слайд</span></div>
+                <div><span>P</span><span>предишен слайд</span></div>
+                <div><span>O</span><span>всички слайдове</span></div>
+                <div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+            </div>
+        </div>
+        <div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Как да променяме CSS свойствата на елементите чрез JavaScript?</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section><h2>HTML DOM Style Object</h2>
+    <section>
+        <dl class="fa">
+            <dt>CSS декларациите се представят в DOM като свойства на обект от тип:</dt>
+            <dd><a href="https://www.w3schools.com/jsref/dom_obj_style.asp">Style object (CSSStyleDeclaration)</a></dd>
+        </dl>
+    </section>
+    <section>
+        <p>Ето как изглежда обект от тип CSSStyleDeclaration:</p>
+        <a href="images/CSS_StyleObjectInConsole.png"><img src="images/CSS_StyleObjectInConsole.png"></a>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>За всеки HTML елемент, стилът дефиниран чрез <span class="note"><code>style</code> атрибута</span>, се представя в отделен CSSStyleDeclaration обект.</dt>
+            <dt>Всичкият приложен CSS върху даден елемент, т.нар. <span class="note"><code>computed style</code></span> се представя в отделен CSSStyleDeclaration обект.</dt>
+            <dt>Стилът, зададен в head секцията, не може да бъде достъпен като CSSStyleDeclaration обект, а единствено като съдържание(<code>innerHTML</code> или <code>contentText</code>) на <code>style</code> елемента. </dt>
+        </dl>
+    </section>
+</section>
+
+<section><h2>element.style</h2>
+    <section>
+        <dl class="fa">
+            <dt>Можем да достъпим inline стила на всеки HTML елемент, чрез свойството <code>style</code>, в което се съдържа обект от тип CSSStyleDeclaration</dt>
+        </dl>
+        <pre><code rel="HTML" class="html">
+            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
+        </code></pre>
+        <pre><code rel="JS" class="js">
+            var pNode = document.querySelector(".test");
+
+            // get the inline style of the paragraph:
+            var inlineStyleObj = pNode.style;
+
+            console.dir(inlineStyleObj);
+        </code></pre>
+        <p class="note">Забележете, че в <code>inlineStyleObj</code> е представен само inline стилът, но не и всички правила, които се прилагат върху елемента!</p>
+    </section>
+    <section><h3>Example - get inline element style in codepen</h3>
+        <iframe title='Example - get inline element style' src='//codepen.io/webdesigncourse/embed/zRpWoN/?height=300&theme-id=20230&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/zRpWoN/'>Example - get inline element style</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+    <section><h3>Промяна на inline стила на елемент</h3>
+        <pre><code rel="HTML" class="html">
+            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
+        </code></pre>
+        <pre><code rel="JS" class="js">
+            var pNode = document.querySelector(".test");
+
+            // set inline style of the paragraph:
+            pNode.style.color = "#FFF";
+            pNode.style.backgroundColor = "#933";
+        </code></pre>
+    </section>
+    <section><h3>Example - set element.style properties in codepen:</h3>
+        <iframe title='setInlineStyle' src='//codepen.io/webdesigncourse/embed/RQxMaJ/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/RQxMaJ/'>setInlineStyle</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>window.getComputedStyle()</h2>
+    <section>
+        <dl class="fa">
+            <dt>Ако искаме да достъпим всичкият CSS, приложен върху даден елемент (в това число и наследените свойства), то трябва да използваме метода <code>getComputedStyle()</code> на обекта <code>window</code></dt>
+            <dt>Можем единствено да четем свойствата на window.getComputedStyle(), но не и да ги променяме!</dt>
+        </dl>
+        <pre><code rel="Syntax" class="js">
+            var nodeComputedStyleObj = window.getComputedStyle( nodeObj );
+        </code></pre>
+    </section>
+    <section>
+        <p>Например:</p>
+        <pre><code rel="HTML" class="html">
+            <p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
+        </code></pre>
+        <pre><code rel="JS" class="js">
+            var pNode = document.querySelector(".test");
+
+            var computedStyleObj = window.getComputedStyle( pNode );
+            console.dir(computedStyleObj);
+        </code></pre>
+    </section>
+    <section><h3>Example - increase/decreas font-size in codepen</h3>
+        <iframe title='Example - increase-decreasFontSize.html' src='//codepen.io/webdesigncourse/embed/wypGjE/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/wypGjE/'>Example - increase/decreas font-size.html</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Промяна на стил чрез задаване на предефиниран клас</h2>
+    <section>
+        <dl class="fa">
+            <dt>Ако предварително знаем как искаме да се променя стила на даден елемент, то по-лесно и ефективно би било да дефинираме този стил като отделно правило използвайки селектор за клас и с JavaScript да променяме динамично само стойността на атрибута class на дадения елемент.</dt>
+            <dt>За целта можем да изпозлваме свойствата:</dt>
+            <dd><a href="https://www.w3schools.com/jsref/prop_html_classname.asp">element.className</a></dd>
+            <dd><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">element.classList</a></dd>
+        </dl>
+    </section>
+    <section>
+        <iframe title='Example - changing style by predefined class names rules' src='//codepen.io/webdesigncourse/embed/VQyXRV/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;height: 70vh;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/VQyXRV/'>Example - changing style by predefined class names rules</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+    </section>
+</section>
+
+<section><h2>Примери и Задачи</h2>
+<a href="https://codepen.io/collection/Dgmpyj/">codepen колекция с примери и задачи върху темата</a>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            width: 1024,
+            height: 850,
+            // Bounds for smallest/largest possible scale to apply to content
+            // minScale: .5,
+            maxScale: 1,
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

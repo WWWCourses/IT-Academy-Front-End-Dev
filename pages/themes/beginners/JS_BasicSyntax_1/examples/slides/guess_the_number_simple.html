@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>while_random_number</title>
+</head>
+<body>
+	<p>Намислих си число в интервала [0..100]. Познай го!</p>
+	<label>Твоето число: <input type="number" name="userNumber"></label>
+	<button type="button" onclick="guessTheNumber()">Познай</button>
+	<script type="text/javascript">
+		// Машината си "намисля" число:
+		var machineMaxNumber = 100;
+		var machineNumber = Math.round(Math.random()*machineMaxNumber);
+		console.log(`machineNumber: ${machineNumber}`);
+
+		// "Взимаме" input елемента:
+		var inputNumberNode = document.querySelector("input[type='number']");
+
+
+		// Действията, които ще си изпълнят само след натискане на бутона:
+		function guessTheNumber(){
+			// "Прочитаме" въведенето в input елемента число (умножаваме по 1, за да бъде тип number, не string):
+			var userNumber = inputNumberNode.value*1;
+			console.log(`userNumber: ${userNumber}`);
+			// console.log(typeof userNumber);
+
+
+			while(userNumber !== machineNumber){
+				var userNumber = inputNumberNode.value*1;
+				console.log(`userNumber: ${userNumber}`);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>first-class_functions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// function caller(callback){
+	//     console.log("caller will call the callback:")
+	//     callback();
+	// }
+
+	// caller(function(){
+	//     console.log("I'm the callback1 function!")
+	// });
+
+	// caller(function(){
+	//    console.log("I'm the callback2 function!")
+	// });
+
+
+	function delay(f,sec){
+		setTimeout(f,sec*1000)
+	}
+
+	function foo(){
+		console.log(`I'm foo`);
+	}
+
+	delay(foo,2)
+
+
+	// function calc(f){
+	// 	console.log( f(40,2) )
+	// }
+
+	// calc(function(x,y){
+	// 	return x+y;
+	// })
+
+	// calc(function(x,y){
+	// 	return x-y;
+	// })
+
+</script>
+</body>
+</html>

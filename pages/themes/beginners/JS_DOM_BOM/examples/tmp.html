@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>global window object</title>
+</head>
+<body>
+    <p id="p1">Paragraph <b>1</b>!</p>
+	<!-- just an HTML comment, but it's a node. -->
+    <script type="text/javascript">
+		let allNodes = document.body.childNodes;
+		// console.dir(allNodes);
+		for (let i = 0; i < allNodes.length; i++) {
+			const node = allNodes[i];
+			console.log(`nodeName: ${node.nodeName}, nodeType: ${node.nodeType}`);
+		}
+    </script>
+</body>
+</html>

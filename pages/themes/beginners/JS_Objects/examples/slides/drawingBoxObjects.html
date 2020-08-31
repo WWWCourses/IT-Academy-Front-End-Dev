@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drawing box objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+    function boxConstructor(width, height, color, position){
+      this.width = width;
+      this.height = height;
+      this.height = height;
+      this.color = color;
+      this.position = position;
+
+      this.drawInHTML = function(){
+        var divNode = document.createElement("div");
+         
+        divNode.style.position = "absolute";          
+        divNode.style.width = this.width;
+        divNode.style.height = this.height;
+        divNode.style.backgroundColor = this.color;
+        
+        for (var prop in this.position){
+          divNode.style[prop] = this.position[prop]
+        }
+
+        console.dir( divNode );
+
+        document.body.appendChild( divNode )
+      }
+    }
+
+    var initHue = -40;
+
+    // it will be more efficient, if we make a function for creating box objects and putting them into array.    
+    var box1 = new boxConstructor("50px", "50px", 
+      "hsl(" + ( initHue = initHue+40) + ", 100%, 50%)", 
+      {top: "5%", left: "5%"});
+    var box2 = new boxConstructor("50px", "50px", 
+      "hsl(" + ( initHue = initHue+40) + ", 100%, 50%)", 
+      {top: "10%", left: "10%"});
+    var box3 = new boxConstructor("50px", "50px",
+      "hsl(" + ( initHue = initHue+40) + ", 100%, 50%)", 
+      {top: "15%", left: "15%"});
+    var box4 = new boxConstructor("50px", "50px",
+      "hsl(" + ( initHue = initHue+40) + ", 100%, 50%)", 
+      {top: "20%", left: "20%"});
+    var box5 = new boxConstructor("50px", "50px",
+      "hsl(" + ( initHue = initHue+40) + ", 100%, 50%)", 
+      {top: "25%", left: "25%"});
+
+
+    box1.drawInHTML();
+    box2.drawInHTML();
+    box3.drawInHTML();
+    box4.drawInHTML();
+    box5.drawInHTML();
+		
+	</script>
+</body>
+</html>

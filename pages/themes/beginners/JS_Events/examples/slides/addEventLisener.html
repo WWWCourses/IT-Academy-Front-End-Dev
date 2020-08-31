@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener</title>
+    <style type="text/css">
+    	.test{
+    		width: 15em;
+    		height: 2em;
+    		line-height: 2em;
+    		font-size: 1.5em;
+    		border: 1px dotted #999;
+    		text-align: center;
+    		vertical-align: middle;
+    	}
+    	.eventFired{
+				background: #E99393;
+			}
+    </style>
+</head>
+<body>
+	<p class="test">click me</p>
+	<p class="test">double click me</p>
+</body>
+<script type="text/javascript">
+	var p1 = document.querySelector("p:nth-of-type(1)");
+	var p2 = document.querySelector("p:nth-of-type(2)");
+	var clickHandler = function(event){
+		event.target.innerHTML = "Bravo, you have clicked!";
+		event.target.classList.toggle("eventFired");
+	}
+
+	p1.addEventListener('click', clickHandler);
+	p2.addEventListener('dblclick', function(event){
+		event.target.innerHTML = "Bravo, you have double clicked!";
+		event.target.classList.toggle("eventFired");
+	});
+</script>
+</html>

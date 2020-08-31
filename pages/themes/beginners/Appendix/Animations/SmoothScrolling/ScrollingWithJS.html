@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SmoothScrolling</title>
+    <style type="text/css">
+    	body{
+    		margin: 0;
+    	}
+    	main{
+    		position: relative;
+    	}
+    	main>nav{
+    		position: fixed;
+    		top: 0;bottom: 0;
+    		width: 5em;
+    		/*min-height: 100vh;*/
+    		/*margin: 0 1em 0 0;*/
+    		padding: 4.3em 1em 0 0;
+    		border-right: .01em solid red;
+    		box-sizing: border-box;
+    	}
+    	main>nav>a{
+    		display: block;
+    	}
+    	main>section.articles{
+    		position: relative;
+    		min-height: 100vh;
+    		margin: 0 0 0 5em;
+    		padding: 1em;
+    		/*border: .5em solid blue;*/
+    		background:#333;
+    		box-sizing: border-box;
+    		overflow: hidden;
+    	}
+
+    	main>section.articles>article{
+    		position: absolute;
+    		bottom: -100vh; left:0em;
+    		min-height: 100%;
+    		width: 100%;
+    		padding: 1em;
+    		box-sizing: border-box;
+    		color: #FFF;
+    		/*opacity: 0;*/
+    		transition: bottom 800ms;
+    	}
+    	main>section.articles>article.focus{
+    		display: block;
+    		bottom: 0;
+    		opacity: 1;
+    	}
+    	main>section.articles>article:nth-child(1){background: hsl(0, 100%, 50%)}
+    	main>section.articles>article:nth-child(2){background: hsl(45, 100%, 50%)}
+    	main>section.articles>article:nth-child(3){background: hsl(90, 100%, 50%)}
+    	main>section.articles>article:nth-child(4){background: hsl(175, 100%, 50%)}
+    	main>section.articles>article:nth-child(5){background: hsl(245, 100%, 50%)}
+    </style>
+</head>
+<body>
+<main>
+	<nav id="content">
+		<a href="#">section1</a>
+		<a href="#">section2</a>
+		<a href="#">section3</a>
+		<a href="#">section4</a>
+		<a href="#">section5</a>
+	</nav>
+	<section class="articles">
+		<article id="section1">
+			<h1>Article 1</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND</p>
+		</article>
+		<article id="section2">
+			<h1>Article 2</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article id="section3">
+			<h1>Article 3</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article id="section4">
+			<h1>Article 4</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article id="section5">
+			<h1>Article 5</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+	</section>
+</main>
+<script type="text/javascript" src="scroller.js"></script>
+</body>
+<!-- <script type="text/javascript" src="dummy.js">
+	var jQueryLoader = function(){
+		// Conditionally Load jQuery (javascript)
+		// Source: https://gist.github.com/gists/902090/
+
+		var jQuery3 = 'https://code.jquery.com/jquery-3.2.1.min.js';
+		var jQuery1 = '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
+
+		function init() {
+			jQuery(document).ready(function() {
+				console.log(`jQuery is loaded!`);
+		  	});
+		};
+
+		function _loadJQ() {
+		  var jQ;
+		  if (!(typeof jQuery !== "undefined" && jQuery !== null)) {
+		    jQ = document.createElement('script');
+		    jQ.type = 'text/javascript';
+		    jQ.onload = jQ.onreadystatechange = init;
+		    jQ.src = jQuery3;
+		    return document.body.appendChild(jQ);
+		  } else {
+		    return init();
+		  }
+		};
+
+		function load(){
+			if (window.addEventListener) {
+			  window.addEventListener('load', _loadJQ, false);
+			} else if (window.attachEvent) {
+			  window.attachEvent('onload', _loadJQ);
+			}
+		}
+
+		return {
+			load: load,
+			now: _loadJQ(),
+		}
+	}();
+
+	var scroller = function(){
+		"use strict";
+
+		const jScroller = function(){
+			console.log(`I'm vanilaScroller`);
+
+			$(function() {
+			  $('#content').on('click', 'nav>a', function(event) {
+			    event.preventDefault();
+			    var hash = this.hash;
+
+		 	    $('html, body').animate({
+		 	     scrollTop: $(hash).offset().top
+		 	    }, 1000, function() {
+		 	      window.location.hash = hash;
+		 	    });
+		 	  });
+		 	});
+		}
+
+		const vanilaScroller = function(){
+			console.log(`I'm vanilaScroller`);
+		}
+
+		return{
+			jScroller: jScroller,
+			vanilaScroller: vanilaScroller
+		}
+
+	}();
+
+	// jQueryLoader.now;
+	// console.dir(jQueryLoader.load);
+
+	// scroller.vanilaScroller();</script> -->
+</html>

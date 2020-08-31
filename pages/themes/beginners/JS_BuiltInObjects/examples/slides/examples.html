@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS_BuiltInObjects Examples_</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// using built in Math object
+		console.log( Math.max(2,12,5)); // 12
+
+		// using built in Date() constructor
+		var currentDate = new Date(); 
+		console.log( currentDate.getFullYear() ); // 2018
+
+		// using built in arguments object
+		function sum(){
+			sum = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				sum += arguments[i];
+			}
+			console.log("sum = " + sum);
+		}
+		sum(1,2,3);
+		sum(1,2,3,4);
+
+
+	</script>
+</body>
+</html>

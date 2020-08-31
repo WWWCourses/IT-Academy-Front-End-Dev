@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simpleOverlay</title>
+	<style>
+		.overlay_container{
+			position: relative;
+			width: 10em;
+			height: 15em;
+			border: .3em solid #999;
+			box-sizing: border-box;
+		}
+
+		.overlay{
+			position: absolute;
+			top:0; bottom: 0; left:0; right: 0;
+
+            background: linear-gradient(45deg, #F2C14E, #F78154);
+            /* background-image: url('images/technology-792180__340.jpg'); */
+            /* background-size: 100% */
+
+            opacity: 0;
+		}
+
+        .overlay_container:hover>.overlay{
+            opacity: 1;
+            transition: 1s;
+        }
+	</style>
+</head>
+<body>
+	<div class="overlay_container">
+		<div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam id similique ad veritatis culpa soluta temporibus molestiae, facilis expedita magnam atque error enim officia molestias amet corporis debitis! Vitae, quia.</div>
+		<div class="overlay"></div>
+	</div>
+</body>
+</html>

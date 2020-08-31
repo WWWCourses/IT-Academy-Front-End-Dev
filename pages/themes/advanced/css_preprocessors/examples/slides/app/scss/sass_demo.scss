@@ -1,0 +1,144 @@
+// ***********************************************
+
+
+// VARIABLES DECLARATION
+	$color 		: #F100FF;
+	$bg_color : rgba(255,0,0,0.5);
+// ***********************************************
+
+// ***********************************************
+// NESTED RULES
+	.container{
+		width: 10em;
+		height: 10em;
+		background: #FAA;
+		.child{
+			width: 50%;
+			height: 50%;
+			background: #AFA;
+		}
+	}
+// ***********************************************
+
+// ***********************************************
+// NESTED PROPERTIES
+	.cover{
+		background:{
+			image:"img1.png";
+			size: 100% 100%;
+			position: center;
+		}
+	}
+// ***********************************************
+
+// ***********************************************
+// REFERENCING PARENT SELECTORS
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+			&:after{
+				content: ">>";
+			}
+		}
+	}
+	.btn{
+		background: gray;
+		border-radius: 20%;
+		&-alert{
+			background: red;
+		}
+	}
+// ***********************************************
+
+// ***********************************************
+// DATA TYPES
+	// numbers
+	$number: 1.23;
+
+	// strings
+	$foo:"bar";
+	$foo:bar;
+
+	// colors:
+	$color:red;
+	$color:#F00;
+	$color:rgba(255,0,0,0.5);
+
+	// booleans
+	$shown:true;
+	$shown:false;
+
+	// null:
+	$test:null;
+
+	// lists
+	$border: 1px solid $color;
+	$font: "Helvetica", serif;
+
+	//maps (like dictionary)
+	$color_map: (
+	  light: #ccc,
+	  dark: #000
+	);
+// ***********************************************
+
+// ***********************************************
+// SIMPLE MIXIN:
+	@mixin centered_box() {
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@mixin child_box() {
+		width: 50%;
+		height: 50%;
+		background: red;
+	}
+// ***********************************************
+
+
+
+// ***********************************************
+// mixin with arguments
+	@mixin border($width, $color){
+		border: $width solid $color;
+	}
+// ***********************************************
+
+
+
+// ***********************************************
+// mixin included in mixin
+	@mixin transform($transforms) {
+		   -moz-transform: $transforms;
+		     -o-transform: $transforms;
+		    -ms-transform: $transforms;
+		-webkit-transform: $transforms;
+	          transform: $transforms;
+	}
+	@mixin rotate ($deg) {
+	  @include transform(rotate(#{$deg}deg));
+	}
+// ***********************************************
+
+
+
+// .container{
+// 	position: relative;
+// 	width: 10em;
+// 	height: 10em;
+
+// 	color: $color;
+// 	background: map-get($color_map, light);
+
+// 	@include border(5px, blue);
+
+// 	.child{
+// 		@include child_box;
+// 		@include centered_box;
+// 		@include border(3px, green);
+// 	}
+
+// }
+

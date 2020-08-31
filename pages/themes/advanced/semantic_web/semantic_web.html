@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>semantic_web</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#semantic_web" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Bring Semantic to the Web</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>The Semantic Web! What? Why? When?</h1></section>
+<section><h2>The Semantic Web! What? Why? When?</h2>
+	<section><h3>The Ultimate Goal</h3>
+		<dl class="fa">
+			<dt>Machines that are able to understand human's queries and needs for information.</dt>
+			<dt>Two approaches:</dt>
+			<dd>Intelligent Search Engines (involves ML, NLP, AI)</dd>
+			<dd>The Semantic Web</dd>
+		</dl>
+	</section>
+	<section><h3>What is the Semantic Web?</h3>
+		<blockquote cite="https://www.w3.org/DesignIssues/Semantic.html">"Leaving aside the artificial intelligence problem of training machines to behave like people, the Semantic Web approach instead develops languages for expressing information in a machine processable form"</blockquote>
+			<a href="https://www.w3.org/DesignIssues/Semantic.html">Semantic Web Road map by Tim Berners-Lee, 1998</a>
+	</section>
+	<section><h3>What Semantic Web is Not?</h3>
+		<dl class="fa">
+			<dt>"A Semantic Web is not Artificial Intelligence"</dt>
+			<blockquote cite="https://www.w3.org/DesignIssues/RDFnot.html" style="width: 80%; margin: 0.5em 0">"Semantic Web only indicates a machine's ability to solve a well-defined problem by performing well-defined operations on existing well-defined data. <span class="note">Instead of asking machines to understand people's language, it involves asking people to make the extra effort</span>"</blockquote>
+			<a href="https://www.w3.org/DesignIssues/RDFnot.html">What Semantic Web is Not (TBL, 1998)</a>
+		</dl>
+	</section>
+	<section>
+		<a href="images/640px-The_Semantic_Web_Compared_To_The_Traditional_Web.svg.png"><img src="images/640px-The_Semantic_Web_Compared_To_The_Traditional_Web.svg.png"></a>
+	</section>
+	<section>
+		<a href="https://www.youtube.com/watch?v=HeUrEh-nqtU">The Semantic Web of Data (Tim Berners-Lee)</a>
+		<iframe width="736" height="414" src="https://www.youtube.com/embed/HeUrEh-nqtU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</section>
+	<section><h3>Semantic Web in today world</h3>
+		<dl class="fa">
+			<dt><a href="https://www.w3.org/standards/semanticweb/">A W3C’s Standard</a></dt>
+			<dt>Google's Knowledge Vault</dt>
+			<dd>ex <a href="https://en.wikipedia.org/wiki/Knowledge_Graph">Knowledge Graph</a></dd>
+			<dt><a href="https://www.google.bg/search?q=Semantic+Web+SEO&source=lnt&tbs=qdr:y&sa=X&ved=0ahUKEwjMxMD3u5PeAhXFFiwKHR7KBpgQpwUIJA&biw=1024&bih=504">Semantic Web SEO</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="5"><h1>HTML5 Semantic elements - the right usage and SEO considerations.</h1></section>
+<section><h2>HTML5 Semantic elements - the right usage and SEO considerations.</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>Most of the elements defined in HTML5 are semantic</dt>
+			<dd>h1-h6, video, ul, input, option, select, etc.</dd>
+			<dd>I.e. elements are used according to their meaning, not because of the way they appear visually</dd>
+			<dt>But the Structural (Layout) elements: div and span are not.</dt>
+			<dt>HTML5 brings Semantic Structural Elements</dt>
+			<dd>Elements, that mark up the structure of the Web content using the appropriate semantic elements</dd>
+		</dl>
+	</section>
+	<section><h3>Note about "custom elements"</h3>
+		<dl class="fa">
+			<dt>HTML5 is a <span class="note">predefined, restricted</span> set of HTML elements</dt>
+			<dd>Tags like: <code>&lt;person&gt;, &lt;developer&gt;, ...</code> will be ignored by the browsers.</dd>
+			<dt>But we can define our custom elements in the DOM</dt>
+			<dd><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements">Custom Elements</a> @whatwg</dd>
+			<dd><a href="https://www.w3.org/TR/custom-elements/">Custom Elements</a> @w3c</dd>
+			<dt>Custom Elements are part of a bigger effort: the Web Components, which will be discussed in next lectures.</dt>
+			<dd>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a> @MDN</dd>
+			<dt style="font-size: .8em">Discuss: Custom (DOM) Elements vs HTML elements in the context of SEO</dt>
+		</dl>
+	</section>
+	<section><h3>Resources</h3>
+		<dl class="fa">
+			<dt><a href="https://www.inboundnow.com/html5-semantic-elements-mean-seo/">The HTML5 Semantic Elements and What They Mean For SEO</a></dt>
+			<dt><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">HTML5 Semantic Elements @w3schools</a></dt>
+		</dl>
+  </section>
+</section>
+
+
+<section data-min="5"><h1>Data Attributes in HTML5.</h1></section>
+<section><h2>Data Attributes in HTML5.</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>data-* attributes allow us to store extra information on regular, semantic HTML elements without other hacks such as non-standard attributes, extra properties on DOM, or Node.setUserData().</dt>
+			<dt>Shortly, they allows us to embed custom, non-visible data</dt>
+			<dd>Usually used with JS</dd>
+		</dl>
+  </section>
+  <section><h3>Syntax</h3>
+  	<pre><code rel="HTML" class="html">
+  		&lt;tag data-something&gt;&lt;/tag&gt;
+  	</code></pre>
+  	<dl class="fa">
+  		<dt>Where <span class="note">something</span> is string:</dt>
+  		<dd>at least 1 letter</dd>
+  		<dd>Should not start with 'xml'</dd>
+  		<dd>Rest symbols can be: <br> | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]</dd>
+  		<dt>More on naming: <a href="https://www.w3.org/TR/2011/WD-html5-20110525/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-*  attributes @w3c</a></dt>
+  	</dl>
+  </section>
+  <section><h3>Benefits</h3>
+  	<dl class="fa">
+  		<dt>To replace the usage of HTML classes for storing data</dt>
+  		<dd>The purpose of <code>class</code> attribute is to assign a class for styling</dd>
+  		<dt>We can put as many <code>data-*</code> attributes as we need</dt>
+  		<dt>Easy access of the <code>data-*</code> value by JS</dt>
+  		<dt>Of course, we can use them for styling purposes, as well</dt>
+  	</dl>
+  </section>
+  <section><h3>Example</h3>
+  	<pre><code rel="HTML" class="html" style="height: 50vh;">
+  		<section>
+  			<h2>Resutrant Menu</h2>
+  			<h3>Main Courses</h3>
+  			<ol data-food_type="main">
+  				<li data-price="23.00">Short Ribs Braised with Mushrooms</li>
+  				<li data-price="31.20">Greek Lemon Chicken and Potatoes</li>
+  				<li data-price="35.50">Chef John's Italian Meatballs</li>
+  				<li data-price="18.80">Pizza a la Sardinia</li>
+  			</ol>
+  			<h3>Deserts</h3>
+  			<ol data-food_type="deserts">
+  				<li data-price="13.50">Holiday Sugar Cookie Cups</li>
+  				<li data-price="12.00">Easy Baked Alaska</li>
+  				<li data-price="16.10">Slow-Cooker Caramel-Toffee Bread Pudding</li>
+  			</ol>
+  		</section>
+  	</code></pre>
+  	<pre><code rel="CSS" class="css">
+  		ol[data-food_type="main"]{
+  			border: 1px solid red;
+  		}
+  		ol[data-food_type="deserts"]{
+  			border: 1px solid blue;
+  		}
+  	</code></pre>
+  </section>
+  <section><h3>data-* attributes with CSS pseudo-elements</h3>
+  	<iframe scrolling='no' title='data-* attributes with pseudo-elements' src='//codepen.io/webdesigncourse/embed/MPXXjV/?height=300&theme-id=20230&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXjV/'>data-* attributes with pseudo-elements</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+  	</iframe>
+  </section>
+  <section><h3><a href="https://codepen.io/css-tricks/pen/wFeaG">Styled Tooltips Using Psuedo Elements</a></h3>
+  	<iframe src="examples/slides/data_attributes/custom_tooltips_by_css_trics.html" style="height: 40vh"></iframe>
+  	<p>Example from <a href="https://codepen.io/css-tricks/pen/wFeaG/">Styled Tooltips Using Psuedo Elements</a> by CSS-Tricks Team (<a href="https://codepen.io/css-tricks">@css-tricks</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+  </section>
+  <section><h3>JavaScript access</h3>
+  	<dl class="fa">
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset">HTMLElement.dataset @MDN</a></dt>
+  		<dd>The easy way</dd>
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">Element.getAttribute() @MDN</a></dt>
+  		<dd>Longer way</dd>
+  	</dl>
+  </section>
+  <section><h3>Example (labs)</h3>
+  	<iframe scrolling='no' title='Access data-* with JS: lab 20.11.2018' src='//codepen.io/webdesigncourse/embed/MPXXaQ/?height=300&theme-id=20230&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/MPXXaQ/'>Access data-* with JS: lab 20.11.2018</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+  	</iframe>
+</iframe>
+  </section>
+  <section><h3>Resources</h3>
+  	<dl class="fa">
+  		<dt><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data attributes @MDN</a></dt>
+  		<dt><a href="https://www.w3schools.com/tags/att_global_data.asp">HTML data-* Attributes @w3schools</a></dt>
+  	</dl>
+  </section>
+</section>
+
+<!--
+<section data-min="5"><h1>What is Microdata, Microformats, RDF and why should you know about them?</h1></section>
+<section><h2>What is Microdata, Microformats, RDF and why should you know about them?</h2>
+	<section><h3>___Comming soon___</h3>
+
+  </section>
+</section>
+
+
+<section data-min="5"><h1>How to boost the SEO of the site by adding more semantics.</h1></section>
+<section><h2>How to boost the SEO of the site by adding more semantics.</h2>
+	<section><h3>___Comming soon___</h3>
+
+  </section>
+</section> -->
+
+
+<section id="HW"><h1>Task - Simple Playlist</h1></section>
+<section><h2>Task - Simple Playlist</h2>
+	<section>
+		<dl class="fa">
+			<dt>Imagine, you have to code a simple music player</dt>
+			<dt>For now, we are only interested in next UI components:</dt>
+			<dd class="note">Genre Selection Radio Buttons</dd>
+			<dd class="note">Playlist (Track list)</dd>
+			<dt>Note that the playlist will consist of tracks from different genres!</dt>
+			<dt class="note">Each track is associated with a genre using the <code>data-genre</code> attribute.</dt>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>No fancy CSS, yet. Just the mains</dt>
+			<dd>A screenshot of the initial view: <a href="images/hw_player/initial_view.png"><img src="images/hw_player/initial_view.png" style="height: 60vh;"></a></dd>
+			<dt>But you'll have to use different colors for each genre!</dt>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>A screenshot of the initial view, when hover on a track:</dt>
+			<a href="images/hw_player/initial_view_track_hover.png"><img src="images/hw_player/initial_view_track_hover.png" style="height: 60vh;"></a>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Your main task will be to implement the "filter by genre" functionality</dt>
+			<dd>For instance, if the user have checked the "Rock" radio button, only the tracks assosiated with this genre should be listed</dd>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>A screenshot of "filter by Rock"</dt>
+			<a href="images/hw_player/filtered_by_rock.png"><img src="images/hw_player/filtered_by_rock.png" style="height: 60vh"></a>
+		</dl>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>A screenshot of "filter by New Wave"</dt>
+			<a href="images/hw_player/filtered_by_wave.png"><img src="images/hw_player/filtered_by_wave.png" style="height: 60vh"></a>
+		</dl>
+	</section>
+	<section><h3>Advanced Task</h3>
+		<dl class="fa">
+			<dt>You can attach a <code>data-track_lenght</code> attribute for each track.</dt>
+			<dt>And display the <span class="note">total play time</span> of the current tracks</dt>
+		</dl>
+	</section>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

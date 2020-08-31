@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple music player</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.player ul{
+			border: 1px solid red;
+			list-style-type: none;
+		}
+		.player ul li{
+			border: 1px solid blue;
+		}
+		.player ul>li:hover{
+			cursor: pointer;
+		}
+
+		.player ul li>i{
+			font-size: .8em;
+			margin-right: .5em;
+			color: #00FFDD;
+		}
+		.output{
+			display: block;
+			border: 2px groove #00FFDD;
+			padding: .5em;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li><a href="#"></a></li>
+		</ul>
+	</header>
+	<main>
+		<div class="player">
+			<h2>Select track:</h2>
+			<ul>
+				<li><i class="fa fa-play"></i>Track 1</li>
+				<li><i class="fa fa-play"></i>Track 2</li>
+				<li><i class="fa fa-play"></i>Track 3</li>
+				<li><i class="fa fa-play"></i>Track 4</li>
+				<li><i class="fa fa-play"></i>Track 5</li>
+				<li><i class="fa fa-play"></i>Track 6</li>
+				<li><i class="fa fa-play"></i>Track 7</li>
+				<li><i class="fa fa-play"></i>Track 8</li>
+				<li><i class="fa fa-play"></i>Track 9</li>
+				<li><i class="fa fa-play"></i>Track 10</li>
+				<li><i class="fa fa-play"></i>Track 11</li>
+				<li><i class="fa fa-play"></i>Track 12</li>
+			</ul>
+			<div class="output">playing track</div>
+		</div>
+	</main>
+	<script type="text/javascript">
+		var DOMcache = {
+			"ulNode" : document.querySelector('.player ul'),
+			"outputNode" : document.querySelector('.output')
+		}
+
+		function onUlClick(e){
+			DOMcache.outputNode.innerText = e.target.innerText;
+		}
+
+		DOMcache.ulNode.addEventListener('click', onUlClick)
+
+
+	</script>
+</body>
+</html>

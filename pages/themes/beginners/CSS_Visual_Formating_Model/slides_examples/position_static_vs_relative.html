@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>slides_examples.html</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/tomorrow-night-eighties.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/codepen-embed.min.css"> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/languages/css.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/lessons/code_preview.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css">
-   <!--  <link rel="shortcut icon" href="/images/WebDesignDourseLogo_16_16.png"/> -->
+    <meta charset="utf-8">
+    <title>Static vs Relative</title>
+    <style type="text/css">
+        /* eye-friendly CSS */
+        .left{
+            float: left;
+            width: 50vw;
+            box-sizing: border-box;
+            border-right: 1px dotted #999;
+        }
+        .right{
+            float: right;
+        }
+        .wrap .block1, .wrap .block2, .wrap .block3{
+            width: 200px;
+            height: 200px;
+            border:  5px solid #333;
+        }
+        .wrap>.block1{
+            background: #FFAAAA;
+        }
+        .wrap>.block2{
+            background: #AAFFAA;
+        }
+        .wrap>.block3{
+            background: #AAAAFF;
+        }
+        /* real CSS */
+        .static >.block2{
+            /* position: static is default */
+            top: 50px; left: 50px;
+        }
+        .relative >.block2{
+            position: relative;
+            top: 50px; left: 50px;
+        }
+    </style>
 </head>
 <body>
-    <div class="page">
-        <section class="left">
-            <h2>Код:</h2>
-            <pre><code rel="CSS">
-                <div class="tab5">
-
-                </div>
-            </code></pre>
-            <pre><code rel="HTML">
-                <div class="tab5">
-
-                </div>
-            </code></pre>
-            </section>
-        <section class="right">
-            <h2>Резултат:</h2>
-            <iframe class="stretch" class="" src="type_selectors–famous_quotes.html"></iframe>
-        </section>
+    <div class="static wrap  left">
+        <h2>Блок 2 е позициониран статично (дефолт)</h2>
+        <div class="block1">First block</div>
+        <div class="block2">Second block</div>
+        <div class="block3">Third block</div>
     </div>
+    <div class="relative wrap right">
+        <h2>Блок 2 е позициониран релативно.</h2>
+        <div class="block1">First block</div>
+        <div class="block2">Second block</div>
+        <div class="block3">Third block</div>
+    </div>
+
 </body>
 </html>

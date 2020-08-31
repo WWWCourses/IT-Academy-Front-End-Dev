@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>grid_basic_properties</title>
+	<style type="text/css">
+		.grid_container{
+			display: grid;
+
+			/*define the size of the column tracks in CSS unit*/
+			/* grid-template-columns: 33% 33% 33%; */
+
+			/*define the size of the column tracks in fr (fraction) unit*/
+			/* grid-template-columns: 1fr 1fr 1fr; */
+
+			/*define the size of the column tracks in mixed units*/
+			/* grid-template-columns: 400px 1fr 1fr; */
+
+			/*define the size of the column tracks in repeated fragment of the track list*/
+			/* grid-template-columns: repeat(3,1fr); */
+
+			/*define grid rows*/
+			/* grid-template-rows: repeat(3,1fr); */
+
+			/*define the Gap*/
+			column-gap: 1em;
+			row-gap: 1em;
+
+		}
+		/*.grid_container div:nth-child(1){
+			  grid-column-start: 1;
+			  grid-column-end: 4;
+			  grid-row-start: 1;
+			  grid-row-end: 2;
+			  height: 5em;
+		}
+		.grid_container div:nth-child(5){
+			  grid-column-start: 1;
+			  grid-column-end: 4;
+			  grid-row-start: 3;
+			  grid-row-end: 4;
+		}*/
+
+		.grid_container div{
+			/*all grid container children are considered as grid-items, even the text nodes!*/
+			border: 1px solid	 red;
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="grid_container">
+		<div>One</div>
+		<div>Two</div>
+		<div>Three - a lot of stuff happens here: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div>Four</div>
+		<div>Five</div>
+	</div>
+	<h2>Out of grid</h2>
+</body>
+</html>

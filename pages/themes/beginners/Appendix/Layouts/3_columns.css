@@ -1,0 +1,32 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+header{
+	height: 10vh;
+	background: #333;
+}
+footer{
+	height: 10vh;
+	background: #333;
+}
+main{
+	height: 80vh;
+}
+.col{
+	float: left;
+	height: 100%;
+	width: 30vw;
+}
+.left{
+	left: 0;
+	background: yellow;
+}
+.center{
+	left: 30vw;
+	background: orange;
+}
+.right{
+	left: 60vw;
+	background: green;
+}

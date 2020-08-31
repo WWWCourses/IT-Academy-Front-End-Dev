@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleCarousel</title>
+    <style type="text/css">
+    	#images{
+		  display: block;
+		  margin: 1em 0;
+		}
+    </style>
+</head>
+<body>
+	<button onclick="prevImage();">Previous image </button>
+	<button onclick="nextImage();">Next image </button>
+	<img id="images" src="">
+</body>
+<script type="text/javascript">
+	var images = [
+	    'http://lorempixel.com/400/200/animals/1/',
+	    'http://lorempixel.com/400/200/animals/2',
+	    'http://lorempixel.com/400/200/animals/3',
+	];
+	var i = 0;
+
+	var imgNode = document.getElementById("images");
+	var imgSrcNode = imgNode.getAttributeNode("src");
+
+	// първата картинка се зарежда при зареждане на страницата:
+	imgSrcNode.value = images[i];
+
+	function nextImage(){
+		// увеличаваме брояча i на масива images
+		// когато надхвърли броя на елементите, започва от 0:
+		i = i + 1 < images.length ? i+1 : 0;
+		// съшото нещо можем да направим чрез делене по модул
+		// i = (i+1) % images.length;
+		console.log("i=", i);
+
+		imgSrcNode.value = images[i];
+ 	}
+
+ 	function prevImage(){
+ 		// намаляваме брояча i на масива images:
+ 		// когато стане < 0, му задаваме последния индекс на масива:
+ 		i = i - 1 >= 0 ? i-1 : images.length-1;
+ 		console.log("i=", i);
+		imgSrcNode.value = images[i];
+
+ 	}
+</script>
+</html>

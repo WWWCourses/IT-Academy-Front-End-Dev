@@ -1,0 +1,30 @@
+.box {
+  width: 370px;
+  float: none;
+  border: 1px solid red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 375px){
+  .box {
+    width: 100%;
+    float: none;
+    background: green;
+  }
+}
+@media (min-width: 375px) and (max-width: 812px) {
+  .box {
+    width: 33%;
+    float: left;
+    background: blue;
+  }
+}
+
+@media (min-width: 812px) {
+  .box {
+    width: 30%;
+    float: left;
+  }
+}
+/*# sourceMappingURL=media_test.css.map */

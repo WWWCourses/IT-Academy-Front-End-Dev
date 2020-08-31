@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>userWelcomeUpponAge</title>
+    <style type="text/css">
+        form.test{
+            width: 21em;
+            margin: 2em auto 0 auto;
+        /*  border: 1px solid blue; */
+        }
+        .form-row {
+            margin: .5em 0;
+        }
+
+        .form-row>label {
+            display: inline-block;
+            width: 7em;
+        }
+
+        .form-row>input {
+            display: inline-block;
+            font-size: inherit;
+            width: 13em;
+        }
+
+        .test button {
+            font-size: inherit;
+            width: 20.5em;
+            height: 2.4em;
+        }
+
+        #output {
+            margin: 2em 0 0 0;
+            font-size: 2em;
+            text-align: center;
+            color: #FF9933;
+        }
+
+        #output:before {
+            content: "OUTPUT:";
+            display: block;
+            margin: 0 0 1em 0;
+            font-style: italic;
+            color: #666;
+            border-bottom: .2em double #666;
+        }
+    </style>
+    <!-- <script type="text/javascript" src="https://rawgit.com/WWWCourses../../../../gh-pages/code/modules/getUserInput.js"></script> -->
+
+</head>
+<body>
+    <form class="test">
+        <div class="form-row">
+            <label for="uname">Your name:</label>
+            <input type="text" name="uname" id="uname">
+        </div>
+        <div class="form-row">
+            <label for="uage">Your age:</label>
+            <input type="number" name="uage" id="uage">
+        </div>
+        <button id="submit" type="button" onclick="checkUserAge()">Go</button>
+    </form>
+    <div id="output"></div>
+
+
+    <script type="text/javascript" src="getUserInput.js"></script>
+</body>
+
+</html>

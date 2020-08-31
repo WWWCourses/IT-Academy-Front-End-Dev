@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuerySmoothScroller</title>
+    <style type="text/css">
+    	body,h1,p{
+    		margin: 0;
+    	}
+    	header{
+    		position: fixed;
+    		top: 0; left: 0; right: 0;
+    		height: 20vh;
+    		text-align: center;
+    		padding: 1em 0 0 0;
+    		background: #999;
+    		z-index: 1;
+    		box-sizing: border-box;
+    	}
+    	header>nav{
+    		position: absolute;
+    		bottom: 0; left: 0; right: 0;
+    		height: 3em;
+    		padding: 1em 1em 0 0;
+    		background: #333;
+    		box-sizing: border-box;
+    	}
+    	header>nav:after{
+    		content: "";
+    		display: block;
+    		clear: both;
+    	}
+    	header>nav>a{
+    		display: block;
+    		float: left;
+    		width: 3em;
+    		color: #FFF;
+    	}
+
+    	main{
+    		height: 80vh;
+    		margin-top: 20vh;
+    	}
+    	main>section.articles{
+    		/*border: 5px solid yellow;
+    		box-sizing: border-box;*/
+    		height: 100%;
+    	}
+    	main>section.articles>article{
+    		height: 100%;
+    		padding: 1em;
+    		color: #FFF;
+    		transition: 1s;
+    		opacity: 0.5;
+    		box-sizing: border-box;
+    	}
+    	main>section.articles>article:focus{
+    		opacity: 1;
+    		outline: none;
+    	}
+
+    	main>section.articles>article:nth-child(1){background: hsla(0, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(2){background: hsla(45, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(3){background: hsla(90, 60%, 80%, 0.9)}
+    	main>section.articles>article:nth-child(4){background: hsla(135, 60%, 70%, 0.9)}
+    	main>section.articles>article:nth-child(5){background: hsla(180, 60%, 70%, 0.9)}
+    </style>
+</head>
+<body>
+	<header>
+		<h1>ScrollingWithBookmarkLinks</h1>
+		<nav id="content">
+			<a href="#page1">page1</a>
+			<a href="#page2">page2</a>
+			<a href="#page3">page3</a>
+			<a href="#page4">page4</a>
+			<a href="#page5">page5</a>
+		</nav>
+	</header>
+	<main>
+		<section class="articles">
+			<article id="page1" tabindex="-1">
+				<h1>Article 1</h1>
+				<p>some content</p>
+			</article>
+			<article id="page2" tabindex="-1">
+				<h1>Article 2</h1>
+				<p>some content</p>
+			</article>
+			<article id="page3" tabindex="-1">
+				<h1>Article 3</h1>
+				<p>some content</p>
+			</article>
+			<article id="page4" tabindex="-1">
+				<p>some content</p>
+				<h1>Article 4</h1>
+				<p>some content</p>
+			</article>
+			<article id="page5" tabindex="-1">
+				<h1>Article 5</h1>
+				<p>some content</p>
+			</article>
+		</section>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all nav links
+		  $("nav a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      let topOffset = $(hash).offset().top - $('main')[0].offsetTop;
+
+		      $('html, body').animate({
+		        scrollTop: topOffset
+		      }, 900, function(){
+			      // Add hash (#) to URL when done scrolling (default click behavior)
+			      // window.location.hash = hash;
+
+			      // do not add hash in URL, but still keep browsing history
+			      history.pushState(null, document.title, window.location.pathname+window.location.search);
+		      });
+		    } // End if
+		  });
+		});
+	</script>
+</body>
+</html>

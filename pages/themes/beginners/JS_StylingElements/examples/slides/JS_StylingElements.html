@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examples - JS_StylingElements</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<style type="text/css">		
+		/*.test{
+			border: 1px solid #99FF00;
+		}*/
+	</style>
+</head>
+<body>
+	<p class="test" style="color: #00B4FD; font-size: 2em;">Paragraph 1</p>
+
+	<script type="text/javascript">
+		var pNode = document.querySelector(".test");
+
+		var computedStyleObj = window.getComputedStyle( pNode );
+		console.dir(computedStyleObj);
+	</script>
+</body>
+</html>

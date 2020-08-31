@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Centre absolute div (both dimensions)</title>
+    <style type="text/css">
+        .container{
+            position: relative; /* any position, but not static, do the trick */
+
+            width: 200px;
+            height: 200px;
+            background: #99FF99;
+        }
+        .centered{
+            position: absolute;     /* this is what we want */
+            top:  50%; left: 50%;   /* this do the trick */
+            transform: translate(-50%, -50%); /* this do the trick */
+
+            width: 100px;
+            height: 100px;
+            background: #9999FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to centre an absolute element in a container?</h1>
+    <h2>Vertically and Horizontally</h2>
+    <div class="container">
+        <div class="centered"></div>
+    </div>
+</body>
+</html>

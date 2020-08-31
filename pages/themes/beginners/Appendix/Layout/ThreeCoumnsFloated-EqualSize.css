@@ -1,0 +1,79 @@
+/*simple reset*/
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+/*Основните блокове в страницата*/
+header{
+	height: 10%; /*поддържа се от повече браузъри, в сравнение с vUnits*/	
+	font-size: 2em;	
+	text-align: center;	
+	background: #666;
+	color: #EEE;	
+	box-shadow: 0 5px 20px -5px #000; /*сянката е само долу*/	
+}
+footer{	
+	font-size: 2em;
+	padding: 1em;
+	text-align: center;
+	vertical-align: middle;
+	background: #CCC;
+	color: #333;
+	box-shadow: 0 -5px 20px -5px #666; /*сянката е само горе*/
+}
+main{
+	/*за да бъде фона на всяка колона висок, колкото main*/
+	position: relative;	
+}
+
+
+/*Оформление на колоните*/
+main>.left, main>.center, main>.right{
+	float: left;	
+	padding: 1em;
+	box-sizing: border-box;		
+}
+/*За да направим колоните с еднаква височина, то ще поставим под всяка колона псевдо елемент (позициониран абсолютно спрямо main) за фон, който ще бъде с височина колкото main елмента*/
+main>.left, main>.left:before{	
+	/* трябва да изпозлваме проценти, а не vw, тъй като вертикалния скрол, който се появява заема пространство от viewporta-а. При широчина, зададена в %, скрола не се включва. */
+	width: 20%; 
+}
+main>.center, main>.center:before{
+	width: 60%;
+}
+main>.right, main>.right:before{
+	width: 20%;
+}
+
+/*Фонът под колоните (псевдо-елемента) .*/
+main>.left:before, main>.center:before, main>.right:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; bottom: 0;	
+	z-index: -1;
+	border-left: 1px dotted #999;
+	box-sizing: border-box;
+}
+main>.left:before{
+	background: #FBFFDD;
+	left: 0;
+}
+main>.center:before{
+	background: #DDFFE5;
+	left: 20%;
+}
+main>.right:before{
+	background: #DDFCFF;
+	left: 80%;
+}
+
+
+/*други класове*/
+.clear-after:after{
+	content: "";
+  	display: block;
+  	clear: both;
+	overflow: auto;
+}

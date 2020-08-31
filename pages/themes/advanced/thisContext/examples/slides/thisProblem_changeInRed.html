@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demos|"this" context</title>
+    <style>
+        .button{
+            display: inline-block;
+            width: 5em;
+            margin: 1em;
+            text-align: center;
+            padding: 1em;
+            background: gray;
+            border: .2em solid #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="button  b1">button 1</div>
+    <div class="button  b2">button 1</div>
+
+
+<script>
+    const buttons = document.querySelectorAll('.button');
+
+    const changeInRed = function () {
+        this.style.background = "red";
+    }
+
+
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+
+        // init click count for each button:
+        button.clickCount = 0;
+
+        button.addEventListener('click', function () {
+            // increment counter for each button:
+            button.clickCount++;
+
+            button.innerHTML = button.clickCount;
+
+            if(button.clickCount>5){
+                changeInRed();
+            }
+        })
+    }
+</script>
+</body>
+</html>

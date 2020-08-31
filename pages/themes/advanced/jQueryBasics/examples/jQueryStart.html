@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Start</title>
+	<!-- include jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+
+</head>
+<body>
+	<button id="btn">Click me</button>
+	<section class="selectorsDemo">
+		<div id="vip">#vip</div>
+		<div class="red big">.red and .big</div>
+		<div class="red">.red</div>
+		<div title="tooltip">title="tooltip"</div>
+
+	</section>
+	<script>
+
+		$("#btn").click(function( event ) {
+			// console.dir($('.red'));
+			$('.red').css("background-color", "red");
+		});
+
+	</script>
+</body>
+</html>

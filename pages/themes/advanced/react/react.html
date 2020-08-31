@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>react</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#react" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>React - the Facebook's library for building user interfaces.</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>React overview and basic concepts</h1></section>
+<section><h2>React overview and basic concepts</h2>
+	<section><h3>What is React</h3>
+		<dl class="fa">
+			<dt>React is <span class="note">a view library</span>, not (yet another)SPA framework</dt>
+			<dt>It only enables you to render components as viewable elements in a browser.</dt>
+			<dt class="note">The view of your app is a hierarchy of <strong>composable components</strong>.</dt>
+			<dt>React introduce the concept of <span class="note">Virtual DOM</span>.</dt>
+			<dt>Yet the whole ecosystem around React makes it possible, and incrementally easy, to build SPA</dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="50"><h1>Virtual DOM</h1></section>
+<section><h2>Virtual DOM</h2>
+	<section><h3>The problem with (real) DOM</h3>
+		<dl class="fa">
+			<dt class="note">DOM manipulations are expensive</dt>
+			<dt>DOM API are not equally supported and understood the same in different user agents</dt>
+			<dt>Keeping track of previous DOM state is difficult</dt>
+		</dl>
+	</section>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>Virtual DOM is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM</dt>
+			<dt>Virtual DOM provides a <span class="note">declarative</span> way of representing the DOM</dt>
+			<dd>It abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app.</dd>
+			<dd>Virtual DOM is lightweight and detached from browser-specific implementation details</dd>
+		</dl>
+	</section>
+	<section><h3>VDOM => DOM</h3>
+		<a href="images/react_virtual_dom.png"><img src="images/react_virtual_dom.png"></a>
+	</section>
+</section>
+
+
+<section data-min="5"><h1>Write your first react app</h1></section>
+<section><h2>Write your first react app</h2>
+  <section><h3>The simplest "hello world" react app, using CDN</h3>
+    <dl class="fa">
+      <dt>React is just a library, so to get started simple, it's enough only to include it and use it</dt>
+    </dl>
+    <pre><code rel="helloWorld.html" class="html">
+      &lt;head&gt;
+        &lt;title&gt;Simplest React App&lt;/title&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/react@latest/umd/react.production.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+          &quot;use strict&quot;;
+          ReactDOM.render(
+            React.createElement(&quot;h1&quot;, null, &quot;Hello, world!&quot;),
+            document.getElementById('root')
+          );
+        &lt;/script&gt;
+      &lt;/body&gt;
+    </code></pre>
+  </section>
+  <section><h3>The simplest "hello world" react app, using npm</h3>
+    <pre><code rel="Terminal" class="bash">
+      # create the project folder
+      mkdir simplest-react-app
+
+      # go into project folder
+      cd simplest-react-app/
+
+      # initialise a new node project
+      npm init -y
+
+      # install react
+      npm install react react-dom
+    </code></pre>
+  </section>
+</section>
+
+<section data-min="5"><h1>create-react-app cli</h1></section>
+<section><h2>create-react-app cli</h2>
+  <section><h3>Get familiar with create-react-app cli</h3>
+    <dl class="fa">
+      <dt>When learning react is convinient to bootstrap your application with <code>create-react-app</code></dt>
+      <dt>It’s an opinionated yet zero-configuration starter kit for React introduced by Facebook in 2016.</dt>
+      <dt><code>create-react-app</code> allows you to abstract from the the tooling and configuration, and to focus to the application implementation</dt>
+    </dl>
+  </section>
+  <section><h3>The simplest "hello world" react app, using create-react-app</h3>
+    <dl class="fa">
+      <dt><a href="https://facebook.github.io/create-react-app/docs/getting-started">create-react-app - getting-started</a></dt>
+    </dl>
+    <pre><code rel="Terminal" class="bash">
+      npx create-react-app hello-world
+
+      # and follow the instructions
+    </code></pre>
+  </section>
+</section>
+
+<!-- <section data-min="5"><h1>Build a React App from scratch</h1></section>
+<section><h2>Build a React App from scratch</h2>
+	<section><h3>Without create-react-app</h3>
+		<pre><code rel="JS" class="js">
+			# init the app:
+			npm init
+
+			# install webpack:
+			npm install --save-dev webpack webpack-dev-server
+
+		</code></pre>
+	</section>
+</section> -->
+
+
+<section data-min="50"><h1>Live Demo</h1></section>
+<section><h2>Live Demo</h2>
+	<section><h3>Todo App</h3>
+		<pre><code rel="Terminal" class="bash">
+			# clone the demo code to your computer:
+			git clone https://github.com/WWWCourses/react-todo-app
+
+			# navigate to project folder:
+			cd react-todo-app
+
+			# install node modules:
+			npm install
+
+			# start the app:
+			npm start
+		</code></pre>
+	</section>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			width: 1280,
+			height: 1024,
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

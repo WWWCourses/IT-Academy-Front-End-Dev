@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>data_attributes</title>
+    <style type="text/css">
+        .menu{
+            width: 28em;
+        }
+    	ol[data-food_type="main"]{
+    		border: 1px solid red;
+    	}
+    	ol[data-food_type="deserts"]{
+    		border: 1px solid blue;
+    	}
+
+    	li[data-price]{
+    		position: relative;
+    	}
+    	li[data-price]:hover{
+    		background: #FFE8B8;
+    	}
+    	li[data-price]:hover:after{
+    		position: absolute;
+    		top:0; right: 0;
+    		display: block;
+    		content: " price " attr(data-price);
+    	}
+    </style>
+</head>
+<body>
+	<section class="menu">
+		<h2>Resutrant Menu</h2>
+		<h3>Main Courses</h3>
+		<ol data-food_type="main">
+			<li data-price="23.00">Short Ribs Braised with Mushrooms</li>
+			<li data-price="31.20">Greek Lemon Chicken and Potatoes</li>
+			<li data-price="35.50">Chef John's Italian Meatballs</li>
+			<li data-price="18.80">Pizza a la Sardinia</li>
+		</ol>
+		<h3>Deserts</h3>
+		<ol data-food_type="deserts">
+			<li data-price="13.50">Holiday Sugar Cookie Cups</li>
+			<li data-price="12.00">Easy Baked Alaska</li>
+			<li data-price="16.10">Slow-Cooker Caramel-Toffee Bread Pudding</li>
+		</ol>
+	</section>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

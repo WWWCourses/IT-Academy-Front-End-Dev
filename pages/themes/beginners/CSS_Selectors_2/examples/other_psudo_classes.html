@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>other_psudo_classes</title>
+    <style type="text/css">
+        /* селектира първия параграф в даден елемент */
+        p:nth-child(1){
+            color: red;
+        }
+        /* селектира всички нечетни параграфи */
+        p:nth-child(2n+1){
+            color: green;
+        }
+        /* селектира всички <input type="radio"> елементи, когато те са маркирани от потребителя */
+        input[type="radio"]:checked{
+            width: 50px;
+            height: 50px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+   <div class="paragraphs">
+       <p>Параграф 1</p>
+       <p>Параграф 2</p>
+       <p>Параграф 3</p>
+       <p>Параграф 4</p>
+   </div>
+   <div class="checked">
+       <input id="confirm1" type="radio" name="confirm"><label for="confirm1">ДА</label>
+       <input id="confirm2" type="radio" name="confirm"><label for="confirm2">НЕ</label>
+   </div>
+</body>
+</html>

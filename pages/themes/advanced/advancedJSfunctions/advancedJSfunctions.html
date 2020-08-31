@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>advancedJSfunctions</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#advancedJSfunctions" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Advanced JavaScript Functions</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+			<div class="LI-profile-badge"	data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section><h1>Function Declaration vs. <br>Function Expression vs. <br>Function Constructor</h1></section>
+<section><h2>Function Declaration vs. Function Expression vs. Function Constructor</h2>
+	<section><h3>Function declaration</h3>
+		<pre><code rel="JS">
+			function add(x,y){
+				return x+y
+			}
+		</code></pre>
+		<dl class="fa">
+			<dt>Semicolons are <span class="note">not required</span> after function declaration (though they did not hurt.)</dt>
+		</dl>
+	</section>
+	<section><h3>Function expression</h3>
+		<pre><code rel="JS">
+			var add = function(x,y){
+				return x+y
+			};
+		</code></pre>
+		<dl class="fa">
+			<dt>Semicolons <span class="note">are required</span> after function expressions!</dt>
+			<dt>function name can be omitted in function expressions to create anonymous function.</dt>
+			<dt>a <span class="note">function expression can be immediately invoked</span> (i.e. as IIFE)</dt>
+		</dl>
+	</section>
+	<section><h3>Function expression</h3>
+		<pre><code rel="JS">
+			var f = function add(x,y){
+				return x+y
+			};
+
+			console.log("f(2,3):", f(2,3));		// f(2,3):5
+			console.log("add(2,3):", add(2,3)); // ReferenceError: add is not defined
+		</code></pre>
+		<dl class="fa">
+			<dt>A function name can be given in function expression. But the function name is scoped to function body! Could be <span class="note">useful for recursion or debugging purposes</span>.</dt>
+		</dl>
+	</section>
+	<section><h3>Expression vs. declaration</h3>
+		<dl class="fa">
+			<dt><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a></dt>
+			<dd>Function declarations are hoisted</dd>
+			<dd>Function expressions are <span class="note">not</span>	hoisted</dd>
+			<dt class="note">It is a good practise always to declare first the variables (including the functions) first, before using them.</dt>
+			<dd>Following this practise you will not have to wander what is hoisted and what is not.</dd>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Function constructor</h3>
+		<pre><code rel="JS" class="js">
+			const sumLog = new Function('a', 'b', 'console.log(`a + b = ${a+b}`)');
+
+			sumLog(2,4);
+		</code></pre>
+		<dl class="fa">
+			<dt class="note">Do not use this way to create a function (unless you know exactly why you need it)!</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function">Function Constructor @MDN</a></dt>
+		</dl>
+	</section>
+	<!-- <section><h3>Why not to use the Function constructor</h3>
+	<dl class="fa">
+		<dt>Parsing</dt>
+		<dd>Functions defined by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function constructor</a> are parsed each time the constructor is called.</dd>
+		<dd>Functions defined by function expressions and function declarations are parsed only once.</dd>
+		<dt>Closure</dt>
+		<dd>Functions created by the Function constructor do not create closures.</dd>
+		<dd>Functions defined by function expressions and function declarations create closure to their creation context.</dd>
+	</dl>
+	</section> -->
+	<section><h3 class="advanced">Conditional function definition</h3>
+		<p>the strict ES2015 behaviour</p>
+		<pre><code rel="JS">
+			if (0){
+				function add(x,y){
+					x+y;
+				};
+			};
+
+			console.log("add:", add); // undefined
+		</code></pre>
+		<p class="note">Not browser compatible! Some older browser would defined the function.</p>
+	</section>
+	<section><h3 class="advanced">Conditional function definition</h3>
+		<p>Safer way:</p>
+		<pre><code rel="JS">
+			var add;
+			if (0){
+				add = function(x,y){
+					x+y;
+				};
+			};
+
+			console.log("add:", add);
+		</code></pre>
+	</section>
+</section>
+
+<section><h1>Scope</h1></section>
+<section><h2>Scope</h2>
+	<section>
+		<dl class="fa">
+			<dt>The context in which values and expressions are "visible," or can be referenced.</dt>
+			<dt>Scopes can be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.</dt>
+			<dt class="note">Each function in JavaScript creates its own scope!</dt>
+		</dl>
+	</section>
+	<section>
+		<img src="images/Scope1.png">
+		<dl class="fa">
+			<dt>Inner Scope can use the names in Outer Scope</dt>
+			<dt>Outer Scope <span class="note">can not</span> see the names defined in Inner Scope</dt>
+			<dt>If same name is defined in both Scopes, then the Inner Scope name <span class="note">shadows</span> the Outer Scope name</dt>
+		</dl>
+	</section>
+	<section><h3>Example</h3>
+		<pre><code rel="JS" class="js">
+			let x = 1, y=1; // x and y in global scope
+
+			function foo(){
+				let x = 2, y=2;  // x and y in foo scope
+
+				function bar(){
+					let y = 3;  // y in bar scope
+					x = 3; 		// uses x in foo scope
+				}
+
+				bar();
+				console.log(`x,y in foo: ${x}, ${y}`);
+			}
+
+			foo();
+			console.log(`x in gloabl: ${x}, ${y}`);
+
+			// x,y in foo: 3, 2
+			// x in gloabl: 1, 1
+		</code></pre>
+	</section>
+	<section><h3>References</h3>
+		<dl class="fa">
+			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#Scope"><span class="note">Scope notes</span> in JS_Beginners Course</a></dt>
+			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#let_const_var"><span class="note">let vs. const vs. var</span> in JS_Beginners Course</a></dt>
+			<dt><a href="/pages/themes/beginners/JS_Functions/JS_Functions.html#function_basics"><span class="note">Funcitons basics</span> in JS_Beginners Course</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section><h1>Functions as first-class citizens</h1></section>
+<section><h2>Functions as first-class citizens</h2>
+	<section>
+		<p>From its creation back in 1995, JavaScript supports function as <span class="note">first-class</span> citizens (objects)</p>
+	</section>
+	<section>
+		<blockquote cite="http://javascript.crockford.com/javascript.html">JavaScript's C-like syntax, including curly braces and the clunky for statement, makes it appear to be an ordinary procedural language. This is misleading because <span class="note"> JavaScript has more in common with functional languages like Lisp or Scheme</span> than with C or Java</blockquote>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>What that means?</dt>
+			<dd>A function can be treated as object, expression or statement.</dd>
+			<dd>A function can be passed as argument to other functions.</dd>
+			<dd>A function can be the return value of the <code>return</code> operator.</dd>
+		</dl>
+	</section>
+	<section><h3>example - function passed as argument</h3>
+		<pre><code rel="JS" class="js">
+			function callback() {
+				console.log(`I will be called!`);
+			}
+
+			function caller( f ){
+				console.log(`This is the CALLER`);
+				f();
+			}
+
+			caller( callback );
+
+			// This is the CALLER
+			// I will be called!
+		</code></pre>
+	</section>
+	<section><h3>example - function passed as argument</h3>
+		<pre><code rel="JS">
+			var greeting = function(){
+				alert("Welcome");
+			}
+
+			// SetTimeout will call the greeting after 4s
+			setTimeout(greeting, 4000);
+		</code></pre>
+	</section>
+	<section><h3>example</h3>
+		<p>function as return value</p>
+		<pre><code rel="JS">
+			var greeting = function(name){
+				return function(){
+					alert("Welcome, "+ name);
+				}
+			}
+
+			setTimeout(greeting("iva"), 4000);
+		</code></pre>
+	</section>
+	<section><h3>example</h3>
+		<p class="advanced"><a href="https://en.wikipedia.org/wiki/Currying">currying</a></p>
+		<pre><code rel="JS">
+			var sum = function(x){
+				return function(y){
+					return x+y;
+				}
+			}
+			console.log( "sum:", sum(2)(3) );
+		</code></pre>
+	</section>
+	<section><h3>Pros and Cons</h3>
+		<dl class="fa">
+			<dt>Pros</dt>
+			<dd>The new (ES2015) arrow functions syntax make JavaScript a language suited for lamdba-calculus (functional programming paradigm)</dd>
+			<dt>Cons</dt>
+			<dd>Not intuitive for persons used with classical procedural languages.</dd>
+		</dl>
+	</section>
+	<section><h3>test yourself</h3>
+		<iframe	src="https://www.youtube.com/embed/hRJrp17WnOE?autoplay=0" frameborder="0" allowfullscreen></iframe>
+	</section>
+</section>
+
+<section><h1>Immediately-invoked function expressions (IIFE)</h1></section>
+<section><h2>Immediately-invoked function expressions (IIFE)</h2>
+		<section><h3><abbr>IIFE</abbr><dfn id="IIFE"><span>Immediately</span><span>Invoked</span><span>Function</span><span>Expression</span></dfn></h3>
+			<dl class="fa">
+				<dt>IIFE is a pattern which allows to <span class="note">encapsulate</span> our program, so that it will not export any global variable.</dt>
+				<dt>When a function will be used only once (usually to scope local variables), we do not need to define it first.</dt>
+				<dt>The definition itself will expose a global variable (function name).</dt>
+				<dt>It's more efficient to invoke it as an anonymous function.</dt>
+			</dl>
+		</section>
+		<section>
+			<pre><code rel="JS">
+				( function(){} )();
+			</code></pre>
+			<dl class="fa">
+				<dt><code class="note">function(){}</code> is an anonymous function <span class="note">declaration</span>!</dt>
+				<dt><code class="note">( function(){} )</code> is an anonymous function <span class="note">expression</span>!</dt>
+				<dt>We can only invoke <span class="note">function expressions</span>.</dt>
+			</dl>
+		</section>
+		<section>
+			<pre><code rel="JS">
+				(function(x,y){
+					console.log( x+y );
+				})(2,3);
+			</code></pre>
+			<p>is the same as</p>
+			<pre><code rel="JS">
+				(function(x,y){
+					console.log( x+y );
+				}(2,3));
+			</code></pre>
+		</section>
+		<section><h3>Notes on IIFE and ES6</h3>
+			<dl class="fa">
+				<dt>After the introduction of <span class="note">block scope</span> in ES6, we can use instead of IIFE, just a block, to encapsulate our program.</dt>
+			</dl>
+			<pre><code rel="JS" class="js">
+				{
+					// if you use only let and const to declare variables,
+					// your program will not export any global variables!
+
+					let x = 2;
+					let y = 3;
+
+					// other code
+				}
+			</code></pre>
+		</section>
+</section>
+
+<section><h1>Closures</h1></section>
+<section><h2>Closures</h2>
+	<section>
+		<dl class="fa">
+			<dt>Allows a function which is executed outside its outer scope, to access the values of these scoped variables.</dt>
+			<dt>In other words, a closure is observed, when an inner function <span class="note">closes over</span> (captures, remembers) the variables from its outer lexical scope when it is called outside that scope.</dt>
+			<dt>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Closures @MDN</a></dt>
+		</dl>
+		<pre><code rel="JS">
+			function outer(){
+				var x = 5;
+				function inner(){
+					console.log(x);
+				}
+
+				return inner;
+			}
+
+			var f = outer();
+			f(); // f can access the local x !
+		</code></pre>
+	</section>
+	<section><h3>Common problem - "no closure in loop"</h3>
+		<pre><code rel="JS">
+			var cats = [];
+
+			for (var i = 0; i < 3; i++) {
+				cats[i] = function(){
+					console.log(`Cat ${i} is ready!`);
+				}
+			}
+
+			cats[0](); //Cat 3 is ready!
+			cats[1](); //Cat 3 is ready!
+			cats[2](); //Cat 3 is ready!
+		</code></pre>
+
+		<p class="note">the value of 'i' in the cats[i] function body is determined when the function is invoked!</p>
+	</section>
+	<section><h3>"closures in loops" - IIFE solution</h3>
+			<pre><code rel="JS">
+				var cats = [];
+
+				for (var i = 0; i < 3; i++) {
+					(function(i){
+						cats[i] = function(){
+							console.log(`Cat ${i} is ready!`);
+						}
+					})(i)
+				}
+
+				cats[0](); //Cat 0 is ready!
+				cats[1](); //Cat 1 is ready!
+				cats[2](); //Cat 2 is ready!
+			</code></pre>
+			<p>The value of i - <span class="note">which is a parameter to the IIFE</span>  is preserved in <code>cats[i]</code> functions, when they are called outside the IIFE scope.</p>
+	</section>
+	<section><h3>"closures in loops" - Factory solution</h3>
+			<pre><code rel="JS">
+					var cats = [];
+
+					function catMaker(i){
+						return function(){
+							console.log(`Cat ${i} is ready!`);
+						}
+					}
+
+					for (var i = 0; i < 3; i++) {
+						cats[i] = catMaker(i);
+					}
+
+					cats[0](); //Cat 0 is ready!
+					cats[1](); //Cat 1 is ready!
+					cats[2](); //Cat 2 is ready!
+			</code></pre>
+	</section>
+	<section><h3>"closures in loops" - "let" solution</h3>
+		<p>Definitely, this is the simplest solution :) </p>
+		<pre><code rel="JS" class="js">
+			var cats = [];
+
+			for (let i = 0; i < 3; i++) {
+				cats[i] = function(){
+					console.log(`Cat ${i} is ready!`);
+				}
+			}
+
+			cats[0](); //Cat 0 is ready!
+			cats[1](); //Cat 1 is ready!
+			cats[2](); //Cat 2 is ready!
+		</code></pre>
+	</section>
+	<section><h3>common problem - "timeout problem"</h3>
+		<pre><code rel="JS">
+			var colors = ["red", "green", "blue"];
+
+			for (var i = 0; i < colors.length; i++) {
+				setTimeout(function(){
+					changeBG("box", colors[i]);
+				}, 1000)
+			}
+
+			function changeBG(id, color){
+				var node = document.getElementById(id);
+				node.style.background = color;
+			}
+		</code></pre>
+	</section>
+	<section><h3>"closures in loops - timeout IIFE fix"</h3>
+		<pre><code rel="JS">
+			var colors = ["red", "green", "blue"];
+
+			for (var i = 0; i < colors.length; i++) {
+				(function(i){
+					setTimeout(function(){
+						changeBG("box", colors[i]);
+					}, 1000*i)
+				})(i);
+			}
+
+			function changeBG(id, color){
+					var node = document.getElementById(id);
+					node.style.background = color;
+			}
+		</code></pre>
+		<p class="note">setTimeout() is invoked immediately 3 times. The delay is for the inner function. If we pass same delay, they will be invoked simultaneously after the delay. So, we need to change the delay, as well, i.e. <code>i*1000</code></p>
+	</section>
+	<section><h3>"closures in loops - timeout separate call fix"</h3>
+			<pre><code rel="JS">
+					var colors = ["red", "green", "blue"];
+
+					for (var i = 0; i < colors.length; i++) {
+							doTimeout(i);
+					}
+
+					function doTimeout(i){
+							setTimeout(function(){
+									changeBG("box", colors[i]);
+							}, i*1000)
+					}
+
+					function changeBG(id, color){
+							var node = document.getElementById(id);
+							node.style.background = color;
+					}
+			</code></pre>
+	</section>
+	<section><h3>Test it!</h3>
+			<iframe height='328' scrolling='no' title='Lab5: All Examples' src='https://codepen.io/ProgressWWWCourses/embed/JNydxy/?height=328&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/JNydxy/'>Lab5: All Examples</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
+			</iframe>
+	</section>
+</section>
+
+<section><h1>Recursion</h1></section>
+<section><h2>Recursion</h2>
+	<section>
+		<dl class="fa">
+			<dt>A recursive function is a function which <span class="note">calls itself</span> (directly or indirectly)</dt>
+			<dt>Each call creates a separate function stack!</dt>
+			<dt>Recursion can be endless if we do not take care when it has to stop!</dt>
+		</dl>
+	</section>
+	<section><h3>Factorial - formula</h3>
+		<pre><code rel="Factoriel Recursive definition">
+			n!=(n-1)!·n
+			1! = 1
+		</code></pre>
+		<p>Reference: <a href="https://bg.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B5%D0%BB">Факториел @wikipedia</a></p>
+	</section>
+	<section><h3>Factorial - recursive demo</h3>
+		<pre><code rel="JS" class="php">
+			function factorial(n)
+			{
+				if (n == 1) {
+					// f(1) = 1 => the END condition
+					return 1;
+				}else {
+					// f(n) = n * f(n-1)
+					return (n * factorial(n - 1));
+				}
+			}
+
+			factorial(3);
+		</code></pre>
+	</section>
+	<section><h3>Factoriel - execution stack diagram</h3>
+		<img src="images/Recursion.png">
+	</section>
+	<section><h3>Factorial - Task</h3>
+		<p>Write down a function which uses the iterative approach (i.e. - loop) to solve the Factorial problem </p>
+	</section>
+
+	<section><h3>Recursive Power Calculation</h3>
+		<pre><code rel="Recursive Formula" data-noescape>
+			base<sup>exp</sup> = base * base<sup>exp - 1</sup>
+			base<sup>0</sup> = 1
+		</code></pre>
+		<pre><code rel="JS">
+			function power(base, exponent) {
+				if (exponent == 0)
+					return 1;
+				else
+					return base * power(base, exponent - 1);
+			}
+
+			console.log(power(2, 10));
+		</code></pre>
+	</section>
+	<section><h3>Traversing the DOM</h3>
+		<iframe height='204' scrolling='no' title='KmvZKv' src='https://codepen.io/ProgressWWWCourses/embed/KmvZKv/?height=204&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ProgressWWWCourses/pen/KmvZKv/'>KmvZKv</a> by Iva E. Popova (<a href='http://codepen.io/ProgressWWWCourses'>@ProgressWWWCourses</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+</section>
+
+
+<section id="Exercises" data-min="5"><h1>Exercises</h1></section>
+<section><h2>Exercises</h2>
+	<section><h3>countEvenNumbers</h3>
+		<script src="https://gist.github.com/WWWCourses/b92e48e75019b01aa1c2dfde37e60ff3.js"></script>
+	</section>
+	<section><h3>generateRandomNumber</h3>
+		<script src="https://gist.github.com/WWWCourses/cd6975404720e4845eecb639249783c8.js"></script>
+	</section>
+	<section><h3>SumEven2DimArrayElements</h3>
+		<!-- <iframe height="300" style="width: 100%;" scrolling="no" title="HW: SumEven2DimArrayElements" src="https://codepen.io/webdesigncourse/embed/mdJRNGX?height=300&theme-id=20230&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+			See the Pen <a href='https://codepen.io/webdesigncourse/pen/mdJRNGX'>HW: SumEven2DimArrayElements</a> by Iva Popova
+			(<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe> -->
+		<script src="https://gist.github.com/WWWCourses/2f79e6fd3b03a8035541efcf00662a24.js"></script>
+	</section>
+	<section><h3>isPalindrome</h3>
+		<!-- <iframe src="https://gist.github.com/a54b54a8dac78744c58181f3b9fb9368" frameborder="0"></iframe> -->
+		<script src="https://gist.github.com/WWWCourses/a54b54a8dac78744c58181f3b9fb9368.js"></script>
+	</section>
+</section>
+
+<!-- <section id="res" data-notes="0min"><h2>Resources</h2>
+	<dl class="fa">
+		<dt><a href="https://www.youtube.com/watch?v=UTEqr0IlFKY">Crockford on JavaScript - Level 7: ECMAScript 5: The New Parts</a></dt>
+	</dl>
+</section> -->
+
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	<p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	<p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END	 #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '	';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo1</title>
+</head>
+<body>
+	<p>Output</p>
+	<button class="test1">Test1</button>
+	<button class="test2">Test2</button>
+	<button class="test3">Test3</button>
+	<script type="text/javascript">
+		let outNode = document.querySelector('p');
+		let ulNode = document.createElement("ul");
+		let btnTest1 = document.querySelector('.test1');
+		let btnTest2 = document.querySelector('.test2');
+		let btnTest3 = document.querySelector('.test3');
+
+		btnTest1.addEventListener('click', test1);
+		btnTest2.addEventListener('click', test2);
+		btnTest3.addEventListener('click', test3);
+
+		let list_items = 10000;
+
+		function createList(list_items){
+			for(let i = 0; i < list_items; i++){
+				let liNode = document.createElement("li");
+				liNode.innerHTML = `Item ${i}`
+				ulNode.appendChild(liNode)
+			}
+
+			document.body.appendChild(ulNode);
+		}
+		createList(list_items)
+
+		function test1(){
+			// SLOW: attach event to each child:
+			console.profile('addEventListenerSSSS_CLASIC');
+			console.time("addEventListenerSSSS_CLASIC Time: ");
+			if(ulNode){
+				let liNodes = ulNode.children;
+
+				console.timeStamp("Classsic FOR Start")
+				for(let i = 0, length1 = liNodes.length; i < length1; i++){
+					liNodes[i].addEventListener("click", function(){
+						outNode.innerHTML = liNodes[i].innerHTML;
+					},false)
+				}
+			}
+			console.timeEnd("addEventListenerSSSS_CLASIC Time: ");
+			console.profileEnd("addEventListenerSSSS_CLASIC");
+		}
+
+
+		function test2(){
+			// FASTER: Event Delegation: attach event only to parent:
+			console.profile('EventDelegation')
+			if(ulNode){
+				console.time("EventDelegation Time: ");
+				ulNode.addEventListener("click", function(e){
+					e.stopPropagation();
+					if(e.target.nodeName === "LI"){
+						outNode.innerHTML = e.target.innerHTML;
+					}
+				},false)
+			}
+			console.timeEnd("EventDelegation Time: ");
+			console.profileEnd('EventDelegation');
+		}
+
+		function test3(){
+			// SLOW: attach event to each child:
+			console.profile('addEventListenerSSSS_Modern')
+			console.time("addEventListenerSSSS_Modern");
+			if(ulNode){
+				let liNodes = ulNode.children;
+
+				[...liNodes].forEach(item => {
+					item.addEventListener("click", () => {
+						outNode.innerHTML = item.innerHTML;
+					})
+				})
+				console.timeEnd("addEventListenerSSSS_Modern");
+				console.profileEnd('addEventListenerSSSS_Modern')
+			}
+		}
+	</script>
+</body>
+</html>

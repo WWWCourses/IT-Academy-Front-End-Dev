@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope & Shadowing</title>
+</head>
+<body>
+<script type="text/javascript">
+	console.log("********** Пример 1 **********");
+	var a=3;
+
+	function foo(a){
+		// тук a засенчва а = 3;
+		console.log("a in foo(): ", a);
+		console.log("a*a = ", a*a);
+	}
+
+	foo(2);
+	console.log("a in global:", a);
+</script>
+</body>
+</html>

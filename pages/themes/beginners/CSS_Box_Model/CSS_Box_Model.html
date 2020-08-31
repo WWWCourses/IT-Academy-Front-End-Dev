@@ -1,241 +1,306 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CSS_Box_Model</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <!-- css & themes include -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/beige.css" id="theme">
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-    <!-- CUSTOM -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css"><!-- TODO: link to master.css here -->
-    <link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/revel.js/common_classes.css">
-    <link rel="stylesheet" type="text/css" href="/IT-Academy-Front-End-Dev/outfit/css/custom_hljs.css">
-    <base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
+		<meta charset="utf-8">
+		<title>CSS_Box_Model</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!-- css & themes include -->
+		<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- CUSTOM -->
+		<link rel="stylesheet" href="../../../../outfit/css/reveal.js.css"><!-- TODO: link to master.css here -->
+		<link rel="stylesheet" href="../../../../outfit/css/revel.js/common_classes.css">
+		<link rel="stylesheet" type="text/css" href="../../../../outfit/css/custom_hljs.css">
+		<base target="_blank">
 </head>
 <body>
-    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-        <a class="home_link" href="../../../agenda/beginners.html#CSS_Box_Model" target="_top"><i class="fa fa-home"></i></a>
-        <div class="footer theme_switch"></div>
-        <div class="slides">
+		<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+				<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#CSS_Box_Model" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+				</div>
+				<div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
 ########################################################
 -->
 <section><h1>CSS - The Box Model</h1>
-    <br><h2>или</h2>
-    <h2>как браузърът интерпретира HTML елементите като кутийки</h2>
+		<br><h2>или</h2>
+		<h2>как браузърът интерпретира HTML елементите като кутийки</h2>
 </section>
 <section data-transition="zoom">
-    <div class="copyright">
-        <div class="note">
-            <p>Created for</p>
-        </div>
-        <div class="company">
-            <a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-            <img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-            </a>
-        </div>
-        <div class="author">
-            <span>Iva E. Popova, 2017,</span>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-        </div>
-    </div>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
 </section>
 
-<section><h2>Какво е The Box Model</h2>
-    <section>
-        <dl class="fa">
-            <dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formating Model)– алгоритъма по който браузера визуализира елементите от страницата.</dt>
-            <dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
-            <dt>Подреждането на кутийките зависи от:</dt>
-            <dd>размера на кутийката</dd>
-            <dd>типа на елемента (блоков, поредов)</dd>
-            <dd>схема за позициониране ( normal, float, absolute)</dd>
-            <dd>връзките между елементите в дървовидната структура на документа (document tree)</dd>
-        </dl>
-        <p>Пример: <a href="slides_examples/DocumentVisualFormatingModel_single.html">DocumentVisualFormatingModel_single.html</a> или в <a href="http://codepen.io/webdesigncourse/pen/gaZaVE">codepen</a></p>
-    </section>
+
+<section><h2>CSS Visual Formatting Model: the Box Model</h2>
+	<section><h3>Какво е The Box Model</h3>
+		<dl class="fa">
+			<dt>Съществен елемент от Визуалния Модел за Форматиране (Visual Formatting Model)– алгоритъма по който браузера визуализира и подрежда елементите от страницата.</dt>
+			<dt>Всеки елемент от дървото на HTML документа се интерпретира като правоъгълна кутийка.</dt>
+		</dl>
+		<p>Пример: <a href="slides_examples/src/DocumentVisualFormatingModel.html">Visual Formatting Model Simplpe Example</a></p>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Изобразяването и подреждането на елементите, най-общо зависи от:</dt>
+			<dd>Размера на кутийката, която представлява елемента.</dd>
+			<dd>Типа на елемента (inline, block)</dd>
+			<dd>Схемата за позициониране ( normal flow/ float /absolute )</dd>
+			<dd>Позицията на елементите в дървовидната структура на документа (document tree)</dd>
+			<dd>Размерът и позицията на viewport-a.</dd>
+		</dl>
+	</section>
 </section>
 <section><h2>Структура на една кутия</h2>
-    <section><h3>Фигура</h3>
-        <img src="images/TheBoxModelFigure.png">
-    </section>
-    <section><h3>Описание</h3>
-        <dl class="fa">
-            <dt><span class="i lightgreen">съдържание (content)</span> - това е съдържанието на самия елемент. Може да е текста между началния и крайния таг или друг елемент.</dt>
-            <dt><span class="i lightgreen">вътрешен отстъп (padding)</span> - това е разстоянието между "ръба" на съдържанието и вътрешната страна на рамката.</dt>
-            <dt><span class="i lightgreen">външен отстъп (margin)</span> - разстоянието от външния ръб на рамката до заобикалящите елементи. За по-кратко ще го наричаме само отстъп.</dt>
-            <dt><span class="i lightgreen">рамка (border)</span> - вътрешния й ръб съвпада с ръба на вътрешния отстъп, а от външния й ръб - започва външния отстъп.</dt>
-        </dl>
-    </section>
+	<section><h3>Фигура</h3>
+		<img src="images/TheBoxModelFigure.png">
+	</section>
+	<section><h3>Описание</h3>
+		<dl class="fa">
+			<dt><span class="i lightgreen">съдържание (content)</span> - това е съдържанието на самия елемент. Може да е текста между началния и крайния таг или друг елемент.</dt>
+			<dt><span class="i lightgreen">вътрешен отстъп (padding)</span> - това е разстоянието между "ръба" на съдържанието и вътрешната страна на рамката.</dt>
+			<dt><span class="i lightgreen">външен отстъп (margin)</span> - разстоянието от външния ръб на рамката до заобикалящите елементи. За по-кратко ще го наричаме само отстъп.</dt>
+			<dt><span class="i lightgreen">рамка (border)</span> - вътрешния й ръб съвпада с ръба на вътрешния отстъп, а от външния й ръб - започва външния отстъп.</dt>
+		</dl>
+	</section>
 </section>
 <section><h2>Как да зададем размери на кутийката?</h2>
-    <section>
-        <dl class="fa">
-            <dt>Свойства: <code>width</code> и <code>height</code></dt>
-            <dt>Задават ширината(width) и височината(height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
-            <dt>Ако желаем в зададените размери браузера да включи вътрешния отстъп и рамката, то трябва да използваме: <code>box-sizing: border-box;</code></dt>
-            <dt>Възможни стойности за width и height:</dt>
-                <dd>Абсолютни (px, pt, cm, ...)</dd>
-                <dd>Относителни (%, em, vh, vw,...)</dd>
-                <dd>Auto (default) – браузера сам изчислява размера.</dd>
-        </dl>
-    </section>
-    <section>
-        <dl class="fa">
-            <dt>Дефинирани са и свойствата min-width, max-width, min-heigh и max-heigth, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
-                <dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: 1.min-width; 2.max-width; 3.width </dt>
-                <dd>За височината е в сила същата приоритетна схема.</dd>
-        </dl>
-    </section>
+	<section>
+		<dl class="fa">
+			<dt>Свойства: <code class="note">width</code> и <code class="note">height</code></dt>
+			<dt>Задават широчината (width) и височината (height) на <span class="i b red">съдържанието</span> за елемент от тип блок.</dt>
+			<dt>Ако желаем в зададените размери браузера да включи вътрешния отстъп и рамката, то трябва да използваме: <code>box-sizing: border-box;</code></dt>
+			<dt>Възможни стойности за width и height:</dt>
+			<dd>Абсолютни (px, pt, cm, ...)</dd>
+			<dd>Относителни (%, em, vh, vw,...)</dd>
+			<dd>Auto (default) – браузера сам изчислява размера.</dd>
+		</dl>
+	</section>
+	<section><h2>пример</h2>
+		<iframe height='300' scrolling='no' title='jBqMzP' src='//codepen.io/webdesigncourse/embed/jBqMzP/?height=300&theme-id=20230&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/jBqMzP/'>jBqMzP</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>Дефинирани са и свойствата <code class="note">min-width</code>, <code class="note">max-width</code>, <code class="note">min-heigh</code> и <code class="note">max-heigth</code>, чрез които по-детайлно можем да ограничим размерите на елемент.</dt>
+			<dt>Когато са зададени едновременно width, min-width и max-width, то приоритета е: </dt>
+			<dd>1.min-width</dd>
+			<dd>2.max-width</dd>
+			<dd>3.width</dd>
+			<dt>За височината е в сила същата приоритетна схема.</dt>
+		</dl>
+	</section>
 </section>
 <section><h2>Как да зададем margin и padding?</h2>
-    <section><h4>За всяка една страна, поотделно:</h4><br>
-        <div class="text_left">
-            <dl class="fa">
-                <dt>Вътрешен отстъп (padding):</dt>
-                    <dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
-                    <dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
-                    <dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
-                    <dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
-            </dl>
-            <hr>
-            <dl class="fa">
-                <dt>Външен отстъп (margin):</dt>
-                    <dd><code>margin-top</code> : горен външен отстъп</dd>
-                    <dd><code>margin-right</code> : десен външен отстъп</dd>
-                    <dd><code>margin-bottom</code> : долен външен отстъп</dd>
-                    <dd><code>margin-left</code> : ляв външен отстъп</dd>
-            </dl>
-        </div>
-    </section>
-    <section><h4>Често използвани обобщени записи:</h4>
-        <dl class="fa">
-            <p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
-            <dt><code>padding: T R B L;</code></dt>
-                <dd>задава стойности за всяка една посока поотделно.</dd>
-                <dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
-            <dt><code>padding: TB RL;</code></dt>
-                <dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
-                <dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
-            <dt>padding: TBRL;</dt>
-                <dd>задава едновременно стойност за всички посоки.</dd>
-                <dd><i>пример</i>: <code>padding: 5px;</code></dd>
-        </dl>
-        <br>
-        <p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
-    </section>
+	<section><h4>За всяка една страна, поотделно:</h4><br>
+		<div class="text_left">
+			<dl class="fa">
+				<dt>Вътрешен отстъп (<code class="note">padding</code>):</dt>
+				<dd><code>padding­-top</code> : горен вътрешен отстъп</dd>
+				<dd><code>padding­-right</code> : десен вътрешен отстъп</dd>
+				<dd><code>padding­-bottom</code> : долен вътрешен отстъп</dd>
+				<dd><code>padding­-left</code> : ляв вътрешен отстъп</dd>
+			</dl>
+			<hr>
+			<dl class="fa">
+				<dt>Външен отстъп (<code class="note">margin</code>):</dt>
+				<dd><code>margin-top</code> : горен външен отстъп</dd>
+				<dd><code>margin-right</code> : десен външен отстъп</dd>
+				<dd><code>margin-bottom</code> : долен външен отстъп</dd>
+				<dd><code>margin-left</code> : ляв външен отстъп</dd>
+			</dl>
+		</div>
+	</section>
+	<section><h4>Често използвани обобщени записи:</h4>
+		<dl class="fa">
+			<p class="fontsize_07">Легенда: T - top, R - right, B - bottom, L - left</p>
+			<dt><code>padding: T R B L;</code></dt>
+			<dd>задава стойности за всяка една посока поотделно.</dd>
+			<dd><i>пример</i>: <code>padding: 2em 0 1.5em 1em;</code></dd>
+			<dt><code>padding: TB RL;</code></dt>
+			<dd>задава едновременно стойност за горе и долу, ляво и дясно.</dd>
+			<dd><i>пример</i>: <code>padding: 2em 1em;</code></dd>
+			<dt>padding: TBRL;</dt>
+			<dd>задава едновременно стойност за всички посоки.</dd>
+			<dd><i>пример</i>: <code>padding: 5px;</code></dd>
+		</dl>
+		<br>
+		<p class="fontsize_07"><span class="nb darkred">NB!</span> Тук са посочени само вариантите за padding. При margin записите са аналогични.</p>
+	</section>
+	<section><h3>margin:0 auto</h3>
+		<dl class="fa">
+			<dt>Ако зададем стойности:<br>
+				<code class="note">margin-left:auto</code> и <code class="note">margin-right:auto</code> <br>
+				на даден елемент, то той ще бъде хоризонтално центриран спрямо елемента, в който се намира. </dt>
+			</dl>
+		</section>
 </section>
 <section><h2>Блокови, поредови и замествани елементи</h2>
-    <section><h3>Блокови елементи</h3>
-        <p>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</p>
-        <p><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</p>
-        <p><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</p>
-    </section>
-    <section><h4>Блокови елементи са:</h4>
-        <code>address, article, aside, blockquote, canvas, </code>
-        <code>dd, div, dl, fieldset, figcaption, figure,</code>
-        <code>footer, form, h1, h2, h3, h4, h5, h6, header,</code>
-        <code>hgroup, hr, li, main, nav, noscript, ol, output,</code>
-        <code>p, pre, section, table, tfoot, ul, video</code>
-    </section>
-    <section><h3>Поредови елементи</h3>
-        <p>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Tе се позиционират непосредствено след предхождащият ги елемент, като браузерът поставя спейс между тях за разделител. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</p>
-        <p><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</p>
-        <p><span class="nb darkred">NB!</span> CSS свойствата <code>width</code> и <code>height</code> нямат влияние над тях.</p>
-    </section>
-    <section><h4>Поредови елементи са:</h4><br>
-            <code>b, big, i, small, tt,</code>
-            <code>abbr, acronym, cite, code, dfn, em, kbd,</code>
-            <code>strong, samp, time, var,</code>
-            <code>a, br, img, map, object, q, script, span, sub, sup,</code>
-            <code>button, input, label, select, textarea</code>
-    </section>
-    <section><h3>Замествани елементи</h3>
-        <p>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </p>
-        <p>Такива са елементите: </p>
-        <code>img, objec, video, textarea, input, button, select и др.</code>
-        <p><span class="nb">NB!</span> Чрез CSS можем да контролираме някои аспекти на заместваните елементи като размери (width и height) и външни отстъпи.</p>
-    </section>
+	<section><h3>Блокови елементи</h3>
+		<dl class="fa">
+			<dt>Блоковите елементи (<span class="lightgreen">block elements</span>) генерират кутия, която се позиционира като блок - винаги започва на нов ред и заема целият ред, независимо дали съдържанието й ще запълни реда.</dt>
+			<dt>Височината на един блоков елемент се определя от съдържанието му. Т.е. елемента ще бъде толкова висок, колкото е необходимо за да обхване съдържанието.</dt>
+			<dt><span class="nb darkred">NB!</span> Блоковите елементи могат да съдържат както поредови, така и блокови елементи.</dt>
+			<dt><span class="nb darkred">NB!</span> Размера на блоковите елементи може да се контролира чрез CSS свойствата <code>width</code> и <code>height</code>.</dt>
+		</dl>
+	</section>
+	<section><h4>Блокови елементи са:</h4>
+		<code>address, article, aside, blockquote, canvas, </code>
+		<code>dd, div, dl, fieldset, figcaption, figure,</code>
+		<code>footer, form, h1, h2, h3, h4, h5, h6, header,</code>
+		<code>hgroup, hr, li, main, nav, noscript, ol, output,</code>
+		<code>p, pre, section, table, tfoot, ul, video</code>
+	</section>
+	<section><h3>Поредови елементи</h3>
+		<dl class="fa">
+			<dt>Поредовите елементи (<span class="lightgreen">inline elements</span>) генерират кутия, която се изобразява в рамките на текущия ред. Позиционират се непосредствено след предхождащият ги елемент. Заемат толкова място, колкото е необходимо за да се представи съдържанието им.</dt>
+			<dt><span class="nb darkred">NB!</span> Поредовите елементи не могат да съдържат блокови елементи.</dt>
+			<dt><span class="nb darkred">NB!</span><span class="note"> CSS свойствата <code>width</code> и <code>height</code> <b>нямат</b> влияние над тях.</span></dt>
+		</dl>
+	</section>
+	<section><h4>Поредови елементи са:</h4><br>
+		<code>b, big, i, small, tt,</code>
+		<code>abbr, acronym, cite, code, dfn, em, kbd,</code>
+		<code>strong, samp, time, var,</code>
+		<code>a, br, img, map, object, q, script, span, sub, sup,</code>
+		<code>button, input, label, select, textarea</code>
+	</section>
+	<section id="replacedElements"><h3>Замествани елементи</h3>
+		<dl class="fa">
+			<dt>Заместваните елементи (<span class="lightgreen">replaced elements</span>) представят външни обекти (изображение, видео и пр.) чието изобразяване е независимо от CSS. </dt>
+			<dt>Такива са елементите: </dt>
+			<code>img, objec, video, textarea, input, button, select и др.</code>
+			<dt><span class="nb">NB!</span> Чрез CSS можем да контролираме <span class="note">само някои</span> аспекти на заместваните елементи.</dt>
+		</dl>
+	</section>
+	<section>
+		<p>Повече за CSS box model при поредови елементи:</p>
+		<dl class="fa">
+			<dt><a href="https://hacks.mozilla.org/2015/03/understanding-inline-box-model/">Understanding the CSS box model for inline elements @MDN Hacks</a></dt>
+		</dl>
+	</section>
 </section>
 <section><h2>Групиране на HTML елементи</h2>
-    <section>
-        <p>Чрез елемента <code class="lightgreen">div</code> можем да групираме елементи (блокови и/или поредови) в блок.</p>
-        <p>Чрез елемента <code class="lightgreen">span</code> можем да групирам единствено поредови елементи и/или текст.</p>
-        <p><span class="nb darkred">NB!</span> Тези елементи не носят семантичен смисъл и се използват единствено като контейнер за други елементи.</p>
-    </section>
+	<section><h3><code>div</code> и <code>span</code></h3>
+		<p>Чрез елемента <code class="lightgreen">div</code> можем да групираме елементи (блокови и/или поредови) в блок.</p>
+		<p>Чрез елемента <code class="lightgreen">span</code> можем да групирам единствено поредови елементи и/или текст.</p>
+		<p><span class="nb darkred">NB!</span> Тези елементи не носят семантичен смисъл и се използват единствено като контейнер за други елементи.</p>
+	</section>
+</section>
+<section><h4>Margin Collapse (сливане на вертикалните външни отстъпи)</h4>
+	<section><h3>Adjacent siblings margin collapse</h3>
+		<p>В повечето случай, вертикалните външни отстъпи (margin-top и margin-bottom) се сливат в един, не като се сумират а като се вземе стойността на по-големия от тях. </p>
+		<p data-height="300" data-theme-id="20230" data-slug-hash="zENVaY" data-default-tab="css,result" data-user="webdesigncourse" data-embed-version="2" data-pen-title="Collapsing vertical margins" class="codepen">See the Pen <a href="https://codepen.io/webdesigncourse/pen/zENVaY/">Collapsing vertical margins</a> by Iva Popova (<a href="https://codepen.io/webdesigncourse">@webdesigncourse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section><h3>Child-parent margin collapse</h3>
+		<iframe height='300' scrolling='no' title='Margin collapsed' src='//codepen.io/webdesigncourse/embed/YRxpPw/?height=300&theme-id=20230&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/webdesigncourse/pen/YRxpPw/'>Margin collapsed</a> by Iva Popova (<a href='https://codepen.io/webdesigncourse'>@webdesigncourse</a>) on <a href='https://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+	<section>
+		<p>Повече за margin collapse: </p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing @MDN</a>
+	</section>
 </section>
 
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-    <p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+<section><h3>Повече примери за CSS box model в codepen</h3>
+	<a href="https://codepen.io/collection/DJKpmB/">CSS_Box_Model Collection @webdesigncourse</a>
+</section>
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+		 <p>These slides are based on</p>
+		 <p>customised version of </p>
+		 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+		 <p>framework</p>
 </section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
 ########################################################
 -->
-        </div>
-    </div>
-    <!-- Custom processing -->
-    <script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
-    <!-- external scripts -->
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-    <script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
-     <!-- init reveal -->
-    <script>
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            slideNumber: 'c/t',
-            keyboard: true,
-            history: true,
-            center: true,
-            width: 1024,
-            height: 850,
-            // Bounds for smallest/largest possible scale to apply to content
-            // minScale: .5,
-            maxScale: 1,
-            // slide transition
-            transition: 'concave', // none/fade/slide/convex/concave/zoom
-            // Factor of the display size that should remain empty around the content
-            margin: 0.1,
-            // shift+maous click to zoom in/out element
-            zoomKey: 'ctrl',
-            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            // transition: Reveal.getQueryHash().transition || 'default'
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
+				</div>
+		</div>
+		<!-- Custom processing -->
+		<script src="../../../../outfit/js/slides.js"></script>
+		<!-- external scripts -->
+			<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+		 <!-- init reveal -->
+		<script>
+				// Full list of configuration options available at:
+				// https://github.com/hakimel/reveal.js#configuration
+				var highlightjsTabSize = '  ';
+				Reveal.initialize({
+						controls: true,
+						progress: true,
+						slideNumber: 'c/t',
+						keyboard: true,
+						history: true,
+						center: true,
+						width: 1024,
+						height: 850,
+						// Bounds for smallest/largest possible scale to apply to content
+						// minScale: .5,
+						maxScale: 1,
+						// slide transition
+						transition: 'concave', // none/fade/slide/convex/concave/zoom
+						// Factor of the display size that should remain empty around the content
+						margin: 0.1,
+						// shift+maous click to zoom in/out element
+						zoomKey: 'ctrl',
+						// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+						// transition: Reveal.getQueryHash().transition || 'default'
+						// Optional reveal.js plugins
+						dependencies: [
+								{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+								{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+								{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+								{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+								{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+						]
+				});
+		</script>
 </body>
 </html>

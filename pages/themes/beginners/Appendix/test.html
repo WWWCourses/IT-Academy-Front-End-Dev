@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css">
+    	.wrapper{
+    		position: relative;
+    		border: 1px solid red;
+    	}
+    	.inner{
+    		position: absolute;
+    		bottom: 0; left: 0;
+    		height: 90vh;
+            width: 90vw;
+    		border: 1px solid blue;
+    	}
+        .wrapper:after{
+            content: "";
+            display: block;
+            visibility: visible;
+            height: 90vh;
+            width: 90vw;
+            border: 5px solid orange;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>

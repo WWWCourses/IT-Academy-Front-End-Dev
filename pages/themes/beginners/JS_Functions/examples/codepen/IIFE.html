@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Immediately-Invoked Function Expression</title>
+</head>
+<body>
+<p></p>
+<script type="text/javascript">
+	var first = function(){console.log("first is defined!")}();
+	(function second(){console.log("Second is defined!")})();
+
+</script>
+</body>
+</html>

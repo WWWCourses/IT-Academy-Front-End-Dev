@@ -1,0 +1,9 @@
+body{
+    margin: 1em 0 3em 0;
+}
+.thumbnail{
+    display: inline-block;
+    width: 40em;
+    height: 20em;
+    /*border: 1px solid red;*/
+}

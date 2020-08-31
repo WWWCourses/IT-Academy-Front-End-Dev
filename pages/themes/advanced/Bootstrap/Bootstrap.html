@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#Bootstrap" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Bootstrap in 1 hours</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>Responsive Design Frameworks - Overview</h1></section>
+<section><h2>Responsive Design Frameworks - Overview</h2>
+  <section>
+	  <dl class="fa">
+		  <dt>Building a responsive Web site from scratch, with pure HTML/CSS/JS was (and still is) a hard task.</dt>
+		  <dt>There is a lots of flexible libraries and frameworks which speeds the process of creating responsive, interactive and maintainable UIs</dt>
+		  <dt>Some of the most popular, among the hundreds, are: <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://get.foundation/sites.html">Foundation</a>, <a href="https://semantic-ui.com/">Semantic-UI</a>, and lot's of <span class="note">material-design</span> based, like <a href="https://www.muicss.com/">MUI</a> or <a href="https://material-ui.com/">Material-UI</a></dt>
+
+	  </dl>
+
+  </section>
+</section>
+
+<section data-min="10"><h1>Introduction to Bootstrap</h1></section>
+<section><h2>Introduction to Bootstrap</h2>
+	<section><h3>What is Bootstrap?</h3>
+		<dl class="fa">
+			<dt>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</dt>
+			<dt>Developed in 2011, at Twitter, as a framework to encourage consistency across internal tools</dt>
+		</dl>
+	</section>
+	<section><h3>Getting started</h3>
+		<pre><code rel="HTML" class="html">
+			&lt;!doctype html&gt;
+			&lt;html lang=&quot;en&quot;&gt;
+				&lt;head&gt;
+						&lt;!-- Required meta tags --&gt;
+						&lt;meta charset=&quot;utf-8&quot;&gt;
+						&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+
+						&lt;!-- Bootstrap CSS --&gt;
+						&lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+						&lt;title&gt;Hello, world!&lt;/title&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+						&lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+						&lt;!-- Optional JavaScript --&gt;
+						&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+						&lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.slim.min.js&quot; integrity=&quot;sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+						&lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&quot; integrity=&quot;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+						&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+				&lt;/body&gt;
+			&lt;/html&gt;
+		</code></pre>
+		<dl class="fa">
+			<dt><a href="https://getbootstrap.com/docs/4.4/getting-started/download/">How to install</a></dt>
+		</dl>
+	</section>
+</section>
+
+<section data-min="50"><h1>Bootstrap Components</h1></section>
+<section><h2>Bootstrap Components</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>Bootstrap provides tons of reusable components like buttons, navigation, alerts, carousel, and more.</dt>
+			<dt><a href="https://getbootstrap.com/docs/4.4/components/alerts/">Bootstrap Components docs</a></dt>
+		</dl>
+	</section>
+	<section><h3>Buttons</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="BaorxLX"></p>
+	</section>
+	<section><h3>Page Navigation</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="RwWMyNe"></p>
+	</section>
+	<section><h3>Carousel</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="jObzxrb"></p>
+	</section>
+	<section><h3>Video Background</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="KKdoGQR"></p>
+	</section>
+</section>
+
+<section data-min="50"><h1>The Bootstrap Grid System</h1></section>
+<section><h2>The Bootstrap Grid System</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt>Bootstrap 4 grid system is an excellent way to create responsive layouts</dt>
+			<dt>Reference: <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Grid System docs</a></dt>
+		</dl>
+	</section>
+	<section><h3>The Basics - demo</h3>
+		<p class="codepen" data-height="300" data-theme-id="20230" data-default-tab="html,result" data-user="webdesigncourse" data-slug-hash="gOaeQYG"></p>
+	</section>
+	<section><h3>The Basics</h3>
+		<dl class="fa">
+			<dt>The grid system of Bootstrap 4 allows you to divide a row into 12 columns of equal width. </dt>
+			<dt>We can specify how many columns a column width should be (i.e. a column can span 2 columns or more)</dt>
+			<dt>The grid can also be responsive and rearrange depending on the screen width or window size.</dt>
+		</dl>
+	</section>
+	<section><h3>Responsive Grid Classes</h3>
+		<p>There are five classes in Bootstrap 4 which define the responsiveness of the grid element:</p>
+		<dl class="fa">
+			<dt><code>.col-*</code> :for screens narrower than 576px.</dt>
+			<dt><code>.col-sm-*</code> :for screens wider than 576px.</dt>
+			<dt><code>.col-md-*</code> :for screens wider than 768px.</dt>
+			<dt><code>.col-lg-*</code> :for screens wider than 992px.</dt>
+			<dt><code>.col-xl-*</code> :for screens wider than 1200px.</dt>
+		</dl>
+		<p>These classes can be combined so you can set layouts for different screen sizes. <span class="note">Each of these classes scale up, not down.</span>.</p>
+	</section>
+</section>
+
+
+
+<section data-min="10"><h1>Bootstrap Resources & Plugins</h1></section>
+<section><h2>Bootstrap Resources & Plugins</h2>
+	<section><h3></h3>
+		<dl class="fa">
+			<dt><a href="https://startbootstrap.com/bootstrap-resources/">Official Bootstrap Resources & Plugins</a></dt>
+			<dt><a href="https://bbbootstrap.com/">BBBootstrap</a> - <span>House of cool snippets</span></dt>
+		</dl>
+	</section>
+</section>
+
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<!-- codepen  -->
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

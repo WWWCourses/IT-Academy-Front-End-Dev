@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>createDivsWithTimeout</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		for (let i = 0; i < 10; i++) {
+			setTimeout(addElement(i+1), 1000*i);	
+		}
+		
+
+		function addElement (num) {   
+			return	function(){
+				var divNode = document.createElement("div"); 
+				divNode.innerHTML = "div " +num;		
+				divNode.style.border = "1px solid #999";
+				document.body.appendChild(divNode); 
+			}			
+		}
+	</script>
+</body>
+</html>

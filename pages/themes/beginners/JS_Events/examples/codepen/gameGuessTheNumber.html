@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gameGuessTheNumber</title>
+	<style type="text/css">
+		#gameField{
+			width: 80%;
+			margin: 0 auto;
+			padding: .3em;
+			border: 1px dotted #999;
+		}
+		#output{
+			min-height: 1em;
+			margin: 1em 0 0 0;
+			padding: .5em;
+			background: inherit;
+		}
+		/*  
+		Задачи:
+		 
+			1. Проментете кода, така че променливата count да отразява правилно броят опити за отгатване на числото.
+
+			2. Когато потребителят дава грешно предположение, то div.output да е със червен фон.
+			   Когато отгатне точното число - div.output да бъде с червен фон.
+		*/
+	</style>
+</head>
+<body>
+	<div id="gameField">
+		<p>Познайте числото, което съм си намислил [ от 0 до 100]:</p>
+		<input type="number" id="userNumber"><button>OK</button>
+		<div id="output"></div>
+		<div id="log"></div>
+	</div>
+
+	<script type="text/javascript">
+		// намисленото число:
+		var myNumber = 17;
+
+		// променлива, в която ще броим опитите на потребителя:
+		var count = 1;
+
+		// "cache" DOM:
+		var outputNode = document.getElementById('output');
+		var logNode = document.getElementById('log');
+		var btnNode = document.getElementsByTagName('button')[0];
+		
+
+		// асоциираме събитието onclick на бутона с функцията guessNumber		
+		btnNode.addEventListener('click', guessNumber);
+		
+		function guessNumber(){
+			// прочитаме какво е въвел потребителя, като преобразуваме текста до число:
+			var userNumber = (document.getElementById('userNumber').value)*1;
+			// console.log("typeof userNumber: ", typeof(userNumber) );
+
+			// логика на играта:
+			if ( userNumber > myNumber){
+				outputNode.innerHTML = 'Не познахте: Надолу!';
+				outputNode.style.backgroundColor = "#F99";
+			}else if( userNumber === myNumber){
+				outputNode.innerHTML = "Браво, познахте от " + count + "-я път!";
+				outputNode.style.backgroundColor = "#9F9";
+			}else{
+				outputNode.innerHTML = 'Не познахте: Нагоре!';
+				outputNode.style.backgroundColor = "#FFDE99";
+			};
+		}
+
+
+
+	</script>
+</body>
+</html>

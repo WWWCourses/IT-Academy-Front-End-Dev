@@ -3,3 +3,7 @@
 @import "header.css" screen, projection;
 @import "footer.css" screen, projection;
 @import "backgrounds.css" screen, projection;
+
+body{
+	position: relative;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>link_pseudo_clases</title>
+    <style type="text/css">
+    /**************************/
+    /* общи декларации        */
+    /**************************/
+    body{
+        margin: 0;
+        padding: 20px 0px 20px 30px;
+        font-style: serif;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+    }
+    .col1{
+        width: 400px;
+        padding: 10px;
+    }
+    .col2{
+        width: 300px;
+        padding: 10px;
+        text-align: center;
+    }
+    .col3{
+        width: 300px;
+        padding: 10px;
+    }
+    span.note{
+        font-size: 0.8em;
+        font-style: italic;
+    }
+    span.NB{
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    /**************************/
+    /* конкретни,за примерите */
+    /**************************/
+    a{
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .link a:link{
+        color: green;
+    }
+    .visited a:visited{
+        color: gray;
+    }
+    .active a:active{
+        font-size: 2em;
+        color: red;
+    }
+    .focus a:focus{
+        font-size: 1.5em;
+        color: orange;
+        /*text-decoration: inherit;*/
+    }
+    .hover a:hover {
+        color: #FFF;
+        background-color: #C9460F;
+        padding: 3px;
+        text-decoration: underline;
+
+        border: 5px outset #FF6000;
+        -webkit-animation: border_zoom 5s infinite; /* Chrome, Safari, Opera */
+        animation: border_zoom 1s infinite;
+    }
+    @-webkit-keyframes border_zoom {   /* Chrome, Safari, Opera */
+        50% {border: 6px outset #FF8000;}
+    }
+    @keyframes border_zoom { /*standard*/
+        50% {border: 15px solid #FFA000;}
+    }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Описание</th>
+        <th>Тестов линк</th>
+        <th>CSS</th>
+    </tr>
+    <tr class="link">
+        <td class="col1">Следния линк показва ефекта от <span class="NB">:link</span><br>
+            <span class="note">(след рефреш на страницата линка ще бъде показан като непосетен)</span></td>
+        <td class="col2">
+            <script>document.write('<a href="#'+Date.now()+'">Не посетена връзка</a>');</script>
+        </td>
+        <td class="col3"><code>
+            color: green;
+        </code></td>
+    </tr>
+    <tr class="active">
+        <td class="col1">Щракнете върху линка и задръжте левия бутон, за да видите ефекта от <span class="NB">:active</span></td>
+        <td class="col2"><a href="#">Активиране на връзка</a></td>
+        <td class="col3"><code>
+            font-size: 2em;<br>
+            color: red;
+        </code></td>
+    </tr>
+    <tr class="visited">
+        <td class="col1">Тук вече виждате ефекта от <span class="NB">:visited</span></td>
+        <td class="col2"><a href="#">Посетена връзка</a></td>
+        <td class="col3"><code>
+            color: gray;
+        </code></td>
+    </tr>
+    <tr class="hover">
+        <td class="col1">Позиционирайте мишката върху линка за да видите ефекта от <span class="NB">:hover</span></td>
+        <td class="col2">
+            <a class="border_bottom_anime" href="#">Посочване на връзка</a>
+        </td>
+        <td class="col3"><code>
+            color: #FFF;<br>
+            background-color: #C9460F;<br>
+            padding: 3px;<br>
+            text-decoration: underline;<br>
+            border: 5px outset #FF6000;<br>
+            -webkit-animation: border_zoom 5s infinite; /* Chrome, Safari, Opera */<br>
+            animation: border_zoom 1s infinite;<br>
+        </code></td>
+    </tr>
+    <tr class="focus">
+        <td class="col1">Щракнете върху линка за да видите ефекта от <span class="NB">:focus</span></td>
+        <td class="col2"><a href="#">Фокус върху връзка</a></td>
+        <td class="col3"><code>
+            font-size: 1.5em;<br>
+            color: orange;
+        </code></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>git_overview</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="../../../../outfit/css/themes/light.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
+</head>
+<body>
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/advanced.html#git_overview" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>next slide</span></div>
+				<div><span>P</span><span>previous slide</span></div>
+				<div><span>O</span><span>Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section><h1>Practical introduction to git and GitHub/GitLab</h1></section>
+<section data-transition="zoom">
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Created for</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
+<section data-min="5"><h1>What is a VCS and how it makes life easier?</h1></section>
+<section><h2>What is a VCS and how it makes life easier?</h2>
+  <section>
+  	<dl class="fa">
+  		<dt><abbr>VCS</abbr><dfn id="DB"><span>Version</span><span>Control</span><span>System</span></dfn></dt>
+  		<dd>a system that records changes to a file (or directory) over time so that you can recall specific versions later</dd>
+  		<dt>You can version control <span class="note">all kind of work</span> you do:</dt>
+  		<dd>Poetry</dd>
+  		<dd>Images</dd>
+  		<dd>Music</dd>
+  		<dd>Programming</dd>
+  		<dd>...</dd>
+  		<dt><span class="note">Easily share</span> your work with other team members</dt>
+  	</dl>
+  </section>
+  <section><h3>VCS Types</h3>
+  	<dl class="fa">
+  		<dt>local</dt>
+  		<dd>really, not used by companies</dd>
+  		<dt>centralized</dt>
+  		<dd>like <a href="http://subversion.tigris.org/">subversion</a></dd>
+  		<dt>decentralized (distributed)</dt>
+  		<dd>like <a href="https://git-scm.com/">git</a></dd>
+  	</dl>
+  </section>
+  <section><h3>Local VCS</h3>
+  	<a href="images/local_vcs.png"><img src="images/local_vcs.png"></a>
+  </section>
+  <section><h3>Centralized VCS</h3>
+  	<a href="images/centralized_vcs.png"><img src="images/centralized_vcs.png"></a>
+  </section>
+  <section><h3>Distributed VCS</h3>
+  	<a href="images/distributed_vcs.png"><img src="images/distributed_vcs.png" style="width: 50vw; height: 73vh;"></a>
+  </section>
+</section>
+
+<section data-min="5"><h1>Installing and configuring git.</h1></section>
+<section><h2>Installing and configuring git.</h2>
+  <section>
+  	<dl class="fa">
+  		<dt><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing Git</a></dt>
+  		<dt><span class="note">Note for Windows Users</span> - install from <a href="https://gitforwindows.org/">gitforwindows.org</a> which also brings a nice features like <code>git bash</code>, <code>shell integration</code> and more </dt>
+  	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>Distributed VCS - Basic Concepts</h1></section>
+<section><h2>Distributed VCS - Basic Concepts</h2>
+	<section><h3>Distributed VCS Concepts Overview</h3>
+		<a href="images/distributed_concepts_overview.png"><img src="images/distributed_concepts_overview.png"></a>
+	</section>
+	<section><h3 class="note">Initialize a Git repository</h3>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				git init
+			</code></pre>
+		<dl class="fa">
+			<dt>git will start to track the Current Working Directory (CWD).</dt>
+			<dt>A hidden <code>.git</code> folder is created.</dt>
+		</dl>
+	</section>
+	<section><h3 class="note">Stage files/changes</h3>
+		<p>Also known as <span class="note">adding files content to the index</span></p>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				# to stage only certain file/path:
+				git add <i>path</i>
+
+				# to stage all files in CWD:
+				git add -A
+			</code></pre>
+		<dl class="fa">
+			<dt>The staging are contains all the changes that will be added to the local repository after the <code>commit</code></dt>
+			<dt>You can remove (unstage) files from the index, with:
+				<pre><code rel="Terminal" class="bash" data-noescape>
+					git rm <i>file</i>
+				</code></pre>
+			</dt>
+		</dl>
+	</section>
+	<section><h3>Setup your git identity</h3>
+		<dl class="fa">
+			<dt>Before your first commit, you have to provide your user name and email.</dt>
+			<dt>This information will be stamped in each of you commits and other git activities you make.</dt>
+		</dl>
+		<pre><code rel="Terminal" class="bash">
+			# per project - make sure you type next commands while you are in the root git folder
+			git config user.email "your_mail@mail.com"
+			git config user.name "User Name"
+
+			# or if you wish to setup your git identity on global level, you can use the --global option:
+			git config --global user.email "your_mail@mail.com"
+			git config --global user.name "User Name"
+		</code></pre>
+	</section>
+	<section><h3 class="note">Commit files to local repository</h3>
+		<pre><code rel="Terminal" class="bash" data-noescape>
+				# commit files - the default system editor for git will be opened to write your Commit Message
+				git commit
+
+				# commit and write the Commit Message
+				git commit -m'Your Commit Message'
+			</code></pre>
+		<dl class="fa">
+			<dt>If you want to make VSCode your default git editor:</dt>
+			<pre><code rel="Terminal" class="bash">
+				git config --global core.editor "code --wait"
+			</code></pre>
+			<!-- <dd><a href="https://stackoverflow.com/questions/8951275/how-can-i-make-sublime-text-the-default-editor-for-git/23934471">How can I make Sublime Text the default editor for Git?</a></dd> -->
+		</dl>
+	</section>
+	<section><h3>Git status and commit history</h3>
+		<dl class="fa">
+			<dt>We often need to check a git repository status (if there are any non-commited changes and etc.) </dt>
+			<pre><code rel="Terminal" class="bash">
+				git status
+			</code></pre>
+			<dt>Or to check the repository commits history</dt>
+			<pre><code rel="Terminal" class="bash">
+				git log
+			</code></pre>
+		</dl>
+	</section>
+  <section><h3>The Three States</h3>
+  	<a href="images/git_areas.png"><img src="images/git_areas.png"></a>
+  </section>
+</section>
+
+<!-- <section data-min="5"><h1>Create and configure a git repository.</h1></section>
+<section><h2>Create and configure a git repository.</h2>
+
+</section>
+ -->
+
+
+<section data-min="5"><h1>Adding files to repository and committing changes</h1></section>
+<section><h2>Adding files to repository and committing changes</h2>
+  <section>
+  	<p>Open a Terminal/Command Prompt</p>
+  	<pre><code rel="Terminal" class="bash" data-noescape style="font-size: .7em">
+  			# Create your project directory
+  			mkdir my_project
+
+  			# go into it
+  			cd my_project
+
+  			# initialize the new repository
+  			git init
+
+  			# do some work and save your files
+  			echo "I'm working hard..." > file1.txt
+
+  			# stage all your work
+  			git add -A
+
+  			# commit your work
+  			git commit -am'Work 1 Done'
+  	</code></pre>
+  </section>
+</section>
+
+<section data-min="5"><h1>Working with branches.</h1></section>
+<section><h2>Working with branches.</h2>
+  <section>
+  	<a href="https://www.atlassian.com/git/tutorials/using-branches">Git Branch</a>
+  </section>
+</section>
+
+<!-- <section data-min="5"><h1>Merging and reverting changes</h1></section>
+<section><h2>Merging and reverting changes</h2>
+  <section>
+
+  </section>
+</section> -->
+
+
+<!-- <section data-min="5"><h1>Overview of GitHub/GitLab and setting-up an account</h1></section>
+<section><h2>Overview of GitHub/GitLab and setting-up an account</h2>
+  <section>
+
+  </section>
+</section>
+
+ -->
+<section data-min="5"><h1>Connect your local git repository to your GitHub/GitLab repository</h1></section>
+<section><h2>Connect your local git repository to your GitHub/GitLab repository</h2>
+  <section>
+  	<dl class="fa">
+  		<dt>Create a local git repository</dt>
+  		<dt>Create a corresponding GitHub repo (preferably with the same name, as the root folder of your local repo).</dt>
+  		<dt>Follow the instruction given in github page, in the section: "…or push an existing repository from the command line" section.</dt>
+		<dd>Or read the github docs: <a href="https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">Adding an existing project to GitHub using the command line</a></dd>
+	</dl>
+  </section>
+</section>
+
+<section data-min="5"><h1>Using GitHub/GitLab pages as free hosting for your project</h1></section>
+<section><h2>Using GitHub/GitLab pages as free hosting for your project</h2>
+  <section>
+  	<dl class="fa">
+  		<dt>GitHub Pages provides a host for your static site directly from your GitHub repository.</dt>
+  		<dt>Reference: <a href="https://pages.github.com/">pages.github.com</a></dt>
+  	</dl>
+  </section>
+  <section><h3>How To</h3>
+  	<dl class="fa">
+  		<dt>Under your repository name, click  Settings.</dt>
+  		<dt>Navigate to "GitHub Pages" section and follow the instructions.</dt>
+  	</dl>
+  </section>
+  <section>
+  	<iframe width="853" height="480" src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+</section>
+
+<section data-min="5"><h1>Resources</h1></section>
+<section><h2>Recommended Videos</h2>
+  <section>
+  	<p>Git Tutorial for Beginners: Command-Line Fundamentals</p>
+  	<iframe width="736" height="414" src="https://www.youtube.com/embed/HVsySz-h9r4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+  <section>
+  	<p>Github Tutorial For Beginners - Github Basics for Mac or Windows & Source Control Basics</p>
+  	<iframe width="736" height="414" src="https://www.youtube.com/embed/0fKg7e37bQE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+</section>
+
+
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+	 <p>These slides are based on</p>
+	 <p>customised version of </p>
+	 <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="../../../../outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
+			center: true,
+			// width: '100%',
+			// height: '100%',
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
+				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+				// { src: 'plugin/remote-control/remote.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>

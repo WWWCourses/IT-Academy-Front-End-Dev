@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>alphaValues</title>
+	<style type="text/css">
+		.wrapper{
+			position: relative;
+			width: 12em;
+			height: 12em;			
+		}
+		.box{
+			position: absolute;
+			width: 6em;
+			height: 6em;
+			border: 1px solid #999;
+			box-sizing: border-box;
+		}
+		#red1{			
+			top: 0em; left: 0em;
+			background: #FF000080;
+		}
+		#red2{			
+			top: 0em; right: 0;
+			background: rgba(255, 0, 0, 0.5);
+		}
+		#red3{			
+			bottom: 0em; left: 0em;
+			background: hsla(0, 100%, 50%, 0.5);
+		}
+		#red4{			
+			bottom: 0em; right: 0;
+			background: #F008; /*alphaValue is 0.53!*/
+		}
+		#blue{
+			top: 3em; left: 3em;
+			background: #00F;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box" id="red1">1</div>
+		<div class="box" id="red2">2</div>
+		<div class="box" id="red3">3</div>
+		<div class="box" id="red4">4</div>
+		<div class="box" id="blue"></div>
+	</div>
+	<hr>
+	<ul>
+		<li>red box1: <code>background: #FF000080;</code></li>
+		<li>red box2: <code>background: rgba(255, 0, 0, 0.5);</code></li>
+		<li>red box3: <code>background: hsla(0, 100%, 50%, 0.5);</code></li>
+		<li>red box4: <code>background: #F008; /*alphaValue is 0.53!*/</code></li>
+	</ul>
+</body>
+</html>

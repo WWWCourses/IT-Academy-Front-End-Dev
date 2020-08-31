@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nth-child() vs. nth-of-type()</title>
+	<style type="text/css">
+		section{
+			border: 1px solid #999;
+			padding: .5em 0 .5em .8em;
+			margin: .5em 0 0 0;
+		}
+		.nthChild p:nth-child(3){
+			color: red;
+		}
+		.nthOfType p:nth-of-type(3){
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<section class="nthChild">
+		<h2>nth-child example. Rule used: <code style="color: #830303">p:nth-child(3){color: red;}</code></h2>
+		<a href="http://IT-Academy.net/">Компютърно образователен център „Прогрес“</a>
+		<p>Paragraph 1</p>
+		<p>Paragraph 2</p>
+		<p>Paragraph 3</p>
+	</section>
+	<section class="nthOfType">
+		<h2>nth-of-type example. Rule used: <code style="color: #830303">p:nth-of-type(3){color: red;}</code></h2>
+		<a href="http://IT-Academy.net/">Компютърно образователен център „Прогрес“</a>
+		<p>Paragraph 1</p>
+		<p>Paragraph 2</p>
+		<p>Paragraph 3</p>
+	</section>
+</body>
+</html>

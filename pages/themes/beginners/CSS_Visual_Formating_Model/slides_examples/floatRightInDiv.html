@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>floatRightInDiv</title>
+    <style type="text/css">
+    	html, body,p{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	.container{
+    		width: 50vw;
+    		height: 50vw;
+    		margin: 0 auto;
+    		background: #CCC;
+    	}
+    	.box{
+    		width: 50%;
+    		height: 50%;
+    		background: #F99;
+    	}
+    	.right{
+    		float: right;
+    		margin: 0 0 .2em 1em;
+    	}
+    	.container>p{
+    		text-align: right;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="box right">Floated Box</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</body>
+<script type="text/javascript" src="floatRightInDiv.js"></script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window API demo</title>
+	<style>
+		.buttons{
+			display: flex;
+			flex-wrap: wrap;
+			/* justify-content: center; */
+			flex-direction: row;
+			align-items: stretch;
+			align-content: stretch;
+		}
+		.buttons>div{
+			width: 8em;
+			height: 3em;
+			margin: 0 1em 0 0;
+			padding: .3em .5em;
+			line-height: 3em;
+			vertical-align: middle;
+			text-align: center;
+			border: 1px solid #000;
+		}
+		.buttons>div:hover{
+			background: #AAA;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Window API Demo</h1>
+	<div class="buttons">
+		<div id="getLocation">geolocation demo</div>
+		<div id="windowOpen">window open demo</div>
+	</div>
+
+
+	<script>
+
+		let aux = {
+			'createNode': function(tagName) {
+				let node = document.createElement(tagName);
+				document.body.appendChild(node);
+				return node;
+			}
+		};
+
+		let demos = {
+			getLocation: function(){
+				console.log('getLocation started');
+
+				// var outNode = document.querySelector(".outputGeo");
+				let outNode = aux.createNode('div');
+
+				function showPosition(position) {
+				  outNode.innerHTML = "Latitude: " + position.coords.latitude +
+				  "<br>Longitude: " + position.coords.longitude;
+				}
+
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					outNode.innerHTML = "Geolocation is not supported by this browser.";
+				}
+			},
+			windowOpen: function(){
+				let myWindow = window.open(
+					"https://IT-Academy.net/", "",
+					"width=400,height=200,menubar=yes,location=yes,resizable=yes,status=yes");
+			},
+		}
+
+		let buttons = document.querySelectorAll('.buttons>div');
+		// console.dir(buttons);
+
+		buttons.forEach(button=>{
+			// console.log(demos[button.id]);
+
+			button.addEventListener('click', demos[button.id])
+		});
+
+
+
+	</script>
+</body>
+</html>

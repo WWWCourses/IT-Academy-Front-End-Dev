@@ -1,0 +1,206 @@
+        /*fonts*/
+        @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Glass+Antiqua);
+        @import url(https://fonts.googleapis.com/css?family=Modern+Antiqua);
+        html{
+            /*background-color: #cdcdcd;*/
+        }
+        body{
+            line-height: 1.2em;
+            color: #4d4b4d;
+            background-color: #fff;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            /*font-size: .9em;*/
+        }
+        header h2{
+            display: none;
+        }
+        .diag{
+            width: 200px;
+            position: absolute;
+            text-align: center;
+            line-height: 2em;
+            top: 70px;
+            left: -25px;
+            transform: rotate(315deg);
+            -webkit-transform: rotate(315deg);
+            -ms-transform: rotate(315deg);
+            -moz-transform: rotate(315deg);
+            -o-transform: rotate(315deg);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+        }
+        article{
+            line-height: 1.5em;
+        }
+        article>h4{
+            font-size: 1.8em;
+            line-height: 1.5em;
+            /*font-style: italic;*/
+            color: #888;
+            margin: 1.5em .2em .3em 0;
+        }
+
+        .iep_syllabus_title{
+            display: none;
+        }
+
+        .iep_syllabus .total_hours{
+            float: right;
+            color: #BA7274 ;
+        }
+        .iep_course_project{
+                    margin: 1em 0 0 0;
+        }
+        /*~~~~~~~~~~ text   ~~~~~~~~~~*/
+        p{
+            margin: .5em 0;
+        }
+        .small{
+            font-size: .8em;
+        }
+        /*~~~~~~~~~~ links  ~~~~~~~~~~*/
+        a{
+            text-decoration: none;
+            color: inherit;
+            border-bottom: .1em solid #71BA8E;
+        }
+        a:visited{
+           color: inherit;
+        }
+        a:hover{
+            text-decoration: none;
+            border-bottom: none;
+            /*background-color: #239DD5;*/
+            /*color: #FFF;*/
+        }
+        /*a.ready{
+            color: inherit;
+        }*/
+        a.nonready{
+            color: #BBB;
+        }
+
+        /*~~~~~~~~~~ The list  ~~~~~~~~~~*/
+        .iep_syllabus_themes{
+            margin-bottom: 1em;
+        }
+        .iep_syllabus_themes>li{
+                margin: 1em 0 0 0;
+                list-style-type: none;
+        }
+        .iep_syllabus_themes>li>h3{
+            display: inline-block;
+            width: 100%;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #555555;
+            line-height: 1.5em;
+            letter-spacing: .1em;
+            border-bottom: .1em solid #EADAAD;
+        }
+        .iep_syllabus_themes>li>h3:hover{
+            cursor: pointer;
+        }
+        .iep_syllabus_themes>li>h3>a{
+            display: inline-block;
+            width: 2em;
+            vertical-align: top;
+            /*margin-right:.8em;*/
+            text-decoration: none;
+            border: 0;
+        }
+        .iep_syllabus_themes>li>h3:hover>a.ready, .grabAttnetion{
+            background: none;
+            font-weight: bold;
+            /*important - because of strange chrome bug: depending on href value not always work !!!;*/
+            color: #FFF !important;
+            text-shadow:
+                1px 1px 1px #FFB77B,
+                -1px -1px 1px #FFB77B,
+                2px 2px 2px #FFB97C,
+                -2px -2px 2px #FFB97C,
+                3px 3px 3px #FFBA7E,
+                -3px -3px 3px #FFBA7E,
+                4px 4px 4px #FFBA7E,
+                -4px -4px 4px #FFBA7E;
+            animation: shake .05s ease-in-out 3;
+        }
+        @keyframes shake{
+            from{
+                transform: rotate(15deg);
+                opacity: .2;
+            }
+            to{
+                transform: rotate(-15deg);
+            }
+        }
+        .iep_syllabus_themes .label{
+            display: inline-block;
+            width: 85%;
+            vertical-align: middle;
+        }
+
+        .iep_syllabus_themes .hours{
+            float: right;
+            display: inline-block;
+            padding: 0 0 0 1em;
+            font-weight: normal;
+            color: #999;
+        }
+        .iep_syllabus_themes .hours::after{
+            content: ' h.';
+        }
+        .iep_syllabus_sub_themes{
+            margin-left: 2.3em;
+        }
+        .iep_syllabus_sub_themes>li{
+            line-height: 2em;
+            margin-left: .5em;
+        }
+
+        /*~~~~~~~~~~ accents  ~~~~~~~~~~*/
+        .iep_syllabus_sub_themes .kw{
+                    font-size: 1em;
+                    font-style: normal;
+                    color: #333;
+        }
+
+        /*list bulets*/
+        ol.list_numbers{
+            counter-reset: item;
+        }
+        ol.list_numbers ol{
+            counter-reset: item;
+        }
+        ol.list_numbers>li>h3:before{
+            content: counters(item, ".")".";
+            counter-increment: item;
+
+            display: inline-block;
+            width: 1.8em;
+            vertical-align: top;
+            /*margin-right:.8em;*/
+            text-decoration: none;
+            border: 0;
+        }
+        ol.list_numbers ol.iep_syllabus_sub_themes>li{
+            list-style-type: none;
+        }
+        ol.list_numbers ol.iep_syllabus_sub_themes>li:before{
+            content: counters(item, ".")".";
+            counter-increment: item;
+
+            display: inline-block;
+            margin-left: -4em;
+            margin-right: .4em;
+        }
+
+        footer{
+            border-top: 2px solid #999;
+            padding-top:.7em;
+        }
+        .license img{
+            display: none;
+        }

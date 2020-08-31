@@ -1,44 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Основи на HTML</title>
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<!-- css & themes include -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/themes/light.css" id="theme">
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement( 'link' );
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match( /print-pdf/gi ) ? '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/pdf.css' : '/IT-Academy-Front-End-Dev/lib/reveal.js/css/print/paper.css';
-		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
-	<!-- custom -->
-	<link rel="stylesheet" href="/IT-Academy-Front-End-Dev/outfit/css/reveal.js.css">
-	<base target="_blank">
-	<link rel="shortcut icon" href="/IT-Academy-Front-End-Dev/fav.png">
+    <meta charset="utf-8">
+    <title>Основи на HTML</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- css & themes include -->
+    <link rel="stylesheet" href="../../../../lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../../../../outfit/css/themes/dark.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../../../../lib/reveal.js/dist/print/pdf.css' : '../../../../lib/reveal.js/dist/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- CUSTOM -->
+    <base target="_blank">
 </head>
 <body>
-	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-		<div class="top_links">
-			<a class="home_link" href="/IT-Academy-Front-End-Dev/pages/agenda/beginners.html#HTML_Bases" target="_top"><i class="fa fa-home"></i></a>
-			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+    <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+        <div class="top_links">
+			<a class="home_link" href="../../../../pages/agenda/beginners.html#HTML_Bases" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link"><i class="fa fa-question"></i></span>
 			<div class="help_text">
-			<div><span>N/Спейс</span><span>следващ слайд</span></div>
-			<div><span>P</span><span>предишен слайд</span></div>
-			<div><span>O</span><span>всички слайдове</span></div>
-			<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
+				<div><span>N/Спейс</span><span>следващ слайд</span></div>
+				<div><span>P</span><span>предишен слайд</span></div>
+				<div><span>O</span><span>всички слайдове</span></div>
+				<div><span>ctrl+left click</span><span>увеличава елемента</span></div>
 			</div>
 		</div>
-		<div class="footer theme_switch"></div>
-		<div class="slides">
+		<div class="footer theme_switch">
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/dark.css'); return false;">Dark</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/light.css'); return false;">Light</a>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../../../../outfit/css/themes/projector.css'); return false;">Projector</a>
+        </div>
+        <div class="slides">
 <!--
 ########################################################
 ##################### SLIDES START #####################
@@ -46,309 +48,297 @@
 -->
 <section><h1>Основи на HTML</h1></section>
 <section data-transition="zoom">
-		<section class="copyright" data-transition="zoom">
-				<div class="note">
-						<p>Created for</p>
-				</div>
-				<div class="company">
-						<a href="http://www.it-academy.bg/kurs-html-css-front-end-development/">
-						<img style="height:4em" src="/IT-Academy-Front-End-Dev/outfit/images/logos/it-academy_240x55.gif">
-						</a>
-				</div>
-				<div class="author">
-						<span class="note">Iva E. Popova, 2015-2018</span>
-						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-				</div>
-		</section>
-		<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
-				<div class="company">
-					 <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova on LinkedIn</a></div>
-				</div>
-		</section>
+	<section>
+		<div class="copyright">
+			<div class="note">
+				<p>Създаден за</p>
+			</div>
+			<div class="company">
+				<a href="http://IT-Academy.net/kurs-po-web-design/">
+				<img src="../../../../outfit/images/logos/it-academy_240x55_whitebg.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="copyright" data-transition="zoom" style="margin-top: -2em;">
+		<div class="note">
+			<p>Създаден от</p>
+		</div>
+		<div class="company">
+		   <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Ива Е. Попова</a></div>
+		</div>
+		<div class="author">
+			<span class="date">2015 - 2020, </span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../../images/creativecommons.org_l_by-sa_4.0_88x31.png"></a>
+		</div>
+	</section>
 </section>
-
-
 <section><h2>Структура на една Уеб страница.</h2>
-	<section>
-		<a href="images/HTML_page_as_magazine_page.png"><img src="images/HTML_page_as_magazine_page.png"></a>
-	</section>
-	<section><h3>Представена с HTML елементи</h3>
-		<pre><code rel="HTML">
-		<h1>Main Heading</h1>
-		<h2>Subheading</h2>
-		<p>Paragraph</p>
-		&lt;img src=&quot;URL&quot; alt=&quot;some text&quot;&gt;
-		</code></pre>
-	</section>
+    <section>
+        <img src="images/HTML_page_as_magazine_page.png">
+    </section>
+    <section><h3>Представена с HTML елементи</h3>
+        <pre><code rel="HTML">
+        <h1>Main Heading</h1>
+        <h2>Subheading</h2>
+        <p>Paragraph</p>
+        &lt;img src=&quot;URL&quot; alt=&quot;some text&quot;&gt;
+        </code></pre>
+    </section>
 </section>
-
 <section><h2>Какво е HTML?</h2>
-	<section><h2>Какво е HTML/HTML5?</h2></section>
-	<section>
-		<dl class="fa">
-			<dt><abbr>HTML</abbr><dfn id="HTML"><span>Hyper</span><span>Text</span><span>Markup</span><span>Language</span></dfn></dt>
-			<dd>съвкупност от правила, според които браузерите изобразяват (rendering) един HTML документ.</dd>
-		</dl>
-	</section>
-	<section>
-		<dl class="fa">
-			<dt>Първата (неофициална) версия на HTML</dt>
-			<dd><a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">HTML Tags by T.B.Lee</a></dd>
-			<dt>Последната официално приета версия на езика</dt>
-			<dd><a href="https://www.w3.org/TR/html/">Latest Version of HTML</a></dd>
-			<dt>Текуща работна версия на езика</dt>
-			<dd><a href="https://w3c.github.io/html/">Latest Editor’s Draft</a></dd>
-			<dt><small class="NB small-font">Това са пълни спецификации предназначени за специалисти, подобно на разработките в Института по български език към БАН.</small></dt>
-		</dl>
-	</section>
-</section>
+    <section><h2>Какво е HTML/HTML5?</h2></section>
+    <section>
+        <dl class="fa">
+            <dt>HTML - <em>HyperText Markup Language</em></dt>
+            <dd>съвкупност от правила, според които браузерите изобразяват (rendering) една html страница.</dd>
+        </dl>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>Първата (неофициална) версия на HTML</dt>
+            <dd><a href="http://info.cern.ch/hypertext/WWW/MarkUp/Tags.html">HTML Tags by T.B.Lee</a></dd>
+            <dt>Последната официално приета версия на езика</dt>
+            <dd><a href="https://www.w3.org/TR/html/">Latest Version of HTML</a></dd>
+            <dt>Текуща работна версия на езика</dt>
+            <dd><a href="https://w3c.github.io/html/">Latest Editor’s Draft</a></dd>
+            <dt><small class="NB small-font">Това са пълни спецификации предназначени за специалисти, подобно на разработките в Института по български език към БАН.</small></dt>
+        </dl>
+    </section>
 
+</section>
 <section><h2>Синтаксис на HTML</h2>
-	<section><h2>Синтаксисът е в основата на всичко.</h2></section>
-	<section><h3>HTML елемент</h3>
-	   <pre><code rel="HTML">
-			&lt;h1&gt;Hello World&lt;/h1&gt;
-			&lt;h1&gt;Hello &lt;i&gt;World&lt;/i&gt;&lt;/h1&gt;
-			&lt;h1 class="primary"&gt;Hello World&lt;/h1&gt;
-	   </code></pre>
-	<img src="images/HTML_elements_syntax.png">
-	</section>
-	<section style="font-size: .9em"><h3>HTML елемент</h3>
-		<dl class="fa">
-			<dt>Градивните еденици ("тухлите") от които е съставена всяка една Уеб страница!</dt>
-			<dt>Състои се от:</dt>
-			<dd><pre class="inline"><code>&lt;отварящ таг&gt; съдържание &lt;/затварящ таг&gt;</code></pre></dd>
-			<dd>Възможно е <span class="note">в отварящия таг</span> да имаме 1 или повече двойки <code>атрибут="стойност"</code>, които се разделят със спейс.</dd>
-			<dd><pre class="inline"><code class="dust">
-				<p class="red" id="p1">lorem ipsum...</p>
-			</code></pre></dd>
-		</dl>
-	</section>
-	<section style="font-size: .9em"><h3>HTML елемент</h3>
-		<dl class="fa">
-			<dt>Съдържанието може да е текст или други HTML елементи</dt>
-			<dd><pre class="inline"><code class="html">
-				&lt;section&gt;
-					&lt;h1&gt;Секция 1&lt;/h1&gt;
-					&lt;p&gt;lorem ipsum...&lt;/p&gt;
-				&lt;/section&gt;
-			</code></pre></dd>
-			<dt>Някои HTML елементи са "празни" - нямат съдържание и се състоят само от отварящ таг. Например: </dt>
-			<dd><pre class="inline"><code class="html">&lt;img src=&quot;images/cats.png&quot;&gt;</code></pre></dd>
-		</dl>
-	</section>
-	<section>
-		<dl class="fa">
-			<dt>HTML5 позволява имената на елементите в таговете да се записват както с малки, така и с големи букви, но се препоръчва употребата на малки букви.</dt>
-		</dl>
-	</section>
+    <section><h2>Синтаксисът е в основата на всичко.</h2></section>
+    <section><h3>HTML елемент</h3>
+       <pre><code rel="HTML">
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+            &lt;h1&gt;Hello &lt;i&gt;World&lt;/i&gt;&lt;/h1&gt;
+            &lt;h1 class="primary"&gt;Hello World&lt;/h1&gt;
+       </code></pre>
+    <img src="images/HTML_elements_syntax.png">
+    </section>
+    <section><h3>HTML елемент</h3>
+        <dl class="fa">
+            <dt>Градивните еденици ("тухлите") от които е съставена всяка една Уеб страница!</dt>
+            <dt>Състои се от:</dt>
+            <dd><pre class="inline"><code>&lt;отварящ таг&gt; съдържание &lt;/затварящ таг&gt;</code></pre>
+            </dd>
+            <dt>Съдържанието може да е текст или друг HTML елемент</dt>
+            <dt>Някои HTML елементи са "празни" - състоят се само от отварящ таг. Например: </dt>
+            <dd><pre class="inline"><code>&lt;img src=&quot;images/cats.png&quot;&gt;</code></pre></dd>
+        </dl>
+    </section>
+    <section>
+        <dl class="fa">
+            <dt>HTML5 позволява имената на елементите в таговете да се записват както с малки, така и с големи букви, но се препоръчва употребата на малки букви.</dt>
+        </dl>
+    </section>
 </section>
-
 <section><h2>Структура на HTML документ</h2>
-	<section>
-		<pre><code rel="HTML">
-			<!-- Информация за езика и версията на документа -->
-			&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-				<!-- Мета информация -->
-				&lt;head&gt;
-				...
-				&lt;/head&gt;
-				<!-- Същинската част на документа -->
-				&lt;body&gt;
-				...
-				&lt;/body&gt;
-			&lt;/html&gt;
-	   </code></pre>
-	</section>
+    <section>
+        <pre><code rel="HTML">
+            <!-- Информация за езика и версията на документа -->
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                <!-- Мета информация -->
+                &lt;head&gt;
+                ...
+                &lt;/head&gt;
+                <!-- Същинската част на документа -->
+                &lt;body&gt;
+                ...
+                &lt;/body&gt;
+            &lt;/html&gt;
+       </code></pre>
+    </section>
 </section>
-
 <section><h2>Секции в HTML документа</h2>
-	<section><h2>Doctype, head и body секции.</h2></section>
-	<section><h3>Doctype</h3>
-		<p>Информация за HTML версията на документа</p>
-	</section>
-	<section><h4>Примери за DOCTYPE</h4>
-		<pre><code data-trim rel="HTML5">
-			&lt;!DOCTYPE html&gt;
-		</code></pre>
-		<pre><code data-trim rel="HTML 4.01 Strict">
-			&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01//EN"
-			"http://www.w3.org/TR/html4/strict.dtd "&gt;
-		</code></pre>
-		<pre><code data-trim rel="HTML 4.01 Transitional">
-			&lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01 Transitional//EN"
-			"http://www.w3.org/TR/html4/loose.dtd"&gt;
-		</code></pre>
-	</section>
-	<section><h3>head</h3>
-		<p>Съдържа мета информация за документа</p>
-	</section>
-	<section><h3>body</h3>
-		<p>Тяло на документа - съдържанието на документа, което ще се изобрази от браузъра.</p>
-	</section>
+    <section><h2>Doctype, head и body секции.</h2></section>
+    <section><h3>Doctype</h3>
+        <p>Информация за HTML версията на документа</p>
+    </section>
+    <section><h4>Примери за DOCTYPE</h4>
+        <pre><code data-trim rel="HTML5">
+            &lt;!DOCTYPE html&gt;
+        </code></pre>
+        <pre><code data-trim rel="HTML 4.01 Strict">
+            &lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd "&gt;
+        </code></pre>
+        <pre><code data-trim rel="HTML 4.01 Transitional">
+            &lt;!DOCTYPE HTML PUBLIC "­//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd"&gt;
+        </code></pre>
+    </section>
+    <section><h3>head</h3>
+        <p>Съдържа мета информация за документа</p>
+    </section>
+    <section><h3>body</h3>
+        <p>Тяло на документа - съдържанието на документа, което ще се изобрази от браузъра.</p>
+    </section>
 </section>
-
 <section><h2>Елементи в head секцията</h2>
-	<section><h2>Елементи в head секцията.</h2></section>
-	<section><h3>Допустими елементи:</h3>
-		<ul>
-			<li>title</li>
-			<li>style</li>
-			<li>link</li>
-			<li>script</li>
-			<li>meta</li>
-			<li>base</li>
-		</ul>
-	</section>
-	<section style="font-size: .8em"><h3>Елемента title</h3>
-		<pre><code data-trim>
-			&lt;title&gt;WebDesign курс-&gt;Начало&lt;/title&gt;
-		</code></pre>
-		<dl class="fa">
-			<dt>Трябва да съдържа съвсем сбито описание на страницата.</dt>
-			<dt>Един от елементите с най-голяма тежест при SEO.</dt>
-			<dt>Съдържанието му се показва като заглавие на таба/прозореца в браузера.</dt>
-			<dt>Показва се и в списъка резултати на търсещите машини. Ключовите думи в него ще бъдат подчертани.</dt>
-			<dt>Повече за SEO и title елемента:</dt>
-			<dd><a href="https://moz.com/learn/seo/title-tag">https://moz.com/learn/seo/title-tag</a></dd>
-		</dl>
-	</section>
-	<section><h3>Елемента style</h3>
-		<p>Вграждане на стил в страницата:</p>
-		<pre><code rel="HTML">
-		&lt;style&gt;
-			body {background­-color:lightgray}
-			h1 {color:red;}
-			p {color:green;}
-		&lt;/style&gt;
-		</code></pre>
-		<p><em>NB!</em>Стиловете ще разгледаме детайлно в уроците за CSS, а самото вграждане - в темата "<a href="../CSS_Intro/CSS_Intro.html">Въведение в CSS</a>".</p>
-	</section>
-	<section><h3>Елемента script</h3>
-		<pre><code rel="HTML">
-			<script src="scripts/JS/MyFunctions.js"></script>
+    <section><h2>Елементи в head секцията.</h2></section>
+    <section><h3>Допустими елементи:</h3>
+        <ul>
+            <li>title</li>
+            <li>style</li>
+            <li>link</li>
+            <li>script</li>
+            <li>meta</li>
+            <li>base</li>
+        </ul>
+    </section>
+    <section style="font-size: .8em"><h3>Елемента title</h3>
+        <pre><code data-trim>
+            &lt;title&gt;WebDesign курс-&gt;Начало&lt;/title&gt;
+        </code></pre>
+        <dl class="fa">
+            <dt>Трябва да съдържа съвсем сбито описание на страницата.</dt>
+            <dt>Един от елементите с най-голяма тежест при SEO.</dt>
+            <dt>Съдържанието му се показва като заглавие на таба/прозореца в браузера.</dt>
+            <dt>Показва се и в списъка резултати на търсещите машини. Ключовите думи в него ще бъдат подчертани.</dt>
+            <dt>Повече за SEO и title елемента:</dt>
+            <dd><a href="https://moz.com/learn/seo/title-tag">https://moz.com/learn/seo/title-tag</a></dd>
+        </dl>
+    </section>
+    <section><h3>Елемента style</h3>
+        <p>Вграждане на стил в страницата:</p>
+        <pre><code rel="HTML">
+        &lt;style&gt;
+            body {background­-color:lightgray}
+            h1 {color:red;}
+            p {color:green;}
+        &lt;/style&gt;
+        </code></pre>
+        <p><em>NB!</em>Стиловете ще разгледаме детайлно в уроците за CSS, а самото вграждане - в темата "<a href="../CSS_Intro/CSS_Intro.html">Въведение в CSS</a>".</p>
+    </section>
+    <section><h3>Елемента script</h3>
+        <pre><code rel="HTML">
+            <script src="scripts/JS/MyFunctions.js"></script>
 
-			<!-- или: -->
+            <!-- или: -->
 
-			&lt;script&gt;
-				alert(&quot;JavaScript welcomes you!&quot;);
-			&lt;/script&gt;
-		</code></pre>
-		<p><em>NB!</em> Със JavaScript и елемента script ще се запознаем основно в уроците за JavaScript.</p>
-	</section>
-	<section><h3>Елемента link</h3>
-		<p>Връзка между документа и друг външен ресурс.</p>
-		<pre><code rel="HTML">
-			&lt;link rel="stylesheet" type="text/css" href="default.css"&gt;
+            &lt;script&gt;
+                alert(&quot;JavaScript welcomes you!&quot;);
+            &lt;/script&gt;
+        </code></pre>
+        <p><em>NB!</em> Със JavaScript и елемента script ще се запознаем основно в уроците за JavaScript.</p>
+    </section>
+    <section><h3>Елемента link</h3>
+        <p>Връзка между документа и друг външен ресурс.</p>
+        <pre><code rel="HTML">
+            &lt;link rel="stylesheet" type="text/css" href="default.css"&gt;
 
-			&lt;link rel="icon" href="/favicon.ico" type="image/x-icon"&gt;
-		</code></pre>
-	</section>
-	<section><h3>Елемента meta</h3>
-		<p>Дефинира мета-данни за документа</p>
-		<pre><code rel="HTML">
-			&lt;meta charset="UTF­8"&gt;
-			&lt;meta name="robots" content="selection"&gt;
-			&lt;meta name="keywords" content="WebDesign, Course, HTML, CSS, JavaScript"&gt;
-			&lt;meta name="description" content=" Кратко описание на съдържанието на страницата"&gt;
-			&lt;meta name="author" content="Iva E.Popova"&gt;
-		</code></pre>
-		<p><a href="http://www.metatags.org/all_metatags">Описание на всички мета-данни</a></p>
-	</section>
-	<section><h3>Елемента base</h3>
-		<p>Задава за <u>всички</u> линкове в документа стойности по подразбиране за URL и target</p>
-		<pre><code rel="HTML">
-			<!-- задаваме базов URL, който ще служи за префикс на всички релативни URL -->
-			&lt;base href=" /home/nemsys/Courses/WebDesign/Images/ "&gt;
+            &lt;link rel="icon" href="/favicon.ico" type="image/x-icon"&gt;
+        </code></pre>
+    </section>
+    <section><h3>Елемента meta</h3>
+        <p>Дефинира мета-данни за документа</p>
+        <pre><code rel="HTML">
+            &lt;meta charset="utf-­8"&gt;
+            &lt;meta name="robots" content="selection"&gt;
+            &lt;meta name="keywords" content="WebDesign, Course, HTML, CSS, JavaScript"&gt;
+            &lt;meta name="description" content=" Кратко описание на съдържанието на страницата"&gt;
+            &lt;meta name="author" content="Iva E.Popova"&gt;
+        </code></pre>
+        <p><a href="http://www.metatags.org/all_metatags">Описание на всички мета-данни</a></p>
+    </section>
+    <section><h3>Елемента base</h3>
+        <p>Задава за <u>всички</u> линкове в документа стойности по подразбиране за URL и target</p>
+        <pre><code rel="HTML">
+            <!-- задаваме базов URL, който ще служи за префикс на всички релативни URL -->
+            &lt;base href=" /home/nemsys/Courses/WebDesign/Images/ "&gt;
 
-			<!-- всички линкове ще се отварят в нов таб/прозорец -->
-			&lt;base target="_blank"&gt;
-		</code></pre>
-		<p><em>NB!</em>Повече примери за BASE елемента ще разгледаме в темата за хиперлинкове.</p>
-	</section>
+            <!-- всички линкове ще се отварят в нов таб/прозорец -->
+            &lt;base target="_blank"&gt;
+        </code></pre>
+    </section>
 </section>
-
 <section><h2>Коментари в HTML</h2>
-	<section><h3>Коментарите, макар и безгласни, могат да бъдат важни.</h3></section>
-	<section><h3>Self-learning section!</h3>
-		<p><a href="http://www.w3schools.com/tags/tag_comment.asp">W3Schools HTML comments</a></p>
-	</section>
-	<section><h3>Употреба</h3>
-		<dl class="fa">
-			<dt>Кратко описание на естествен език, за последователност от код, която върши определено действие</dt>
-			<dd>Спестява (на вас и колегите ви) време за разчитане на кода.</dd>
-			<dt>За визуални разграничители на кода.</dt>
-			<dd>По-лесна навигация в кода.</dd>
-			<dt>Когато искате временно да премахнете част от вашия код, но все пак да не го изтривате.</dt>
-		</dl>
-	</section>
+    <section><h3>Коментарите, макар и безгласни, могат да бъдат важни.</h3></section>
+    <section><h3>Self-learning section!</h3>
+        <p><a href="http://www.w3schools.com/tags/tag_comment.asp">W3Schools HTML comments</a></p>
+    </section>
+    <section><h3>Употреба</h3>
+        <dl class="fa">
+            <dt>Кратко описание на естествен език, за последователност от код, която върши определено действие</dt>
+            <dd>Спестява (на вас и колегите ви) време за разчитане на кода.</dd>
+            <dt>За визуални разграничители на кода.</dt>
+            <dd>По-лесна навигация в кода.</dd>
+            <dt>Когато искате временно да премахнете част от вашия код, но все пак да не го изтривате.</dt>
+        </dl>
+    </section>
 </section>
-
 <section><h2>HTML validator</h2>
-	<section>
-		<a href="https://validator.w3.org/">W3C Markup Validation Service</a>
-	</section>
-	<section style="font-size: .9em"><h3>Защо да валидираме кода?</h3>
-		<dl class="fa">
-			<dt><span class="keyword">SEO: </span>Валидния HTML код е необходима предпоставка за точното индексиране на сайта( search engines, crowlers, etc.), респективно - за оптимизацията на нашия сайт.</dt>
-			<dt><span class="keyword">UX: </span>Точно индексирания код позволява на търсачките да представят сайта ни в резултатите по най-удобния за потребителя начин.</dt>
-			<dt>Това е единствения сигурен начин да си открием грешка в кода, която дори да не рефлектира визулно върху страницата, ще ни спести много време за оправяне на <em>проблеми</em> с CSS и JS.</dt>
-		</dl>
-	</section>
+    <section>
+        <a href="https://validator.w3.org/">W3C Markup Validation Service</a>
+    </section>
+    <section style="font-size: .9em"><h3>Защо да валидираме кода?</h3>
+        <dl class="fa">
+            <dt><span class="keyword">SEO: </span>Валидния HTML код е необходима предпоставка за точното индексиране на сайта( search engines, crowlers, etc.), респективно - за оптимизацията на нашия сайт.</dt>
+            <dt><span class="keyword">UX: </span>Точно индексирания код позволява на търсачките да представят сайта ни в резултатите по най-удобния за потребителя начин.</dt>
+            <dt>Това е единствения сигурен начин да си открием грешка в кода, която дори да не рефлектира визулно върху страницата, ще ни спести много време за оправяне на <em>проблеми</em> с CSS и JS.</dt>
+        </dl>
+    </section>
+    <section><h3>Как да валидираме кода?</h3>
+        <dl class="fa">
+            <dt><a href="https://validator.w3.org/">Markup Validation Service</a></dt>
+            <dt><a href="https://packagecontrol.io/packages/W3CValidators">Sublime Text W3​CValidators</a></dt>
+        </dl>
+    </section>
 </section>
-
-
-
-<section class="disclaimer" data-background="/IT-Academy-Front-End-Dev/outfit/images/for_slides/the_end_on_sand.jpg">
-	<p>These slides are based on</p>
-	<p>customised version of </p>
-	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-	<p>framework</p>
+<section class="disclaimer" data-background="../../../../outfit/images/for_slides/the_end_on_sand.jpg">
+     <p>These slides are based on</p>
+     <p>customised version of </p>
+     <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+     <p>framework</p>
 </section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
 ########################################################
 -->
-		</div>
-	</div>
-	<!-- Custom processing -->
-	<script src="/IT-Academy-Front-End-Dev/outfit/js/slides.js"></script>
-	<!-- external scripts -->
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/IT-Academy-Front-End-Dev/lib/reveal.js/js/reveal.js"></script>
+        </div>
+    </div>
+    <!-- Custom processing -->
+    <script src="../../../../outfit/js/slides.js"></script>
+    <!-- external scripts -->
+
+    <script src="../../../../lib/reveal.js/dist/reveal.js"></script>
 	<!-- init reveal -->
-	<script>
-		// Full list of configuration options available at:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			slideNumber: 'c/t',
-			keyboard: true,
-			history: true,
-			center: true,
-			// width: '100%',
-			// height: '100%',
-			// slide transition
-			transition: 'concave', // none/fade/slide/convex/concave/zoom
-			// Factor of the display size that should remain empty around the content
-			margin: 0.1,
-			// shift+maous click to zoom in/out element
-			zoomKey: 'ctrl',
-			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			// transition: Reveal.getQueryHash().transition || 'default'
-			// Optional reveal.js plugins
-			dependencies: [
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '/IT-Academy-Front-End-Dev/lib/reveal.js/plugin/notes/notes.js', async: true }
-			]
-		});
-	</script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        var highlightjsTabSize = '  ';
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: 'c/t',
+            keyboard: true,
+            history: true,
+            center: true,
+            // width: '100%',
+            // height: '100%',
+            // slide transition
+            transition: 'concave', // none/fade/slide/convex/concave/zoom
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+            // shift+maous click to zoom in/out element
+            zoomKey: 'ctrl',
+            // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            // transition: Reveal.getQueryHash().transition || 'default'
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+                { src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

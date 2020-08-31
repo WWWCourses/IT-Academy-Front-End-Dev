@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Align Demos</title>
+    <style>
+        p{
+            border: 1px solid black;
+        }
+        img{
+            border: 1px solid red;
+            /* vertical-align: middle; */
+            display: inline-block;
+        }
+        span{
+            border: 1px solid gray;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .divimg{
+            display: inline-block;
+            /* width: 50px; */
+            /* height: 50px; */
+            font-size: 50px;
+            background: red;
+            /* vertical-align: middle; */
+        }
+        .middle{
+            vertical-align: middle;
+            /* font-size: 50px; */
+            /* border-color: red; */
+
+        }
+
+        .va-middle>div{
+            border: 1px solid red;
+            /* line-height: 100px; */
+            font-size: 100px;
+        }
+        .va-middle>div>div{
+            width: 200px;
+            height: 200px;
+            background: red;
+            display: inline-block;
+        }
+        .big{
+            font-size: 20px;
+            /* line-height: 100px; */
+            /* vertical-align: middle; */
+            /* border: none; */
+            /* text-decoration: line-through red; */
+        }
+        .small{
+            font-size: 40px;
+            vertical-align: middle;
+            /* border: none; */
+            text-decoration: line-through red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="va-middle">
+        <div>
+            x
+            <span class="small">small text vertically middled</span>
+        </div>
+    </section>
+    <p>
+        <span class="middle">test</span>
+        <span class="big">A</span>
+    </p>
+    <p>test
+        <img src="https://ipsumimage.appspot.com/50?b=000000&f=fff" alt="">
+        <img src="https://placebear.com/100/100" alt="">
+        <img src="http://placeimg.com/100/100/nature" alt="">
+        <img src="https://via.placeholder.com/50/000000/ffffff" alt="" ><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum voluptates soluta quod error amet, facilis quas quisquam quis dignissimos fugiat, iure cumque, eligendi modi excepturi ad suscipit! Quam, suscipit!</span>
+    </p>
+</body>
+</html>

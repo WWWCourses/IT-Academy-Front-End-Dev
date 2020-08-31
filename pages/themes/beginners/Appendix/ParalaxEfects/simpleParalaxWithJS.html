@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Paralax demo</title>
+    <style>
+        .paralax{
+            position: relative;
+            height: 80vh;
+            background: url('amazing-beautiful-beauty-blue.png');
+            background-size: cover;
+            z-index: -1;
+            /* background-attachment: fixed; */
+            /* border: .3em outset brown; */
+        }
+        .text{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Paralax effect demo</h1>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet labore eligendi deleniti corporis alias sunt dolores minus architecto praesentium harum dicta, exercitationem molestiae asperiores fugiat veritatis illum explicabo molestias.</p>
+    </div>
+    <div class="paralax"></div>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet labore eligendi deleniti corporis alias sunt dolores minus architecto praesentium harum dicta, exercitationem molestiae asperiores fugiat veritatis illum explicabo molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem cum praesentium, odit, ad amet impedit pariatur, atque rem laudantium magnam iusto. Assumenda exercitationem dolores error voluptatem asperiores quo iste.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore obcaecati, nihil unde molestias deleniti ad voluptates iusto. Officia dolorem labore aspernatur unde omnis laudantium ex nam itaque velit! Officia, facere.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet labore eligendi deleniti corporis alias sunt dolores minus architecto praesentium harum dicta, exercitationem molestiae asperiores fugiat veritatis illum explicabo molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem cum praesentium, odit, ad amet impedit pariatur, atque rem laudantium magnam iusto. Assumenda exercitationem dolores error voluptatem asperiores quo iste.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore obcaecati, nihil unde molestias deleniti ad voluptates iusto. Officia dolorem labore aspernatur unde omnis laudantium ex nam itaque velit! Officia, facere.</p>
+    </div>
+
+    <script>
+        const paralax = document.querySelector('.paralax');
+
+        window.addEventListener('scroll', function(e) {
+            let yOffset = window.pageYOffset;
+            let topStep = -(yOffset * 0.5);
+            paralax.style.top = `${topStep}px`;
+
+            // console.log(`yOffset: ${yOffset}`);
+            // console.log(`paralax.style.top: ${paralax.style.top}`);
+        })
+    </script>
+</body>
+</html>

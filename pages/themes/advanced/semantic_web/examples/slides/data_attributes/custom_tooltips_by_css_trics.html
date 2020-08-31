@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>custom_tooltips_by_css_trics</title>
+  <style type="text/css">
+  	body{
+  		background: #FFF;
+  	}
+  	a {
+  	  position: relative;
+  	  text-decoration: none;
+  	  top: 5em;
+
+  	}
+  	a:after {
+  	  content: attr(data-tooltip);
+  	  position: absolute;
+  	  bottom: 130%;
+  	  left: 20%;
+  	  background: #ffcb66;
+  	  padding: 5px 15px;
+  	  color: black;
+  	  -webkit-border-radius: 10px;
+  	  -moz-border-radius   : 10px;
+  	  border-radius        : 10px;
+  	  white-space: nowrap;
+  	  opacity: 0;
+  	   /* At time of this creation, only Fx4 doing pseduo transitions */
+  	  -webkit-transition: all 0.4s ease;
+  	  -moz-transition   : all 0.4s ease;
+  	}
+  	a:before {
+  	  content: "";
+  	  position: absolute;
+  	  width: 0;
+  	  height: 0;
+  	  border-top: 20px solid #ffcb66;
+  	  border-left: 20px solid transparent;
+  	  border-right: 20px solid transparent;
+  	  /* At time of this creation, only Fx4 doing pseduo transitions */
+  	  -webkit-transition: all 0.4s ease;
+  	  -moz-transition   : all 0.4s ease;
+  	  opacity: 0;
+  	  left: 30%;
+  	  bottom: 90%;
+  	}
+  	a:hover:after {
+  	  bottom: 100%;
+  	}
+  	a:hover:before {
+  	  bottom: 70%;
+  	}
+  	a:hover:after, a:hover:before {
+  	  opacity: 1;
+  	}
+  </style>
+</head>
+<body>
+	<a href="#" data-tooltip="See, a custom tooltip!">Hover on me</a>
+</body>
+</html>
