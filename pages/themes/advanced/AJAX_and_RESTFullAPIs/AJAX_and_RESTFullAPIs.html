@@ -707,10 +707,11 @@
 	<script src="../../../../outfit/js/slides.js"></script>
 	<!-- external scripts -->
 	<script src="../../../../lib/reveal.js/dist/reveal.js"></script>
-	<!-- init reveal -->
+<!-- init reveal -->
 	<script>
 		// Full list of configuration options available at:
 		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
 		var highlightjsTabSize = '  ';
 		Reveal.initialize({
 			controls: true,
@@ -718,13 +719,29 @@
 			slideNumber: 'c/t',
 			keyboard: true,
 			history: true,
-			center: true,
+
+			// display control
+			// center: true,
 			// width: '100%',
 			// height: '100%',
+			// // Factor of the display size that should remain empty around the content
+			// margin: 0.1,
+
+			// The "normal" size of the presentation, aspect ratio will be preserved
+			// when the presentation is scaled to fit different resolutions. Can be
+			// specified using percentage units.
+			width: 1280,
+			height: 1024,
+
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 1.5,
+
 			// slide transition
 			transition: 'concave', // none/fade/slide/convex/concave/zoom
-			// Factor of the display size that should remain empty around the content
-			// margin: 0.1,
 			// shift+maous click to zoom in/out element
 			zoomKey: 'ctrl',
 			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
@@ -734,11 +751,13 @@
 				{ src: '../../../../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 				{ src: '../../../../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 				{ src: '../../../../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+
+				// { src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function(){ hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+
+				{src: '../../../../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad();}},
+
 				{ src: '../../../../lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true },
-				// { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
-				// { src: 'plugin/remote-control/remote.js', async: true }
+				{ src: '../../../../lib/reveal.js/plugin/notes/notes.js', async: true }
 			]
 		});
 	</script>
