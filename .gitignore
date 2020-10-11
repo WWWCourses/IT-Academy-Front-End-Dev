@@ -1,0 +1,11 @@
+# all tmp/old files:
+**/*.tmp
+**/*.old
+**/*.log
+**/.tags*
+**/*fuse*
+nohup.out
+
+*.sublime-workspace
+*.sublime-project
+!gh-pages.sublime-project

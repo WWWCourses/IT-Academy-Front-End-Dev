@@ -1,0 +1,116 @@
+1. Introduction (2h)
+1.1. About the course and the online resources being used.
+1.2. What happens with the Web, and the technologies behind it during the past years?
+
+2. Practical introduction to git and GitHub/GitLab (6h)
+2.1. What is a VCS and how it makes life easier?
+2.2. Installing and configuring git.
+2.3. Create and configure a git repository.
+2.4. Adding files to repository and committing changes.
+2.5. Working with branches.
+2.6. Merging and reverting changes.
+2.7. Overview of GitHub/GitLab and setting-up an account.
+2.8. Connect your local git repository to your GitHub/GitLab repository.
+2.9. Using GitHub/GitLab pages as free hosting for your project.
+
+3. Bring Semantic to the Web (4h)
+3.1. HTML5 Semantic elements – the right usage and SEO considerations.
+3.2. Data Attributes in HTML5.
+3.3. What is Microdata, Microformats, RDF and why should you know about them?
+3.4. How to boost the SEO of the site by adding more semantics.
+
+4. Master the Browser’s WebDevelopers Tools and be productive (4h)
+4.1. Page and loading time optimizations.
+4.2. Profile and Analyse.
+4.3. Debugging JavaScript.
+
+5. CSS3 Animations (2h)
+5.1. When to use animations, and when – transitions?
+5.2. The @keyframes rules.
+5.3. Create astonishing animations only with HTML5/CSS3.
+5.4. To animate or not to animate – some precautions before using animations.
+
+6. Drawing Graphics – SVG, Canvas, WebGL and more (6h)
+6.1. A gentile introduction to HTML5 Canvas, SVG.
+6.2. Create snow effect using HTML5 Canvas and JavaScript.
+6.3. When to use Canvas and when – SVG?
+6.4. Overview of WebGL rendering.
+6.5. Bring data to life using d3.js data visualisation library.
+6.6. Visualize your musical taste with D3.js and last.fm.
+
+7. CSS pre-processors (4h)
+7.1. Why to pre-process CSS?
+7.2. Yes, LESS is more.
+7.3. How about Sass/SCSS? Or Stylus?
+
+8. Responsive Web design essential concepts (4h)
+8.1. Modern design strategies – why ‘Progressive Enhancement’ is better than ‘Graceful Degradation’?
+8.2. Manage the viewport.
+8.3. CSS media queries – apply different styles for different viewports.
+
+9. Responsive Layouts with CSS Grid and Flexboxes (4h)
+9.1. The Grid Layout model.
+9.2. The Flexbox Layout model.
+9.3. Create Responsive Layouts.
+
+10. A day for Bootstrap (4h)
+10.1. Responsive Design Frameworks: Bootstrap, Semantic UI, Material Design Lite,
+Foundation… How to choose (a practical example).
+10.2. The Bootstrap Grid System.
+10.3. Bootstrap Layout Components.
+10.4. Bootstrap Plugins.
+
+11.jQuery in a day (4h)
+11.1. jQuery essentials.
+11.2. Traversing and Manipulating the DOM.
+11.3. DOM Events and Event Delegation.
+11.4. Simplifying AJAX calls with jQuery.
+11.5. Useful JQuery plugins.
+11.6. JQuery vs ES6 and beyond (or why a day for jQuery is enough)
+
+12. Advanced JavaScript [12h.]
+12.1. Higher-Order Functions.
+12.2. Closures.
+12.3. Arrow (Fat) Functions.
+12.4. Regular Expressions in JavaScript.
+12.5. How to namespace in JavaScript and why it is important.
+12.6. Decoupling modules.
+12.7. Asynchronous programming: JS Promises and Async.
+
+13. Introduction to Node.js – the JavaScript back-endbreakthrough. (4h)
+13.1. Simple explanation of node.js principles.
+13.2. Node.js’ package ecosystem.
+13.3. NPM – the node Package Manager.
+
+14. Build a modern Front-End App with modern Tools (4h)
+14.1. Task Runners Overview. Using Gulp – live demo.
+14.2. Bundle your app with Webpack.
+
+15. Static Site Generators (4h)
+15.1. Introduction to front-end Templating Engines.
+15.2. Getting started with Handlebars.
+15.3. Build fast, effective and manageable full-featured blog on GitHub Pages (a Jekyll usecase).
+
+16. Building modern SPA  (2h)
+16.1. What is Single Page Applications (SPA).
+16.2. Basic SPA concepts (router, state) depicted with vanilla ES6+
+
+17. Angular– the Google’s platform for building apps (4h)
+17.1. Angular overview and basic concepts.
+17.2. Working with Angular CLI.
+17.3. Build a Weather App with Angular7 from scratch.
+
+18. React – the Facebook's JavaScript library for building user interfaces (4h)
+18.1. React overview and basic concepts.
+18.2. Working with React CLI.
+18.3. Build a Weather App with React from scratch.
+
+19. Vue – the Progressive JavaScript Framework (4h)
+19.1. Vue overview and basic concepts.
+19.2. Working with Vue CLI.
+19.3. Build a Weather App with Vue from scratch.
+
+
+20. Instead of conclusion – back to the (Web) future  (2h)
+20.1. Web Components?
+20.2. JavaScript-based polyfills?

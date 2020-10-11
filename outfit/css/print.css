@@ -1,0 +1,65 @@
+@media print{
+    body{
+        font-size: 12px;
+    }
+    header{
+        position: relative;
+        width: 100%;
+        min-height: 6em;
+        margin: 1em 0 2em 0;
+        line-height: 1.5em;
+        text-align: center;
+        font-size: 1.5em;
+        background-color: #454547;
+        color: #999;
+        /*box-shadow: 4px 4px 10px rgba(0,0,0,0.8);*/
+        overflow: hidden;
+    }
+    footer{
+        /*position: absolute;
+        left: 0; right: 0; bottom: 0;*/
+        /*display: inline-block;*/
+        margin: 5em 0 0 0;
+        height: 5em;
+        vertical-align: middle;
+        text-align: center;
+        border-top: 1px solid #AAA;
+        /*border: 2px solid red;*/
+        color: #999;
+    }
+
+    a{
+        border: none;
+    }
+
+    img{
+        height: 10px;
+    }
+
+    .syllabus .toggleButtons{
+      display: none;
+    }
+
+    ol.sub_themes{
+        list-style-type: disc;
+    }
+    .iep_syllabus_title{
+        display: none;
+    }
+    .iep_syllabus_sub_themes{
+        margin: 0;
+    }
+    .iep_syllabus_themes>li{
+        page-break-inside: avoid;
+    }
+    .total_hours{
+        /*display: none;*/
+        /*color: yellow;*/
+    }
+    .iep_syllabus>div:last-of-type{
+        display: none;
+        color: red;
+        font-size: 5em;
+    }
+}
+

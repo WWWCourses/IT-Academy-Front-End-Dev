@@ -1,0 +1,29 @@
+/* font sizes */
+.reveal .smallestFont{
+    font-size: .4em;
+    line-height: 1m;
+}
+.reveal .smallerFont{
+    font-size: .6em;
+    line-height: 1.2;
+}
+.reveal .smallFont{
+    font-size: .8em;
+    line-height: 1.2;
+}
+.reveal .bigFont{
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+.reveal .normalFont{
+    font-size: 1em;
+    line-height: 1.2;
+}
+.reveal .biggerFont{
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+.reveal .bigestFont{
+    font-size: 1.6em;
+    line-height: 1.2;
+}

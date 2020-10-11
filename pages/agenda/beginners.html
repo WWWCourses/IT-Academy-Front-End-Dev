@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda - Front-End Dev Course | Fundamentals | IT-Academy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="Sublime Text3, SASS">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<!-- VENDORs -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- CUSTOMs -->
+	<link rel="stylesheet" type="text/css" href="outfit/css/master.css">
+	<link rel="stylesheet" type="text/css" href="outfit/css/agenda.css">
+	<link rel="stylesheet" type="text/css" href="outfit/css/print.css">
+
+	<base target="_blank">
+</head>
+<body class="background_gradient_left_right">
+<header class="dark_centered_background_gradient">
+	<h1>Front-End Development - Fundamentals</h1>
+	<h3>IT Academy</h3>
+</header>
+<main>
+	<section id="about_the_course" class="course_about"><h1>За курса</h1>
+		<p>Учебната програма е структурирана така, че постепенно да въведе абсолютно начинаещи в областта хора в основите на HTML/CSS/JS.</p>
+		<p>Разглеждат се задълбочено основните концепции, като се следват стандартите дефинирани от W3C и ECMAscript. Акцентира се върху необходимостта от писане на качествен код.</p>
+		<p>Всяка тема е илюстрирана в презентациите (достъпни онлайн) с множество примери и линкове към утвърдени справочници/самоучители (w3schools, MDN, CSS-Trics и пр.). И е съпроводена със задачи за домашно.</p>
+		<p>Часовете не се провеждат в класическата лекционна форма, а по-скоро като дискусия - всяко ново понятие се представя с live coding от лектора като се стимулират курсистите да мислят заедно с него. И непрекъснато да задават въпроси.</p>
+		<!-- <p>Целта на курса е курсистите да усвоят основополагащите понятия и да развият умения за само</p> -->
+		<p>Тъй като курсът си поставя за цел да развие умения за само-обучение (съществено за професионалната реализация в IT сферата), в часовете се отделя повече време за задълбочено разбиране на основополагащите концепции. Част от стереотипните понятия се представят като self-learning sections - линкове към необходимите справочници и задачи за самостоятелно решаване.</p>
+		<p>В началото на всяко занятие се отделя време за дискутиране на проблеми, с които курсистите са се сблъскали,  code-review на задачите за домашно и пр. </p>
+		<p>Още в началото на курса се задава задание за курсов проект - изработка на Уеб Сайт. Така по време на целия курс, освен чрез задачите за домашно, курсистите могат да затвърдят уменията си и при неговата разработка с помощта на преподавателя.</p>
+	</section>
+	<section class="syllabus">
+		<h1>Програма на курса</h1>
+		<div class="toggleButtons">
+			<span class="toggleThemes">Toggle Themes</span>
+			<span class="toggleSubThemes">Toggle sub-themes</span>
+		</div>
+		<div class="themes">
+			<!-- <article class="iep_course_about"><h4>За курса</h4>
+				<p>Учебната програма е структурирана така, че постепенно да въведе абсолютно начинаещи в областта хора в основите на HTML/CSS/JS.</p>
+				<p>Разглеждат се задълбочено основните концепции, като се следват стандартите дефинирани от W3C и ECMAscript. Акцентира се върху необходимостта от писане на качествен код.</p>
+				<p>Всяка тема е илюстрирана в презентациите (достъпни онлайн) с множество примери и линкове към утвърдени справочници/самоучители (w3schools, MDN, CSS-Trics и пр.). И е съпроводена със задачи за домашно.</p>
+				<p>Часовете не се провеждат в класическата лекционна форма, а по-скоро като дискусия - всяко ново понятие се представя с live coding от лектора като се стимулират курсистите да мислят заедно с него. И непрекъснато да задават въпроси.</p>
+				<p>Целта на курса е курсистите да усвоят основополагащите понятия и да развият умения за само</p>
+				<p>Тъй като курсът си поставя за цел да развие умения за само-обучение, в часовете се отделя повече време за задълбочено разбиране на основополагащите концепции. Част от стереотипните понятия се представят като self-learning sections - линкове към необходимите справочници и задачи за самостоятелно решаване.</p>
+				<p>В началото на всяко занятие се отделя време за дискутиране на проблеми, с които курсистите са се сблъскали,  code-review на задачите за домашно и пр. </p>
+				<p>Още в началото на курса се задава задание за курсов проект - изработка на Уеб Сайт. Така по време на целия курс, освен чрез задачите за домашно,  курсистите могат да затвърдят уменията си и при неговата разработка с помощта на преподавателя.</p>
+			</article> -->
+			<article><h1>Introduction</h1>
+				<section id="CourseIntro" data-hours="2">
+					<h3>Въведение в курса</h3>
+					<ol class="sub_themes">
+						<li>Представяне на курса и съпътстващите онлайн ресурси.</li>
+						<li>Какво представлява една Уеб Страница.</li>
+						<li>HTML, CSS, JavaScript -  Live demo.</li>
+						<li>Как работи един Уеб Сайт? Front-end vs. Back-end.</li>
+					</ol>
+				</section>
+				<section id="Tools_VSCode" data-hours="2">
+					<h3>Настройка на средата. Запознаване с VSCode</h3>
+					<ol class="sub_themes">
+					</ol>
+				</section>
+			</article>
+			<article><h1>Основи на HTML</h1>
+				<section id="HTML_Bases" data-hours="4">
+					<h3>Въведение в HTML</h3>
+					<ol class="sub_themes">
+						<li><code>HTML5</code> - въведение и кратка история.</li>
+						<li>Синтаксисът е в основата на всичко.</li>
+						<li><code class="kw">Doctype</code>, <code class="kw">head</code> и <code class="kw">body</code> секции.</li>
+						<li>Елементи в <code class="kw">head</code> секцията.</li>
+					</ol>
+				</section>
+				<section id="HTML_Text_Formating_Elements" data-hours="2">
+					<h3>HTML елементи за структуриране на текст</h3>
+					<ol class="sub_themes">
+						<li>Параграфи и заглавия.</li>
+						<li>Елементи: <code class="kw">b</code>, <code class="kw">strong</code>, <code class="kw">i</code>, <code class="kw">em</code>, <code class="kw">mark</code>, <code class="kw">small</code>, <code class="kw">del</code>, <code class="kw">ins</code>, <code class="kw">sub</code>, <code class="kw">sup</code>, <code class="kw">code</code>, <code class="kw">pre</code>, <code class="kw">kbd</code>.</li>
+						<li>Създаване на Уеб документ с разнообразно текстово съдържание.</li>
+					</ol>
+				</section>
+				<section id="HTML_Hyperlinks_and_Images" data-hours="4">
+					<h3>Хипервръзки (линкове) и изображения</h3>
+					<ol class="sub_themes">
+						<li>Вмъкване на изображения.</li>
+						<li>Създаване на хипервръзки (линкове).</li>
+						<li>Създаване на връзка към секция (bookmark) в текущия документ.</li>
+					</ol>
+				</section>
+				<section id="HTML_Iframes" data-hours="2">
+					<h3>За какво и как да използваме iframes?</h3>
+					<ol class="sub_themes">
+						<li>Как да "вградим" съдържание от други страници в нашия документ?</li>
+						<li>Вмъкване на карта в страницата (GoogleMaps и bgmaps).</li>
+						<li>Вмъкване на youtube видео.</li>
+						<li>Вмъкване на Пен от <a href="//codepen.io/">codepen.io</a>.</li>
+					</ol>
+				</section>
+				<section id="HTML_Lists" data-hours="3">
+					<h3>Списъци в HTML</h3>
+					<ol class="sub_themes">
+						<li>Създаване на подредени списъци.</li>
+						<li>Създаване на неподредени списъци.</li>
+						<li>Вложени списъци.</li>
+					</ol>
+				</section>
+				<section id="HTML_Tables" data-hours="1">
+					<h3>Таблици в HTML</h3>
+					<ol class="sub_themes">
+						<li>Кога и за какво да използваме таблици?</li>
+						<li>Как да създадем таблица в HTML.</li>
+						<li>Сливане на клетки (cell span) по редове и колони.</li>
+						<li>Някои забележки относно оформлението на таблиците и HTML5.</li>
+					</ol>
+				</section>
+				<section id="HTML_structuring_elements" data-hours="2">
+					<h3>Структуриране на страницата с HTML5 елементи</h3>
+					<ol class="sub_themes">
+						<li>Семантично-структуриращи елементи в HTML5.</li>
+						<li>Изграждане на layout на страница.</li>
+						<li>Section или Article и други тънкости.</li>
+						<li>Какво влияние оказват върху SEO?</li>
+					</ol>
+				</section>
+				<section id="HTTP_Intro" data-hours="4">
+					<h3>Клиент-Сървър комуникация. Основи на HTTP. Защо WWW <span class="bold">&#8800;</span> Internet?</h3>
+					<ol class="sub_themes">
+						<li>Как работи Интернет?</li>
+						<li>Какво е <code class="kw">domain</code>, <code class="kw">Web Hosting</code>, <code class="kw">IP адрес</code>, <code class="kw">DNS</code>?</li>
+						<li>Клиент-Сървър комуникация. Основни понятия в HTTP (request/response messages, query methods).</li>
+					</ol>
+				</section>
+				<section id="HTML5_input_forms" data-hours="4">
+					<h3>HTML5 форми</h3>
+					<ol class="sub_themes">
+						<li>Елементи за въвеждане на информация от потребителя.</li>
+						<li>Нови възможности в HTML5 за въвеждане и валидиране на email, дата, телефон и пр.</li>
+					</ol>
+				</section>
+				<section id="HowToBuildWebSite" data-hours="2">
+					<h3>Основни насоки при създаване на Уеб сайт</h3>
+					<ol class="sub_themes">
+						<li>Планиране на съдържанието и таргет групата.</li>
+						<li>UX/UI. Каква е ролята на добрият User Experience?</li>
+						<li>Sketch/MockUp.</li>
+					</ol>
+				</section>
+
+			</article>
+			<article><h1>Основи на CSS</h1>
+				<section id="CSS_Intro" data-hours="4">
+					<h3>Въведение в CSS</h3>
+					<ol class="sub_themes">
+						<li>Какво е CSS и как допълва HTML.</li>
+						<li>Къде да пишем CSS? Inline, internal или external CSS?</li>
+						<li>Структура на CSS правилата.</li>
+						<li>Наследяване на CSS правила.</li>
+					</ol>
+				</section>
+				<section id="CSS_Basic_Properties" data-hours="4">
+					<h3>Стилизиране на елементите в страницата чрез CSS3</h3>
+					<ol class="sub_themes">
+						<li>Запознаване с основните CSS свойства за оформление на текст, шрифт, цвят, фон и рамка.</li>
+					</ol>
+				</section>
+				<section id="CSS_Selectors_1" data-hours="4">
+					<h3>Селектори в CSS3 - Част1</h3>
+					<ol class="sub_themes">
+						<li>Селектори за елементи.</li>
+						<li>Селектори за class и id.</li>
+						<li>Селектори за атрибути.</li>
+						<li>CSS комбинатори.</li>
+					</ol>
+				</section>
+				<section id="CSS_Box_Model" data-hours="6">
+					<h3>CSS box model</h3>
+					<ol class="sub_themes">
+						<li>HTML елементът разгледан като кутийка.</li>
+						<li>Основни CSS свойства за оразмеряване на "кутийките".</li>
+						<li>Блокови и поредови елементи.</li>
+						<li>Replaced elements? &lt;img&gt;, &lt;object&gt;, &lt;video&gt;...</li>
+						<li>Групиране на елементи в блок с елемента div.</li>
+						<li>Групиране на елементи в ред с елемента span.</li>
+					</ol>
+				</section>
+				<section id="CSS_ColorsAndMesuringUnits" data-hours="4">
+					<h3>Стойности за цветове и мерни единици в CSS3</h3>
+					<ol class="sub_themes">
+						<li>Стойности за цветове (чрез име, RGB,HSL).</li>
+						<li>Абсолютни и релативни мерни единици.</li>
+					</ol>
+				</section>
+				<section id="CSS_Visual_Formating_Model" data-hours="6">
+					<h3>Как браузърът подрежда HTML елементите? Visual Formatting Model</h3>
+					<ol class="sub_themes">
+						<li>Накратко за Visual Formatting Model.</li>
+						<li>Свойството <code class="kw">display</code> и новите модели в CSS3.</li>
+						<li>Позициониране на елементите - свойства <code class="kw">position</code> и <code class="kw">float</code>.</li>
+						<li>Пренареждане на елементите чрез свойството <code class="kw">z-index</code>.</li>
+					</ol>
+				</section>
+				<section id="CSS_Selectors_2" data-hours="6">
+					<h3>Селектори в CSS3 - Част2</h3>
+					<ol class="sub_themes">
+						<li>Селектори за псевдо-класове.</li>
+						<li>Селектори за псевдо-елементи.</li>
+						<li>Създаване на падащи менюта (вертикални и хоризонтални) от списък чрез CSS.</li>
+					</ol>
+				</section>
+				<section id="CSS_Shadows_and_Gradients" data-hours="2">
+					<h3>Светлосенки чрез CSS3. Градиентен фон.</h3>
+					<ol class="sub_themes">
+						<li>Специални ефекти с text-shadow.</li>
+						<li>Специални ефекти с box-shadow.</li>
+						<li>CSS3 gradient backgrounds.</li>
+						<li>Да направим от текста лого, единствено със CSS3.</li>
+					</ol>
+				</section>
+				<section id="CSS_Animations_and_Visual_Effects" data-hours="4">
+					<h3>CSS3 transition/animation ефекти</h3>
+					<ol class="sub_themes">
+						<li>Как работят transitions/animations?</li>
+						<li>Какво е общото и различното между CSS3 transitions и animations.</li>
+						<li>CSS3 свойството transition.</li>
+						<li>Раздвижване на елементите със CSS3 transition и animation ефекти.</li>
+						<li>One-page scroll effect with transition and :target pseudo-class.</li>
+					</ol>
+				</section>
+			</article>
+
+			<article><h1>JavaScript Fundamentals</h1>
+				<section id="JS_Intro" data-hours="4">
+					<h3>Въведение в JavaScript</h3>
+					<ol class="sub_themes">
+						<li>Кратка история на JavaScript. От "малкото братче" на Java до един от най-популярните езици за програмиране.</li>
+						<li>Какво е ECMAScript? А ES6?</li>
+						<li>Какво можем да правим с JavaScript?</li>
+						<li>Къде и как да включим нашия скрипт?</li>
+						<li>Как браузърът изпълнява JavaScript?</li>
+					</ol>
+				</section>
+				<section id="JS_BasicSyntax_1" data-hours="12">
+					<h3>JavaScript - основни синтактични елементи</h3>
+					<ol class="sub_themes">
+						<li>Структура на програмата.</li>
+						<li>Променливи.</li>
+						<li>Прости типове данни.</li>
+						<li>Коментари и добри практики за тяхното използване.</li>
+						<li>Оператори.</li>
+						<li>Условни изрази.</li>
+						<li>Цикли.</li>
+					</ol>
+				</section>
+				<section id="JS_Arrays" data-hours="4">
+					<h3>JavaScript: масиви и операции с тях.</h3>
+					<ol class="sub_themes">
+						<li>Дефиниране на масив.</li>
+						<li>Достъп до елементите.</li>
+						<li>Масива като обект.</li>
+						<li>Основни операции с едномерни и двумерни масиви.</li>
+					</ol>
+				</section>
+				<section id="JS_Functions" data-hours="6">
+					<h3>Функции в JavaScript</h3>
+					<ol class="sub_themes">
+						<li>Какво са функциите в JS? За какво се използват?</li>
+						<li>Дефиниция на функция (function declaration vs function expression).</li>
+						<li>Извикване на функция. Предаване на аргументи. Връщане на резултат.</li>
+						<li>Function Scope. Shadowing.</li>
+						<li>Анонимни функции. IIFE.</li>
+						<li>Hoisting.</li>
+						<li>Създаване на семпъл калкулатор.</li>
+						<li>Игра: Морски шах.</li>
+					</ol>
+				</section>
+				<section id="JS_Objects" data-hours="6">
+					<h3>Обекти</h3>
+					<ol class="sub_themes">
+						<li>Какво представлява обектът?</li>
+						<li>Създаване на единичен обект чрез литерал.</li>
+						<li>Достъп до свойствата на обект (dot и square brackets notation).</li>
+						<li>Създаване на множество еднотипни обекти чрез Factory и Constructor функция.</li>
+					</ol>
+				</section>
+				<section id="JS_BuiltInObjects" data-hours="2">
+					<h3>Стандартни вградени обекти в EcmaScript</h3>
+					<ol class="sub_themes">
+						<li>Primitive object wrappers.</li>
+						<li>обекта Math.</li>
+						<li>обекта Date.</li>
+						<li>обекта Object.</li>
+						<li>Игра: преди колко дни съм роден?</li>
+					</ol>
+				</section>
+				<section id="JS_DOM_BOM" data-hours="4">
+					<h3>HTML DOM, BOM - или как JavaScript взаимодейства с браузера.</h3>
+					<ol class="sub_themes">
+						<li>Накратко за <code class="kw">BOM</code> и <code class="kw">DOM</code>.</li>
+						<li>Достъпване на HTML елементите чрез JavaScript и <code class="kw">DOM</code>.</li>
+						<li>Промяна на съдържанието на елементите.</li>
+						<li>Създаване и изтриване на HTML елементи.</li>
+						<li>Игра: познай числото!</li>
+					</ol>
+				</section>
+				<section id="JS_Events" data-hours="4">
+					<h3>JavaScript и HTML DOM Events</h3>
+					<ol class="sub_themes">
+						<li>За какво и как се използват <code class="kw">event handlers.</code>.</li>
+						<li>Mouse events.</li>
+						<li>Keyboard Events.</li>
+						<li>Frame/Object Events.</li>
+						<li>Form Events.</li>
+						<li>Drag Events.</li>
+					</ol>
+				</section>
+				<section id="JS_StylingElements" data-hours="1">
+					<h3>Как да променяме CSS свойствата на елементите чрез JavaScript</h3>
+					<ol class="sub_themes">
+						<li><code class="kw">HTML DOM Style Object</code>.</li>
+						<li>element.style property.</li>
+						<li>window.getComputedStyle().</li>
+						<li>Промяна на стил чрез задаване на предефиниран клас.</li>
+					</ol>
+				</section>
+				<section id="JS_TimersAndAsync" data-hours="1">
+					<h3>Tаймери в JavaScript</h3>
+					<ol class="sub_themes">
+						<li>Синхронен и асинхронен JavaScript - кратко въведение.</li>
+						<li>setTimeout().</li>
+						<li>setInterval().</li>
+						<li>clearTimeout().</li>
+						<li>Създаване на image slider - автоматично и ръчно прелистване на изображенията.</li>
+					</ol>
+				</section>
+				<section id="jQueryBasics" data-hours="4">
+					<h3>Работа с библиотеки на JavaScript. Запознаване с jQuery.</h3>
+					<ol class="sub_themes">
+						<li>Какво е jQuery? Кога е добре да я използваме?</li>
+						<li>DOM манипулации чрез jQuery.</li>
+						<li>DOM Events и Event Delegation чрез jQuery.</li>
+						<li>Полезни JQuery плъгини.</li>
+					</ol>
+				</section>
+			</article>
+
+		</div>
+		<div class="stats">
+			<div id="total_days"></div>
+			<div id="total_hours"></div>
+		</div>
+	</section>
+</main>
+<footer><div class="license left">
+		<p><span><a href="https://www.linkedin.com/in/ivapopova">Iva E. Popova <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>	</span>, 2015-2020.
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></p>
+		</div>
+		<div class="right">Created for <a href="https://www.it-academy.bg/">IT-Academy</a></div>
+</footer>
+<script type="text/JavaScript" src="outfit/js/CustomDOM.js"></script>
+<script type="text/JavaScript" src="outfit/js/agenda.js"></script>
+</body>
+</html>
