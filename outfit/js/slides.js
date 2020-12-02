@@ -1,6 +1,6 @@
 function themeSwitcher(themeName){
 	alert("themeSwitcher ON");
-	document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/dist/theme/'+themeName+'.css');
+	document.getElementById('theme').setAttribute('href','/IT-Academy-Front-End-Dev/lib/reveal.js/css/theme/'+themeName+'.css');
 }
 function  PrettyPreCodeTmp(){
 	var codeNodes = document.querySelectorAll('pre>code');
